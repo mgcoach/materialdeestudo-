@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca de Estudos | MG COACH</title>
+<meta name="description" content="Materiais de estudo em ciência do exercício, biomecânica, nutrição e treino — por MG COACH.">
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;--line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  header.topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:960px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .brand-meta{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--text-faint);text-align:right;line-height:1.4}
+  .brand-meta b{color:var(--orange);font-weight:600}
+  .hero{max-width:960px;margin:0 auto;padding:72px 22px 30px;position:relative}
+  .hero .big-star{position:absolute;right:0;top:40px;width:200px;height:200px;opacity:.05;pointer-events:none}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+  .hero h1{font-size:clamp(38px,8vw,68px);line-height:1;font-weight:800;letter-spacing:-2px;margin-bottom:22px}
+  .hero h1 .lib{display:block;color:var(--orange);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:.62em;letter-spacing:-1px;margin-top:6px}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:600px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  .filters{max-width:960px;margin:0 auto;padding:30px 22px 10px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+  .filters .flabel{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-faint);margin-right:6px}
+  .chip{font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--text-dim);border:1px solid var(--line);padding:7px 14px;border-radius:999px;transition:.18s;background:transparent}
+  .chip:hover{color:var(--orange);border-color:var(--orange-line)}
+  .chip.active{color:#0a0a0a;background:var(--orange);border-color:var(--orange);font-weight:700}
+  main{max-width:960px;margin:0 auto;padding:24px 22px 40px}
+  .count{font-family:var(--mono);font-size:12px;color:var(--text-faint);margin-bottom:20px;letter-spacing:1px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}}
+  .study{display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--line);border-radius:16px;transition:.2s;position:relative;overflow:hidden}
+  .study::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange);transform:scaleY(0);transform-origin:top;transition:.25s;z-index:1}
+  .study:hover{border-color:var(--orange-line);transform:translateY(-3px)}
+  .study:hover::before{transform:scaleY(1)}
+  .study > a{display:flex;flex-direction:column;height:100%;padding:24px}
+  .study .meta-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .cat-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);background:var(--orange-dim);padding:5px 10px;border-radius:6px;font-weight:600}
+  .study .date{font-family:var(--mono);font-size:11.5px;color:var(--text-faint)}
+  .study h3{font-size:21px;font-weight:800;letter-spacing:-.4px;line-height:1.2;margin-bottom:10px}
+  .study p{font-size:14.5px;color:var(--text-dim);margin-bottom:20px;flex:1}
+  .study .open{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--orange);font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:gap .2s}
+  .study:hover .open{gap:12px}
+  .state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-faint);font-family:var(--mono);font-size:13px;line-height:1.8}
+  .state b{color:var(--orange)}
+  footer{max-width:960px;margin:0 auto;padding:50px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </a>
+    <div class="brand-meta">Biblioteca de estudos<br><b id="meta-count">—</b></div>
+  </div>
+</header>
+<div class="hero">
+  <svg class="big-star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <div class="eyebrow">Ciência do exercício · MG COACH</div>
+  <h1>Biblioteca<span class="lib">de estudos</span></h1>
+  <p class="lede">Materiais aprofundados sobre <b>biomecânica, treino e nutrição</b> — construídos para estudar de verdade, sem ser raso. Novos tópicos adicionados continuamente.</p>
+</div>
+<div class="filters" id="filters">
+  <span class="flabel">Filtrar</span>
+  <button class="chip active" data-cat="todos">Todos</button>
+  <button class="chip" data-cat="biomecanica">Biomecânica</button>
+  <button class="chip" data-cat="treino">Treino</button>
+  <button class="chip" data-cat="nutricao">Nutrição</button>
+  <button class="chip" data-cat="suplementacao">Suplementação</button>
+</div>
+<main>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"><div class="state">Carregando materiais…</div></div>
+</main>
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Biblioteca de estudos · Ciência do exercício</p>
+  <div class="tag-row">MG COACH</div>
+</footer>
+<script>
+(function(){
+  var CAT_LABELS={biomecanica:"Biomecânica",treino:"Treino",nutricao:"Nutrição",suplementacao:"Suplementação"};
+  var grid=document.getElementById('grid'),countEl=document.getElementById('count'),metaEl=document.getElementById('meta-count');
+  var chips=document.querySelectorAll('.chip'),allStudies=[],currentCat='todos';
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function render(){
+    var list=allStudies.filter(function(s){return currentCat==='todos'||s.categoria===currentCat;});
+    if(list.length===0){grid.innerHTML='<div class="state">Nenhum material nesta categoria ainda.</div>';}
+    else{
+      grid.innerHTML=list.map(function(s){
+        var label=CAT_LABELS[s.categoria]||s.categoria;
+        return '<article class="study" data-cat="'+esc(s.categoria)+'">'+
+          '<a href="estudos/'+esc(s.arquivo)+'">'+
+            '<div class="meta-top"><span class="cat-tag">'+esc(label)+'</span><span class="date">'+esc(s.data)+'</span></div>'+
+            '<h3>'+esc(s.titulo)+'</h3><p>'+esc(s.resumo)+'</p><span class="open">Abrir estudo →</span>'+
+          '</a></article>';
+      }).join('');
+    }
+    countEl.textContent=list.length+(list.length===1?' material':' materiais');
+  }
+  chips.forEach(function(chip){chip.addEventListener('click',function(){
+    chips.forEach(function(c){c.classList.remove('active');});chip.classList.add('active');
+    currentCat=chip.getAttribute('data-cat');render();
+  });});
+  fetch('estudos.json?v='+Date.now())
+    .then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json();})
+    .then(function(data){
+      allStudies=Array.isArray(data)?data:[];
+      metaEl.textContent=allStudies.length+(allStudies.length===1?' material':' materiais');
+      render();
+    })
+    .catch(function(err){
+      metaEl.textContent='—';
+      grid.innerHTML='<div class="state">Não foi possível carregar a lista de estudos.<br>Isso é normal se você abriu o arquivo direto do computador.<br>No <b>GitHub Pages</b> funcionará normalmente.</div>';
+      console.error(err);
+    });
+})();
+</script>
+</body>
+</html>
