@@ -82,6 +82,7 @@
   <button class="chip" data-cat="treino">Treino</button>
   <button class="chip" data-cat="nutricao">Nutrição</button>
   <button class="chip" data-cat="suplementacao">Suplementação</button>
+  <button class="chip" data-cat="fisiologia">Fisiologia</button>
 </div>
 <main>
   <div class="count" id="count"></div>
@@ -94,7 +95,7 @@
 </footer>
 <script>
 (function(){
-  var CAT_LABELS={biomecanica:"Biomecânica",treino:"Treino",nutricao:"Nutrição",suplementacao:"Suplementação"};
+  var CAT_LABELS={biomecanica:"Biomecânica",treino:"Treino",nutricao:"Nutrição",suplementacao:"Suplementação",fisiologia:"Fisiologia"};
   var grid=document.getElementById('grid'),countEl=document.getElementById('count'),metaEl=document.getElementById('meta-count');
   var chips=document.querySelectorAll('.chip'),allStudies=[],currentCat='todos';
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}

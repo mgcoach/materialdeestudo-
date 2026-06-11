@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testosterona Natural: Por que o Número Engana e a Hipertrofia Não Depende Tanto Dela | MG COACH</title>
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:64px 22px 40px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+  .hero h1{font-size:clamp(32px,6.5vw,54px);line-height:1.06;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:640px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:46px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(26px,4.5vw,36px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:#fff;font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:540px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:#fff;font-weight:600}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:rgba(255,107,26,.04)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:#fff}
+  .src{font-size:13px;color:var(--text-faint);font-family:var(--mono)}
+  .src a{color:var(--orange-soft);text-decoration:none}
+  .src a:hover{text-decoration:underline}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <a href="index.html" class="backlink">← Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#intro">A dupla tese</a>
+    <a href="#permissivo">Hormônio permissivo</a>
+    <a href="#estudos">O que os estudos mostram</a>
+    <a href="#receptor">O que importa de verdade</a>
+    <a href="#numero">O número isolado engana</a>
+    <a href="#clinico">Como o médico interpreta</a>
+    <a href="#natural">Otimizar naturalmente</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Fisiologia e hormônios · MG COACH</div>
+  <h1>Testosterona natural: o número <span class="em">engana</span> e a hipertrofia não depende tanto dela</h1>
+  <p class="lede">Dentro da faixa normal, variações de testosterona <b>quase não predizem</b> ganho de músculo. E um exame isolado diz pouco: <b>como você se sente</b> — energia, libido, disposição — vale mais que o valor no papel.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="intro">
+  <span class="sec-num">01 — A DUPLA TESE</span>
+  <h2>Duas ideias que se <span class="accent">reforçam</span></h2>
+  <p class="sec-sub">Este material defende dois pontos ligados: testosterona é superestimada para hipertrofia, e o número isolado é mal interpretado.</p>
+
+  <p>Existe uma obsessão com testosterona no meio fitness — como se "aumentar a testo natural" fosse a chave dos ganhos, e como se um exame com número "baixo" fosse sentença. As duas ideias têm pouca sustentação quando se olha a fisiologia com cuidado:</p>
+
+  <ul class="clean">
+    <li><b>Para hipertrofia:</b> dentro da faixa fisiológica normal, a testosterona é um hormônio <em class="term">permissivo</em> — precisa existir, mas suas variações naturais <strong>não predizem</strong> quanto músculo você ganha.</li>
+    <li><b>Para saúde:</b> o número isolado de testosterona <strong>não significa muito</strong> se o indivíduo está bem — com energia, libido e disposição normais. Sintoma vale mais que valor de exame.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">O fio condutor</span>
+    <p>A testosterona importa de forma <strong>binária e de base</strong>, não <strong>proporcional</strong>. Ter o suficiente é essencial; ter "mais" dentro do normal não entrega "mais músculo". É por isso que perseguir o número — seja para hipertrofia, seja por ansiedade com um exame — costuma ser energia mal investida.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="permissivo">
+  <span class="sec-num">02 — HORMÔNIO PERMISSIVO</span>
+  <h2>O conceito que muda <span class="accent">tudo</span></h2>
+  <p class="sec-sub">Entender "permissivo vs. proporcional" desfaz a maior parte dos mitos hormonais.</p>
+
+  <div class="def">
+    <div class="word">Hormônio permissivo</div>
+    <p>Um hormônio cuja presença é <strong>necessária</strong> para um processo acontecer, mas cuja quantidade extra (acima do mínimo necessário) <strong>não acelera proporcionalmente</strong> esse processo. É como ter combustível no tanque: você precisa de gasolina para o carro andar, mas encher além do necessário não faz o carro andar mais rápido.</p>
+  </div>
+
+  <p>A testosterona dentro da faixa normal age assim para a hipertrofia. Há evidência de que existe um <strong>nível basal mínimo</strong> necessário para sustentar ganhos de força e músculo — abaixo dele (hipogonadismo real), os ganhos ficam prejudicados. Mas, acima desse mínimo, as oscilações naturais entre um homem e outro, ou no mesmo homem ao longo do tempo, não se traduzem em mais crescimento.</p>
+
+  <figure>
+    <svg viewBox="0 0 720 250" role="img" aria-label="Curva permissiva da testosterona">
+      <text x="360" y="26" fill="#ff6b1a" font-family="monospace" font-size="13" text-anchor="middle" letter-spacing="1">TESTOSTERONA × RESPOSTA DE HIPERTROFIA</text>
+      <!-- axes -->
+      <line x1="80" y1="200" x2="660" y2="200" stroke="#5a5650" stroke-width="2"/>
+      <line x1="80" y1="200" x2="80" y2="50" stroke="#5a5650" stroke-width="2"/>
+      <text x="370" y="235" fill="#a7a29a" font-size="11" text-anchor="middle">nível de testosterona →</text>
+      <!-- curve: rises then plateaus -->
+      <path d="M80,195 Q140,80 240,70 L660,66" fill="none" stroke="#ff6b1a" stroke-width="3"/>
+      <!-- zones -->
+      <line x1="240" y1="200" x2="240" y2="60" stroke="#37c871" stroke-width="1" stroke-dasharray="4"/>
+      <text x="160" y="185" fill="#e0533d" font-size="11" text-anchor="middle">déficit</text>
+      <text x="160" y="135" fill="#a7a29a" font-size="10" text-anchor="middle">(hipogonadismo:</text>
+      <text x="160" y="150" fill="#a7a29a" font-size="10" text-anchor="middle">ganhos prejudicados)</text>
+      <text x="450" y="50" fill="#37c871" font-size="11" text-anchor="middle">faixa normal — platô</text>
+      <text x="450" y="100" fill="#a7a29a" font-size="10" text-anchor="middle">mais testo aqui ≠ mais músculo</text>
+      <text x="245" y="195" fill="#37c871" font-size="10">mínimo necessário</text>
+    </svg>
+    <figcaption>A relação não é uma linha reta. Sobe enquanto se sai do déficit, depois forma um platô: dentro da faixa normal, mais testosterona não significa mais hipertrofia.</figcaption>
+  </figure>
+</section>
+
+<!-- 3 -->
+<section id="estudos">
+  <span class="sec-num">03 — O QUE OS ESTUDOS MOSTRAM</span>
+  <h2>A evidência por trás da <span class="accent">tese</span></h2>
+  <p class="sec-sub">Não é opinião: vários estudos de ponta apontam na mesma direção.</p>
+
+  <ul class="clean">
+    <li><b>Picos hormonais do treino não predizem nada.</b> O aumento agudo de testosterona, GH e IGF-1 após o treino — aquele "pico anabólico" tão citado — <strong>não tem relação</strong> com o ganho de fibra muscular ao longo das semanas. West e Phillips mostraram que essas elevações não potencializam nem predizem hipertrofia ou força.</li>
+    <li><b>Homens vs. mulheres.</b> Homens têm cerca de 10× mais testosterona que mulheres. Se o nível fosse determinante, os ganhos <em>relativos</em> (percentuais) seriam muito maiores nos homens. Mas, em programas de treino, os ganhos percentuais de músculo são <strong>semelhantes</strong> entre os sexos.</li>
+    <li><b>Mesmo com testo normal, sem estímulo não há crescimento.</b> Em pacientes com testosterona dentro da faixa normal, o treino sem o estímulo adequado não gerou hipertrofia — reforçando que o motor é o treino, não o hormônio circulante.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">A citação que resume a ciência</span>
+    <p>Na visão dos pesquisadores: o exercício resistido fornece um <strong>estímulo intrínseco ao próprio músculo</strong>, e esse estímulo é que dirige a hipertrofia. As concentrações hormonais sistêmicas dentro da faixa fisiológica são <strong>permissivas</strong> para o processo, mas as elevações induzidas pelo exercício não o intensificam nem o predizem de forma alguma.</p>
+  </div>
+  <p class="src">Fontes: West &amp; Phillips, <em>J Appl Physiol</em> (<a href="https://journals.physiology.org/doi/full/10.1152/japplphysiol.01147.2009" target="_blank" rel="noopener">2009</a>); Mitchell et al., <em>PLOS One</em> (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0078636" target="_blank" rel="noopener">2013</a>); revisão Weightology.</p>
+</section>
+
+<!-- 4 -->
+<section id="receptor">
+  <span class="sec-num">04 — O QUE IMPORTA DE VERDADE</span>
+  <h2>O receptor, não o <span class="accent">hormônio circulante</span></h2>
+  <p class="sec-sub">Se não é o nível no sangue, o que diferencia quem cresce de quem não cresce?</p>
+
+  <p>Uma descoberta importante: o que melhor se associa à hipertrofia não é a testosterona no sangue, mas o <strong>conteúdo de receptores de andrógeno (AR)</strong> dentro do músculo. De nada adianta ter hormônio circulando se a célula muscular não tem "fechaduras" (receptores) suficientes para ele agir.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Testosterona no sangue</h4>
+      <p>Mal se correlaciona com a hipertrofia, dentro da faixa normal. É a medida que todo mundo persegue — e a que menos prediz resultado.</p>
+    </div>
+    <div class="mini">
+      <h4>Receptor de andrógeno (AR) no músculo</h4>
+      <p>Associa-se de forma significativa ao ganho de área de fibra. E a expressão de AR é influenciada pelo próprio <b>treino</b> — mais uma vez, o estímulo mecânico no centro de tudo.</p>
+    </div>
+  </div>
+
+  <p>Some-se a isso a sinalização intramuscular (vias como a do p70S6K, que se ativam com o treino e se correlacionam com o crescimento): o quadro que emerge é claro. A hipertrofia é governada por <strong>processos locais, dentro do músculo</strong>, disparados pelo treino — não pela maré de hormônios no sangue.</p>
+  <p class="src">Fonte: Morton et al., <em>Front Physiol</em> — receptor de andrógeno e hipertrofia (<a href="https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2018.01373/full" target="_blank" rel="noopener">2018</a>).</p>
+</section>
+
+<!-- 5 -->
+<section id="numero">
+  <span class="sec-num">05 — O NÚMERO ISOLADO ENGANA</span>
+  <h2>Por que seu exame diz <span class="accent">menos</span> do que você pensa</h2>
+  <p class="sec-sub">Aqui entra a segunda tese: o valor de testosterona, sozinho, é um péssimo indicador de saúde.</p>
+
+  <p>Três razões pelas quais o número isolado vale pouco:</p>
+
+  <ul class="clean">
+    <li><b>As faixas de referência são caóticas.</b> Um levantamento com 134 laboratórios encontrou 27 conjuntos diferentes de faixas de referência — o limite inferior "normal" variava de 84 a 470 ng/dL (variação de mais de 400%). O mesmo exame pode ser "baixo" num laboratório e "normal" em outro.</li>
+    <li><b>Há enorme variação individual e diária.</b> A testosterona oscila ao longo do dia (mais alta de manhã), entre dias, e a variabilidade entre indivíduos saudáveis aumenta com a idade. Um único exame é uma foto de um instante, não o filme.</li>
+    <li><b>O número sem sintoma não é diagnóstico.</b> Todas as diretrizes médicas são unânimes: hipogonadismo se diagnostica com <strong>sintomas + níveis baixos confirmados</strong>, nunca pelo número isolado.</li>
+  </ul>
+
+  <div class="callout ok">
+    <span class="tag">A mensagem central desta seção</span>
+    <p>Se você está <strong>com energia, libido normal, disposição, dormindo bem e progredindo no treino</strong>, um número de testosterona no meio ou na parte baixa da faixa normal <strong>não é um problema a ser "corrigido"</strong>. O corpo funcionando bem é o melhor exame. Perseguir um número mais alto, nesse cenário, é resolver um problema que não existe.</p>
+  </div>
+  <p class="src">Fontes: variabilidade de faixas laboratoriais (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12271928/" target="_blank" rel="noopener">PMC12271928</a>); modelo normativo por idade (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4190174/" target="_blank" rel="noopener">PMC4190174</a>).</p>
+</section>
+
+<!-- 6 -->
+<section id="clinico">
+  <span class="sec-num">06 — COMO O MÉDICO INTERPRETA</span>
+  <h2>Sintoma <span class="accent">primeiro</span>, número depois</h2>
+  <p class="sec-sub">O raciocínio clínico correto — útil para orientar alunos a não se automedicarem por causa de um exame.</p>
+
+  <p>As principais diretrizes de endocrinologia (Endocrine Society, EAU, AAFP) convergem num protocolo que coloca o sintoma no centro:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Passo</th><th>O que de fato importa</th></tr></thead>
+      <tbody>
+        <tr><td>1. Sintomas/sinais</td><td>Só faz sentido investigar se há sinais reais: queda de libido, disfunção erétil, fadiga marcante, perda de pelos, ginecomastia. Sintomas vagos (cansaço, humor) são inespecíficos.</td></tr>
+        <tr><td>2. Dois exames matinais</td><td>Testosterona deve ser medida em jejum, pela manhã, e confirmada em <b>duas</b> ocasiões — nunca diagnóstico com um exame só.</td></tr>
+        <tr><td>3. Contexto completo</td><td>Avaliar LH, FSH, prolactina, SHBG, e fatores como obesidade, sono e doenças. O número ganha sentido apenas dentro desse quadro.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Atenção — o limite do seu papel</span>
+    <p>Diagnóstico hormonal e qualquer decisão de tratamento são competência <strong>médica</strong>. O papel do profissional de educação física é orientar o aluno a procurar um endocrinologista quando há sintomas reais — e, igualmente importante, a <strong>não entrar em pânico</strong> nem buscar "soluções" por conta de um número isolado num exame pedido sem indicação.</p>
+  </div>
+  <p class="src">Fontes: Endocrine Society Guideline 2018 (<a href="https://www.endocrine.org/clinical-practice-guidelines/testosterone-therapy" target="_blank" rel="noopener">link</a>); AAFP (<a href="https://www.aafp.org/pubs/afp/issues/2017/1001/p441.html" target="_blank" rel="noopener">2017</a>); EAU Guidelines.</p>
+</section>
+
+<!-- 7 -->
+<section id="natural">
+  <span class="sec-num">07 — OTIMIZAR NATURALMENTE</span>
+  <h2>O que de fato <span class="accent">funciona</span> (e por que é modesto)</h2>
+  <p class="sec-sub">Já que o número importa pouco para hipertrofia, "otimizar testo natural" rende menos do que prometem.</p>
+
+  <p>A indústria vende fórmulas "testo booster", mas o que realmente sustenta a testosterona dentro da faixa saudável é básico, gratuito e — importante — age mais sobre <strong>evitar a queda</strong> do que sobre "turbinar":</p>
+
+  <ul class="clean">
+    <li><b>Dormir bem.</b> A privação de sono derruba a testosterona de forma consistente. É provavelmente a alavanca mais forte.</li>
+    <li><b>Manter gordura corporal saudável.</b> Excesso de gordura aumenta a aromatização e reduz testosterona; obesidade é um fator claro de queda.</li>
+    <li><b>Treinar (resistido) e não ser sedentário.</b> Estilo de vida ativo associa-se a níveis melhores; sedentarismo, a piores.</li>
+    <li><b>Corrigir deficiências reais (zinco, vitamina D).</b> Só ajuda se você estiver <em>deficiente</em>. Suplementar além do necessário não eleva a testo de quem já está normal.</li>
+    <li><b>Evitar álcool em excesso e tabagismo.</b> Ambos prejudicam tanto a testosterona quanto a saúde muscular.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">O ponto que fecha o raciocínio</span>
+    <p>Repare: tudo o que "otimiza" a testosterona natural — sono, composição corporal, treino — são as <strong>mesmas coisas que já constroem músculo e saúde diretamente</strong>. Ou seja, você nunca otimiza testosterona "para ganhar músculo": você cuida do básico, ganha músculo, e a testosterona saudável vem junto como consequência. Perseguir o hormônio é colocar a carroça na frente dos bois.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="resumo">
+  <span class="sec-num">08 — PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial, defensável e equilibrado.</p>
+
+  <ol class="key">
+    <li><b>Testosterona é permissiva, não proporcional:</b> precisa existir, mas mais (dentro do normal) não dá mais músculo.</li>
+    <li><b>Os picos hormonais do treino não predizem hipertrofia.</b> O "pico anabólico pós-treino" é irrelevante para o crescimento a longo prazo.</li>
+    <li><b>Homens e mulheres ganham músculo em % semelhante</b>, apesar de 10× de diferença na testo — prova de que o nível não é determinante.</li>
+    <li><b>O que se associa ao crescimento</b> é o receptor de andrógeno no músculo e a sinalização local, não o hormônio no sangue.</li>
+    <li><b>O motor é o treino:</b> estímulo mecânico intrínseco ao músculo, não a maré hormonal sistêmica.</li>
+    <li><b>O número isolado engana:</b> faixas de referência variam &gt;400% entre laboratórios e o nível oscila muito.</li>
+    <li><b>Sem sintoma, não há problema:</b> energia, libido e disposição normais valem mais que o valor no papel.</li>
+    <li><b>Diagnóstico é clínico:</b> sintomas + dois exames matinais + contexto. Nunca o número sozinho. E é competência médica.</li>
+    <li><b>"Otimização natural" é modesta</b> e age mais por evitar quedas (sono, gordura, álcool) do que por turbinar.</li>
+    <li><b>Carroça e bois:</b> você não otimiza testo para ganhar músculo — cuida do básico, ganha músculo, e a testo saudável vem junto.</li>
+  </ol>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Material de estudo · Fisiologia e hormônios</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo baseado em literatura fisiológica e diretrizes clínicas atuais. Não substitui avaliação médica. Diagnóstico e tratamento de questões hormonais são competência de um médico.</p>
+</footer>
+
+</body>
+</html>
