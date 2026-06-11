@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Força e Hipertrofia: o que Causa o Quê | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Força e Hipertrofia: o que Causa o Quê | MG COACH">
+    <meta property="og:description" content="Você não cresce porque ficou forte — fica mais forte, em parte, porque cresceu. A direção da causalidade entre hipertrofia e força, o componente neural e por que a carga é consequência.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/forca-e-hipertrofia.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Força e Hipertrofia: o que Causa o Quê | MG COACH">
+    <meta name="twitter:description" content="A direção da causalidade entre hipertrofia e força, o componente neural e por que a carga é consequência, não causa.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:64px 22px 40px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+  .hero h1{font-size:clamp(32px,6.5vw,54px);line-height:1.06;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:640px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:46px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(26px,4.5vw,36px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:#fff;font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:540px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:#fff;font-weight:600}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:rgba(255,107,26,.04)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:#fff}
+  .src{font-size:13px;color:var(--text-faint);font-family:var(--mono)}
+  .src a{color:var(--orange-soft);text-decoration:none}
+  .src a:hover{text-decoration:underline}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <a href="index.html" class="backlink">← Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#intro">A pergunta de causa</a>
+    <a href="#tensao">O que causa hipertrofia</a>
+    <a href="#seta">A seta principal</a>
+    <a href="#neural">A força que não é músculo</a>
+    <a href="#dissociacao">Quando se separam</a>
+    <a href="#carga">A carga como termômetro</a>
+    <a href="#pratica">Na prática</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Treino · MG COACH</div>
+  <h1>Força e hipertrofia: o que <span class="em">causa</span> o quê</h1>
+  <p class="lede">Você não cresce <b>porque</b> ficou forte. Você fica mais forte, em boa parte, <b>porque</b> cresceu. Entender a direção dessa seta — e onde a força foge do músculo — muda como você lê o próprio treino.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="intro">
+  <span class="sec-num">01 — A PERGUNTA DE CAUSA</span>
+  <h2>Invertendo a <span class="accent">seta</span></h2>
+  <p class="sec-sub">A confusão clássica: tratar a carga na barra como a causa do crescimento, quando ela é mais um efeito dele.</p>
+
+  <p>A leitura comum diz: "fique mais forte que você cresce". Subentende-se que aumentar a carga é o que <em>causa</em> a hipertrofia. Mas a fisiologia sugere uma seta em boa parte invertida: <strong>você cresce por causa do estímulo de tensão, e a força aumentada é uma consequência observável desse crescimento</strong> (somada a fatores neurais).</p>
+
+  <div class="callout">
+    <span class="tag">A tese deste material</span>
+    <p>Hipertrofia → mais força é uma seta forte e bem fundamentada: músculo maior tem mais capacidade de gerar força. A seta inversa (mais força → hipertrofia) é mais frágil, porque muito ganho de força não vem de músculo nenhum — vem do sistema nervoso. Logo, <strong>crescer te deixa mais forte; ficar mais forte nem sempre significa ter crescido.</strong></p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="tensao">
+  <span class="sec-num">02 — O QUE CAUSA HIPERTROFIA</span>
+  <h2>Tensão mecânica, não o <span class="accent">número na barra</span></h2>
+  <p class="sec-sub">Antes de falar de força, é preciso fixar o que realmente dispara o crescimento.</p>
+
+  <p>O gatilho proximal da hipertrofia é a <em class="term">tensão mecânica</em> imposta às fibras sob esforço elevado (próximo da falha), sustentada ao longo de uma amplitude. Essa tensão ativa vias de sinalização intramuscular (como a do mTOR/p70S6K) que disparam a síntese de proteína e a adição de sarcômeros — o músculo cresce.</p>
+
+  <p>Repare: o que a célula "sente" é tensão e esforço, não o número de quilos no painel. Por isso é possível crescer com cargas variadas, desde que o esforço e a tensão sejam suficientes. A carga é um <strong>meio</strong> de gerar tensão — não o sinal biológico em si.</p>
+
+  <div class="callout ok">
+    <span class="tag">Conexão com a biblioteca</span>
+    <p>Esse princípio é o mesmo que apareceu nos estudos de creatina e testosterona: o que aparece na ponta (carga, número de exame) é consequência de processos mais profundos. Aqui, a carga é o termômetro; a tensão sob esforço é a febre.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="seta">
+  <span class="sec-num">03 — A SETA PRINCIPAL</span>
+  <h2>Por que crescer te deixa <span class="accent">mais forte</span></h2>
+  <p class="sec-sub">A relação mais sólida e direta: área de secção transversa e capacidade de força.</p>
+
+  <p>A força que um músculo pode produzir está ligada à sua <strong>área de secção transversa</strong> (a "grossura" do corte do músculo perpendicular às fibras). Mais miofibrilas em paralelo = mais pontes cruzadas de actina-miosina trabalhando lado a lado = mais força potencial. Por isso a área de secção transversa é <strong>o melhor preditor isolado</strong> da força de um indivíduo.</p>
+
+  <figure>
+    <svg viewBox="0 0 720 220" role="img" aria-label="Mais área de secção transversa, mais força">
+      <text x="360" y="26" fill="#ff6b1a" font-family="monospace" font-size="13" text-anchor="middle" letter-spacing="1">ÁREA DE SECÇÃO TRANSVERSA × FORÇA POTENCIAL</text>
+      <!-- small muscle -->
+      <circle cx="170" cy="115" r="35" fill="#ff6b1a" opacity=".25" stroke="#ff6b1a"/>
+      <circle cx="160" cy="108" r="4" fill="#ff6b1a"/><circle cx="172" cy="108" r="4" fill="#ff6b1a"/><circle cx="184" cy="108" r="4" fill="#ff6b1a"/>
+      <circle cx="160" cy="120" r="4" fill="#ff6b1a"/><circle cx="172" cy="120" r="4" fill="#ff6b1a"/><circle cx="184" cy="120" r="4" fill="#ff6b1a"/>
+      <text x="170" y="175" fill="#a7a29a" font-size="12" text-anchor="middle">menos fibras lado a lado</text>
+      <text x="170" y="193" fill="#6f6a62" font-size="11" text-anchor="middle">→ menos força</text>
+      <text x="360" y="120" fill="#37c871" font-size="26" text-anchor="middle">→</text>
+      <!-- big muscle -->
+      <circle cx="550" cy="115" r="55" fill="#37c871" opacity=".22" stroke="#37c871"/>
+      <g fill="#37c871">
+        <circle cx="528" cy="98" r="4"/><circle cx="540" cy="98" r="4"/><circle cx="552" cy="98" r="4"/><circle cx="564" cy="98" r="4"/><circle cx="572" cy="98" r="4"/>
+        <circle cx="528" cy="112" r="4"/><circle cx="540" cy="112" r="4"/><circle cx="552" cy="112" r="4"/><circle cx="564" cy="112" r="4"/><circle cx="572" cy="112" r="4"/>
+        <circle cx="528" cy="126" r="4"/><circle cx="540" cy="126" r="4"/><circle cx="552" cy="126" r="4"/><circle cx="564" cy="126" r="4"/><circle cx="572" cy="126" r="4"/>
+      </g>
+      <text x="550" y="190" fill="#a7a29a" font-size="12" text-anchor="middle">mais fibras lado a lado</text>
+      <text x="550" y="208" fill="#37c871" font-size="11" text-anchor="middle">→ mais força potencial</text>
+    </svg>
+    <figcaption>Hipertrofia adiciona sarcômeros em paralelo, aumentando a área de secção transversa. Mais material contrátil lado a lado significa maior potencial de força — por isso crescer te deixa mais forte.</figcaption>
+  </figure>
+
+  <p>É essa a base da sua intuição: ao ganhar músculo, você ergue o "teto" de força do tecido. O aumento de carga que aparece nas semanas seguintes é, em parte, a <strong>manifestação</strong> de que esse teto subiu.</p>
+  <p class="src">Fontes: revisão de adaptações neuromusculares (<a href="https://us.humankinetics.com/blogs/excerpt/neuromuscular-adaptations-to-strength-training" target="_blank" rel="noopener">Human Kinetics</a>); área de secção transversa como preditor de força.</p>
+</section>
+
+<!-- 4 -->
+<section id="neural">
+  <span class="sec-num">04 — A FORÇA QUE NÃO É MÚSCULO</span>
+  <h2>Por que a seta inversa é <span class="accent">frágil</span></h2>
+  <p class="sec-sub">A peça que impede dizer "ficou forte = cresceu": boa parte da força é neural.</p>
+
+  <p>Nem toda força vem de músculo maior. Uma fração importante — sobretudo no início do treino e em iniciantes — vem de <strong>adaptações neurais</strong>: o sistema nervoso aprende a usar melhor o músculo que você já tem.</p>
+
+  <div class="def">
+    <div class="word">Adaptações neurais</div>
+    <p>Melhorias na forma como o cérebro e a medula comandam o músculo: mais unidades motoras recrutadas, maior frequência e sincronia de disparo, melhor coordenação entre músculos sinergistas e <strong>menos co-ativação dos antagonistas</strong> (os músculos opostos param de "frear" o movimento). Resultado: mais força, sem nenhuma fibra ter crescido.</p>
+  </div>
+
+  <p>Por isso é clássico observar <strong>grandes ganhos de força nas primeiras semanas com hipertrofia mínima</strong> — o treino, por enquanto, está afinando o sistema nervoso. A hipertrofia entra com mais peso como fonte de força mais adiante, quando o ganho neural começa a saturar.</p>
+
+  <div class="callout">
+    <span class="tag">O exemplo que prova o ponto</span>
+    <p>Atletas de powerlifting em categorias leves levantam cargas absurdas <strong>sem serem volumosos</strong>. Eles maximizaram o lado neural e a eficiência mecânica (alavancas, técnica, rigidez), não o tamanho. É a prova viva de que <strong>força não exige hipertrofia</strong> — e por isso "ficou forte" não implica "cresceu".</p>
+  </div>
+  <p class="src">Fontes: Moritani &amp; deVries (fatores neurais vs. hipertrofia no tempo); revisão de adaptações neuromusculares (<a href="https://www.sciencedirect.com/topics/neuroscience/muscle-hypertrophy" target="_blank" rel="noopener">ScienceDirect</a>).</p>
+</section>
+
+<!-- 5 -->
+<section id="dissociacao">
+  <span class="sec-num">05 — QUANDO SE SEPARAM</span>
+  <h2>Tamanho e força podem <span class="accent">divergir</span></h2>
+  <p class="sec-sub">Uma revisão provocativa mostra que as duas variáveis nem sempre andam juntas.</p>
+
+  <p>No geral existe relação positiva entre tamanho e força — mas não é uma trava perfeita. Uma revisão que reuniu dados de humanos e roedores documentou casos de <strong>dissociação</strong> nos dois sentidos:</p>
+
+  <ul class="clean">
+    <li><b>Cresceu sem ganhar força proporcional</b> (às vezes até com queda): pode ocorrer com aumento de tecido não-contrátil, mudança de ângulo de penação das fibras, ou hipertrofia que não se traduz em força naquela tarefa específica.</li>
+    <li><b>Ganhou força sem crescer:</b> o caso neural clássico — mais recrutamento e coordenação, mesma área de secção transversa.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">A nuance honesta</span>
+    <p>Isso não derruba a sua tese — <strong>reforça</strong>. Se tamanho e força fossem a mesma coisa, não haveria como dissociá-los. O fato de a força poder subir sem crescimento (e vice-versa) confirma que são variáveis <strong>relacionadas mas distintas</strong>, com a hipertrofia sendo <em>uma</em> das fontes de força, não a única — e a carga sendo um reflexo imperfeito do que aconteceu no músculo.</p>
+  </div>
+  <p class="src">Fonte: Reggiani &amp; Schiaffino, "Muscle hypertrophy and muscle strength: dependent or independent variables? A provocative review", <em>Eur J Transl Myol</em> (<a href="https://pubmed.ncbi.nlm.nih.gov/33117512/" target="_blank" rel="noopener">2020</a>).</p>
+</section>
+
+<!-- 6 -->
+<section id="carga">
+  <span class="sec-num">06 — A CARGA COMO TERMÔMETRO</span>
+  <h2>O lugar certo da <span class="accent">progressão</span></h2>
+  <p class="sec-sub">Se a carga é consequência, qual é o papel da sobrecarga progressiva?</p>
+
+  <p>Aqui está a síntese que evita o erro oposto (achar que progressão não importa). A progressão de carga não é a <strong>causa biológica</strong> da hipertrofia — a tensão é. Mas ela cumpre dois papéis legítimos:</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Termômetro (consequência)</h4>
+      <p>Conseguir mais carga ou mais reps é o <b>sinal observável</b> de que você adaptou — cresceu e/ou melhorou o neural. É o resultado aparecendo, não o gatilho.</p>
+    </div>
+    <div class="mini">
+      <h4>Veículo (ferramenta)</h4>
+      <p>Conforme você adapta, o mesmo peso vira estímulo cada vez menor. Progredir (carga, reps, séries, amplitude) é o que <b>mantém a tensão alta o bastante</b> para continuar crescendo. Sem isso, estagna.</p>
+    </div>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">A formulação precisa</span>
+    <p>A causa da hipertrofia é a <strong>tensão mecânica sob esforço elevado</strong>. A progressão é, ao mesmo tempo, uma <strong>consequência</strong> da adaptação (você fica capaz de mais) e a <strong>ferramenta</strong> que mantém o estímulo ao longo do tempo — mas não é a causa em si, e nem precisa ser sempre via carga: mais reps, séries, amplitude ou qualidade de execução também progridem o estímulo.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="pratica">
+  <span class="sec-num">07 — NA PRÁTICA</span>
+  <h2>O que isso <span class="accent">muda</span> no treino</h2>
+  <p class="sec-sub">Implicações concretas de inverter a seta.</p>
+
+  <ul class="clean">
+    <li><b>Não persiga carga às custas de tensão.</b> Adicionar peso com execução pior (menos amplitude, mais "roubo") aumenta o número na barra mas pode reduzir a tensão no músculo-alvo. O termômetro sobe, a febre cai.</li>
+    <li><b>Progrida por várias vias.</b> Reps, séries, amplitude, controle e densidade são formas válidas de progredir o estímulo — não só carga.</li>
+    <li><b>Não confunda platô de carga com platô de crescimento.</b> Em treinados, a força pode subir devagar mesmo com hipertrofia acontecendo; e ganhos neurais podem inflar a força sem músculo. Avalie por mais de um marcador.</li>
+    <li><b>Para forçar hipertrofia,</b> mire tensão e esforço próximos da falha em amplitude completa — e use a progressão como ferramenta de manutenção do estímulo, não como objetivo em si.</li>
+    <li><b>Iniciante fica forte rápido</b> (neural) — não interprete isso como hipertrofia expressiva. O crescimento real vem com o tempo, e a janela de maior ganho percentual é justamente a do iniciante.</li>
+  </ul>
+</section>
+
+<!-- 8 -->
+<section id="resumo">
+  <span class="sec-num">08 — PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial, preciso e defensável.</p>
+
+  <ol class="key">
+    <li><b>A seta principal:</b> hipertrofia → mais força (mais área de secção transversa = mais potencial de força).</li>
+    <li><b>A seta inversa é frágil:</b> muita força vem do sistema nervoso, não de músculo novo.</li>
+    <li><b>A causa da hipertrofia é tensão mecânica sob esforço</b>, não o número de quilos na barra.</li>
+    <li><b>Ganho neural domina o início:</b> força sobe rápido com hipertrofia mínima nas primeiras semanas.</li>
+    <li><b>Powerlifter leve é a prova:</b> muito forte sem ser volumoso — força sem hipertrofia proporcional.</li>
+    <li><b>Tamanho e força podem dissociar</b> nos dois sentidos — são variáveis relacionadas, mas distintas.</li>
+    <li><b>Carga é termômetro</b> (consequência da adaptação), não a febre (o estímulo).</li>
+    <li><b>Progressão é veículo:</b> mantém a tensão alta ao longo do tempo — necessária, mas não é a causa biológica.</li>
+    <li><b>Progredir ≠ só botar peso:</b> reps, séries, amplitude e execução também contam.</li>
+    <li><b>Resumo da tese:</b> crescer te deixa mais forte; ficar mais forte nem sempre significa ter crescido.</li>
+  </ol>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Material de estudo · Treino</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo baseado em literatura de fisiologia do exercício e adaptações neuromusculares. A individualidade biológica influencia a magnitude e o ritmo das adaptações.</p>
+</footer>
+
+</body>
+</html>
