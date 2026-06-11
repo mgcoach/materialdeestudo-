@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creatina é Superestimada? O que a Evidência Realmente Mostra | MG COACH</title>
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:64px 22px 40px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+  .hero h1{font-size:clamp(32px,6.5vw,54px);line-height:1.06;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:640px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:46px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(26px,4.5vw,36px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:#fff;font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:540px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:#fff;font-weight:600}
+  .verdict{font-family:var(--mono);font-size:12px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .verdict.real{color:var(--green);background:rgba(55,200,113,.13)}
+  .verdict.over{color:var(--red);background:rgba(224,83,61,.13)}
+  .verdict.mid{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:rgba(255,107,26,.04)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:#fff}
+  .src{font-size:13px;color:var(--text-faint);font-family:var(--mono)}
+  .src a{color:var(--orange-soft);text-decoration:none}
+  .src a:hover{text-decoration:underline}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <a href="index.html" class="backlink">← Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#intro">A tese</a>
+    <a href="#hype">O hype vs. o dado</a>
+    <a href="#hipertrofia">Hipertrofia</a>
+    <a href="#agua">A questão da água</a>
+    <a href="#forca">Força e potência</a>
+    <a href="#energia">Energia (o real)</a>
+    <a href="#veredito">Veredito por promessa</a>
+    <a href="#pratica">Na prática</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Suplementação · MG COACH</div>
+  <h1>Creatina é <span class="em">superestimada</span>? O que a evidência realmente mostra</h1>
+  <p class="lede">A creatina é vendida como construtora de músculo. Mas quando se mede hipertrofia <b>com imagem direta</b>, o efeito é <b>trivial a pequeno</b>. O valor real dela é <b>outro</b> — e entender essa diferença separa o marketing da fisiologia.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="intro">
+  <span class="sec-num">01 — A TESE, COM PRECISÃO</span>
+  <h2>Superestimada <span class="accent">para quê</span>, exatamente</h2>
+  <p class="sec-sub">A frase "creatina é superestimada" precisa de um recorte — senão vira tão imprecisa quanto o hype que critica.</p>
+
+  <p>A creatina é um dos suplementos mais estudados da história e isso não está em disputa. O problema não é a substância — é a <strong>promessa que a cultura fitness reproduz</strong>: a de que a creatina "constrói músculo", como se fosse um anabolizante leve. É <em>essa</em> promessa que a evidência não sustenta.</p>
+
+  <p>Para não cair no erro oposto (negar tudo), este material separa três promessas distintas e julga cada uma com o dado disponível:</p>
+
+  <ul class="clean">
+    <li><b>Promessa de hipertrofia</b> ("faz crescer músculo") → aqui a creatina é, de fato, <strong>superestimada</strong>.</li>
+    <li><b>Promessa de força/potência</b> → aqui o efeito é <strong>real e consistente</strong> — negar isso seria contrariar a evidência.</li>
+    <li><b>Função energética (fosfocreatina/ATP)</b> → o efeito <strong>mais sólido de todos</strong>, e a verdadeira razão pela qual ela funciona.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">O enquadramento honesto</span>
+    <p>A creatina é superestimada <strong>como construtora direta de músculo</strong> — essa é a promessa inflada. Seu valor real é <strong>indireto</strong>: ela melhora a disponibilidade de energia, o que permite treinar com um pouco mais de volume e intensidade, e <em>isso</em> — o treino — é que constrói o músculo. Defender que "a creatina cria músculo" é vender mágica; defender que "a creatina ajuda você a treinar melhor" é defender ciência.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="hype">
+  <span class="sec-num">02 — O HYPE VS. O DADO</span>
+  <h2>De onde veio a fama de <span class="accent">anabolizante leve</span></h2>
+  <p class="sec-sub">A confusão nasce de misturar "ganho de peso na balança" com "ganho de músculo real".</p>
+
+  <p>Quando alguém começa a usar creatina, a balança sobe rápido — às vezes 1 a 2% do peso corporal em poucos dias. Isso é lido como "tô crescendo!". Mas grande parte desse ganho inicial é <strong>água puxada para dentro do músculo</strong> (a creatina é osmoticamente ativa), não tecido muscular novo. O ganho rápido alimenta o mito; o tecido real leva meses e é modesto.</p>
+
+  <p>Some-se a isso a indústria de suplementos, que tem todo o incentivo de manter a creatina como "o suplemento que faz crescer", e você tem uma promessa cultural que descolou do que os estudos de imagem realmente medem.</p>
+</section>
+
+<!-- 3 -->
+<section id="hipertrofia">
+  <span class="sec-num">03 — HIPERTROFIA</span>
+  <h2>O dado que sustenta a tese: efeito <span class="accent">"trivial a pequeno"</span></h2>
+  <p class="sec-sub">Quando se mede o músculo por dentro (MRI, ultrassom), o efeito extra da creatina é minúsculo.</p>
+
+  <p>A melhor evidência sobre isso é a meta-análise de Burke, Candow, Forbes, Schoenfeld e colegas (2023), que olhou <strong>só estudos com medida direta de hipertrofia</strong> por imagem (ressonância, tomografia, ultrassom) — o padrão-ouro, porque enxerga o músculo de verdade, não a balança.</p>
+
+  <figure>
+    <svg viewBox="0 0 720 240" role="img" aria-label="Tamanho de efeito da creatina sobre hipertrofia">
+      <text x="360" y="28" fill="#ff6b1a" font-family="monospace" font-size="13" text-anchor="middle" letter-spacing="1">EFEITO EXTRA DA CREATINA SOBRE HIPERTROFIA</text>
+      <!-- scale -->
+      <line x1="80" y1="150" x2="660" y2="150" stroke="#5a5650" stroke-width="2"/>
+      <text x="80" y="180" fill="#a7a29a" font-size="11" text-anchor="middle">0</text>
+      <text x="220" y="180" fill="#a7a29a" font-size="11" text-anchor="middle">0,2</text>
+      <text x="360" y="180" fill="#a7a29a" font-size="11" text-anchor="middle">0,5 (médio)</text>
+      <text x="520" y="180" fill="#a7a29a" font-size="11" text-anchor="middle">0,8 (grande)</text>
+      <!-- marker at 0.11 -->
+      <line x1="160" y1="90" x2="160" y2="150" stroke="#ff6b1a" stroke-width="3"/>
+      <circle cx="160" cy="90" r="8" fill="#ff6b1a"/>
+      <text x="160" y="75" fill="#f2efe9" font-size="13" text-anchor="middle" font-weight="bold">0,11</text>
+      <text x="160" y="58" fill="#37c871" font-size="11" text-anchor="middle">creatina + treino</text>
+      <!-- zones -->
+      <rect x="80" y="146" width="120" height="8" fill="#e0533d" opacity=".5"/>
+      <text x="140" y="210" fill="#e0533d" font-size="11" text-anchor="middle">"trivial a pequeno"</text>
+    </svg>
+    <figcaption>Tamanho de efeito de 0,11 (intervalo de credibilidade −0,02 a 0,25): estatisticamente próximo de zero e, na prática, irrelevante para a maioria. Em espessura muscular, o ganho extra foi de 0,10–0,16 cm.</figcaption>
+  </figure>
+
+  <p>Em números diretos: o ganho <strong>adicional</strong> de espessura muscular atribuível à creatina foi de cerca de <strong>1 a 1,6 milímetro</strong>. O efeito foi um pouco maior em jovens do que em idosos, mas os próprios autores classificam essa diferença como de relevância prática questionável.</p>
+
+  <div class="callout warn">
+    <span class="tag">O ponto-chave</span>
+    <p>Note a estrutura do experimento: <strong>os dois grupos treinaram</strong>. A pergunta não é "creatina + treino cresce mais que ficar parado?" — obviamente cresce. A pergunta é "a creatina <strong>adiciona</strong> crescimento ao que o treino já entrega?". E a resposta honesta é: <strong>quase nada</strong> diretamente. O músculo vem do treino; a creatina dá uma mãozinha marginal.</p>
+  </div>
+  <p class="src">Fonte: Burke et al., <em>Nutrients</em> 2023 (meta-análise com medidas diretas de imagem). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10180745/" target="_blank" rel="noopener">PMC10180745</a></p>
+</section>
+
+<!-- 4 -->
+<section id="agua">
+  <span class="sec-num">04 — A QUESTÃO DA ÁGUA</span>
+  <h2>Quanto do "ganho" é músculo e quanto é <span class="accent">água</span>?</h2>
+  <p class="sec-sub">Aqui é preciso ser justo: a água não é necessariamente "trapaça" — mas também não é o que a maioria imagina.</p>
+
+  <p>Meta-análises de composição corporal mostram que a creatina aumenta a massa magra em torno de <strong>~1,1 kg</strong> a mais que o treino sozinho. Mas "massa magra" inclui água. Como a creatina puxa água para dentro da célula muscular (água <em class="term">intracelular</em>), parte desse número é fluido, não proteína contrátil nova.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>O argumento "é só água"</h4>
+      <p>Boa parte do ganho rápido de massa magra é água intracelular, não miofibrila. Em medida de balança ou bioimpedância, isso infla o resultado e reforça a impressão de "crescimento" que não corresponde a tecido contrátil novo.</p>
+    </div>
+    <div class="mini">
+      <h4>O contraponto justo</h4>
+      <p>Estudos que mediram a razão entre água intracelular e massa muscular não acharam distorção: a água "acompanha" o músculo. E o inchaço celular pode atuar como <b>sinal anabólico</b>, favorecendo a síntese proteica. Ou seja: a água não é puro engano.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Conclusão equilibrada sobre a água</span>
+    <p>A verdade fica no meio: parte do ganho inicial <strong>é</strong> água (o que infla a percepção de hipertrofia, sustentando a tese de "superestimada"), mas essa água é majoritariamente intracelular e não distorce a proporção músculo/água a longo prazo. Não é "fraude", mas também não é o músculo extra que o marketing promete.</p>
+  </div>
+  <p class="src">Fontes: meta-análise de composição corporal (<a href="https://pubmed.ncbi.nlm.nih.gov/39074168/" target="_blank" rel="noopener">PubMed 39074168</a>); Ribeiro/Kassiano/Schoenfeld/Cyrino, 2020, sobre razão água/músculo (resumo em ISSN, <a href="https://link.springer.com/article/10.1186/s12970-021-00412-w" target="_blank" rel="noopener">JISSN 2021</a>).</p>
+</section>
+
+<!-- 5 -->
+<section id="forca">
+  <span class="sec-num">05 — FORÇA E POTÊNCIA</span>
+  <h2>Onde a tese <span class="accent">não</span> se sustenta</h2>
+  <p class="sec-sub">Importante para honestidade: aqui o efeito é real, e negá-lo enfraqueceria seu argumento.</p>
+
+  <p>Se a creatina decepciona na hipertrofia direta, na <strong>força e potência</strong> ela entrega de forma consistente. As meta-análises mostram ganhos significativos quando combinada ao treino:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Desfecho</th><th>Ganho extra vs. placebo</th></tr></thead>
+      <tbody>
+        <tr><td>Força de membros superiores</td><td>≈ +4,4 kg</td></tr>
+        <tr><td>Força de membros inferiores</td><td>≈ +11,3 kg</td></tr>
+        <tr><td>Potência / supino / chest press</td><td>Melhora significativa (sobretudo em jovens)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Esses números são relevantes. Por isso, num material que se pretende sério, a frase precisa ser cirúrgica: a creatina é superestimada <strong>como construtora de músculo</strong>, não como auxiliar de desempenho. Em força, ela cumpre o que promete.</p>
+
+  <div class="callout ok">
+    <span class="tag">Por que isso reforça (e não enfraquece) a tese central</span>
+    <p>Repare na lógica: a creatina melhora a <strong>força e a capacidade de treino</strong>, e é justamente por esse caminho <strong>indireto</strong> que ela contribui marginalmente para a hipertrofia ao longo do tempo. Ou seja, mesmo o pequeno efeito sobre o músculo provavelmente vem do desempenho, não de uma ação anabólica direta. Confirma o enquadramento: o valor é energético/performático, não construtor.</p>
+  </div>
+  <p class="src">Fontes: meta-análise de força em adultos &lt;50 anos (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11547435/" target="_blank" rel="noopener">PMC11547435</a>); meta-análise de força e potência (<a href="https://www.mdpi.com/2072-6643/17/17/2748" target="_blank" rel="noopener">MDPI 2025</a>).</p>
+</section>
+
+<!-- 6 -->
+<section id="energia">
+  <span class="sec-num">06 — ENERGIA: O EFEITO REAL</span>
+  <h2>Fosfocreatina e o sistema <span class="accent">ATP-PCr</span></h2>
+  <p class="sec-sub">O mecanismo que você já reconhece — e o que de fato justifica usar creatina.</p>
+
+  <p>Dentro do músculo, a creatina vira <em class="term">fosfocreatina (PCr)</em>: uma reserva de energia rapidamente mobilizável. Em esforços curtos e intensos, a PCr doa seu fosfato para regenerar <strong>ATP</strong> (a "moeda de energia") em segundos. Mais creatina muscular = mais PCr disponível = capacidade de manter o esforço máximo por um pouco mais de tempo.</p>
+
+  <figure>
+    <svg viewBox="0 0 720 180" role="img" aria-label="Sistema ATP-fosfocreatina">
+      <text x="360" y="28" fill="#ff6b1a" font-family="monospace" font-size="13" text-anchor="middle" letter-spacing="1">O ATALHO ENERGÉTICO DA FOSFOCREATINA</text>
+      <!-- ADP -->
+      <circle cx="150" cy="100" r="38" fill="none" stroke="#4d9aff" stroke-width="2"/>
+      <text x="150" y="105" fill="#4d9aff" font-size="16" text-anchor="middle" font-weight="bold">ADP</text>
+      <text x="150" y="155" fill="#a7a29a" font-size="11" text-anchor="middle">energia "gasta"</text>
+      <!-- arrow with PCr -->
+      <line x1="195" y1="100" x2="525" y2="100" stroke="#ff6b1a" stroke-width="2"/>
+      <polygon points="525,100 512,93 512,107" fill="#ff6b1a"/>
+      <text x="360" y="88" fill="#ff6b1a" font-size="13" text-anchor="middle" font-weight="bold">+ fosfato da PCr</text>
+      <text x="360" y="120" fill="#6f6a62" font-size="11" text-anchor="middle">regeneração em segundos</text>
+      <!-- ATP -->
+      <circle cx="570" cy="100" r="38" fill="none" stroke="#37c871" stroke-width="2"/>
+      <text x="570" y="105" fill="#37c871" font-size="16" text-anchor="middle" font-weight="bold">ATP</text>
+      <text x="570" y="155" fill="#a7a29a" font-size="11" text-anchor="middle">energia pronta</text>
+    </svg>
+    <figcaption>A fosfocreatina é o sistema de energia mais rápido do corpo para esforços de alta intensidade e curta duração. É aqui que a creatina age de verdade.</figcaption>
+  </figure>
+
+  <p>Esse efeito é a base de tudo. A ISSN classifica a creatina monohidratada como o suplemento ergogênico (melhorador de desempenho) <strong>mais eficaz e mais bem documentado</strong> disponível para atletas em exercícios de alta intensidade. Note a palavra: <strong>ergogênico</strong> — melhora o desempenho. Não diz "anabólico construtor de músculo".</p>
+
+  <div class="callout ok">
+    <span class="tag">A síntese de tudo</span>
+    <p>A creatina é, antes de mais nada, uma <strong>ferramenta de energia</strong>. Você acertou em cheio nesse ponto. O efeito sobre a hipertrofia é apenas a sombra desse benefício energético — pequeno, indireto, mediado pelo treino que a energia extra permite fazer.</p>
+  </div>
+  <p class="src">Fontes: ISSN Position Stand — Creatina (Kreider et al., 2017). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469049/" target="_blank" rel="noopener">PMC5469049</a></p>
+</section>
+
+<!-- 7 -->
+<section id="veredito">
+  <span class="sec-num">07 — VEREDITO POR PROMESSA</span>
+  <h2>O quadro que <span class="accent">resolve a discussão</span></h2>
+  <p class="sec-sub">Para você usar com alunos e colegas: o que é real, o que é exagero.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Promessa</th><th>Veredito</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>"Faz crescer músculo" (direto)</td>
+          <td><span class="verdict over">SUPERESTIMADO</span></td>
+          <td>Efeito trivial a pequeno (0,11) em medida direta de imagem. ~1–1,6 mm de espessura extra.</td>
+        </tr>
+        <tr>
+          <td>Ganho rápido de "massa" inicial</td>
+          <td><span class="verdict mid">ENGANOSO</span></td>
+          <td>Grande parte é água intracelular, não tecido contrátil novo.</td>
+        </tr>
+        <tr>
+          <td>Aumenta força e potência</td>
+          <td><span class="verdict real">REAL</span></td>
+          <td>Ganhos consistentes e significativos em meta-análises (+4–11 kg).</td>
+        </tr>
+        <tr>
+          <td>Melhora energia (alta intensidade)</td>
+          <td><span class="verdict real">REAL E SÓLIDO</span></td>
+          <td>Sistema ATP-PCr; o efeito mais bem documentado de todos.</td>
+        </tr>
+        <tr>
+          <td>Permite treinar mais/melhor</td>
+          <td><span class="verdict real">REAL (indireto)</span></td>
+          <td>Mais volume tolerado → contribuição marginal à hipertrofia ao longo do tempo.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="def">
+    <div class="word">Ergogênico ≠ anabólico</div>
+    <p>Ergogênico = melhora o desempenho/trabalho (é o que a creatina é). Anabólico = constrói tecido diretamente (é o que ela <strong>não</strong> é, em grau relevante). Confundir os dois é a origem de todo o hype.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="pratica">
+  <span class="sec-num">08 — NA PRÁTICA</span>
+  <h2>Então, vale a pena <span class="accent">usar</span>?</h2>
+  <p class="sec-sub">Tese honesta não significa "não tome" — significa "tome pelo motivo certo".</p>
+
+  <p>Sim, vale — mas com expectativa calibrada. A creatina é barata, segura (doses usuais bem toleradas por anos em estudos) e entrega um ganho marginal de desempenho que, somado ao longo de meses, ajuda. O erro não é usar; é <strong>esperar dela o que ela não faz</strong> e tratá-la como prioridade quando o básico não está resolvido.</p>
+
+  <ul class="clean">
+    <li><b>Prioridade real:</b> treino bem programado, proteína e calorias adequadas, sono e constância. Isso entrega 95% do resultado. A creatina é o detalhe final, não o alicerce.</li>
+    <li><b>Dose:</b> ~3–5 g/dia de monohidratada, todo dia. Fase de saturação ("loading") é opcional — apenas acelera o preenchimento, não muda o resultado final.</li>
+    <li><b>Expectativa:</b> espere mais energia nas séries pesadas e talvez algumas repetições a mais — não espere "explodir" de músculo.</li>
+    <li><b>Quem mais se beneficia:</b> quem treina pesado e busca desempenho. Para quem quer só "ficar grande" sem ajustar treino e dieta, a creatina não vai resolver.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">A mensagem para passar ao aluno</span>
+    <p>"A creatina não vai te fazer crescer — <strong>você</strong> vai, treinando. A creatina só te dá um pouco mais de combustível para treinar melhor." Essa frase é honesta, defensável diante de qualquer profissional, e ainda assim não desmerece o suplemento. É o oposto da promessa de marketing — e é o que a ciência sustenta.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section id="resumo">
+  <span class="sec-num">09 — PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial, equilibrado e à prova de contestação.</p>
+
+  <ol class="key">
+    <li><b>A tese precisa de recorte:</b> a creatina é superestimada <b>como construtora direta de músculo</b>, não como suplemento em geral.</li>
+    <li><b>Hipertrofia direta:</b> efeito trivial a pequeno (0,11; ~1–1,6 mm de espessura extra) em medida por imagem. Aqui a tese se sustenta.</li>
+    <li><b>O hype vem da balança:</b> ganho rápido inicial é em boa parte água intracelular, não tecido novo.</li>
+    <li><b>A água é nuance:</b> ela infla a percepção, mas acompanha o músculo e pode sinalizar anabolismo — não é fraude, mas não é o músculo prometido.</li>
+    <li><b>Força e potência:</b> efeito REAL e consistente (+4–11 kg). Negar isso enfraqueceria o argumento — então não negue.</li>
+    <li><b>Energia (ATP-PCr):</b> o efeito mais sólido. É uma ferramenta ergogênica, a melhor documentada que existe.</li>
+    <li><b>Ergogênico ≠ anabólico:</b> melhora desempenho, não constrói tecido diretamente. Confundir os dois gera todo o exagero.</li>
+    <li><b>O pequeno ganho de músculo é indireto:</b> vem do treino que a energia extra permite, não de ação anabólica.</li>
+    <li><b>Vale usar:</b> barata, segura, 3–5 g/dia. Mas é detalhe final, não alicerce — o básico entrega 95%.</li>
+    <li><b>Frase honesta:</b> "a creatina não te faz crescer; você cresce treinando — ela só dá combustível."</li>
+  </ol>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Material de estudo · Suplementação</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Este material é educativo e baseado em meta-análises e position stands atuais. A creatina é considerada segura para a maioria das pessoas saudáveis, mas decisões de suplementação devem ser individualizadas com orientação profissional.</p>
+</footer>
+
+</body>
+</html>
