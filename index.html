@@ -105,7 +105,7 @@
       grid.innerHTML=list.map(function(s){
         var label=CAT_LABELS[s.categoria]||s.categoria;
         return '<article class="study" data-cat="'+esc(s.categoria)+'">'+
-          '<a href="estudos/'+esc(s.arquivo)+'">'+
+          '<a href="'+esc(s.arquivo)+'">'+
             '<div class="meta-top"><span class="cat-tag">'+esc(label)+'</span><span class="date">'+esc(s.data)+'</span></div>'+
             '<h3>'+esc(s.titulo)+'</h3><p>'+esc(s.resumo)+'</p><span class="open">Abrir estudo →</span>'+
           '</a></article>';

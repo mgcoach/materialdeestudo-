@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agachamento vs Leg Press — Biomecânica do Membro Inferior | MG COACH</title>
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --bg-card:#141414;
+    --bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;
+    --orange-soft:#ff8c4d;
+    --orange-dim:rgba(255,107,26,.12);
+    --orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;
+    --text-dim:#a7a29a;
+    --text-faint:#6f6a62;
+    --green:#37c871;
+    --red:#e0533d;
+    --yellow:#e8b53a;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.7;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* ---------- HEADER ---------- */
+  header.topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    max-width:880px;margin:0 auto;padding:14px 22px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}
+  .brand .coach{color:var(--orange)}
+  .brand-meta{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--text-faint);text-align:right;line-height:1.4}
+  .brand-meta b{color:var(--orange);font-weight:600}
+
+  /* ---------- NAV ---------- */
+  nav.toc{
+    max-width:880px;margin:0 auto;padding:0 22px;
+    display:flex;gap:8px;flex-wrap:wrap;
+    border-bottom:1px solid var(--line);padding-bottom:14px;padding-top:14px;
+  }
+  nav.toc a{
+    font-family:var(--mono);font-size:11.5px;text-decoration:none;
+    color:var(--text-dim);border:1px solid var(--line);
+    padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap;
+  }
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+
+  /* ---------- HERO ---------- */
+  .hero{max-width:880px;margin:0 auto;padding:64px 22px 40px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+  .hero h1{
+    font-size:clamp(34px,7vw,58px);line-height:1.04;font-weight:800;letter-spacing:-1.5px;margin-bottom:22px;
+  }
+  .hero h1 .vs{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,"Times New Roman",serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:620px}
+  .hero .lede b{color:var(--text);font-weight:600}
+
+  /* ---------- SECTION ---------- */
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:46px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(26px,4.5vw,36px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px;color:var(--text)}
+  p.muted{color:var(--text-dim)}
+  strong{color:#fff;font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+
+  /* ---------- CARDS / CALLOUTS ---------- */
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+
+  /* ---------- TABLE ---------- */
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:#fff;font-weight:600}
+  td .mot{color:var(--green);font-weight:700}
+  td .est{color:var(--yellow);font-weight:700}
+  td .low{color:var(--text-faint)}
+
+  /* ---------- SCORE BARS ---------- */
+  .score-row{display:flex;align-items:center;gap:14px;margin:11px 0}
+  .score-label{flex:0 0 165px;font-size:14.5px;color:var(--text)}
+  .score-track{flex:1;height:10px;background:var(--bg-card-2);border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .score-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange-soft));border-radius:6px}
+  .score-val{flex:0 0 44px;font-family:var(--mono);font-size:13px;color:var(--orange);text-align:right}
+  .score-row.dim .score-fill{background:linear-gradient(90deg,#555,#777)}
+  .score-row.dim .score-val{color:var(--text-faint)}
+
+  /* ---------- SVG FIGURE ---------- */
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+
+  /* ---------- TWO COL ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini.sq h4{color:var(--orange)}
+  .mini.lp h4{color:var(--orange-soft)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+
+  /* ---------- DEFINITION BOX ---------- */
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:rgba(255,107,26,.04)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+
+  /* ---------- FOOTER ---------- */
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+
+  /* key-takeaway numbered */
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:#fff}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24" fill="none"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <a href="index.html" style="margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s" onmouseover="this.style.color='#ff6b1a';this.style.borderColor='rgba(255,107,26,.35)'" onmouseout="this.style.color='#a7a29a';this.style.borderColor='rgba(255,255,255,.08)'">← Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#intro">Visão geral</a>
+    <a href="#movimentos">Os movimentos</a>
+    <a href="#motores">Motores primários</a>
+    <a href="#insuficiencia">Insuficiência ativa</a>
+    <a href="#lombard">Paradoxo de Lombard</a>
+    <a href="#forca">Força × excursão</a>
+    <a href="#estabilizadores">Estabilizadores</a>
+    <a href="#notas">Notas 0–10</a>
+    <a href="#resumo">Resumo final</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Biomecânica do membro inferior</div>
+  <h1>Agachamento <span class="vs">vs</span> Leg Press</h1>
+  <p class="lede">Por que os dois exercícios <b>parecem iguais</b> mas estimulam a musculatura de formas diferentes — e por que o posterior de coxa quase não "trabalha" em nenhum dos dois. Um guia sobre <b>motores, estabilizadores, insuficiência ativa</b> e o mal compreendido <b>paradoxo de Lombard</b>.</p>
+</div>
+
+<main>
+
+<!-- ============ 1. INTRO ============ -->
+<section id="intro">
+  <span class="sec-num">01 — PONTO DE PARTIDA</span>
+  <h2>O erro comum: confundir <span class="accent">ativação</span> com estímulo</h2>
+  <p class="sec-sub">Um músculo estar "ligado" não significa que está recebendo o estímulo que faz ele crescer.</p>
+
+  <p>A pergunta original que origina este material é clássica nas redes: <strong>"o posterior de coxa trabalha no leg press?"</strong>. A resposta intuitiva — "ativa, então conta" — esconde um erro conceitual importante.</p>
+
+  <p>Hipertrofia não responde a "ativação" no sentido de o músculo estar eletricamente ativo. Ela responde a <strong>tensão mecânica imposta ao longo de uma variação de comprimento</strong>, especialmente em comprimentos alongados. Um músculo pode estar tensionado e ativo, mas se ele não <em class="term">muda de comprimento</em> de forma significativa, o estímulo para crescer é pobre.</p>
+
+  <div class="callout">
+    <span class="tag">A ideia central do material</span>
+    <p>Em qualquer exercício, o que importa é que o músculo <strong>"seja deformado"</strong> — alongando ou encurtando sob carga. Se ele permanece sempre com o mesmo comprimento (trabalho puramente isométrico, em comprimento intermediário), a tensão existe, mas o <strong>estímulo hipertrófico é subótimo</strong>. É isso que acontece com os isquiotibiais no leg press e no agachamento.</p>
+  </div>
+</section>
+
+<!-- ============ 2. OS MOVIMENTOS ============ -->
+<section id="movimentos">
+  <span class="sec-num">02 — ANATOMIA DO MOVIMENTO</span>
+  <h2>O que cada articulação faz em <span class="accent">cada fase</span></h2>
+  <p class="sec-sub">A base de tudo: separar o que o quadril faz do que o joelho faz, fase por fase.</p>
+
+  <p>Tanto o agachamento quanto o leg press são <strong>padrões de agachamento</strong> — quadril e joelho se movem na <strong>mesma direção</strong> ao mesmo tempo. Esse detalhe é o que vai explicar todo o resto.</p>
+
+  <figure>
+    <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama das fases do movimento">
+      <!-- DESCIDA -->
+      <text x="180" y="34" fill="#ff6b1a" font-family="monospace" font-size="14" text-anchor="middle" letter-spacing="1">DESCIDA (EXCÊNTRICA)</text>
+      <!-- joint dots -->
+      <circle cx="120" cy="90" r="9" fill="#ff6b1a"/>
+      <text x="120" y="76" fill="#a7a29a" font-size="11" text-anchor="middle">quadril</text>
+      <circle cx="120" cy="190" r="9" fill="#ff8c4d"/>
+      <text x="148" y="194" fill="#a7a29a" font-size="11">joelho</text>
+      <!-- arrows down -->
+      <text x="180" y="96" fill="#f2efe9" font-size="13">flexão de quadril ▾</text>
+      <text x="180" y="196" fill="#f2efe9" font-size="13">flexão de joelho ▾</text>
+      <text x="180" y="240" fill="#37c871" font-size="12" font-style="italic">→ os dois flexionam juntos</text>
+
+      <line x1="360" y1="50" x2="360" y2="260" stroke="rgba(255,255,255,.12)"/>
+
+      <!-- SUBIDA -->
+      <text x="540" y="34" fill="#ff6b1a" font-family="monospace" font-size="14" text-anchor="middle" letter-spacing="1">SUBIDA (CONCÊNTRICA)</text>
+      <circle cx="480" cy="90" r="9" fill="#ff6b1a"/>
+      <text x="480" y="76" fill="#a7a29a" font-size="11" text-anchor="middle">quadril</text>
+      <circle cx="480" cy="190" r="9" fill="#ff8c4d"/>
+      <text x="508" y="194" fill="#a7a29a" font-size="11">joelho</text>
+      <text x="540" y="96" fill="#f2efe9" font-size="13">extensão de quadril ▴</text>
+      <text x="540" y="196" fill="#f2efe9" font-size="13">extensão de joelho ▴</text>
+      <text x="540" y="240" fill="#37c871" font-size="12" font-style="italic">→ os dois estendem juntos</text>
+    </svg>
+    <figcaption>No padrão de agachamento, quadril e joelho nunca vão em direções opostas: flexionam juntos na descida, estendem juntos na subida.</figcaption>
+  </figure>
+
+  <div class="callout warn">
+    <span class="tag">Correção de um erro comum</span>
+    <p>É <strong>errado</strong> dizer que "no leg press o quadril fica extendido parado e só o joelho flexiona". O quadril <strong>flexiona ativamente na descida</strong> e estende na subida, junto com o joelho. Imaginar o quadril estático leva direto ao engano de chamar isso de "Lombard" (ver seção 05).</p>
+  </div>
+</section>
+
+<!-- ============ 3. MOTORES ============ -->
+<section id="motores">
+  <span class="sec-num">03 — MOTORES PRIMÁRIOS</span>
+  <h2>Quem <span class="accent">move</span> a carga</h2>
+  <p class="sec-sub">Os motores são parecidos nos dois exercícios. A diferença real está em outro lugar (seção 07).</p>
+
+  <ul class="clean">
+    <li><b>Quadríceps</b> — motor primário da extensão de joelho. Grande excursão, alto trabalho mecânico. Protagonista nos dois exercícios.</li>
+    <li><b>Glúteo máximo</b> — motor primário da extensão de quadril. Grande excursão na subida. Forte nos dois, especialmente em maior amplitude de flexão de quadril.</li>
+    <li><b>Adutor magno</b> — extensor de quadril potente, atua como <b>motor auxiliar</b>. Muito relevante, mas frequentemente esquecido.</li>
+  </ul>
+
+  <div class="callout ok">
+    <span class="tag">Insight</span>
+    <p>Quadríceps e glúteo máximo trabalham de forma <strong>semelhante</strong> no agachamento e no leg press. Quem assiste de fora pensa que a grande diferença está nos motores — mas não está. A diferença entre os exercícios mora na <strong>demanda de estabilização</strong>, que despenca no leg press.</p>
+  </div>
+</section>
+
+<!-- ============ 4. INSUFICIENCIA ============ -->
+<section id="insuficiencia">
+  <span class="sec-num">04 — O CASO DO POSTERIOR</span>
+  <h2>Insuficiência ativa e a <span class="accent">anulação de excursão</span></h2>
+  <p class="sec-sub">Por que o isquiotibial recebe estímulo pobre — e qual é o nome correto do fenômeno.</p>
+
+  <p>O bíceps femoral (e os isquiotibiais em geral) é um músculo <strong>biarticular</strong>: cruza o quadril e o joelho, executando <strong>dois movimentos</strong> — extensão de quadril e flexão de joelho.</p>
+
+  <p>No padrão de agachamento, na descida, acontece simultaneamente:</p>
+  <ul class="clean">
+    <li><b>Flexão de quadril</b> → <span style="color:var(--green)">alonga</span> o isquiotibial (na ponta proximal)</li>
+    <li><b>Flexão de joelho</b> → <span style="color:var(--red)">encurta</span> o isquiotibial (na ponta distal)</li>
+  </ul>
+
+  <figure>
+    <svg viewBox="0 0 720 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anulação de comprimento do isquiotibial">
+      <text x="360" y="30" fill="#ff6b1a" font-family="monospace" font-size="13" text-anchor="middle" letter-spacing="1">ISQUIOTIBIAL — VARIAÇÃO LÍQUIDA DE COMPRIMENTO ≈ 0</text>
+      <!-- bone hip -->
+      <rect x="120" y="70" width="14" height="60" rx="6" fill="#5a5650"/>
+      <text x="127" y="60" fill="#a7a29a" font-size="11" text-anchor="middle">quadril</text>
+      <!-- muscle -->
+      <line x1="127" y1="120" x2="593" y2="120" stroke="#ff6b1a" stroke-width="10" stroke-linecap="round"/>
+      <text x="360" y="108" fill="#f2efe9" font-size="12" text-anchor="middle">bíceps femoral</text>
+      <!-- bone knee -->
+      <rect x="586" y="70" width="14" height="60" rx="6" fill="#5a5650"/>
+      <text x="593" y="60" fill="#a7a29a" font-size="11" text-anchor="middle">joelho</text>
+      <!-- arrows -->
+      <text x="200" y="170" fill="#37c871" font-size="13" text-anchor="middle">↞ ALONGA</text>
+      <text x="200" y="188" fill="#a7a29a" font-size="11" text-anchor="middle">(flexão de quadril)</text>
+      <text x="520" y="170" fill="#e0533d" font-size="13" text-anchor="middle">ENCURTA ↠</text>
+      <text x="520" y="188" fill="#a7a29a" font-size="11" text-anchor="middle">(flexão de joelho)</text>
+      <text x="360" y="225" fill="#e8b53a" font-size="13" text-anchor="middle" font-style="italic">os dois efeitos se cancelam → o músculo fica "no mesmo lugar"</text>
+    </svg>
+    <figcaption>Como uma ponta alonga enquanto a outra encurta, o comprimento total do músculo quase não muda. Ele trabalha de forma praticamente isométrica.</figcaption>
+  </figure>
+
+  <div class="def">
+    <div class="word">Insuficiência ativa</div>
+    <p>Fenômeno em que um músculo biarticular perde capacidade de gerar tensão eficaz porque encurta demais simultaneamente nas duas articulações (sobreposição excessiva de actina-miosina), <strong>ou</strong> porque sua variação líquida de comprimento é mínima — um lado alonga, o outro encurta, e o resultado é quase isometria. É o conceito que de fato envolve <strong>déficit / limitação de excursão</strong>.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Terminologia precisa</span>
+    <p>O fenômeno que faz o isquiotibial "ficar no mesmo lugar" no leg press é <strong>insuficiência ativa / anulação de excursão do biarticular</strong> — <u>não</u> é o paradoxo de Lombard. A intuição do resultado (músculo com comprimento quase constante) está certa; o nome do mecanismo é que costuma sair trocado.</p>
+  </div>
+</section>
+
+<!-- ============ 5. LOMBARD ============ -->
+<section id="lombard">
+  <span class="sec-num">05 — DESFAZENDO A CONFUSÃO</span>
+  <h2>O que é (e o que <span class="accent">não é</span>) o paradoxo de Lombard</h2>
+  <p class="sec-sub">Dois conceitos que vivem trocados — e a diferença que realmente importa.</p>
+
+  <p>O <strong>paradoxo de Lombard</strong> descreve <em class="term">como</em> músculos biarticulares antagonistas (reto femoral × isquiotibiais) conseguem agir <strong>juntos e de forma produtiva</strong> na extensão simultânea de quadril e joelho — em vez de se cancelarem, como a intuição sugeriria. Cada um gera torque extensor na articulação onde seu <strong>braço de momento é maior</strong>. É um fenômeno sobre <strong>organização do torque</strong>, não sobre déficit de força.</p>
+
+  <div class="grid2">
+    <div class="mini sq">
+      <h4>Paradoxo de Lombard</h4>
+      <p>Trata de <b>produção de torque</b>. Explica como biarticulares antagonistas cooperam para estender quadril e joelho juntos. <b>Não é</b> sobre perder força — é sobre o músculo ser produtivo apesar de mudar pouco de comprimento.</p>
+    </div>
+    <div class="mini lp">
+      <h4>Insuficiência ativa</h4>
+      <p>Trata de <b>comprimento × tensão</b>. Explica o déficit: o músculo encurta demais (ou tem excursão líquida nula) e <b>perde capacidade de gerar tensão</b> / não recebe estímulo de variação de comprimento.</p>
+    </div>
+  </div>
+
+  <h3>Então, no Lombard, o músculo perde força?</h3>
+  <p>Não — esse não é o ponto. No Lombard o músculo é <strong>produtivo</strong>: gera torque útil mesmo operando com pouca variação de comprimento (trabalho mais isométrico). Trabalho isométrico, por si só, <strong>não implica perda de força</strong> — um músculo pode produzir força máxima isometricamente.</p>
+  <p>Quem fala explicitamente de <strong>perda/déficit de força</strong> é a <strong>insuficiência ativa</strong>: aí sim o encurtamento excessivo nas duas pontas degrada a capacidade de gerar tensão.</p>
+
+  <div class="callout">
+    <span class="tag">Regra de bolso</span>
+    <p><strong>Lombard</strong> = "como um biarticular produz torque eficiente em duas articulações" (não é sobre perder força). &nbsp;|&nbsp; <strong>Insuficiência ativa</strong> = "o biarticular encurta demais e perde força" (é o conceito de déficit). &nbsp;|&nbsp; <strong>Anulação de excursão</strong> = "comprimento quase constante, trabalho isométrico" — o caso do isquiotibial no agachamento/leg press.</p>
+  </div>
+</section>
+
+<!-- ============ 6. FORCA X EXCURSAO ============ -->
+<section id="forca">
+  <span class="sec-num">06 — UMA DISTINÇÃO QUE MUITA GENTE ERRA</span>
+  <h2>Excursão pequena <span class="accent">≠</span> força menor</h2>
+  <p class="sec-sub">Separar "força" de "trabalho mecânico" resolve metade das confusões da seção anterior.</p>
+
+  <p>Quando dizemos que o isquiotibial tem <strong>excursão pequena</strong> no leg press, a pergunta natural é: "então ele produz menos força, ou só estabiliza?". A resposta exige separar dois conceitos:</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Força</h4>
+      <p>Depende do <b>comprimento</b> do músculo (curva comprimento-tensão) e do recrutamento. <b>Não depende</b> de quanto ele se move. Um músculo gera força máxima isometricamente — pense numa prancha ou num agachamento isométrico: excursão zero, força altíssima.</p>
+    </div>
+    <div class="mini">
+      <h4>Trabalho mecânico</h4>
+      <p>É força × distância. Excursão pequena → <b>pouco trabalho</b> realizado por aquele músculo naquele eixo. É aqui que o isquiotibial "fica devendo" no leg press: sob tensão, mas fazendo pouco trabalho de encurtar/alongar.</p>
+    </div>
+  </div>
+
+  <p>Ou seja: no leg press o isquiotibial pode estar sob <strong>tensão considerável</strong>, mas atua mais como <strong>estabilizador / transmissor de força</strong> (papel quase isométrico) do que como motor do movimento. Não é que "não ativa", nem que "perde força" — é que o <strong>perfil de estímulo é subótimo para hipertrofia</strong>, porque falta tensão sob variação de comprimento (sobretudo em alongamento).</p>
+
+  <div class="callout ok">
+    <span class="tag">Aplicação prática</span>
+    <p>Para treinar isquiotibiais de verdade, é preciso um exercício com <strong>excursão real</strong>: leg curl (foca a flexão de joelho) ou stiff / RDL (foca a extensão de quadril sob alongamento). No agachamento e no leg press, eles recebem estímulo pobre por natureza biomecânica — não por "execução errada".</p>
+  </div>
+</section>
+
+<!-- ============ 7. ESTABILIZADORES ============ -->
+<section id="estabilizadores">
+  <span class="sec-num">07 — A VERDADEIRA DIFERENÇA ENTRE OS EXERCÍCIOS</span>
+  <h2>Músculos <span class="accent">estabilizadores</span></h2>
+  <p class="sec-sub">Os motores são parecidos. A demanda de estabilização é o que separa agachamento livre de leg press.</p>
+
+  <p>No <strong>agachamento livre</strong>, além de mover a carga, o corpo precisa se equilibrar e controlar a coluna e o fêmur. No <strong>leg press</strong>, o encosto sustenta o tronco e a plataforma guia o trajeto — a máquina assume grande parte da estabilização. É por isso que o leg press permite focar carga nos motores com menos exigência técnica.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Músculo</th><th>Agachamento livre</th><th>Leg press</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Quadríceps</td>
+          <td><span class="mot">Motor primário</span> · grande excursão</td>
+          <td><span class="mot">Motor primário</span> · grande excursão</td>
+        </tr>
+        <tr>
+          <td>Glúteo máximo</td>
+          <td><span class="mot">Motor</span> + estabilizador da pelve</td>
+          <td><span class="mot">Motor</span> · papel estabilizador reduzido</td>
+        </tr>
+        <tr>
+          <td>Glúteo médio/mínimo</td>
+          <td><span class="est">Estabilizador frontal</span> importante (anti-valgo)</td>
+          <td><span class="low">Demanda muito reduzida</span> (trajeto guiado)</td>
+        </tr>
+        <tr>
+          <td>Adutores</td>
+          <td>Extensor de quadril + <span class="est">estabilização frontal</span></td>
+          <td>Extensor mantido · estabilização <span class="low">bem menor</span></td>
+        </tr>
+        <tr>
+          <td>Isquiotibiais</td>
+          <td>Co-contração no joelho · <span class="low">excursão mínima</span></td>
+          <td>Igual · <span class="low">excursão mínima</span></td>
+        </tr>
+        <tr>
+          <td>Eretores / core</td>
+          <td><span class="est">Estabilizadores essenciais</span> (coluna sob carga axial)</td>
+          <td><span class="low">Demanda drasticamente reduzida</span> (encosto)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>E o posterior de coxa, estabiliza muito?</h3>
+  <p>Não. O isquiotibial nunca foi um grande estabilizador nesses padrões. A função que ele exerce é <strong>co-contração no joelho</strong> (resiste à translação anterior da tíbia, protegendo o LCA), atuando junto ao quadríceps — não estabilização do quadril/pelve. Quem realmente estabiliza o quadril no agachamento é o <strong>glúteo (máximo e médio)</strong> e os <strong>adutores</strong> no plano frontal.</p>
+
+  <h3>Atenção ao adutor: papel duplo</h3>
+  <p>O adutor é um caso especial. No leg press ele <strong>perde função estabilizadora</strong> (trajeto guiado), mas <strong>mantém relevância como motor</strong> (extensor de quadril, sobretudo o adutor magno). Por isso continua sendo um músculo bastante recrutado — só que pelo motivo de motor, não de estabilizador.</p>
+</section>
+
+<!-- ============ 8. NOTAS ============ -->
+<section id="notas">
+  <span class="sec-num">08 — ESCALA QUALITATIVA</span>
+  <h2>Quanto cada músculo <span class="accent">estabiliza</span> (0–10)</h2>
+  <p class="sec-sub">Estimativa qualitativa baseada em EMG e biomecânica — não é uma escala validada oficial, serve para comparar magnitudes.</p>
+
+  <h3>Estabilização no agachamento livre</h3>
+  <div class="card">
+    <div class="score-row"><span class="score-label">Eretores / core</span><span class="score-track"><span class="score-fill" style="width:85%"></span></span><span class="score-val">8–9</span></div>
+    <div class="score-row"><span class="score-label">Glúteo médio</span><span class="score-track"><span class="score-fill" style="width:75%"></span></span><span class="score-val">7–8</span></div>
+    <div class="score-row"><span class="score-label">Adutores</span><span class="score-track"><span class="score-fill" style="width:65%"></span></span><span class="score-val">6–7</span></div>
+    <div class="score-row"><span class="score-label">Isquiotibiais</span><span class="score-track"><span class="score-fill" style="width:30%"></span></span><span class="score-val">~3</span></div>
+  </div>
+
+  <h3>Estabilização no leg press</h3>
+  <div class="card">
+    <div class="score-row dim"><span class="score-label">Core / abdômen</span><span class="score-track"><span class="score-fill" style="width:38%"></span></span><span class="score-val">3–4</span></div>
+    <div class="score-row dim"><span class="score-label">Adutores (estab.)</span><span class="score-track"><span class="score-fill" style="width:30%"></span></span><span class="score-val">~3</span></div>
+    <div class="score-row dim"><span class="score-label">Glúteo médio</span><span class="score-track"><span class="score-fill" style="width:28%"></span></span><span class="score-val">2–3</span></div>
+    <div class="score-row dim"><span class="score-label">Quadríceps+isquio (co-contr.)</span><span class="score-track"><span class="score-fill" style="width:28%"></span></span><span class="score-val">2–3</span></div>
+    <div class="score-row dim"><span class="score-label">Isquiotibiais</span><span class="score-track"><span class="score-fill" style="width:20%"></span></span><span class="score-val">~2</span></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Leitura das notas</span>
+    <p>O posterior estabiliza <strong>pouco nos dois</strong> (~3 no agachamento, ~2 no leg press) — leve vantagem para o agachamento, onde há mais controle de joelho e variação de posição do tronco. O adutor como <strong>estabilizador</strong> fica em ~3 no leg press, mas seguiria alto (5–6) se medíssemos seu papel de <strong>motor</strong>. E o destaque maior: no leg press, <strong>nenhum músculo se sobressai como estabilizador</strong> — o "maior" é o core, e ainda assim com nota baixa (~3–4). Isso é a assinatura do exercício: baixíssima demanda estabilizadora por design.</p>
+  </div>
+</section>
+
+<!-- ============ 9. RESUMO ============ -->
+<section id="resumo">
+  <span class="sec-num">09 — PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">Se você guardar só isso, já saiu na frente da maioria.</p>
+
+  <ol class="key">
+    <li><b>Ativação ≠ estímulo.</b> Hipertrofia responde a tensão sob variação de comprimento, não a "o músculo estar ligado".</li>
+    <li><b>Agachamento e leg press são o mesmo padrão.</b> Quadril e joelho flexionam juntos e estendem juntos — nunca em direções opostas.</li>
+    <li><b>O quadril NÃO fica parado no leg press.</b> Ele flexiona e estende ativamente. Dizer que fica "extendido parado" leva ao erro de chamar isso de Lombard.</li>
+    <li><b>Isquiotibial = anulação de excursão.</b> Flexão de quadril alonga, flexão de joelho encurta → comprimento quase constante → estímulo hipertrófico pobre. Nome correto: insuficiência ativa, não Lombard.</li>
+    <li><b>Lombard é sobre torque, não sobre perder força.</b> Explica como biarticulares antagonistas cooperam. Quem fala de déficit de força é a insuficiência ativa.</li>
+    <li><b>Excursão pequena não significa força menor.</b> Significa pouco trabalho mecânico. O músculo pode estar tensionado e atuar como estabilizador/transmissor.</li>
+    <li><b>A diferença real entre os exercícios é a estabilização.</b> Motores (quadríceps, glúteo) são parecidos; o leg press remove quase toda a demanda de core, glúteo médio e controle do fêmur.</li>
+    <li><b>Posterior estabiliza pouco nos dois.</b> Quem estabiliza o quadril é glúteo e adutores; o isquiotibial só faz co-contração modesta no joelho.</li>
+    <li><b>No leg press, nenhum músculo é grande estabilizador.</b> O "maior" é o core, com nota ~3–4. Vantagem para focar carga nos motores; desvantagem em transferência funcional.</li>
+    <li><b>Para treinar posterior de verdade:</b> leg curl (joelho) e stiff/RDL (quadril sob alongamento) — exercícios com excursão real.</li>
+  </ol>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24" fill="none"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Material de estudo · Biomecânica do membro inferior</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.6">As notas 0–10 são estimativas qualitativas baseadas em literatura de EMG e biomecânica, voltadas a comparar magnitudes relativas — não constituem medida laboratorial.</p>
+</footer>
+
+</body>
+</html>
