@@ -1,9 +1,16 @@
 [
   {
+    "titulo": "Hipertrofia Regional do Glúteo",
+    "categoria": "treino",
+    "data": "Jun · 2026",
+    "resumo": "Dá para mirar a porção superior ou inferior do glúteo? A divisão em regiões com funções diferentes é real, e dá para enfatizar cada uma pela ação de quadril — mas transformar isso em hipertrofia mensurável é menos garantido do que o marketing promete. Exemplos por região e a ressalva honesta.",
+    "arquivo": "hipertrofia-regional-gluteo.html"
+  },
+  {
     "titulo": "Perfil de Resistência: Ascendente, Descendente e em Sino",
     "categoria": "treino",
     "data": "Jun · 2026",
-    "resumo": "Todo exercício tem um ponto onde é mais difícil — no alongamento, no encurtamento ou no meio. Como ler o perfil de resistência, casá-lo com a curva de força do músculo, exemplos por exercício e quais musculaturas se beneficiam de cada perfil.",
+    "resumo": "Todo exercício tem um ponto onde é mais difícil — e isso não é fixo: muda com a ferramenta e o setup. Como ler o perfil, ligá-lo à força do músculo, exemplos por musculatura e por que o mesmo exercício pode ter perfis diferentes.",
     "arquivo": "perfil-de-resistencia.html"
   },
   {
