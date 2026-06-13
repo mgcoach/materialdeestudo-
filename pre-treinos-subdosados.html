@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pré-Treinos: Subdosados e Superestimados | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Pré-Treinos: Subdosados e Superestimados | MG COACH">
+    <meta property="og:description" content="A maioria dos pré-treinos junta 18 ingredientes, esconde dose em proprietary blend e entrega metade do que a ciência exige. O que realmente dá performance (cafeína, creatina, vasodilatadores), o que é ocasional (beta-alanina), o papel da taurina — e a dose real vs. a dose eficaz.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/pre-treinos-subdosados.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pré-Treinos: Subdosados e Superestimados | MG COACH">
+    <meta name="twitter:description" content="Dose real vs. dose eficaz nos pré-treinos: o que dá performance e o que é marketing.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:64px 22px 40px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+  .hero h1{font-size:clamp(32px,6.5vw,54px);line-height:1.06;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:640px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:46px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(26px,4.5vw,36px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:#fff;font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:#fff;font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.real{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.oca{color:var(--yellow);background:rgba(232,181,58,.13)}
+  .pill.hype{color:var(--red);background:rgba(224,83,61,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:rgba(255,107,26,.04)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:#fff}
+  .src{font-size:13px;color:var(--text-faint);font-family:var(--mono)}
+  .src a{color:var(--orange-soft);text-decoration:none}
+  .src a:hover{text-decoration:underline}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <a href="index.html" class="backlink">← Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#intro">O problema</a>
+    <a href="#dado">Dose real vs eficaz</a>
+    <a href="#blend">O truque do blend</a>
+    <a href="#reais">O que funciona</a>
+    <a href="#ocasional">Beta-alanina</a>
+    <a href="#taurina">Taurina</a>
+    <a href="#hype">Os superestimados</a>
+    <a href="#pratica">Na prática</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Suplementação · MG COACH</div>
+  <h1>Pré-treinos: <span class="em">subdosados</span> e superestimados</h1>
+  <p class="lede">O pré-treino médio junta <b>18 ingredientes</b>, esconde metade num "blend proprietário" e entrega doses <b>abaixo</b> do que a ciência exige. Poucas substâncias dão performance real — e quase sempre estão subdosadas. O resto é cafeína com marketing.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="intro">
+  <span class="sec-num">01 — O PROBLEMA</span>
+  <h2>Muito rótulo, <span class="accent">pouca dose</span></h2>
+  <p class="sec-sub">A indústria vende complexidade; a fisiologia pede dose certa de poucas coisas.</p>
+
+  <p>A maioria esmagadora do efeito que você sente de um pré-treino vem de <strong>uma</strong> substância: a cafeína. O resto da fórmula — aquela lista de 15, 18, 20 ingredientes com nomes empolgantes — costuma estar lá em quantidade pequena demais para fazer qualquer coisa, ou sem evidência que sustente o uso. É um produto desenhado para <strong>parecer</strong> potente no rótulo, não para entregar no treino.</p>
+
+  <div class="callout">
+    <span class="tag">A tese deste material</span>
+    <p>Pré-treino não é mágica: é, na prática, <strong>cafeína + (talvez) um ou dois ingredientes bem dosados</strong>. As substâncias que realmente melhoram um treino de musculação são poucas — cafeína, creatina e alguns vasodilatadores — e ironicamente os vasodilatadores quase sempre vêm <strong>subdosados</strong>. Beta-alanina é situacional; taurina depende da dose. O resto é, em grande parte, enchimento de rótulo.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="dado">
+  <span class="sec-num">02 — DOSE REAL VS EFICAZ</span>
+  <h2>O estudo dos <span class="accent">100 mais vendidos</span></h2>
+  <p class="sec-sub">A prova numérica do problema — comparando o que vem no pote com o que a ciência exige.</p>
+
+  <p>Uma análise dos <strong>100 pré-treinos mais vendidos</strong> mapeou os ingredientes e suas doses. O número médio de ingredientes por produto foi <strong>18,4</strong> — e <strong>44%</strong> deles vinham escondidos em blends proprietários. Mais revelador: comparando a dose média encontrada com a dose eficaz da literatura, a maioria fica <strong>abaixo do necessário</strong>:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ingrediente</th><th>Presente em</th><th>Dose média real</th><th>Dose eficaz</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>Cafeína</td><td>86%</td><td>254 mg</td><td>~3–6 mg/kg</td><td><span class="pill real">OK</span></td></tr>
+        <tr><td>Beta-alanina</td><td>87%</td><td>2,0 g</td><td>3,2–6,4 g</td><td><span class="pill hype">Baixa</span></td></tr>
+        <tr><td>Citrulina</td><td>71%</td><td>4,0 g</td><td>6–8 g</td><td><span class="pill hype">Baixa</span></td></tr>
+        <tr><td>Tirosina</td><td>63%</td><td>348 mg</td><td>~1–2 g</td><td><span class="pill hype">Baixa</span></td></tr>
+        <tr><td>Taurina</td><td>51%</td><td>1,3 g</td><td>1–3 g</td><td><span class="pill oca">Limítrofe</span></td></tr>
+        <tr><td>Creatina</td><td>49%</td><td>2,1 g</td><td>3–5 g</td><td><span class="pill hype">Baixa</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">O que esses números gritam</span>
+    <p>Só a <strong>cafeína</strong> costuma estar bem dosada (porque é ela que faz o produto "funcionar" na percepção). Citrulina vem com ~metade da dose mínima; beta-alanina, abaixo; creatina, abaixo. Ou seja: você paga por uma lista enorme, mas os ingredientes que poderiam ajudar de verdade chegam <strong>fracos demais para agir</strong>.</p>
+  </div>
+  <p class="src">Fonte: Jagim et al., "Common Ingredient Profiles of Multi-Ingredient Pre-Workout Supplements" — análise dos 100 mais vendidos (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6413194/" target="_blank" rel="noopener">PMC6413194</a>).</p>
+</section>
+
+<!-- 3 -->
+<section id="blend">
+  <span class="sec-num">03 — O TRUQUE DO BLEND</span>
+  <h2>Por que escondem a <span class="accent">dose</span></h2>
+  <p class="sec-sub">O "blend proprietário" não protege segredo nenhum — esconde subdosagem.</p>
+
+  <div class="def">
+    <div class="word">Blend proprietário</div>
+    <p>Quando o rótulo lista vários ingredientes agrupados sob <strong>um único peso total</strong> (ex.: "Pump Matrix 5.700 mg"), sem dizer quanto tem de cada um. Soa como fórmula secreta valiosa. Na prática, permite à marca colocar uma pitada barata de cada coisa cara e muito de algo barato (geralmente cafeína), sem você saber. Se a dose fosse boa, eles a mostrariam com orgulho.</p>
+  </div>
+
+  <p>A regra prática que decorre disso: <strong>se o rótulo não diz a quantidade exata de cada ingrediente, assuma que está subdosado.</strong> Fórmulas honestas têm poucos ingredientes, todos com dose declarada e batendo com a literatura — não 18 nomes escondidos num blend.</p>
+  <p class="src">Fontes: análises de Transparent Labs, Legion e ATHLEAN-X sobre blends proprietários; revisão de MIPS (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6083567/" target="_blank" rel="noopener">PMC6083567</a>).</p>
+</section>
+
+<!-- 4 -->
+<section id="reais">
+  <span class="sec-num">04 — O QUE FUNCIONA</span>
+  <h2>As substâncias que <span class="accent">realmente</span> dão performance</h2>
+  <p class="sec-sub">A lista curta e honesta — exatamente as que importam num treino de musculação.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Cafeína <span class="pill real">real</span></h4>
+      <p>O ergogênico mais comprovado que existe. Reduz a percepção de esforço, aumenta o estado de alerta e melhora a produção de força. Dose: <b>3–6 mg/kg</b> (~200–400 mg para a maioria), ~30–60 min antes. É o que faz o pré-treino "funcionar".</p>
+    </div>
+    <div class="mini">
+      <h4>Creatina <span class="pill real">real</span></h4>
+      <p>Sólida para força e potência (sistema ATP-PCr). Mas funciona por <b>saturação crônica</b> (3–5 g/dia, todo dia), não pela dose aguda do pré-treino — e os ~2 g que vêm nele são insuficientes. Tome à parte, todo dia. (Ver estudo <em>Creatina é Superestimada?</em>)</p>
+    </div>
+  </div>
+
+  <h3>Vasodilatadores — reais, mas quase sempre subdosados</h3>
+  <p>Os vasodilatadores (que aumentam óxido nítrico e fluxo sanguíneo) podem ajudar no desempenho e no "pump", mas dependem fortemente da dose — e é aí que os pré-treinos falham:</p>
+
+  <ul class="clean">
+    <li><b>Citrulina malato:</b> a mais respaldada. Dose eficaz <b>6–8 g</b> (mínimo ~6 g) — mas a média nos produtos é 4 g, abaixo do limiar. Subdosada, não age.</li>
+    <li><b>Nitratos (beterraba):</b> aumentam óxido nítrico por outra via; evidência boa para endurance, mais modesta na musculação. Raramente em dose útil no pré-treino.</li>
+    <li><b>Arginina:</b> popular, mas má absorção oral — citrulina é superior para elevar óxido nítrico. Em geral, dinheiro jogado fora no pré-treino.</li>
+  </ul>
+
+  <div class="callout ok">
+    <span class="tag">Confirma a leitura prática</span>
+    <p>Sua visão bate com a evidência: <strong>cafeína, creatina e (bons) vasodilatadores</strong> são o que realmente move o ponteiro num treino de musculação. O problema não é a substância — é que, no pré-treino pronto, o vasodilatador quase sempre chega <strong>abaixo da dose</strong> que a ciência exige. Para o pump valer, precisa de citrulina em 6–8 g, coisa que poucos produtos entregam.</p>
+  </div>
+  <p class="src">Fontes: ISSN caffeine position stand; doses eficazes compiladas (mitohealth, Legion, Transparent Labs); revisão de citrulina (Wax et al. 2015).</p>
+</section>
+
+<!-- 5 -->
+<section id="ocasional">
+  <span class="sec-num">05 — BETA-ALANINA</span>
+  <h2>Útil, mas <span class="accent">situacional</span></h2>
+  <p class="sec-sub">Funciona — em um contexto específico, e não da forma como o pré-treino sugere.</p>
+
+  <p>A beta-alanina tem evidência real, mas três detalhes mudam tudo:</p>
+
+  <ul class="clean">
+    <li><b>É efeito crônico, não agudo.</b> Ela funciona saturando a <em class="term">carnosina</em> muscular ao longo de semanas — o formigamento que você sente no rosto não é "o pré agindo", é só um efeito sensorial. A dose única do treino não faz nada agudo de relevante.</li>
+    <li><b>Só ajuda em esforços de média duração.</b> O benefício aparece em séries longas e altas repetições (esforços de ~1–4 min), onde a acidose muscular limita. Em séries pesadas e curtas (5–9 reps), o sistema tamponado pela carnosina quase não é o fator limitante.</li>
+    <li><b>Vem subdosada.</b> Precisa de 3,2–6,4 g/dia; a média nos produtos é 2 g.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">Quando vale (e quando não)</span>
+    <p>Confirma sua visão: a beta-alanina é <strong>ocasional</strong> — vale para quem faz trabalho de <strong>séries longas / altas repetições</strong> (resistência muscular), e por uso crônico em dose cheia, não pela pitada aguda do pré-treino. Para um treino de força com baixas reps, o impacto é mínimo.</p>
+  </div>
+  <p class="src">Fontes: Sale et al. 2011; doses eficazes (Transparent Labs); ISSN beta-alanine position stand.</p>
+</section>
+
+<!-- 6 -->
+<section id="taurina">
+  <span class="sec-num">06 — TAURINA</span>
+  <h2>Pode ajudar — <span class="accent">depende da dose</span></h2>
+  <p class="sec-sub">Efeito pequeno-a-moderado, com nuances que o pré-treino raramente respeita.</p>
+
+  <p>A taurina tem mecanismos plausíveis: ajuda na <strong>regulação do cálcio</strong> (ligada à contração muscular), tem ação antioxidante e pode auxiliar foco e redução de fadiga/lactato. Uma meta-análise de 2025 encontrou melhora <strong>pequena a moderada</strong> de desempenho com dose aguda (g ≈ 0,25), mas com algumas ressalvas importantes:</p>
+
+  <ul class="clean">
+    <li><b>Dose importa, mas não é linear.</b> A faixa eficaz fica em ~<b>1–3 g</b>; curiosamente, não há relação dose-resposta clara entre 1 e 6 g (parece haver um efeito de <em>limiar</em>, não "mais é melhor"). A média nos pré-treinos (1,3 g) está no limite de baixo.</li>
+    <li><b>Pode suavizar a cafeína.</b> É usada para atenuar alguns efeitos colaterais de estimulantes (nervosismo, palpitação) — um dos motivos de aparecer junto da cafeína.</li>
+    <li><b>Evidência ainda incerta.</b> A certeza geral da meta-análise foi classificada como <strong>baixa</strong> (heterogeneidade, risco de viés). Promissora, não garantida.</li>
+  </ul>
+
+  <div class="callout ok">
+    <span class="tag">Alinhado à sua visão</span>
+    <p>Confere: a taurina <strong>pode</strong> ajudar foco e contração e <strong>amenizar colaterais da cafeína</strong> — mas <strong>depende da dose</strong> (precisa de ~1–3 g, e muitos produtos ficam abaixo) e o efeito é modesto e ainda incerto. Não é vilã nem milagre: é um coadjuvante razoável <em>se</em> bem dosado.</p>
+  </div>
+  <p class="src">Fontes: meta-análise dose aguda de taurina 2025 (<a href="https://pubmed.ncbi.nlm.nih.gov/40852891/" target="_blank" rel="noopener">PubMed 40852891</a>); revisões dose-resposta (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8419774/" target="_blank" rel="noopener">PMC8419774</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8152067/" target="_blank" rel="noopener">PMC8152067</a>).</p>
+</section>
+
+<!-- 7 -->
+<section id="hype">
+  <span class="sec-num">07 — OS SUPERESTIMADOS</span>
+  <h2>O que é mais <span class="accent">marketing</span> que efeito</h2>
+  <p class="sec-sub">Ingredientes que enchem o rótulo mas raramente movem o treino.</p>
+
+  <ul class="clean">
+    <li><b>BCAAs / aminoácidos avulsos:</b> irrelevantes para quem já come proteína suficiente. Pura decoração de rótulo.</li>
+    <li><b>Arginina e AAKG:</b> má absorção; não elevam óxido nítrico como prometem. Citrulina faz melhor.</li>
+    <li><b>Tirosina:</b> dose nos produtos (~350 mg) muito abaixo do usado em estudos (~1–2 g) — efeito de foco improvável na dose comercial.</li>
+    <li><b>Glutamina, betaína em pitada, "matrizes" diversas:</b> evidência fraca ou dose insuficiente para musculação.</li>
+    <li><b>Excesso de estimulantes:</b> alguns passam de 350–400 mg de cafeína por dose — mais ansiedade e queda de sono que performance extra; e o corpo se adapta, reduzindo o efeito.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">O ponto que conecta a biblioteca</span>
+    <p>É o mesmo padrão dos estudos de creatina e testosterona: o que aparece com destaque no rótulo (ou no marketing) raramente é o que move o resultado. <strong>Sentir</strong> o pré-treino (formigamento da beta-alanina, "tapa" da cafeína) não é o mesmo que <strong>render mais</strong>. Sensação ≠ efeito.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="pratica">
+  <span class="sec-num">08 — NA PRÁTICA</span>
+  <h2>O que <span class="accent">fazer</span> com isso</h2>
+  <p class="sec-sub">Como montar algo que realmente funciona — barato e honesto.</p>
+
+  <ul class="clean">
+    <li><b>Base que funciona:</b> cafeína (3–6 mg/kg, ~30–60 min antes) + creatina (3–5 g/dia, todo dia, à parte) + citrulina malato (6–8 g) se quiser pump e tolera. Isso supera a maioria dos pré-treinos prontos.</li>
+    <li><b>Beta-alanina (3,2–6,4 g/dia, crônica)</b> só se o trabalho tem séries longas / altas repetições. Para força em baixas reps, é dispensável.</li>
+    <li><b>Taurina (1–3 g)</b> opcional, para foco e para suavizar a cafeína — se bem dosada.</li>
+    <li><b>Compre por transparência:</b> rótulo com dose de cada ingrediente, sem blend proprietário. Poucos ingredientes bem dosados &gt; 18 escondidos.</li>
+    <li><b>Lembre da hierarquia:</b> suplemento é o topo da pirâmide. Sono, comida, treino e constância decidem o resultado — o pré-treino só lapida.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">Aviso</span>
+    <p>Cafeína em excesso atrapalha sono e gera dependência de efeito; ajuste à sua sensibilidade e evite perto do horário de dormir. Quem tem questões cardíacas, de ansiedade ou pressão deve conversar com um médico antes de usar estimulantes. Este material é educativo, não prescrição.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section id="resumo">
+  <span class="sec-num">09 — PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial, direto e defensável.</p>
+
+  <ol class="key">
+    <li><b>O pré-treino médio tem 18 ingredientes</b> e esconde 44% deles em blend proprietário — desenhado para o rótulo, não para o treino.</li>
+    <li><b>Só a cafeína costuma estar bem dosada;</b> citrulina, beta-alanina e creatina vêm abaixo da dose eficaz.</li>
+    <li><b>Blend proprietário = subdosagem escondida.</b> Sem dose declarada, assuma que é fraco.</li>
+    <li><b>O que dá performance real:</b> cafeína (3–6 mg/kg), creatina (crônica, 3–5 g/dia) e vasodilatadores — mas estes quase sempre subdosados.</li>
+    <li><b>Citrulina precisa de 6–8 g;</b> os produtos trazem ~4 g (metade do necessário).</li>
+    <li><b>Beta-alanina é situacional:</b> efeito crônico, só para séries longas/altas reps; inútil em dose aguda e em baixas reps.</li>
+    <li><b>Taurina pode ajudar</b> foco e contração e suavizar a cafeína — mas depende da dose (1–3 g) e a evidência é modesta/incerta.</li>
+    <li><b>Superestimados:</b> BCAA, arginina, tirosina subdosada, glutamina — marketing &gt; efeito.</li>
+    <li><b>Sentir ≠ render:</b> formigamento e "tapa" não são sinônimo de mais performance.</li>
+    <li><b>Faça você mesmo:</b> cafeína + creatina + (talvez) citrulina bem dosada batem a maioria dos pré-treinos prontos, por menos dinheiro.</li>
+  </ol>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Material de estudo · Suplementação</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo baseado em análises de mercado e literatura de suplementação esportiva. Não substitui orientação médica ou nutricional individualizada. Doses devem ser ajustadas à tolerância e ao contexto de cada pessoa.</p>
+</footer>
+
+</body>
+</html>
