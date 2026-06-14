@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contração Muscular: do Nervo ao Filamento | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Contração Muscular: do Nervo ao Filamento | MG COACH">
+    <meta property="og:description" content="O material-base da fisiologia do treino: do impulso nervoso e a acetilcolina até actina, miosina e pontes cruzadas. ATP, cálcio, fosfocreatina, os três sistemas energéticos e o que realmente causa a fadiga (fosfato e H+, não o lactato). Completo e didático.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/contracao-muscular.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contração Muscular: do Nervo ao Filamento | MG COACH">
+    <meta name="twitter:description" content="Da acetilcolina às pontes cruzadas: ATP, cálcio, fosfocreatina, sistemas energéticos e a verdade sobre a fadiga.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:64px 22px 40px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:46px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(26px,4.5vw,36px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .src{font-size:13px;color:var(--text-faint);font-family:var(--mono)}
+  .src a{color:var(--orange-soft);text-decoration:none}
+  .src a:hover{text-decoration:underline}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">← Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#intro">A grande jornada</a>
+    <a href="#anatomia">A arquitetura</a>
+    <a href="#nervo">O comando neural</a>
+    <a href="#jncao">A junção neuromuscular</a>
+    <a href="#acoplamento">Excitação-contração</a>
+    <a href="#pontes">O ciclo das pontes</a>
+    <a href="#atp">ATP e os sistemas</a>
+    <a href="#fadiga">A verdade sobre a fadiga</a>
+    <a href="#relax">Relaxamento</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Treino · MG COACH</div>
+  <h1>Contração muscular: do <span class="em">nervo</span> ao filamento</h1>
+  <p class="lede">Toda repetição que você faz é uma cascata de eventos elétricos, químicos e mecânicos — do impulso no cérebro até a actina deslizando sobre a miosina. Este é o material-base: entenda isso e você entende <b>por que</b> o treino funciona, de onde vem a força e o que realmente causa a fadiga.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="intro">
+  <span class="sec-num">01 — A GRANDE JORNADA</span>
+  <h2>De um pensamento a um <span class="accent">movimento</span></h2>
+  <p class="sec-sub">O mapa geral antes do detalhe — para você nunca se perder na cascata.</p>
+
+  <p>Quando você decide levantar uma carga, uma sequência precisa acontece em milissegundos. Vamos percorrê-la inteira, em ordem, e depois detalhar cada elo:</p>
+
+  <div class="card">
+    <p style="margin-bottom:0"><strong>O cérebro</strong> envia um impulso elétrico → desce pela <strong>medula e pelo nervo motor</strong> → chega à <strong>junção neuromuscular</strong>, onde libera <strong>acetilcolina</strong> → isso gera um impulso elétrico no músculo → o impulso libera <strong>cálcio</strong> dentro da fibra → o cálcio "destrava" a actina → a <strong>miosina</strong> puxa a actina usando <strong>ATP</strong> → o músculo encurta e gera força → quando o comando cessa, o cálcio é recolhido e o músculo relaxa.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Por que isso é a base de tudo</span>
+    <p>Cada conceito da sua biblioteca — tensão mecânica, falha, fadiga, papel da creatina, força vs. hipertrofia — nasce aqui. Entender a contração no nível molecular é o que separa quem <strong>aplica</strong> protocolos de quem <strong>entende</strong> por que eles funcionam.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="anatomia">
+  <span class="sec-num">02 — A ARQUITETURA</span>
+  <h2>Do músculo ao <span class="accent">sarcômero</span></h2>
+  <p class="sec-sub">Os níveis de organização — porque a contração acontece na menor unidade.</p>
+
+  <p>Um músculo é feito de estruturas dentro de estruturas, como cabos dentro de cabos:</p>
+
+  <ul class="clean">
+    <li><b>Músculo</b> → feixe de muitas <b>fibras musculares</b> (as células musculares, longas e multinucleadas).</li>
+    <li><b>Fibra</b> → contém centenas de <b>miofibrilas</b> dispostas em paralelo.</li>
+    <li><b>Miofibrila</b> → uma sequência de <b>sarcômeros</b> ligados em série, um atrás do outro.</li>
+    <li><b>Sarcômero</b> → a <b>unidade funcional</b> da contração; é aqui que actina e miosina trabalham.</li>
+  </ul>
+
+  <div class="def">
+    <div class="word">Sarcômero</div>
+    <p>A menor unidade contrátil do músculo, delimitada por duas <strong>linhas Z</strong>. Entre elas, alternam-se os <strong>filamentos finos</strong> (actina, ancorados nas linhas Z) e os <strong>filamentos grossos</strong> (miosina, no centro). Quando o sarcômero encurta, as linhas Z se aproximam — e a soma de milhões de sarcômeros encurtando é o que move a carga.</p>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 180" role="img" aria-label="Estrutura do sarcômero">
+      <text x="360" y="22" fill="#ff6b1a" font-family="monospace" font-size="13" text-anchor="middle" letter-spacing="1">O SARCÔMERO (unidade contrátil)</text>
+      <!-- linhas Z -->
+      <line x1="120" y1="50" x2="120" y2="140" stroke="#e8b53a" stroke-width="4"/>
+      <line x1="600" y1="50" x2="600" y2="140" stroke="#e8b53a" stroke-width="4"/>
+      <text x="120" y="160" fill="#e8b53a" font-size="11" text-anchor="middle">linha Z</text>
+      <text x="600" y="160" fill="#e8b53a" font-size="11" text-anchor="middle">linha Z</text>
+      <!-- actina (finos) das duas Z -->
+      <g stroke="#4d9aff" stroke-width="3">
+        <line x1="124" y1="70" x2="320" y2="70"/><line x1="124" y1="95" x2="320" y2="95"/><line x1="124" y1="120" x2="320" y2="120"/>
+        <line x1="596" y1="70" x2="400" y2="70"/><line x1="596" y1="95" x2="400" y2="95"/><line x1="596" y1="120" x2="400" y2="120"/>
+      </g>
+      <text x="200" y="44" fill="#4d9aff" font-size="11">actina (fino)</text>
+      <!-- miosina (grosso) central -->
+      <rect x="290" y="82" width="140" height="26" rx="6" fill="#e0533d" opacity=".4" stroke="#e0533d"/>
+      <g stroke="#e0533d" stroke-width="2.5">
+        <line x1="300" y1="82" x2="310" y2="72"/><line x1="330" y1="82" x2="340" y2="72"/><line x1="360" y1="82" x2="370" y2="72"/>
+        <line x1="300" y1="108" x2="310" y2="118"/><line x1="330" y1="108" x2="340" y2="118"/><line x1="360" y1="108" x2="370" y2="118"/>
+      </g>
+      <text x="360" y="130" fill="#e0533d" font-size="11" text-anchor="middle">miosina (grosso)</text>
+    </svg>
+    <figcaption>No sarcômero, os filamentos finos de actina (azul) se ancoram nas linhas Z e se sobrepõem aos filamentos grossos de miosina (vermelho), que ficam no centro. As "cabeças" da miosina se projetam para puxar a actina.</figcaption>
+  </figure>
+</section>
+
+<!-- 3 -->
+<section id="nervo">
+  <span class="sec-num">03 — O COMANDO NEURAL</span>
+  <h2>A unidade <span class="accent">motora</span></h2>
+  <p class="sec-sub">A força começa no sistema nervoso — antes de qualquer química muscular.</p>
+
+  <p>Nenhuma fibra se contrai sozinha: ela espera uma ordem. Essa ordem vem de um <em class="term">neurônio motor</em>, e o conjunto formado por um neurônio motor + todas as fibras que ele comanda é a <em class="term">unidade motora</em>.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Recrutamento</h4>
+      <p>Para gerar mais força, o sistema nervoso <b>aciona mais unidades motoras</b>. Pelo princípio do tamanho (Henneman), as menores (fibras lentas) entram primeiro; as maiores (fibras rápidas, mais fortes) entram quando a demanda é alta — como em <b>cargas pesadas ou perto da falha</b>.</p>
+    </div>
+    <div class="mini">
+      <h4>Frequência de disparo</h4>
+      <p>O nervo também aumenta a <b>frequência</b> dos impulsos. Disparos muito próximos somam seus efeitos (somação), levando à <b>contração sustentada</b> (tétano) — muito mais força que um abalo isolado.</p>
+    </div>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conexão com a biblioteca</span>
+    <p>É aqui que mora o <strong>componente neural da força</strong> que vimos no estudo <em>Força e Hipertrofia</em>: ficar mais forte sem crescer = recrutar mais unidades motoras e dispará-las melhor. E é por isso que carga alta e proximidade da falha importam: garantem o recrutamento das fibras de maior limiar.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="jncao">
+  <span class="sec-num">04 — A JUNÇÃO NEUROMUSCULAR</span>
+  <h2>Onde o nervo "<span class="accent">fala</span>" com o músculo</h2>
+  <p class="sec-sub">A tradução do sinal elétrico em químico — e de volta a elétrico. Entra a acetilcolina.</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>O impulso chega ao terminal do nervo</h4><p>O potencial de ação percorre o neurônio motor até sua extremidade, próxima à fibra muscular. Nervo e músculo não se tocam: há uma fenda minúscula entre eles (fenda sináptica).</p></div>
+    <div class="step"><h4>Liberação de acetilcolina</h4><p>A chegada do impulso abre canais de cálcio no terminal nervoso. O cálcio que entra faz vesículas despejarem <em class="term">acetilcolina</em> (ACh) — o neurotransmissor — na fenda.</p></div>
+    <div class="step"><h4>A ACh se liga aos receptores</h4><p>A acetilcolina atravessa a fenda e se liga a receptores na membrana da fibra muscular (o sarcolema), na região chamada placa motora.</p></div>
+    <div class="step"><h4>Nasce o impulso muscular</h4><p>Essa ligação abre canais que deixam sódio entrar na fibra, gerando um novo potencial de ação — agora <strong>no músculo</strong>. O sinal foi transmitido com sucesso.</p></div>
+    <div class="step"><h4>A ACh é "desligada"</h4><p>A enzima <em class="term">acetilcolinesterase</em> quebra a acetilcolina na fenda quase imediatamente. Isso impede que o músculo fique disparando sem parar — cada comando é discreto e controlado.</p></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Detalhe que importa</span>
+    <p>Esse "desligamento" pela acetilcolinesterase é vital: sem ele, o músculo permaneceria contraído. Várias substâncias (alguns venenos, gases neurotóxicos e medicamentos) agem exatamente bloqueando essa enzima ou os receptores de ACh — mostrando o quanto essa etapa é central.</p>
+  </div>
+  <p class="src">Fontes: Anatomy &amp; Physiology 2e (<a href="https://open.oregonstate.education/anatomy2e/chapter/muscle-fiber-excitation/" target="_blank" rel="noopener">OpenStax/Oregon</a>); Basic Human Physiology (<a href="https://iu.pressbooks.pub/humanphys/chapter/excitation-contraction-coupling/" target="_blank" rel="noopener">IU</a>).</p>
+</section>
+
+<!-- 5 -->
+<section id="acoplamento">
+  <span class="sec-num">05 — ACOPLAMENTO EXCITAÇÃO-CONTRAÇÃO</span>
+  <h2>O <span class="accent">cálcio</span> entra em cena</h2>
+  <p class="sec-sub">Como o impulso elétrico vira liberação de cálcio — o gatilho químico da contração.</p>
+
+  <p>O <em class="term">acoplamento excitação-contração</em> é a ponte entre o sinal elétrico e o movimento mecânico. O protagonista é o <strong>íon cálcio (Ca²⁺)</strong>, normalmente guardado num reservatório dentro da fibra: o <em class="term">retículo sarcoplasmático</em>.</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>O impulso entra nos túbulos T</h4><p>O potencial de ação no sarcolema mergulha para dentro da fibra por canais chamados <strong>túbulos T</strong>, levando o sinal elétrico para perto do reservatório de cálcio.</p></div>
+    <div class="step"><h4>Os "sensores" disparam</h4><p>A despolarização ativa sensores na parede do túbulo T (receptores DHP), que por sua vez abrem canais no retículo sarcoplasmático (receptores de rianodina, RyR).</p></div>
+    <div class="step"><h4>Cálcio é liberado</h4><p>O cálcio armazenado jorra do retículo para dentro do citoplasma da fibra (sarcoplasma). A concentração de Ca²⁺ ao redor dos filamentos dispara rapidamente.</p></div>
+    <div class="step"><h4>O cálcio destrava a actina</h4><p>O Ca²⁺ se liga à <em class="term">troponina</em>, uma proteína na actina. A troponina muda de forma e empurra a <em class="term">tropomiosina</em> — uma fita que cobria os sítios de ligação na actina. Os sítios ficam <strong>expostos</strong>.</p></div>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 200" role="img" aria-label="Cálcio destravando a actina">
+      <text x="360" y="22" fill="#ff6b1a" font-family="monospace" font-size="13" text-anchor="middle" letter-spacing="1">O CÁLCIO "DESTRAVA" A ACTINA</text>
+      <!-- estado repouso -->
+      <text x="190" y="52" fill="#a7a29a" font-size="12" text-anchor="middle" font-weight="bold">REPOUSO (sem Ca²⁺)</text>
+      <line x1="90" y1="90" x2="290" y2="90" stroke="#4d9aff" stroke-width="6"/>
+      <path d="M90,90 Q190,72 290,90" stroke="#e8b53a" stroke-width="4" fill="none"/>
+      <text x="190" y="115" fill="#e8b53a" font-size="10" text-anchor="middle">tropomiosina cobre os sítios</text>
+      <text x="190" y="135" fill="#6f6a62" font-size="10" text-anchor="middle">miosina não consegue ligar</text>
+      <!-- estado ativo -->
+      <text x="540" y="52" fill="#37c871" font-size="12" text-anchor="middle" font-weight="bold">ATIVO (com Ca²⁺)</text>
+      <line x1="440" y1="90" x2="640" y2="90" stroke="#4d9aff" stroke-width="6"/>
+      <path d="M440,104 Q540,116 640,104" stroke="#e8b53a" stroke-width="4" fill="none"/>
+      <circle cx="490" cy="78" r="6" fill="#37c871"/><circle cx="540" cy="78" r="6" fill="#37c871"/><circle cx="590" cy="78" r="6" fill="#37c871"/>
+      <text x="540" y="68" fill="#37c871" font-size="10" text-anchor="middle">Ca²⁺ desloca a fita</text>
+      <text x="540" y="135" fill="#37c871" font-size="10" text-anchor="middle">sítios expostos → miosina liga</text>
+    </svg>
+    <figcaption>Em repouso, a tropomiosina cobre os sítios de ligação na actina. Quando o cálcio se liga à troponina, a tropomiosina se desloca e expõe os sítios — liberando a miosina para agir.</figcaption>
+  </figure>
+  <p class="src">Fontes: StatPearls Physiology of Muscle Contraction (<a href="https://www.ncbi.nlm.nih.gov/books/NBK537140/" target="_blank" rel="noopener">NCBI</a>); ScienceDirect ECC (<a href="https://www.sciencedirect.com/topics/medicine-and-dentistry/excitation-contraction-coupling" target="_blank" rel="noopener">link</a>).</p>
+</section>
+
+<!-- 6 -->
+<section id="pontes">
+  <span class="sec-num">06 — O CICLO DAS PONTES CRUZADAS</span>
+  <h2>Actina, miosina e o <span class="accent">deslizamento</span></h2>
+  <p class="sec-sub">O coração mecânico da contração — onde o ATP vira movimento. A teoria dos filamentos deslizantes.</p>
+
+  <p>Com os sítios da actina expostos, a miosina entra em ação. As "cabeças" da miosina se prendem à actina formando <em class="term">pontes cruzadas</em> e a puxam — fazendo os filamentos deslizarem uns sobre os outros. O sarcômero encurta sem que os filamentos mudem de tamanho: eles apenas <strong>deslizam</strong> (por isso "teoria dos filamentos deslizantes").</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>Ligação (a ponte se forma)</h4><p>A cabeça de miosina — já "armada" e carregando ADP + fosfato (Pi) — se liga ao sítio exposto na actina, formando a ponte cruzada.</p></div>
+    <div class="step"><h4>Golpe de força (power stroke)</h4><p>O fosfato (Pi) se solta primeiro, fortalecendo a ligação; em seguida sai o ADP. Isso libera a energia armazenada e a cabeça da miosina <strong>gira/dobra</strong>, puxando o filamento de actina em direção ao centro. É aqui que a força é gerada.</p></div>
+    <div class="step"><h4>Desacoplamento (a ponte se solta)</h4><p>Uma nova molécula de <strong>ATP</strong> se liga à cabeça de miosina. Isso faz a miosina <strong>soltar</strong> a actina. Sem ATP, ela não solta — é por isso que o rigor mortis (rigidez após a morte) acontece: sem ATP, as pontes ficam travadas.</p></div>
+    <div class="step"><h4>Rearmar (cocking)</h4><p>A miosina quebra o ATP em ADP + Pi (usando a energia para se "rearmar"), voltando à posição estendida, pronta para um novo ciclo. Enquanto houver cálcio e ATP, o ciclo se repete <strong>centenas de vezes por segundo</strong>.</p></div>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 720 210" role="img" aria-label="Ciclo das pontes cruzadas">
+      <text x="360" y="22" fill="#ff6b1a" font-family="monospace" font-size="13" text-anchor="middle" letter-spacing="1">CICLO DAS PONTES CRUZADAS</text>
+      <!-- circular flow -->
+      <g font-size="11" fill="#a7a29a" text-anchor="middle">
+        <circle cx="180" cy="80" r="42" fill="none" stroke="#37c871" stroke-width="2"/>
+        <text x="180" y="76">1. LIGA</text><text x="180" y="92">à actina</text>
+        <circle cx="540" cy="80" r="42" fill="none" stroke="#e0533d" stroke-width="2"/>
+        <text x="540" y="72">2. PUXA</text><text x="540" y="88">power</text><text x="540" y="102">stroke</text>
+        <circle cx="540" cy="170" r="40" fill="none" stroke="#4d9aff" stroke-width="2" transform="translate(0,-20)"/>
+        <text x="540" y="150">3. SOLTA</text><text x="540" y="166">(ATP liga)</text>
+        <circle cx="180" cy="150" r="40" fill="none" stroke="#e8b53a" stroke-width="2"/>
+        <text x="180" y="146">4. REARMA</text><text x="180" y="162">(ATP→ADP+Pi)</text>
+      </g>
+      <!-- setas -->
+      <g stroke="#6f6a62" stroke-width="2" fill="none" marker-end="url(#ar)">
+        <path d="M222,72 H498"/>
+        <path d="M540,124 V126"/>
+        <path d="M498,150 H222"/>
+        <path d="M180,128 V110"/>
+      </g>
+      <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6f6a62"/></marker></defs>
+    </svg>
+    <figcaption>O ciclo: a miosina liga na actina, executa o golpe de força (puxa), solta quando um novo ATP chega, e se rearma quebrando esse ATP. Repete enquanto houver cálcio e ATP.</figcaption>
+  </figure>
+
+  <div class="callout">
+    <span class="tag">O ATP aparece duas vezes</span>
+    <p>Repare: o ATP é necessário para a miosina <strong>soltar</strong> a actina (passo 3) e a energia da sua quebra serve para <strong>rearmar</strong> a cabeça (passo 4). Ou seja, o ATP não é gasto para "puxar" — a força do golpe vem da energia já armazenada. Mas sem ATP novo, a ponte não se desfaz e o ciclo trava.</p>
+  </div>
+  <p class="src">Fontes: cross-bridge cycle (<a href="https://colorado.pressbooks.pub/neuroscience/chapter/the-cross-bridge-cycle-and-excitation-contraction-coupling-2/" target="_blank" rel="noopener">Univ. Colorado</a>); Lumen Learning (<a href="https://courses.lumenlearning.com/suny-fitness/chapter/muscle-fiber-contraction-and-relaxation/" target="_blank" rel="noopener">link</a>).</p>
+</section>
+
+<!-- 7 -->
+<section id="atp">
+  <span class="sec-num">07 — ATP E OS SISTEMAS DE ENERGIA</span>
+  <h2>De onde vem o <span class="accent">combustível</span></h2>
+  <p class="sec-sub">A contração consome ATP rápido — e o corpo tem três formas de repô-lo.</p>
+
+  <p>O ATP estocado no músculo dura só <strong>poucos segundos</strong> de contração. Para continuar, a fibra precisa regenerá-lo constantemente, por três sistemas que atuam juntos, mas predominam em janelas de tempo diferentes:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Sistema</th><th>Combustível</th><th>Duração / Intensidade</th><th>Velocidade</th></tr></thead>
+      <tbody>
+        <tr><td>Fosfagênio (ATP-PCr)</td><td>Fosfocreatina</td><td>~0–10 s, máxima</td><td><span class="pill a">Instantâneo</span></td></tr>
+        <tr><td>Glicolítico (anaeróbio)</td><td>Glicose / glicogênio</td><td>~10 s–2 min, alta</td><td><span class="pill c">Rápido</span></td></tr>
+        <tr><td>Oxidativo (aeróbio)</td><td>Carboidrato e gordura</td><td>minutos a horas, baixa-moderada</td><td><span class="pill b">Lento, mas vasto</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="def">
+    <div class="word">Fosfocreatina (PCr) — a bateria expressa</div>
+    <p>A fosfocreatina é uma molécula que guarda um fosfato de alta energia pronto para uso. Quando o ATP se esgota, a PCr <strong>doa seu fosfato ao ADP</strong>, regenerando ATP quase instantaneamente — sem precisar de oxigênio. É o sistema que domina nos primeiros segundos de um esforço máximo (uma série pesada, um sprint). Por isso suplementar <strong>creatina</strong> (que aumenta o estoque de PCr) melhora desempenho em esforços curtos e intensos — exatamente o que vimos no estudo <em>Creatina é Superestimada?</em>: ergogênico real para energia/força.</p>
+  </div>
+
+  <p>Numa série de musculação típica (5–12 reps, segundos de duração), o sistema <strong>fosfagênio</strong> domina o início e o <strong>glicolítico</strong> assume conforme a série se estende. O sistema aeróbio cuida principalmente da <strong>recuperação entre as séries</strong> (repor PCr, limpar metabólitos).</p>
+  <p class="src">Fontes: Phosphagen System (<a href="https://pressbooks.calstate.edu/nutritionandfitness/chapter/8-2-phosphagen-system-atp-cp-system/" target="_blank" rel="noopener">CalState</a>); Muscle Energetics (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4213384/" target="_blank" rel="noopener">PMC4213384</a>).</p>
+</section>
+
+<!-- 8 -->
+<section id="fadiga">
+  <span class="sec-num">08 — A VERDADE SOBRE A FADIGA</span>
+  <h2>O que <span class="accent">realmente</span> te faz falhar</h2>
+  <p class="sec-sub">Aqui mora um dos maiores mitos do fitness — e a ciência atual o corrige.</p>
+
+  <p>A história clássica diz: "o ácido lático se acumula e causa a fadiga e a queima". A ciência moderna mostra que isso está <strong>errado</strong> em dois pontos. Vamos ao que de fato acontece quando você se aproxima da falha:</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Fosfato inorgânico (Pi)</h4>
+      <p>Conforme ATP e fosfocreatina são quebrados, acumula-se <b>fosfato inorgânico</b> no sarcoplasma. Ele é hoje considerado <b>o principal culpado</b> da fadiga aguda: prejudica o golpe de força das pontes cruzadas e atrapalha a liberação de cálcio pelo retículo.</p>
+    </div>
+    <div class="mini">
+      <h4>Íons hidrogênio (H⁺)</h4>
+      <p>A glicólise intensa libera <b>H⁺</b>, que baixam o pH (acidose) e contribuem para a queda de desempenho e a sensação de "queimação". São coadjuvantes importantes da fadiga.</p>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">O mito do lactato — corrigido</span>
+    <p>O <strong>lactato não é o vilão</strong>. Ele é um subproduto que, na verdade, serve de <strong>combustível</strong> (é reaproveitado para energia) e ajuda a <strong>amenizar</strong> a acidose, não a causá-la. A confusão histórica vinha de o lactato ser produzido <em>junto</em> com os H⁺ na mesma via — mas correlação não é causa. Atletas mais condicionados produzem <strong>mais</strong> lactato, não menos. E o lactato também <strong>não causa</strong> a dor muscular tardia (aquela de 1–2 dias depois) — essa vem de microlesões e inflamação, não de "ácido acumulado".</p>
+  </div>
+
+  <p>Há ainda a <strong>fadiga central</strong> (o próprio sistema nervoso reduz o drive para os músculos) e a <strong>depleção de substrato</strong> (queda de fosfocreatina em esforços curtos; queda de glicogênio em esforços longos). A fadiga é, portanto, <strong>multifatorial</strong> — não um único "ácido".</p>
+
+  <div class="callout ok">
+    <span class="tag">Aplicação no treino</span>
+    <p>Isso explica vários conceitos da sua biblioteca: por que <strong>descansos mais longos</strong> entre séries pesadas preservam a força (dão tempo de repor PCr e limpar Pi/H⁺); por que séries muito longas geram mais acúmulo de metabólitos; e por que a <strong>beta-alanina</strong> (que tampona H⁺) só ajuda em séries longas/altas reps, como vimos no estudo de pré-treinos.</p>
+  </div>
+  <p class="src">Fontes: Allen &amp; Trajanovska, "The multiple roles of phosphate in muscle fatigue" (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3518787/" target="_blank" rel="noopener">PMC3518787</a>); Gatorade SSI Metabolic Factors in Fatigue (<a href="https://www.gssiweb.org/sports-science-exchange/article/sse-155-metabolic-factors-in-fatigue" target="_blank" rel="noopener">link</a>).</p>
+</section>
+
+<!-- 9 -->
+<section id="relax">
+  <span class="sec-num">09 — RELAXAMENTO</span>
+  <h2>Como o músculo <span class="accent">solta</span></h2>
+  <p class="sec-sub">Relaxar é um processo ativo — e também custa ATP.</p>
+
+  <p>Quando o comando neural cessa, a acetilcolina já foi quebrada e não há novo impulso. A contração precisa ser desfeita:</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>O cálcio é recolhido</h4><p>Bombas no retículo sarcoplasmático (que <strong>gastam ATP</strong>) sugam o cálcio de volta para o reservatório. A concentração de Ca²⁺ ao redor dos filamentos despenca.</p></div>
+    <div class="step"><h4>A actina é "recoberta"</h4><p>Sem cálcio na troponina, a tropomiosina volta a cobrir os sítios da actina. A miosina não consegue mais se ligar.</p></div>
+    <div class="step"><h4>O músculo relaxa</h4><p>Sem novas pontes, os filamentos deslizam de volta e o sarcômero retorna ao comprimento de repouso. O músculo relaxa.</p></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Detalhe revelador</span>
+    <p>Relaxar <strong>gasta ATP</strong> (para bombear o cálcio de volta). Por isso, em fadiga extrema com pouco ATP, o relaxamento fica lento e podem surgir <strong>cãibras</strong> e rigidez — o cálcio não é recolhido com eficiência. A contração e o relaxamento são, os dois, processos ativos e dependentes de energia.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section id="resumo">
+  <span class="sec-num">10 — PARA FIXAR</span>
+  <h2>A cascata <span class="accent">completa</span></h2>
+  <p class="sec-sub">Toda a jornada, em sequência — o mapa para sempre lembrar.</p>
+
+  <ol class="key">
+    <li><b>Comando:</b> o cérebro envia impulso pelo neurônio motor; mais força = mais unidades motoras recrutadas + maior frequência de disparo.</li>
+    <li><b>Junção neuromuscular:</b> o impulso libera <b>acetilcolina</b>, que gera um novo impulso no músculo; a acetilcolinesterase depois a desliga.</li>
+    <li><b>Acoplamento E-C:</b> o impulso desce pelos túbulos T e libera <b>cálcio</b> do retículo sarcoplasmático.</li>
+    <li><b>Destravamento:</b> o cálcio liga na <b>troponina</b>, que afasta a <b>tropomiosina</b> e expõe os sítios da actina.</li>
+    <li><b>Ponte cruzada:</b> a <b>miosina</b> liga na <b>actina</b>, executa o golpe de força (sai Pi e ADP) e puxa o filamento — os filamentos <b>deslizam</b> e o sarcômero encurta.</li>
+    <li><b>ATP:</b> um novo ATP solta a miosina; sua quebra rearma a cabeça. Sem ATP, a ponte trava (rigor).</li>
+    <li><b>Energia:</b> ATP-PCr (segundos, explosivo), glicolítico (até ~2 min), oxidativo (longo). A <b>fosfocreatina</b> repõe ATP na hora.</li>
+    <li><b>Fadiga:</b> causada principalmente por <b>fosfato inorgânico</b> e <b>H⁺</b>, não pelo lactato — que é combustível e ajuda contra a acidose.</li>
+    <li><b>Relaxamento:</b> bombas (que gastam ATP) recolhem o cálcio; a tropomiosina recobre a actina; o músculo solta.</li>
+    <li><b>A grande lição:</b> força e fadiga começam no nervo e terminam na molécula. Tensão sob esforço, recrutamento e energia disponível são o que o treino manipula.</li>
+  </ol>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Material de estudo · Treino</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo baseado em fisiologia do exercício e bioquímica muscular (OpenStax, StatPearls, revisões de fadiga). A fisiologia é a base; a aplicação prática deve considerar o contexto individual.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
