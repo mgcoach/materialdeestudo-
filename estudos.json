@@ -1,5 +1,33 @@
 [
   {
+    "titulo": "Endurance 1: Fisiologia Aeróbia",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 1: o que é treinamento aeróbio, as etapas do metabolismo (Krebs, cadeia de elétrons), as vias energéticas, as adaptações cardiovasculares e musculares, AMPK e PGC-1alfa, e por que o glicogênio decide a performance.",
+    "arquivo": "endurance-1-fisiologia.html"
+  },
+  {
+    "titulo": "Endurance 2: Avaliação, Métodos e Periodização",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 2: avaliação do VO2máx (Astrand, Cooper, teste de 3 km), as zonas Z1–Z5, os métodos (HIIT, SIT, RST, Fartlek, contínuos), carga e densidade, e a periodização passo a passo até a prova.",
+    "arquivo": "endurance-2-avaliacao.html"
+  },
+  {
+    "titulo": "Endurance 3: Emagrecimento e Treino Concorrente",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 3: o gasto energético total (TMB, NEAT, efeito térmico), o déficit calórico, como o aeróbio molda o metabolismo, e o treino concorrente — a interferência AMPK x mTOR é aguda e o aeróbio não impede a hipertrofia se bem organizado.",
+    "arquivo": "endurance-3-emagrecimento.html"
+  },
+  {
+    "titulo": "Endurance 4: Corrida e Nutrição",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 4 (final): biomecânica e fases da corrida, por que não existe pisada 'certa', o teste de Cooper/TAF, e as estratégias nutricionais (train low/high, carb-loading, doses de carboidrato e train the gut).",
+    "arquivo": "endurance-4-corrida-nutricao.html"
+  },
+  {
     "titulo": "Bioquímica do Exercício 1: Fundamentos",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
