@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bioquímica do Exercício 5: Adaptações Moleculares | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Bioquímica do Exercício 5: Adaptações Moleculares | MG COACH">
+    <meta property="og:description" content="Parte 5 (final) da série: as adaptações agudas energéticas e hemodinâmicas, a AMPK e o GLUT-4, a captação de glicose independente de insulina, o duplo pico de síntese de glicogênio, a vasodilatação e por que o exercício isolado emagrece pouco.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-5-adaptacoes.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bioquímica do Exercício 5: Adaptações Moleculares | MG COACH">
+    <meta name="twitter:description" content="AMPK, GLUT-4, captação de glicose, síntese de glicogênio, vasodilatação e óxido nítrico.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#conceito">O que é adaptação</a>
+    <a href="#agudas">Adaptações agudas</a>
+    <a href="#glut4">AMPK e GLUT-4</a>
+    <a href="#glicogenio">Duplo pico</a>
+    <a href="#gordura">Oxidação e emagrecimento</a>
+    <a href="#cardio">Adaptações cardíacas</a>
+    <a href="#vaso">Vasodilatação</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Bioquímica do Exercício &middot; CBMF</div>
+  <div class="serie-bar">
+    <a href="bioquimica-1-fundamentos.html">1 &middot; Fundamentos</a>
+    <a href="bioquimica-2-hipertrofia.html">2 &middot; Hipertrofia</a>
+    <a href="bioquimica-3-bioenergetica.html">3 &middot; Bioenergética</a>
+    <a href="bioquimica-4-fadiga.html">4 &middot; Fadiga</a>
+    <span class="atual">5 &middot; Adaptações</span>
+  </div>
+  <h1>As adaptações <span class="em">moleculares</span></h1>
+  <p class="lede">O que o exercício muda no corpo a nível molecular: a <b>AMPK</b> e o <b>GLUT-4</b> captando glicose sem insulina, o duplo pico de síntese de glicogênio, a vasodilatação via óxido nítrico, e por que o exercício é "catabólico no agudo, anabólico na adaptação". O fechamento da série.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="conceito">
+  <span class="sec-num">01 &mdash; O QUE É ADAPTAÇÃO</span>
+  <h2>Mudar para <span class="accent">tolerar</span></h2>
+  <p class="sec-sub">O princípio que encerra a série fechando o ciclo aberto na Parte 1.</p>
+
+  <div class="def">
+    <div class="word">Adaptação</div>
+    <p>A mudança no estado funcional de algo após uma intervenção. No exercício, a intervenção é o estímulo <strong>mecânico, metabólico, hemodinâmico e hormonal</strong>. O organismo responde tentando restaurar o equilíbrio (homeostase); se o estímulo se repete, ele se adapta para tolerar melhor esse estresse no futuro.</p>
+  </div>
+
+  <p>Voltamos à frase-mãe da Parte 1: estresse → adaptação. Aqui detalhamos as <strong>adaptações agudas</strong> (o que acontece já durante e logo após o treino) que, repetidas, viram as adaptações crônicas.</p>
+</section>
+
+<!-- 2 -->
+<section id="agudas">
+  <span class="sec-num">02 &mdash; ADAPTAÇÕES AGUDAS</span>
+  <h2>O que muda <span class="accent">no ato</span></h2>
+  <p class="sec-sub">Mudanças imediatas em dois níveis: energético e hemodinâmico.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Nível energético</h4>
+      <p>↑ glicólise, ↑ lipólise, ↑ uso do sistema ATP-CP e ↑ oxidação de substratos. As vias metabólicas aceleram assim que o exercício começa.</p>
+    </div>
+    <div class="mini">
+      <h4>Nível hemodinâmico</h4>
+      <p>↑ frequência cardíaca, ↑ pressão arterial, ↑ débito cardíaco e ↑ fluxo sanguíneo muscular. A entrega de sangue ao músculo dispara.</p>
+    </div>
+  </div>
+
+  <p>O que dispara isso? Sinais simultâneos: <strong>hormonais</strong> (adrenalina e noradrenalina estimulam glicogenólise, lipólise e débito cardíaco) e <strong>energéticos intracelulares</strong>. Quando o músculo contrai, ATP → ADP → AMP; o aumento de AMP indica alto gasto e ativa a <strong>AMPK</strong>, o sensor energético da célula.</p>
+</section>
+
+<!-- 3 -->
+<section id="glut4">
+  <span class="sec-num">03 &mdash; AMPK E GLUT-4</span>
+  <h2>Captar glicose <span class="accent">sem insulina</span></h2>
+  <p class="sec-sub">Uma das adaptações agudas mais importantes — e de enorme valor clínico.</p>
+
+  <p>Em repouso, o transportador de glicose <strong>GLUT-4</strong> fica guardado dentro da célula, em vesículas, sem exposição na membrana. Durante o exercício, duas vias o trazem à superfície:</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>Via da AMPK</h4><p>Ativada pelo aumento de AMP (queda do ATP). Sinaliza que a célula está gastando muita energia.</p></div>
+    <div class="step"><h4>Via da CaMKK</h4><p>Ativada pelo aumento de cálcio intracelular liberado na contração muscular.</p></div>
+    <div class="step"><h4>Translocação do GLUT-4</h4><p>Ambas levam o GLUT-4 para a membrana. Resultado: o músculo capta glicose <strong>independentemente da insulina</strong>.</p></div>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Por que isso é ouro clínico</span>
+    <p>Como a captação de glicose no exercício <strong>não depende de insulina</strong>, o exercício é fundamental para <strong>diabetes tipo 1 e 2</strong> e para resistência à insulina — melhora o controle glicêmico por uma via paralela à insulínica. (Durante o exercício a insulina até diminui, para manter a glicemia estável, e a captação ocorre pela contração.)</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="glicogenio">
+  <span class="sec-num">04 &mdash; DUPLO PICO DE GLICOGÊNIO</span>
+  <h2>A janela de <span class="accent">reposição</span></h2>
+  <p class="sec-sub">Dois momentos de captação aumentada após o treino.</p>
+
+  <p>Após o exercício há <strong>dois picos</strong> de captação e síntese de glicogênio: por volta de <strong>30–45 minutos</strong> e cerca de <strong>2 horas</strong> após o treino. Nesses momentos há ↑ sensibilidade à insulina, ↑ síntese de glicogênio e ↑ captação de carboidrato.</p>
+
+  <div class="callout">
+    <span class="tag">Para quem isso importa</span>
+    <p>Diabéticos (tipo 1 e 2) e resistentes à insulina (melhor controle glicêmico); quem treina <strong>2x ao dia</strong> (reposição mais rápida de glicogênio); e quem está em <strong>bulking</strong> (melhor aproveitamento do carboidrato ingerido). Note que isso não recria a urgência da "janela anabólica" proteica — que, como vimos na Parte 2, é ampla.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="gordura">
+  <span class="sec-num">05 &mdash; OXIDAÇÃO E EMAGRECIMENTO</span>
+  <h2>Por que o exercício <span class="accent">isolado</span> emagrece pouco</h2>
+  <p class="sec-sub">A bioquímica desmonta mais um mito popular.</p>
+
+  <p>O exercício aumenta a lipólise e a oxidação de gordura. Mas atenção: pessoas com obesidade muitas vezes têm <strong>alta lipólise e baixa oxidação</strong> — liberam gordura, mas não a queimam adequadamente.</p>
+
+  <div class="callout warn">
+    <span class="tag">"Devo só fazer exercício que queima gordura?"</span>
+    <p>Não. Exercícios de menor intensidade oxidam mais gordura proporcionalmente, mas o que determina o emagrecimento é o <strong>déficit calórico sustentado</strong>. O exercício <strong>isolado</strong> tem baixo potencial de emagrecer por dois motivos: <strong>compensação alimentar</strong> (gasta 400 kcal, come 600 depois) e <strong>adaptação metabólica</strong> (o corpo fica mais eficiente e gasta menos na mesma tarefa). Conclusão: <strong>exercício é ferramenta; dieta é determinante.</strong></p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="cardio">
+  <span class="sec-num">06 &mdash; ADAPTAÇÕES CARDÍACAS</span>
+  <h2>Um coração mais <span class="accent">eficiente</span></h2>
+  <p class="sec-sub">O que o estímulo hemodinâmico repetido constrói.</p>
+
+  <p>Durante o exercício: ↑ frequência cardíaca, ↑ pressão sistólica e diastólica, ↑ débito cardíaco. Repetido ao longo do tempo, isso leva à <strong>hipertrofia cardíaca fisiológica</strong> (benéfica): o coração fica mais eficiente, com <strong>menor frequência cardíaca de repouso</strong> e <strong>maior volume sistólico</strong> (bombeia mais sangue por batimento).</p>
+</section>
+
+<!-- 7 -->
+<section id="vaso">
+  <span class="sec-num">07 &mdash; VASODILATAÇÃO</span>
+  <h2>Mais sangue para o <span class="accent">músculo</span></h2>
+  <p class="sec-sub">Como o fluxo aumentado vira mais entrega de nutrientes.</p>
+
+  <p>Com o aumento do fluxo sanguíneo, as <strong>forças hemodinâmicas</strong> sobem — o sangue "raspa" o endotélio. O <em class="term">glicocálice</em> (revestimento da célula endotelial) detecta essa força e a converte em sinal bioquímico, liberando <strong>óxido nítrico (NO)</strong>, um potente vasodilatador.</p>
+
+  <ul class="clean">
+    <li><b>Resultado do NO:</b> ↑ diâmetro do vaso, ↑ perfusão muscular, ↑ entrega de O₂, glicose e ácidos graxos.</li>
+    <li><b>Endotelina-1:</b> a força do fluxo também a estimula; ela modula o tônus vascular e <b>aumenta o contato endotélio-músculo</b>, melhorando a permeabilidade e a troca entre sangue e músculo.</li>
+  </ul>
+
+  <div class="callout ok">
+    <span class="tag">Conclusão fisiológica da série</span>
+    <p>O exercício agudo é <strong>catabólico no momento</strong> (↑ hormônios catabólicos, ↓ anabólicos, alta mobilização de substratos) mas <strong>anabólico na adaptação</strong>. É justamente esse "estresse controlado" — alto gasto energético, alta mobilização de substratos, alta eficiência vascular e metabólica — que, repetido, gera toda a adaptação crônica que percorremos nesta série.</p>
+  </div>
+</section>
+
+<!-- resumo -->
+<section id="resumo">
+  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O fechamento da série de Bioquímica do Exercício.</p>
+
+  <ol class="key">
+    <li><b>Adaptação</b> = mudar o estado funcional após um estímulo repetido, para tolerar melhor o estresse.</li>
+    <li><b>Adaptações agudas:</b> energéticas (↑ glicólise, lipólise, ATP-CP) e hemodinâmicas (↑ FC, débito, fluxo).</li>
+    <li><b>AMPK e CaMKK</b> translocam o GLUT-4 → captação de glicose <b>independente de insulina</b>.</li>
+    <li><b>Por isso o exercício é fundamental no diabetes</b> tipo 1 e 2 e na resistência à insulina.</li>
+    <li><b>Duplo pico</b> de síntese de glicogênio: ~30–45 min e ~2 h pós-treino.</li>
+    <li><b>Oxidação de gordura</b> aumenta, mas emagrecer depende do <b>déficit calórico</b>, não do treino isolado.</li>
+    <li><b>Exercício isolado emagrece pouco:</b> compensação alimentar + adaptação metabólica.</li>
+    <li><b>Coração:</b> hipertrofia fisiológica → menor FC de repouso, maior volume sistólico.</li>
+    <li><b>Vasodilatação:</b> glicocálice detecta o fluxo → óxido nítrico → mais perfusão; endotelina-1 melhora a troca.</li>
+    <li><b>A grande síntese:</b> o exercício é catabólico no agudo e anabólico na adaptação — estresse controlado gera adaptação.</li>
+  </ol>
+
+  <div class="nav-next">
+    <a href="bioquimica-4-fadiga.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 4 &middot; Fadiga</span></a>
+    <a href="index.html"><span class="lbl">Fim da série</span><span class="ttl">Voltar à Biblioteca &rarr;</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Bioquímica do Exercício &middot; Parte 5 de 5</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
+
+</body>
+</html>

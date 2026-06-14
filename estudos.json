@@ -1,5 +1,40 @@
 [
   {
+    "titulo": "Bioquímica do Exercício 1: Fundamentos",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 1: o treino como estressor, as 5 adaptações, a estrutura do músculo, a mecânica da contração, os tipos de fibra, o recrutamento de unidades motoras (Henneman) e o papel real do dano muscular.",
+    "arquivo": "bioquimica-1-fundamentos.html"
+  },
+  {
+    "titulo": "Bioquímica do Exercício 2: Mecanismos da Hipertrofia",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 2: os três mecanismos da hipertrofia (tensão mecânica, estresse metabólico, dano), pump e BFR, mecanotransdução e a via mTOR, síntese proteica, biogênese ribossomal e turnover proteico.",
+    "arquivo": "bioquimica-2-hipertrofia.html"
+  },
+  {
+    "titulo": "Bioquímica do Exercício 3: Bioenergética e Vias",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 3: o ATP como moeda energética, a gordura como substrato, a via glicolítica anaeróbia, o metabolismo oxidativo, a via fosfagênica (fosfocreatina e creatina) e a integração de todas as vias no treino.",
+    "arquivo": "bioquimica-3-bioenergetica.html"
+  },
+  {
+    "titulo": "Bioquímica do Exercício 4: Fadiga",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 4: fadiga de curto prazo (fosfato inorgânico, H+, cálcio), periférica vs central, fadiga de médio prazo (glicogênio) e de longo prazo (SNC e dano). Por que o lactato não é o vilão.",
+    "arquivo": "bioquimica-4-fadiga.html"
+  },
+  {
+    "titulo": "Bioquímica do Exercício 5: Adaptações Moleculares",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 5 (final): adaptações agudas energéticas e hemodinâmicas, AMPK e GLUT-4, captação de glicose sem insulina, duplo pico de glicogênio, vasodilatação por óxido nítrico e por que o exercício isolado emagrece pouco.",
+    "arquivo": "bioquimica-5-adaptacoes.html"
+  },
+  {
     "titulo": "Contração Muscular: do Nervo ao Filamento",
     "categoria": "fisiologia",
     "data": "Jun · 2026",

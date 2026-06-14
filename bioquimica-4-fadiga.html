@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bioquímica do Exercício 4: Fadiga | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Bioquímica do Exercício 4: Fadiga | MG COACH">
+    <meta property="og:description" content="Parte 4 da série: a fadiga de curto prazo (fosfato inorgânico, H+, cálcio), a fadiga periférica vs central, a fadiga de médio prazo (glicogênio) e a de longo prazo (SNC e dano). Por que o lactato não é o vilão.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-4-fadiga.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bioquímica do Exercício 4: Fadiga | MG COACH">
+    <meta name="twitter:description" content="Fadiga de curto, médio e longo prazo: fosfato inorgânico, H+, cálcio, glicogênio e SNC.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#oque">O que é fadiga</a>
+    <a href="#curto">Curto prazo</a>
+    <a href="#tampon">Tamponamento</a>
+    <a href="#pi">Fosfato e cálcio</a>
+    <a href="#central">Periférica vs central</a>
+    <a href="#medio">Médio prazo</a>
+    <a href="#longo">Longo prazo</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Bioquímica do Exercício &middot; CBMF</div>
+  <div class="serie-bar">
+    <a href="bioquimica-1-fundamentos.html">1 &middot; Fundamentos</a>
+    <a href="bioquimica-2-hipertrofia.html">2 &middot; Hipertrofia</a>
+    <a href="bioquimica-3-bioenergetica.html">3 &middot; Bioenergética</a>
+    <span class="atual">4 &middot; Fadiga</span>
+    <a href="bioquimica-5-adaptacoes.html">5 &middot; Adaptações</a>
+  </div>
+  <h1>Por que você <span class="em">falha</span></h1>
+  <p class="lede">A fadiga em três escalas de tempo: <b>curto prazo</b> (fosfato inorgânico, H⁺, cálcio), <b>médio prazo</b> (glicogênio) e <b>longo prazo</b> (SNC e dano). Por que o lactato não é o vilão, e por que a segunda série parece mais pesada mesmo com o estímulo neural intacto.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="oque">
+  <span class="sec-num">01 &mdash; O QUE É FADIGA</span>
+  <h2>Não é incapacidade <span class="accent">total</span></h2>
+  <p class="sec-sub">Definir bem o conceito muda como você lê uma série até a falha.</p>
+
+  <div class="def">
+    <div class="word">Fadiga muscular</div>
+    <p>Um declínio da função motora e perceptiva — a redução gradual da capacidade de produzir força ou sustentar movimentos repetidos. <strong>Não é incapacidade total</strong>, e sim o ponto em que o exercício começa a ser limitado pela queda da produção de força submáxima.</p>
+  </div>
+
+  <p>Exemplo: num supino inclinado com halteres (12–15 reps), na 10ª já há dificuldade; na 12ª ocorre a falha — a incapacidade momentânea de sustentar aquela carga. Isso é fadiga de <strong>curto prazo</strong>. A fadiga é <strong>multifatorial</strong> e tem mecanismos diferentes conforme a escala de tempo.</p>
+</section>
+
+<!-- 2 -->
+<section id="curto">
+  <span class="sec-num">02 &mdash; FADIGA DE CURTO PRAZO</span>
+  <h2>Dentro de uma <span class="accent">série</span></h2>
+  <p class="sec-sub">Três fatores interagem — e o lactato não é um deles.</p>
+
+  <p>A fadiga de curto prazo ocorre pela interação de três fatores: <strong>acúmulo de íons H⁺</strong>, <strong>acúmulo de fosfato inorgânico (Pi)</strong> e <strong>redução da capacidade de produzir ATP</strong>.</p>
+
+  <div class="def">
+    <div class="word">Íon H⁺ e pH</div>
+    <p>O íon H⁺ é um próton (hidrogênio com carga positiva). Sua concentração determina o pH: 0–7 ácido, 7 neutro, 7–14 alcalino. O corpo (exceto o estômago) fica entre <strong>7,35 e 7,45</strong> (levemente alcalino). No exercício intenso, acumula-se H⁺ → o pH cai → o meio fica mais ácido.</p>
+  </div>
+
+  <p>De onde vêm os H⁺? Da <strong>glicólise anaeróbia</strong> (na fase de pagamento) e também da quebra de fosfocreatina. As duas principais vias do esforço intenso produzem metabólitos que acidificam o meio.</p>
+
+  <h3>Como o H⁺ gera fadiga</h3>
+  <ul class="clean">
+    <li><b>Reduz a produção de energia:</b> o excesso de H⁺ desacelera as reações metabólicas (o corpo "freia" para evitar acidose grave).</li>
+    <li><b>Reduz a creatinaquinase:</b> o pH ácido diminui a atividade da enzima, prejudicando a conversão de fosfocreatina em ATP.</li>
+    <li><b>Atrapalha a contração:</b> o H⁺ reduz a interação do cálcio com a troponina → menos pontes cruzadas → menos força e maior sensação de esforço.</li>
+  </ul>
+</section>
+
+<!-- 3 -->
+<section id="tampon">
+  <span class="sec-num">03 &mdash; TAMPONAMENTO E O MITO DO LACTATO</span>
+  <h2>O corpo <span class="accent">resiste</span> à acidose</h2>
+  <p class="sec-sub">E aqui mora a correção conceitual mais importante da matéria.</p>
+
+  <p>O corpo não deixa o pH cair indefinidamente. Há três sistemas tamponantes:</p>
+
+  <ul class="clean">
+    <li><b>Bicarbonato (extracelular):</b> age no sangue. H⁺ + HCO₃⁻ → H₂CO₃ → CO₂ + H₂O (via anidrase carbônica); o CO₂ é eliminado pela respiração. É o tampão final.</li>
+    <li><b>Lactato:</b> ver abaixo.</li>
+    <li><b>Carnosina (intracelular):</b> produzida no corpo, pode ser aumentada com <b>beta-alanina</b>. Seu grupo imidazol tem alta afinidade por H⁺, tamponando o meio → menor queda de pH e maior tolerância ao exercício intenso.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">Correção conceitual: o lactato não é o vilão</span>
+    <p>Humanos <strong>não produzem ácido lático — produzem lactato</strong> (formado do piruvato pela lactato desidrogenase). O lactato <strong>ajuda a remover H⁺</strong> da célula, pode ser transportado a outros tecidos e usado como <strong>combustível</strong>. Ou seja: <strong>o lactato não causa a acidose — quem causa é o H⁺.</strong> O lactato é, na verdade, um aliado metabólico. (É exatamente o que vimos nos materiais de pré-treinos e de contração muscular.)</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="pi">
+  <span class="sec-num">04 &mdash; FOSFATO INORGÂNICO E CÁLCIO</span>
+  <h2>O verdadeiro <span class="accent">protagonista</span> periférico</h2>
+  <p class="sec-sub">Por que o fosfato inorgânico é hoje apontado como a causa primária.</p>
+
+  <p>Relembrando o ciclo da ponte cruzada: a ATPase da miosina quebra ATP → ADP + <strong>Pi</strong>; o Pi <strong>sai</strong> da cabeça da miosina para que ela se acople à actina e execute o golpe de força. No exercício intenso, a quebra de ATP e de fosfocreatina despeja <strong>muito Pi</strong> no citosol.</p>
+
+  <h3>Como o Pi acumulado gera fadiga</h3>
+  <ul class="clean">
+    <li><b>Interfere no golpe de força:</b> com muito Pi no citosol, a saída do Pi da miosina fica menos eficiente → menos força por ciclo de ponte cruzada.</li>
+    <li><b>Reduz a liberação de cálcio:</b> o Pi entra no retículo sarcoplasmático e forma complexos com o Ca²⁺, reduzindo o cálcio disponível para liberar → menos ativação da troponina → menos força.</li>
+    <li><b>Reduz a sensibilidade da troponina ao cálcio:</b> mesmo com cálcio disponível, a contração fica submáxima.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">Pi e H⁺ juntos</span>
+    <p>O H⁺ compete com o cálcio pela troponina e o Pi age em conjunto com ele. Mas a evidência atual indica que o <strong>Pi é o principal responsável pela fadiga periférica de curto prazo</strong>, enquanto o H⁺ tem papel maior na modulação neural e na percepção de esforço.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="central">
+  <span class="sec-num">05 &mdash; PERIFÉRICA VS CENTRAL</span>
+  <h2>Músculo ou <span class="accent">cérebro</span>?</h2>
+  <p class="sec-sub">A fadiga tem dois endereços — e ambos importam.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Fadiga periférica (no músculo)</h4>
+      <p>Causada por acúmulo de Pi, alteração no manuseio de Ca²⁺ e menor eficiência da ponte cruzada. Mesmo que o cérebro envie estímulo máximo, o músculo não responde com força máxima.</p>
+    </div>
+    <div class="mini">
+      <h4>Fadiga central (no SNC)</h4>
+      <p>Os metabólitos (H⁺) ativam neurônios aferentes tipo III e IV, que avisam o cérebro do "perigo metabólico". O cérebro reduz o comando motor — menos disparo neural e menos recrutamento.</p>
+    </div>
+  </div>
+
+  <div class="def">
+    <div class="word">Neurônios aferentes tipo III e IV</div>
+    <p>Conectam a periferia (músculo) ao cérebro, levando informação sobre acúmulo de metabólitos, acidose e estresse. Quando muito ativados, o cérebro reduz o comando motor voluntário — uma proteção contra dano. Por isso o treino até a falha tem forte envolvimento desses aferentes.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Aplicação prática</span>
+    <p>Isso explica por que <strong>a segunda série com o mesmo peso parece bem mais pesada</strong>, mesmo com o estímulo neural intacto: o Pi acumulado e os aferentes III/IV reduzem a capacidade de produzir e sustentar força. Descanso insuficiente não remove o Pi adequadamente; técnicas como drop-set e rest-pause geram grande estresse metabólico.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="medio">
+  <span class="sec-num">06 &mdash; FADIGA DE MÉDIO PRAZO</span>
+  <h2>O <span class="accent">glicogênio</span> entre sessões</h2>
+  <p class="sec-sub">De uma sessão a outra — até cerca de 4 semanas.</p>
+
+  <p>O protagonista aqui é o <strong>glicogênio muscular</strong>, armazenado no sarcoplasma (~400–500 g no corpo; ~450 mmol/kg de massa seca num músculo bem abastecido). Após o treino, a ressíntese ocorre via glicogênio sintase, com sensibilidade à insulina e GLUT-4 elevados; leva <strong>4–6 h</strong> com boa alimentação (até 24 h para repleção quase total). O glicogênio é ressintetizado preferencialmente <strong>no músculo que foi mais depletado</strong>.</p>
+
+  <ul class="clean">
+    <li><b>A musculação não zera o glicogênio:</b> 6–12 séries por grupo (8–12 RM) reduzem ~24–40% do conteúdo. Para zerar precisaria de endurance prolongado + dieta muito baixa em carboidrato.</li>
+    <li><b>O glicogênio não é só combustível:</b> influencia o disparo do potencial de ação, a liberação de cálcio e o funcionamento da <b>SERCA</b> (bomba que recolhe o cálcio, dependente de ATP). Atua como sensor de disponibilidade energética.</li>
+    <li><b>Performance só cai de verdade</b> quando os estoques ficam abaixo de ~100 mmol/kg de massa seca.</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">Insight prático para o treinador</span>
+    <p>Estar em <strong>déficit calórico não significa automaticamente perder performance</strong>. O problema é o déficit mal estruturado, a baixa ingestão crônica de carboidrato ou o volume incompatível com a dieta. Nutrição adequada resolve grande parte da fadiga de médio prazo.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="longo">
+  <span class="sec-num">07 &mdash; FADIGA DE LONGO PRAZO</span>
+  <h2>Meses de <span class="accent">treino acumulado</span></h2>
+  <p class="sec-sub">Aqui há mais hipóteses do que certezas — e é preciso senso crítico.</p>
+
+  <p>A fadiga de longo prazo é atribuída a dois fatores principais: <strong>fadiga do SNC</strong> (déficit de drive motor por muito volume acumulado, mediado pelos aferentes III/IV, com mais percepção de cansaço no dia a dia) e <strong>dano muscular crônico</strong> (que prejudicaria o acoplamento actina-miosina e a mecanotransdução).</p>
+
+  <div class="callout warn">
+    <span class="tag">Senso crítico</span>
+    <p>Se a fadiga do SNC limitasse muito a hipertrofia, volumes baixos seriam <strong>sempre</strong> superiores — o que não se confirma. Há estudos com <strong>+50 séries semanais</strong> mostrando mais hipertrofia (com mais fadiga, mas sem limitar o ganho). E o dano muscular é <strong>transitório e adaptável</strong>: com o tempo, gera-se menos dano e a síntese proteica se direciona mais à hipertrofia do que ao reparo.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O fator decisivo: genética</span>
+    <p>Não existe um volume universal ideal — existe <strong>volume tolerável individual</strong>, e essa tolerância pode ser treinada. A resposta hipertrófica depende da capacidade de transcrição gênica, sensibilidade a estímulos mecânicos, resposta inflamatória e capacidade regenerativa — tudo com forte componente genético. (Conecta direto com o material <em>Volume de Treino</em>.)</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">O que o treinador precisa fazer</span>
+    <p>Garantir nutrição adequada (sobretudo carboidrato), manter o volume compatível com a ingestão calórica, monitorar a performance ao longo das semanas, cuidar do sono e ajustar o volume progressivamente.</p>
+  </div>
+</section>
+
+<!-- resumo -->
+<section id="resumo">
+  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial da Parte 4.</p>
+
+  <ol class="key">
+    <li><b>Fadiga não é incapacidade total</b> — é a queda da produção de força submáxima.</li>
+    <li><b>Curto prazo:</b> interação de H⁺, fosfato inorgânico (Pi) e queda na produção de ATP.</li>
+    <li><b>H⁺</b> reduz energia, creatinaquinase e a interação cálcio-troponina; vem da glicólise e da PCr.</li>
+    <li><b>Tampões:</b> bicarbonato (sangue), lactato e carnosina (aumentada pela beta-alanina).</li>
+    <li><b>Lactato não é vilão:</b> humanos produzem lactato (não ácido lático); ele tampona H⁺ e é combustível.</li>
+    <li><b>Fosfato inorgânico (Pi):</b> a causa primária da fadiga periférica — atrapalha o golpe de força e o cálcio.</li>
+    <li><b>Periférica</b> (músculo: Pi, Ca²⁺) vs <b>central</b> (SNC: aferentes III/IV reduzem o comando).</li>
+    <li><b>Médio prazo:</b> glicogênio (cai 24–40% por sessão, nunca zera; prejuízo só abaixo de ~100 mmol/kg).</li>
+    <li><b>Déficit calórico não significa perder performance</b> se bem estruturado.</li>
+    <li><b>Longo prazo:</b> SNC e dano; mais hipótese que certeza. Tolerância ao volume é genética e treinável.</li>
+  </ol>
+
+  <div class="nav-next">
+    <a href="bioquimica-3-bioenergetica.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 3 &middot; Bioenergética</span></a>
+    <a href="bioquimica-5-adaptacoes.html"><span class="lbl">Próximo da série</span><span class="ttl">5 &middot; Adaptações Moleculares &rarr;</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Bioquímica do Exercício &middot; Parte 4 de 5</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
+
+</body>
+</html>

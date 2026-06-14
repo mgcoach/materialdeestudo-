@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bioquímica do Exercício 3: Bioenergética e Vias | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Bioquímica do Exercício 3: Bioenergética e Vias | MG COACH">
+    <meta property="og:description" content="Parte 3 da série: o ATP como moeda energética, a gordura como substrato, a via glicolítica anaeróbia, o metabolismo oxidativo, a via fosfagênica (fosfocreatina e creatina) e a integração de todas as vias no treino.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-3-bioenergetica.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bioquímica do Exercício 3: Bioenergética e Vias | MG COACH">
+    <meta name="twitter:description" content="ATP, gordura, glicólise, metabolismo oxidativo, fosfocreatina, creatina e integração das vias.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#atp">O ATP</a>
+    <a href="#gordura">Gordura</a>
+    <a href="#glicolise">Via glicolítica</a>
+    <a href="#oxidativo">Metabolismo oxidativo</a>
+    <a href="#fosfagenica">Via fosfagênica</a>
+    <a href="#creatina">Creatina</a>
+    <a href="#integracao">Integração</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Bioquímica do Exercício &middot; CBMF</div>
+  <div class="serie-bar">
+    <a href="bioquimica-1-fundamentos.html">1 &middot; Fundamentos</a>
+    <a href="bioquimica-2-hipertrofia.html">2 &middot; Hipertrofia</a>
+    <span class="atual">3 &middot; Bioenergética</span>
+    <a href="bioquimica-4-fadiga.html">4 &middot; Fadiga</a>
+    <a href="bioquimica-5-adaptacoes.html">5 &middot; Adaptações</a>
+  </div>
+  <h1>De onde vem a <span class="em">energia</span></h1>
+  <p class="lede">O ATP como moeda energética e os três sistemas que o regeneram: <b>fosfagênico</b> (fosfocreatina), <b>glicolítico</b> e <b>oxidativo</b>. Como a gordura e o carboidrato viram combustível, por que o lactato não é lixo, e como tudo se integra numa série de musculação.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="atp">
+  <span class="sec-num">01 &mdash; O ATP</span>
+  <h2>A moeda <span class="accent">energética</span></h2>
+  <p class="sec-sub">Toda contração é paga em ATP — e o estoque dura segundos.</p>
+
+  <div class="def">
+    <div class="word">ATP (Adenosina Trifosfato)</div>
+    <p>A principal molécula energética do corpo. Composta por adenina, ribose e <strong>três grupos fosfato</strong>. A energia está armazenada nas ligações entre os fosfatos. Quando uma ligação se quebra: <strong>ATP → ADP + Pi + energia</strong>, usada para contração, transporte ativo e síntese de moléculas.</p>
+  </div>
+
+  <p>Quanto menos fosfatos, menor o potencial energético: ATP (3) &gt; ADP (2) &gt; AMP (1). O problema é que o <strong>estoque de ATP no músculo é mínimo</strong> — sustenta só alguns segundos de esforço máximo. Por isso ele precisa ser <strong>constantemente ressintetizado</strong> pelos três sistemas energéticos. A bioenergética é o estudo de como o corpo produz, armazena e usa essa energia (medida em kcal).</p>
+</section>
+
+<!-- 2 -->
+<section id="gordura">
+  <span class="sec-num">02 &mdash; GORDURA COMO SUBSTRATO</span>
+  <h2>O combustível <span class="accent">lento e vasto</span></h2>
+  <p class="sec-sub">Muita energia, liberação lenta, dependente de oxigênio.</p>
+
+  <p>A gordura é armazenada como <em class="term">triacilglicerol</em> (no tecido adiposo e dentro do músculo). É a fonte mais concentrada: <strong>~9 kcal/g</strong>, contra ~4 kcal/g de carboidrato e proteína. Gera muito ATP, mas de forma <strong>lenta</strong> e <strong>dependente de oxigênio</strong> (aeróbia).</p>
+
+  <ul class="clean">
+    <li><b>Predomina em:</b> exercícios contínuos, de intensidade moderada, longa duração e com bom aporte de oxigênio.</li>
+    <li><b>Pouco usada em:</b> esforços explosivos, alta intensidade e no início do exercício.</li>
+    <li><b>Importante:</b> todos os substratos atuam sempre — o que muda é a <b>predominância</b>.</li>
+  </ul>
+
+  <h3>Da gordura ao ATP (resumo das etapas)</h3>
+  <div class="stepwrap">
+    <div class="step"><h4>Lipólise</h4><p>Cascata hormonal (adrenalina → proteína G → adenilato ciclase → AMPc → PKA → lipases ATGL, HSL, MGL) quebra o triacilglicerol em 3 ácidos graxos + 1 glicerol.</p></div>
+    <div class="step"><h4>Transporte</h4><p>Os ácidos graxos não circulam livres: ligam-se à albumina no sangue e entram no músculo por transportadores (FAT/CD36, FABP, FATP).</p></div>
+    <div class="step"><h4>Lançadeira da carnitina</h4><p>Ácidos graxos de cadeia longa não entram direto na mitocôndria: a CPT-1 adiciona carnitina, atravessam a membrana, e a CPT-2 a remove. (O malonil-CoA inibe a CPT-1, controlando a entrada.)</p></div>
+    <div class="step"><h4>Beta-oxidação + Krebs</h4><p>Na mitocôndria, geram NADH, FADH₂ e acetil-CoA, que alimentam o ciclo de Krebs e a cadeia transportadora de elétrons → muito ATP.</p></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Na musculação</span>
+    <p>Durante as séries predominam ATP-PCr e glicólise (pouca gordura). A gordura entra mais <strong>nos descansos entre séries</strong> e em <strong>sessões longas</strong>. A insulina inibe a lipólise; o ambiente hormonal do exercício (adrenalina, GH, cortisol, glucagon) a favorece.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="glicolise">
+  <span class="sec-num">03 &mdash; VIA GLICOLÍTICA ANAERÓBIA</span>
+  <h2>Energia <span class="accent">rápida</span> sem oxigênio</h2>
+  <p class="sec-sub">O sistema que sustenta a maior parte de uma série pesada.</p>
+
+  <p>A <em class="term">via glicolítica anaeróbia</em> produz ATP rapidamente no citoplasma, usando principalmente <strong>glicogênio muscular</strong> (e glicose do sangue). Domina em esforços de ~10 s a 2 min: musculação, sprints, HIIT. É rápida, mas de baixa eficiência e independente de oxigênio.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Origem da glicose</th><th>ATP líquido</th><th>Observação</th></tr></thead>
+      <tbody>
+        <tr><td>Glicose do plasma</td><td><span class="pill c">2 ATP</span></td><td>Gasta 2 ATP na fase inicial (investimento)</td></tr>
+        <tr><td>Glicogênio muscular</td><td><span class="pill b">3 ATP</span></td><td>Mais eficiente (não gasta ATP na entrada)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Correções importantes da aula</span>
+    <p><strong>(1)</strong> O valor "4 ATP" que se costuma anotar é o total <em>bruto</em> — o <strong>líquido</strong> é 2–3, porque 2 ATP são gastos na fase de investimento. <strong>(2)</strong> A glicose <strong>não</strong> vem diretamente de ácido graxo: ácidos graxos viram acetil-CoA, não glicose. Só o glicerol (parte do triglicerídeo) pode virar glicose no fígado — processo lento e pouco relevante no treino intenso.</p>
+  </div>
+
+  <h3>O destino do lactato — Ciclo de Cori</h3>
+  <p>Sem oxigênio suficiente, o piruvato vira <strong>lactato</strong>. Ele sai do músculo, vai ao fígado, é reconvertido em glicose (gliconeogênese) e volta ao músculo. Ou seja: <strong>o lactato não é lixo metabólico — é combustível reutilizável.</strong></p>
+
+  <h3>Regulação</h3>
+  <ul class="clean">
+    <li><b>Regulação grossa (ativação rápida):</b> o <b>cálcio</b> liberado na contração ativa as enzimas da glicólise e a glicogenólise.</li>
+    <li><b>Regulação fina (feedback):</b> ATP, ADP, AMP, NADH e pH ajustam a velocidade da via conforme a demanda real.</li>
+    <li><b>Hormônios:</b> a <b>adrenalina</b> age no músculo (via receptor β → proteína G → AMPc → glicogeniofosforilase); o <b>glucagon</b> age no fígado, mantendo a glicemia.</li>
+  </ul>
+</section>
+
+<!-- 4 -->
+<section id="oxidativo">
+  <span class="sec-num">04 &mdash; METABOLISMO OXIDATIVO</span>
+  <h2>Lento, eficiente e <span class="accent">vasto</span></h2>
+  <p class="sec-sub">A via que sustenta o esforço por muito tempo — e a recuperação entre séries.</p>
+
+  <p>O <em class="term">metabolismo oxidativo da glicose</em> produz ATP na presença de oxigênio. É mais lento para iniciar, porém muito mais eficiente: <strong>32 ATP</strong> (glicose do sangue) ou <strong>33 ATP</strong> (glicose do glicogênio). A diferença vem de a glicose do glicogênio não gastar ATP na etapa da hexoquinase.</p>
+
+  <p>Com oxigênio, o piruvato vira acetil-CoA → ciclo de Krebs → cadeia transportadora de elétrons → grande produção de ATP. Predomina em exercícios contínuos, 65–85% do VO₂máx, de 60 a 120 min.</p>
+
+  <div class="def">
+    <div class="word">Estoques energéticos (em ordem)</div>
+    <p><strong>1. Triglicerídeos</strong> (quase ilimitados) &middot; <strong>2. Glicogênio muscular</strong> (~250–700 g em pessoas musculosas; principal fonte na musculação) &middot; <strong>3. Triglicerídeo intramuscular</strong> &middot; <strong>4. Proteína</strong> (uso mínimo, ineficiente) &middot; <strong>5. Glicogênio hepático</strong> (~70–130 g, mantém a glicemia, mais relevante no endurance).</p>
+  </div>
+
+  <ul class="clean">
+    <li><b>Existe limite de estoque de glicogênio</b> (~500 g em média): não adianta exagerar no carboidrato para "encher mais".</li>
+    <li><b>Não dá para esgotar o glicogênio</b> totalmente — isso seria incompatível com a vida (ele também mantém funções vitais).</li>
+    <li><b>AMPK e GLUT-4:</b> em exercício intenso/prolongado, o AMP sobe e ativa a AMPK, que transloca o transportador GLUT-4 para a membrana — o músculo capta glicose <b>independente de insulina</b>. É por isso que o exercício é fundamental no diabetes tipo 2.</li>
+    <li><b>O cálcio</b> ativa a glicogeniofosforilase (quebra do glicogênio) — por isso ele é liberado no citosol, onde o glicogênio é metabolizado.</li>
+  </ul>
+</section>
+
+<!-- 5 -->
+<section id="fosfagenica">
+  <span class="sec-num">05 &mdash; VIA FOSFAGÊNICA</span>
+  <h2>A bateria <span class="accent">expressa</span></h2>
+  <p class="sec-sub">O sistema mais rápido do corpo — domina os primeiros segundos.</p>
+
+  <div class="def">
+    <div class="word">Via fosfagênica (ATP-CP / fosfocreatina)</div>
+    <p>O sistema energético mais rápido, que regenera ATP imediatamente sem oxigênio. Envolve ATP, creatina, fosfocreatina (PCr) e a enzima <strong>creatinaquinase (CK)</strong>. É <strong>anaeróbico alático</strong>: não precisa de O₂ e não produz lactato.</p>
+  </div>
+
+  <p>Em repouso, o corpo "carrega a bateria": ATP + creatina → fosfocreatina + ADP (pela CK). No início do exercício, quando o ATP cai e o ADP sobe, a reação inverte: <strong>PCr + ADP → ATP + creatina</strong>, em milissegundos. A contribuição máxima dura <strong>~10–13 segundos</strong>; depois a glicólise assume.</p>
+
+  <div class="callout">
+    <span class="tag">Lançadeira da fosfocreatina</span>
+    <p>Além de gerar ATP imediato, a PCr ajuda a transportar energia dentro da célula e <strong>fornece o ATP para a fase de investimento da glicólise</strong> — ou seja, ela "dá partida" nas outras vias. A CK é uma enzima "próxima do equilíbrio", bidirecional, regulada apenas pelas concentrações de ATP, ADP e PCr.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="creatina">
+  <span class="sec-num">06 &mdash; CREATINA</span>
+  <h2>A suplementação com base <span class="accent">fisiológica</span></h2>
+  <p class="sec-sub">O que a fisiologia diz sobre o suplemento mais estudado.</p>
+
+  <p>O objetivo de suplementar creatina é <strong>aumentar os estoques de fosfocreatina</strong>, melhorando a regeneração rápida de ATP, a manutenção da intensidade e o volume de treino.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Protocolo</h4>
+      <p>Saturação: ~20–25 g/dia divididos em 4–5 doses, por 5–7 dias. Manutenção: ~3–5 g/dia. A absorção aumenta com carboidrato no curto prazo, mas a longo prazo não faz diferença — pode tomar em jejum.</p>
+    </div>
+    <div class="mini">
+      <h4>Benefícios (evidência)</h4>
+      <p>Melhora em sprints, mais volume e força, recuperação entre séries, ressíntese de glicogênio, maior tolerância ao treino e transporte intracelular de energia.</p>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Creatina e hipertrofia — visão realista</span>
+    <p>O mecanismo é <strong>indireto</strong>: creatina → ↑ força → ↑ carga/tensão → ↑ estímulo. Mas hipertrofia não depende só de força. Em <strong>destreinados</strong>, a creatina adiciona um aumento <strong>pequeno</strong> de hipertrofia (eles já crescem fácil); em treinados, o efeito é indireto via desempenho. (É a mesma conclusão do nosso material <em>Creatina é Superestimada?</em>.) Detalhe clínico: CPK elevada em exame indica apenas <strong>dano muscular recente</strong>, não melhor ou pior desempenho.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="integracao">
+  <span class="sec-num">07 &mdash; INTEGRAÇÃO DAS VIAS</span>
+  <h2>Tudo funciona <span class="accent">junto</span></h2>
+  <p class="sec-sub">As vias não se revezam — elas se sobrepõem, mudando só a predominância.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Tempo</th><th>Via predominante</th><th>Característica</th></tr></thead>
+      <tbody>
+        <tr><td>0–10 s</td><td><span class="pill a">Fosfagênica (ATP-CP)</span></td><td>Energia imediata, alta potência, baixa capacidade</td></tr>
+        <tr><td>10–60 s</td><td><span class="pill c">Glicolítica anaeróbia</span></td><td>ATP rápido, produção de lactato</td></tr>
+        <tr><td>&gt;120 s</td><td><span class="pill b">Oxidativa aeróbia</span></td><td>Alta eficiência, uso crescente de gordura</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Na <strong>musculação</strong>: a série começa com ATP-CP (1–5 reps), a glicólise cresce na faixa intermediária (8–12 reps, com depleção de PCr e aumento de lactato). Atenção a uma correção da aula: <strong>não existe momento 100% oxidativo</strong> numa série intensa — o que ocorre é aumento da contribuição aeróbica, com participação anaeróbica ainda relevante.</p>
+
+  <div class="callout">
+    <span class="tag">O descanso entre séries</span>
+    <p>Durante o intervalo, o metabolismo <strong>aeróbico</strong> domina: ressintetiza a fosfocreatina e reequilibra o sistema. As vias nunca voltam a zero — em séries seguintes, o metabolismo já parte de um nível elevado. (Isso conecta com o material <em>Volume de Treino</em>: descansos adequados preservam a qualidade das séries.)</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conclusões práticas</span>
+    <ul class="clean" style="margin-top:10px">
+      <li><b>Nenhuma via é superior</b> — elas se complementam conforme intensidade e duração.</li>
+      <li><b>O glicogênio muscular</b> é o principal combustível da musculação (gera ATP e ressintetiza PCr).</li>
+      <li><b>Reesterificação:</b> ~60–70% dos ácidos graxos liberados são reaproveitados (sistema preventivo contra falta de energia).</li>
+      <li><b>Perda de gordura depende do déficit calórico</b>, não da oxidação durante o treino em si.</li>
+      <li><b>Treino em jejum</b> deve ser avaliado individualmente, não de forma ideológica.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- resumo -->
+<section id="resumo">
+  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial da Parte 3.</p>
+
+  <ol class="key">
+    <li><b>ATP</b> é a moeda energética; o estoque dura segundos e precisa ser ressintetizado o tempo todo.</li>
+    <li><b>Gordura:</b> ~9 kcal/g, lenta e aeróbia; predomina em esforço leve/longo e nos descansos.</li>
+    <li><b>Via glicolítica:</b> rápida, anaeróbia; 2–3 ATP líquidos; produto final é lactato (combustível, não lixo).</li>
+    <li><b>Correções:</b> o líquido da glicólise é 2–3 ATP (não 4); glicose não vem de ácido graxo.</li>
+    <li><b>Oxidativa:</b> 32–33 ATP por glicose; sustenta esforço longo; AMPK transloca GLUT-4 (chave no diabetes).</li>
+    <li><b>Fosfagênica:</b> a mais rápida (~10–13 s), alática; a fosfocreatina repõe ATP na hora e dá partida na glicólise.</li>
+    <li><b>Creatina:</b> aumenta a PCr; efeito na hipertrofia é indireto (via força) e pequeno em destreinados.</li>
+    <li><b>Integração:</b> as vias atuam juntas; muda a predominância por tempo e intensidade.</li>
+    <li><b>Sem via melhor</b> — todas se complementam; o glicogênio muscular é o combustível-rei da musculação.</li>
+    <li><b>Emagrecimento</b> depende do déficit calórico, não da oxidação durante o treino.</li>
+  </ol>
+
+  <div class="nav-next">
+    <a href="bioquimica-2-hipertrofia.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 2 &middot; Hipertrofia</span></a>
+    <a href="bioquimica-4-fadiga.html"><span class="lbl">Próximo da série</span><span class="ttl">4 &middot; Fadiga &rarr;</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Bioquímica do Exercício &middot; Parte 3 de 5</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
+
+</body>
+</html>

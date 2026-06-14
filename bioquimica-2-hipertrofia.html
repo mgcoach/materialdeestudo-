@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bioquímica do Exercício 2: Mecanismos da Hipertrofia | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Bioquímica do Exercício 2: Mecanismos da Hipertrofia | MG COACH">
+    <meta property="og:description" content="Parte 2 da série: os três mecanismos da hipertrofia (tensão mecânica, estresse metabólico, dano), o pump e o BFR, a mecanotransdução e a via mTOR, a síntese proteica, a biogênese ribossomal e o turnover proteico.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-2-hipertrofia.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bioquímica do Exercício 2: Mecanismos da Hipertrofia | MG COACH">
+    <meta name="twitter:description" content="Tensão mecânica, estresse metabólico, mTOR, síntese proteica, ribossomos e turnover proteico.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#tres">Os 3 mecanismos</a>
+    <a href="#metabolico">Estresse metabólico</a>
+    <a href="#pump">Pump e BFR</a>
+    <a href="#mecano">Mecanotransdução</a>
+    <a href="#mtor">A via mTOR</a>
+    <a href="#sintese">Síntese proteica</a>
+    <a href="#ribossomos">Ribossomos</a>
+    <a href="#turnover">Turnover proteico</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Bioquímica do Exercício &middot; CBMF</div>
+  <div class="serie-bar">
+    <a href="bioquimica-1-fundamentos.html">1 &middot; Fundamentos</a>
+    <span class="atual">2 &middot; Hipertrofia</span>
+    <a href="bioquimica-3-bioenergetica.html">3 &middot; Bioenergética</a>
+    <a href="bioquimica-4-fadiga.html">4 &middot; Fadiga</a>
+    <a href="bioquimica-5-adaptacoes.html">5 &middot; Adaptações</a>
+  </div>
+  <h1>Como o músculo <span class="em">cresce</span> de verdade</h1>
+  <p class="lede">Os três mecanismos da hipertrofia e por que a <b>tensão mecânica</b> é o motor. Como o estímulo mecânico vira sinal químico (mecanotransdução), o papel central da <b>mTOR</b>, e como a síntese proteica e os ribossomos constroem o músculo. Por que pump não é crescimento garantido.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="tres">
+  <span class="sec-num">01 &mdash; OS TRÊS MECANISMOS</span>
+  <h2>O que <span class="accent">dispara</span> a hipertrofia</h2>
+  <p class="sec-sub">Tudo gira em torno de três mecanismos &mdash; e um deles é o principal.</p>
+
+  <p>A hipertrofia é desencadeada por três mecanismos que atuam juntos:</p>
+
+  <ul class="clean">
+    <li><b>Tensão mecânica</b> &mdash; a força que o músculo gera contra a carga. É o <b>mecanismo principal</b>.</li>
+    <li><b>Estresse metabólico</b> &mdash; o acúmulo de metabólitos durante o esforço (sinalizador).</li>
+    <li><b>Dano muscular</b> &mdash; as microlesões (coadjuvante, visto na Parte 1).</li>
+  </ul>
+
+  <div class="callout">
+    <span class="tag">A hierarquia</span>
+    <p>Os três contribuem, mas não são iguais. A <strong>tensão mecânica suficiente ao longo do tempo</strong> é o fator dominante. Estresse metabólico e dano são moduladores &mdash; ajudam, mas não substituem a tensão. Guarde isso: é o fio condutor desta parte inteira.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="metabolico">
+  <span class="sec-num">02 &mdash; ESTRESSE METABÓLICO</span>
+  <h2>Os metabólitos como <span class="accent">sinais</span></h2>
+  <p class="sec-sub">O acúmulo químico do esforço — e o que ele realmente faz.</p>
+
+  <p>O <em class="term">estresse metabólico</em> é o conjunto de alterações bioquímicas no músculo durante o exercício, com acúmulo de <strong>lactato, íons H⁺, fosfato inorgânico, ADP/AMP e radicais livres (ROS)</strong>. Ponto crucial: esses metabólitos atuam como <strong>sinais celulares</strong>, não como causadores diretos do crescimento.</p>
+
+  <h3>Como ele favorece a hipertrofia (de forma indireta)</h3>
+  <ul class="clean">
+    <li><b>Mais recrutamento de fibras:</b> a fadiga metabólica derruba as fibras Tipo I, e o sistema nervoso recruta as Tipo II (alto potencial hipertrófico).</li>
+    <li><b>Inchaço celular (cell swelling / pump):</b> a entrada de água na fibra é interpretada como ameaça estrutural, ativando vias anabólicas e reduzindo as catabólicas.</li>
+    <li><b>Sinalização hormonal aguda:</b> ↑ transitório de GH, testosterona e IGF-1 — sistêmico e de curta duração, <b>não</b> é o principal determinante crônico.</li>
+    <li><b>Miocinas e ROS controlados:</b> IL-6, IL-15 e estresse oxidativo moderado ativam vias como MAPK e mTOR (excesso de antioxidantes pode atenuar isso).</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">Mais estresse metabólico = mais hipertrofia?</span>
+    <p>Não. Existe um ponto ótimo: estresse baixo é estímulo insuficiente; moderado favorece a sinalização; excessivo derruba a performance, reduz a carga e atrapalha a recuperação. O fator dominante continua sendo a <strong>tensão mecânica</strong>.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="pump">
+  <span class="sec-num">03 &mdash; PUMP E BFR</span>
+  <h2>O <span class="accent">pump</span> não é crescimento</h2>
+  <p class="sec-sub">Um dos mal-entendidos mais comuns da academia.</p>
+
+  <p>O <em class="term">pump</em> é o aumento agudo do volume do músculo no treino, causado por maior fluxo sanguíneo, acúmulo de metabólitos e entrada de água na célula. Ele <strong>indica</strong> que houve estresse metabólico e boa perfusão — mas <strong>não garante</strong> progressão de carga, recrutamento adequado de fibras de alto limiar nem estímulo mecânico suficiente.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Evidência</h4>
+      <p>Estudos comparando treinos focados em pump/inflamação aguda vs. musculação convencional mostram <b>hipertrofia semelhante</b>. O pump não é marcador confiável de estímulo anabólico.</p>
+    </div>
+    <div class="mini">
+      <h4>É possível dissociar</h4>
+      <p>Muito pump com pouca hipertrofia (cargas muito baixas) e pouco pump com ótima hipertrofia (baixas reps, alta carga) coexistem. Sentir ≠ crescer.</p>
+    </div>
+  </div>
+
+  <div class="def">
+    <div class="word">BFR (treino com oclusão / Blood Flow Restriction)</div>
+    <p>Técnica que restringe parcialmente o fluxo sanguíneo, gerando hipóxia local e acúmulo acelerado de metabólitos com <strong>cargas leves (≈20–40% 1RM)</strong>. Recruta fibras rápidas antecipadamente e sinaliza hipertrofia. Útil em <strong>reabilitação</strong> e para quem não tolera cargas altas — mas <strong>não substitui</strong> a tensão mecânica elevada no longo prazo.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Não dá para treinar "só metabólico"</span>
+    <p>Mesmo treinos de altas repetições e pump envolvem algum grau de tensão mecânica — o estresse metabólico nunca atua isoladamente. O pump deve ser visto como <strong>efeito colateral</strong>, não objetivo. "Treinar só para sentir pump é treinar sensação, não adaptação."</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="mecano">
+  <span class="sec-num">04 &mdash; MECANOTRANSDUÇÃO</span>
+  <h2>De força física a <span class="accent">sinal químico</span></h2>
+  <p class="sec-sub">Como o músculo "sente" a carga e transforma isso em ordem de crescer.</p>
+
+  <div class="def">
+    <div class="word">Mecanotransdução</div>
+    <p>O processo pelo qual um estímulo mecânico (a tensão da carga) é convertido em sinais químicos dentro da célula, capazes de alterar sua função. Começa na matriz extracelular, passa pela membrana da fibra, propaga-se pelo citoplasma e culmina em alterações no núcleo.</p>
+  </div>
+
+  <p>A sequência: sobrecarga mecânica → deformação da fibra → ativação de sensores mecânicos → sinalização intracelular → ativação de vias anabólicas (principalmente <strong>mTOR</strong>). O estímulo inicial é <strong>mecânico, não hormonal</strong> — os hormônios modulam, mas não iniciam.</p>
+
+  <h3>As vias que ativam a mTOR</h3>
+  <ul class="clean">
+    <li><b>IGF-1 / PI3K / AKT:</b> a contração e o GH elevam o IGF-1, que ativa a via PI3K → AKT → inibe o TSC1/TSC2 → ativa a mTOR.</li>
+    <li><b>Integrinas / FAK:</b> proteínas que conectam a matriz extracelular ao citoesqueleto; detectam tensão e ativam a FAK → mTOR. <b>Via puramente mecânica, independente de hormônios.</b></li>
+    <li><b>Canais de cálcio sensíveis ao estiramento:</b> o alongamento sob tensão abre canais de Ca²⁺, que atua como segundo mensageiro rumo à mTOR. Explica por que amplitude sob tensão tende a ser eficiente.</li>
+    <li><b>Ácido fosfatídico:</b> a deformação da membrana produz ácido fosfatídico, que ativa a mTOR <b>diretamente</b> — uma das vias mais diretas do treino. (Atenção: é o ácido fosfatídico, não o triacilglicerol.)</li>
+  </ul>
+</section>
+
+<!-- 5 -->
+<section id="mtor">
+  <span class="sec-num">05 &mdash; A VIA mTOR</span>
+  <h2>O <span class="accent">regulador central</span></h2>
+  <p class="sec-sub">A proteína que orquestra a construção muscular.</p>
+
+  <div class="def">
+    <div class="word">mTOR (mammalian Target of Rapamycin)</div>
+    <p>Uma proteína quinase que funciona como <strong>sensor de energia, nutrientes e estímulos mecânicos</strong>. Ela aumenta a tradução proteica, estimula a síntese de actina e miosina e reduz vias catabólicas. Ativada principalmente por: tensão mecânica (principal), aminoácidos (especialmente leucina), estado energético adequado e insulina.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">A frase que resume</span>
+    <p>"A mTOR abre a porta, mas o ambiente decide se o músculo cresce." Ela não cria músculo sozinha — regula o ambiente para que a síntese aconteça. Hipertrofia é processo crônico e multifatorial: depende de volume, intensidade, recuperação, nutrição, frequência e progressão.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="sintese">
+  <span class="sec-num">06 &mdash; SÍNTESE PROTEICA</span>
+  <h2>Do <span class="accent">DNA</span> à proteína</h2>
+  <p class="sec-sub">Como a informação genética vira actina e miosina.</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>Transcrição (no núcleo)</h4><p>O estímulo mecânico ativa genes da hipertrofia. Um gene do DNA serve de molde e forma-se o RNA mensageiro (mRNA). O DNA não sai do núcleo — o mRNA é o "mensageiro".</p></div>
+    <div class="step"><h4>Processamento do mRNA</h4><p>Removem-se as regiões não codificantes (íntrons) e unem-se as codificantes (éxons): o mRNA fica maduro e funcional, pronto para sair ao citoplasma.</p></div>
+    <div class="step"><h4>Tradução (no ribossomo)</h4><p>No citoplasma, o ribossomo lê o mRNA; cada códon (3 bases) corresponde a um aminoácido, trazido pelo tRNA. O ribossomo une os aminoácidos em cadeia — nasce a proteína (actina, miosina, enzimas...).</p></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">O papel da mTOR aqui</span>
+    <p>A mTOR aumenta a <strong>eficiência e a velocidade</strong> da tradução (o ribossomo produz mais rápido) e reduz a degradação. Mais ativação de mTOR → maior taxa de síntese proteica.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="ribossomos">
+  <span class="sec-num">07 &mdash; BIOGÊNESE RIBOSSOMAL</span>
+  <h2>Construir a <span class="accent">máquina</span></h2>
+  <p class="sec-sub">A diferença entre produzir rápido e ter capacidade de produzir muito.</p>
+
+  <p>Há duas coisas diferentes: <strong>velocidade de tradução</strong> (quão rápido cada ribossomo trabalha) e <strong>capacidade de tradução</strong> (quantos ribossomos existem). A <em class="term">biogênese ribossomal</em> é a formação de novos ribossomos — transcrição de RNA ribossomal (rRNA) e montagem das subunidades, no nucléolo.</p>
+
+  <ul class="clean">
+    <li><b>Pessoas treinadas têm mais ribossomos</b> que sedentárias — o treino aumenta tanto a velocidade quanto a quantidade.</li>
+    <li><b>Mais ribossomos = mais capacidade de síntese</b> em repouso, durante e após o treino.</li>
+    <li><b>Variabilidade genética:</b> algumas pessoas produzem mais ribossomos e sustentam mais síntese crônica — parte da explicação para respostas individuais diferentes à hipertrofia.</li>
+  </ul>
+
+  <div class="callout ok">
+    <span class="tag">A síntese da aula</span>
+    <p>"Não é só ativar a síntese — é construir a máquina (ribossomos) que sustenta o crescimento a longo prazo." Por isso a consistência ao longo de meses importa tanto: ela aumenta a própria capacidade de construir músculo.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="turnover">
+  <span class="sec-num">08 &mdash; TURNOVER PROTEICO</span>
+  <h2>Síntese vs. <span class="accent">degradação</span></h2>
+  <p class="sec-sub">O músculo está sempre sendo construído e destruído — o saldo decide.</p>
+
+  <div class="def">
+    <div class="word">Turnover proteico (balanço nitrogenado)</div>
+    <p>O equilíbrio dinâmico entre síntese proteica muscular (MPS) e degradação (MPB). O que define ganho, perda ou manutenção é a relação entre os dois ao longo do tempo. <strong>Síntese &gt; degradação</strong> = hipertrofia; <strong>=</strong> manutenção; <strong>&lt;</strong> = perda. (Mede-se pelo nitrogênio, presente nas proteínas mas não em carboidratos e gorduras.)</p>
+  </div>
+
+  <ul class="clean">
+    <li><b>A degradação não é vilã:</b> é essencial para renovar e remover proteínas danificadas (via autofagia e sistema ubiquitina-proteassoma). O problema é só quando ela supera cronicamente a síntese.</li>
+    <li><b>Janela anabólica é ampla:</b> o conceito antigo de "30–60 min pós-treino" caiu. A sensibilidade aos aminoácidos fica elevada por <b>até 24h ou mais</b>. Treinos próximos da falha aumentam mais a síntese pós-exercício.</li>
+    <li><b>Miofibrilar vs. sarcoplasmática:</b> a hipertrofia miofibrilar (actina/miosina → força) e a sarcoplasmática (água, glicogênio, enzimas → volume) existem, mas <b>não são separáveis na prática</b>: todo treino é simultaneamente tensional e metabólico.</li>
+    <li><b>Atrofia é difícil</b> em quem treina e come bem — ela exige desuso prolongado, déficit severo e crônico, ou doença. Manter massa exige menos estímulo do que se imagina.</li>
+  </ul>
+</section>
+
+<!-- resumo -->
+<section id="resumo">
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial da Parte 2.</p>
+
+  <ol class="key">
+    <li><b>Três mecanismos:</b> tensão mecânica (principal), estresse metabólico e dano muscular.</li>
+    <li><b>Estresse metabólico é sinalizador</b>, não motor; tem ponto ótimo, não "quanto mais melhor".</li>
+    <li><b>Pump não é crescimento garantido</b> — hipertrofia semelhante entre treinos com e sem foco em pump.</li>
+    <li><b>BFR</b> usa carga leve com oclusão; útil em reabilitação, não substitui tensão alta.</li>
+    <li><b>Mecanotransdução:</b> tensão vira sinal químico via integrinas/FAK, cálcio, ácido fosfatídico e IGF-1.</li>
+    <li><b>mTOR</b> é o regulador central: abre a porta, mas o ambiente decide.</li>
+    <li><b>Síntese proteica:</b> transcrição (núcleo) → mRNA → tradução (ribossomo) → actina e miosina.</li>
+    <li><b>Biogênese ribossomal:</b> treinados têm mais ribossomos; é construir a máquina, não só ativá-la.</li>
+    <li><b>Turnover:</b> hipertrofia = síntese &gt; degradação ao longo do tempo; janela anabólica é ampla (~24h).</li>
+    <li><b>Atrofia é difícil</b> em quem treina e se alimenta bem.</li>
+  </ol>
+
+  <div class="nav-next">
+    <a href="bioquimica-1-fundamentos.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 1 &middot; Fundamentos</span></a>
+    <a href="bioquimica-3-bioenergetica.html"><span class="lbl">Próximo da série</span><span class="ttl">3 &middot; Bioenergética e Vias &rarr;</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Bioquímica do Exercício &middot; Parte 2 de 5</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
+
+</body>
+</html>

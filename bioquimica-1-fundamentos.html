@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bioquímica do Exercício 1: Fundamentos | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Bioquímica do Exercício 1: Fundamentos | MG COACH">
+    <meta property="og:description" content="Parte 1 da série de Bioquímica do Exercício (CBMF): o treino como estressor, as 5 adaptações, a estrutura do músculo, a mecânica da contração, os tipos de fibra, o recrutamento de unidades motoras (Henneman) e o papel real do dano muscular.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-1-fundamentos.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bioquímica do Exercício 1: Fundamentos | MG COACH">
+    <meta name="twitter:description" content="Treino como estressor, adaptações, estrutura muscular, contração, fibras, recrutamento e dano muscular.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">← Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#estressor">O treino como estressor</a>
+    <a href="#adaptacoes">As 5 adaptações</a>
+    <a href="#estrutura">Estrutura do músculo</a>
+    <a href="#contracao">A contração</a>
+    <a href="#fibras">Tipos de fibra</a>
+    <a href="#recrutamento">Recrutamento</a>
+    <a href="#dano">Dano muscular</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Bioquímica do Exercício · CBMF</div>
+  <div class="serie-bar">
+    <span class="atual">1 · Fundamentos</span>
+    <a href="bioquimica-2-hipertrofia.html">2 · Hipertrofia</a>
+    <a href="bioquimica-3-bioenergetica.html">3 · Bioenergética</a>
+    <a href="bioquimica-4-fadiga.html">4 · Fadiga</a>
+    <a href="bioquimica-5-adaptacoes.html">5 · Adaptações</a>
+  </div>
+  <h1>Fundamentos: do estímulo à <span class="em">fibra</span></h1>
+  <p class="lede">A base de toda a bioquímica do treino: por que o treino é um <b>estressor</b>, quais adaptações ele gera, como o músculo é montado por dentro, como ele se contrai, os tipos de fibra e por que <b>aproximar-se da falha</b> recruta tudo. Conteúdo do curso CBMF, organizado e didático.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="estressor">
+  <span class="sec-num">01 — O TREINO COMO ESTRESSOR</span>
+  <h2>Estímulo, estresse e <span class="accent">adaptação</span></h2>
+  <p class="sec-sub">Toda a lógica do treinamento cabe numa frase: estresse gera adaptação.</p>
+
+  <p>O treinamento de força é um <em class="term">agente estressor</em> para o organismo. Esse estresse tira o corpo do equilíbrio — e o corpo responde se adaptando, para tolerar melhor o mesmo estímulo no futuro. Essas adaptações são o que chamamos de melhora de performance e hipertrofia.</p>
+
+  <div class="def">
+    <div class="word">Treinamento de força</div>
+    <p>A prática de exercícios em que a musculatura se movimenta (ou tenta se movimentar) contra uma força oposta — gerada por pesos livres, máquinas ou o próprio corpo. O essencial é a <strong>oposição de força</strong> que obriga o músculo a trabalhar.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">A lógica-mãe</span>
+    <p>Treino → gera estresse celular → ativa mecanismos bioquímicos → promove adaptações estruturais e funcionais → resulta em mais desempenho e crescimento. Toda esta série de Bioquímica é o detalhamento dessa única frase.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="adaptacoes">
+  <span class="sec-num">02 — AS 5 ADAPTAÇÕES</span>
+  <h2>Como o corpo <span class="accent">responde</span> ao treino</h2>
+  <p class="sec-sub">As adaptações acontecem em cinco níveis, todos interligados.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Adaptação</th><th>O que muda</th><th>Quando</th></tr></thead>
+      <tbody>
+        <tr><td>Morfológicas</td><td>Estrutura das fibras: aumento da área de secção transversal (hipertrofia), mais miofibrilas e proteínas contráteis (actina/miosina)</td><td><span class="pill b">Crônico</span></td></tr>
+        <tr><td>Neurais</td><td>Melhor comunicação nervo-músculo: mais recrutamento de unidades motoras, melhor coordenação, menos coativação de antagonistas</td><td><span class="pill a">Primeiras semanas</span></td></tr>
+        <tr><td>Cardiovasculares</td><td>Melhor capilarização e eficiência circulatória; melhor retorno venoso a longo prazo</td><td><span class="pill b">Progressivo</span></td></tr>
+        <tr><td>Metabólicas</td><td>↑ ATP, fosfocreatina e glicogênio; ↑ atividade das enzimas glicolíticas e oxidativas</td><td><span class="pill b">Progressivo</span></td></tr>
+        <tr><td>Funcionais</td><td>Mais força, resistência e potência; recuperação mais rápida; mais resiliência articular</td><td><span class="pill b">Crônico</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Tudo começa em nível celular. O estímulo gera microlesões e sinalizações bioquímicas que ativam: aumento do número de ribossomos (mais capacidade de síntese proteica), síntese de proteínas contráteis (crescimento das miofibrilas), biogênese mitocondrial e mais atividade enzimática. A soma disso, repetida ao longo do tempo, é a hipertrofia.</p>
+
+  <div class="callout ok">
+    <span class="tag">As adaptações neurais vêm primeiro</span>
+    <p>Nas primeiras semanas de treino, a maior parte do ganho de força é <strong>neural</strong> (o sistema nervoso aprende a recrutar e coordenar melhor), antes da hipertrofia aparecer. Isso explica por que iniciantes ficam fortes rápido sem mudar muito de tamanho — tema que aprofundamos no estudo <em>Força e Hipertrofia</em>.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="estrutura">
+  <span class="sec-num">03 — ESTRUTURA DO MÚSCULO</span>
+  <h2>Do músculo ao <span class="accent">sarcômero</span></h2>
+  <p class="sec-sub">Estruturas dentro de estruturas — a contração acontece na menor delas.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Estrutura</th><th>O que é</th><th>Função</th></tr></thead>
+      <tbody>
+        <tr><td>Músculo</td><td>Conjunto de fascículos</td><td>Gera movimento (ligado ao osso pelo tendão)</td></tr>
+        <tr><td>Fascículo</td><td>Conjunto de fibras musculares</td><td>Organiza e agrupa as fibras</td></tr>
+        <tr><td>Fibra muscular</td><td>A célula muscular (pode ter vários cm)</td><td>Onde ocorrem contração e síntese proteica</td></tr>
+        <tr><td>Miofibrila</td><td>Cadeias longas dentro da fibra</td><td>Contém os sarcômeros</td></tr>
+        <tr><td>Sarcômero</td><td>Unidade funcional da contração</td><td>Onde actina e miosina interagem</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Componentes-chave da fibra</h3>
+  <ul class="clean">
+    <li><b>Sarcolema:</b> a membrana que envolve a fibra.</li>
+    <li><b>Mionúcleos:</b> núcleos da fibra; fazem a transcrição do DNA em mRNA (início da síntese proteica). <b>Mais treino → mais mionúcleos → mais capacidade de hipertrofia.</b></li>
+    <li><b>Ribossomos:</b> fazem a tradução — unem aminoácidos e produzem as proteínas musculares.</li>
+    <li><b>Retículo sarcoplasmático:</b> armazena o cálcio (Ca²⁺). Sem cálcio, não há contração.</li>
+    <li><b>Glicogênio:</b> a reserva de carboidrato do músculo, principal combustível no treino.</li>
+    <li><b>Proteínas contráteis:</b> actina (fina) e miosina (grossa), que deslizam e encurtam o músculo.</li>
+  </ul>
+
+  <div class="def">
+    <div class="word">Titina — a mola do músculo</div>
+    <p>A maior proteína do corpo humano. Funciona como uma <strong>mola elástica</strong>: mantém o sarcômero organizado, contribui para a tensão passiva (força sem contração) e evita que o músculo "arrebente" em alongamentos extremos — é ela que protege o sarcômero quando você desce fundo num agachamento.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="contracao">
+  <span class="sec-num">04 — A CONTRAÇÃO</span>
+  <h2>A linha do tempo da <span class="accent">contração</span></h2>
+  <p class="sec-sub">Do comando do cérebro ao deslizamento dos filamentos.</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>O cérebro gera o comando</h4><p>O potencial de ação parte do córtex motor e desce até o motoneurônio (neurônio alfa-motor).</p></div>
+    <div class="step"><h4>Chega à junção neuromuscular</h4><p>O sinal alcança a ligação nervo-músculo e promove a liberação de <em class="term">acetilcolina</em> (ACh), que ativa o sarcolema.</p></div>
+    <div class="step"><h4>O sinal se propaga e libera cálcio</h4><p>O impulso percorre a fibra (pelos túbulos T) e faz o retículo sarcoplasmático liberar Ca²⁺ no citoplasma.</p></div>
+    <div class="step"><h4>O cálcio destrava a actina</h4><p>O Ca²⁺ se liga à <em class="term">troponina</em>, que desloca a <em class="term">tropomiosina</em> — expondo os sítios de ligação na actina.</p></div>
+    <div class="step"><h4>Pontes cruzadas → contração</h4><p>A miosina se liga à actina, executa o golpe de força (puxa), solta e recarrega com ATP. Os filamentos deslizam, o sarcômero encurta: contração.</p></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Mnemônico da aula</span>
+    <p style="font-family:var(--mono);font-size:15px"><strong>Sinal → Acetilcolina → Cálcio → Actina + Miosina → Deslizamento → Força.</strong></p>
+    <p style="margin-top:10px">Quanto mais cálcio disponível, maior a força de contração. (O detalhamento molecular completo está no material <em>Contração Muscular: do Nervo ao Filamento</em>.)</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="fibras">
+  <span class="sec-num">05 — TIPOS DE FIBRA</span>
+  <h2>Lentas, rápidas e <span class="accent">intermediárias</span></h2>
+  <p class="sec-sub">A genética define a distribuição; o treino ajusta as características.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Fibra</th><th>Características</th><th>Energia</th><th>Gene / uso</th></tr></thead>
+      <tbody>
+        <tr><td>Tipo I (lenta)</td><td>Pouca força, contração lenta, muito resistente à fadiga</td><td>Oxidativa (aeróbia)</td><td>MYH7 · maratona, caminhada, reps altas</td></tr>
+        <tr><td>Tipo IIa (intermediária)</td><td>Boa força e velocidade, fadiga moderada</td><td>Aeróbia + anaeróbia</td><td>MYH2 · musculação, CrossFit, sprints curtos</td></tr>
+        <tr><td>Tipo IIx (rápida)</td><td>Muita força e potência, fadiga rápida, "gastona"</td><td>Anaeróbia (glicólise)</td><td>MYH1 · força máxima, powerlifting</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="clean">
+    <li><b>Tipo IIx são marcadoras de sedentarismo:</b> gastam muito ATP e são pouco eficientes; predominam em quem está destreinado.</li>
+    <li><b>Tipo IIb só existem em roedores</b> (gene MYH4) — não existem em humanos.</li>
+    <li><b>O treino converte IIx → IIa:</b> o músculo fica mais eficiente, econômico e tolerante a volume. As IIa têm mais força e menos fadiga que as IIx, e são muito responsivas à hipertrofia.</li>
+  </ul>
+
+  <div class="callout ok">
+    <span class="tag">Ideia central</span>
+    <p>Treinar força é, em essência, uma <strong>otimização energética</strong> do músculo: ele aprende a gerar força com menor custo metabólico. A distribuição de fibras é genética, mas o treino desloca as características na direção mais eficiente.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="recrutamento">
+  <span class="sec-num">06 — RECRUTAMENTO DE UNIDADES MOTORAS</span>
+  <h2>O princípio de <span class="accent">Henneman</span></h2>
+  <p class="sec-sub">Talvez o conceito mais importante para entender carga, falha e hipertrofia.</p>
+
+  <div class="def">
+    <div class="word">Unidade motora</div>
+    <p>Um neurônio alfa-motor + todas as fibras musculares que ele inerva. Muitas fibras por neurônio = mais força, menos precisão (quadríceps, glúteo). Poucas fibras por neurônio = mais precisão (músculos dos olhos e dedos).</p>
+  </div>
+
+  <p>Pelo <em class="term">Princípio do Tamanho de Henneman</em>, o corpo recruta as fibras em ordem crescente de força, economizando energia:</p>
+
+  <ul class="clean">
+    <li><b>Movimentos leves</b> → só Tipo I (baixo limiar, ~12–20 RM).</li>
+    <li><b>Movimentos moderados</b> → Tipo I + Tipo IIa (alto limiar, ~6–10 RM).</li>
+    <li><b>Movimentos muito intensos</b> → todas, incluindo Tipo IIx (altíssimo limiar, ~1–5 RM).</li>
+  </ul>
+
+  <p>As Tipo IIx são como um <strong>"turbo"</strong>: só entram quando as outras já não dão conta da demanda. O corpo só as recruta se a tarefa exigir muito esforço.</p>
+
+  <div class="callout">
+    <span class="tag">A aplicação que muda tudo</span>
+    <p>Há dois caminhos para recrutar todas as fibras:</p>
+    <ul class="clean" style="margin-top:10px">
+      <li><b>Carga pesada (≈80% 1RM):</b> recruta todas as fibras <b>desde a primeira repetição</b>, mesmo sem ir à falha. Maior tensão por rep, menos tempo sob tensão necessário.</li>
+      <li><b>Carga leve até perto da falha:</b> conforme a fadiga aumenta, o corpo "chama reforços" — Tipo I → IIa → IIx se acumulam. Por isso cargas leves <b>também</b> hipertrofiam, SE houver esforço suficiente.</li>
+    </ul>
+    <p style="margin-top:10px">Conclusão da aula: <strong>a falha não é imprescindível, mas a aproximação da falha é</strong> — especialmente com cargas leves. Com 1 a 4 repetições de reserva já se obtém hipertrofia completa. (Isso fundamenta o material <em>Volume de Treino</em>.)</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="dano">
+  <span class="sec-num">07 — DANO MUSCULAR</span>
+  <h2>O papel <span class="accent">real</span> do dano muscular</h2>
+  <p class="sec-sub">Um dos mitos mais persistentes da musculação — corrigido pela bioquímica.</p>
+
+  <p>O dano muscular é um conjunto de alterações estruturais causadas por estiramento excessivo dos sarcômeros, contrações excêntricas intensas, alto volume ou treino não familiar. Em excesso, o sarcômero "desemparelha" — prejudicando o acoplamento excitação-contração, a eficiência do cálcio e a geração de força (a fraqueza pós-treino).</p>
+
+  <div class="callout warn">
+    <span class="tag">Mais dor NÃO é mais crescimento</span>
+    <p>Durante anos se acreditou que "quanto mais DOMS (dor tardia), mais você cresceu". Isso caiu por terra. O corpo tem <strong>capacidade limitada de síntese proteica diária</strong>, que precisa se dividir entre <strong>reparar o dano</strong> e <strong>criar novas proteínas contráteis</strong> (hipertrofia). Dano alto demais → a maior parte da síntese vai para o reparo → sobra menos para crescer. <strong>Mais dor ≠ mais resultado.</strong></p>
+  </div>
+
+  <h3>As células satélites (por que o dano tem um lado bom)</h3>
+  <p>Quando há microlesão, o sistema imune (macrófagos, neutrófilos) libera sinais que ativam as <em class="term">células satélites</em> — uma reserva de células-tronco musculares. Elas proliferam, fundem-se à fibra danificada e <strong>doam seus núcleos</strong>. Como cada núcleo sustenta um "território" de citoplasma, mais núcleos = maior capacidade de síntese proteica e maior potencial de crescimento permanente (a <em class="term">mio-nuclear accretion</em>).</p>
+
+  <div class="callout ok">
+    <span class="tag">Conclusões práticas</span>
+    <ul class="clean" style="margin-top:10px">
+      <li><b>Hipertrofia não depende de dano</b>, e sim de tensão mecânica + progressão de carga.</li>
+      <li><b>Iniciantes geram muito dano</b> (técnica e controle ruins) → as primeiras semanas são mais adaptativas que hipertróficas.</li>
+      <li><b>Trocar de treino toda hora é erro:</b> o sistema nervoso não se adapta, a técnica não solidifica e o dano aumenta sem necessidade. <strong>Consistência vence variedade aleatória.</strong></li>
+      <li><b>Para força máxima</b> (powerlifting), evita-se DOMS severo, pois ele derruba o desempenho nas próximas sessões.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- resumo -->
+<section id="resumo">
+  <span class="sec-num">08 — PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial desta primeira parte.</p>
+
+  <ol class="key">
+    <li><b>O treino é um estressor:</b> estresse → adaptação → performance e hipertrofia.</li>
+    <li><b>Cinco adaptações:</b> morfológicas, neurais, cardiovasculares, metabólicas e funcionais — as neurais vêm primeiro.</li>
+    <li><b>Organização:</b> músculo → fascículo → fibra → miofibrila → sarcômero (a unidade da contração).</li>
+    <li><b>Mais treino → mais mionúcleos → mais capacidade de hipertrofia.</b></li>
+    <li><b>Contração:</b> Sinal → Acetilcolina → Cálcio → Actina+Miosina → Deslizamento → Força.</li>
+    <li><b>Fibras:</b> I (lenta, resistente), IIa (intermediária), IIx (rápida, potente); o treino converte IIx → IIa.</li>
+    <li><b>Henneman:</b> o corpo recruta da fibra mais fraca para a mais forte, economizando energia.</li>
+    <li><b>Carga pesada</b> recruta tudo desde o início; <b>carga leve</b> recruta tudo só perto da falha.</li>
+    <li><b>A aproximação da falha</b> (1–4 reps de reserva) é o que importa, não a falha em si.</li>
+    <li><b>Dano muscular não é o motor da hipertrofia</b> (tensão + progressão são); mais dor ≠ mais resultado.</li>
+  </ol>
+
+  <div class="nav-next">
+    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">← Biblioteca</span></a>
+    <a href="bioquimica-2-hipertrofia.html"><span class="lbl">Próximo da série</span><span class="ttl">2 · Mecanismos da Hipertrofia →</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Bioquímica do Exercício · Parte 1 de 5</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
