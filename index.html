@@ -155,47 +155,105 @@
 </div>
 <script>
 (function(){
-  var CAT_LABELS={biomecanica:"Biomecanica",treino:"Treino",nutricao:"Nutricao",suplementacao:"Suplementacao",fisiologia:"Fisiologia"};
-  var CAT_ORDER=["treino","biomecanica","fisiologia","nutricao","suplementacao"];
+  // Rótulos das categorias temáticas (para avulsos) e ordem de exibição
+  var THEME_LABELS={treino:"Treino",biomecanica:"Biomecânica",nutricao:"Nutrição",suplementacao:"Suplementação",fisiologia:"Fisiologia"};
+  var THEME_ORDER=["treino","biomecanica","fisiologia","nutricao","suplementacao"];
+  // Ordem das séries CBMF na navegação (matérias). Quem não estiver aqui entra ao final, na ordem de aparição.
+  var SERIE_ORDER=["Biomecânica 1 (CBMF)","Biomecânica 2 (CBMF)","Bioquímica do Exercício (CBMF)","Endurance (CBMF)","Fisiologia Endócrina (CBMF)"];
+  var AVULSOS_KEY="__avulsos__";
+  var AVULSOS_LABEL="Estudos avulsos";
+
   var sectionsEl=document.getElementById('sections'),countEl=document.getElementById('count'),metaEl=document.getElementById('meta-count');
   var sideNav=document.getElementById('sideNav'),sideAll=document.getElementById('sideAll'),sideSearch=document.getElementById('sideSearch');
-  var allStudies=[],currentCat='todos',query='';
+  var allStudies=[],groups=[],currentCat='todos',query='';
+
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-  function groupByCat(list){var b={};list.forEach(function(s){(b[s.categoria]=b[s.categoria]||[]).push(s);});return b;}
-  function organize(items){var series={},order=[],avulsos=[];items.forEach(function(s){if(s.serie){if(!series[s.serie]){series[s.serie]=[];order.push(s.serie);}series[s.serie].push(s);}else{avulsos.push(s);}});return {series:series,seriesOrder:order,avulsos:avulsos};}
-  function cardHTML(s){var label=CAT_LABELS[s.categoria]||s.categoria;return '<article class="study"><a href="'+esc(s.arquivo)+'"><div class="meta-top"><span class="cat-tag">'+esc(label)+'</span><span class="date">'+esc(s.data)+'</span></div><h3>'+esc(s.titulo)+'</h3><p>'+esc(s.resumo)+'</p><span class="open">Abrir estudo &rarr;</span></a></article>';}
-  function matchesQuery(s){if(!query)return true;var q=query.toLowerCase();return (s.titulo+' '+s.resumo+' '+(s.serie||'')+' '+(CAT_LABELS[s.categoria]||'')).toLowerCase().indexOf(q)>=0;}
+  function slug(s){return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');}
+
+  // Monta a lista de grupos (matérias CBMF + Estudos avulsos), preservando a ordem do JSON dentro de cada um.
+  function buildGroups(){
+    var serieMap={},serieAppear=[],avulsos=[];
+    allStudies.forEach(function(s){
+      if(s.serie){ if(!serieMap[s.serie]){serieMap[s.serie]=[];serieAppear.push(s.serie);} serieMap[s.serie].push(s); }
+      else { avulsos.push(s); }
+    });
+    // ordenar séries: primeiro as de SERIE_ORDER, depois o resto na ordem de aparição
+    var orderedSeries=[];
+    SERIE_ORDER.forEach(function(n){ if(serieMap[n])orderedSeries.push(n); });
+    serieAppear.forEach(function(n){ if(orderedSeries.indexOf(n)<0)orderedSeries.push(n); });
+
+    var g=[];
+    orderedSeries.forEach(function(n){ g.push({key:slug(n),label:n,isSerie:true,items:serieMap[n]}); });
+    if(avulsos.length){ g.push({key:AVULSOS_KEY,label:AVULSOS_LABEL,isSerie:false,items:avulsos}); }
+    return g;
+  }
+
+  function cardHTML(s){
+    var label=THEME_LABELS[s.categoria]||s.categoria;
+    return '<article class="study"><a href="'+esc(s.arquivo)+'">'+
+      '<div class="meta-top"><span class="cat-tag">'+esc(label)+'</span><span class="date">'+esc(s.data)+'</span></div>'+
+      '<h3>'+esc(s.titulo)+'</h3><p>'+esc(s.resumo)+'</p><span class="open">Abrir estudo &rarr;</span>'+
+      '</a></article>';
+  }
+  function matchesQuery(s){
+    if(!query)return true;
+    var q=query.toLowerCase();
+    return (s.titulo+' '+s.resumo+' '+(s.serie||'')+' '+(THEME_LABELS[s.categoria]||'')).toLowerCase().indexOf(q)>=0;
+  }
+  // agrupa avulsos por tema (categoria) preservando THEME_ORDER
+  function groupAvulsosByTheme(items){
+    var byT={},order=[];
+    items.forEach(function(s){ if(!byT[s.categoria]){byT[s.categoria]=[];order.push(s.categoria);} byT[s.categoria].push(s); });
+    var res=[];
+    THEME_ORDER.forEach(function(t){ if(byT[t])res.push({theme:t,items:byT[t]}); });
+    order.forEach(function(t){ if(THEME_ORDER.indexOf(t)<0)res.push({theme:t,items:byT[t]}); });
+    return res;
+  }
+
   function renderMain(){
-    var list=allStudies.filter(function(s){return (currentCat==='todos'||s.categoria===currentCat)&&matchesQuery(s);});
-    countEl.innerHTML='<b>'+list.length+'</b>'+(list.length===1?' material':' materiais')+(currentCat!=='todos'?' &middot; '+(CAT_LABELS[currentCat]||currentCat):'')+(query?' &middot; busca "'+esc(query)+'"':'');
-    if(list.length===0){sectionsEl.innerHTML='<div class="state">Nenhum material encontrado.<br>Tente outro termo ou categoria.</div>';return;}
-    var byCat=groupByCat(list),html='';
-    CAT_ORDER.forEach(function(cat){
-      if(!byCat[cat])return;
-      var org=organize(byCat[cat]);
-      html+='<section class="cat-section" id="sec-'+cat+'"><h2>'+esc(CAT_LABELS[cat]||cat)+'</h2>';
-      org.seriesOrder.forEach(function(serie){
-        var arr=org.series[serie];
-        html+='<div class="serie-heading">'+esc(serie)+' <span class="s-n">'+arr.length+' partes</span></div>';
-        html+='<div class="grid">'+arr.map(cardHTML).join('')+'</div>';
-      });
-      if(org.avulsos.length){html+='<div class="grid" style="margin-top:'+(org.seriesOrder.length?'16px':'0')+'">'+org.avulsos.map(cardHTML).join('')+'</div>';}
+    var visible=groups.map(function(g){
+      return {grp:g,items:g.items.filter(function(s){return (currentCat==='todos'||g.key===currentCat)&&matchesQuery(s);})};
+    }).filter(function(x){return x.items.length>0;});
+
+    var total=visible.reduce(function(a,x){return a+x.items.length;},0);
+    var curLabel='';
+    if(currentCat!=='todos'){ var cg=groups.filter(function(g){return g.key===currentCat;})[0]; if(cg)curLabel=' &middot; '+esc(cg.label); }
+    countEl.innerHTML='<b>'+total+'</b>'+(total===1?' material':' materiais')+curLabel+(query?' &middot; busca "'+esc(query)+'"':'');
+    if(total===0){sectionsEl.innerHTML='<div class="state">Nenhum material encontrado.<br>Tente outro termo ou categoria.</div>';return;}
+
+    var html='';
+    visible.forEach(function(x){
+      var g=x.grp;
+      html+='<section class="cat-section" id="sec-'+g.key+'"><h2>'+esc(g.label)+'</h2>';
+      if(g.isSerie){
+        // série CBMF: mostra como bloco único, em ordem (partes)
+        html+='<div class="serie-heading">'+esc(g.label)+' <span class="s-n">'+x.items.length+' '+(x.items.length===1?'parte':'partes')+'</span></div>';
+        html+='<div class="grid">'+x.items.map(cardHTML).join('')+'</div>';
+      } else {
+        // avulsos: subdivide por tema
+        groupAvulsosByTheme(x.items).forEach(function(sub){
+          html+='<div class="serie-heading" style="--dot:1">'+esc(THEME_LABELS[sub.theme]||sub.theme)+' <span class="s-n">'+sub.items.length+'</span></div>';
+          html+='<div class="grid">'+sub.items.map(cardHTML).join('')+'</div>';
+        });
+      }
       html+='</section>';
     });
     sectionsEl.innerHTML=html;
   }
+
   function renderSidebar(){
-    var byCat=groupByCat(allStudies),html='';
-    CAT_ORDER.forEach(function(cat){
-      if(!byCat[cat])return;
-      var org=organize(byCat[cat]),n=byCat[cat].length;
-      html+='<div class="cat-group"><button class="cat-head" data-cat="'+cat+'"><span class="arrow">&#9660;</span>'+esc(CAT_LABELS[cat]||cat)+'<span class="cat-n">'+n+'</span></button><div class="cat-items">';
-      org.seriesOrder.forEach(function(serie){
-        html+='<div class="serie-block"><div class="serie-label">'+esc(serie)+'</div>';
-        html+=org.series[serie].map(function(s){return '<a class="side-link" href="'+esc(s.arquivo)+'">'+esc(s.titulo)+'</a>';}).join('');
-        html+='</div>';
-      });
-      org.avulsos.forEach(function(s){html+='<a class="side-link" href="'+esc(s.arquivo)+'">'+esc(s.titulo)+'</a>';});
+    var html='';
+    groups.forEach(function(g){
+      html+='<div class="cat-group"><button class="cat-head" data-cat="'+g.key+'"><span class="arrow">&#9660;</span>'+esc(g.label)+'<span class="cat-n">'+g.items.length+'</span></button><div class="cat-items">';
+      if(g.isSerie){
+        html+=g.items.map(function(s){return '<a class="side-link" href="'+esc(s.arquivo)+'">'+esc(s.titulo)+'</a>';}).join('');
+      } else {
+        groupAvulsosByTheme(g.items).forEach(function(sub){
+          html+='<div class="serie-block"><div class="serie-label">'+esc(THEME_LABELS[sub.theme]||sub.theme)+'</div>';
+          html+=sub.items.map(function(s){return '<a class="side-link" href="'+esc(s.arquivo)+'">'+esc(s.titulo)+'</a>';}).join('');
+          html+='</div>';
+        });
+      }
       html+='</div></div>';
     });
     sideNav.innerHTML=html;
@@ -210,17 +268,20 @@
     });
     sideNav.querySelectorAll('.side-link').forEach(function(a){a.addEventListener('click',closeMobile);});
   }
+
   function setCat(cat){currentCat=cat;sideAll.classList.toggle('active',cat==='todos');renderMain();}
   sideAll.addEventListener('click',function(){setCat('todos');window.scrollTo({top:0,behavior:'smooth'});closeMobile();});
   sideSearch.addEventListener('input',function(){query=this.value.trim();if(query){currentCat='todos';sideAll.classList.add('active');}renderMain();});
+
   var menuBtn=document.getElementById('menuBtn'),scrim=document.getElementById('scrim');
   function closeMobile(){document.body.classList.remove('nav-open');}
   menuBtn.addEventListener('click',function(){document.body.classList.toggle('nav-open');});
   scrim.addEventListener('click',closeMobile);
+
   fetch('estudos.json?v='+Date.now())
     .then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json();})
-    .then(function(data){allStudies=Array.isArray(data)?data:[];metaEl.textContent=allStudies.length+(allStudies.length===1?' material':' materiais');renderSidebar();renderMain();})
-    .catch(function(err){metaEl.textContent='\u2014';sectionsEl.innerHTML='<div class="state">Nao foi possivel carregar a lista de estudos.<br>Isso e normal se voce abriu o arquivo direto do computador.<br>No <b>GitHub Pages</b> funcionara normalmente.</div>';console.error(err);});
+    .then(function(data){allStudies=Array.isArray(data)?data:[];groups=buildGroups();metaEl.textContent=allStudies.length+(allStudies.length===1?' material':' materiais');renderSidebar();renderMain();})
+    .catch(function(err){metaEl.textContent='\u2014';sectionsEl.innerHTML='<div class="state">Não foi possível carregar a lista de estudos.<br>Isso é normal se você abriu o arquivo direto do computador.<br>No <b>GitHub Pages</b> funcionará normalmente.</div>';console.error(err);});
 })();
 </script>
 <script>

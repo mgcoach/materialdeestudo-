@@ -1,5 +1,77 @@
 [
   {
+    "titulo": "Biomecânica 1: Planos e Cinemática",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 1: os planos e eixos do corpo, a cinemática (linear e angular), a artrocinemática, a cinética e as leis de Newton, e a definição de torque.",
+    "arquivo": "biomecanica1-1-planos-cinematica.html",
+    "serie": "Biomecânica 1 (CBMF)"
+  },
+  {
+    "titulo": "Biomecânica 1: Torque, Vetores e Alavancas",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 2: o que é torque e por que o meio do movimento é o mais difícil, vetores e decomposição, as três classes de alavanca e o momento de inércia.",
+    "arquivo": "biomecanica1-2-torque-alavancas.html",
+    "serie": "Biomecânica 1 (CBMF)"
+  },
+  {
+    "titulo": "Biomecânica 1: Cadeia Cinética e Contração",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 3: cadeia cinética aberta e fechada (e por que fixação distal é o que importa), agonistas/sinergistas, tipos de contração e a fisiologia da contração — e por que a excêntrica é mais forte.",
+    "arquivo": "biomecanica1-3-cadeia-contracao.html",
+    "serie": "Biomecânica 1 (CBMF)"
+  },
+  {
+    "titulo": "Biomecânica 1: Cargas e Flexibilidade",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 4 (final): os tipos de resistência, as cargas mecânicas (compressão, tração, cisalhamento, torção), a curva tensão-deformação, a relação carga-lesão e flexibilidade/mobilidade/alongamentos.",
+    "arquivo": "biomecanica1-4-cargas-flexibilidade.html",
+    "serie": "Biomecânica 1 (CBMF)"
+  },
+  {
+    "titulo": "Biomecânica 2: Mecânica Aplicada",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 1: força resultante, torque e braço de momento, as curvas de resistência (ascendente, descendente, U invertido), o diagrama de corpo livre, a vantagem mecânica e o sistema de polias.",
+    "arquivo": "biomecanica2-1-mecanica-aplicada.html",
+    "serie": "Biomecânica 2 (CBMF)"
+  },
+  {
+    "titulo": "Biomecânica 2: Força-Comprimento e Arquitetura",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 2: a curva força-comprimento e o comprimento ótimo, a PCSA, a arquitetura fusiforme vs peniforme, a excursão funcional e a insuficiência ativa e passiva.",
+    "arquivo": "biomecanica2-2-forca-comprimento.html",
+    "serie": "Biomecânica 2 (CBMF)"
+  },
+  {
+    "titulo": "Biomecânica 2: Membros Superiores",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 3: as porções do peitoral (supino barra vs halter), os 7 feixes do deltoide e o efeito da pegada, e a biomecânica do braço (bíceps, tríceps, braquial, overhead).",
+    "arquivo": "biomecanica2-3-membros-superiores.html",
+    "serie": "Biomecânica 2 (CBMF)"
+  },
+  {
+    "titulo": "Biomecânica 2: Membros Inferiores",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 4: glúteo máximo e o paradoxo da ativação no agachamento (insuficiência ativa dos isquiotibiais), glúteo médio, adutor magno, posteriores de coxa, quadríceps e panturrilhas.",
+    "arquivo": "biomecanica2-4-membros-inferiores.html",
+    "serie": "Biomecânica 2 (CBMF)"
+  },
+  {
+    "titulo": "Biomecânica 2: Dorsais",
+    "categoria": "biomecanica",
+    "data": "Jun · 2026",
+    "resumo": "Parte 5 (final): a cadeia posterior do tronco — o trapézio (três partes) e o grande dorsal, com os exercícios que recrutam cada região das costas.",
+    "arquivo": "biomecanica2-5-dorsais.html",
+    "serie": "Biomecânica 2 (CBMF)"
+  },
+  {
     "titulo": "Fisiologia Endócrina 1: Fundamentos",
     "categoria": "fisiologia",
     "data": "Jun · 2026",

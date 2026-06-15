@@ -1,9 +1,11 @@
 # Como atualizar o site MG COACH
 
 Site COMPLETO e atualizado. Esta versão traz:
-- NOVA série de Fisiologia Endócrina (4 materiais)
-- NOVA home com barra lateral (sidebar) estilo documentação:
-  navegação por tema, com as séries CBMF agrupadas e busca rápida
+- NOVA série Biomecânica 1 (4 materiais) — fundamentos
+- NOVA série Biomecânica 2 (5 materiais) — mecânica aplicada + anatomia
+- SIDEBAR reorganizada: agora cada MATÉRIA CBMF é uma categoria própria
+  (Biomecânica 1, Biomecânica 2, Bioquímica, Endurance, Fisiologia Endócrina),
+  e os estudos que não são de série ficam em "Estudos avulsos" (por tema)
 - Tema claro/escuro em todas as páginas
 
 ## Passo a passo
@@ -14,15 +16,19 @@ Site COMPLETO e atualizado. Esta versão traz:
 5. "Commit changes", aguarde 2-3 min, teste numa aba anônima.
 
 ## IMPORTANTE
-O `index.html` foi reformulado (agora tem a sidebar). Suba ele junto.
-O `estudos.json` agora tem um campo "serie" nos materiais de série CBMF —
-é o que faz a sidebar agrupar os subtemas. Sempre que eu te entregar um
-novo material de série, o JSON já virá com esse campo.
+- O `index.html` foi reformulado de novo (categorias por matéria). Suba junto.
+- O `estudos.json` usa o campo "serie" para agrupar cada matéria CBMF.
+  Materiais SEM "serie" caem automaticamente em "Estudos avulsos",
+  subdivididos pelo campo "categoria" (treino, biomecanica, etc).
 
-## Novos arquivos desta atualização
-- index.html (reformulado com sidebar)
-- fisiologia-1-fundamentos.html
-- fisiologia-2-hipofise-glandulas.html
-- fisiologia-3-pancreas-gonadas.html
-- fisiologia-4-regulacao-metabolismo.html
-- estudos.json (agora com 28 estudos + campo "serie")
+## Novos arquivos desta atualização (9 materiais de Biomecânica)
+- biomecanica1-1-planos-cinematica.html
+- biomecanica1-2-torque-alavancas.html
+- biomecanica1-3-cadeia-contracao.html
+- biomecanica1-4-cargas-flexibilidade.html
+- biomecanica2-1-mecanica-aplicada.html
+- biomecanica2-2-forca-comprimento.html
+- biomecanica2-3-membros-superiores.html
+- biomecanica2-4-membros-inferiores.html
+- biomecanica2-5-dorsais.html
+- index.html (reformulado) + estudos.json (37 estudos)
