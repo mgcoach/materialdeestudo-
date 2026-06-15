@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fisiologia Endócrina 4: Regulação e Metabolismo | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Fisiologia Endócrina 4: Regulação e Metabolismo | MG COACH">
+    <meta property="og:description" content="Parte 4 (final) da série de Fisiologia Endócrina (CBMF): os feedbacks positivo e negativo, o sistema renina-angiotensina-aldosterona, o impacto metabólico de cada hormônio (testosterona, cortisol, GH, IGF-1, insulina, tireoidianos) e a integração neuroendócrina.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/fisiologia-4-regulacao-metabolismo.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fisiologia Endócrina 4: Regulação e Metabolismo | MG COACH">
+    <meta name="twitter:description" content="Feedback hormonal, SRAA, impacto metabólico dos hormônios e integração neuroendócrina.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#feedback">Feedback hormonal</a>
+    <a href="#exogeno">Hormônios exógenos</a>
+    <a href="#sraa">Sistema RAA</a>
+    <a href="#anabolicos">Hormônios anabólicos</a>
+    <a href="#catabolicos">Catabólicos e metabólicos</a>
+    <a href="#neuroendocrino">Integração neuroendócrina</a>
+    <a href="#nutrientes">Nutrientes e hormônios</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Fisiologia Endócrina &middot; CBMF</div>
+  <div class="serie-bar">
+    <a href="fisiologia-1-fundamentos.html">1 &middot; Fundamentos</a>
+    <a href="fisiologia-2-hipofise-glandulas.html">2 &middot; Hipófise e Glândulas</a>
+    <a href="fisiologia-3-pancreas-gonadas.html">3 &middot; Pâncreas e Gônadas</a>
+    <span class="atual">4 &middot; Regulação e Metabolismo</span>
+  </div>
+  <h1>Regulação e impacto <span class="em">metabólico</span></h1>
+  <p class="lede">Como o corpo controla seus próprios hormônios: os <b>feedbacks</b> positivo e negativo, o sistema <b>renina-angiotensina-aldosterona</b>, o que cada hormônio faz no metabolismo (testosterona, cortisol, GH, IGF-1, insulina, tireoidianos) e a integração <b>neuroendócrina</b> que fecha a série.</p>
+</div>
+
+<main>
+
+<!-- 1 -->
+<section id="feedback">
+  <span class="sec-num">01 &mdash; FEEDBACK HORMONAL</span>
+  <h2>O corpo se <span class="accent">autorregula</span></h2>
+  <p class="sec-sub">O principal mecanismo de controle de todo o sistema endócrino.</p>
+
+  <div class="grid2">
+    <div class="mini">
+      <h4>Feedback negativo</h4>
+      <p>O hormônio final inibe o hipotálamo e/ou a hipófise, reduzindo a própria secreção. É o <b>principal</b> mecanismo de controle e mantém a homeostase.</p>
+    </div>
+    <div class="mini">
+      <h4>Feedback positivo</h4>
+      <p>O hormônio final estimula ainda mais sua produção. É <b>raro</b> e temporário. Ex.: estrogênio alto no meio do ciclo → pico de LH → ovulação.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Exemplos nos eixos</span>
+    <p><strong>HHO:</strong> estrogênios e progesterona dão feedback negativo, exceto no meio do ciclo. Os <strong>anticoncepcionais</strong> mantêm níveis hormonais constantes, simulam feedback negativo contínuo e impedem o pico de LH → sem ovulação. <strong>HHT:</strong> a testosterona elevada inibe GnRH, LH e FSH; a inibina B inibe seletivamente o FSH.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="exogeno">
+  <span class="sec-num">02 &mdash; HORMÔNIOS EXÓGENOS</span>
+  <h2>Por que o eixo <span class="accent">desliga</span></h2>
+  <p class="sec-sub">A consequência fisiológica de hormônios vindos de fora.</p>
+
+  <p>Quando um hormônio é introduzido de fora (exógeno), o corpo interpreta como excesso e responde com feedback negativo. No caso da testosterona exógena: ↑ testosterona plasmática → ↓ GnRH → ↓ LH → ↓ FSH.</p>
+
+  <div class="callout warn">
+    <span class="tag">Resultado fisiológico</span>
+    <p>A supressão do eixo leva à redução da produção endógena e possível <strong>atrofia testicular</strong>. Como princípio geral da fisiologia: <strong>hormônios exógenos sempre suprimem o eixo</strong>, e manipulações hormonais (e dietéticas) geram respostas compensatórias. Esta é uma descrição do mecanismo de feedback — não um guia de uso.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="sraa">
+  <span class="sec-num">03 &mdash; SISTEMA RENINA-ANGIOTENSINA-ALDOSTERONA</span>
+  <h2>O controle da <span class="accent">pressão</span> e do sódio</h2>
+  <p class="sec-sub">E uma aplicação prática direta para a fase de preparação.</p>
+
+  <p>O SRAA controla pressão arterial, volemia e equilíbrio hidroeletrolítico. É ativado quando caem a pressão, o volume sanguíneo ou o sódio nos túbulos renais:</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>Renina</h4><p>Os rins liberam renina, que converte angiotensinogênio em <strong>Angiotensina I</strong>.</p></div>
+    <div class="step"><h4>ECA</h4><p>A enzima conversora (ECA) converte Angiotensina I em <strong>Angiotensina II</strong>.</p></div>
+    <div class="step"><h4>Angiotensina II</h4><p>Causa vasoconstrição, estimula a hipófise posterior (↑ ADH) e o córtex adrenal (↑ aldosterona), aumentando a reabsorção de sódio e água → ↑ pressão.</p></div>
+    <div class="step"><h4>Aldosterona</h4><p>Nos rins: ↑ reabsorção de sódio e água, ↑ excreção de potássio → ↑ volume plasmático e pressão.</p></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Aplicação prática (fisiculturismo)</span>
+    <p>A aldosterona é sensível à <strong>queda de sódio</strong>. Cortar sódio de forma agressiva ativa o SRAA (↑ renina → ↑ angiotensina II → ↑ aldosterona), gerando um resultado <strong>paradoxal</strong>: mais retenção de sódio e de líquido. Por isso, em preparação estética, não é fisiologicamente ideal cortar sódio de forma abrupta.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="anabolicos">
+  <span class="sec-num">04 &mdash; HORMÔNIOS ANABÓLICOS</span>
+  <h2>Os que <span class="accent">constroem</span></h2>
+  <p class="sec-sub">Testosterona, insulina, IGF-1 e o papel do GH.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Hormônio</th><th>Efeitos metabólicos principais</th></tr></thead>
+      <tbody>
+        <tr><td>Testosterona</td><td>↑ transporte de glicose (GLUT-4), ↓ degradação proteica, ↑ síntese proteica, ↑ lipólise; em doses suprafisiológicas pode ↑ TMB</td></tr>
+        <tr><td>Insulina</td><td>O <b>mais anabólico</b> no contexto metabólico: ↑ captação de glicose, ↑ glicogênese e glicólise, forte efeito anticatabólico (↓ degradação proteica), ↑ lipogênese e ↓ lipólise</td></tr>
+        <tr><td>IGF-1</td><td>↑ síntese proteica, ↓ degradação, ↑ captação de glicose muscular, crescimento muscular e ósseo (efeito tumoral potencial se excessivo)</td></tr>
+        <tr><td>GH</td><td>Pequeno efeito direto na síntese proteica; ↑ lipólise, ↑ crescimento ósseo longitudinal; atua majoritariamente <b>via IGF-1</b>; ↑ glicemia (diabetogênico em altas doses)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">A insulina é o anabólico-mor</span>
+    <p>No contexto puramente metabólico, a <strong>insulina é o hormônio mais anabólico do organismo</strong> — seu efeito anticatabólico (reduzir a degradação proteica) é ainda mais relevante que o de aumentar a síntese. É o que conecta nutrição (carboidrato, aminoácidos) ao ambiente anabólico.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="catabolicos">
+  <span class="sec-num">05 &mdash; CATABÓLICOS E METABÓLICOS</span>
+  <h2>Cortisol, tireoidianos e <span class="accent">catecolaminas</span></h2>
+  <p class="sec-sub">Mobilizam energia — úteis no agudo, problemáticos no excesso.</p>
+
+  <ul class="clean">
+    <li><b>Cortisol:</b> ↑ glicemia e gliconeogênese, degrada proteína (via ubiquitina-proteassoma → catabolismo muscular), ↑ lipólise, forte anti-inflamatório. Crônico/elevado: ↓ densidade óssea (retira cálcio do osso) e resistência à insulina.</li>
+    <li><b>Tireoidianos (T3/T4):</b> ↑ glicogenólise, gliconeogênese e lipólise; ↑ biogênese mitocondrial; ↑ TMB e termogênese (bomba Na⁺/K⁺-ATPase). Muito explorados no fisiculturismo.</li>
+    <li><b>Glucagon:</b> ↑ glicogenólise hepática, gliconeogênese, lipólise e cetogênese — fundamental no jejum e na hipoglicemia.</li>
+    <li><b>Catecolaminas (adrenalina/noradrenalina):</b> ↑ glicogenólise, lipólise, oxidação de gorduras e mobilização de TAGs; ↑ fluxo sanguíneo e termogênese. Relevantes no treino intenso, estresse e uso de estimulantes.</li>
+  </ul>
+
+  <h3>Estradiol e progesterona (metabolismo)</h3>
+  <ul class="clean">
+    <li><b>Estradiol:</b> modula a distribuição de gordura (menos visceral, mais subcutânea), favorece o fenótipo de adipócito marrom/bege (↑ termogênese), ↑ sensibilidade à insulina, melhora a função mitocondrial e protege contra estresse oxidativo; ↑ saciedade e tem efeito neuroprotetor.</li>
+    <li><b>Progesterona:</b> equilíbrio hormonal feminino; pode contribuir para ganhos de força em mulheres por efeitos indiretos no SNC.</li>
+    <li><b>Aldosterona:</b> equilíbrio de sódio/potássio/água; quando elevada, aspecto mais "inchado" e ↑ pressão.</li>
+  </ul>
+</section>
+
+<!-- 6 -->
+<section id="neuroendocrino">
+  <span class="sec-num">06 &mdash; INTEGRAÇÃO NEUROENDÓCRINA</span>
+  <h2>Nervoso e endócrino <span class="accent">juntos</span></h2>
+  <p class="sec-sub">O sistema endócrino nunca atua sozinho.</p>
+
+  <div class="def">
+    <div class="word">Sistema neuroendócrino</div>
+    <p>A integração funcional entre o sistema nervoso e o endócrino, permitindo que estímulos nervosos resultem em liberação hormonal. O <strong>hipotálamo</strong> é o principal elo: converte sinais nervosos (emocionais, ambientais, metabólicos) em sinais hormonais e controla a hipófise.</p>
+  </div>
+
+  <p>O sistema nervoso autônomo também atua sobre glândulas: o neurônio pré-ganglionar libera acetilcolina → estimula o pós-ganglionar → libera neurotransmissores (noradrenalina ou acetilcolina) que modulam a célula endócrina. A célula endócrina, portanto, pode receber como estímulo inicial um <strong>neurotransmissor</strong>, e não um hormônio.</p>
+
+  <ul class="clean">
+    <li><b>Medula adrenal:</b> caso especial — inervação simpática direta, sem neurônio pós-ganglionar clássico (resposta rápida de adrenalina/noradrenalina).</li>
+    <li><b>ADH e ocitocina:</b> liberados diretamente por neurônios (o neurônio é também célula secretora).</li>
+    <li><b>Sequência clássica:</b> Hipotálamo → Hipófise → Glândula periférica → Tecido-alvo, permitindo amplificação e controle fino.</li>
+  </ul>
+</section>
+
+<!-- 7 -->
+<section id="nutrientes">
+  <span class="sec-num">07 &mdash; NUTRIENTES E HORMÔNIOS</span>
+  <h2>A comida também <span class="accent">regula</span></h2>
+  <p class="sec-sub">A liberação hormonal não depende só de nervos e outros hormônios.</p>
+
+  <ul class="clean">
+    <li><b>Glicose:</b> alta → ↑ insulina; baixa → ↑ glucagon.</li>
+    <li><b>Aminoácidos:</b> estimulam a liberação de insulina e GH.</li>
+    <li><b>Ácidos graxos:</b> influenciam a sensibilidade à insulina e modulam leptina e adipocinas.</li>
+  </ul>
+
+  <div class="callout ok">
+    <span class="tag">Conclusão prática da série</span>
+    <p>Isso conecta diretamente <strong>alimentação → metabolismo → sistema endócrino</strong>, e explica, na prática da musculação e da saúde metabólica: a influência do <strong>estresse</strong> nos hormônios, a importância da <strong>alimentação</strong> no controle hormonal e a relação entre <strong>sono, SNC e eixo hormonal</strong>. Entender esses mecanismos permite manipular treino, dieta e recuperação de forma muito mais estratégica.</p>
+  </div>
+</section>
+
+<!-- resumo -->
+<section id="resumo">
+  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O fechamento da série de Fisiologia Endócrina.</p>
+
+  <ol class="key">
+    <li><b>Feedback negativo</b> é o principal controle (mantém homeostase); o <b>positivo</b> é raro (ex.: pico de LH).</li>
+    <li><b>Anticoncepcionais:</b> simulam feedback negativo contínuo e impedem a ovulação.</li>
+    <li><b>Hormônios exógenos sempre suprimem o eixo</b> (ex.: testosterona exógena → atrofia testicular).</li>
+    <li><b>SRAA:</b> renina → angiotensina I → (ECA) → angiotensina II → aldosterona; controla pressão e sódio.</li>
+    <li><b>Cortar sódio agressivamente</b> ativa o SRAA e causa mais retenção (paradoxo na preparação).</li>
+    <li><b>Insulina</b> é o hormônio mais anabólico no contexto metabólico (forte efeito anticatabólico).</li>
+    <li><b>GH atua via IGF-1</b>; testosterona age direto e via IGF-1/SNC.</li>
+    <li><b>Cortisol crônico</b> é catabólico; <b>tireoidianos</b> elevam TMB e termogênese.</li>
+    <li><b>Neuroendócrino:</b> hipotálamo converte sinal nervoso em hormonal; medula adrenal tem inervação direta.</li>
+    <li><b>Nutrientes regulam hormônios:</b> glicose↔insulina/glucagon; aminoácidos→insulina/GH.</li>
+  </ol>
+
+  <div class="nav-next">
+    <a href="fisiologia-3-pancreas-gonadas.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 3 &middot; Pâncreas e Gônadas</span></a>
+    <a href="index.html"><span class="lbl">Fim da série</span><span class="ttl">Voltar à Biblioteca &rarr;</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Fisiologia Endócrina &middot; Parte 4 de 4</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Fisiologia Endócrina), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
+
+</body>
+</html>

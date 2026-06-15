@@ -3,163 +3,224 @@
 <head>
 <meta charset="UTF-8">
 <script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biblioteca de Estudos | MG COACH</title>
     <!-- OG START -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Biblioteca de Estudos | MG COACH">
-    <meta property="og:description" content="Materiais aprofundados de ciência do exercício: biomecânica, treino, nutrição, suplementação e fisiologia. Por MG COACH.">
+    <meta property="og:description" content="Materiais aprofundados de ciencia do exercicio: biomecanica, treino, nutricao, suplementacao e fisiologia. Por MG COACH.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Biblioteca de Estudos | MG COACH">
-    <meta name="twitter:description" content="Materiais aprofundados de ciência do exercício: biomecânica, treino, nutrição, suplementação e fisiologia. Por MG COACH.">
+    <meta name="twitter:description" content="Materiais aprofundados de ciencia do exercicio: biomecanica, treino, nutricao, suplementacao e fisiologia. Por MG COACH.">
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
-<meta name="description" content="Materiais de estudo em ciência do exercício, biomecânica, nutrição e treino — por MG COACH.">
+<meta name="description" content="Materiais de estudo em ciencia do exercicio, biomecanica, nutricao e treino por MG COACH.">
 <style>
   :root{
     --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
     --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
     --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;--line:rgba(255,255,255,.08);
     --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+    --sidebar-w:300px;
   }
-
-  :root{--topbar-bg:rgba(10,10,10,.82)}
+  :root{--topbar-bg:rgba(10,10,10,.82);--sidebar-bg:#0c0c0c}
   [data-theme="light"]{
     --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
     --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
     --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
-    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
     --line:rgba(0,0,0,.10);
-    --topbar-bg:rgba(247,245,241,.85);
+    --topbar-bg:rgba(247,245,241,.85);--sidebar-bg:#efece6;
   }
   .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
   .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
   .theme-toggle svg{width:14px;height:14px;display:block}
-
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   html{background:var(--bg)}
-  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
-  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .topbar-inner{max-width:960px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  header.topbar{position:sticky;top:0;z-index:60;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{padding:14px 22px;display:flex;align-items:center;gap:12px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
   .star{width:22px;height:22px;flex:none}
   .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .menu-btn{display:none;background:transparent;border:1px solid var(--line);border-radius:9px;color:var(--text-dim);cursor:pointer;padding:7px 10px;font-size:16px;line-height:1}
   .brand-meta{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--text-faint);text-align:right;line-height:1.4}
   .brand-meta b{color:var(--orange);font-weight:600}
-  .hero{max-width:960px;margin:0 auto;padding:72px 22px 30px;position:relative}
-  .hero .big-star{position:absolute;right:0;top:40px;width:200px;height:200px;opacity:.05;pointer-events:none}
-  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
-  .hero h1{font-size:clamp(38px,8vw,68px);line-height:1;font-weight:800;letter-spacing:-2px;margin-bottom:22px}
-  .hero h1 .lib{display:block;color:var(--orange);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:.62em;letter-spacing:-1px;margin-top:6px}
-  .hero .lede{font-size:19px;color:var(--text-dim);max-width:600px}
+  .layout{display:flex;align-items:flex-start;max-width:1280px;margin:0 auto}
+  aside.sidebar{width:var(--sidebar-w);flex:none;position:sticky;top:51px;height:calc(100vh - 51px);overflow-y:auto;border-right:1px solid var(--line);background:var(--sidebar-bg);padding:26px 16px 60px}
+  .side-search{width:100%;background:var(--bg-card);border:1px solid var(--line);border-radius:10px;color:var(--text);font-size:13.5px;padding:10px 12px;margin-bottom:8px;font-family:inherit}
+  .side-search::placeholder{color:var(--text-faint)}
+  .side-search:focus{outline:none;border-color:var(--orange-line)}
+  .side-all{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim);padding:8px 10px;border-radius:8px;cursor:pointer;margin-bottom:10px;border:1px solid transparent}
+  .side-all:hover{color:var(--orange)}
+  .side-all.active{color:var(--orange);background:var(--orange-dim)}
+  .cat-group{margin-bottom:6px}
+  .cat-head{display:flex;align-items:center;gap:8px;width:100%;background:transparent;border:none;cursor:pointer;color:var(--text);font-family:var(--mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;padding:10px 10px;border-radius:8px;text-align:left;transition:.15s}
+  .cat-head:hover{color:var(--orange);background:var(--orange-dim)}
+  .cat-head .arrow{transition:transform .2s;font-size:10px;color:var(--text-faint)}
+  .cat-head.collapsed .arrow{transform:rotate(-90deg)}
+  .cat-head .cat-n{margin-left:auto;font-size:10px;color:var(--text-faint);background:var(--bg-card-2);padding:1px 7px;border-radius:20px;letter-spacing:0}
+  .cat-items{overflow:hidden}
+  .cat-head.collapsed + .cat-items{display:none}
+  .serie-block{margin:2px 0 6px}
+  .serie-label{font-family:var(--mono);font-size:10px;letter-spacing:.5px;color:var(--orange-soft);text-transform:uppercase;padding:7px 10px 4px 14px;font-weight:600;opacity:.9}
+  .side-link{display:block;font-size:13.5px;color:var(--text-dim);padding:7px 10px 7px 14px;border-radius:8px;border-left:2px solid transparent;line-height:1.35;transition:.13s}
+  .side-link:hover{color:var(--orange);background:var(--orange-dim);border-left-color:var(--orange-line)}
+  .serie-block .side-link{padding-left:22px}
+  .side-foot{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;color:var(--text-faint);line-height:1.7;letter-spacing:.5px}
+  .content{flex:1;min-width:0;padding:0 30px}
+  .hero{padding:54px 0 24px;position:relative}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .hero h1{font-size:clamp(34px,6vw,60px);line-height:1;font-weight:800;letter-spacing:-2px;margin-bottom:20px}
+  .hero h1 .lib{display:block;color:var(--orange);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:.6em;letter-spacing:-1px;margin-top:6px}
+  .hero .lede{font-size:18px;color:var(--text-dim);max-width:600px}
   .hero .lede b{color:var(--text);font-weight:600}
-  .filters{max-width:960px;margin:0 auto;padding:30px 22px 10px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
-  .filters .flabel{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-faint);margin-right:6px}
-  .chip{font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--text-dim);border:1px solid var(--line);padding:7px 14px;border-radius:999px;transition:.18s;background:transparent}
-  .chip:hover{color:var(--orange);border-color:var(--orange-line)}
-  .chip.active{color:#0a0a0a;background:var(--orange);border-color:var(--orange);font-weight:700}
-  main{max-width:960px;margin:0 auto;padding:24px 22px 40px}
-  .count{font-family:var(--mono);font-size:12px;color:var(--text-faint);margin-bottom:20px;letter-spacing:1px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media(max-width:680px){.grid{grid-template-columns:1fr}}
-  .study{display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--line);border-radius:16px;transition:.2s;position:relative;overflow:hidden}
+  .count{font-family:var(--mono);font-size:12px;color:var(--text-faint);margin:26px 0 18px;letter-spacing:1px}
+  .count b{color:var(--orange)}
+  .cat-section{margin-bottom:14px;scroll-margin-top:70px}
+  .cat-section h2{font-size:13px;font-family:var(--mono);letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin:30px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .serie-heading{font-size:14px;color:var(--text);font-weight:700;margin:18px 0 12px;display:flex;align-items:center;gap:10px}
+  .serie-heading::before{content:"";width:14px;height:14px;flex:none;background:var(--orange);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+  .serie-heading .s-n{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);font-weight:400;letter-spacing:.5px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:980px){.grid{grid-template-columns:1fr}}
+  .study{display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;transition:.2s;position:relative;overflow:hidden}
   .study::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange);transform:scaleY(0);transform-origin:top;transition:.25s;z-index:1}
   .study:hover{border-color:var(--orange-line);transform:translateY(-3px)}
   .study:hover::before{transform:scaleY(1)}
-  .study > a{display:flex;flex-direction:column;height:100%;padding:24px}
-  .study .meta-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-  .cat-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);background:var(--orange-dim);padding:5px 10px;border-radius:6px;font-weight:600}
-  .study .date{font-family:var(--mono);font-size:11.5px;color:var(--text-faint)}
-  .study h3{font-size:21px;font-weight:800;letter-spacing:-.4px;line-height:1.2;margin-bottom:10px}
-  .study p{font-size:14.5px;color:var(--text-dim);margin-bottom:20px;flex:1}
-  .study .open{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--orange);font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:gap .2s}
+  .study > a{display:flex;flex-direction:column;height:100%;padding:22px}
+  .study .meta-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:8px}
+  .cat-tag{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);background:var(--orange-dim);padding:5px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .study .date{font-family:var(--mono);font-size:11px;color:var(--text-faint);white-space:nowrap}
+  .study h3{font-size:19px;font-weight:800;letter-spacing:-.4px;line-height:1.22;margin-bottom:9px}
+  .study p{font-size:14px;color:var(--text-dim);margin-bottom:18px;flex:1}
+  .study .open{font-family:var(--mono);font-size:11.5px;letter-spacing:1px;color:var(--orange);font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:gap .2s}
   .study:hover .open{gap:12px}
-  .state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-faint);font-family:var(--mono);font-size:13px;line-height:1.8}
+  .state{text-align:center;padding:60px 20px;color:var(--text-faint);font-family:var(--mono);font-size:13px;line-height:1.8}
   .state b{color:var(--orange)}
-  footer{max-width:960px;margin:0 auto;padding:50px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer{padding:50px 0 80px;border-top:1px solid var(--line);text-align:center;margin-top:30px}
   footer .star{width:30px;height:30px;margin-bottom:14px}
   footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
   footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+  .scrim{display:none}
+  @media(max-width:860px){
+    .menu-btn{display:block}
+    aside.sidebar{position:fixed;left:0;top:0;height:100vh;z-index:100;transform:translateX(-100%);transition:transform .25s ease;box-shadow:0 0 40px rgba(0,0,0,.4);padding-top:22px}
+    body.nav-open aside.sidebar{transform:translateX(0)}
+    .scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+    body.nav-open .scrim{opacity:1;pointer-events:auto}
+    .content{padding:0 20px}
+    .grid{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
 <header class="topbar">
   <div class="topbar-inner">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">&#9776;</button>
     <a href="index.html" class="brand">
       <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
       <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
     </a>
-    <div class="brand-meta">Biblioteca de estudos<br><b id="meta-count">—</b></div>
+    <div class="brand-meta">Biblioteca de estudos<br><b id="meta-count">&mdash;</b></div>
     <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
   </div>
 </header>
-<div class="hero">
-  <svg class="big-star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
-  <div class="eyebrow">Ciência do exercício · MG COACH</div>
-  <h1>Biblioteca<span class="lib">de estudos</span></h1>
-  <p class="lede">Materiais aprofundados sobre <b>biomecânica, treino e nutrição</b> — construídos para estudar de verdade, sem ser raso. Novos tópicos adicionados continuamente.</p>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <input type="text" class="side-search" id="sideSearch" placeholder="Buscar material...">
+    <div class="side-all active" id="sideAll" data-cat="todos">&#9733; Todos os materiais</div>
+    <nav id="sideNav"></nav>
+    <div class="side-foot">MG COACH<br>Ciencia do exercicio</div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="content">
+    <div class="hero">
+      <div class="eyebrow">Ciencia do exercicio &middot; MG COACH</div>
+      <h1>Biblioteca<span class="lib">de estudos</span></h1>
+      <p class="lede">Materiais aprofundados sobre <b>biomecanica, treino, nutricao e fisiologia</b> &mdash; construidos para estudar de verdade, sem ser raso. Navegue por tema na barra lateral.</p>
+    </div>
+    <div class="count" id="count"></div>
+    <div id="sections"><div class="state">Carregando materiais...</div></div>
+    <footer>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <p>Biblioteca de estudos &middot; Ciencia do exercicio</p>
+      <div class="tag-row">MG COACH</div>
+    </footer>
+  </main>
 </div>
-<div class="filters" id="filters">
-  <span class="flabel">Filtrar</span>
-  <button class="chip active" data-cat="todos">Todos</button>
-  <button class="chip" data-cat="biomecanica">Biomecânica</button>
-  <button class="chip" data-cat="treino">Treino</button>
-  <button class="chip" data-cat="nutricao">Nutrição</button>
-  <button class="chip" data-cat="suplementacao">Suplementação</button>
-  <button class="chip" data-cat="fisiologia">Fisiologia</button>
-</div>
-<main>
-  <div class="count" id="count"></div>
-  <div class="grid" id="grid"><div class="state">Carregando materiais…</div></div>
-</main>
-<footer>
-  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
-  <p>Biblioteca de estudos · Ciência do exercício</p>
-  <div class="tag-row">MG COACH</div>
-</footer>
 <script>
 (function(){
-  var CAT_LABELS={biomecanica:"Biomecânica",treino:"Treino",nutricao:"Nutrição",suplementacao:"Suplementação",fisiologia:"Fisiologia"};
-  var grid=document.getElementById('grid'),countEl=document.getElementById('count'),metaEl=document.getElementById('meta-count');
-  var chips=document.querySelectorAll('.chip'),allStudies=[],currentCat='todos';
+  var CAT_LABELS={biomecanica:"Biomecanica",treino:"Treino",nutricao:"Nutricao",suplementacao:"Suplementacao",fisiologia:"Fisiologia"};
+  var CAT_ORDER=["treino","biomecanica","fisiologia","nutricao","suplementacao"];
+  var sectionsEl=document.getElementById('sections'),countEl=document.getElementById('count'),metaEl=document.getElementById('meta-count');
+  var sideNav=document.getElementById('sideNav'),sideAll=document.getElementById('sideAll'),sideSearch=document.getElementById('sideSearch');
+  var allStudies=[],currentCat='todos',query='';
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-  function render(){
-    var list=allStudies.filter(function(s){return currentCat==='todos'||s.categoria===currentCat;});
-    if(list.length===0){grid.innerHTML='<div class="state">Nenhum material nesta categoria ainda.</div>';}
-    else{
-      grid.innerHTML=list.map(function(s){
-        var label=CAT_LABELS[s.categoria]||s.categoria;
-        return '<article class="study" data-cat="'+esc(s.categoria)+'">'+
-          '<a href="'+esc(s.arquivo)+'">'+
-            '<div class="meta-top"><span class="cat-tag">'+esc(label)+'</span><span class="date">'+esc(s.data)+'</span></div>'+
-            '<h3>'+esc(s.titulo)+'</h3><p>'+esc(s.resumo)+'</p><span class="open">Abrir estudo →</span>'+
-          '</a></article>';
-      }).join('');
-    }
-    countEl.textContent=list.length+(list.length===1?' material':' materiais');
+  function groupByCat(list){var b={};list.forEach(function(s){(b[s.categoria]=b[s.categoria]||[]).push(s);});return b;}
+  function organize(items){var series={},order=[],avulsos=[];items.forEach(function(s){if(s.serie){if(!series[s.serie]){series[s.serie]=[];order.push(s.serie);}series[s.serie].push(s);}else{avulsos.push(s);}});return {series:series,seriesOrder:order,avulsos:avulsos};}
+  function cardHTML(s){var label=CAT_LABELS[s.categoria]||s.categoria;return '<article class="study"><a href="'+esc(s.arquivo)+'"><div class="meta-top"><span class="cat-tag">'+esc(label)+'</span><span class="date">'+esc(s.data)+'</span></div><h3>'+esc(s.titulo)+'</h3><p>'+esc(s.resumo)+'</p><span class="open">Abrir estudo &rarr;</span></a></article>';}
+  function matchesQuery(s){if(!query)return true;var q=query.toLowerCase();return (s.titulo+' '+s.resumo+' '+(s.serie||'')+' '+(CAT_LABELS[s.categoria]||'')).toLowerCase().indexOf(q)>=0;}
+  function renderMain(){
+    var list=allStudies.filter(function(s){return (currentCat==='todos'||s.categoria===currentCat)&&matchesQuery(s);});
+    countEl.innerHTML='<b>'+list.length+'</b>'+(list.length===1?' material':' materiais')+(currentCat!=='todos'?' &middot; '+(CAT_LABELS[currentCat]||currentCat):'')+(query?' &middot; busca "'+esc(query)+'"':'');
+    if(list.length===0){sectionsEl.innerHTML='<div class="state">Nenhum material encontrado.<br>Tente outro termo ou categoria.</div>';return;}
+    var byCat=groupByCat(list),html='';
+    CAT_ORDER.forEach(function(cat){
+      if(!byCat[cat])return;
+      var org=organize(byCat[cat]);
+      html+='<section class="cat-section" id="sec-'+cat+'"><h2>'+esc(CAT_LABELS[cat]||cat)+'</h2>';
+      org.seriesOrder.forEach(function(serie){
+        var arr=org.series[serie];
+        html+='<div class="serie-heading">'+esc(serie)+' <span class="s-n">'+arr.length+' partes</span></div>';
+        html+='<div class="grid">'+arr.map(cardHTML).join('')+'</div>';
+      });
+      if(org.avulsos.length){html+='<div class="grid" style="margin-top:'+(org.seriesOrder.length?'16px':'0')+'">'+org.avulsos.map(cardHTML).join('')+'</div>';}
+      html+='</section>';
+    });
+    sectionsEl.innerHTML=html;
   }
-  chips.forEach(function(chip){chip.addEventListener('click',function(){
-    chips.forEach(function(c){c.classList.remove('active');});chip.classList.add('active');
-    currentCat=chip.getAttribute('data-cat');render();
-  });});
+  function renderSidebar(){
+    var byCat=groupByCat(allStudies),html='';
+    CAT_ORDER.forEach(function(cat){
+      if(!byCat[cat])return;
+      var org=organize(byCat[cat]),n=byCat[cat].length;
+      html+='<div class="cat-group"><button class="cat-head" data-cat="'+cat+'"><span class="arrow">&#9660;</span>'+esc(CAT_LABELS[cat]||cat)+'<span class="cat-n">'+n+'</span></button><div class="cat-items">';
+      org.seriesOrder.forEach(function(serie){
+        html+='<div class="serie-block"><div class="serie-label">'+esc(serie)+'</div>';
+        html+=org.series[serie].map(function(s){return '<a class="side-link" href="'+esc(s.arquivo)+'">'+esc(s.titulo)+'</a>';}).join('');
+        html+='</div>';
+      });
+      org.avulsos.forEach(function(s){html+='<a class="side-link" href="'+esc(s.arquivo)+'">'+esc(s.titulo)+'</a>';});
+      html+='</div></div>';
+    });
+    sideNav.innerHTML=html;
+    sideNav.querySelectorAll('.cat-head').forEach(function(h){
+      h.addEventListener('click',function(e){
+        if(e.target.classList.contains('arrow')){h.classList.toggle('collapsed');return;}
+        setCat(h.getAttribute('data-cat'));
+        var sec=document.getElementById('sec-'+h.getAttribute('data-cat'));
+        if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
+        closeMobile();
+      });
+    });
+    sideNav.querySelectorAll('.side-link').forEach(function(a){a.addEventListener('click',closeMobile);});
+  }
+  function setCat(cat){currentCat=cat;sideAll.classList.toggle('active',cat==='todos');renderMain();}
+  sideAll.addEventListener('click',function(){setCat('todos');window.scrollTo({top:0,behavior:'smooth'});closeMobile();});
+  sideSearch.addEventListener('input',function(){query=this.value.trim();if(query){currentCat='todos';sideAll.classList.add('active');}renderMain();});
+  var menuBtn=document.getElementById('menuBtn'),scrim=document.getElementById('scrim');
+  function closeMobile(){document.body.classList.remove('nav-open');}
+  menuBtn.addEventListener('click',function(){document.body.classList.toggle('nav-open');});
+  scrim.addEventListener('click',closeMobile);
   fetch('estudos.json?v='+Date.now())
     .then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json();})
-    .then(function(data){
-      allStudies=Array.isArray(data)?data:[];
-      metaEl.textContent=allStudies.length+(allStudies.length===1?' material':' materiais');
-      render();
-    })
-    .catch(function(err){
-      metaEl.textContent='—';
-      grid.innerHTML='<div class="state">Não foi possível carregar a lista de estudos.<br>Isso é normal se você abriu o arquivo direto do computador.<br>No <b>GitHub Pages</b> funcionará normalmente.</div>';
-      console.error(err);
-    });
+    .then(function(data){allStudies=Array.isArray(data)?data:[];metaEl.textContent=allStudies.length+(allStudies.length===1?' material':' materiais');renderSidebar();renderMain();})
+    .catch(function(err){metaEl.textContent='\u2014';sectionsEl.innerHTML='<div class="state">Nao foi possivel carregar a lista de estudos.<br>Isso e normal se voce abriu o arquivo direto do computador.<br>No <b>GitHub Pages</b> funcionara normalmente.</div>';console.error(err);});
 })();
 </script>
 <script>
@@ -175,19 +236,16 @@
       ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
       : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
   }
-  var saved=null;
-  try{saved=localStorage.getItem(KEY);}catch(e){}
+  var saved=null;try{saved=localStorage.getItem(KEY);}catch(e){}
   apply(saved||"dark");
   document.addEventListener("click",function(e){
     var btn=e.target.closest&&e.target.closest(".theme-toggle");
     if(!btn)return;
     var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
     var next=cur==="light"?"dark":"light";
-    apply(next);
-    try{localStorage.setItem(KEY,next);}catch(e){}
+    apply(next);try{localStorage.setItem(KEY,next);}catch(e){}
   });
 })();
 </script>
-
 </body>
 </html>

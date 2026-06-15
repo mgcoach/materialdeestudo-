@@ -1,66 +1,107 @@
 [
   {
+    "titulo": "Fisiologia Endócrina 1: Fundamentos",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 1: o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e receptores, e a síntese dos hormônios peptídicos e esteroides.",
+    "arquivo": "fisiologia-1-fundamentos.html",
+    "serie": "Fisiologia Endócrina (CBMF)"
+  },
+  {
+    "titulo": "Fisiologia Endócrina 2: Hipófise e Glândulas Periféricas",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 2: o hipotálamo como centro de comando, a adeno e a neuro-hipófise e seus hormônios (GH, prolactina, ACTH, TSH, gonadotrofinas, ADH, ocitocina), a tireoide e as glândulas suprarrenais.",
+    "arquivo": "fisiologia-2-hipofise-glandulas.html",
+    "serie": "Fisiologia Endócrina (CBMF)"
+  },
+  {
+    "titulo": "Fisiologia Endócrina 3: Pâncreas, Gônadas e Testosterona",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 3: o pâncreas endócrino (glucagon, somatostatina), os eixos hipotálamo-hipófise-gônadas, os hormônios sexuais, e a fisiologia detalhada da testosterona (receptor androgênico, SHBG, células satélites, IGF-1).",
+    "arquivo": "fisiologia-3-pancreas-gonadas.html",
+    "serie": "Fisiologia Endócrina (CBMF)"
+  },
+  {
+    "titulo": "Fisiologia Endócrina 4: Regulação e Metabolismo",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Parte 4 (final): feedbacks positivo e negativo, sistema renina-angiotensina-aldosterona, o impacto metabólico de cada hormônio (testosterona, cortisol, GH, IGF-1, insulina, tireoidianos) e a integração neuroendócrina.",
+    "arquivo": "fisiologia-4-regulacao-metabolismo.html",
+    "serie": "Fisiologia Endócrina (CBMF)"
+  },
+  {
     "titulo": "Endurance 1: Fisiologia Aeróbia",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 1: o que é treinamento aeróbio, as etapas do metabolismo (Krebs, cadeia de elétrons), as vias energéticas, as adaptações cardiovasculares e musculares, AMPK e PGC-1alfa, e por que o glicogênio decide a performance.",
-    "arquivo": "endurance-1-fisiologia.html"
+    "arquivo": "endurance-1-fisiologia.html",
+    "serie": "Endurance (CBMF)"
   },
   {
     "titulo": "Endurance 2: Avaliação, Métodos e Periodização",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 2: avaliação do VO2máx (Astrand, Cooper, teste de 3 km), as zonas Z1–Z5, os métodos (HIIT, SIT, RST, Fartlek, contínuos), carga e densidade, e a periodização passo a passo até a prova.",
-    "arquivo": "endurance-2-avaliacao.html"
+    "arquivo": "endurance-2-avaliacao.html",
+    "serie": "Endurance (CBMF)"
   },
   {
     "titulo": "Endurance 3: Emagrecimento e Treino Concorrente",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 3: o gasto energético total (TMB, NEAT, efeito térmico), o déficit calórico, como o aeróbio molda o metabolismo, e o treino concorrente — a interferência AMPK x mTOR é aguda e o aeróbio não impede a hipertrofia se bem organizado.",
-    "arquivo": "endurance-3-emagrecimento.html"
+    "arquivo": "endurance-3-emagrecimento.html",
+    "serie": "Endurance (CBMF)"
   },
   {
     "titulo": "Endurance 4: Corrida e Nutrição",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 4 (final): biomecânica e fases da corrida, por que não existe pisada 'certa', o teste de Cooper/TAF, e as estratégias nutricionais (train low/high, carb-loading, doses de carboidrato e train the gut).",
-    "arquivo": "endurance-4-corrida-nutricao.html"
+    "arquivo": "endurance-4-corrida-nutricao.html",
+    "serie": "Endurance (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 1: Fundamentos",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 1: o treino como estressor, as 5 adaptações, a estrutura do músculo, a mecânica da contração, os tipos de fibra, o recrutamento de unidades motoras (Henneman) e o papel real do dano muscular.",
-    "arquivo": "bioquimica-1-fundamentos.html"
+    "arquivo": "bioquimica-1-fundamentos.html",
+    "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 2: Mecanismos da Hipertrofia",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 2: os três mecanismos da hipertrofia (tensão mecânica, estresse metabólico, dano), pump e BFR, mecanotransdução e a via mTOR, síntese proteica, biogênese ribossomal e turnover proteico.",
-    "arquivo": "bioquimica-2-hipertrofia.html"
+    "arquivo": "bioquimica-2-hipertrofia.html",
+    "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 3: Bioenergética e Vias",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 3: o ATP como moeda energética, a gordura como substrato, a via glicolítica anaeróbia, o metabolismo oxidativo, a via fosfagênica (fosfocreatina e creatina) e a integração de todas as vias no treino.",
-    "arquivo": "bioquimica-3-bioenergetica.html"
+    "arquivo": "bioquimica-3-bioenergetica.html",
+    "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 4: Fadiga",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 4: fadiga de curto prazo (fosfato inorgânico, H+, cálcio), periférica vs central, fadiga de médio prazo (glicogênio) e de longo prazo (SNC e dano). Por que o lactato não é o vilão.",
-    "arquivo": "bioquimica-4-fadiga.html"
+    "arquivo": "bioquimica-4-fadiga.html",
+    "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 5: Adaptações Moleculares",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
     "resumo": "Parte 5 (final): adaptações agudas energéticas e hemodinâmicas, AMPK e GLUT-4, captação de glicose sem insulina, duplo pico de glicogênio, vasodilatação por óxido nítrico e por que o exercício isolado emagrece pouco.",
-    "arquivo": "bioquimica-5-adaptacoes.html"
+    "arquivo": "bioquimica-5-adaptacoes.html",
+    "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Contração Muscular: do Nervo ao Filamento",
