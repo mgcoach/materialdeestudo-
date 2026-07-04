@@ -1,5 +1,51 @@
 [
   {
+    "titulo": "Agachamento Sumô vs Terra Sumô",
+    "categoria": "treino",
+    "data": "Jun · 2026",
+    "resumo": "Parecem primos pela postura aberta, mas são famílias diferentes: agachamento (joelho-dominante, quadríceps e adutores) vs terra (quadril-dominante, cadeia posterior). Biomecânica, músculos, curvas de resistência e o que priorizar para hipertrofia.",
+    "arquivo": "agachamento-sumo-vs-terra-sumo.html"
+  },
+  {
+    "titulo": "Treino de Posteriores de Coxa",
+    "categoria": "treino",
+    "data": "Jun · 2026",
+    "resumo": "Como treinar os isquiotibiais de verdade: as duas funções (extensão de quadril e flexão de joelho), o problema da biarticularidade, hipertrofia regional e por músculo, angulações, agonistas/sinergistas, volume e montagem do treino.",
+    "arquivo": "treino-posteriores-coxa.html"
+  },
+  {
+    "titulo": "Sistema Imune, Inflamação e Hipertrofia",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Por que o treino gera inflamação (hipóxia, metabólitos, acidose), como o músculo neutraliza isso, miocinas vs adipocinas, balanço redox e por que a mulher recupera melhor.",
+    "arquivo": "livro-fem-1-imune-inflamacao.html",
+    "serie": "Biomecânica e Dieta Feminina (Livro)"
+  },
+  {
+    "titulo": "Genética, Vias Moleculares e Adaptação",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "A genética como gerente (não dona) da hipertrofia, expressão gênica, vias anabólicas (mTOR, PI3K, p70S6K) e catabólicas (miostatina, FoxO), fibras tipo II e adaptação dose-dependente.",
+    "arquivo": "livro-fem-2-genetica-vias.html",
+    "serie": "Biomecânica e Dieta Feminina (Livro)"
+  },
+  {
+    "titulo": "Ciclo Menstrual e Periodização Biológica",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "As fases folicular (anabólica) e lútea, o papel do estrogênio e da progesterona, e como ajustar treino e dieta em cada fase — com a ressalva de que a evidência é controversa.",
+    "arquivo": "livro-fem-3-ciclo-menstrual.html",
+    "serie": "Biomecânica e Dieta Feminina (Livro)"
+  },
+  {
+    "titulo": "Comportamento Alimentar, Ansiedade e Doces",
+    "categoria": "fisiologia",
+    "data": "Jun · 2026",
+    "resumo": "Por que comer é multifatorial, o mito do picolinato de cromo, ansiedade/cafeína/sono e o desejo por doce, estratégias para encaixar o doce, mindfulness, RED-S e por que o julgamento sabota a adesão.",
+    "arquivo": "livro-fem-4-comportamento-alimentar.html",
+    "serie": "Biomecânica e Dieta Feminina (Livro)"
+  },
+  {
     "titulo": "Elevação Pélvica: Boa Mesmo com a Barra na Articulação?",
     "categoria": "treino",
     "data": "Jun · 2026",
