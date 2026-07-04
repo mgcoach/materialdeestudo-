@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comportamento Alimentar, Ansiedade e Doces | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Comportamento Alimentar, Ansiedade e Doces | MG COACH">
+    <meta property="og:description" content="Anotações de estudo (livro Biomecânica e Dieta Feminina): por que comer é multifatorial, o mito do picolinato de cromo, o papel da ansiedade/cafeína/sono no desejo por doce, estratégias para encaixar o doce, mindfulness, RED-S e por que o julgamento sabota a adesão.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/livro-fem-4-comportamento-alimentar.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Comportamento Alimentar, Ansiedade e Doces | MG COACH">
+    <meta name="twitter:description" content="Comportamento alimentar, ansiedade, cafeína, sono, doces, mindfulness e RED-S.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#multifatorial">Comer é multifatorial</a>
+    <a href="#cromo">O mito do picolinato de cromo</a>
+    <a href="#ansiedade">Ansiedade, cafeína e sono</a>
+    <a href="#doce">O doce não é proibido</a>
+    <a href="#estrategias">Estratégias para o doce</a>
+    <a href="#mastigar">Mastigar devagar e mindfulness</a>
+    <a href="#reds">Perfeccionismo e RED-S</a>
+    <a href="#julgamento">O julgamento como inimigo</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#resumo">Resumo</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Livro Biomecânica e Dieta Feminina &middot; Estudo</div>
+  <h1>Comportamento alimentar, ansiedade e <span class="em">doces</span></h1>
+  <p class="lede">Por que comer vai muito além da nutrição. O <b>mito do picolinato de cromo</b>, como <b>ansiedade, cafeína e sono</b> comandam o desejo por doce, as <b>estratégias</b> para encaixar o doce sem culpa, o poder de mastigar devagar, o alerta da <b>RED-S</b> e por que o <b>julgamento</b> é o maior inimigo da adesão.</p>
+</div>
+
+<main>
+
+<section id="multifatorial">
+  <span class="sec-num">01 &mdash; COMER É MULTIFATORIAL</span>
+  <h2>A comida não é só <span class="accent">comida</span></h2>
+  <p class="sec-sub">O ponto de partida para entender o comportamento alimentar.</p>
+  <p>O hábito alimentar é <strong>multifatorial</strong> — ele se constrói continuamente a partir da relação entre <strong>pensamentos, emoções e o ambiente</strong> em que a pessoa vive. Comer não é um ato puramente racional ou nutricional; ele carrega memória afetiva, emoção e contexto.</p>
+  <div class="callout">
+    <span class="tag">Por que isso importa para o treinador</span>
+    <p>Como o comer tem <strong>profunda relação com a subjetividade psicológica</strong> de cada pessoa, é ingênuo achar que basta "passar a dieta certa". O componente emocional exerce influência direta sobre o ganho de massa e a adesão. Entender a pessoa é parte do trabalho — não um extra.</p>
+  </div>
+</section>
+
+<section id="cromo">
+  <span class="sec-num">02 &mdash; O MITO DO PICOLINATO DE CROMO</span>
+  <h2>O suplemento que <span class="accent">não cumpre</span> a promessa</h2>
+  <p class="sec-sub">Um mito comum desmontado.</p>
+  <p>O <strong>picolinato de cromo</strong> é vendido com a promessa de "reduzir o desejo por doces". O livro é direto: essa promessa <strong>não tem fundamentação científica</strong>. Além disso, o cromo <strong>não melhora a sensibilidade à insulina nem a glicemia</strong>.</p>
+  <div class="callout ok">
+    <span class="tag">O que realmente reduz o desejo por doce</span>
+    <p>Se o objetivo é diminuir a vontade de doce, a conduta certa não é um suplemento — é trabalhar tudo o que interfere na <strong>ansiedade</strong> da pessoa. O desejo por doce está muito mais ligado ao estado emocional do que a uma "falta" que um comprimido resolveria. Por isso a próxima seção (ansiedade) é o verdadeiro centro do problema.</p>
+  </div>
+</section>
+
+<section id="ansiedade">
+  <span class="sec-num">03 &mdash; ANSIEDADE, CAFEÍNA E SONO</span>
+  <h2>O eixo que comanda o <span class="accent">desejo por comida</span></h2>
+  <p class="sec-sub">Mexer aqui resolve mais do que qualquer suplemento.</p>
+  <p>O manejo da ansiedade passa por dois pilares principais segundo o texto: <strong>cafeína</strong> e <strong>sono</strong>.</p>
+  <ul class="clean">
+    <li><b>Cafeína:</b> cerca de <b>150 mg de cafeína</b> (o equivalente a ~2 xícaras de café preto coado) já são suficientes para <b>elevar o nível de ansiedade</b> e prejudicar o sono. Reduzir o consumo diário ajuda a controlar os sintomas.</li>
+    <li><b>Sono:</b> não existe manejo de ansiedade sem buscar a qualidade do sono. A recomendação é dormir <b>ao menos 7 horas por dia</b> e fazer "higiene do sono".</li>
+  </ul>
+  <div class="def">
+    <div class="word">Higiene do sono</div>
+    <p>São hábitos que protegem a qualidade do sono. Exemplos citados: <strong>não ficar assistindo televisão e não usar o celular na cama antes de dormir</strong>. A ideia é preparar o corpo e a mente para desacelerar.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">O dado que assusta (no bom sentido)</span>
+    <p>Dormir <strong>menos de 7 horas por dia aumenta em cerca de 70% as chances de lesão</strong>. Ou seja, sono não é "detalhe de bem-estar" — é fator direto de desempenho e de segurança no treino. Dormir bem é parte do treino, não o oposto dele.</p>
+  </div>
+</section>
+
+<section id="doce">
+  <span class="sec-num">04 &mdash; O DOCE NÃO É PROIBIDO</span>
+  <h2>Equilibrar, não <span class="accent">demonizar</span></h2>
+  <p class="sec-sub">Uma postura alinhada com o "encaixar, não proibir".</p>
+  <p>O livro é claro: <strong>não existe problema algum em incorporar o doce na dieta</strong>. O doce é apenas um alimento de <strong>alta densidade calórica</strong> (muitas calorias em pouca quantidade de comida) — e isso pode ser ajustado equilibrando as outras refeições do dia.</p>
+  <div class="def">
+    <div class="word">Densidade calórica</div>
+    <p>É a quantidade de calorias por grama de alimento. Um alimento de <strong>alta densidade calórica</strong> concentra muitas calorias em pouco peso (ex.: chocolate). Um de <strong>baixa densidade</strong> tem poucas calorias em bastante volume (ex.: morango). Saber disso é o que permite "encaixar" o doce sem estourar o plano.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">A filosofia</span>
+    <p>Em vez de proibir (o que gera ansiedade e compulsão), a proposta é <strong>encaixar o doce de forma inteligente</strong>. Proibir um alimento costuma aumentar o desejo por ele. Dar permissão com estratégia reduz a culpa e melhora a adesão a longo prazo.</p>
+  </div>
+</section>
+
+<section id="estrategias">
+  <span class="sec-num">05 &mdash; ESTRATÉGIAS PARA O DOCE</span>
+  <h2>Como comer doce <span class="accent">com inteligência</span></h2>
+  <p class="sec-sub">Truques práticos de quem entende de fisiologia e paladar.</p>
+  <ul class="clean">
+    <li><b>Doce junto com fruta de baixa caloria:</b> combinar o doce com frutas como morango ou melão (que têm poucas calorias — cerca de 25 kcal por 100 g) ajuda a controlar o total calórico. As fibras da fruta ainda <b>reduzem a absorção</b> dos carboidratos e gorduras do doce.</li>
+    <li><b>Fruta azeda ANTES do doce:</b> comer uma fruta mais azedinha (abacaxi, kiwi, amora, cereja, mirtilo) antes do doce muda a sensibilidade das papilas gustativas. Como elas ficam menos sensíveis ao doce em seguida... (veja a ressalva abaixo).</li>
+    <li><b>Trocar inteligente:</b> o livro dá um exemplo de equivalência calórica — uma pequena porção de leite condensado com bastante morango pode ter as mesmas calorias de um único bombom, mas com mais volume, mais fibra e mais saciedade.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Atenção a um detalhe contraditório</span>
+    <p>O texto descreve a estratégia da fruta azeda de duas formas que, na leitura, parecem se cruzar: comer algo azedo deixa as papilas do doce <strong>menos sensíveis</strong>, e ao mesmo tempo o doce em seguida teria o <strong>prazer amplificado</strong>. Na prática, o efeito que interessa ao controle alimentar é que, com as papilas "saturadas" pelo azedo, <strong>uma quantidade menor de doce já satisfaz</strong>. Vale você confirmar essa parte ao reler — quando tiver o trecho completo, eu ajusto a explicação.</p>
+  </div>
+</section>
+
+<section id="mastigar">
+  <span class="sec-num">06 &mdash; MASTIGAR DEVAGAR E MINDFULNESS</span>
+  <h2>A velocidade de comer <span class="accent">importa</span></h2>
+  <p class="sec-sub">Um ponto que o livro destaca como imprescindível.</p>
+  <p>Mastigar devagar é apontado como algo <strong>imprescindível</strong>. Mulheres mais ansiosas têm <strong>mais dificuldade de focar a atenção</strong> no que estão fazendo no momento — inclusive ao comer. É aí que entra o <em class="term">mindfulness</em>.</p>
+  <div class="def">
+    <div class="word">Mindfulness (atenção plena)</div>
+    <p>É o estado de prestar <strong>atenção plena àquilo que se está fazendo agora</strong>, no presente. Aplicado à comida: perceber o sabor, a textura, mastigar com calma, sem estar no automático ou distraído. Isso ajuda a direcionar as sensações e o prazer para o momento da refeição.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">A dica concreta</span>
+    <p>Aumentar o número de <strong>mastigações por minuto (algo em torno de 40–50)</strong>, reduzindo a velocidade com que se come, ajuda muito nesse "emaranhado" de relações entre alimentação e estado emocional. Comer devagar e com atenção é uma ferramenta contra o comer ansioso.</p>
+  </div>
+</section>
+
+<section id="reds">
+  <span class="sec-num">07 &mdash; PERFECCIONISMO E RED-S</span>
+  <h2>Quando o <span class="accent">excesso de controle</span> vira problema</h2>
+  <p class="sec-sub">Um alerta importante para atletas e alunas dedicadas.</p>
+  <p>Mulheres atletas tendem a ser <strong>perfeccionistas</strong> e a desenvolver tendências obsessivas pelo controle de todas as variáveis que afetam o rendimento. Isso tem um lado bom (atenção ao detalhe costuma ser o diferencial estético), mas também um lado perigoso.</p>
+  <div class="callout warn">
+    <span class="tag">RED-S — Deficiência Energética Relativa ao Esporte</span>
+    <p>Quando o controle vira excesso, pode levar à <strong>baixa disponibilidade energética</strong> (calorias de menos na dieta) e a desequilíbrios <strong>nutricionais, hormonais e psicológicos</strong>, além de prejudicar o próprio desempenho. Esse quadro é chamado de <strong>síndrome RED-S</strong> (sigla em inglês para Deficiência Energética Relativa ao Esporte). É o lembrete de que "comer pouco demais" para buscar estética pode sabotar saúde e resultado ao mesmo tempo.</p>
+  </div>
+</section>
+
+<section id="julgamento">
+  <span class="sec-num">08 &mdash; O JULGAMENTO COMO INIMIGO</span>
+  <h2>O caminho mais curto para o <span class="accent">fracasso</span></h2>
+  <p class="sec-sub">Talvez a lição mais importante para quem orienta pessoas.</p>
+  <p>O livro afirma algo forte: o caminho mais próximo do <strong>fracasso</strong> de qualquer intervenção feita por treinadores ou nutricionistas é o <strong>julgamento das pacientes</strong>. Julgar a aluna pela escolha alimentar, pela dificuldade ou pelo corpo afasta, gera vergonha e quebra a confiança.</p>
+  <div class="callout ok">
+    <span class="tag">A conduta que faz diferença</span>
+    <p>Ao identificar as <strong>características comportamentais</strong> de cada pessoa e adaptar a forma de conduzir, o profissional transforma a relação em parceria. A <strong>forma de conduta do profissional pode ser o diferencial entre o sucesso e o fracasso</strong>. Acolhimento e educação (explicar o "porquê") vencem o julgamento — isso vale tanto para a nutrição quanto para o treino. Conecta diretamente com a sua filosofia de "encaixar, não proibir".</p>
+  </div>
+</section>
+
+<section id="glossario">
+  <span class="sec-num">09 &mdash; GLOSSÁRIO RÁPIDO</span>
+  <h2>Os termos em <span class="accent">português claro</span></h2>
+  <p class="sec-sub">Consulte sempre que precisar.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Termo</th><th>Tradução simples</th></tr></thead>
+      <tbody>
+        <tr><td>Multifatorial</td><td>Que depende de vários fatores ao mesmo tempo</td></tr>
+        <tr><td>Densidade calórica</td><td>Quantidade de calorias por grama de alimento</td></tr>
+        <tr><td>Picolinato de cromo</td><td>Suplemento vendido (sem base) para "cortar" desejo por doce</td></tr>
+        <tr><td>Sensibilidade à insulina</td><td>O quão bem o corpo responde à insulina (quanto maior, melhor)</td></tr>
+        <tr><td>Higiene do sono</td><td>Hábitos que protegem a qualidade do sono</td></tr>
+        <tr><td>Mindfulness</td><td>Atenção plena ao momento presente (inclui o comer)</td></tr>
+        <tr><td>Craving</td><td>Desejo intenso por um alimento (ex.: doces na TPM)</td></tr>
+        <tr><td>Comfort food</td><td>"Comida de conforto" — comer para aliviar emoção</td></tr>
+        <tr><td>RED-S</td><td>Síndrome de deficiência energética relativa ao esporte</td></tr>
+        <tr><td>Disponibilidade energética</td><td>Quanta energia (caloria) sobra para o corpo funcionar bem</td></tr>
+        <tr><td>Papilas gustativas</td><td>As estruturas da língua que detectam sabor</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">10 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial deste tema.</p>
+  <ol class="key">
+    <li><b>Comer é multifatorial:</b> pensamentos, emoções e ambiente — não só nutrição.</li>
+    <li><b>Picolinato de cromo NÃO reduz desejo por doce</b> nem melhora insulina/glicemia (sem base científica).</li>
+    <li>O que reduz o desejo por doce é <b>trabalhar a ansiedade</b>, não um suplemento.</li>
+    <li><b>Cafeína:</b> ~150 mg (2 cafés) já elevam ansiedade e atrapalham o sono.</li>
+    <li><b>Sono ≥ 7h</b> + higiene do sono; dormir menos aumenta ~70% o risco de lesão.</li>
+    <li><b>O doce não é proibido</b> — é alta densidade calórica que se ajusta no resto do dia.</li>
+    <li><b>Estratégias:</b> doce com fruta de baixa caloria (fibra reduz absorção); fruta azeda antes; trocas inteligentes.</li>
+    <li><b>Mastigar devagar</b> (40–50 mastigações/min) e comer com <b>mindfulness</b>.</li>
+    <li><b>RED-S:</b> excesso de controle e calorias de menos prejudicam hormônios, saúde e desempenho.</li>
+    <li><b>O julgamento é o inimigo da adesão</b> — acolher e educar é o diferencial ("encaixar, não proibir").</li>
+  </ol>
+  <div class="nav-next">
+    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&larr; Biblioteca</span></a>
+    <a href="ciclo-de-carboidratos.html"><span class="lbl">Relacionado</span><span class="ttl">Ciclo de Carboidratos &rarr;</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Anotações &middot; Livro Biomecânica e Dieta Feminina</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Anotações de estudo MG COACH, com base na leitura do livro "Biomecânica da Musculação e Dieta para Mulheres". Conteúdo reorganizado e explicado com palavras próprias para fins de estudo pessoal.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>
