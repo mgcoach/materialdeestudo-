@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stiff (Levantamento Terra Pernas Retas) | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Stiff (Levantamento Terra Pernas Retas) | MG COACH">
+    <meta property="og:description" content="Estudo completo do stiff: o hip hinge de pernas retas, a diferença para o RDL, músculos agonistas/sinergistas/antagonistas, movimentos por fase, por que é o rei do alongamento da cadeia posterior, torque, hipertrofia por músculo e execução segura.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/stiff.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stiff (Levantamento Terra Pernas Retas) | MG COACH">
+    <meta name="twitter:description" content="Stiff, levantamento terra pernas retas, isquiotibiais, glúteo, alongamento, cadeia posterior.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#oque">O que é o stiff</a>
+    <a href="#vs-rdl">Stiff vs RDL: a diferença</a>
+    <a href="#musculos">Músculos por papel</a>
+    <a href="#fases">Movimentos por fase</a>
+    <a href="#alongamento">O rei do alongamento</a>
+    <a href="#torque">Torque e curva de resistência</a>
+    <a href="#hipertrofia">Hipertrofia por músculo</a>
+    <a href="#seguranca">Execução e segurança</a>
+    <a href="#aplicacao">Como aplicar</a>
+    <a href="#refs">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Estudo &middot; Biomecânica e Treino</div>
+  <h1>Stiff: terra de <span class="em">pernas retas</span></h1>
+  <p class="lede">O especialista em alongar a cadeia posterior. O que define o stiff, sua <b>diferença para o RDL</b>, os <b>músculos</b> por papel, os <b>movimentos por fase</b>, por que é o rei do <b>estímulo em alongamento</b> dos isquiotibiais, o torque, a hipertrofia de cada músculo e como executar com segurança.</p>
+</div>
+
+<main>
+
+<section id="oque">
+  <span class="sec-num">01 &mdash; O QUE É O STIFF</span>
+  <h2>O hip hinge de <span class="accent">pernas retas</span></h2>
+  <p class="sec-sub">"Stiff-leg" = perna rígida. O nome já diz tudo.</p>
+  <p>O stiff (stiff-leg deadlift, ou levantamento terra de pernas retas) é um <strong>hip hinge</strong> — uma dobradiça de quadril — executado com os <strong>joelhos praticamente estendidos (retos)</strong> e fixos durante todo o movimento. A carga geralmente <strong>parte do chão</strong> e retorna ao chão a cada repetição, permitindo uma <strong>grande amplitude</strong>. O objetivo é isolar ao máximo a <strong>cadeia posterior</strong> — isquiotibiais e glúteo — em grande alongamento.</p>
+  <div class="callout ok">
+    <span class="tag">A identidade do stiff</span>
+    <p>Se o terra convencional é o rei da força e o híbrido quadril-joelho, o stiff é o <strong>especialista em alongar a cadeia posterior</strong>. Com o joelho reto, o quadríceps quase não participa (só estabiliza), e todo o trabalho de extensão de quadril recai sobre glúteo e isquiotibiais — que são levados a grande comprimento.</p>
+  </div>
+</section>
+
+<section id="vs-rdl">
+  <span class="sec-num">02 &mdash; STIFF VS RDL: A DIFERENÇA</span>
+  <h2>Não são o <span class="accent">mesmo exercício</span></h2>
+  <p class="sec-sub">A confusão mais comum na sala de musculação — esclarecida.</p>
+  <p>Stiff e RDL (terra romeno) são parentes próximos, mas têm diferenças que mudam o estímulo. As principais:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Aspecto</th><th>Stiff (pernas retas)</th><th>RDL (terra romeno)</th></tr></thead>
+      <tbody>
+        <tr><td>Joelho</td><td>Praticamente reto (estendido e fixo)</td><td>Levemente flexionado (~15°) e fixo</td></tr>
+        <tr><td>Início do movimento</td><td>A carga costuma partir do chão</td><td>Parte de pé (a carga não toca o chão até o fim)</td></tr>
+        <tr><td>Amplitude</td><td>Maior (alcança o chão)</td><td>Menor (vai até meia-canela/abaixo do joelho)</td></tr>
+        <tr><td>Ênfase</td><td>Isquiotibiais superiores (proximal) + glúteo; mais alongamento</td><td>Isquiotibiais + glúteo; tensão contínua</td></tr>
+        <tr><td>Tensão constante</td><td>Perde um pouco no chão (carga descansa)</td><td>Mantém tensão o tempo todo (não descansa)</td></tr>
+        <tr><td>Panturrilha (gastrocnêmio)</td><td>Mais ativada (joelho reto)</td><td>Menos</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <span class="tag">O resumo da diferença</span>
+    <p>Pense assim: o <strong>stiff</strong> prioriza <strong>amplitude e alongamento máximo</strong> (joelho reto, alcança o chão), e a evidência aponta que ele dá o maior estímulo à <strong>porção superior (proximal) dos isquiotibiais</strong>. O <strong>RDL</strong> prioriza <strong>tensão contínua</strong> (nunca descansa a carga) com o joelho um pouquinho flexionado, o que costuma ser mais confortável e ativar muito bem os isquiotibiais como um todo. Não é "qual é melhor", é qual objetivo.</p>
+  </div>
+</section>
+
+<section id="musculos">
+  <span class="sec-num">03 &mdash; MÚSCULOS POR PAPEL</span>
+  <h2>Agonistas, sinergistas e <span class="accent">antagonistas</span></h2>
+  <p class="sec-sub">Um exercício focado na cadeia posterior.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Papel</th><th>Músculos</th><th>Função no stiff</th></tr></thead>
+      <tbody>
+        <tr><td><b>Agonistas</b></td><td>Isquiotibiais e glúteo máximo</td><td>Estendem o quadril para subir; controlam a descida em alongamento</td></tr>
+        <tr><td><b>Sinergistas</b></td><td>Adutor magno, eretores da espinha, gastrocnêmio</td><td>Auxiliam a extensão de quadril e estabilizam coluna e joelho</td></tr>
+        <tr><td><b>Antagonistas</b></td><td>Reto femoral / quadríceps, reto abdominal</td><td>Estabilizam o joelho e o tronco (co-contração)</td></tr>
+        <tr><td><b>Estabilizadores</b></td><td>Core, trapézio, dorsais, antebraço</td><td>Mantêm a coluna neutra e a barra próxima ao corpo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <span class="tag">O detalhe do gastrocnêmio</span>
+    <p>Curiosidade biomecânica: como o joelho fica <strong>reto</strong> no stiff, o <strong>gastrocnêmio</strong> (a parte da panturrilha que cruza o joelho) é mais recrutado que no terra convencional. Ele participa como sinergista da estabilização e da extensão, um detalhe que diferencia o stiff das outras variações.</p>
+  </div>
+</section>
+
+<section id="fases">
+  <span class="sec-num">04 &mdash; MOVIMENTOS POR FASE</span>
+  <h2>Descida e <span class="accent">subida</span></h2>
+  <p class="sec-sub">Um hip hinge puro.</p>
+  <div class="stepwrap">
+    <div class="step"><h4>Descida (excêntrica)</h4><p>O quadril <strong>flexiona</strong> (vai para trás) enquanto o joelho permanece reto. Os isquiotibiais e o glúteo <strong>alongam sob carga</strong>, controlando a descida. A coluna se mantém neutra. É aqui que mora o grande estímulo do stiff.</p></div>
+    <div class="step"><h4>Fundo</h4><p>Ponto de maior flexão de quadril, com a carga próxima ou tocando o chão. Máximo alongamento da cadeia posterior. A profundidade depende da flexibilidade dos isquiotibiais (sem arredondar a lombar).</p></div>
+    <div class="step"><h4>Subida (concêntrica)</h4><p>O quadril <strong>estende</strong> (glúteo + isquiotibiais) para voltar de pé. O joelho continua reto. No topo, contração do glúteo — sem hiperestender a lombar.</p></div>
+  </div>
+</section>
+
+<section id="alongamento">
+  <span class="sec-num">05 &mdash; O REI DO ALONGAMENTO</span>
+  <h2>Por que o stiff é tão <span class="accent">potente para hipertrofia</span></h2>
+  <p class="sec-sub">A grande vantagem deste exercício.</p>
+  <p>O stiff leva os isquiotibiais e o glúteo ao <strong>maior comprimento sob carga</strong> entre os exercícios comuns de cadeia posterior. E como vimos nos materiais anteriores, o <strong>treino em alongamento</strong> é um estímulo muito potente para hipertrofia. Além disso, o stiff enfatiza a <strong>porção proximal (superior)</strong> dos isquiotibiais — a parte perto do glúteo — que é justamente a mais difícil de recrutar com exercícios de flexão de joelho.</p>
+  <div class="callout ok">
+    <span class="tag">O casamento perfeito com a flexora</span>
+    <p>Lembra do material de <em>Treino de Posteriores</em>? Os isquiotibiais têm duas funções e precisam de dois padrões. O stiff cobre a <strong>extensão de quadril em alongamento</strong> (cabeça longa do bíceps femoral + semimembranoso, porção proximal); a flexora cobre a <strong>flexão de joelho</strong> (cabeça curta + semitendinoso, porção distal). O stiff é a peça "hip hinge" ideal desse par — mas não substitui a flexão de joelho, porque a <strong>cabeça curta do bíceps femoral (uniarticular) não é treinada por ele</strong>.</p>
+  </div>
+</section>
+
+<section id="torque">
+  <span class="sec-num">06 &mdash; TORQUE E CURVA DE RESISTÊNCIA</span>
+  <h2>Onde o stiff <span class="accent">mais pesa</span></h2>
+  <p class="sec-sub">A dificuldade está no alongamento.</p>
+  <p>No stiff, o maior <strong>braço de momento no quadril</strong> acontece quando o tronco está mais próximo da horizontal — ou seja, no <strong>fundo do movimento</strong>, com a cadeia posterior alongada. É lá que os isquiotibiais e o glúteo enfrentam o maior torque, e é por isso que o estímulo em alongamento é tão grande. É uma <strong>curva de resistência que casa com a posição alongada</strong>.</p>
+  <div class="callout warn">
+    <span class="tag">A insuficiência passiva como limite</span>
+    <p>Como os isquiotibiais são biarticulares, no fundo do stiff eles são <strong>alongados no quadril</strong> com o joelho estendido — chegando perto da <strong>insuficiência passiva</strong> (o limite mecânico do alongamento, visto na Biomecânica 2). Se a flexibilidade acaba, o corpo tende a compensar <strong>arredondando a lombar</strong> — e é aí que o risco aparece. A amplitude deve ir até onde a coluna se mantém neutra, nem um centímetro além.</p>
+  </div>
+</section>
+
+<section id="hipertrofia">
+  <span class="sec-num">07 &mdash; HIPERTROFIA POR MÚSCULO</span>
+  <h2>O que cada músculo <span class="accent">ganha</span></h2>
+  <p class="sec-sub">O potencial hipertrófico do stiff.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Músculo</th><th>Potencial</th><th>Observação</th></tr></thead>
+      <tbody>
+        <tr><td>Isquiotibiais (porção proximal)</td><td>Excelente</td><td>Máximo alongamento; melhor estímulo à parte superior</td></tr>
+        <tr><td>Glúteo máximo</td><td>Excelente</td><td>Extensor de quadril em alongamento</td></tr>
+        <tr><td>Adutor magno</td><td>Bom</td><td>Extensor de quadril auxiliar</td></tr>
+        <tr><td>Eretores da espinha</td><td>Bom (isométrico)</td><td>Mantêm a coluna neutra sob carga</td></tr>
+        <tr><td>Gastrocnêmio</td><td>Moderado</td><td>Mais que no convencional (joelho reto)</td></tr>
+        <tr><td>Quadríceps</td><td>Baixo</td><td>Só estabiliza; não é alvo</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="seguranca">
+  <span class="sec-num">08 &mdash; EXECUÇÃO E SEGURANÇA</span>
+  <h2>Fazer <span class="accent">certo</span> é tudo</h2>
+  <p class="sec-sub">O stiff é seguro e eficaz quando bem executado.</p>
+  <ul class="clean">
+    <li><b>Coluna neutra sempre:</b> a descida vem da flexão de quadril, não da flexão da coluna. O tronco desce como um bloco.</li>
+    <li><b>Barra colada ao corpo:</b> raspando as pernas, para reduzir o braço de momento na lombar.</li>
+    <li><b>Amplitude = flexibilidade:</b> desça só até onde os isquiotibiais permitem sem a lombar arredondar. Com o tempo e mobilidade, a amplitude aumenta.</li>
+    <li><b>Comece leve:</b> o stiff gera muito alongamento sob carga e forte DOMS na cadeia posterior — progrida o volume e a carga aos poucos.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">Cuidado especial</span>
+    <p>Por levar os isquiotibiais a grande alongamento sob carga, o stiff mal executado (lombar arredondada, carga excessiva, amplitude além da flexibilidade) é um dos exercícios com maior potencial de estiramento/lesão. Bem executado, porém, é justamente um dos melhores para <strong>fortalecer e proteger</strong> a cadeia posterior. Técnica antes de carga, sempre.</p>
+  </div>
+</section>
+
+<section id="aplicacao">
+  <span class="sec-num">09 &mdash; COMO APLICAR</span>
+  <h2>Colocando na <span class="accent">prática</span></h2>
+  <p class="sec-sub">Onde o stiff brilha.</p>
+  <ul class="clean">
+    <li><b>Foco em isquiotibiais proximais e glúteo em alongamento:</b> o stiff é uma das melhores escolhas.</li>
+    <li><b>Combine com flexão de joelho</b> (mesa/cadeira flexora, nórdico) para cobrir a cabeça curta do bíceps femoral e a porção distal.</li>
+    <li><b>Faixa de repetições:</b> 8–12 costuma ser ideal para hipertrofia, controlando bem a excêntrica (onde está o ouro).</li>
+    <li><b>Aluno com pouca flexibilidade:</b> pode começar pelo RDL (amplitude menor) e evoluir para o stiff conforme ganha mobilidade.</li>
+  </ul>
+</section>
+
+<section id="refs">
+  <span class="sec-num">10 &mdash; REFERÊNCIAS</span>
+  <h2>De onde vêm os <span class="accent">dados</span></h2>
+  <p class="sec-sub">Para conferir as fontes.</p>
+  <ul class="clean">
+    <li>Estudo (2022) — stiff-leg deadlift direcionando mais glúteo e flexores de quadril, e maior estímulo à porção superior dos isquiotibiais.</li>
+    <li>Comparação stiff vs convencional — maior ativação do gastrocnêmio medial no stiff (joelho estendido).</li>
+    <li>Coratella et al. (2022) — <i>An EMG analysis of Romanian, step-Romanian and stiff-leg deadlift</i> (variações de hip hinge e amplitude).</li>
+    <li>Literatura sobre treino em comprimento longo (alongado) e hipertrofia dos isquiotibiais.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade</span>
+    <p>A EMG mede ativação aguda; a hipertrofia depende de vários fatores. Estudos de ativação usam cargas relativas e amostras pequenas. O consenso robusto: o stiff maximiza o alongamento da cadeia posterior e enfatiza a porção proximal dos isquiotibiais — mas exige boa flexibilidade e técnica. Respeite a individualidade e a mobilidade de cada aluno.</p>
+  </div>
+  <div class="nav-next">
+    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&larr; Biblioteca</span></a>
+    <a href="rdl-terra-romeno.html"><span class="lbl">Relacionado</span><span class="ttl">RDL (Terra Romeno) &rarr;</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Estudo MG COACH &middot; Stiff (terra pernas retas)</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material de estudo MG COACH, com base em evidência científica atual e princípios de biomecânica. Referências ao final.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>

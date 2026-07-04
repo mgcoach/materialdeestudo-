@@ -1,5 +1,33 @@
 [
   {
+    "titulo": "Levantamento Terra Convencional",
+    "categoria": "treino",
+    "data": "Jun · 2026",
+    "resumo": "O rei da força bruta e exercício de corpo inteiro. Biomecânica, músculos por papel, fases, torque e proteção lombar, por que é um híbrido quadril-joelho (mais quadríceps que o RDL) e hipertrofia por músculo.",
+    "arquivo": "levantamento-terra-convencional.html"
+  },
+  {
+    "titulo": "Afundo (Lunge): Biomecânica Completa",
+    "categoria": "treino",
+    "data": "Jun · 2026",
+    "resumo": "O agachamento unilateral mais funcional. À frente vs reverso, músculos por papel, fases, por que a direção do passo muda o estresse no joelho, ajustes de tronco e passada, hipertrofia por músculo e o valor do treino unilateral.",
+    "arquivo": "afundo.html"
+  },
+  {
+    "titulo": "Stiff (Levantamento Terra Pernas Retas)",
+    "categoria": "treino",
+    "data": "Jun · 2026",
+    "resumo": "O especialista em alongar a cadeia posterior. O hip hinge de pernas retas, a diferença para o RDL, músculos por papel, fases, por que é o rei do estímulo em alongamento, torque, hipertrofia por músculo e execução segura.",
+    "arquivo": "stiff.html"
+  },
+  {
+    "titulo": "RDL (Terra Romeno): Biomecânica Completa",
+    "categoria": "treino",
+    "data": "Jun · 2026",
+    "resumo": "O hip hinge de tensão contínua e talvez o melhor exercício de cadeia posterior para a maioria. Diferença para o stiff e o convencional, músculos por papel, fases, tensão contínua, torque, hipertrofia por músculo e a técnica do hip hinge.",
+    "arquivo": "rdl-terra-romeno.html"
+  },
+  {
     "titulo": "Agachamento Búlgaro: Biomecânica Completa",
     "categoria": "treino",
     "data": "Jun · 2026",
