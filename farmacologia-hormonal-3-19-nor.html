@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmacologia Hormonal 3: Família 19-nor | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Farmacologia Hormonal 3: Família 19-nor | MG COACH">
+    <meta property="og:description" content="Parte 3 da série de Farmacologia Hormonal: a família 19-nor (nandrolona/Deca/NPP, trembolona, trestolona/MENT e os menos comuns — metribolona/oral-tren, miboleron, THG, dienolona, 19-nor orais antigos). Por que a 5-alfa-redutase enfraquece o 19-nor, a assinatura progestogênica (prolactina, libido, gino sem estrogênio alto) e a supressão do eixo. Educativo e de redução de danos.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/farmacologia-hormonal-3-19-nor.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Farmacologia Hormonal 3: Família 19-nor | MG COACH">
+    <meta name="twitter:description" content="A família 19-nor: nandrolona, trembolona, MENT e os menos comuns.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#define">O que define</a>
+    <a href="#5ar">A reviravolta da 5AR</a>
+    <a href="#progest">A assinatura progestogênica</a>
+    <a href="#tabela">Tabela 19-nor</a>
+    <a href="#principais">Os principais</a>
+    <a href="#raros">Menos comuns e designer</a>
+    <a href="#nuances">Nuances e mitos</a>
+    <a href="#padroes">Padrões</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Farmacologia Hormonal &middot; Parte 3 de 4</div>
+  <div class="serie-bar">
+    <a href="farmacologia-hormonal-1-fundamentos-receptores.html">1 &middot; Fundamentos e Receptores</a>
+    <a href="farmacologia-hormonal-2-testosterona-dht.html">2 &middot; Testosterona e Derivados do DHT</a>
+    <span class="atual">3 &middot; Família 19-nor</span>
+    <a href="farmacologia-hormonal-4-exames-monitoramento.html">4 &middot; Exames e Monitoramento</a>
+  </div>
+  <h1>A família <span class="em">19-nor</span></h1>
+  <p class="lede">Nandrolona (Deca/NPP), trembolona, trestolona (MENT) e os menos comuns (metribolona/oral-tren, miboleron, THG, dienolona, 19-nor orais antigos). Por que a <b>5-alfa-redutase enfraquece</b> o 19-nor, a <b>assinatura progestogênica</b> (prolactina, libido, gino sem estrogênio alto) e a <b>supressão do eixo</b> &mdash; com a tabela farmacológica da família.</p>
+</div>
+
+<main>
+
+<section id="define">
+  <span class="sec-num">01 &mdash; O QUE DEFINE A FAMÍLIA 19-NOR</span>
+  <h2>Falta um <span class="accent">carbono</span></h2>
+  <p class="sec-sub">A ausência do metil no C19 muda tudo.</p>
+  <p>Os <em class="term">19-nor</em> são a testosterona <strong>sem o grupo metil na posição 19</strong> (daí "19-nor" = "sem o 19"). Parece um detalhe mínimo, mas essa única mudança estrutural produz duas consequências que dão à família um comportamento próprio, diferente da testo e dos derivados do DHT:</p>
+  <ol class="key">
+    <li><b>A 5-alfa-redutase os enfraquece</b> (o inverso do que faz com a testosterona) &mdash; detalhe na seção 02.</li>
+    <li><b>Ganham atividade progestogênica</b> (agem no receptor de progesterona) &mdash; a assinatura da família, na seção 03.</li>
+  </ol>
+  <div class="callout warn">
+    <span class="tag">O de sempre</span>
+    <p>Perfil farmacológico, não protocolo. Sem doses nem combinações. O objetivo é entender o comportamento no corpo &mdash; conduta e monitoramento são do endocrinologista.</p>
+  </div>
+</section>
+
+<section id="5ar">
+  <span class="sec-num">02 &mdash; A REVIRAVOLTA DA 5-ALFA-REDUTASE</span>
+  <h2>Aqui a enzima <span class="accent">enfraquece</span></h2>
+  <p class="sec-sub">O oposto do que acontece com a testosterona.</p>
+  <p>Lembra da Parte 1: a 5-alfa-redutase converte a <strong>testosterona</strong> em DHT, um androgênio <em>mais</em> forte. Com os 19-nor acontece o contrário &mdash; o metabólito reduzido (a di-hidronandrolona) liga <strong>pior</strong> no receptor androgênico. Ou seja: nos tecidos ricos em 5-alfa-redutase (couro cabeludo, próstata, pele), o 19-nor fica <strong>mais fraco</strong>, não mais forte.</p>
+  <div class="callout ok">
+    <span class="tag">Consequência prática</span>
+    <p>Por isso a nandrolona tem fama de ser relativamente "mais branda" em queda de cabelo e pele que uma dose androgênica de testo. <strong>Mas isso é nuance, não isenção</strong> &mdash; segue sendo androgênico e suprime o eixo. E, como veremos, a "brandura" some quando entra a trembolona, que é potente no AR.</p>
+  </div>
+</section>
+
+<section id="progest">
+  <span class="sec-num">03 &mdash; A ASSINATURA PROGESTOGÊNICA</span>
+  <h2>O que torna o 19-nor <span class="accent">diferente</span></h2>
+  <p class="sec-sub">O ponto mais mal explicado em fórum.</p>
+  <div class="def">
+    <div class="word">Atividade progestogênica</div>
+    <p>Os 19-nor se ligam também ao <strong>receptor de progesterona</strong>. Essa progestagenia amplifica efeitos parecidos com os do estrogênio em certos tecidos &mdash; mesmo quando o estradiol está controlado.</p>
+  </div>
+  <p>Isso explica três coisas que confundem quem só pensa em estrogênio:</p>
+  <ul class="clean">
+    <li><b>Ginecomastia "sem estrogênio alto":</b> a progestagenia pode disparar ou potencializar a gino mesmo com estradiol baixo &mdash; por isso antiaromatase sozinho às vezes "não resolve".</li>
+    <li><b>Prolactina:</b> a via progestogênica está associada a aumento de prolactina, ligado a queda de libido e disfunção &mdash; o famoso relato de "deca dick".</li>
+    <li><b>Libido/humor:</b> a soma de progestagenia + baixa DHT (porque a 5AR enfraquece o composto) prejudica a função sexual mais do que a testo pura faria.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">A lógica em uma frase</span>
+    <p>Na testo, o colateral "feminizante" vem do <strong>estrogênio</strong>. No 19-nor, vem também da <strong>progesterona</strong> &mdash; duas portas diferentes para efeitos parecidos.</p>
+  </div>
+</section>
+
+<section id="tabela">
+  <span class="sec-num">04 &mdash; TABELA DA FAMÍLIA 19-NOR</span>
+  <h2>O <span class="accent">mapa</span> da família</h2>
+  <p class="sec-sub">Note como estrogênio NÃO é uniforme aqui &mdash; role para o lado.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Composto</th><th>Aromatiza?</th><th>Oral (17aa)?</th><th>Hepatotox.</th><th>Lipídios</th><th>Estrog. / Progest.</th><th>Destaque</th></tr></thead>
+      <tbody>
+        <tr><td>Nandrolona decanoato <span style="color:var(--text-faint)">(Deca)</span></td><td>Sim, fraca (~20%)</td><td>Não (injetável, éster longo)</td><td>Baixa</td><td>Moderado</td><td>Estrog. baixo; <b>progestogênico</b></td><td>Alívio articular relatado; "deca dick"; supressão forte; ação lenta</td></tr>
+        <tr><td>Nandrolona fenilpropionato <span style="color:var(--text-faint)">(NPP)</span></td><td>Sim, fraca</td><td>Não (injetável, éster curto)</td><td>Baixa</td><td>Moderado</td><td>Estrog. baixo; <b>progestogênico</b></td><td>Mesma molécula da Deca, éster curto &mdash; entra e sai mais rápido</td></tr>
+        <tr><td>Trembolona <span style="color:var(--text-faint)">(acetato / enantato / parabolan)</span></td><td><b>Não</b></td><td>Não (injetável)</td><td>Baixa (não é 17aa)</td><td>Agressivo</td><td>Sem estrog.; <b>progestogênico</b> (gino via prolactina)</td><td>Agonista potente do AR; partição de nutrientes forte; sides duros (sudorese, insônia, CV/renal)</td></tr>
+        <tr><td>Trestolona <span style="color:var(--text-faint)">(MENT)</span></td><td><b>Sim &mdash; para estrogênio potente</b></td><td>Não (injetável)</td><td>Baixa</td><td>Moderado&ndash;agressivo</td><td><b>Estrog. alto</b> + progestogênico</td><td>Potentíssimo; supressão brutal do eixo (era candidato a contraceptivo masculino)</td></tr>
+        <tr><td>Metribolona <span style="color:var(--text-faint)">(metiltrienolona / "oral tren" / R1881)</span></td><td>Não</td><td>Sim</td><td><b>Extrema</b></td><td>Extremo</td><td>Progestogênico</td><td>Das moléculas mais tóxicas conhecidas; usada em lab como ligante-padrão do AR</td></tr>
+        <tr><td>Miboleron <span style="color:var(--text-faint)">("cheque drops")</span></td><td>Não</td><td>Sim (7,17-dimetil)</td><td>Muito alta</td><td>Muito agressivo</td><td>Progestogênico</td><td>Androgênico extremo; origem veterinária; usado por agressividade &mdash; muito perigoso</td></tr>
+        <tr><td>Tetra-hidrogestrinona <span style="color:var(--text-faint)">(THG, "the clear")</span></td><td>Pouco/não</td><td>Sim (sublingual)</td><td>Incerta</td><td>Incerto</td><td>Fortemente <b>progestogênico</b> (deriva de progestina)</td><td>Esteroide "designer" do caso BALCO, feito para escapar do antidoping; pouco caracterizado</td></tr>
+        <tr><td>Dienolona / pró-hormônios 19-nor <span style="color:var(--text-faint)">(ex.: dienediona)</span></td><td>Variável</td><td>Sim (geralmente)</td><td>Moderada&ndash;alta</td><td>Agressivo</td><td>Progestogênico</td><td>Convertem em compostos tipo nandrolona/trembolona &mdash; perfil segue a conversão</td></tr>
+        <tr><td>Noretandrolona / Etilestrenol <span style="color:var(--text-faint)">(19-nor orais antigos)</span></td><td>Fraca</td><td>Sim</td><td>Moderada&ndash;alta</td><td>Agressivo</td><td>Progestogênico</td><td>19-nor terapêuticos antigos; hoje pouco usados</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="principais">
+  <span class="sec-num">05 &mdash; OS PRINCIPAIS, UM A UM</span>
+  <h2>Os três que <span class="accent">importam</span></h2>
+  <p class="sec-sub">O caráter além da tabela.</p>
+  <div class="grid2">
+    <div class="mini"><h4>Nandrolona (Deca/NPP)</h4><p>Aromatiza pouco e a 5AR a enfraquece &mdash; daí ser "mais branda" na pele. Mas a <strong>progestagenia + baixa DHT</strong> derrubam a libido ("deca dick") e a <strong>supressão do eixo é forte e longa</strong>. Reputação de alívio articular (provável retenção em tecido conjuntivo/IGF). Deca tem éster muito longo; NPP é a mesma molécula "rápida".</p></div>
+    <div class="mini"><h4>Trembolona</h4><p>Não aromatiza, mas é <strong>agonista potente do AR</strong> e progestogênica &mdash; então gino pode vir por <strong>prolactina</strong>, não estrogênio. Partição de nutrientes marcante, porém com os sides mais duros da família: sudorese noturna, insônia, agressividade, <strong>queda de capacidade cardiovascular</strong> e estresse renal.</p></div>
+    <div class="mini"><h4>Trestolona (MENT)</h4><p>O fora-da-curva: 19-nor que <strong>aromatiza para um estrogênio potente</strong> (7&alpha;-metilestradiol), exigindo manejo de estrogênio apesar de ser 19-nor. Potentíssimo e com <strong>supressão do eixo tão intensa</strong> que foi estudado como contraceptivo masculino.</p></div>
+  </div>
+</section>
+
+<section id="raros">
+  <span class="sec-num">06 &mdash; OS MENOS COMUNS E DESIGNER</span>
+  <h2>A periferia <span class="accent">(e o perigo)</span> da família</h2>
+  <p class="sec-sub">Compostos raros, de pesquisa ou proibidos.</p>
+  <div class="grid2">
+    <div class="mini"><h4>Metribolona (oral tren / R1881)</h4><p>Trembolona 17-alfa-alquilada: potência altíssima e <strong>hepatotoxicidade extrema</strong>. Na ciência, o R1881 é o <strong>ligante-padrão</strong> para medir afinidade ao AR &mdash; ótimo no tubo de ensaio, perigoso no corpo.</p></div>
+    <div class="mini"><h4>Miboleron ("cheque drops")</h4><p>19-nor 7,17-dimetil de origem <strong>veterinária</strong>, extremamente androgênico. Usado historicamente por agressividade em esportes de combate, em doses minúsculas &mdash; margem de segurança péssima.</p></div>
+    <div class="mini"><h4>THG ("the clear")</h4><p>A tetra-hidrogestrinona foi o esteroide <strong>designer</strong> do escândalo BALCO, criada para <strong>escapar do antidoping</strong>. Deriva de progestina (gestrinona) &mdash; fortemente progestogênica e pouco estudada.</p></div>
+    <div class="mini"><h4>Pró-hormônios e 19-nor antigos</h4><p>Dienolona/dienediona convertem em compostos tipo nandrolona ou trembolona (o perfil segue a conversão). Noretandrolona e etilestrenol são 19-nor <strong>terapêuticos antigos</strong>, hoje raros.</p></div>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Atenção especial</span>
+    <p>Os designer/veterinários (metribolona, miboleron, THG) reúnem o <strong>pior custo-benefício de saúde</strong> da farmacologia hormonal: potência alta, toxicidade alta e <strong>quase nenhuma caracterização clínica</strong>. São exatamente os compostos onde "bro-science" é mais perigosa.</p>
+  </div>
+</section>
+
+<section id="nuances">
+  <span class="sec-num">07 &mdash; NUANCES E MITOS</span>
+  <h2>Onde a intuição <span class="accent">falha</span></h2>
+  <p class="sec-sub">Honestidade científica sobre a família.</p>
+  <ul class="clean">
+    <li><b>"Nandrolona é seca":</b> falso &mdash; ela <b>aromatiza</b> (pouco, mas aromatiza) e retém água. O engano vem de confundir "pouca DHT" com "sem estrogênio".</li>
+    <li><b>"Trembolona não dá gino porque não aromatiza":</b> falso &mdash; a gino da tren costuma vir da <b>prolactina/progestagenia</b>, não do estradiol.</li>
+    <li><b>"19-nor é mais leve":</b> só em pele/cabelo, e por causa da 5AR. Em <b>supressão do eixo</b> e <b>função sexual</b>, tende a ser mais pesado, não mais leve.</li>
+    <li><b>"MENT é um 19-nor, então é seco":</b> falso &mdash; é o mais estrogênico da família (aromatiza para estrogênio potente).</li>
+  </ul>
+</section>
+
+<section id="padroes">
+  <span class="sec-num">08 &mdash; OS PADRÕES QUE EMERGEM</span>
+  <h2>O que a família <span class="accent">ensina</span></h2>
+  <p class="sec-sub">Três regularidades do 19-nor.</p>
+  <ol class="key">
+    <li><b>A porta do colateral muda.</b> Na testo é o estrogênio; no 19-nor entra também a <b>progesterona/prolactina</b> &mdash; e isso pede monitoramento diferente.</li>
+    <li><b>A 5AR inverte o papel.</b> Enfraquece o composto (mais brando em pele/cabelo), mas isso vem junto com <b>menos DHT</b> &mdash; parte do problema de libido.</li>
+    <li><b>Estrogênio não é uniforme.</b> Nandrolona aromatiza fraco, trembolona não aromatiza, trestolona aromatiza <b>forte</b>. Não dá para tratar a família como um bloco.</li>
+  </ol>
+  <div class="callout">
+    <span class="tag">Ponte para a Parte 4</span>
+    <p>Além do que já monitoramos (lipídios, hematócrito, fígado), o 19-nor acrescenta <strong>prolactina</strong> e uma atenção redobrada ao <strong>eixo HPG</strong> (LH, FSH, testo) pela supressão intensa. A Parte 4 fecha a série com o roteiro de exames.</p>
+  </div>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial da família 19-nor.</p>
+  <ol class="key">
+    <li><b>19-nor</b> = testosterona sem o metil no C19 &rarr; dois efeitos próprios.</li>
+    <li>A <b>5-alfa-redutase enfraquece</b> o 19-nor (inverso da testo) &rarr; mais brando em pele/cabelo.</li>
+    <li><b>Atividade progestogênica</b> é a assinatura: prolactina, "deca dick", gino sem estrogênio alto.</li>
+    <li><b>Nandrolona</b> aromatiza fraco e suprime muito; <b>trembolona</b> não aromatiza mas é potente e dura; <b>MENT</b> aromatiza forte.</li>
+    <li>Os <b>designer/veterinários</b> (metribolona, miboleron, THG) = potência e toxicidade altas, quase sem dados.</li>
+    <li>Estrogênio <b>não é uniforme</b> na família &mdash; não trate como bloco.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="farmacologia-hormonal-2-testosterona-dht.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 2 &middot; Testosterona e DHT</span></a>
+    <a href="farmacologia-hormonal-4-exames-monitoramento.html"><span class="lbl">Próximo da série</span><span class="ttl">4 &middot; Exames e Monitoramento &rarr;</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">10 &mdash; REFERÊNCIAS</span>
+  <h2>De onde vem <span class="accent">a evidência</span></h2>
+  <p class="sec-sub">Para aprofundar direto na fonte.</p>
+  <ul class="clean">
+    <li>Kicman AT. <b>Pharmacology of anabolic steroids.</b> Br J Pharmacol. 2008;154(3):502&ndash;521.</li>
+    <li>Pope HG Jr. et al. <b>Adverse health consequences of performance-enhancing drugs: an Endocrine Society scientific statement.</b> Endocr Rev. 2014;35(3):341&ndash;375.</li>
+    <li>Handelsman DJ. <b>Androgen Physiology, Pharmacology, Use and Misuse.</b> Endotext.</li>
+    <li>Sobre o MENT: literatura de <b>7&alpha;-metil-19-nortestosterona como contraceptivo masculino</b> (estudos de supressão do eixo HPG).</li>
+    <li>Sobre THG: relatórios do caso <b>BALCO</b> e caracterização da tetra-hidrogestrinona como esteroide designer.</li>
+    <li>Referência aplicada de perfis: <b>W. Llewellyn, "Anabolics"</b>, reescrita na voz MG COACH.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Vários 19-nor raros (metribolona, miboleron, THG) têm perfil baseado em <strong>química e relato</strong>, não em ensaio clínico &mdash; a incerteza é grande e faz parte do risco. Como sempre: <strong>conduta e monitoramento são do médico.</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Farmacologia Hormonal &middot; Parte 3 de 4</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo e de redução de danos. Não substitui acompanhamento médico. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
