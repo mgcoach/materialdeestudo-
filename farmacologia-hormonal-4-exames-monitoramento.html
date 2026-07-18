@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmacologia Hormonal 4: Exames e Monitoramento | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Farmacologia Hormonal 4: Exames e Monitoramento | MG COACH">
+    <meta property="og:description" content="Parte 4 (final) da série de Farmacologia Hormonal: o roteiro de monitoramento — lipídios (HDL/LDL/apoB), hematócrito e ferritina, fígado (AST/ALT/GGT/bilirrubina), eixo HPG (LH, FSH, testo total e livre, SHBG), estradiol e prolactina, PSA, renal, glicemia/HbA1c, pressão e cardiovascular (ECG/eco). Como cada família distorce a leitura e o que levar ao endocrinologista. Educativo e de redução de danos.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/farmacologia-hormonal-4-exames-monitoramento.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Farmacologia Hormonal 4: Exames e Monitoramento | MG COACH">
+    <meta name="twitter:description" content="Roteiro de exames e monitoramento para uso de EAA.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#porque">Por que monitorar</a>
+    <a href="#lipidios">Lipídios</a>
+    <a href="#hematocrito">Hematócrito</a>
+    <a href="#figado">Fígado</a>
+    <a href="#eixo">Eixo HPG</a>
+    <a href="#estradiol">Estradiol e prolactina</a>
+    <a href="#psa">PSA e próstata</a>
+    <a href="#renal">Renal, glicemia, pressão</a>
+    <a href="#cardio">Cardiovascular</a>
+    <a href="#distorce">Como cada família distorce</a>
+    <a href="#roteiro">O roteiro</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Farmacologia Hormonal &middot; Parte 4 de 4</div>
+  <div class="serie-bar">
+    <a href="farmacologia-hormonal-1-fundamentos-receptores.html">1 &middot; Fundamentos e Receptores</a>
+    <a href="farmacologia-hormonal-2-testosterona-dht.html">2 &middot; Testosterona e Derivados do DHT</a>
+    <a href="farmacologia-hormonal-3-19-nor.html">3 &middot; Família 19-nor</a>
+    <span class="atual">4 &middot; Exames e Monitoramento</span>
+  </div>
+  <h1>Exames e <span class="em">monitoramento</span></h1>
+  <p class="lede">O fechamento prático da série: o roteiro completo de sangue &mdash; <b>lipídios</b> (HDL/LDL/apoB), <b>hematócrito</b>, <b>fígado</b>, <b>eixo HPG</b> (LH, FSH, testo livre, SHBG), <b>estradiol e prolactina</b>, PSA, renal, glicemia e o <b>cardiovascular</b> &mdash; como cada família distorce a leitura e o que levar ao endocrinologista.</p>
+</div>
+
+<main>
+
+<section id="porque">
+  <span class="sec-num">01 &mdash; POR QUE MONITORAR</span>
+  <h2>O conhecimento que <span class="accent">protege</span></h2>
+  <p class="sec-sub">A parte mais importante da série inteira.</p>
+  <p>Toda a farmacologia das partes anteriores serve a isto: <strong>entender o próprio corpo em exame</strong>. A conversa de fórum foca em gino e retenção &mdash; que são visíveis &mdash; mas os desfechos que <strong>mais pesam na saúde</strong> são silenciosos e só aparecem no sangue: lipídios, hematócrito, fígado, eixo hormonal e coração.</p>
+  <div class="callout warn">
+    <span class="tag">Escopo — leia com atenção</span>
+    <p>Este roteiro é <strong>educativo</strong>: serve para você chegar informado ao consultório e entender o que os números significam. <strong>Interpretar, decidir conduta e ajustar é do endocrinologista.</strong> Como consultor de performance, o papel é orientar exercício e <strong>encaminhar</strong> &mdash; não pedir nem interpretar exame para terceiros. Nada aqui é diagnóstico ou prescrição.</p>
+  </div>
+</section>
+
+<section id="lipidios">
+  <span class="sec-num">02 &mdash; PAINEL LIPÍDICO</span>
+  <h2>O primeiro a <span class="accent">quebrar</span></h2>
+  <p class="sec-sub">O impacto mais consistente dos EAA &mdash; e um dos mais sérios.</p>
+  <p>Praticamente todo EAA piora o perfil lipídico: <strong>HDL despenca</strong> (sobretudo com orais 17aa e derivados do DHT) e o <strong>LDL sobe</strong>. Como vimos na Parte 2, "seco" custa HDL porque o estrogênio protetor some.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Marcador</th><th>O que é</th><th>Com EAA</th></tr></thead>
+      <tbody>
+        <tr><td>HDL</td><td>Colesterol "protetor"</td><td>Cai muito &mdash; o efeito mais marcante</td></tr>
+        <tr><td>LDL</td><td>Colesterol aterogênico</td><td>Tende a subir</td></tr>
+        <tr><td>ApoB</td><td>Nº de partículas aterogênicas</td><td>Melhor preditor de risco que o LDL isolado</td></tr>
+        <tr><td>Triglicerídeos</td><td>Gordura circulante</td><td>Variável</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <span class="tag">Dica de leitura</span>
+    <p>Peça <strong>apoB</strong> junto do painel clássico &mdash; ele conta o número de partículas que realmente entopem artéria, e é mais confiável que o LDL-C quando o lipídio está bagunçado. Lp(a) e hs-CRP são extras úteis para o risco cardiovascular.</p>
+  </div>
+</section>
+
+<section id="hematocrito">
+  <span class="sec-num">03 &mdash; HEMATÓCRITO E HEMOGLOBINA</span>
+  <h2>O risco mais <span class="accent">subestimado</span></h2>
+  <p class="sec-sub">Sangue "grosso" — trombose.</p>
+  <p>Androgênios estimulam a produção de hemácias. O resultado é <em class="term">eritrocitose/policitemia</em>: hematócrito e hemoglobina altos deixam o sangue mais viscoso, elevando o risco de <strong>trombose, AVC e eventos cardiovasculares</strong>. A <strong>boldenona</strong> (Parte 2) é notória nisso, mas testosterona em dose alta também eleva.</p>
+  <ul class="clean">
+    <li><b>Hematócrito e hemoglobina:</b> os números-chave a acompanhar.</li>
+    <li><b>Ferritina:</b> costuma cair quando a eritropoiese está muito ativa &mdash; ajuda a contextualizar.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">Por que subestimado</span>
+    <p>Não dá sintoma óbvio até ser grave. Muita gente monitora estradiol religiosamente e ignora o hematócrito &mdash; que é um dos riscos mais concretos e mensuráveis. O manejo (ex.: doação/flebotomia) é <strong>decisão médica</strong>.</p>
+  </div>
+</section>
+
+<section id="figado">
+  <span class="sec-num">04 &mdash; FÍGADO</span>
+  <h2>Quase tudo é <span class="accent">o oral</span></h2>
+  <p class="sec-sub">Hepatotoxicidade mora nos 17-alfa-alquilados.</p>
+  <p>A sobrecarga hepática vem quase exclusivamente dos <strong>orais 17aa</strong> (Parte 2). Os marcadores: <strong>AST, ALT, GGT e bilirrubina</strong>.</p>
+  <div class="callout">
+    <span class="tag">Cuidado com falso positivo</span>
+    <p><strong>AST e ALT também sobem com treino intenso</strong> e dano muscular &mdash; não são só do fígado. Se elas estão altas mas <strong>GGT e bilirrubina estão normais</strong>, é mais provável que seja músculo, não fígado. Para separar, ajuda olhar <strong>GGT</strong> (mais específica de fígado) e o contexto (CK elevada aponta para músculo). Não tire conclusão só de ALT isolada logo após treino pesado.</p>
+  </div>
+</section>
+
+<section id="eixo">
+  <span class="sec-num">05 &mdash; EIXO HPG</span>
+  <h2>O sistema que <span class="accent">desliga</span></h2>
+  <p class="sec-sub">Hipotálamo → hipófise → gônadas.</p>
+  <p>Todo EAA suprime o eixo: o corpo detecta androgênio externo e <strong>desliga a produção própria</strong>. No exame, isso aparece como <strong>LH e FSH baixos</strong> e testosterona endógena suprimida. Os 19-nor (Parte 3), sobretudo o MENT, suprimem de forma especialmente intensa.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Marcador</th><th>O que revela</th></tr></thead>
+      <tbody>
+        <tr><td>LH e FSH</td><td>O "comando" da hipófise para os testículos &mdash; suprimidos com EAA</td></tr>
+        <tr><td>Testosterona total</td><td>Soma da endógena + exógena; sozinha engana</td></tr>
+        <tr><td>Testosterona livre</td><td>A fração ativa &mdash; o que realmente importa</td></tr>
+        <tr><td>SHBG</td><td>Transportador; se cai, a fração livre sobe (Parte 1)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout ok">
+    <span class="tag">A leitura certa</span>
+    <p>Não olhe só a <strong>testosterona total</strong>. Como vários EAA (orais, winstrol) derrubam a <strong>SHBG</strong>, uma total "normal" pode esconder uma <strong>livre</strong> muito alta. Peça sempre <strong>testo livre + SHBG</strong> juntas.</p>
+  </div>
+</section>
+
+<section id="estradiol">
+  <span class="sec-num">06 &mdash; ESTRADIOL E PROLACTINA</span>
+  <h2>Os dois lados da <span class="accent">"feminização"</span></h2>
+  <p class="sec-sub">Estrogênio (via aromatase) e prolactina (via 19-nor).</p>
+  <h3>Estradiol</h3>
+  <p>Sobe com compostos que aromatizam (testo, boldenona, dianabol, MENT). Estradiol alto demais dá retenção e gino; <strong>baixo demais também é ruim</strong> (libido, humor, articulações, ossos, lipídios). O alvo não é "zero" &mdash; é equilíbrio.</p>
+  <div class="callout">
+    <span class="tag">Detalhe técnico do exame</span>
+    <p>Peça o estradiol por método <strong>sensível</strong> (LC-MS/MS). O imunoensaio comum é impreciso nas faixas masculinas e pode dar leitura enganosa.</p>
+  </div>
+  <h3>Prolactina</h3>
+  <p>Puxando o gancho da Parte 3: os <strong>19-nor</strong> (nandrolona, trembolona) têm atividade progestogênica ligada a <strong>aumento de prolactina</strong> &mdash; associada a queda de libido e à gino "que o antiaromatase não resolve". Quem estuda ou usa 19-nor deve ter a prolactina no painel.</p>
+</section>
+
+<section id="psa">
+  <span class="sec-num">07 &mdash; PSA E PRÓSTATA</span>
+  <h2>O tecido <span class="accent">androgênio-sensível</span></h2>
+  <p class="sec-sub">Estímulo androgênico onde há muito AR e 5AR.</p>
+  <p>A próstata é rica em receptor androgênico e 5-alfa-redutase. Androgênios (especialmente os que viram DHT) a estimulam. O <strong>PSA</strong> é o marcador de acompanhamento &mdash; mais relevante com o avançar da idade, mas parte de um monitoramento completo.</p>
+</section>
+
+<section id="renal">
+  <span class="sec-num">08 &mdash; RENAL, GLICEMIA E PRESSÃO</span>
+  <h2>Os marcadores que <span class="accent">enganam</span></h2>
+  <p class="sec-sub">Onde massa muscular e treino distorcem a leitura.</p>
+  <div class="def">
+    <div class="word">Creatinina — o falso alarme renal</div>
+    <p>A creatinina sobe com <strong>massa muscular, creatina e dieta rica em proteína/carne</strong> &mdash; não só com problema renal. Muito praticante saudável tem creatinina "alta" só por ser musculoso. Para avaliar rim de verdade nesse contexto, a <strong>cistatina C</strong> é um marcador melhor (independe da massa muscular).</p>
+  </div>
+  <ul class="clean">
+    <li><b>Glicemia / HbA1c / insulina:</b> alguns compostos afetam sensibilidade à insulina &mdash; relevante para quem se importa com flexibilidade metabólica.</li>
+    <li><b>Pressão arterial:</b> retenção de sódio/água e mudanças lipídicas elevam a PA. Medir em casa, com regularidade, vale mais que uma medida isolada no consultório.</li>
+  </ul>
+</section>
+
+<section id="cardio">
+  <span class="sec-num">09 &mdash; CARDIOVASCULAR</span>
+  <h2>O risco de <span class="accent">longo prazo</span></h2>
+  <p class="sec-sub">O que realmente decide o desfecho ao longo dos anos.</p>
+  <p>A soma de HDL baixo, LDL/apoB alto, hematócrito elevado, pressão alta e ação direta no coração cobra preço no sistema cardiovascular. No acompanhamento sério entram:</p>
+  <ul class="clean">
+    <li><b>ECG:</b> ritmo e sinais elétricos.</li>
+    <li><b>Ecocardiograma:</b> avalia <strong>hipertrofia do ventrículo esquerdo</strong> e função diastólica &mdash; alterações associadas ao uso prolongado.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">A mensagem central</span>
+    <p>Gino é estético; <strong>coração é vida</strong>. Se há uma coisa para levar a sério nesta série inteira, é o eixo cardiovascular + lipídios + hematócrito. É onde o risco real mora.</p>
+  </div>
+</section>
+
+<section id="distorce">
+  <span class="sec-num">10 &mdash; COMO CADA FAMÍLIA DISTORCE A LEITURA</span>
+  <h2>O que cada grupo <span class="accent">desloca</span></h2>
+  <p class="sec-sub">Amarrando as quatro partes.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Família</th><th>O que mais desloca no exame</th></tr></thead>
+      <tbody>
+        <tr><td>Testosterona</td><td>Estradiol&uarr;, hematócrito&uarr;, HDL&darr; (moderado), eixo suprimido</td></tr>
+        <tr><td>Boldenona</td><td>Hematócrito&uarr;&uarr; (o grande ponto de atenção)</td></tr>
+        <tr><td>Derivados do DHT (orais)</td><td>HDL&darr;&darr;, AST/ALT/GGT&uarr; (17aa), SHBG&darr;</td></tr>
+        <tr><td>Anadrol</td><td>Fígado&uarr;&uarr;, efeito estrogênico direto sem elevar estradiol dosável</td></tr>
+        <tr><td>19-nor (nandrolona/tren)</td><td>Prolactina&uarr;, LH/FSH e testo muito baixos, estradiol variável</td></tr>
+        <tr><td>MENT</td><td>Estradiol&uarr;&uarr; (potente), supressão extrema do eixo</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="roteiro">
+  <span class="sec-num">11 &mdash; O ROTEIRO (PARA LEVAR AO MÉDICO)</span>
+  <h2>O painel <span class="accent">completo</span></h2>
+  <p class="sec-sub">Uma lista organizada para a conversa no consultório &mdash; não uma automedida.</p>
+  <p>A lógica é ter uma <strong>linha de base</strong> (antes de qualquer coisa) e <strong>acompanhamento periódico</strong>, sempre com um médico interpretando. Agrupado por sistema:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Grupo</th><th>Exames</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td>Lipídios</td><td>HDL, LDL, apoB, triglicerídeos, (Lp(a), hs-CRP)</td><td>O impacto mais consistente; risco CV</td></tr>
+        <tr><td>Sangue</td><td>Hemograma (hematócrito, hemoglobina), ferritina</td><td>Eritrocitose/trombose</td></tr>
+        <tr><td>Fígado</td><td>AST, ALT, GGT, bilirrubina</td><td>Orais 17aa (cuidado com falso positivo de treino)</td></tr>
+        <tr><td>Eixo hormonal</td><td>LH, FSH, testo total e livre, SHBG</td><td>Supressão e leitura correta da fração ativa</td></tr>
+        <tr><td>Estrogênio/progest.</td><td>Estradiol sensível, prolactina</td><td>Aromatização e 19-nor</td></tr>
+        <tr><td>Próstata</td><td>PSA</td><td>Estímulo androgênico</td></tr>
+        <tr><td>Rim/metabólico</td><td>Creatinina + cistatina C, ureia, glicemia, HbA1c, insulina</td><td>Função renal real e sensibilidade à insulina</td></tr>
+        <tr><td>Cardiovascular</td><td>Pressão arterial, ECG, ecocardiograma</td><td>O risco de longo prazo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Como usar</span>
+    <p>Leve essa lista ao <strong>endocrinologista</strong> e construam juntos o acompanhamento. Ter linha de base torna qualquer alteração futura muito mais fácil de interpretar &mdash; e é a forma mais inteligente de reduzir risco.</p>
+  </div>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">12 &mdash; PARA FIXAR</span>
+  <h2>O fechamento da <span class="accent">série</span></h2>
+  <p class="sec-sub">O essencial do monitoramento.</p>
+  <ol class="key">
+    <li><b>Lipídios</b> (HDL despenca) e <b>apoB</b> são o impacto mais consistente &mdash; risco cardiovascular.</li>
+    <li><b>Hematócrito</b> é o risco mais subestimado (trombose); boldenona e testo elevam.</li>
+    <li><b>Fígado</b> é quase só oral 17aa &mdash; e AST/ALT enganam por causa do treino (olhe GGT).</li>
+    <li>No <b>eixo</b>, peça testo <b>livre + SHBG</b>, não só a total.</li>
+    <li><b>Estradiol</b> por método sensível; <b>prolactina</b> obrigatória com 19-nor.</li>
+    <li><b>Creatinina engana</b> em quem tem massa muscular &mdash; use cistatina C.</li>
+    <li>O <b>cardiovascular</b> (ECG/eco + lipídios + hematócrito) é onde o risco real mora.</li>
+    <li>Linha de base + acompanhamento periódico, <b>sempre com médico</b>.</li>
+  </ol>
+  <div class="callout">
+    <span class="tag">Série completa</span>
+    <p>Da estrutura da molécula (Parte 1) ao que aparece no seu sangue (Parte 4), o fio é o mesmo: <strong>entender para reduzir risco</strong>. Conhecimento não substitui o médico &mdash; te faz um paciente muito melhor.</p>
+  </div>
+  <div class="nav-next">
+    <a href="farmacologia-hormonal-3-19-nor.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 3 &middot; Família 19-nor</span></a>
+    <a href="index.html"><span class="lbl">Série completa</span><span class="ttl">&larr; Voltar à Biblioteca</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">13 &mdash; REFERÊNCIAS</span>
+  <h2>De onde vem <span class="accent">a evidência</span></h2>
+  <p class="sec-sub">Para aprofundar direto na fonte.</p>
+  <ul class="clean">
+    <li>Pope HG Jr. et al. <b>Adverse health consequences of performance-enhancing drugs: an Endocrine Society scientific statement.</b> Endocr Rev. 2014;35(3):341&ndash;375.</li>
+    <li>Baggish AL. et al. <b>Cardiovascular toxicity of illicit anabolic-androgenic steroid use.</b> Circulation. 2017;135(21):1991&ndash;2002.</li>
+    <li>Kicman AT. <b>Pharmacology of anabolic steroids.</b> Br J Pharmacol. 2008;154(3):502&ndash;521.</li>
+    <li>Handelsman DJ. <b>Androgen Physiology, Pharmacology, Use and Misuse.</b> Endotext.</li>
+    <li>Literatura sobre <b>cistatina C vs creatinina</b> na avaliação renal de indivíduos com alta massa muscular.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Faltam ensaios controlados em doses de uso real (barreira ética), então parte do que se sabe vem de estudos observacionais e de usuários. Isso significa <strong>incerteza</strong> &mdash; e monitorar é justamente como se lida com incerteza de forma responsável. <strong>A interpretação e a conduta são sempre do médico.</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Farmacologia Hormonal &middot; Parte 4 de 4 &middot; Série completa</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo e de redução de danos. Não substitui acompanhamento médico. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
