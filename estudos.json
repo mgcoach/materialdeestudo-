@@ -1,5 +1,13 @@
 [
   {
+    "titulo": "Interações Hormonais: como cada composto mexe nos seus marcadores",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Material transversal da Farmacologia Hormonal (educativa / redução de danos): organiza as correlações do tipo 'masteron reduz estradiol' e 'nandrolona reduz DHT' numa MATRIZ COMPOSTO × MARCADOR com 16 compostos e as colunas E2, DHT, SHBG, prolactina, hematócrito e HDL. Explica os 4 mecanismos de interação (competição por enzima, ocupação de transportador, remoção de substrato, ação em outro receptor) e a distinção crítica entre 'reduzir E2 de verdade' (masteron/proviron, fraco) e 'E2 cair por supressão' (turinabol, winstrol, trembolona) — marcando que 'primobolan reduz estradiol' é alegação fraca. Cobre ainda DHT e função sexual, SHBG e a fração livre, prolactina nos 19-nor, cortisol/anticatabolismo, o falso alarme tireoidiano da TBG (T3/T4 totais caem sem doença), IGF-1, hematócrito, lipídios e insulina. Fecha com a tabela 'quando cada mudança é benéfica ou prejudicial conforme o contexto'. Sem doses. Com referências e nota de honestidade científica.",
+    "arquivo": "interacoes-hormonais-marcadores.html"
+  },
+  {
     "titulo": "Perfis 1: Família da Testosterona",
     "categoria": "fisiologia",
     "serie": "Perfis dos Compostos",
@@ -14,6 +22,14 @@
     "data": "Jul · 2026",
     "resumo": "Sub-série Perfis (Parte 2 de 3), complementa a Farmacologia Hormonal (educativa / redução de danos): perfil detalhado composto a composto dos derivados do DHT — masteron (drostanolona), primobolan (metenolona), anavar (oxandrolona), winstrol (estanozolol), proviron (mesterolona), anadrol (oximetolona), superdrol (metildrostanolona), halotestin (fluoximesterona) e DHB (di-hidroboldenona). Cada um com força, libido, efeito no E2, hipertrofia, shape e colaterais. Destaques: por que a família toda arrisca a libido (não gera E2), o mito do 'Anavar inofensivo' (HDL despenca), o risco tendíneo do Winstrol (colágeno), o paradoxo do Anadrol (efeito estrogênico direto que IA não resolve e exame não mostra), a agressividade do Halotestin e a PIP do DHB. Seção de INTERAÇÕES: mito ou verdade (Proviron/Winstrol e SHBG, Masteron como antiestrogênico fraco, dois orais 17aa somando carga hepática, e por que finasterida NÃO ajuda nesta família). Sem doses. Com referências e nota de honestidade científica.",
     "arquivo": "perfil-2-derivados-dht.html"
+  },
+  {
+    "titulo": "Perfis 3: Família 19-nor",
+    "categoria": "fisiologia",
+    "serie": "Perfis dos Compostos",
+    "data": "Jul · 2026",
+    "resumo": "Sub-série Perfis (Parte 3 de 3, final): perfil detalhado da família 19-nor — nandrolona (Deca e NPP), trembolona (acetato, enantato, parabolan), trestolona (MENT) e os designer (metribolona, miboleron, THG, dienolona). Cada um com força, libido, E2, prolactina, hipertrofia, shape e colaterais. Traz o caso 'nandrolona reduz DHT' destrinchado em três mecanismos e a inversão da finasterida (ajuda na testo, inútil no DHT, piora no 19-nor). Sem doses. Com referências e nota de honestidade científica.",
+    "arquivo": "perfil-3-familia-19-nor.html"
   },
   {
     "titulo": "Farmacologia Hormonal 1: Fundamentos e Receptores",

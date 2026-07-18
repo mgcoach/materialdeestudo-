@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interações Hormonais: como cada composto mexe nos seus marcadores | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Interações Hormonais: como cada composto mexe nos seus marcadores | MG COACH">
+    <meta property="og:description" content="Material transversal da Farmacologia Hormonal: como cada composto reconfigura os hormônios e marcadores do próprio corpo — estradiol, DHT, SHBG, prolactina, cortisol, tireoide, IGF-1, hematócrito, lipídios e glicemia. Com matriz composto × marcador e a lógica de quando cada mudança é benéfica ou prejudicial conforme o contexto. Educativo e de redução de danos.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/interacoes-hormonais-marcadores.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interações Hormonais: como cada composto mexe nos seus marcadores | MG COACH">
+    <meta name="twitter:description" content="Matriz composto × marcador: como cada hormônio mexe nos seus.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#ideia">A ideia central</a>
+    <a href="#marcadores">Os marcadores</a>
+    <a href="#matriz">A matriz</a>
+    <a href="#e2">Estradiol</a>
+    <a href="#dht">DHT</a>
+    <a href="#shbg">SHBG</a>
+    <a href="#prolactina">Prolactina</a>
+    <a href="#cortisol">Cortisol</a>
+    <a href="#tireoide">Tireoide e IGF-1</a>
+    <a href="#sangue">Sangue e metabólico</a>
+    <a href="#contexto">Bom ou ruim? Depende</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Farmacologia Hormonal &middot; Material transversal</div>
+  <h1>Interações hormonais: como cada composto mexe nos <span class="em">seus marcadores</span></h1>
+  <p class="lede">"Masteron reduz estradiol", "nandrolona reduz DHT" &mdash; este material organiza <b>todas</b> essas correlações numa <b>matriz composto &times; marcador</b>: E2, DHT, SHBG, prolactina, cortisol, tireoide, IGF-1, hematócrito e lipídios. Com o mecanismo por trás de cada seta e <b>quando a mudança é benéfica ou prejudicial</b> conforme o contexto.</p>
+</div>
+
+<main>
+
+<section id="ideia">
+  <span class="sec-num">01 &mdash; A IDEIA CENTRAL</span>
+  <h2>O composto <span class="accent">reconfigura</span> o sistema</h2>
+  <p class="sec-sub">Ele não age sozinho &mdash; ele muda os seus hormônios.</p>
+  <p>Até aqui olhamos cada composto como um agente isolado: liga no AR, aromatiza ou não, constrói tanto. Mas na prática ele entra num <strong>sistema em funcionamento</strong> e mexe nele: sobe um marcador, derruba outro, ocupa um transportador, ocupa uma enzima. As afirmações que circulam &mdash; "masteron reduz estradiol", "nandrolona reduz DHT" &mdash; são exemplos disso.</p>
+  <p>Este material organiza esse mapa: <strong>composto &rarr; qual marcador ele move &rarr; por qual mecanismo &rarr; e quando isso é bom ou ruim</strong>. Porque quase nenhuma dessas mudanças é boa ou ruim em si: depende do contexto.</p>
+  <div class="callout ok">
+    <span class="tag">Os quatro mecanismos de interação</span>
+    <p>Toda alteração de marcador cai em um destes: <b>1. Competição por enzima</b> (aromatase, 5-AR). <b>2. Ocupação de transportador</b> (SHBG, TBG). <b>3. Remoção de substrato</b> (suprimir a testo tira a matéria-prima de E2 e DHT). <b>4. Ação direta em outro receptor</b> (PR, GR, ER). Se uma afirmação não encaixa em nenhum, provavelmente é mito.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Ressalva de sempre</span>
+    <p>Material <strong>educativo</strong>, sem doses nem protocolos. Descrever mecanismo não é orientar manejo &mdash; interpretar marcador e decidir conduta é do <strong>endocrinologista</strong>.</p>
+  </div>
+</section>
+
+<section id="marcadores">
+  <span class="sec-num">02 &mdash; OS MARCADORES QUE SE MOVEM</span>
+  <h2>O que cada um <span class="accent">significa</span></h2>
+  <p class="sec-sub">Glossário rápido antes da matriz.</p>
+  <div class="grid2">
+    <div class="mini"><h4>Estradiol (E2)</h4><p>Estrogênio principal. Vem da aromatização. Alto: retenção e gino. Baixo: libido, humor, articulação, osso e lipídio pioram.</p></div>
+    <div class="mini"><h4>DHT</h4><p>Androgênio potente da 5-AR. Sustenta função sexual e "sensação androgênica"; também ataca folículo e próstata.</p></div>
+    <div class="mini"><h4>SHBG</h4><p>Transportador. Quanto menor, maior a <strong>fração livre</strong> de todos os hormônios sexuais.</p></div>
+    <div class="mini"><h4>Prolactina</h4><p>Sobe com progestagenia (19-nor). Alta: libido e função sexual caem; contribui para gino.</p></div>
+    <div class="mini"><h4>Cortisol</h4><p>Catabólico. Androgênios competem com ele no receptor glicocorticoide &rarr; efeito anticatabólico.</p></div>
+    <div class="mini"><h4>TBG e tireoide</h4><p>Andrógenos derrubam a TBG (transportador tireoidiano) &rarr; T3/T4 <strong>totais</strong> caem no exame sem disfunção real.</p></div>
+    <div class="mini"><h4>IGF-1</h4><p>Mediador de crescimento. Alguns EAA elevam modestamente, sobretudo orais.</p></div>
+    <div class="mini"><h4>Hematócrito</h4><p>Viscosidade do sangue. Sobe com androgênio &rarr; risco trombótico.</p></div>
+  </div>
+</section>
+
+<section id="matriz">
+  <span class="sec-num">03 &mdash; A MATRIZ COMPOSTO &times; MARCADOR</span>
+  <h2>O <span class="accent">mapa</span> completo</h2>
+  <p class="sec-sub">&uarr; sobe &middot; &darr; desce &middot; = neutro &middot; role para o lado.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Composto</th><th>E2</th><th>DHT</th><th>SHBG</th><th>Prolactina</th><th>Hematócrito</th><th>HDL</th><th>Observação-chave</th></tr></thead>
+      <tbody>
+        <tr><td>Testosterona</td><td>&uarr;&uarr;</td><td>&uarr;&uarr;</td><td>&darr;</td><td>=</td><td>&uarr;&uarr;</td><td>&darr;</td><td>Sobe tudo &mdash; é o substrato das duas enzimas</td></tr>
+        <tr><td>Boldenona</td><td>&uarr;</td><td>= / &darr;</td><td>&darr;</td><td>=</td><td>&uarr;&uarr;&uarr;</td><td>&darr;</td><td>O marcador dela é o hematócrito, não o E2</td></tr>
+        <tr><td>Dianabol</td><td>&uarr;&uarr;&uarr;</td><td>&darr;*</td><td>&darr;&darr;</td><td>=</td><td>&uarr;</td><td>&darr;&darr;</td><td>*DHT própria cai por supressão da testo</td></tr>
+        <tr><td>Turinabol</td><td>&darr;*</td><td>&darr;*</td><td>&darr;&darr;</td><td>=</td><td>&uarr;</td><td>&darr;&darr;</td><td>*Não aromatiza e suprime &rarr; E2 e DHT caem juntos</td></tr>
+        <tr><td>Masteron</td><td>&darr;</td><td>&darr;*</td><td>&darr;</td><td>=</td><td>&uarr;</td><td>&darr;&darr;</td><td>Anti-E2 <b>real mas fraco</b> (competição na aromatase)</td></tr>
+        <tr><td>Primobolan</td><td>= / &darr;*</td><td>&darr;*</td><td>&darr;</td><td>=</td><td>&uarr;</td><td>&darr;</td><td>Anti-E2 é <b>alegação fraca</b> &mdash; o que cai é por supressão</td></tr>
+        <tr><td>Anavar</td><td>&darr;*</td><td>&darr;*</td><td>&darr;&darr;</td><td>=</td><td>&uarr;</td><td>&darr;&darr;&darr;</td><td>Impacto desproporcional no HDL</td></tr>
+        <tr><td>Winstrol</td><td>&darr;*</td><td>&darr;*</td><td>&darr;&darr;&darr;</td><td>=</td><td>&uarr;</td><td>&darr;&darr;&darr;</td><td>O maior derrubador de SHBG</td></tr>
+        <tr><td>Proviron</td><td>&darr;</td><td>&uarr;**</td><td>&darr;&darr;**</td><td>=</td><td>=</td><td>&darr;</td><td>**Liga a SHBG e libera fração livre &mdash; é um modulador</td></tr>
+        <tr><td>Anadrol</td><td>=***</td><td>&darr;*</td><td>&darr;&darr;</td><td>=</td><td>&uarr;&uarr;</td><td>&darr;&darr;&darr;</td><td>***E2 <b>não sobe no exame</b>, mas há efeito estrogênico direto</td></tr>
+        <tr><td>Superdrol</td><td>&darr;*</td><td>&darr;*</td><td>&darr;&darr;</td><td>=</td><td>&uarr;</td><td>&darr;&darr;&darr;</td><td>Lipídios devastados</td></tr>
+        <tr><td>Halotestin</td><td>&darr;*</td><td>&darr;*</td><td>&darr;&darr;</td><td>=</td><td>&uarr;</td><td>&darr;&darr;&darr;</td><td>Muito androgênico sem elevar DHT própria</td></tr>
+        <tr><td>DHB</td><td>&darr;*</td><td>&darr;*</td><td>&darr;</td><td>=</td><td>&uarr;</td><td>&darr;&darr;</td><td>Seco por não aromatizar</td></tr>
+        <tr><td>Nandrolona</td><td>&uarr;</td><td>&darr;&darr;&darr;</td><td>&darr;</td><td>&uarr;&uarr;</td><td>&uarr;</td><td>&darr;</td><td>Aromatiza pouco <b>mas aromatiza</b>; DHT despenca</td></tr>
+        <tr><td>Trembolona</td><td>&darr;&darr;*</td><td>&darr;&darr;*</td><td>&darr;</td><td>&uarr;&uarr;</td><td>&uarr;&uarr;</td><td>&darr;&darr;</td><td>*E2 cai por remoção de substrato, não por ação anti-E2</td></tr>
+        <tr><td>Trestolona (MENT)</td><td>&uarr;&uarr;&uarr;</td><td>&darr;&darr;&darr;</td><td>&darr;</td><td>&uarr;</td><td>&uarr;</td><td>&darr;</td><td>O 19-nor que <b>dispara</b> o E2</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <span class="tag">Leia o asterisco</span>
+    <p><strong>*</strong> marca as quedas que <strong>não são ação do composto</strong>, e sim <strong>remoção de substrato</strong>: ele suprime sua testosterona, e sem testosterona não há matéria-prima para produzir E2 nem DHT. É a distinção mais importante deste material &mdash; e a origem de metade dos mitos.</p>
+  </div>
+</section>
+
+<section id="e2">
+  <span class="sec-num">04 &mdash; ESTRADIOL: QUEM SOBE, QUEM DESCE</span>
+  <h2>Três formas de <span class="accent">mexer</span> no E2</h2>
+  <p class="sec-sub">E só uma delas é "reduzir estradiol" de verdade.</p>
+  <div class="stepwrap">
+    <div class="step"><h4>1. Fornecer substrato (sobe)</h4><p>Testosterona, boldenona, dianabol, MENT: aromatizam &rarr; E2 sobe proporcional à dose.</p></div>
+    <div class="step"><h4>2. Competir com a aromatase (desce de verdade)</h4><p><strong>Masteron e Proviron</strong>: competem pela enzima e ocupam o receptor de estrogênio. Efeito <strong>real, porém fraco</strong> &mdash; não substitui um inibidor de aromatase.</p></div>
+    <div class="step"><h4>3. Remover o substrato (desce por consequência)</h4><p>Turinabol, winstrol, trembolona, superdrol: <strong>não fazem nada contra o estrogênio</strong>. Suprimem sua testosterona, e sem testosterona não há o que aromatizar. O E2 cai por falta de matéria-prima.</p></div>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Sobre "primobolan reduz estradiol"</span>
+    <p>Essa é uma das alegações <strong>mais fracas</strong> que circulam. A metenolona tem, no máximo, atividade antiaromatase muito discreta &mdash; bem menos documentada que a do masteron. O E2 baixo que as pessoas observam com primo é, na maior parte, <strong>consequência da supressão</strong> (mecanismo 3), não uma ação antiestrogênica do composto. Repetir "primo é anti-E2" como se fosse equivalente a masteron é impreciso.</p>
+  </div>
+  <p><b>Quando E2 baixo é bom:</b> reduz retenção subcutânea e melhora o aspecto seco/definido em fase de baixa gordura. <b>Quando é ruim:</b> libido e função erétil caem, humor piora, articulações ressecam, densidade óssea sofre e o <strong>HDL piora ainda mais</strong> &mdash; o estrogênio é protetor cardiovascular. Perseguir "E2 no chão" costuma ser um erro caro.</p>
+</section>
+
+<section id="dht">
+  <span class="sec-num">05 &mdash; DHT: O ANDROGÊNIO QUE SUSTENTA A FUNÇÃO</span>
+  <h2>Quase todo composto <span class="accent">derruba</span> a sua</h2>
+  <p class="sec-sub">E isso explica muito relato de disfunção.</p>
+  <p>A DHT endógena vem da testosterona endógena. Como <strong>todo EAA suprime a testosterona</strong>, quase todos <strong>derrubam a sua DHT</strong> &mdash; a diferença é se o composto <em>repõe</em> androgenicidade equivalente.</p>
+  <ul class="clean">
+    <li><b>Testosterona:</b> a única que <strong>eleva</strong> a DHT (é substrato direto da 5-AR).</li>
+    <li><b>Derivados do DHT:</b> derrubam a DHT <em>endógena</em> (por supressão), mas <strong>substituem</strong> a androgenicidade &mdash; eles próprios são androgênios fortes. Saldo funcional costuma ser aceitável.</li>
+    <li><b>19-nor:</b> derrubam a DHT <strong>e não substituem bem</strong> &mdash; a 5-AR os enfraquece. Saldo androgênico ruim &rarr; é a origem farmacológica do "deca dick".</li>
+    <li><b>Turinabol e orais não-DHT:</b> derrubam a DHT sem grande reposição androgênica &rarr; libido tende a cair.</li>
+  </ul>
+  <p><b>Quando DHT baixa é boa:</b> menos agressão ao folículo capilar e menos estímulo prostático &mdash; relevante para quem tem predisposição à calvície. <b>Quando é ruim:</b> libido, função erétil, disposição e "sensação androgênica" dependem dela. É o clássico trade-off cabelo vs função.</p>
+</section>
+
+<section id="shbg">
+  <span class="sec-num">06 &mdash; SHBG: O MARCADOR MAIS SUBESTIMADO</span>
+  <h2>Muda a leitura de <span class="accent">tudo</span></h2>
+  <p class="sec-sub">Não é um hormônio &mdash; é o que decide quanto hormônio está ativo.</p>
+  <p>Quase todo EAA derruba a SHBG, e os <strong>orais</strong> fazem isso de forma acentuada (winstrol é o campeão). O Proviron é caso à parte: ele <strong>liga fortemente</strong> à SHBG, ocupando-a e liberando os outros hormônios.</p>
+  <p><b>O efeito duplo:</b> SHBG baixa aumenta a fração livre de <strong>testosterona</strong> (bom &mdash; mais hormônio ativo) <em>e</em> a fração livre de <strong>estradiol</strong> (ruim &mdash; mais efeito estrogênico com o mesmo E2 total). Por isso alguém pode ter sintomas estrogênicos com estradiol "normal" no exame.</p>
+  <div class="callout warn">
+    <span class="tag">O impacto no exame</span>
+    <p>Com SHBG derrubada, a <strong>testosterona total perde o sentido</strong> como medida &mdash; ela pode parecer normal enquanto a livre está altíssima. É exatamente por isso que a Parte 4 insiste: peça <strong>testosterona livre + SHBG</strong>, nunca só a total.</p>
+  </div>
+</section>
+
+<section id="prolactina">
+  <span class="sec-num">07 &mdash; PROLACTINA E PROGESTERONA</span>
+  <h2>A porta <span class="accent">extra</span> dos 19-nor</h2>
+  <p class="sec-sub">Onde o manejo da testosterona não funciona.</p>
+  <p>Só os <strong>19-nor</strong> mexem aqui de forma relevante. A atividade progestogênica age direto no receptor de progesterona e eleva prolactina. Consequência: <strong>gino e disfunção sexual podem aparecer com estradiol perfeitamente normal</strong> &mdash; e um inibidor de aromatase não tem onde agir.</p>
+  <p><b>Quando importa:</b> qualquer contexto com nandrolona ou trembolona obriga prolactina no painel. <b>O erro comum:</b> tratar sintoma estrogênico atacando só o E2, deixando o E2 no chão (com todos os prejuízos da seção 04) enquanto a causa real segue intocada.</p>
+</section>
+
+<section id="cortisol">
+  <span class="sec-num">08 &mdash; CORTISOL E O EFEITO ANTICATABÓLICO</span>
+  <h2>O marcador que joga <span class="accent">a favor</span></h2>
+  <p class="sec-sub">Uma das poucas mudanças amplamente benéficas.</p>
+  <p>Androgênios <strong>competem com o cortisol</strong> no receptor glicocorticoide. Isso reduz a sinalização catabólica &mdash; menos degradação proteica, melhor recuperação, mais tolerância a volume de treino e a déficit calórico. É parte importante de por que a recuperação melhora tanto, e de por que a manutenção de massa em cutting fica mais fácil.</p>
+  <div class="callout">
+    <span class="tag">A ponte com o treino</span>
+    <p>Este é o mecanismo que mais dialoga com a sua filosofia de <strong>alta frequência</strong>: recuperar melhor entre sessões permite distribuir estímulo com mais qualidade. Mas atenção &mdash; recuperação acelerada do <strong>músculo</strong> não significa recuperação do <strong>tendão</strong>, que segue no ritmo dele.</p>
+  </div>
+</section>
+
+<section id="tireoide">
+  <span class="sec-num">09 &mdash; TIREOIDE E IGF-1</span>
+  <h2>O <span class="accent">falso alarme</span> tireoidiano</h2>
+  <p class="sec-sub">Um marcador que assusta sem motivo &mdash; e outro que sobe de verdade.</p>
+  <div class="def">
+    <div class="word">TBG e o exame de tireoide</div>
+    <p>Androgênios <strong>reduzem a TBG</strong> (globulina ligadora de tiroxina), o transportador dos hormônios tireoidianos. Resultado: <strong>T4 e T3 totais caem no exame</strong> enquanto as frações <strong>livres</strong> e o TSH seguem normais. Não é hipotireoidismo &mdash; é mudança de transportador, o mesmo fenômeno da SHBG.</p>
+  </div>
+  <p>É por isso que um painel tireoidiano "alterado" nesse contexto precisa ser lido por quem entende o mecanismo &mdash; e por que se pede <strong>T4 livre e T3 livre</strong>, não os totais.</p>
+  <p><b>IGF-1:</b> sobe modestamente com EAA (principalmente orais), contribuindo para o efeito anabólico e para a sinalização em células satélite. Longe do que GH exógeno faz, mas é uma alteração real.</p>
+</section>
+
+<section id="sangue">
+  <span class="sec-num">10 &mdash; SANGUE E METABÓLICO</span>
+  <h2>Onde o risco <span class="accent">mora</span></h2>
+  <p class="sec-sub">Os marcadores que decidem o desfecho de saúde.</p>
+  <ul class="clean">
+    <li><b>Hematócrito &uarr;:</b> androgênios estimulam eritropoiese. Boldenona é a mais notória, testo em dose alta também. <b>Bom:</b> mais transporte de oxigênio, vascularização. <b>Ruim:</b> sangue viscoso &rarr; <strong>risco de trombose</strong>. O benefício estético não compensa o risco quando sobe demais.</li>
+    <li><b>HDL &darr; / LDL e apoB &uarr;:</b> orais 17aa ativam a lipase hepática e destroem o HDL. É o impacto mais consistente de todos, e não tem "lado bom".</li>
+    <li><b>Sensibilidade à insulina:</b> variável. Testo em faixa saudável tende a <strong>melhorar</strong>; orais e GH tendem a <strong>piorar</strong>. Relevante para quem prioriza flexibilidade metabólica.</li>
+    <li><b>Retenção de sódio e água:</b> atividade mineralocorticoide + E2 alto &rarr; pressão arterial sobe. <b>Bom:</b> volume celular e alavanca de força. <b>Ruim:</b> pressão e definição.</li>
+  </ul>
+</section>
+
+<section id="contexto">
+  <span class="sec-num">11 &mdash; BOM OU RUIM? DEPENDE DO CONTEXTO</span>
+  <h2>A mesma mudança, <span class="accent">dois julgamentos</span></h2>
+  <p class="sec-sub">O ponto que amarra o material inteiro.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Mudança</th><th>Pode ser benéfica quando...</th><th>Vira problema quando...</th></tr></thead>
+      <tbody>
+        <tr><td>E2 &darr;</td><td>Busca-se aspecto seco com gordura já baixa</td><td>Libido, humor, articulação, osso e HDL pioram &mdash; "E2 no chão" cobra caro</td></tr>
+        <tr><td>E2 &uarr;</td><td>Sustenta libido, humor, articulação e osso</td><td>Retenção, gino, pressão alta</td></tr>
+        <tr><td>DHT &darr;</td><td>Há predisposição à calvície ou preocupação prostática</td><td>Libido e função erétil despencam (o caso 19-nor)</td></tr>
+        <tr><td>SHBG &darr;</td><td>Mais testosterona livre e ativa</td><td>Mais estradiol livre também; e a testo total perde sentido no exame</td></tr>
+        <tr><td>Cortisol (sinal) &darr;</td><td>Recuperação e retenção de massa em déficit</td><td>Praticamente sempre favorável &mdash; a exceção é confiar demais e treinar acima do que o tendão suporta</td></tr>
+        <tr><td>Hematócrito &uarr;</td><td>Leve: mais transporte de O&#8322; e vascularização</td><td>Alto: viscosidade e <b>risco trombótico</b> &mdash; sem contrapartida que valha</td></tr>
+        <tr><td>Retenção de água &uarr;</td><td>Volume celular, alavanca de força, articulação lubrificada</td><td>Pressão arterial e perda de definição</td></tr>
+        <tr><td>Prolactina &uarr;</td><td>Nunca é desejável</td><td>Libido, função sexual e gino &mdash; e o IA não resolve</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout ok">
+    <span class="tag">A lição de fundo</span>
+    <p>Não existe marcador "bom" ou "ruim" em abstrato &mdash; existe <strong>marcador adequado ao objetivo e à saúde</strong>. O erro mais comum do meio é <strong>otimizar um marcador estético destruindo um marcador de saúde</strong>: derrubar o E2 para ficar seco e sacrificar HDL, articulação e libido no processo. Entender essas trocas é o que permite decidir com lucidez &mdash; junto do médico, que é quem interpreta e ajusta.</p>
+  </div>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">12 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial das interações hormonais.</p>
+  <ol class="key">
+    <li>Toda interação cai em <b>4 mecanismos</b>: competição por enzima, ocupação de transportador, remoção de substrato ou ação em outro receptor.</li>
+    <li><b>"Reduzir E2" tem três significados</b> &mdash; e só masteron/proviron fazem isso <b>de verdade</b> (e fraco). O resto derruba por supressão.</li>
+    <li>"<b>Primobolan reduz estradiol</b>" é alegação <b>fraca</b> &mdash; o que se vê é efeito de supressão, não antiaromatase.</li>
+    <li><b>Quase todo composto derruba sua DHT</b> (por supressão); a diferença é se substitui a androgenicidade &mdash; 19-nor não substitui.</li>
+    <li><b>SHBG</b> muda a leitura de tudo: libera testo livre <b>e</b> estradiol livre; testo total perde sentido.</li>
+    <li><b>Prolactina</b> só entra com 19-nor &mdash; e IA não resolve o que ela causa.</li>
+    <li><b>Cortisol&darr;</b> (anticatabólico) é das poucas mudanças amplamente favoráveis.</li>
+    <li><b>TBG&darr;</b> derruba T3/T4 <b>totais</b> sem doença &mdash; peça as frações livres.</li>
+    <li>Marcador não é bom ou ruim em si: <b>depende do contexto</b> &mdash; e trocar saúde por estética costuma ser mau negócio.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="farmacologia-hormonal-4-exames-monitoramento.html"><span class="lbl">Relacionado</span><span class="ttl">&larr; 4 &middot; Exames e Monitoramento</span></a>
+    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&larr; Biblioteca</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">13 &mdash; REFERÊNCIAS</span>
+  <h2>De onde vem <span class="accent">a evidência</span></h2>
+  <p class="sec-sub">Para aprofundar direto na fonte.</p>
+  <ul class="clean">
+    <li>Kicman AT. <b>Pharmacology of anabolic steroids.</b> Br J Pharmacol. 2008;154(3):502&ndash;521.</li>
+    <li>Pope HG Jr. et al. <b>Adverse health consequences of performance-enhancing drugs: an Endocrine Society scientific statement.</b> Endocr Rev. 2014;35(3):341&ndash;375.</li>
+    <li>Handelsman DJ. <b>Androgen Physiology, Pharmacology, Use and Misuse.</b> Endotext.</li>
+    <li>Literatura sobre <b>androgênios e proteínas transportadoras</b> (SHBG e TBG) e o impacto na interpretação de exames.</li>
+    <li>Literatura sobre <b>lipase hepática e queda de HDL</b> com esteroides 17-alfa-alquilados.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Os mecanismos (aromatase, 5-AR, SHBG/TBG, receptor de progesterona, lipase hepática) são <strong>bem estabelecidos</strong>. Já a <strong>magnitude</strong> de cada seta na matriz é estimativa qualitativa a partir de mecanismo e relato &mdash; faltam ensaios comparativos em doses de uso. Trate as setas como direção, não como medida. E <strong>interpretação de marcador é do médico</strong>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Farmacologia Hormonal &middot; Interações Hormonais e Marcadores</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo e de redução de danos. Não substitui acompanhamento médico. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
