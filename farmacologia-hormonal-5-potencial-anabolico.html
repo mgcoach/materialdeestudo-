@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmacologia Hormonal 5: Potencial Anabólico e Hipertrofia | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Farmacologia Hormonal 5: Potencial Anabólico e Hipertrofia | MG COACH">
+    <meta property="og:description" content="Complemento da série de Farmacologia Hormonal: o potencial anabólico de cada composto e como se traduz em hipertrofia (tecido), força, volume/água, partição de nutrientes e dureza. Mecanismos da hipertrofia por androgênio (MPS, células satélite, mionúcleos, partição, recuperação), tabela comparativa por dimensão, os 'reis' de cada categoria e por que o número engana. Educativo e de redução de danos.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/farmacologia-hormonal-5-potencial-anabolico.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Farmacologia Hormonal 5: Potencial Anabólico e Hipertrofia | MG COACH">
+    <meta name="twitter:description" content="Potencial anabólico dos EAA: hipertrofia, força e responsividade.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#pergunta">A pergunta muda</a>
+    <a href="#mecanismos">Mecanismos da hipertrofia</a>
+    <a href="#dimensoes">As dimensões que importam</a>
+    <a href="#tabela">Tabela de potencial</a>
+    <a href="#familias">Família por família</a>
+    <a href="#reis">Os "reis" de cada categoria</a>
+    <a href="#engana">Por que o número engana</a>
+    <a href="#nao-faz">O que o EAA não faz</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Farmacologia Hormonal &middot; Complemento (Parte 5)</div>
+  <div class="serie-bar">
+    <a href="farmacologia-hormonal-1-fundamentos-receptores.html">1 &middot; Fundamentos e Receptores</a>
+    <a href="farmacologia-hormonal-2-testosterona-dht.html">2 &middot; Testosterona e Derivados do DHT</a>
+    <a href="farmacologia-hormonal-3-19-nor.html">3 &middot; Família 19-nor</a>
+    <a href="farmacologia-hormonal-4-exames-monitoramento.html">4 &middot; Exames e Monitoramento</a>
+    <span class="atual">&#9733; Potencial Anabólico</span>
+  </div>
+  <h1>Potencial anabólico e <span class="em">hipertrofia</span></h1>
+  <p class="lede">O lado que o fisiculturismo mais discute: <b>quanto e como cada composto constrói</b> músculo e força. Os mecanismos da hipertrofia por androgênio (síntese, satélites, mionúcleos, partição, recuperação), a <b>tabela comparativa por dimensão</b> (hipertrofia, força, água, partição, dureza), os "reis" de cada categoria e por que a nota anabólica <b>engana</b>.</p>
+</div>
+
+<main>
+
+<section id="pergunta">
+  <span class="sec-num">01 &mdash; A PERGUNTA MUDA</span>
+  <h2>De "o que faz mal" para <span class="accent">"o que constrói"</span></h2>
+  <p class="sec-sub">O outro lado da mesma moeda farmacológica.</p>
+  <p>As Partes 1&ndash;4 responderam "como o composto se comporta e o que monitorar". Aqui a pergunta é outra: <strong>quanto e como cada um constrói músculo e força</strong>, e por quais mecanismos. É o lado que o fisiculturismo mais discute &mdash; e o mais cercado de exagero.</p>
+  <div class="callout warn">
+    <span class="tag">Três verdades antes de começar</span>
+    <p><b>1.</b> As "notas anabólicas" que circulam são <strong>imprecisas</strong> (nascem de ensaio em rato, como vimos na Parte 1) e não se traduzem direto para humanos. <b>2.</b> A <strong>variação individual é enorme</strong> (genética do AR, idade de treino, resposta pessoal). <b>3.</b> O composto <strong>modula, não substitui</strong> &mdash; treino, comida, sono e constância continuam sendo a base. Sem eles, nenhum hormônio entrega o que promete.</p>
+  </div>
+</section>
+
+<section id="mecanismos">
+  <span class="sec-num">02 &mdash; OS MECANISMOS DA HIPERTROFIA</span>
+  <h2>Como o androgênio <span class="accent">constrói</span></h2>
+  <p class="sec-sub">Vários caminhos ao mesmo tempo &mdash; não é só "síntese proteica".</p>
+  <p>O ganho assistido por EAA não vem de uma via só. É a soma de vários efeitos, e entender isso separa quem sabe de quem repete fórum:</p>
+  <div class="stepwrap">
+    <div class="step"><h4>Mais síntese proteica</h4><p>Via genômica do AR (Parte 1): mais transcrição &rarr; mais síntese de proteína muscular. O motor clássico.</p></div>
+    <div class="step"><h4>Menos degradação (anticatabólico)</h4><p>Competição com o cortisol no receptor glicocorticoide &rarr; menos quebra de proteína. Ganho líquido = síntese &minus; degradação; o EAA mexe nos dois lados.</p></div>
+    <div class="step"><h4>Células satélite e mionúcleos</h4><p>Androgênio favorece proliferação/diferenciação das satélites, que doam núcleos à fibra. Mais mionúcleos = maior teto de crescimento &mdash; e base da "memória muscular" que sustenta ganho depois.</p></div>
+    <div class="step"><h4>Mais densidade de AR</h4><p>Androgênios podem regular para cima o próprio receptor no músculo &mdash; o tecido fica mais "sensível" ao estímulo.</p></div>
+    <div class="step"><h4>Partição de nutrientes</h4><p>Direciona mais substrato para o músculo e menos para gordura (via sensibilidade à insulina, IGF-1 local e antagonismo ao cortisol). É o que permite ganhar magro e perder gordura ao mesmo tempo (recomposição).</p></div>
+    <div class="step"><h4>Glicogênio e água intracelular</h4><p>Mais volume celular: sinal pró-hipertrófico e mais alavanca de força &mdash; mas parte é "cheio" agudo, não tecido novo (importante para ler a balança).</p></div>
+    <div class="step"><h4>Recuperação e sistema nervoso</h4><p>Recupera mais rápido entre sessões (permite mais frequência/qualidade de treino) e melhora o drive neural &mdash; parte do ganho de força é <strong>neural</strong>, mais veloz que o tecido.</p></div>
+  </div>
+  <div class="callout warn">
+    <span class="tag">O elo fraco</span>
+    <p>O músculo cresce mais rápido do que <strong>tendão e articulação</strong> se adaptam &mdash; e alguns compostos (winstrol) pioram o colágeno. Ganhar força rápido demais com tecido conjuntivo atrasado é receita de lesão. A tensão mecânica progressiva continua sendo o estímulo-rei; o EAA acelera a resposta, não dispensa a técnica.</p>
+  </div>
+</section>
+
+<section id="dimensoes">
+  <span class="sec-num">03 &mdash; AS DIMENSÕES QUE IMPORTAM</span>
+  <h2>Não existe "força" <span class="accent">de um número só</span></h2>
+  <p class="sec-sub">Um composto pode ser rei numa dimensão e fraco em outra.</p>
+  <p>Antes da tabela, os eixos que realmente descrevem um composto no mundo da musculação:</p>
+  <div class="grid2">
+    <div class="mini"><h4>Hipertrofia (tecido)</h4><p>Ganho de músculo <strong>real e retido</strong> &mdash; o que fica depois que a água sai. O que mais importa a longo prazo.</p></div>
+    <div class="mini"><h4>Força</h4><p>Soma de tecido + drive neural + alavanca por água/glicogênio. Sobe mais rápido que o tecido.</p></div>
+    <div class="mini"><h4>"Volume" / água</h4><p>Plenitude aguda por glicogênio e retenção. Impressiona na balança e no espelho, mas some &mdash; não é tecido.</p></div>
+    <div class="mini"><h4>Partição / recomposição</h4><p>Capacidade de ganhar magro perdendo (ou mantendo) gordura. Onde alguns compostos brilham.</p></div>
+    <div class="mini"><h4>Dureza / densidade</h4><p>Aspecto "seco e duro", ligado a baixo estrogênio. Estético, sobretudo com gordura baixa.</p></div>
+    <div class="mini"><h4>Retenção pós</h4><p>Quanto do ganho é "mantível" depois &mdash; ligado a quanto era tecido vs água.</p></div>
+  </div>
+</section>
+
+<section id="tabela">
+  <span class="sec-num">04 &mdash; TABELA DE POTENCIAL ANABÓLICO</span>
+  <h2>O <span class="accent">mapa</span> por dimensão</h2>
+  <p class="sec-sub">Estimativas qualitativas (Muito alto &rarr; Baixo) &mdash; role para o lado. Leia junto com o "número engana" da seção 07.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Composto</th><th>Hipertrofia (tecido)</th><th>Força</th><th>"Volume"/água</th><th>Partição</th><th>Dureza</th><th>Destaque</th></tr></thead>
+      <tbody>
+        <tr><td>Testosterona</td><td>Alto&ndash;muito alto</td><td>Alto</td><td>Alto</td><td>Médio&ndash;alto</td><td>Médio</td><td>A base mais completa; dose-dependente</td></tr>
+        <tr><td>Boldenona (EQ)</td><td>Médio</td><td>Médio</td><td>Baixo&ndash;médio</td><td>Médio</td><td>Médio&ndash;alto</td><td>Ganho lento e "limpo"; apetite</td></tr>
+        <tr><td>Dianabol</td><td>Alto <span style="color:var(--text-faint)">(parte água)</span></td><td>Alto</td><td><b>Muito alto</b></td><td>Médio</td><td>Baixo</td><td>Ganho rápido "molhado"; muito é água</td></tr>
+        <tr><td>Turinabol</td><td>Médio</td><td>Médio&ndash;alto</td><td>Baixo</td><td>Médio</td><td>Alto</td><td>Ganho seco e estável, sem retenção</td></tr>
+        <tr><td>Masteron</td><td>Baixo&ndash;médio</td><td>Médio</td><td>Baixo</td><td>Médio</td><td><b>Muito alto</b></td><td>Estético/dureza; não é construtor</td></tr>
+        <tr><td>Primobolan</td><td>Baixo&ndash;médio</td><td>Baixo&ndash;médio</td><td>Baixo</td><td>Médio</td><td>Alto</td><td>Brando e "quality"; lento, bem tolerado</td></tr>
+        <tr><td>Anavar</td><td>Baixo&ndash;médio</td><td>Médio&ndash;alto</td><td>Baixo <span style="color:var(--text-faint)">(água intramuscular)</span></td><td>Médio&ndash;alto</td><td>Alto</td><td>Força e "cheio" sem peso; recomp</td></tr>
+        <tr><td>Winstrol</td><td>Baixo&ndash;médio</td><td><b>Alto</b></td><td>Baixo</td><td>Médio</td><td><b>Muito alto</b></td><td>Força e dureza; resseca articulação</td></tr>
+        <tr><td>Proviron</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Baixo</td><td>Médio</td><td>Modulador, não construtor</td></tr>
+        <tr><td>Anadrol</td><td>Muito alto <span style="color:var(--text-faint)">(muita água)</span></td><td><b>Muito alto</b></td><td><b>Muito alto</b></td><td>Médio</td><td>Baixo</td><td>Peso e força brutais e rápidos; hepatotóxico</td></tr>
+        <tr><td>Superdrol</td><td>Alto</td><td><b>Muito alto</b></td><td>Baixo&ndash;médio</td><td>Alto</td><td>Alto</td><td>Ganho seco e forte; muito tóxico</td></tr>
+        <tr><td>Halotestin</td><td>Baixo</td><td><b>Muito alto</b></td><td>Baixo</td><td>Médio</td><td><b>Muito alto</b></td><td>Rei da força/agressividade; quase sem massa</td></tr>
+        <tr><td>DHB (1-testo)</td><td>Alto</td><td>Alto</td><td>Baixo</td><td>Alto</td><td>Alto</td><td>Forte e seco; dor de aplicação (PIP)</td></tr>
+        <tr><td>Nandrolona (Deca/NPP)</td><td><b>Alto</b></td><td>Médio</td><td>Médio</td><td>Médio</td><td>Baixo&ndash;médio</td><td>Massa "lenta e sólida"; alívio articular</td></tr>
+        <tr><td>Trembolona</td><td><b>Muito alto</b></td><td><b>Muito alto</b></td><td>Baixo</td><td><b>Muito alto</b></td><td><b>Muito alto</b></td><td>Recomposição e dureza excepcionais; sides duros</td></tr>
+        <tr><td>Trestolona (MENT)</td><td><b>Muito alto</b></td><td>Alto</td><td>Alto</td><td>Alto</td><td>Médio</td><td>Potentíssimo; muito estrogênico e supressor</td></tr>
+        <tr><td>Metribolona / miboleron <span style="color:var(--text-faint)">(designer)</span></td><td>Muito alto <span style="color:var(--text-faint)">(no papel)</span></td><td>Muito alto</td><td>Baixo</td><td>Alto</td><td>Alto</td><td>Potência alta, toxicidade proibitiva &mdash; inviável na prática</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="familias">
+  <span class="sec-num">05 &mdash; FAMÍLIA POR FAMÍLIA</span>
+  <h2>O <span class="accent">caráter anabólico</span> de cada grupo</h2>
+  <p class="sec-sub">O que esperar, em uma frase por família.</p>
+  <div class="grid2">
+    <div class="mini"><h4>Família da testosterona</h4><p>O pacote <strong>mais completo e previsível</strong>: hipertrofia real + força + a água do estrogênio. É o padrão contra o qual todo o resto é comparado. Dose-dependente e bem estudada.</p></div>
+    <div class="mini"><h4>Derivados do DHT</h4><p>Em geral <strong>construtores fracos de massa, mas grandes em dureza, força e estética</strong> (Masteron, Winstrol, Halo). As exceções que constroem mais são orais potentes e tóxicos (Superdrol, Anadrol) &mdash; e o DHB injetável.</p></div>
+    <div class="mini"><h4>Família 19-nor</h4><p>Onde mora o <strong>maior potencial de massa e recomposição</strong>: nandrolona (massa sólida e lenta) e, sobretudo, trembolona (partição e dureza de elite). Custo: supressão pesada e sides próprios (Parte 3).</p></div>
+  </div>
+</section>
+
+<section id="reis">
+  <span class="sec-num">06 &mdash; OS "REIS" DE CADA CATEGORIA</span>
+  <h2>Quem é <span class="accent">conhecido por quê</span></h2>
+  <p class="sec-sub">Reputação prática &mdash; sempre com a ressalva da variação individual.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Categoria</th><th>Reputação</th><th>Observação honesta</th></tr></thead>
+      <tbody>
+        <tr><td>Massa "seca" (tecido)</td><td>Trembolona, DHB, Superdrol</td><td>Ganho retido de qualidade, custo de saúde variável</td></tr>
+        <tr><td>Massa + peso rápido</td><td>Anadrol, Dianabol</td><td>Impressionante na balança, boa parte é água</td></tr>
+        <tr><td>Massa sólida e lenta</td><td>Nandrolona, testosterona</td><td>Ganho mais "mantível", mas devagar</td></tr>
+        <tr><td>Força pura</td><td>Halotestin, trembolona, Superdrol</td><td>Muito da força inicial é neural + água</td></tr>
+        <tr><td>Recomposição / partição</td><td>Trembolona (destaque), testo</td><td>Ganhar magro perdendo gordura</td></tr>
+        <tr><td>Dureza / estética</td><td>Masteron, Winstrol, trembolona</td><td>Brilha com gordura corporal já baixa</td></tr>
+        <tr><td>"Quality" brando</td><td>Primobolan, Anavar</td><td>Baixo teto anabólico, boa tolerância</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <span class="tag">Leitura correta</span>
+    <p>"Rei da força" não é "rei da massa": Halotestin dá força e agressividade com <strong>pouquíssimo tecido novo</strong>. E "rei do peso" (Anadrol) não é "rei do tecido" &mdash; muito do ganho evapora quando a água sai. Sempre separe <strong>o que fica</strong> do que é agudo.</p>
+  </div>
+</section>
+
+<section id="engana">
+  <span class="sec-num">07 &mdash; POR QUE O NÚMERO ENGANA</span>
+  <h2>A nota anabólica <span class="accent">não é você</span></h2>
+  <p class="sec-sub">Honestidade científica sobre "potência no papel".</p>
+  <ul class="clean">
+    <li><b>Variação genética:</b> as repetições CAG do receptor androgênico (Parte 1) fazem a mesma dose render diferente em cada pessoa. Não existe resposta "média" garantida.</li>
+    <li><b>Idade de treino:</b> quem tem mais anos de base responde diferente de um iniciante &mdash; e ganha menos "de graça".</li>
+    <li><b>Água &ne; músculo:</b> boa parte do ganho de Anadrol/Dbol na balança é glicogênio e água. Impressiona rápido, sai rápido.</li>
+    <li><b>Força não é só tecido:</b> os primeiros quilos na barra vêm de sistema nervoso e alavanca hídrica, não de fibra nova.</li>
+    <li><b>Notas vêm de rato:</b> o índice anabólico:androgênico nasceu do ensaio de Hershberger &mdash; triagem, não verdade fisiológica humana.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">Regra de ouro</span>
+    <p>Trate as notas como <strong>pista grosseira de tendência</strong>, nunca como promessa. O único "teste" que vale é medir massa magra e desempenho <strong>ao longo do tempo</strong> &mdash; nunca sensação, pump ou peso na balança na primeira semana.</p>
+  </div>
+</section>
+
+<section id="nao-faz">
+  <span class="sec-num">08 &mdash; O QUE O EAA NÃO FAZ</span>
+  <h2>O teto sobe, mas <span class="accent">o trabalho é seu</span></h2>
+  <p class="sec-sub">O recorte que respeita a fisiologia e o bom senso.</p>
+  <p>Por mais potente que seja o composto, ele <strong>modula a resposta</strong> &mdash; não cria músculo do nada. O que continua fazendo o serviço:</p>
+  <ul class="clean">
+    <li><b>Tensão mecânica progressiva:</b> segue sendo o estímulo-rei da hipertrofia. Sem sobrecarga e boas primeiras séries com RIR baixo, não há sinal para o teto maior ser preenchido.</li>
+    <li><b>Comida e sono:</b> síntese proteica precisa de substrato e recuperação. Partição melhor não substitui superávit/déficit adequado nem descanso.</li>
+    <li><b>Constância:</b> o composto acelera a resposta a um bom programa &mdash; ele multiplica o que já existe, e multiplicar zero dá zero.</li>
+    <li><b>Técnica e frequência:</b> recuperar mais rápido só vira ganho se a qualidade de execução e a distribuição de estímulo estiverem no lugar.</li>
+  </ul>
+  <div class="callout ok">
+    <span class="tag">A síntese da série</span>
+    <p>EAA <strong>elevam o teto e a velocidade</strong> do ganho e mudam a partição a favor do músculo. Eles não substituem tensão mecânica, comida, sono e constância &mdash; e cobram um preço de saúde que só faz sentido gerenciar com exame e médico (Parte 4). Conhecimento aqui serve para <strong>decidir com lucidez</strong>, não para vender atalho.</p>
+  </div>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial do potencial anabólico.</p>
+  <ol class="key">
+    <li>Hipertrofia por EAA é <b>multivia</b>: mais síntese, menos degradação, satélites/mionúcleos, partição, água e recuperação.</li>
+    <li>Um composto tem <b>perfis diferentes por dimensão</b> &mdash; rei da força não é rei da massa.</li>
+    <li><b>Testo</b> = pacote completo; <b>DHT-derivados</b> = dureza/força/estética; <b>19-nor</b> = massa e recomposição.</li>
+    <li><b>Trembolona</b> destaca em recomp e dureza; <b>Anadrol/Dbol</b> em peso rápido (muita água); <b>Halo</b> em força pura.</li>
+    <li><b>Água &ne; tecido</b> e <b>força &ne; só músculo</b> (tem componente neural).</li>
+    <li>A <b>nota anabólica engana</b>: variação genética, idade de treino e origem em rato.</li>
+    <li>O EAA <b>eleva o teto</b>; tensão mecânica, comida, sono e constância fazem o trabalho.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="farmacologia-hormonal-4-exames-monitoramento.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 4 &middot; Exames e Monitoramento</span></a>
+    <a href="index.html"><span class="lbl">Fim da série</span><span class="ttl">&larr; Voltar à Biblioteca</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">10 &mdash; REFERÊNCIAS</span>
+  <h2>De onde vem <span class="accent">a evidência</span></h2>
+  <p class="sec-sub">Para aprofundar direto na fonte.</p>
+  <ul class="clean">
+    <li>Bhasin S. et al. <b>The effects of supraphysiologic doses of testosterone on muscle size and strength in normal men.</b> N Engl J Med. 1996;335(1):1&ndash;7.</li>
+    <li>Kadi F. et al. <b>The effects of heavy resistance training and androgens on satellite cells and myonuclei.</b> (literatura de células satélite e mionúcleos com androgênio).</li>
+    <li>Kicman AT. <b>Pharmacology of anabolic steroids.</b> Br J Pharmacol. 2008;154(3):502&ndash;521.</li>
+    <li>Handelsman DJ. <b>Androgen Physiology, Pharmacology, Use and Misuse.</b> Endotext.</li>
+    <li>Referência aplicada de perfis por composto: <b>W. Llewellyn, "Anabolics"</b>, reescrita na voz MG COACH.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Rankings de "potência" são majoritariamente <strong>anedóticos</strong> &mdash; faltam ensaios comparando compostos em doses de uso (barreira ética). As dimensões desta tabela são tendências úteis, não medidas exatas. E o de sempre: <strong>conduta e monitoramento são do médico.</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Farmacologia Hormonal &middot; Complemento &middot; Potencial Anabólico</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo e de redução de danos. Não substitui acompanhamento médico. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
