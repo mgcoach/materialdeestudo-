@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfis 2: Derivados do DHT | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Perfis 2: Derivados do DHT | MG COACH">
+    <meta property="og:description" content="Sub-série Perfis (Parte 2): o perfil detalhado composto a composto dos derivados do DHT — masteron, primobolan, anavar, winstrol, proviron, anadrol, superdrol, halotestin e DHB. Força, libido, efeito no E2, hipertrofia, shape e colaterais, mais as interações específicas da família: mito ou verdade. Educativo e de redução de danos.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/perfil-2-derivados-dht.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Perfis 2: Derivados do DHT | MG COACH">
+    <meta name="twitter:description" content="Perfil detalhado dos derivados do DHT + interações mito ou verdade.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#logica">A lógica da família</a>
+    <a href="#masteron">Masteron</a>
+    <a href="#primobolan">Primobolan</a>
+    <a href="#anavar">Anavar</a>
+    <a href="#winstrol">Winstrol</a>
+    <a href="#proviron">Proviron</a>
+    <a href="#anadrol">Anadrol</a>
+    <a href="#superdrol">Superdrol</a>
+    <a href="#halotestin">Halotestin</a>
+    <a href="#dhb">DHB</a>
+    <a href="#interacoes">Interações: mito ou verdade</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Sub-série Perfis &middot; Parte 2 de 3 &middot; complementa a Farmacologia Hormonal</div>
+  <div class="serie-bar">
+    <a href="perfil-1-familia-testosterona.html">1 &middot; Família da Testosterona</a>
+    <span class="atual">2 &middot; Derivados do DHT</span>
+    <span>3 &middot; Família 19-nor (em breve)</span>
+  </div>
+  <h1>Perfis: derivados do <span class="em">DHT</span></h1>
+  <p class="lede">Composto a composto: <b>masteron, primobolan, anavar, winstrol, proviron, anadrol, superdrol, halotestin e DHB</b> &mdash; força, libido, efeito no <b>E2</b>, hipertrofia, shape e colaterais. Mais as <b>interações específicas da família</b> (mito ou verdade), incluindo o paradoxo do Anadrol e por que a finasterida <b>não</b> ajuda aqui.</p>
+</div>
+
+<main>
+
+<section id="logica">
+  <span class="sec-num">01 &mdash; A LÓGICA QUE UNE A FAMÍLIA</span>
+  <h2>Secos por <span class="accent">construção</span></h2>
+  <p class="sec-sub">Recap antes dos perfis individuais.</p>
+  <p>Todos aqui partem de uma molécula já 5-alfa-reduzida (ou equivalente). Isso fecha a porta da aromatase: <strong>não geram estrogênio</strong>. Daí o padrão da família &mdash; visual seco, sem retenção, mas <strong>mais agressivo com o HDL</strong>, porque falta o efeito protetor do estrogênio. E lembre do detalhe-chave: o DHT puro é inativado no músculo pela 3&alpha;-HSD; estes derivados existem para <strong>resistir a essa inativação</strong>.</p>
+  <div class="callout warn">
+    <span class="tag">Duas ressalvas de sempre</span>
+    <p><b>1.</b> Variação individual domina &mdash; perfil é tendência, não garantia. <b>2.</b> Material <strong>educativo</strong>, sem doses nem protocolos; descrever mecanismo de interação é farmacologia, não receita. Conduta e monitoramento são do médico.</p>
+  </div>
+  <div class="callout">
+    <span class="tag">Um traço transversal</span>
+    <p>Como <strong>nenhum</strong> desta família produz E2, quase todos tendem a <strong>derrubar a libido quando rodados sem uma fonte de estrogênio</strong>. O "seco" tem esse custo funcional &mdash; e é a razão farmacológica por trás da lógica de base de testo (Perfis 1).</p>
+  </div>
+</section>
+
+<section id="masteron">
+  <span class="sec-num">02 &mdash; MASTERON (DROSTANOLONA)</span>
+  <h2>O <span class="accent">estético</span> por excelência</h2>
+  <p class="sec-sub">Dureza e densidade, não massa.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> baixa a média &mdash; não é construtor. O ganho aparente vem da aparência, não de tecido novo.</li>
+    <li><b>Força:</b> média.</li>
+    <li><b>Libido:</b> costuma <strong>aumentar</strong> (androgênio forte + leve queda de E2) &mdash; mas se o E2 cair demais, inverte e despenca.</li>
+    <li><b>E2:</b> <strong>reduz levemente</strong> &mdash; compete com a aromatase e ocupa o receptor de estrogênio.</li>
+    <li><b>Shape:</b> &#9733; o ponto forte: <strong>dureza, densidade e definição</strong>. Brilha com gordura já baixa; em gordura alta, quase não aparece.</li>
+    <li><b>Colaterais:</b> HDL&darr; agressivo, queda de cabelo (bem androgênico, em predispostos), acne, próstata. Baixa hepatotoxicidade (injetável).</li>
+  </ul>
+  <p><b>Ésteres:</b> propionato (curto) e enantato (longo) &mdash; muda só a cinética.</p>
+</section>
+
+<section id="primobolan">
+  <span class="sec-num">03 &mdash; PRIMOBOLAN (METENOLONA)</span>
+  <h2>O mais <span class="accent">brando</span> da família</h2>
+  <p class="sec-sub">"Quality" com teto anabólico baixo.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> baixa a média &mdash; lenta e gradual, mas de boa qualidade e bem retida.</li>
+    <li><b>Força:</b> baixa a média &mdash; não é o forte dele.</li>
+    <li><b>Libido:</b> neutra a levemente positiva; sem base de testo tende a cair (não gera E2).</li>
+    <li><b>E2:</b> <strong>não altera</strong>.</li>
+    <li><b>Shape:</b> seco e "limpo", sem retenção &mdash; melhora gradual, nada dramático.</li>
+    <li><b>Colaterais:</b> dos mais suaves da família &mdash; impacto lipídico relativamente menor, baixa androgenicidade. O oral (acetato) <strong>não é 17aa</strong>, então pouco hepatotóxico, mas tem baixa biodisponibilidade.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Fama vs realidade</span>
+    <p>O Primo tem reputação de "caro e mágico" &mdash; na prática é <strong>brando e lento</strong>. É bem tolerado, e isso é a virtude; esperar transformação dele é decepção quase garantida. Também é dos mais falsificados do mercado.</p>
+  </div>
+</section>
+
+<section id="anavar">
+  <span class="sec-num">04 &mdash; ANAVAR (OXANDROLONA)</span>
+  <h2>Força e <span class="accent">"cheio"</span> sem peso</h2>
+  <p class="sec-sub">O oral de fama mais suave &mdash; e o mito mais teimoso.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> baixa a média &mdash; ganho modesto, mas seco e retido.</li>
+    <li><b>Força:</b> <strong>média a alta</strong>, desproporcional ao tamanho &mdash; efeito marcante sobre creatina/ATP intramuscular.</li>
+    <li><b>Libido:</b> variável; derruba SHBG (sobe testo livre), mas em uso isolado tende a cair.</li>
+    <li><b>E2:</b> <strong>não altera</strong> diretamente.</li>
+    <li><b>Shape:</b> músculo "cheio e duro" com <strong>água intramuscular</strong> (não subcutânea) &mdash; parece maior sem inchar. Vascularização boa.</li>
+    <li><b>Colaterais:</b> &#9733; <strong>derruba HDL de forma marcante mesmo em dose baixa</strong>; hepatotoxicidade baixa-moderada (17aa, mas mais leve); supressão real do eixo.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">O mito do "inofensivo"</span>
+    <p>Anavar carrega a fama de "esteroide leve, até mulher e iniciante usa". Ele é <strong>brando em androgenicidade</strong>, sim &mdash; mas <strong>agressivo com o lipídio</strong> e supressor do eixo. Brando &ne; inofensivo: o risco dele é silencioso e está no exame, não no espelho.</p>
+  </div>
+</section>
+
+<section id="winstrol">
+  <span class="sec-num">05 &mdash; WINSTROL (ESTANOZOLOL)</span>
+  <h2>Força e dureza com <span class="accent">preço articular</span></h2>
+  <p class="sec-sub">O mais "seco" de todos &mdash; literalmente.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> baixa a média &mdash; pouco tecido novo.</li>
+    <li><b>Força:</b> <strong>alta</strong>, com boa resposta neural.</li>
+    <li><b>Libido:</b> tende a <strong>cair</strong>; derruba muito a SHBG (sobe testo livre) mas não gera E2 &mdash; o saldo costuma ser negativo isolado.</li>
+    <li><b>E2:</b> não altera diretamente; ao <strong>derrubar a SHBG</strong>, altera a fração livre de outros hormônios.</li>
+    <li><b>Shape:</b> &#9733; dureza e vascularização extremas, aspecto "de papel" com gordura baixa. Puxa água <strong>para fora</strong> do subcutâneo.</li>
+    <li><b>Colaterais:</b> &#9733; <strong>ressecamento de articulações e tendões</strong> (efeito sobre colágeno e líquido sinovial &mdash; não é hormonal); HDL despenca; hepatotoxicidade moderada-alta; muito androgênico (cabelo/acne).</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">O risco pouco falado</span>
+    <p>A soma "força sobe rápido + colágeno prejudicado + articulação ressecada" é <strong>terreno fértil para lesão de tendão</strong>. É o composto onde o descompasso entre força e tecido conjuntivo (que vimos na Parte 5) fica mais perigoso.</p>
+  </div>
+</section>
+
+<section id="proviron">
+  <span class="sec-num">06 &mdash; PROVIRON (MESTEROLONA)</span>
+  <h2>Modulador, <span class="accent">não construtor</span></h2>
+  <p class="sec-sub">O "tempero" da família.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> <strong>baixa</strong> &mdash; praticamente não constrói. Não é para isso.</li>
+    <li><b>Força:</b> baixa.</li>
+    <li><b>Libido:</b> &#9733; costuma <strong>melhorar bastante</strong> &mdash; liga fortemente a SHBG e libera testo livre, além de ser androgênico.</li>
+    <li><b>E2:</b> <strong>reduz levemente</strong> (competição fraca com a aromatase + ocupa o ER).</li>
+    <li><b>Shape:</b> leve efeito de dureza/densidade, indireto (via mais androgênio livre e menos E2).</li>
+    <li><b>Colaterais:</b> suaves &mdash; não é 17aa (é 1-metil), pouco hepatotóxico; impacto lipídico leve; suprime pouco em comparação.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Como entender o Proviron</span>
+    <p>Pense nele como um <strong>modulador de disponibilidade hormonal</strong>, não como um anabólico. O efeito percebido ("mais androgênico, mais duro, mais libido") vem de <strong>liberar o que já existe</strong> &mdash; não de construir tecido novo.</p>
+  </div>
+</section>
+
+<section id="anadrol">
+  <span class="sec-num">07 &mdash; ANADROL (OXIMETOLONA)</span>
+  <h2>Peso e força <span class="accent">brutais</span> &mdash; e o paradoxo</h2>
+  <p class="sec-sub">O derivado do DHT que se comporta como estrogênico.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> muito alta na balança &mdash; mas <strong>grande parte é água e glicogênio</strong>.</li>
+    <li><b>Força:</b> <strong>muito alta e muito rápida</strong> &mdash; dos mais impressionantes nesse quesito.</li>
+    <li><b>Libido:</b> frequentemente <strong>cai</strong>, apesar do "efeito estrogênico" &mdash; relato comum de disfunção.</li>
+    <li><b>E2:</b> &#9733; <strong>não aromatiza, mas gera efeito estrogênico direto</strong> (age no próprio receptor de estrogênio). O estradiol dosado pode vir <strong>normal</strong> enquanto os sintomas estrogênicos aparecem.</li>
+    <li><b>Shape:</b> muito "molhado" e inchado &mdash; volume visual, péssimo para definição.</li>
+    <li><b>Colaterais:</b> &#9733; <strong>hepatotoxicidade alta</strong>; pressão arterial alta; HDL despenca; dor de cabeça; retenção; letargia.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">A armadilha diagnóstica</span>
+    <p>Como o efeito estrogênico do Anadrol <strong>não passa pela aromatase</strong>, um inibidor de aromatase não resolve, e o exame de estradiol pode não mostrar nada. É o caso clássico de sintoma sem marcador correspondente &mdash; e por isso um ponto que exige médico, não autodiagnóstico.</p>
+  </div>
+</section>
+
+<section id="superdrol">
+  <span class="sec-num">08 &mdash; SUPERDROL (METILDROSTANOLONA)</span>
+  <h2>Ganho seco com <span class="accent">custo alto</span></h2>
+  <p class="sec-sub">Um Masteron metilado &mdash; e muito mais tóxico.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> <strong>alta</strong> e seca &mdash; ganho rápido e de aparência sólida.</li>
+    <li><b>Força:</b> <strong>muito alta</strong>.</li>
+    <li><b>Libido:</b> tende a cair (não gera E2, suprime bem).</li>
+    <li><b>E2:</b> <strong>não altera</strong>.</li>
+    <li><b>Shape:</b> seco, duro, denso &mdash; o "ganho bonito" que dá a fama.</li>
+    <li><b>Colaterais:</b> &#9733; <strong>hepatotoxicidade muito alta</strong>; lipídios devastados; pressão alta; letargia forte; dor lombar (associada ao estresse renal/lipídico). Um dos piores custo-benefício de saúde entre os populares.</li>
+  </ul>
+</section>
+
+<section id="halotestin">
+  <span class="sec-num">09 &mdash; HALOTESTIN (FLUOXIMESTERONA)</span>
+  <h2>Rei da <span class="accent">força</span>, quase nada de massa</h2>
+  <p class="sec-sub">O exemplo mais puro de "força &ne; hipertrofia".</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> <strong>baixa</strong> &mdash; quase não constrói tecido.</li>
+    <li><b>Força:</b> &#9733; <strong>muito alta</strong>, com forte componente neural e de agressividade.</li>
+    <li><b>Libido:</b> variável &mdash; muito androgênico, mas sem E2; costuma dar mais agressividade que libido.</li>
+    <li><b>E2:</b> <strong>não altera</strong>.</li>
+    <li><b>Shape:</b> dureza e densidade extremas; aspecto "granito" com gordura baixa.</li>
+    <li><b>Colaterais:</b> &#9733; <strong>hepatotoxicidade muito alta</strong>; lipídios devastados; <strong>agressividade marcante</strong> (risco comportamental real); cabelo/acne; pressão.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">O colateral que não está no exame</span>
+    <p>A <strong>agressividade</strong> do Halo não é folclore &mdash; é o motivo pelo qual ele é usado em esportes de combate e powerlifting. Alteração de comportamento é um colateral tão real quanto o lipídio, e afeta pessoas ao redor. Vale considerar isso com a mesma seriedade de um marcador de sangue.</p>
+  </div>
+</section>
+
+<section id="dhb">
+  <span class="sec-num">10 &mdash; DHB (DI-HIDROBOLDENONA / 1-TESTOSTERONA)</span>
+  <h2>Anabólico forte e <span class="accent">seco</span></h2>
+  <p class="sec-sub">O injetável potente da família &mdash; com a fama da dor.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> <strong>alta</strong> &mdash; dos melhores construtores "secos" da família.</li>
+    <li><b>Força:</b> alta.</li>
+    <li><b>Libido:</b> variável; sem E2 próprio, tende a cair isolado.</li>
+    <li><b>E2:</b> <strong>não altera</strong>.</li>
+    <li><b>Shape:</b> seco, denso, sem retenção &mdash; ganho de aparência "limpa".</li>
+    <li><b>Colaterais:</b> &#9733; <strong>PIP (dor pós-aplicação) notória</strong>, às vezes incapacitante; lipídios agressivos; suores noturnos e letargia relatados. A versão <strong>metil-1-testosterona oral</strong> é 17aa e das mais hepatotóxicas que existem &mdash; não confunda com o injetável.</li>
+  </ul>
+</section>
+
+<section id="interacoes">
+  <span class="sec-num">11 &mdash; INTERAÇÕES: MITO OU VERDADE</span>
+  <h2>Como um age <span class="accent">no outro</span></h2>
+  <p class="sec-sub">As afirmações específicas desta família &mdash; com veredito e mecanismo.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Afirmação</th><th>Veredito</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td>"Masteron funciona como antiestrogênico"</td><td><b>Parcial</b></td><td>Compete com a aromatase e ocupa o ER &mdash; efeito real mas <b>fraco</b>; não substitui um IA de verdade</td></tr>
+        <tr><td>"Proviron aumenta a potência de outros compostos"</td><td><b>Verdade</b> (mecanismo)</td><td>Liga fortemente a SHBG &rarr; libera fração livre dos outros androgênios. Não é mais anabolismo, é mais <b>disponibilidade</b></td></tr>
+        <tr><td>"Winstrol potencializa o resto do ciclo"</td><td><b>Parcial</b></td><td>Derruba muito a SHBG &rarr; mais testo livre. Real, mas vem junto com o pior custo articular/lipídico</td></tr>
+        <tr><td>"Inibidor de aromatase resolve a gino do Anadrol"</td><td><b>Mito</b></td><td>O efeito é <b>direto no receptor de estrogênio</b>, não via aromatase &mdash; o IA não tem onde agir</td></tr>
+        <tr><td>"Anavar e Primo são seguros porque são leves"</td><td><b>Mito</b></td><td>Leves em <b>androgenicidade</b>; Anavar derruba HDL fortemente e ambos suprimem o eixo</td></tr>
+        <tr><td>"Derivados do DHT bloqueiam a gino"</td><td><b>Parcial</b></td><td>Alguns competem por aromatase/ER; ajuda marginal, nunca proteção confiável</td></tr>
+        <tr><td>"Composto seco 'seca' a água de outro"</td><td><b>Parcial</b></td><td>Não removem a água do outro; o visual muda porque baixam E2 <b>relativo</b> e a proporção do stack muda</td></tr>
+        <tr><td>"Finasterida protege o cabelo com estes"</td><td><b>Mito</b> (aqui)</td><td>Já são 5-alfa-reduzidos ou não dependem da 5-AR &mdash; <b>não há o que a finasterida bloqueie</b>. Diferente do caso da testo</td></tr>
+        <tr><td>"Empilhar dois orais 17aa só soma o efeito"</td><td><b>Mito perigoso</b></td><td>A carga hepática e lipídica <b>se compõe</b>; é onde o risco cresce mais rápido que o benefício</td></tr>
+        <tr><td>"DHB é 'boldenona forte'"</td><td><b>Parcial</b></td><td>É o metabólito 5-alfa da boldenona &mdash; parentesco real, mas comportamento distinto (não aromatiza, muito mais anabólico)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">
+    <span class="tag">Os três mecanismos, de novo</span>
+    <p>Igual em Perfis 1: interação real cai em <strong>competição por enzima</strong>, <strong>deslocamento de SHBG</strong> ou <strong>cinética</strong>. O que muda aqui é que a família toda mexe muito em <strong>SHBG</strong> &mdash; por isso tantas afirmações de "potencializa o ciclo" têm um fundo verdadeiro, mas descrevem <strong>disponibilidade</strong>, não potência anabólica nova.</p>
+  </div>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">12 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial dos perfis do DHT.</p>
+  <ol class="key">
+    <li>Nenhum gera E2 &rarr; secos, mas com <b>libido em risco</b> isolados e <b>HDL agressivo</b>.</li>
+    <li><b>Masteron</b> = dureza (E2 levemente&darr;); <b>Primobolan</b> = brando e lento; <b>Proviron</b> = modulador de SHBG, não construtor.</li>
+    <li><b>Anavar</b> = força e "cheio" sem peso, mas <b>HDL despenca</b> &mdash; brando &ne; inofensivo.</li>
+    <li><b>Winstrol</b> = força e dureza extremas, com <b>risco tendíneo</b> (colágeno).</li>
+    <li><b>Anadrol</b> = paradoxo: efeito estrogênico <b>direto</b>, que IA não resolve e exame pode não mostrar.</li>
+    <li><b>Superdrol / Halotestin</b> = os mais tóxicos; Halo é rei da força com quase nenhuma massa (e agressividade real).</li>
+    <li><b>DHB</b> = forte e seco, PIP notória; a versão oral metilada é outra coisa (muito hepatotóxica).</li>
+    <li><b>Finasterida não ajuda aqui</b> &mdash; a regra da testo não se aplica.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="perfil-1-familia-testosterona.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 1 &middot; Família da Testosterona</span></a>
+    <a href="index.html"><span class="lbl">Próximo da sub-série</span><span class="ttl">3 &middot; Família 19-nor (em breve)</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">13 &mdash; REFERÊNCIAS</span>
+  <h2>De onde vem <span class="accent">a evidência</span></h2>
+  <p class="sec-sub">Para aprofundar direto na fonte.</p>
+  <ul class="clean">
+    <li>Kicman AT. <b>Pharmacology of anabolic steroids.</b> Br J Pharmacol. 2008;154(3):502&ndash;521.</li>
+    <li>Pope HG Jr. et al. <b>Adverse health consequences of performance-enhancing drugs: an Endocrine Society scientific statement.</b> Endocr Rev. 2014;35(3):341&ndash;375.</li>
+    <li>Handelsman DJ. <b>Androgen Physiology, Pharmacology, Use and Misuse.</b> Endotext.</li>
+    <li>Literatura sobre <b>oxandrolona e perfil lipídico</b> (queda de HDL mesmo em doses baixas) e sobre <b>hepatotoxicidade de 17-alfa-alquilados</b>.</li>
+    <li>Referência aplicada de perfis e interações: <b>W. Llewellyn, "Anabolics"</b>, reescrita na voz MG COACH.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Perfis por dimensão e interações são em boa parte <strong>anedóticos</strong> &mdash; faltam ensaios comparando compostos e combinações em doses de uso. Onde há mecanismo estabelecido (aromatase, SHBG, 17aa/fígado, colágeno), a base é sólida; onde é relato de fórum, trate como hipótese. <strong>Conduta e monitoramento são do médico.</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Sub-série Perfis &middot; Parte 2 de 3 &middot; Derivados do DHT</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo e de redução de danos. Não substitui acompanhamento médico. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
