@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmacologia Hormonal 6: Além dos EAA (GH, Insulina, Peptídeos, Tireoide, SARMs) | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Farmacologia Hormonal 6: Além dos EAA (GH, Insulina, Peptídeos, Tireoide, SARMs) | MG COACH">
+    <meta property="og:description" content="Complemento 2 da série de Farmacologia Hormonal: os compostos não-EAA do fisiculturismo — GH, IGF-1, insulina, peptídeos (secretagogos e reparo), tireoide (T3/T4) e SARMs. Mecanismo, potencial, responsividade e risco de cada classe, com alerta reforçado para insulina. Educativo e de redução de danos.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/farmacologia-hormonal-6-alem-dos-eaa.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Farmacologia Hormonal 6: Além dos EAA (GH, Insulina, Peptídeos, Tireoide, SARMs) | MG COACH">
+    <meta name="twitter:description" content="GH, IGF-1, insulina, peptídeos, tireoide e SARMs — mecanismo, potencial e risco.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#muda">O que muda</a>
+    <a href="#gh">GH</a>
+    <a href="#igf">IGF-1</a>
+    <a href="#insulina">Insulina</a>
+    <a href="#peptideos">Peptídeos</a>
+    <a href="#tireoide">Tireoide</a>
+    <a href="#sarms">SARMs</a>
+    <a href="#tabela">Visão geral</a>
+    <a href="#mitos">Padrões e mitos</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Farmacologia Hormonal &middot; Complemento 2</div>
+  <div class="serie-bar">
+    <a href="farmacologia-hormonal-1-fundamentos-receptores.html">1 &middot; Fundamentos</a>
+    <a href="farmacologia-hormonal-2-testosterona-dht.html">2 &middot; Testo e DHT</a>
+    <a href="farmacologia-hormonal-3-19-nor.html">3 &middot; 19-nor</a>
+    <a href="farmacologia-hormonal-4-exames-monitoramento.html">4 &middot; Exames</a>
+    <a href="farmacologia-hormonal-5-potencial-anabolico.html">5 &middot; Potencial Anabólico</a>
+    <span class="atual">&#9733; Além dos EAA</span>
+  </div>
+  <h1>Além dos <span class="em">EAA</span></h1>
+  <p class="lede">Os compostos não-androgênicos do fisiculturismo: <b>GH, IGF-1, insulina, peptídeos</b> (secretagogos e reparo), <b>tireoide</b> (T3/T4) e <b>SARMs</b>. Mecanismo, potencial e risco de cada classe &mdash; com alerta reforçado para a <b>insulina</b>, o único da lista com risco agudo de morte.</p>
+</div>
+
+<main>
+
+<section id="muda">
+  <span class="sec-num">01 &mdash; O QUE MUDA FORA DOS EAA</span>
+  <h2>Outros <span class="accent">receptores</span>, outros riscos</h2>
+  <p class="sec-sub">Sair do receptor androgênico muda toda a lógica.</p>
+  <p>Tudo nas Partes 1&ndash;5 girava em torno do <strong>receptor androgênico</strong>. Aqui entram classes que agem por vias completamente diferentes: receptor de GH, de IGF-1, de insulina, de hormônio tireoidiano, além dos SARMs (que <em>modulam</em> o AR de forma seletiva). Três avisos valem para o material inteiro:</p>
+  <ol class="key">
+    <li><b>Nem "não-esteroide" significa "mais seguro".</b> Alguns destes (insulina, GH) têm riscos <b>maiores</b> que muitos EAA &mdash; incluindo risco agudo de morte.</li>
+    <li><b>São, em geral, menos estudados</b> e mais sujeitos a produto adulterado (peptídeos e SARMs de mercado cinza).</li>
+    <li><b>O de sempre:</b> material educativo, sem doses nem protocolos. Conduta e monitoramento são do médico.</li>
+  </ol>
+</section>
+
+<section id="gh">
+  <span class="sec-num">02 &mdash; GH (HORMÔNIO DO CRESCIMENTO)</span>
+  <h2>Mais <span class="accent">recuperação</span> que massa</h2>
+  <p class="sec-sub">O hormônio mais superestimado como construtor direto.</p>
+  <p>O GH age no <strong>receptor de GH</strong> e, principalmente, faz o fígado produzir <strong>IGF-1</strong> (o mensageiro que realmente constrói). Tem ainda efeito <strong>direto de lipólise</strong> (queima de gordura) e estímulo a <strong>colágeno/tecido conjuntivo</strong>.</p>
+  <div class="grid2">
+    <div class="mini"><h4>O que entrega</h4><p>Perda de gordura, recuperação, saúde de tendão/articulação/pele e um ganho muscular <strong>modesto</strong> quando isolado. Não é "monstro de massa" sozinho &mdash; brilha mais em composição corporal e recuperação.</p></div>
+    <div class="mini"><h4>Riscos</h4><p>Alterações acromegálicas (crescimento de extremidades, mandíbula), crescimento de órgãos e do intestino (o "GH gut"), <strong>resistência à insulina/diabetes</strong>, síndrome do túnel do carpo, edema e preocupação com promoção de tumores pré-existentes.</p></div>
+  </div>
+  <div class="callout">
+    <span class="tag">Leitura honesta</span>
+    <p>A fama de "GH transforma" vem mais de doses altíssimas combinadas com insulina e EAA (o visual "distendido" do fisiculturismo pesado) do que do GH isolado. Sozinho, o efeito é lento e sutil.</p>
+  </div>
+</section>
+
+<section id="igf">
+  <span class="sec-num">03 &mdash; IGF-1 E VARIANTES</span>
+  <h2>O <span class="accent">mensageiro</span> do crescimento</h2>
+  <p class="sec-sub">Onde a promessa de hiperplasia mora &mdash; e onde a evidência é fraca.</p>
+  <p>O IGF-1 age no <strong>receptor de IGF-1</strong> &rarr; via PI3K/Akt/mTOR &rarr; síntese proteica, além de estimular <strong>células satélite</strong>. Daí a hipótese de <strong>hiperplasia</strong> (aumentar o número de fibras), popular mas <strong>controversa em humanos</strong>. A variante <em class="term">IGF-1 LR3</em> é modificada para durar mais no sangue (resiste às proteínas ligadoras).</p>
+  <div class="callout warn">
+    <span class="tag">Hype vs evidência</span>
+    <p>O ganho dramático prometido pelo IGF-1/LR3 é <strong>majoritariamente anedótico</strong>. Riscos reais: <strong>hipoglicemia</strong> (efeito insulina-símile), crescimento de órgãos e preocupação teórica com câncer. Muita promessa, pouca prova controlada.</p>
+  </div>
+</section>
+
+<section id="insulina">
+  <span class="sec-num">04 &mdash; INSULINA</span>
+  <h2>O mais <span class="accent">perigoso</span> da lista</h2>
+  <p class="sec-sub">Potente anabólico &mdash; e risco agudo de morte.</p>
+  <p>A insulina é fortemente <strong>anabólica e anticatabólica</strong>: empurra glicose e aminoácidos para dentro da célula, freia a quebra de proteína e enche o glicogênio (a "plenitude"). É por isso que aparece no fisiculturismo pesado, quase sempre junto de GH e carboidrato.</p>
+  <div class="callout warn">
+    <span class="tag">Alerta &mdash; leia com seriedade</span>
+    <p>A insulina exógena é <strong>um dos pouquíssimos compostos com risco agudo de MORTE</strong> no meio. Um erro leva à <strong>hipoglicemia grave</strong>: confusão, convulsão, coma, dano cerebral irreversível e óbito &mdash; às vezes em minutos, às vezes durante o sono. Não existe "margem de erro" confortável. É território estritamente médico, e este material <strong>não</strong> traz nenhuma orientação de uso justamente por isso. Se o assunto interessa, a conversa certa é com endocrinologista &mdash; não com fórum.</p>
+  </div>
+</section>
+
+<section id="peptideos">
+  <span class="sec-num">05 &mdash; PEPTÍDEOS</span>
+  <h2>Secretagogos e <span class="accent">reparo</span></h2>
+  <p class="sec-sub">A classe mais heterogênea &mdash; e a mais adulterada.</p>
+  <h3>Secretagogos de GH (fazem o corpo liberar o próprio GH)</h3>
+  <div class="grid2">
+    <div class="mini"><h4>Análogos de GHRH</h4><p>Sermorelina, CJC-1295, tesamorelina (esta, aprovada para lipodistrofia do HIV). Estimulam a hipófise a liberar GH de forma mais <strong>pulsátil/fisiológica</strong>.</p></div>
+    <div class="mini"><h4>GHRPs / miméticos de grelina</h4><p>Ipamorelina (seletiva), GHRP-2 e GHRP-6 (este dá muita fome), hexarelina. Amplificam o pulso de GH; alguns elevam prolactina/cortisol.</p></div>
+    <div class="mini"><h4>MK-677 (ibutamoren)</h4><p>Secretagogo <strong>oral</strong>: sobe GH/IGF-1. Efeitos: apetite, retenção de água, letargia e <strong>resistência à insulina</strong>. Vendido erroneamente junto de SARMs &mdash; não é um SARM.</p></div>
+    <div class="mini"><h4>Reparo (BPC-157, TB-500)</h4><p>Populares para recuperação e lesão. Mas a evidência é quase toda <strong>animal/pré-clínica</strong>; dados humanos são escassos, e o mercado é não-regulado. Promessa alta, prova baixa.</p></div>
+  </div>
+  <div class="callout warn">
+    <span class="tag">O problema transversal</span>
+    <p>Peptídeos vêm quase todos de mercado cinza: <strong>pureza, dosagem e identidade incertas</strong>. Boa parte do "resultado" ou "efeito colateral" pode vir de contaminação ou subdosagem, não do peptídeo em si.</p>
+  </div>
+</section>
+
+<section id="tireoide">
+  <span class="sec-num">06 &mdash; TIREOIDE (T3 / T4)</span>
+  <h2>Acelera o <span class="accent">metabolismo</span> &mdash; e queima músculo junto</h2>
+  <p class="sec-sub">Ferramenta de perda de gordura com preço.</p>
+  <p>T3 (mais potente) e T4 elevam a <strong>taxa metabólica</strong> pela ação no receptor tireoidiano, aumentando o gasto energético &mdash; usados para acelerar perda de gordura, sobretudo em pré-competição.</p>
+  <div class="callout warn">
+    <span class="tag">Os custos</span>
+    <p>O metabolismo acelerado <strong>também queima músculo</strong> (catabolismo), não só gordura. Some a isso <strong>taquicardia e arritmia</strong>, estresse cardíaco, perda óssea e <strong>supressão do eixo tireoidiano natural</strong> (com risco de rebote ao parar). Usar hormônio tireoidiano sem disfunção diagnosticada é mexer num sistema que se auto-regula &mdash; conduta médica, sempre.</p>
+  </div>
+</section>
+
+<section id="sarms">
+  <span class="sec-num">07 &mdash; SARMs</span>
+  <h2>Nem tão <span class="accent">seletivos</span>, nem tão seguros</h2>
+  <p class="sec-sub">A promessa e a realidade dos moduladores seletivos do AR.</p>
+  <p>Os <em class="term">SARMs</em> (moduladores seletivos do receptor androgênico) são não-esteroides, geralmente orais, desenhados para agir de forma <strong>seletiva</strong>: anabólicos em músculo e osso, com menos ação em próstata, pele e couro cabeludo. Na teoria, "músculo sem os androgênicos". Na prática, a seletividade é <strong>parcial</strong>.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Composto</th><th>Perfil</th><th>Realidade</th></tr></thead>
+      <tbody>
+        <tr><td>Ostarina (MK-2866)</td><td>Dos mais brandos; estudado clinicamente</td><td>Suprime o eixo em doses maiores; ainda mexe em lipídios</td></tr>
+        <tr><td>Ligandrol (LGD-4033)</td><td>Mais forte, ganho de massa</td><td>Supressão marcante do eixo; queda de HDL</td></tr>
+        <tr><td>Testolona (RAD-140)</td><td>Potente, "quase-esteroide"</td><td>Bem supressor; relatos de estresse hepático</td></tr>
+        <tr><td>Andarina (S-4) / S-23</td><td>Secos, densidade</td><td>S-4 dá alteração visual; S-23 muito supressor</td></tr>
+        <tr><td>YK-11</td><td>Vendido como SARM</td><td>Na verdade é esteroidal e liga-se à via da miostatina &mdash; não é SARM "puro"</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Dois enganos perigosos</span>
+    <p><b>1. "SARM não tem colateral":</b> falso &mdash; suprimem o eixo HPG, mexem em lipídios e fígado. Não são "esteroide sem risco". <b>2. Impostores vendidos como SARM:</b> a <strong>Cardarina (GW-501516)</strong> é um agonista PPAR&delta; (não SARM) com <strong>sinal de câncer</strong> em estudos que a tiraram do desenvolvimento; o SR9009 e o MK-677 também não são SARMs. Rótulo de loja não é farmacologia &mdash; e produtos são frequentemente adulterados ou subdosados.</p>
+  </div>
+</section>
+
+<section id="tabela">
+  <span class="sec-num">08 &mdash; VISÃO GERAL</span>
+  <h2>O <span class="accent">mapa</span> das classes não-EAA</h2>
+  <p class="sec-sub">Mecanismo, promessa e risco-chave &mdash; role para o lado.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Classe</th><th>Age via</th><th>O que promete</th><th>Risco-chave</th></tr></thead>
+      <tbody>
+        <tr><td>GH</td><td>Receptor de GH &rarr; IGF-1 + lipólise</td><td>Gordura&darr;, recuperação, tecido conjuntivo</td><td>Acromegalia, "GH gut", resistência à insulina</td></tr>
+        <tr><td>IGF-1 / LR3</td><td>Receptor de IGF-1 (Akt/mTOR)</td><td>Síntese proteica, hiperplasia (controversa)</td><td>Hipoglicemia; câncer (teórico); evidência fraca</td></tr>
+        <tr><td>Insulina</td><td>Receptor de insulina</td><td>Partição, plenitude, anticatabolismo</td><td><b>Hipoglicemia &rarr; coma/morte</b> (risco agudo)</td></tr>
+        <tr><td>Peptídeos (secretagogos)</td><td>Estimulam GH endógeno</td><td>GH "fisiológico", apetite, recuperação</td><td>Resistência à insulina; pureza incerta</td></tr>
+        <tr><td>Peptídeos (reparo)</td><td>Vias de cicatrização (pré-clínico)</td><td>Recuperação de lesão</td><td>Evidência humana escassa; mercado cinza</td></tr>
+        <tr><td>Tireoide (T3/T4)</td><td>Receptor tireoidiano</td><td>Perda de gordura acelerada</td><td>Catabolismo muscular, arritmia, supressão do eixo</td></tr>
+        <tr><td>SARMs</td><td>Modulação seletiva do AR</td><td>Anabolismo com menos androgênicos</td><td>Suprimem eixo, lipídios/fígado; adulteração</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="mitos">
+  <span class="sec-num">09 &mdash; PADRÕES E MITOS</span>
+  <h2>O que a lista <span class="accent">inteira</span> ensina</h2>
+  <p class="sec-sub">Honestidade científica sobre os "não-EAA".</p>
+  <ul class="clean">
+    <li><b>"Não-esteroide = mais seguro":</b> falso. Insulina e GH têm riscos próprios sérios; SARMs não são isentos.</li>
+    <li><b>"SARM é esteroide sem colateral":</b> falso &mdash; suprimem o eixo e mexem em lipídios/fígado.</li>
+    <li><b>"Peptídeo de reparo cura lesão":</b> a evidência humana é fraca; a maioria é dado animal e produto não-regulado.</li>
+    <li><b>"GH transforma sozinho":</b> não &mdash; o efeito isolado é modesto e lento; o visual pesado vem da combinação com insulina/EAA.</li>
+    <li><b>Impostores:</b> Cardarina, SR9009 e MK-677 são vendidos como SARM e não são &mdash; a Cardarina inclusive tem sinal de câncer.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">O ponto que mais importa</span>
+    <p>Estas classes agregam <strong>risco novo e menos previsível</strong> sobre o que já vimos nos EAA &mdash; e a insulina, em especial, é a única com risco de matar por erro isolado. Conhecimento aqui serve para <strong>entender e respeitar o perigo</strong>, e para levar perguntas melhores ao médico.</p>
+  </div>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">10 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial do "além dos EAA".</p>
+  <ol class="key">
+    <li>Estas classes agem <b>fora do AR</b> (GH, IGF, insulina, tireoide) ou o <b>modulam</b> (SARMs).</li>
+    <li><b>GH</b> = recuperação e gordura, massa modesta sozinho; risco de acromegalia/resistência à insulina.</li>
+    <li><b>IGF-1/LR3</b> = muita promessa (hiperplasia), pouca prova; risco de hipoglicemia.</li>
+    <li><b>Insulina</b> = potente e <b>o mais perigoso</b>: hipoglicemia pode matar.</li>
+    <li><b>Peptídeos</b> = secretagogos (GH endógeno) e reparo (evidência fraca); mercado adulterado.</li>
+    <li><b>Tireoide</b> = queima gordura e músculo; arritmia e supressão do eixo.</li>
+    <li><b>SARMs</b> = não são "esteroide sem colateral"; cuidado com impostores (Cardarina/câncer).</li>
+  </ol>
+  <div class="nav-next">
+    <a href="farmacologia-hormonal-5-potencial-anabolico.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 5 &middot; Potencial Anabólico</span></a>
+    <a href="index.html"><span class="lbl">Biblioteca</span><span class="ttl">&larr; Voltar</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">11 &mdash; REFERÊNCIAS</span>
+  <h2>De onde vem <span class="accent">a evidência</span></h2>
+  <p class="sec-sub">Para aprofundar direto na fonte.</p>
+  <ul class="clean">
+    <li>Pope HG Jr. et al. <b>Adverse health consequences of performance-enhancing drugs: an Endocrine Society scientific statement.</b> Endocr Rev. 2014;35(3):341&ndash;375.</li>
+    <li>Liu H. et al. <b>Systematic review: the effects of growth hormone on athletic performance.</b> Ann Intern Med. 2008;148(10):747&ndash;758.</li>
+    <li>Literatura sobre <b>SARMs</b>: revisões de farmacologia e de supressão do eixo (ex.: enobosarm/ostarina em ensaios clínicos).</li>
+    <li>Alerta regulatório sobre <b>GW-501516 (cardarina)</b> e sinal de carcinogênese em estudos pré-clínicos.</li>
+    <li>Literatura sobre <b>hipoglicemia por insulina exógena</b> em não-diabéticos (relatos de morbimortalidade).</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Fora do GH e da tireoide (bem estudados na medicina), boa parte destes compostos no contexto de performance tem <strong>evidência humana limitada</strong> &mdash; e peptídeos/SARMs somam o problema da adulteração. Trate promessas com ceticismo. <strong>Conduta e monitoramento são do médico.</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Farmacologia Hormonal &middot; Complemento 2 &middot; Além dos EAA</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo e de redução de danos. Não substitui acompanhamento médico. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
