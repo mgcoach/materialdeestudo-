@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigos Comentados 2: Sobrecarga Progressiva | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Artigos Comentados 2: Sobrecarga Progressiva | MG COACH">
+    <meta property="og:description" content="Análise didática de dois estudos sobre como progredir: Plotkin et al. (PeerJ, 2022) comparando progressão de carga vs. de repetições, e Enes et al. (MSSE, 2024) testando progressão de séries semanais. Métodos, resultados, leitura crítica e aplicação prática.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/artigos-2-sobrecarga-progressiva.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Artigos Comentados 2: Sobrecarga Progressiva | MG COACH">
+    <meta name="twitter:description" content="Carga, repetições ou séries? Dois estudos sobre como progredir.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#pergunta">A pergunta</a>
+    <a href="#resumo-rapido">Resposta rápida</a>
+    <a href="#plotkin">Estudo 1: carga vs reps</a>
+    <a href="#plotkin-como">Como foi feito</a>
+    <a href="#plotkin-achou">O que encontrou</a>
+    <a href="#discordancia">A discordância instrutiva</a>
+    <a href="#enes">Estudo 2: progressão de séries</a>
+    <a href="#enes-como">Como foi feito</a>
+    <a href="#enes-achou">O que encontrou</a>
+    <a href="#juntando">Juntando os dois</a>
+    <a href="#pratica">O que muda na prática</a>
+    <a href="#limites">Limitações</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Artigos Comentados &middot; Parte 2</div>
+  <div class="serie-bar">
+    <a href="artigos-1-proximidade-da-falha.html">1 &middot; Proximidade da Falha</a>
+    <span class="atual">2 &middot; Sobrecarga Progressiva</span>
+  </div>
+  <h1>Sobrecarga <span class="em">progressiva</span></h1>
+  <p class="lede">Dois estudos sobre <b>como progredir</b>: Plotkin et al. (<i>PeerJ</i>, 2022) comparando progressão de <b>carga vs. repetições</b>, e Enes et al. (<i>MSSE</i>, 2024) testando progressão de <b>séries semanais</b> &mdash; com um grupo chegando a 52 séries por semana. Métodos, resultados, uma aula embutida de leitura crítica e o que muda no treino.</p>
+</div>
+
+<main>
+
+<section id="pergunta">
+  <span class="sec-num">01 &mdash; A PERGUNTA</span>
+  <h2>Progredir <span class="accent">como?</span></h2>
+  <p class="sec-sub">A sequência natural do material anterior.</p>
+  <p>No material 1 vimos que o estímulo não exige a falha &mdash; basta chegar perto dela. Mas isso responde <em>quanto esforço</em>, não <em>como avançar ao longo do tempo</em>. E aqui mora o princípio mais repetido e menos examinado da musculação: a <strong>sobrecarga progressiva</strong>.</p>
+  <p>Na prática, "progredir" virou sinônimo de <strong>colocar mais peso na barra</strong>. Mas a demanda pode crescer por outros caminhos: mais repetições com a mesma carga, ou mais séries na semana. Esses dois estudos testam exatamente essas alternativas.</p>
+  <div class="callout">
+    <span class="tag">Por que a pergunta é boa</span>
+    <p>Aumentar carga indefinidamente é impossível &mdash; a progressão trava, faltam anilhas menores, e o risco técnico cresce. Se outras vias funcionarem igual, o treinamento ganha <strong>flexibilidade</strong> sem perder resultado.</p>
+  </div>
+</section>
+
+<section id="resumo-rapido">
+  <span class="sec-num">02 &mdash; A RESPOSTA RÁPIDA</span>
+  <h2>Se você ler <span class="accent">só isto</span></h2>
+  <p class="sec-sub">O essencial dos dois estudos.</p>
+  <div class="callout ok">
+    <span class="tag">Em duas frases</span>
+    <p><b>1.</b> Progredir <strong>carga</strong> ou <strong>repetições</strong> produz hipertrofia e força semelhantes &mdash; o que importa é que a demanda aumente, não <em>qual</em> variável você mexe. <b>2.</b> Progredir o <strong>número de séries semanais</strong> gerou <strong>mais força</strong> que manter volume fixo, com um sinal sugestivo (não conclusivo) de benefício também para hipertrofia.</p>
+  </div>
+</section>
+
+<section id="plotkin">
+  <span class="sec-num">03 &mdash; ESTUDO 1: CARGA VS. REPETIÇÕES</span>
+  <h2>Sobrecarga progressiva <span class="accent">sem</span> progredir carga?</h2>
+  <p class="sec-sub">Plotkin, Coleman, Van Every, Maldonado, Oberlin, Israetel, Feather, Alto, Vigotsky e Schoenfeld &middot; <i>PeerJ</i>, 2022.</p>
+  <p>Título original: <i>Progressive overload without progressing load? The effects of load or repetition progression on muscular adaptations</i>. Em português: <strong>"Sobrecarga progressiva sem aumento progressivo da carga? Os efeitos da progressão de carga ou de repetições nas adaptações musculares"</strong>.</p>
+  <p>O título é uma provocação deliberada: se sobrecarga progressiva significa aumentar a demanda, e repetições também aumentam a demanda, <strong>o "progressivo" precisa mesmo ser a carga?</strong></p>
+  <div class="callout">
+    <span class="tag">A hipótese dos autores</span>
+    <p>Eles partiram da ideia de que o que realmente governa a hipertrofia é o <strong>esforço</strong> (proximidade da falha) e o <strong>volume</strong> (número de séries de trabalho) &mdash; e não a variável específica que você manipula para chegar lá. Repare como isso conecta diretamente com o material 1.</p>
+  </div>
+</section>
+
+<section id="plotkin-como">
+  <span class="sec-num">04 &mdash; COMO FOI FEITO</span>
+  <h2>O <span class="accent">desenho</span></h2>
+  <p class="sec-sub">Ensaio randomizado com grupos paralelos.</p>
+  <ul class="clean">
+    <li><b>Amostra:</b> 43 participantes com pelo menos <b>1 ano</b> de treino consistente de membros inferiores.</li>
+    <li><b>Randomização:</b> dois grupos paralelos &mdash; <b>LOAD</b> (n = 22; 13 homens e 9 mulheres), aumentando a carga e mantendo a faixa de repetições; e <b>REPS</b> (n = 21), aumentando as repetições e mantendo a carga.</li>
+    <li><b>Duração:</b> 8 semanas.</li>
+    <li><b>Descanso:</b> 2 minutos entre séries.</li>
+    <li><b>Supervisão:</b> todas as sessões foram <b>diretamente supervisionadas</b> pela equipe de pesquisa &mdash; detalhe que aumenta muito a confiabilidade da execução.</li>
+    <li><b>Desfechos:</b> hipertrofia de membros inferiores, força (1RM no agachamento no Smith), resistência local (repetições na extensora), salto vertical (CMJ) e composição corporal.</li>
+  </ul>
+  <div class="callout ok">
+    <span class="tag">Detalhe de método que vale notar</span>
+    <p>Mediram <strong>vários músculos separadamente</strong> &mdash; reto femoral, vasto lateral, e as porções do tríceps sural (gastrocnêmio lateral e medial, sóleo). Medir músculo a músculo em vez de um número global é o padrão bom: hipertrofia não acontece de forma uniforme (assunto do estudo de Earp, que vem em outro material).</p>
+  </div>
+</section>
+
+<section id="plotkin-achou">
+  <span class="sec-num">05 &mdash; O QUE ENCONTROU</span>
+  <h2>Resultados <span class="accent">semelhantes</span></h2>
+  <p class="sec-sub">Em praticamente todos os desfechos.</p>
+  <ul class="clean">
+    <li><b>Hipertrofia:</b> semelhante entre os dois grupos.</li>
+    <li><b>Força:</b> o 1RM no agachamento melhorou em ambos, <b>sem diferença relevante</b> entre eles.</li>
+    <li><b>Resistência local:</b> as repetições na extensora aumentaram nos dois grupos, também de forma similar.</li>
+    <li><b>Salto vertical (CMJ):</b> resultados equívocos e semelhantes &mdash; nenhuma das estratégias transferiu claramente para potência.</li>
+  </ul>
+  <p>Os autores registram ainda que, na média, o grupo REPS executou cerca de <strong>1,02 vez mais repetições</strong> que o grupo LOAD &mdash; ou seja, o volume total de trabalho ficou praticamente equiparado, o que reforça a interpretação de que <strong>a demanda foi equivalente por caminhos diferentes</strong>.</p>
+  <div class="callout ok">
+    <span class="tag">A conclusão prática</span>
+    <p>Os achados se alinham com um corpo maior de literatura mostrando hipertrofia semelhante ao longo de <strong>faixas amplas de carga</strong>. A mensagem: sobrecarga progressiva é um <strong>princípio</strong>, não uma receita. Aumentar a demanda é obrigatório; a via é negociável.</p>
+  </div>
+</section>
+
+<section id="discordancia">
+  <span class="sec-num">06 &mdash; A DISCORDÂNCIA INSTRUTIVA</span>
+  <h2>Quando dois estudos <span class="accent">brigam</span></h2>
+  <p class="sec-sub">Uma aula de leitura crítica embutida no artigo.</p>
+  <p>Os próprios autores apontam que os resultados deles <strong>contrariam</strong> um trabalho anterior (Nóbrega et al., 2022), que havia encontrado vantagem clara para o ajuste de carga: aumento de área de secção transversa do vasto lateral de cerca de <strong>16% contra 7,9%</strong>, com tamanho de efeito grande (ES = 2,03; IC 95%: 1,04&ndash;3,02).</p>
+  <p>Por que confiar mais em um do que no outro? A explicação está no <strong>desenho</strong>:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Aspecto</th><th>Plotkin 2022</th><th>Nóbrega 2022</th></tr></thead>
+      <tbody>
+        <tr><td>Tipo</td><td>Ensaio <b>prospectivo</b> randomizado</td><td>Análise <b>retrospectiva</b></td></tr>
+        <tr><td>Randomização</td><td>Sim</td><td><b>Não</b></td></tr>
+        <tr><td>Origem dos grupos</td><td>Mesmo estudo, mesmo protocolo</td><td>Grupos de <b>dois estudos diferentes</b></td></tr>
+        <tr><td>Inferência causal</td><td>Possível</td><td>Prejudicada</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout warn">
+    <span class="tag">A lição que vale para tudo</span>
+    <p>Um tamanho de efeito enorme (ES = 2,03!) em um desenho fraco vale <strong>menos</strong> que um efeito nulo em um desenho forte. Sem randomização e comparando grupos que vieram de estudos distintos, não há como separar o efeito da intervenção de diferenças pré-existentes entre as amostras. <strong>Número grande não compensa método frágil</strong> &mdash; e é exatamente assim que estudos ruins viram manchete.</p>
+  </div>
+</section>
+
+<section id="enes">
+  <span class="sec-num">07 &mdash; ESTUDO 2: PROGRESSÃO DE SÉRIES</span>
+  <h2>E se o que <span class="accent">progride</span> for o volume?</h2>
+  <p class="sec-sub">Enes, De Souza e Souza-Junior &middot; <i>Medicine &amp; Science in Sports &amp; Exercise</i>, 2024.</p>
+  <p>Título original: <i>Effects of Different Weekly Set Progressions on Muscular Adaptations in Trained Males: Is There a Dose&ndash;Response Effect?</i>. Em português: <strong>"Efeitos de diferentes progressões de séries semanais nas adaptações musculares em homens treinados: existe um efeito dose-resposta?"</strong></p>
+  <p>Grupo de pesquisa brasileiro (UFPR, Curitiba). A pergunta muda de eixo: em vez de mexer em carga ou repetições dentro da série, o que acontece se você <strong>adicionar séries à semana</strong> progressivamente?</p>
+</section>
+
+<section id="enes-como">
+  <span class="sec-num">08 &mdash; COMO FOI FEITO</span>
+  <h2>Três grupos, <span class="accent">doze semanas</span></h2>
+  <p class="sec-sub">E um volume que chegou a território inédito.</p>
+  <ul class="clean">
+    <li><b>Amostra:</b> 31 homens treinados ao final da intervenção &mdash; idade ~24 anos, ~80 kg, ~14% de gordura, <b>5,1 anos</b> de experiência em média, e 1RM no agachamento equivalente a ~1,7&times; a massa corporal. Amostra genuinamente treinada.</li>
+    <li><b>Preparação:</b> 2 semanas de <b>washout</b> e 2 de familiarização antes de começar &mdash; para que todos entrassem em condições comparáveis.</li>
+    <li><b>Grupos:</b> <b>GC</b> (constante, n = 10) mantendo <b>22 séries semanais</b> de quadríceps; <b>GP4</b> (n = 10) somando 4 séries a cada quinzena; <b>GP6</b> (n = 11) somando 6 séries a cada quinzena.</li>
+    <li><b>Duração:</b> 12 semanas, 2 sessões por semana.</li>
+    <li><b>Desfechos:</b> força dinâmica máxima (1RM agachamento livre), área de secção transversa do vasto lateral e outras medidas de massa.</li>
+    <li><b>Controle:</b> ingestão energética e de macronutrientes acompanhada a cada 6 semanas.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">O número que chama atenção</span>
+    <p>Nas duas últimas semanas, o grupo de maior progressão chegou a <strong>52 séries semanais</strong> de quadríceps &mdash; segundo os próprios autores, <strong>o maior volume semanal já relatado na literatura</strong>. Isso é um teste de extremo, não uma recomendação. Serve para mapear onde fica o teto, não para ser copiado.</p>
+  </div>
+</section>
+
+<section id="enes-achou">
+  <span class="sec-num">09 &mdash; O QUE ENCONTROU</span>
+  <h2>Força <span class="accent">sim</span>, hipertrofia talvez</h2>
+  <p class="sec-sub">Uma separação importante entre os dois desfechos.</p>
+  <ul class="clean">
+    <li><b>Força:</b> progredir 4 ou 6 séries a cada duas semanas gerou <b>maior força de membros inferiores</b> em comparação ao volume constante. Este foi o achado principal.</li>
+    <li><b>Todos melhoraram:</b> os três grupos aumentaram significativamente o 1RM no agachamento &mdash; melhora média de aproximadamente <b>18,5 kg</b>, cerca de <b>13,6%</b>.</li>
+    <li><b>Hipertrofia:</b> <b>não houve diferença estatística entre os grupos</b>. Mas a inspeção dos intervalos de confiança de 95% sugeriu um <b>possível benefício leve</b> da progressão de volume &mdash; um sinal, não uma conclusão.</li>
+    <li><b>Dose-resposta:</b> a análise dos intervalos aponta para uma <b>potencial</b> relação dose-resposta, também sem confirmação definitiva.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Como interpretar "sugere" e "potencial"</span>
+    <p>Esse é um exemplo excelente de <strong>honestidade científica na redação</strong>. Os autores tinham a opção de vender o achado como "mais volume gera mais músculo" &mdash; e escolheram dizer que os dados <em>apontam nessa direção sem provar</em>. Quando um artigo usa esse tipo de linguagem, ele está sinalizando: <strong>o efeito pode existir, mas o estudo não teve poder para confirmá-lo</strong>. Ler esses termos corretamente separa quem entende de quem só cita.</p>
+  </div>
+</section>
+
+<section id="juntando">
+  <span class="sec-num">10 &mdash; JUNTANDO OS DOIS</span>
+  <h2>As <span class="accent">três vias</span> de progressão</h2>
+  <p class="sec-sub">O mapa que os dois estudos desenham juntos.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Via</th><th>Como funciona</th><th>Evidência</th><th>Quando usar</th></tr></thead>
+      <tbody>
+        <tr><td><b>Carga</b></td><td>Mais peso, repetições constantes</td><td>Eficaz (Plotkin)</td><td>Padrão; quando a progressão está fluindo</td></tr>
+        <tr><td><b>Repetições</b></td><td>Mesma carga, mais repetições</td><td>Igualmente eficaz (Plotkin)</td><td>Quando não há anilhas menores, em máquinas com saltos grandes, ou para destravar platô</td></tr>
+        <tr><td><b>Séries semanais</b></td><td>Mais volume ao longo do ciclo</td><td>Melhora força; sinal para hipertrofia (Enes)</td><td>Progressão de médio prazo, dentro de um ciclo planejado</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout ok">
+    <span class="tag">A síntese</span>
+    <p>Sobrecarga progressiva é <strong>aumentar a demanda ao longo do tempo</strong> &mdash; ponto. Carga é a via mais óbvia, não a única nem a obrigatória. Ter três alavancas em vez de uma torna a progressão <strong>sustentável</strong>: quando uma trava, as outras seguem disponíveis. E isso importa muito para quem já tem anos de treino, quando o salto de carga fica cada vez mais raro.</p>
+  </div>
+</section>
+
+<section id="pratica">
+  <span class="sec-num">11 &mdash; O QUE MUDA NA PRÁTICA</span>
+  <h2>Traduzindo para o <span class="accent">treino</span></h2>
+  <p class="sec-sub">Aplicação direta.</p>
+  <ol class="key">
+    <li><b>Registrar é inegociável.</b> Progressão só existe se for medida. Sem histórico de carga, repetições e séries, "sobrecarga progressiva" vira intenção, não método.</li>
+    <li><b>Repetições são progressão legítima.</b> Subir de 8 para 10 com o mesmo peso conta tanto quanto subir o peso &mdash; útil especialmente em máquinas com incrementos grandes.</li>
+    <li><b>Volume progride em ciclo, não em sessão.</b> No estudo, o acréscimo foi <b>quinzenal</b> e planejado. Adicionar séries por impulso não é progressão de volume, é inconsistência.</li>
+    <li><b>Mais volume ajudou a força mais claramente que a hipertrofia.</b> Vale calibrar a expectativa: adicionar séries não é atalho garantido de crescimento.</li>
+    <li><b>52 séries não é meta.</b> Foi um teste de extremo com participantes experientes, supervisão e controle alimentar &mdash; e mesmo assim a hipertrofia não se separou estatisticamente. Volume alto tem custo de tempo, fadiga e recuperação.</li>
+  </ol>
+  <div class="callout">
+    <span class="tag">Conexão com o material anterior</span>
+    <p>Somando os dois materiais: o estímulo precisa de <strong>esforço suficiente</strong> (perto da falha, sem precisar cruzá-la) e de <strong>demanda crescente</strong> (por qualquer das três vias). Não precisa ser destrutivo &mdash; precisa ser <strong>progressivo e registrado</strong>.</p>
+  </div>
+</section>
+
+<section id="limites">
+  <span class="sec-num">12 &mdash; LIMITAÇÕES</span>
+  <h2>O que <span class="accent">não</span> foi respondido</h2>
+  <p class="sec-sub">Onde parar de extrapolar.</p>
+  <ul class="clean">
+    <li><b>Prazos curtos.</b> Oito e doze semanas são janelas pequenas para hipertrofia. Estratégias equivalentes em 8 semanas podem divergir em um ano.</li>
+    <li><b>Membros inferiores apenas.</b> Ambos focaram em pernas. Não se pode assumir automaticamente o mesmo para membros superiores.</li>
+    <li><b>Só homens no Enes.</b> O estudo de progressão de séries usou apenas homens treinados &mdash; os próprios autores publicaram depois uma versão com mulheres, justamente porque o achado não é transferível sem teste.</li>
+    <li><b>Amostras modestas.</b> 43 e 31 participantes divididos em grupos deixam pouco poder estatístico para detectar diferenças pequenas &mdash; o que explica os "sugere" e "potencial" do Enes.</li>
+    <li><b>Volume de partida já alto.</b> No Enes, até o grupo constante fazia 22 séries semanais. Como isso se comporta em quem treina com volumes menores é outra pergunta.</li>
+    <li><b>Nenhum testou a combinação.</b> Na prática se progride em várias vias ao mesmo tempo; os estudos isolaram cada uma para poder medir.</li>
+  </ul>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">13 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial dos dois artigos.</p>
+  <ol class="key">
+    <li><b>Plotkin 2022:</b> 43 treinados, 8 semanas, randomizado e supervisionado &mdash; progredir <b>carga</b> ou <b>repetições</b> deu hipertrofia, força e resistência <b>semelhantes</b>.</li>
+    <li>Um estudo anterior discordava, mas era <b>retrospectivo e sem randomização</b> &mdash; efeito grande com método fraco vale menos.</li>
+    <li><b>Enes 2024:</b> 31 treinados, 12 semanas, três grupos &mdash; progredir séries semanais gerou <b>mais força</b> que volume constante.</li>
+    <li>Para <b>hipertrofia</b>, não houve diferença entre grupos; apenas um <b>sinal sugestivo</b> a favor da progressão.</li>
+    <li>Um grupo chegou a <b>52 séries semanais</b> &mdash; teste de extremo, não recomendação.</li>
+    <li>Existem <b>três vias</b> de progressão: carga, repetições e séries. O princípio é aumentar a demanda; a via é escolha.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="artigos-1-proximidade-da-falha.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 1 &middot; Proximidade da Falha</span></a>
+    <a href="index.html"><span class="lbl">Biblioteca</span><span class="ttl">&larr; Voltar</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">14 &mdash; REFERÊNCIAS</span>
+  <h2>Os <span class="accent">artigos</span> originais</h2>
+  <p class="sec-sub">Para ler na fonte.</p>
+  <ul class="clean">
+    <li>Plotkin D, Coleman M, Van Every D, Maldonado J, Oberlin D, Israetel M, Feather J, Alto A, Vigotsky AD, Schoenfeld BJ. <b>Progressive overload without progressing load? The effects of load or repetition progression on muscular adaptations.</b> PeerJ. 2022;10:e14142. PMID: 36199287. DOI: 10.7717/peerj.14142 <i>(acesso aberto)</i></li>
+    <li>Enes A, De Souza EO, Souza-Junior TP. <b>Effects of Different Weekly Set Progressions on Muscular Adaptations in Trained Males: Is There a Dose&ndash;Response Effect?</b> Med Sci Sports Exerc. 2024;56(3):553&ndash;563. PMID: 37796222. DOI: 10.1249/MSS.0000000000003317</li>
+    <li>Citado na discussão: Nóbrega et al. (2022) &mdash; análise retrospectiva que encontrou vantagem para progressão de carga, com as limitações metodológicas discutidas na seção 06.</li>
+    <li>Desdobramento: Enes et al. <b>Does increasing the resistance-training volume lead to greater gains? The effects of weekly set progressions on muscular adaptations in females.</b> <i>(versão do mesmo protocolo com mulheres)</i></li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de método</span>
+    <p>Análise e síntese autoral na voz MG COACH &mdash; não é tradução dos artigos, que são protegidos por direito autoral. Números, desenhos experimentais e citações foram conferidos nas publicações originais. Use os DOIs para acessar as fontes.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Artigos Comentados &middot; Parte 2 &middot; Sobrecarga Progressiva</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Análise autoral de literatura científica. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

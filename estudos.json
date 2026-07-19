@@ -8,6 +8,14 @@
     "arquivo": "artigos-1-proximidade-da-falha.html"
   },
   {
+    "titulo": "Artigos Comentados 2: Sobrecarga Progressiva",
+    "categoria": "treino",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Segundo material da série Artigos Comentados: análise didática de dois estudos sobre COMO progredir. (1) Plotkin et al., PeerJ 2022 — ensaio randomizado e supervisionado com 43 treinados (≥1 ano de experiência) durante 8 semanas, comparando grupo LOAD (aumentar carga, repetições constantes) vs grupo REPS (aumentar repetições, carga constante); resultados semelhantes em hipertrofia, força (1RM agachamento no Smith), resistência local e salto vertical. Inclui a discordância instrutiva com Nóbrega 2022 (que achou ES=2,03 a favor da carga, mas era análise retrospectiva sem randomização) — uma aula embutida de leitura crítica sobre por que efeito grande com método fraco vale menos. (2) Enes et al., MSSE 2024 — grupo brasileiro da UFPR, 31 homens treinados (5,1 anos de experiência), 12 semanas, três grupos: constante com 22 séries semanais de quadríceps, progressão de 4 séries e de 6 séries a cada quinzena; progredir volume gerou MAIOR FORÇA (todos melhoraram ~18,5 kg / 13,6% no 1RM), sem diferença estatística em hipertrofia mas com sinal sugestivo pelos IC 95%. Um grupo chegou a 52 séries semanais — o maior volume já reportado na literatura. Fecha com o mapa das TRÊS VIAS de progressão (carga, repetições, séries semanais), aplicação prática e limitações.",
+    "arquivo": "artigos-2-sobrecarga-progressiva.html"
+  },
+  {
     "titulo": "Interações Hormonais: como cada composto mexe nos seus marcadores",
     "categoria": "fisiologia",
     "serie": "Farmacologia Hormonal",
