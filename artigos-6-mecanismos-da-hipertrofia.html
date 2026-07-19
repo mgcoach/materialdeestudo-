@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigos Comentados 6: Mecanismos da Hipertrofia | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Artigos Comentados 6: Mecanismos da Hipertrofia | MG COACH">
+    <meta property="og:description" content="Três estudos sobre os mecanismos: Lim et al. 2022 (revisão de variáveis externas e internas), Gonzalez 2016 (resposta anabólica aguda e a dicotomia força vs hipertrofia) e Cao et al. 2025 (mTORC1, inflamação e autofagia no músculo envelhecido). Inclui o desmonte do mito hormonal.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/artigos-6-mecanismos-da-hipertrofia.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Artigos Comentados 6: Mecanismos da Hipertrofia | MG COACH">
+    <meta name="twitter:description" content="Mecanotransdução, ribossomos, mTORC1 — e o desmonte do mito hormonal.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#porque">Por que mecanismos</a>
+    <a href="#resumo-rapido">Resposta rápida</a>
+    <a href="#lim">1. Lim 2022</a>
+    <a href="#externas-internas">Externas e internas</a>
+    <a href="#internas">Os mecanismos internos</a>
+    <a href="#gonzalez">2. Gonzalez 2016</a>
+    <a href="#gonzalez-achou">A dicotomia questionada</a>
+    <a href="#mito-hormonal">O mito hormonal</a>
+    <a href="#cao">3. Cao 2025</a>
+    <a href="#cao-achou">O que encontrou</a>
+    <a href="#animal">O peso do modelo animal</a>
+    <a href="#pratica">O que muda na prática</a>
+    <a href="#limites">Limitações</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Artigos Comentados &middot; Parte 6</div>
+  <div class="serie-bar">
+    <a href="artigos-1-proximidade-da-falha.html">1 &middot; Falha</a>
+    <a href="artigos-2-sobrecarga-progressiva.html">2 &middot; Sobrecarga</a>
+    <a href="artigos-3-gluteo-emg-vs-hipertrofia.html">3 &middot; Glúteo</a>
+    <a href="artigos-4-hipertrofia-regional-adm.html">4 &middot; Regional e ADM</a>
+    <a href="artigos-5-organizacao-do-treino.html">5 &middot; Organização</a>
+    <span class="atual">6 &middot; Mecanismos</span>
+  </div>
+  <h1>Mecanismos da <span class="em">hipertrofia</span></h1>
+  <p class="lede">Três estudos sobre o "como": <b>Lim et al. 2022</b> (o mapa de variáveis externas e internas, do grupo de Stuart Phillips), <b>Gonzalez 2016</b> (a dicotomia força vs. hipertrofia questionada e a resposta anabólica aguda) e <b>Cao et al. 2025</b> (mTORC1, inflamação e autofagia no músculo envelhecido). Com o desmonte do <b>mito hormonal</b>.</p>
+</div>
+
+<main>
+
+<section id="porque">
+  <span class="sec-num">01 &mdash; POR QUE ESTUDAR MECANISMOS</span>
+  <h2>Descer ao <span class="accent">"como"</span></h2>
+  <p class="sec-sub">E os riscos de descer fundo demais.</p>
+  <p>Os cinco materiais anteriores trataram de <strong>o que fazer</strong> &mdash; esforço, progressão, seleção, organização. Este desce um nível: <strong>o que acontece dentro da célula</strong> quando o estímulo chega.</p>
+  <p>Entender mecanismo tem valor real: explica <em>por que</em> as recomendações funcionam, ajuda a prever situações novas e vacina contra modismos. Mas tem também uma armadilha, e ela já apareceu duas vezes nesta série.</p>
+  <div class="callout warn">
+    <span class="tag">A armadilha do mecanismo</span>
+    <p>Conhecer um mecanismo <strong>não autoriza</strong> concluir que manipulá-lo produz resultado. Já vimos isso com o <strong>EMG</strong> (material 3): ativação maior não gerou mais músculo. Vamos ver de novo aqui com os <strong>hormônios</strong>. Mecanismo é explicação, não atalho &mdash; e confundir os dois é a fonte de boa parte da bro-science mais sofisticada, aquela que <em>soa</em> científica.</p>
+  </div>
+</section>
+
+<section id="resumo-rapido">
+  <span class="sec-num">02 &mdash; A RESPOSTA RÁPIDA</span>
+  <h2>Se você ler <span class="accent">só isto</span></h2>
+  <p class="sec-sub">O essencial dos três.</p>
+  <div class="callout ok">
+    <span class="tag">Em três frases</span>
+    <p><b>1.</b> A hipertrofia resulta da interação entre <strong>variáveis externas</strong> (treino, dieta) e <strong>internas</strong> (mecanotransdução, ribossomos, expressão gênica, células satélite) &mdash; e o exercício resistido é a alavanca externa não-farmacológica mais potente. <b>2.</b> A divisão rígida entre protocolos "de força" e "de hipertrofia" é uma <strong>simplificação excessiva</strong>, com base surpreendentemente frágil em treinados. <b>3.</b> No músculo envelhecido, o treino resistido atua reduzindo <strong>inflamação</strong> e regulando <strong>autofagia</strong>, com a via mTORC1 envolvida &mdash; em modelo animal.</p>
+  </div>
+</section>
+
+<section id="lim">
+  <span class="sec-num">03 &mdash; ESTUDO 1: O MAPA DOS MECANISMOS</span>
+  <h2>A revisão de <span class="accent">referência</span></h2>
+  <p class="sec-sub">Lim, Nunes, Currier, McLeod, Thomas e Phillips &middot; <i>MSSE</i>, 2022.</p>
+  <p>Título original: <i>An Evidence-Based Narrative Review of Mechanisms of Resistance Exercise-Induced Human Skeletal Muscle Hypertrophy</i>. Em português: <strong>"Uma revisão narrativa baseada em evidências sobre os mecanismos da hipertrofia muscular esquelética humana induzida por exercício de resistência"</strong>.</p>
+  <p>Vem do laboratório de <strong>Stuart Phillips</strong>, na McMaster University &mdash; um dos grupos mais respeitados do mundo em síntese proteica muscular. Quando esse grupo escreve sobre mecanismos, é leitura obrigatória. E é <strong>acesso aberto</strong>.</p>
+  <div class="def">
+    <div class="word">O que é uma revisão narrativa "baseada em evidências"</div>
+    <p>Revisão narrativa não segue busca sistemática com critérios pré-declarados &mdash; os autores selecionam e sintetizam a literatura com julgamento próprio. Isso a torna mais flexível e melhor para <strong>integrar conceitos</strong>, mas também mais sujeita a viés de seleção que uma revisão sistemática. O adendo "baseada em evidências" sinaliza o compromisso de sustentar cada afirmação em dados &mdash; não é o mesmo que uma meta-análise.</p>
+  </div>
+</section>
+
+<section id="externas-internas">
+  <span class="sec-num">04 &mdash; EXTERNAS E INTERNAS</span>
+  <h2>A <span class="accent">estrutura</span> conceitual</h2>
+  <p class="sec-sub">A contribuição mais útil do artigo.</p>
+  <p>O músculo esquelético é descrito como tecido <strong>altamente adaptável</strong>: responde ao exercício resistido crescendo, e durante períodos de desuso o mesmo exercício <strong>atenua a perda</strong>. Os autores organizam os determinantes da hipertrofia em dois conjuntos:</p>
+  <div class="grid2">
+    <div class="mini"><h4>Variáveis externas</h4><p>O que você <strong>controla diretamente</strong>: programação do treino (carga, volume, frequência, seleção), dieta e alguns suplementos. É a camada em que atuam os cinco materiais anteriores.</p></div>
+    <div class="mini"><h4>Variáveis internas</h4><p>O que acontece <strong>dentro da célula</strong> como consequência: mecanotransdução, capacidade ribossomal, expressão gênica e atividade das células satélite. Você não manipula diretamente &mdash; você as <em>ativa</em> por meio das externas.</p></div>
+  </div>
+  <div class="callout ok">
+    <span class="tag">A frase-chave do artigo</span>
+    <p>Os autores afirmam que o exercício resistido é, inegavelmente, a <strong>variável externa não-farmacológica mais potente</strong> para ativar ou suprimir as variáveis internas ligadas à hipertrofia &mdash; e para conter a perda muscular por desuso. Traduzindo: nenhum suplemento, dieta ou estratégia se aproxima do próprio treino como estímulo. É a hierarquia correta, dita por quem estuda o mecanismo.</p>
+  </div>
+</section>
+
+<section id="internas">
+  <span class="sec-num">05 &mdash; OS MECANISMOS INTERNOS</span>
+  <h2>O que acontece <span class="accent">na célula</span></h2>
+  <p class="sec-sub">Os quatro eixos citados pelos autores.</p>
+  <div class="stepwrap">
+    <div class="step"><h4>Mecanotransdução</h4><p>A conversão do <strong>estímulo mecânico em sinal bioquímico</strong>. A tensão sobre a fibra é detectada por sensores na membrana e no citoesqueleto, que disparam cascatas de sinalização. É o ponto de entrada &mdash; e a razão pela qual <strong>tensão mecânica</strong> é o estímulo central da hipertrofia.</p></div>
+    <div class="step"><h4>Capacidade ribossomal</h4><p>Ribossomos são a <strong>maquinaria que fabrica proteína</strong>. Mais capacidade ribossomal significa maior teto de síntese. É um conceito relativamente recente na área: não basta ter o sinal, é preciso ter a fábrica.</p></div>
+    <div class="step"><h4>Expressão gênica</h4><p>O treino altera <strong>quais genes são lidos e em que intensidade</strong>, mudando o perfil de proteínas produzidas ao longo de semanas.</p></div>
+    <div class="step"><h4>Células satélite</h4><p>Células-tronco do músculo que proliferam e <strong>doam mionúcleos</strong> à fibra, ampliando sua capacidade de sustentar tamanho &mdash; o domínio mionuclear.</p></div>
+  </div>
+  <div class="callout">
+    <span class="tag">Como isso conecta com a prática</span>
+    <p>Repare que os quatro eixos convergem para a mesma exigência: <strong>tensão mecânica suficiente, repetida ao longo do tempo, com recuperação</strong>. Não há atalho na lista &mdash; nenhuma dessas vias tem uma "chave" que se acione por fora. É exatamente o que os materiais anteriores mostraram na prática.</p>
+  </div>
+</section>
+
+<section id="gonzalez">
+  <span class="sec-num">06 &mdash; ESTUDO 2: A DICOTOMIA</span>
+  <h2>"Treino de força" vs. <span class="accent">"treino de hipertrofia"</span></h2>
+  <p class="sec-sub">Gonzalez &middot; <i>Journal of Strength and Conditioning Research</i>, 2016.</p>
+  <p>Título original: <i>Acute Anabolic Response and Muscular Adaptation After Hypertrophy-Style and Strength-Style Resistance Exercise</i>. Em português: <strong>"Resposta anabólica aguda e adaptação muscular após exercícios de resistência do tipo hipertrofia e do tipo força"</strong>.</p>
+  <p>O artigo parte da divisão clássica que todo mundo aprende:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Variável</th><th>Protocolo "hipertrofia" (HYP)</th><th>Protocolo "força" (STR)</th></tr></thead>
+      <tbody>
+        <tr><td>Séries</td><td>3 a 6</td><td>2 a 6</td></tr>
+        <tr><td>Repetições</td><td>8 a 12</td><td>&le; 6</td></tr>
+        <tr><td>Intensidade</td><td>Moderada (&lt; 85% de 1RM)</td><td>Alta (&ge; 85% de 1RM)</td></tr>
+        <tr><td>Descanso</td><td>Curto (30 a 90 s)</td><td>Longo (3 a 5 min)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="gonzalez-achou">
+  <span class="sec-num">07 &mdash; A DICOTOMIA QUESTIONADA</span>
+  <h2>Uma base mais <span class="accent">frágil</span> do que parece</h2>
+  <p class="sec-sub">O ponto central do artigo.</p>
+  <p>O autor aponta que a literatura que sustenta essas classificações é <strong>surpreendentemente escassa em indivíduos treinados</strong> &mdash; e que a separação rígida entre os dois tipos de protocolo pode ser uma <strong>simplificação excessiva</strong>.</p>
+  <p>Isso conversa diretamente com o que vimos ao longo da série: hipertrofia semelhante em faixas amplas de carga (material 2), resultado governado por esforço e volume mais que pelo arranjo (material 5). A divisão "8&ndash;12 para hipertrofia, 1&ndash;5 para força" é uma <strong>convenção didática útil</strong>, não uma fronteira fisiológica.</p>
+  <div class="callout ok">
+    <span class="tag">A leitura equilibrada</span>
+    <p>Isso <strong>não</strong> significa que carga e repetições sejam irrelevantes. Significa que a relação é um <strong>continuum</strong>, não duas caixas separadas: cargas altas tendem a favorecer força pela especificidade neural, e faixas moderadas costumam ser mais práticas para acumular volume &mdash; mas ambas produzem hipertrofia e ambas produzem força.</p>
+  </div>
+</section>
+
+<section id="mito-hormonal">
+  <span class="sec-num">08 &mdash; O MITO HORMONAL</span>
+  <h2>Elevação aguda <span class="accent">não é</span> hipertrofia</h2>
+  <p class="sec-sub">O segundo marcador substituto desmontado nesta série.</p>
+  <p>O outro tema do artigo é a <strong>resposta anabólica aguda</strong> &mdash; os picos de testosterona, GH e IGF-1 que ocorrem nos minutos após o treino. Durante anos, esses picos foram usados como argumento: protocolos com muito volume, descansos curtos e grande massa muscular envolvida geram elevações hormonais maiores, <em>logo</em> seriam superiores para hipertrofia.</p>
+  <div class="callout warn">
+    <span class="tag">Por que o argumento não se sustentou</span>
+    <p>Estudos que acompanharam pessoas ao longo de meses mostraram que as <strong>elevações hormonais agudas pós-treino não se relacionam</strong> com a magnitude da hipertrofia obtida. Pessoas com picos hormonais maiores não cresceram mais. O grupo de Phillips inclusive publicou um trabalho com o título sugestivo <i>"Hormones, Hypertrophy, and Hype"</i> &mdash; hormônios, hipertrofia e exagero.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">O padrão que se repete</span>
+    <p>É a <strong>mesma lição do EMG</strong>, em outra roupagem. Um marcador agudo e mensurável (sinal elétrico, pico hormonal, lactato, pump, dor muscular) é fácil de medir e sedutor de citar &mdash; mas <strong>nenhum deles foi validado como preditor de hipertrofia</strong>. A pergunta que resolve: <em>existe estudo longitudinal medindo massa muscular?</em> Se a resposta for não, o marcador é hipótese.</p>
+  </div>
+  <p>Atenção a uma distinção que vale muito: isso vale para as <strong>oscilações agudas dentro da faixa fisiológica</strong>. Não contradiz o efeito de androgênios em <strong>doses suprafisiológicas sustentadas</strong>, que é outro fenômeno inteiramente &mdash; concentrações muito acima do normal, mantidas por semanas. Confundir os dois é erro comum nos dois sentidos.</p>
+</section>
+
+<section id="cao">
+  <span class="sec-num">09 &mdash; ESTUDO 3: O MÚSCULO ENVELHECIDO</span>
+  <h2>Inflamação, autofagia e <span class="accent">mTORC1</span></h2>
+  <p class="sec-sub">Cao, Zhou, Quan, Li, Li e Wang &middot; <i>Frontiers in Immunology</i>, 2025.</p>
+  <p>Título original: <i>Resistance training alleviates muscle atrophy and dysfunction by reducing inflammation and regulating impaired autophagy in aged skeletal muscle</i>. Em português: <strong>"O treinamento de resistência alivia a atrofia e a disfunção muscular, reduzindo a inflamação e regulando a autofagia comprometida no músculo esquelético envelhecido"</strong>.</p>
+  <div class="def">
+    <div class="word">Autofagia</div>
+    <p>Processo de <strong>"limpeza celular"</strong>: a célula degrada e recicla componentes danificados &mdash; proteínas defeituosas, mitocôndrias disfuncionais. É essencial para manter a qualidade do tecido. Com o envelhecimento, esse processo fica <strong>comprometido</strong>, e lixo celular se acumula.</p>
+  </div>
+  <div class="def">
+    <div class="word">mTORC1</div>
+    <p>Complexo de sinalização que funciona como <strong>interruptor central do anabolismo</strong>: quando ativado, promove síntese proteica; quando inibido, favorece autofagia. É o principal ponto de convergência entre estímulo mecânico, nutrientes e crescimento muscular.</p>
+  </div>
+  <h3>Como foi feito</h3>
+  <ul class="clean">
+    <li><b>Modelo:</b> camundongos com <b>envelhecimento natural</b>.</li>
+    <li><b>Objetivo:</b> investigar o papel da via <b>mTORC1</b> na mediação dos efeitos do treinamento resistido sobre a <b>inflamação crônica</b> e a <b>autofagia</b> no músculo envelhecido.</li>
+    <li><b>Contexto:</b> a atrofia muscular relacionada à idade está associada a inflamação crônica e autofagia prejudicada &mdash; e o treino resistido é intervenção eficaz para aumentar a hipertrofia.</li>
+  </ul>
+</section>
+
+<section id="cao-achou">
+  <span class="sec-num">10 &mdash; O QUE ENCONTROU</span>
+  <h2>Treino como <span class="accent">regulador</span></h2>
+  <p class="sec-sub">Massa, fibras e ambiente celular.</p>
+  <p>O treinamento resistido aumentou o <strong>peso úmido</strong> dos músculos gastrocnêmio e quadríceps, o <strong>número absoluto de fibras</strong> e a área de secção transversa &mdash; ou seja, produziu hipertrofia real no animal idoso. Os achados apontam para uma ação em duas frentes: <strong>redução da inflamação crônica</strong> e <strong>regulação da autofagia comprometida</strong>, com a via mTORC1 envolvida na mediação desses efeitos.</p>
+  <div class="callout ok">
+    <span class="tag">O que torna esse achado interessante</span>
+    <p>O treino aparece não apenas como estímulo de crescimento, mas como <strong>regulador de qualidade do tecido</strong> &mdash; melhorando o ambiente inflamatório e o sistema de reciclagem celular. É uma perspectiva de <strong>saúde</strong>, não só de estética: contra a sarcopenia, o exercício resistido age em várias frentes simultaneamente.</p>
+  </div>
+</section>
+
+<section id="animal">
+  <span class="sec-num">11 &mdash; O PESO DO MODELO ANIMAL</span>
+  <h2>Onde <span class="accent">frear</span> a extrapolação</h2>
+  <p class="sec-sub">Uma nota metodológica que vale para toda leitura de pesquisa.</p>
+  <p>Este é o <strong>único estudo em animais</strong> de todo o seu lote, e isso muda o peso que ele deve ter na hora de aplicar.</p>
+  <div class="grid2">
+    <div class="mini"><h4>Por que modelos animais são úteis</h4><p>Permitem <strong>biópsias, análises moleculares profundas e manipulações genéticas</strong> impossíveis em humanos. Controlam dieta, ambiente e genética. São insubstituíveis para <strong>investigar mecanismo</strong>.</p></div>
+    <div class="mini"><h4>Por que exigem cautela</h4><p>Camundongos não fazem musculação &mdash; os protocolos são forçados (escadas com peso, estimulação elétrica). Metabolismo, tempo de vida e resposta imune diferem muito. Muita coisa que funciona em roedor <strong>não se confirma</strong> em humanos.</p></div>
+  </div>
+  <div class="callout warn">
+    <span class="tag">A regra prática</span>
+    <p>Use estudo animal para <strong>entender mecanismo e gerar hipótese</strong>. Nunca para prescrever. Quando alguém citar um achado impressionante, a primeira pergunta é: <em>foi em humanos?</em> &mdash; e a segunda: <em>em humanos treinados?</em> A hierarquia vale: célula &rarr; animal &rarr; humano destreinado &rarr; humano treinado.</p>
+  </div>
+</section>
+
+<section id="pratica">
+  <span class="sec-num">12 &mdash; O QUE MUDA NA PRÁTICA</span>
+  <h2>Traduzindo para o <span class="accent">treino</span></h2>
+  <p class="sec-sub">O que mecanismo autoriza concluir.</p>
+  <ol class="key">
+    <li><b>Tensão mecânica é o ponto de entrada.</b> A mecanotransdução é o que converte treino em sinal &mdash; por isso carga significativa e boa execução não são negociáveis.</li>
+    <li><b>Não persiga marcadores agudos.</b> Pico hormonal, pump, EMG, ardência: nenhum foi validado como preditor. Persegui-los distorce a programação sem entregar resultado.</li>
+    <li><b>Não trate "força" e "hipertrofia" como caixas separadas.</b> É um continuum; a escolha de faixa serve a objetivos e praticidade, não a compartimentos fisiológicos.</li>
+    <li><b>Treino resistido é a alavanca principal.</b> Segundo quem estuda o mecanismo, nada não-farmacológico chega perto. Suplemento e detalhe de dieta são periferia.</li>
+    <li><b>Para longevidade, o treino faz mais que hipertrofia.</b> Regula inflamação e autofagia &mdash; argumento de saúde que vale para você e para quem você orienta.</li>
+  </ol>
+</section>
+
+<section id="limites">
+  <span class="sec-num">13 &mdash; LIMITAÇÕES</span>
+  <h2>O que <span class="accent">não</span> foi respondido</h2>
+  <p class="sec-sub">Onde parar de extrapolar.</p>
+  <ul class="clean">
+    <li><b>Revisão narrativa não é sistemática.</b> O Lim 2022 é excelente e transparente, mas a seleção da literatura envolve julgamento dos autores.</li>
+    <li><b>Cao 2025 é em camundongos.</b> Mecanismo plausível, aplicação humana não demonstrada.</li>
+    <li><b>Gonzalez 2016 é revisão narrativa curta</b>, não ensaio &mdash; levanta o problema da simplificação, não o resolve.</li>
+    <li><b>Mecanismo não determina prática.</b> Saber que ribossomos importam não diz quantas séries fazer. A ponte entre biologia molecular e prescrição continua sendo o ensaio clínico.</li>
+    <li><b>A biologia molecular avança rápido.</b> Conceitos como capacidade ribossomal ainda estão em consolidação e podem ser revistos.</li>
+  </ul>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">14 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial dos três artigos.</p>
+  <ol class="key">
+    <li><b>Lim 2022</b> (grupo de Phillips): hipertrofia é produto de <b>variáveis externas</b> (treino, dieta) e <b>internas</b> (mecanotransdução, ribossomos, expressão gênica, células satélite).</li>
+    <li>O exercício resistido é a <b>variável externa não-farmacológica mais potente</b> &mdash; nada chega perto.</li>
+    <li><b>Gonzalez 2016:</b> a divisão rígida "protocolo de força vs. de hipertrofia" tem <b>base frágil em treinados</b> e é provavelmente uma simplificação excessiva.</li>
+    <li><b>Elevações hormonais agudas não predizem hipertrofia</b> &mdash; mesma lição do EMG, outro marcador substituto.</li>
+    <li>Isso <b>não</b> se aplica a doses suprafisiológicas sustentadas, que são fenômeno distinto.</li>
+    <li><b>Cao 2025:</b> em camundongos idosos, o treino resistido gerou hipertrofia e atuou <b>reduzindo inflamação e regulando autofagia</b>, com mTORC1 envolvida.</li>
+    <li><b>Modelo animal</b> serve para mecanismo e hipótese &mdash; não para prescrição.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="artigos-5-organizacao-do-treino.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 5 &middot; Organização do Treino</span></a>
+    <a href="index.html"><span class="lbl">Biblioteca</span><span class="ttl">&larr; Voltar</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">15 &mdash; REFERÊNCIAS</span>
+  <h2>Os <span class="accent">artigos</span> originais</h2>
+  <p class="sec-sub">Para ler na fonte.</p>
+  <ul class="clean">
+    <li>Lim C, Nunes EA, Currier BS, McLeod JC, Thomas ACQ, Phillips SM. <b>An Evidence-Based Narrative Review of Mechanisms of Resistance Exercise-Induced Human Skeletal Muscle Hypertrophy.</b> Med Sci Sports Exerc. 2022;54(9):1546&ndash;1559. PMID: 35389932. DOI: 10.1249/MSS.0000000000002929 <i>(acesso aberto)</i></li>
+    <li>Gonzalez AM. <b>Acute Anabolic Response and Muscular Adaptation After Hypertrophy-Style and Strength-Style Resistance Exercise.</b> J Strength Cond Res. 2016;30(10):2959&ndash;2964. PMID: 26890971. DOI: 10.1519/JSC.0000000000001378</li>
+    <li>Cao YF, Zhou JW, Quan HL, Li W, Li T, Wang L. <b>Resistance training alleviates muscle atrophy and dysfunction by reducing inflammation and regulating impaired autophagy in aged skeletal muscle.</b> Front Immunol. 2025;16:1597222. PMID: 40529358. DOI: 10.3389/fimmu.2025.1597222 <i>(acesso aberto; modelo animal)</i></li>
+    <li>Leitura complementar sobre o mito hormonal: Phillips SM e colegas, <b>"Hormones, Hypertrophy, and Hype"</b>, e Morton RW et al., <b>Muscular and Systemic Correlates of Resistance Training-Induced Muscle Hypertrophy</b> (PLOS One, 2013) &mdash; que mostrou ausência de relação entre resposta hormonal aguda e hipertrofia.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de método</span>
+    <p>Análise e síntese autoral na voz MG COACH &mdash; não é tradução dos artigos, que são protegidos por direito autoral. Desenhos experimentais e conceitos foram conferidos nas publicações originais. Use os DOIs para acessar as fontes.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Artigos Comentados &middot; Parte 6 &middot; Mecanismos da Hipertrofia</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Análise autoral de literatura científica. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
