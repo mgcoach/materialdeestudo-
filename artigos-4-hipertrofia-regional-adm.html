@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigos Comentados 4: Hipertrofia Regional, ADM e Seleção de Exercício | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Artigos Comentados 4: Hipertrofia Regional, ADM e Seleção de Exercício | MG COACH">
+    <meta property="og:description" content="Três estudos sobre como o estímulo se distribui dentro do músculo: Earp 2015 (hipertrofia não-homogênea do quadríceps), Kassiano 2023 (amplitude de movimento e comprimento muscular) e Kassiano 2026 (agachamento vs cadeira extensora). Com a explicação biomecânica do reto femoral.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/artigos-4-hipertrofia-regional-adm.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Artigos Comentados 4: Hipertrofia Regional, ADM e Seleção de Exercício | MG COACH">
+    <meta name="twitter:description" content="Onde o músculo cresce depende de onde a tensão é aplicada.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#ideia">A ideia central</a>
+    <a href="#resumo-rapido">Resposta rápida</a>
+    <a href="#earp">1. Earp 2015</a>
+    <a href="#earp-achou">O que encontrou</a>
+    <a href="#kassiano23">2. Kassiano 2023</a>
+    <a href="#kassiano23-achou">O que encontrou</a>
+    <a href="#ponte">A ponte com comprimento-tensão</a>
+    <a href="#kassiano26">3. Kassiano 2026</a>
+    <a href="#kassiano26-achou">O que encontrou</a>
+    <a href="#reto-femoral">O caso do reto femoral</a>
+    <a href="#juntando">Juntando os três</a>
+    <a href="#pratica">O que muda na prática</a>
+    <a href="#limites">Limitações</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Artigos Comentados &middot; Parte 4</div>
+  <div class="serie-bar">
+    <a href="artigos-1-proximidade-da-falha.html">1 &middot; Proximidade da Falha</a>
+    <a href="artigos-2-sobrecarga-progressiva.html">2 &middot; Sobrecarga Progressiva</a>
+    <a href="artigos-3-gluteo-emg-vs-hipertrofia.html">3 &middot; Glúteo: EMG vs. Hipertrofia</a>
+    <span class="atual">4 &middot; Hipertrofia Regional e ADM</span>
+  </div>
+  <h1>Hipertrofia regional, ADM e <span class="em">seleção de exercício</span></h1>
+  <p class="lede">Três estudos sobre <b>onde</b> o músculo cresce: <b>Earp 2015</b> (hipertrofia não-homogênea do quadríceps), <b>Kassiano 2023</b> (amplitude de movimento e comprimento muscular) e <b>Kassiano 2026</b> (agachamento vs. cadeira extensora). Com a explicação biomecânica de por que o agachamento quase não estimula o <b>reto femoral</b>.</p>
+</div>
+
+<main>
+
+<section id="ideia">
+  <span class="sec-num">01 &mdash; A IDEIA CENTRAL</span>
+  <h2>O músculo <span class="accent">não</span> cresce por igual</h2>
+  <p class="sec-sub">Uma constatação que muda a lógica de seleção de exercícios.</p>
+  <p>Falamos de "hipertrofia do quadríceps" como se fosse um número só. Mas o quadríceps tem quatro músculos, e cada um deles tem porções proximal, média e distal &mdash; que <strong>não respondem da mesma forma ao mesmo treino</strong>. Isso se chama <em class="term">hipertrofia regional</em> (ou não-homogênea), e é hoje uma das áreas mais ativas da pesquisa em treinamento.</p>
+  <p>Três estudos deste material atacam a questão por ângulos diferentes: um mostra <strong>que</strong> acontece, outro mostra <strong>como a amplitude</strong> influencia, e o terceiro mostra <strong>como a escolha do exercício</strong> direciona o crescimento &mdash; com um resultado que valida na prática um conceito de biomecânica.</p>
+  <div class="callout ok">
+    <span class="tag">Por que isso importa para você</span>
+    <p>Se o crescimento é regional, então <strong>"treinar o músculo" é impreciso</strong>. A pergunta correta passa a ser: qual exercício estimula <em>qual porção</em>, e por quê. É exatamente o tipo de raciocínio da análise músculo a músculo &mdash; agora com dados longitudinais.</p>
+  </div>
+</section>
+
+<section id="resumo-rapido">
+  <span class="sec-num">02 &mdash; A RESPOSTA RÁPIDA</span>
+  <h2>Se você ler <span class="accent">só isto</span></h2>
+  <p class="sec-sub">O essencial dos três.</p>
+  <div class="callout ok">
+    <span class="tag">Em três frases</span>
+    <p><b>1.</b> A hipertrofia do quadríceps é <strong>heterogênea</strong>: regiões diferentes crescem em magnitudes diferentes conforme o estímulo. <b>2.</b> Treinar em <strong>comprimentos musculares longos</strong> &mdash; seja com amplitude completa, seja com parciais na parte inicial &mdash; tende a produzir mais hipertrofia que parciais na posição encurtada. <b>3.</b> Agachamento e cadeira extensora <strong>não competem</strong>: a extensora cresce muito mais o <strong>reto femoral</strong>, o agachamento favorece o <strong>vasto lateral</strong>.</p>
+  </div>
+</section>
+
+<section id="earp">
+  <span class="sec-num">03 &mdash; ESTUDO 1: A CONSTATAÇÃO</span>
+  <h2>Hipertrofia <span class="accent">não-homogênea</span></h2>
+  <p class="sec-sub">Earp, Newton, Cormie e Blazevich &middot; <i>Medicine &amp; Science in Sports &amp; Exercise</i>, 2015.</p>
+  <p>Título original: <i>Inhomogeneous Quadriceps Femoris Hypertrophy in Response to Strength and Power Training</i>. Em português: <strong>"Hipertrofia não-homogênea do quadríceps femoral em resposta ao treinamento de força e potência"</strong>. (O PubMed traduz "inhomogeneous" como "heterogênea" &mdash; o sentido é o mesmo: crescimento desigual entre regiões.)</p>
+  <h3>Como foi feito</h3>
+  <ul class="clean">
+    <li><b>Amostra:</b> 36 homens <b>sem treino prévio de força</b>.</li>
+    <li><b>Duração:</b> 8 semanas.</li>
+    <li><b>Quatro grupos randomizados:</b> agachamento <b>pesado</b> em profundidade paralela; agachamento com <b>salto</b> em profundidade paralela; agachamento com salto em <b>profundidade voluntária</b>; e um grupo <b>controle</b> sem treino.</li>
+    <li><b>Medidas:</b> área de secção transversa e volume muscular, comparando adaptações <b>entre</b> os músculos do quadríceps (intermusculares) e <b>dentro</b> de cada músculo (intramusculares).</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">O contraste do desenho</span>
+    <p>O estudo opõe <strong>alta carga</strong> (agachamento pesado) a <strong>alta velocidade</strong> (agachamento com salto), e ainda varia a profundidade. Isso permite testar se demandas mecânicas diferentes produzem <strong>padrões</strong> diferentes de crescimento &mdash; não apenas magnitudes diferentes.</p>
+  </div>
+</section>
+
+<section id="earp-achou">
+  <span class="sec-num">04 &mdash; O QUE ENCONTROU</span>
+  <h2>Padrões <span class="accent">distintos</span> de crescimento</h2>
+  <p class="sec-sub">E uma hipótese biomecânica interessante.</p>
+  <p>Os autores confirmaram alterações <strong>não-homogêneas</strong> na área de secção transversa &mdash; ou seja, o crescimento se distribuiu de forma desigual entre os músculos do quadríceps e ao longo do comprimento de cada um, com padrões que variaram conforme o protocolo (alta carga vs. alta velocidade).</p>
+  <p>A parte mais interessante é a interpretação: essas mudanças desiguais podem alterar o <strong>momento de inércia da coxa</strong> e os <strong>braços de momento</strong> dos diferentes "compartimentos" musculares, além de influenciar a transmissão de força pelos componentes elásticos. Os autores especulam que essa hipertrofia seletiva seria <strong>biomecanicamente vantajosa</strong> para o tipo de movimento treinado.</p>
+  <div class="callout ok">
+    <span class="tag">A ideia por trás</span>
+    <p>O músculo não estaria apenas ficando maior &mdash; estaria ficando maior <strong>onde é mecanicamente útil para a tarefa treinada</strong>. É um conceito elegante: a adaptação teria endereço, não só volume. Vale registrar que essa parte é <strong>especulação dos autores</strong>, apresentada como hipótese, não como achado demonstrado.</p>
+  </div>
+</section>
+
+<section id="kassiano23">
+  <span class="sec-num">05 &mdash; ESTUDO 2: A AMPLITUDE</span>
+  <h2>Quais amplitudes levam a <span class="accent">Roma?</span></h2>
+  <p class="sec-sub">Kassiano, Costa, Nunes, Ribeiro, Schoenfeld e Cyrino &middot; <i>JSCR</i>, 2023.</p>
+  <p>Título original: <i>Which ROMs Lead to Rome? A Systematic Review of the Effects of Range of Motion on Muscle Hypertrophy</i>. Grupo brasileiro de Londrina (UEL), com Schoenfeld como coautor.</p>
+  <h3>Como foi feita</h3>
+  <ul class="clean">
+    <li><b>Busca:</b> PubMed/MEDLINE, Scopus e Web of Science, desde o registro mais antigo até abril de 2022.</li>
+    <li><b>Inclusão:</b> <b>11 estudos</b> comparando amplitude completa (fROM) com amplitude parcial (pROM).</li>
+    <li><b>Análise:</b> cálculo de tamanhos de efeito para as variáveis de interesse.</li>
+    <li><b>Distinção-chave:</b> separaram parciais realizadas na <b>parte inicial</b> da amplitude (músculo mais <b>alongado</b>) das realizadas na <b>parte final</b> (músculo <b>encurtado</b>).</li>
+  </ul>
+  <div class="callout ok">
+    <span class="tag">Por que essa distinção muda tudo</span>
+    <p>Antes deste tipo de análise, "parcial" era tratado como categoria única &mdash; e comparar "parcial vs. completa" sem especificar <em>em que parte da amplitude</em> misturava coisas opostas. Meia repetição embaixo (alongado) e meia repetição em cima (encurtado) são estímulos <strong>completamente diferentes</strong>. Separar isso foi o que permitiu enxergar o padrão.</p>
+  </div>
+</section>
+
+<section id="kassiano23-achou">
+  <span class="sec-num">06 &mdash; O QUE ENCONTROU</span>
+  <h2>Comprimento longo <span class="accent">vence</span></h2>
+  <p class="sec-sub">Com números.</p>
+  <ul class="clean">
+    <li><b>Amplitude completa e parciais na parte inicial</b> (músculo alongado) geraram <b>maior hipertrofia</b> do reto femoral, vasto lateral, bíceps braquial e sítios distais do braquial em comparação a parciais na parte final &mdash; tamanhos de efeito entre grupos de <b>0,20 a 0,90</b>.</li>
+    <li><b>Parciais iniciais superaram até a amplitude completa</b> na hipertrofia <b>proximal do reto femoral</b> (ES entre grupos: 0,35&ndash;0,38).</li>
+    <li>No <b>tríceps braquial</b>, parciais na porção média da amplitude geraram maior hipertrofia que a amplitude completa (ES: 1,21).</li>
+  </ul>
+  <p><b>Conclusão dos autores:</b> treinar em comprimento muscular mais longo &mdash; seja por amplitude completa, seja por parciais iniciais &mdash; tende a produzir crescimento ótimo em músculos como quadríceps, bíceps e tríceps braquial. E sugerem <strong>combinar</strong> parciais na parte inicial da excursão com treino de amplitude completa.</p>
+  <div class="callout warn">
+    <span class="tag">Cuidado com a leitura simplista</span>
+    <p>Isso <strong>não</strong> significa "abandone a amplitude completa" nem "parcial é melhor". A leitura correta é: <strong>o que importa é o comprimento em que o músculo é carregado</strong>, não a fração da amplitude em si. Amplitude completa já inclui a região alongada &mdash; por isso funciona bem. Parcial na posição encurtada é que sai perdendo.</p>
+  </div>
+</section>
+
+<section id="ponte">
+  <span class="sec-num">07 &mdash; A PONTE COM COMPRIMENTO-TENSÃO</span>
+  <h2>Por que comprimento longo <span class="accent">estimula mais</span></h2>
+  <p class="sec-sub">Conectando com a biomecânica de força-comprimento.</p>
+  <p>Esse achado não é acaso empírico &mdash; ele tem base na relação <strong>força-comprimento</strong>. Alguns mecanismos propostos:</p>
+  <ul class="clean">
+    <li><b>Tensão passiva.</b> Em comprimentos longos, componentes elásticos (titina, tecido conjuntivo) contribuem com tensão adicional, somando-se à tensão ativa das pontes cruzadas.</li>
+    <li><b>Estresse mecânico distribuído.</b> A carga em posição alongada parece gerar sinalização hipertrófica mais robusta que a mesma carga em posição encurtada.</li>
+    <li><b>Adição de sarcômeros em série.</b> Treino em comprimentos longos está associado a esse tipo de adaptação, que altera a arquitetura do músculo.</li>
+    <li><b>Regiões diferentes, sensibilidades diferentes.</b> Como a deformação não é uniforme ao longo do músculo, o comprimento de treino influencia <b>onde</b> o crescimento acontece &mdash; ligando este estudo diretamente ao de Earp.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade</span>
+    <p>Os mecanismos acima são <strong>propostos</strong> e ainda em investigação. O achado empírico (comprimento longo tende a render mais) é razoavelmente consistente; a explicação completa do <em>porquê</em>, não. Vale separar as duas coisas ao ensinar isso.</p>
+  </div>
+</section>
+
+<section id="kassiano26">
+  <span class="sec-num">08 &mdash; ESTUDO 3: A SELEÇÃO DO EXERCÍCIO</span>
+  <h2>Agachamento <span class="accent">vs.</span> cadeira extensora</h2>
+  <p class="sec-sub">Kassiano, Costa, Kunevaliki, ... e Cyrino &middot; <i>JSCR</i>, 2026.</p>
+  <p>Título original: <i>Comparison of Muscle Hypertrophy and Strength Adaptations Induced by Back Squat and Leg Extension Resistance Exercises</i>. Publicado eletronicamente em dezembro de 2025, na edição de abril de 2026 &mdash; é o mais recente do seu lote.</p>
+  <h3>Como foi feito</h3>
+  <ul class="clean">
+    <li><b>Amostra:</b> 63 mulheres jovens <b>não treinadas</b>.</li>
+    <li><b>Randomização:</b> agachamento no <b>Smith</b> (n = 30) ou <b>cadeira extensora</b> (n = 33).</li>
+    <li><b>Protocolo:</b> 3 séries de 8 a 12RM por sessão, <b>2 vezes por semana</b>, durante <b>8 semanas</b>.</li>
+    <li><b>Medidas:</b> espessura muscular do <b>reto femoral</b> e do <b>vasto lateral</b>, cada um em <b>três sítios</b> &mdash; proximal, médio e distal.</li>
+    <li><b>Força:</b> testes de 3RM no agachamento e na cadeira extensora.</li>
+  </ul>
+  <div class="callout ok">
+    <span class="tag">O detalhe que faz o estudo</span>
+    <p>Medir <strong>dois músculos em três sítios cada</strong> é o que permite enxergar o padrão regional. Se tivessem medido só "espessura do quadríceps" num ponto, o resultado mais interessante teria desaparecido na média.</p>
+  </div>
+</section>
+
+<section id="kassiano26-achou">
+  <span class="sec-num">09 &mdash; O QUE ENCONTROU</span>
+  <h2>Cada exercício tem seu <span class="accent">endereço</span></h2>
+  <p class="sec-sub">Um dos resultados mais claros de especificidade regional.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Desfecho</th><th>Cadeira extensora</th><th>Agachamento</th><th>Vencedor</th></tr></thead>
+      <tbody>
+        <tr><td>Reto femoral &mdash; proximal</td><td><b>+11,4%</b></td><td>+2,0%</td><td>Extensora</td></tr>
+        <tr><td>Reto femoral &mdash; médio</td><td><b>+12,3%</b></td><td>+5,7%</td><td>Extensora</td></tr>
+        <tr><td>Reto femoral &mdash; distal</td><td><b>+17,5%</b></td><td>menor</td><td>Extensora</td></tr>
+        <tr><td>Vasto lateral (esp. distal)</td><td>menor</td><td><b>maior</b></td><td>Agachamento</td></tr>
+        <tr><td>Força no agachamento (3RM)</td><td>menor</td><td><b>maior</b></td><td>Agachamento</td></tr>
+        <tr><td>Força na extensora (3RM)</td><td>similar</td><td>similar</td><td>Empate</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Repare na magnitude: no reto femoral proximal, a extensora produziu <strong>+11,4% contra apenas +2,0%</strong> do agachamento. Não é uma diferença sutil &mdash; é o agachamento praticamente <strong>não estimulando</strong> aquela região.</p>
+  <p>Na força, o padrão foi o esperado por especificidade: o agachamento melhorou muito mais o agachamento, enquanto os dois melhoraram igualmente a força na extensora. Ou seja, o exercício multiarticular <strong>transferiu</strong> para o monoarticular, mas não o contrário.</p>
+</section>
+
+<section id="reto-femoral">
+  <span class="sec-num">10 &mdash; O CASO DO RETO FEMORAL</span>
+  <h2>A biomecânica <span class="accent">explica</span> o número</h2>
+  <p class="sec-sub">Onde teoria e dado se encontram.</p>
+  <p>Por que o agachamento cresce tão pouco o reto femoral? A resposta está na natureza <strong>biarticular</strong> desse músculo &mdash; ele cruza o quadril (onde flexiona) e o joelho (onde estende).</p>
+  <div class="def">
+    <div class="word">O quase-cancelamento no agachamento</div>
+    <p>Na descida do agachamento, o <strong>quadril flexiona</strong> (o que <em>encurta</em> o reto femoral, já que ele é flexor de quadril) e o <strong>joelho flexiona</strong> (o que <em>alonga</em> o reto femoral, já que ele é extensor de joelho). As duas ações se opõem e o comprimento total muda pouco: o músculo trabalha num regime <strong>quase isométrico</strong>. Menos variação de comprimento e menos excursão sob tensão significam menos estímulo hipertrófico.</p>
+  </div>
+  <p>Na cadeira extensora, o quadril fica fixo em posição relativamente estendida e apenas o joelho se move. Sem o cancelamento, o reto femoral percorre sua excursão de verdade &mdash; e cresce.</p>
+  <div class="callout ok">
+    <span class="tag">Teoria confirmada por dado</span>
+    <p>Esse é um momento raro e satisfatório: um conceito de biomecânica que costuma ser ensinado de forma abstrata aparece <strong>quantificado em um ensaio randomizado</strong>. A previsão teórica era "o agachamento deve estimular pouco o reto femoral". O dado veio: <strong>+2,0%</strong>. Quando teoria e experimento convergem assim, a confiança no modelo aumenta bastante.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">A implicação prática</span>
+    <p>Isso desmonta o mito de que "agachamento treina o quadríceps inteiro". Ele treina muito bem os <strong>vastos</strong> &mdash; que são monoarticulares e não sofrem cancelamento &mdash; e <strong>deixa o reto femoral quase de fora</strong>. Quem quer desenvolvimento completo do quadríceps precisa de um movimento de extensão de joelho com quadril estendido.</p>
+  </div>
+</section>
+
+<section id="juntando">
+  <span class="sec-num">11 &mdash; JUNTANDO OS TRÊS</span>
+  <h2>Um <span class="accent">princípio</span> só</h2>
+  <p class="sec-sub">O que os três estudos dizem em conjunto.</p>
+  <ol class="key">
+    <li><b>Earp:</b> o crescimento é regional &mdash; depende da demanda mecânica.</li>
+    <li><b>Kassiano 2023:</b> a região estimulada depende do <b>comprimento</b> em que o músculo é carregado.</li>
+    <li><b>Kassiano 2026:</b> a escolha do exercício determina esse comprimento &mdash; e, portanto, <b>onde</b> o músculo cresce.</li>
+  </ol>
+  <div class="callout ok">
+    <span class="tag">O princípio unificador</span>
+    <p><strong>Hipertrofia segue a demanda mecânica local.</strong> Não é o "músculo" que recebe estímulo, são <em>fibras em determinadas regiões, em determinados comprimentos, sob determinada tensão</em>. Selecionar exercício é, na prática, <strong>escolher onde aplicar tensão</strong> &mdash; e é por isso que variedade de padrões de movimento tem justificativa fisiológica, não apenas psicológica.</p>
+  </div>
+</section>
+
+<section id="pratica">
+  <span class="sec-num">12 &mdash; O QUE MUDA NA PRÁTICA</span>
+  <h2>Traduzindo para o <span class="accent">treino</span></h2>
+  <p class="sec-sub">Aplicação direta.</p>
+  <ol class="key">
+    <li><b>Multiarticular não cobre tudo.</b> O agachamento é excelente, mas não substitui extensão de joelho se o objetivo inclui reto femoral. Monoarticular não é "acessório dispensável" &mdash; é cobertura de lacuna.</li>
+    <li><b>Priorize a região alongada.</b> Amplitude completa ou parciais na parte inicial. Parcial "em cima", na posição encurtada, é a pior escolha das três.</li>
+    <li><b>Combine padrões.</b> Como cada exercício tem endereço regional, variar padrões de movimento cobre mais do músculo &mdash; com justificativa mecânica.</li>
+    <li><b>Força é específica.</b> O agachamento transferiu para a extensora, mas não o contrário. Se um levantamento importa, treine-o.</li>
+    <li><b>Cuidado com médias.</b> Um estudo que mede só um ponto do músculo pode esconder diferenças regionais grandes. Ao ler pesquisa, veja <b>quantos sítios</b> foram medidos.</li>
+  </ol>
+  <div class="callout">
+    <span class="tag">Conexão com os materiais anteriores</span>
+    <p>Somando a série até aqui: esforço adequado (material 1), demanda crescente (material 2), sem se guiar por ativação aguda (material 3) &mdash; e agora, <strong>com atenção a onde a tensão é aplicada</strong>. É o quadro completo do estímulo.</p>
+  </div>
+</section>
+
+<section id="limites">
+  <span class="sec-num">13 &mdash; LIMITAÇÕES</span>
+  <h2>O que <span class="accent">não</span> foi respondido</h2>
+  <p class="sec-sub">Onde parar de extrapolar.</p>
+  <ul class="clean">
+    <li><b>Kassiano 2026 usou mulheres não treinadas</b>, 8 semanas, 2 sessões por semana. Em treinados, as magnitudes seriam menores &mdash; embora o padrão regional tenda a se manter pela lógica mecânica.</li>
+    <li><b>Ultrassom mede espessura</b>, não volume total. É uma boa estimativa regional, mas inferior à ressonância magnética.</li>
+    <li><b>Earp também usou não treinados</b>, e a interpretação biomecânica sobre momento de inércia é <b>hipótese dos autores</b>, não resultado medido.</li>
+    <li><b>A revisão de 2023 reuniu 11 estudos</b> &mdash; base ainda modesta, com protocolos heterogêneos.</li>
+    <li><b>Nem todo músculo responde igual.</b> Os achados de comprimento longo são mais consistentes em alguns músculos que em outros; generalizar para todos é extrapolação.</li>
+    <li><b>Ninguém testou a combinação ideal</b> de exercícios &mdash; os estudos isolaram para poder medir.</li>
+  </ul>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">14 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial dos três artigos.</p>
+  <ol class="key">
+    <li><b>Earp 2015:</b> 36 homens, 8 semanas, quatro protocolos &mdash; hipertrofia do quadríceps é <b>não-homogênea</b> e o padrão varia com a demanda mecânica.</li>
+    <li><b>Kassiano 2023:</b> revisão de 11 estudos &mdash; comprimento <b>longo</b> (amplitude completa ou parcial inicial) supera parcial na posição encurtada.</li>
+    <li>Parciais iniciais chegaram a superar a amplitude completa no <b>reto femoral proximal</b>.</li>
+    <li><b>Kassiano 2026:</b> 63 mulheres, 8 semanas &mdash; extensora cresceu muito mais o <b>reto femoral</b> (+11,4% vs +2,0% proximal); agachamento favoreceu o <b>vasto lateral</b>.</li>
+    <li>O agachamento quase não estimula o reto femoral por causa do <b>quase-cancelamento biarticular</b> &mdash; teoria confirmada por dado.</li>
+    <li><b>Princípio:</b> hipertrofia segue a <b>demanda mecânica local</b>. Escolher exercício é escolher onde aplicar tensão.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="artigos-3-gluteo-emg-vs-hipertrofia.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 3 &middot; Glúteo: EMG vs. Hipertrofia</span></a>
+    <a href="index.html"><span class="lbl">Biblioteca</span><span class="ttl">&larr; Voltar</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">15 &mdash; REFERÊNCIAS</span>
+  <h2>Os <span class="accent">artigos</span> originais</h2>
+  <p class="sec-sub">Para ler na fonte.</p>
+  <ul class="clean">
+    <li>Earp JE, Newton RU, Cormie P, Blazevich AJ. <b>Inhomogeneous Quadriceps Femoris Hypertrophy in Response to Strength and Power Training.</b> Med Sci Sports Exerc. 2015;47(11):2389&ndash;2397. PMID: 25811947. DOI: 10.1249/MSS.0000000000000669</li>
+    <li>Kassiano W, Costa B, Nunes JP, Ribeiro AS, Schoenfeld BJ, Cyrino ES. <b>Which ROMs Lead to Rome? A Systematic Review of the Effects of Range of Motion on Muscle Hypertrophy.</b> J Strength Cond Res. 2023;37(5):1135&ndash;1144. PMID: 36662126. DOI: 10.1519/JSC.0000000000004415</li>
+    <li>Kassiano W, Costa B, Kunevaliki G, Lisboa F, Prado A, Alves L, Tricoli I, Stavinski N, Francsuel J, Cyrino ES. <b>Comparison of Muscle Hypertrophy and Strength Adaptations Induced by Back Squat and Leg Extension Resistance Exercises.</b> J Strength Cond Res. 2026;40(4):367&ndash;376. PMID: 41379528. DOI: 10.1519/JSC.0000000000005338</li>
+    <li>Leitura complementar do mesmo grupo: Kassiano W, et al. <b>Greater Gastrocnemius Muscle Hypertrophy After Partial Range of Motion Training Performed at Long Muscle Lengths.</b> J Strength Cond Res. 2023;37(9):1746&ndash;1753.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de método</span>
+    <p>Análise e síntese autoral na voz MG COACH &mdash; não é tradução dos artigos, que são protegidos por direito autoral. Números, desenhos experimentais e percentuais foram conferidos nas publicações originais. O estudo de 2026 é posterior à minha base de conhecimento e foi verificado diretamente na fonte. Use os DOIs para acessar os artigos.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Artigos Comentados &middot; Parte 4 &middot; Hipertrofia Regional e ADM</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Análise autoral de literatura científica. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
