@@ -1,5 +1,13 @@
 [
   {
+    "titulo": "Artigos Comentados 1: Proximidade da Falha e RIR",
+    "categoria": "treino",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Primeiro material da série Artigos Comentados: análise didática de dois estudos sobre proximidade da falha. (1) Refalo et al., Sports Medicine 2023 — revisão sistemática com meta-análise de 15 estudos, agrupados em três temas conforme a definição de falha usada (falha momentânea, falha da série, limiares de perda de velocidade); achou vantagem TRIVIAL para a falha (ES 0,19; IC95% 0,00–0,37; p=0,045), nenhuma superioridade da falha momentânea, relação NÃO-LINEAR com proximidade, e nenhum efeito moderador de volume ou carga relativa. (2) Refalo et al., Journal of Sports Sciences 2024 — ensaio de 8 semanas, 2x/semana, com 18 treinados (12H/6M), desenho UNILATERAL (uma perna até a falha, outra com 2-RIR no leg press e 1-RIR na extensora), medindo espessura de reto femoral e vasto lateral por ultrassom com análise bayesiana; hipertrofia semelhante entre condições, com mais fadiga na condição de falha. Inclui glossário para ler qualquer artigo (tamanho de efeito, intervalo de confiança, valor de p, análise bayesiana/HDI, moderador), aplicação prática (mirar a faixa próxima da falha, não a falha; fadiga economizada vira frequência) e seção de limitações.",
+    "arquivo": "artigos-1-proximidade-da-falha.html"
+  },
+  {
     "titulo": "Interações Hormonais: como cada composto mexe nos seus marcadores",
     "categoria": "fisiologia",
     "serie": "Farmacologia Hormonal",
