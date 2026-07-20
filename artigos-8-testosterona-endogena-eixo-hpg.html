@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigos Comentados 8: Testosterona Endógena e o Eixo HPG | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Artigos Comentados 8: Testosterona Endógena e o Eixo HPG | MG COACH">
+    <meta property="og:description" content="Análise de Vingren et al. (Sports Medicine, 2010): a fisiologia da testosterona no treinamento de resistência, o eixo hipotálamo-hipófise-gonadal, os elementos regulatórios a montante, e a leitura crítica de um artigo que representa um lado de um debate histórico já resolvido.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/artigos-8-testosterona-endogena-eixo-hpg.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Artigos Comentados 8: Testosterona Endógena e o Eixo HPG | MG COACH">
+    <meta name="twitter:description" content="O eixo HPG, os elementos a montante e um debate histórico resolvido.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#acrescenta">O que acrescenta</a>
+    <a href="#resumo-rapido">Resposta rápida</a>
+    <a href="#artigo">O artigo</a>
+    <a href="#producao">Produção de testosterona</a>
+    <a href="#eixo">O eixo HPG</a>
+    <a href="#regulacao">Estimulação e inibição</a>
+    <a href="#montante">Elementos a montante</a>
+    <a href="#aguda">A resposta aguda</a>
+    <a href="#debate">O debate de 2010</a>
+    <a href="#sexo">Diferenças sexuais</a>
+    <a href="#idade">Idade</a>
+    <a href="#pratica">O que muda na prática</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Artigos Comentados &middot; Parte 8</div>
+  <div class="serie-bar">
+    <a href="artigos-1-proximidade-da-falha.html">1 &middot; Falha</a>
+    <a href="artigos-2-sobrecarga-progressiva.html">2 &middot; Sobrecarga</a>
+    <a href="artigos-3-gluteo-emg-vs-hipertrofia.html">3 &middot; Glúteo</a>
+    <a href="artigos-4-hipertrofia-regional-adm.html">4 &middot; Regional e ADM</a>
+    <a href="artigos-5-organizacao-do-treino.html">5 &middot; Organização</a>
+    <a href="artigos-6-mecanismos-da-hipertrofia.html">6 &middot; Mecanismos</a>
+    <a href="artigos-7-casos-limite.html">7 &middot; Casos-Limite</a>
+    <span class="atual">8 &middot; Testosterona Endógena</span>
+  </div>
+  <h1>Testosterona endógena e o <span class="em">eixo HPG</span></h1>
+  <p class="lede">Vingren et al. (<i>Sports Medicine</i>, 2010): a fisiologia da testosterona no treinamento, o <b>eixo hipotálamo-hipófise-gonadal</b> em funcionamento normal, os <b>elementos regulatórios a montante</b> (programa, sexo e idade) &mdash; e a leitura crítica de um artigo muito citado que representa <b>um lado de um debate já resolvido</b>.</p>
+</div>
+
+<main>
+
+<section id="acrescenta">
+  <span class="sec-num">01 &mdash; O QUE ESTE ARTIGO ACRESCENTA</span>
+  <h2>Antes de tudo: <span class="accent">vale a pena?</span></h2>
+  <p class="sec-sub">A pergunta certa a fazer antes de somar mais um material.</p>
+  <p>Boa parte do conteúdo deste artigo já está coberta na biblioteca: testosterona estimula a síntese proteica e inibe a degradação, os sinais passam pelo receptor androgênico intracelular, e há uma resposta endócrina aguda ao treino. Nada disso é novo aqui.</p>
+  <p>Mas três coisas <strong>são</strong>:</p>
+  <ol class="key">
+    <li><b>O eixo HPG em funcionamento normal.</b> Os materiais de farmacologia tratam do eixo no contexto de <b>supressão</b> &mdash; o que acontece quando ele é desligado por androgênio exógeno. Aqui vemos a <b>regulação fisiológica</b>: como o corpo controla a própria produção.</li>
+    <li><b>O conceito de "elementos regulatórios a montante".</b> A ideia de que a resposta de testosterona e do receptor androgênico depende de variáveis do programa de treino, <b>sexo</b> e <b>idade</b>.</li>
+    <li><b>O registro explícito de que a resposta em mulheres é equívoca</b> &mdash; e que a testosterona é considerada o principal promotor do crescimento muscular <b>em homens</b>. Uma qualificação que abre um tema inteiro.</li>
+  </ol>
+  <div class="callout warn">
+    <span class="tag">E uma ressalva que vale mais que o resto</span>
+    <p>Este artigo é de <strong>2010</strong> e representa <strong>um lado de um debate que já foi resolvido</strong> &mdash; e resolvido contra ele, em parte. Isso não o invalida; torna-o um excelente objeto de estudo sobre <strong>como a ciência se corrige</strong>. Trataremos disso na seção 09.</p>
+  </div>
+</section>
+
+<section id="resumo-rapido">
+  <span class="sec-num">02 &mdash; A RESPOSTA RÁPIDA</span>
+  <h2>Se você ler <span class="accent">só isto</span></h2>
+  <p class="sec-sub">O essencial.</p>
+  <div class="callout ok">
+    <span class="tag">Em duas frases</span>
+    <p><b>1.</b> A testosterona endógena é regulada pelo <strong>eixo hipotálamo-hipófise-gonadal</strong>, um sistema de retroalimentação que responde a variáveis de treino, sexo e idade. <b>2.</b> O artigo defende que a <strong>resposta aguda</strong> ao treino é importante para as adaptações &mdash; premissa que a literatura posterior <strong>não sustentou</strong>, embora o restante da fisiologia descrita continue válido.</p>
+  </div>
+</section>
+
+<section id="artigo">
+  <span class="sec-num">03 &mdash; O ARTIGO</span>
+  <h2>Uma revisão <span class="accent">clássica</span></h2>
+  <p class="sec-sub">Vingren, Kraemer, Ratamess, Anderson, Volek e Maresh &middot; <i>Sports Medicine</i>, 2010.</p>
+  <p>Título original: <i>Testosterone Physiology in Resistance Exercise and Training: The Up-Stream Regulatory Elements</i>. Em português: <strong>"Fisiologia da testosterona no exercício e treinamento de resistência: os elementos regulatórios a montante"</strong>.</p>
+  <p>O grupo é liderado por <strong>William Kraemer</strong>, um dos nomes mais influentes da fisiologia do exercício &mdash; e figura central na linha de pesquisa que investigou as respostas hormonais agudas ao treinamento. É um artigo <strong>muito citado</strong>, o que por si só já justifica conhecê-lo: você vai encontrá-lo referenciado em dezenas de outros textos.</p>
+  <div class="def">
+    <div class="word">"Elementos regulatórios a montante"</div>
+    <p>"A montante" (<i>up-stream</i>) significa <strong>antes na cadeia causal</strong> &mdash; os fatores que determinam quanto de testosterona é produzida e quão responsivo está o receptor, <em>antes</em> de qualquer efeito no músculo. O artigo argumenta que entender esses reguladores é tão importante quanto entender o efeito final.</p>
+  </div>
+</section>
+
+<section id="producao">
+  <span class="sec-num">04 &mdash; PRODUÇÃO DE TESTOSTERONA</span>
+  <h2>De onde ela <span class="accent">vem</span></h2>
+  <p class="sec-sub">Uma diferença fundamental entre os sexos.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Origem</th><th>Em homens</th><th>Em mulheres</th></tr></thead>
+      <tbody>
+        <tr><td>Gônadas</td><td><b>Células de Leydig</b> nos testículos &mdash; fonte principal</td><td><b>Ovários</b> &mdash; produção muito menor</td></tr>
+        <tr><td>Adrenais</td><td>Contribuição pequena</td><td>Contribuição <b>proporcionalmente maior</b></td></tr>
+        <tr><td>Conversão periférica</td><td>Menor relevância relativa</td><td>Relevante (a partir de precursores)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A testosterona é sintetizada a partir do <strong>colesterol</strong>, por uma cadeia de conversões enzimáticas. O artigo descreve que esse processo, do estímulo ao produto final, ocorre em uma <strong>escala de minutos</strong> &mdash; o que explica por que é possível observar elevações agudas logo após uma sessão de treino.</p>
+  <div class="callout">
+    <span class="tag">O detalhe que importa para depois</span>
+    <p>Mulheres produzem testosterona em concentrações <strong>muito menores</strong>, e com contribuição relativa maior das <strong>adrenais</strong>. Isso significa que o sistema androgênico feminino opera em outra escala e com outra arquitetura &mdash; e é uma das razões pelas quais introduzir androgênio exógeno tem impacto proporcionalmente muito maior em mulheres.</p>
+  </div>
+</section>
+
+<section id="eixo">
+  <span class="sec-num">05 &mdash; O EIXO HPG</span>
+  <h2>O sistema de <span class="accent">controle</span></h2>
+  <p class="sec-sub">A regulação fisiológica que os materiais de farmacologia só viam desligada.</p>
+  <div class="stepwrap">
+    <div class="step"><h4>Hipotálamo</h4><p>Libera <strong>GnRH</strong> (hormônio liberador de gonadotrofina) de forma <strong>pulsátil</strong> &mdash; e a natureza pulsátil é essencial: estímulo contínuo dessensibiliza o sistema.</p></div>
+    <div class="step"><h4>Hipófise</h4><p>Em resposta ao GnRH, secreta <strong>LH</strong> e <strong>FSH</strong> &mdash; as gonadotrofinas.</p></div>
+    <div class="step"><h4>Gônadas</h4><p>O LH estimula as células de Leydig (ou as células ovarianas correspondentes) a produzir <strong>testosterona</strong>. O FSH atua sobretudo na espermatogênese.</p></div>
+    <div class="step"><h4>Retroalimentação negativa</h4><p>A testosterona circulante &mdash; e o estradiol derivado dela &mdash; <strong>inibem</strong> hipotálamo e hipófise, reduzindo GnRH e LH. É um termostato: quanto mais androgênio circulante, menos sinal para produzir.</p></div>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Por que isso fecha um buraco na biblioteca</span>
+    <p>Agora dá para enxergar a <strong>supressão por EAA</strong> com clareza mecânica: o androgênio exógeno é lido pelo sistema como testosterona circulante alta, dispara a retroalimentação negativa, e o eixo desliga &mdash; LH e FSH caem, a produção própria cessa. Não é "efeito colateral misterioso": é o termostato <strong>funcionando exatamente como deveria</strong>, diante de um sinal que ele não sabe distinguir de produção própria.</p>
+  </div>
+</section>
+
+<section id="regulacao">
+  <span class="sec-num">06 &mdash; ESTIMULAÇÃO E INIBIÇÃO</span>
+  <h2>O que <span class="accent">modula</span> o eixo</h2>
+  <p class="sec-sub">Além da retroalimentação hormonal.</p>
+  <p>O eixo HPG não é um circuito fechado &mdash; ele recebe entradas de vários sistemas. Entre os moduladores discutidos na literatura:</p>
+  <ul class="clean">
+    <li><b>Estresse e cortisol.</b> Ativação sustentada do eixo do estresse tende a <b>suprimir</b> o eixo reprodutivo.</li>
+    <li><b>Disponibilidade energética.</b> Déficit calórico acentuado e baixa disponibilidade de energia reduzem a atividade do eixo &mdash; um mecanismo conservador: o organismo desprioriza reprodução quando falta combustível.</li>
+    <li><b>Sono.</b> A secreção tem padrão circadiano, com produção concentrada no sono &mdash; privação crônica reduz concentrações.</li>
+    <li><b>Composição corporal.</b> Tecido adiposo influencia via aromatização e outros mecanismos.</li>
+    <li><b>O próprio exercício.</b> Agudamente pode elevar; cronicamente, em excesso e sem recuperação, pode <b>reduzir</b>.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">A leitura prática mais útil do artigo inteiro</span>
+    <p>Os fatores que mais afetam a testosterona endógena de forma <strong>sustentada</strong> são <strong>sono, disponibilidade energética, gordura corporal e gestão de estresse</strong> &mdash; não a escolha de exercícios ou o intervalo entre séries. Quem quer otimizar o ambiente hormonal natural deve olhar para esses quatro antes de qualquer detalhe de programação.</p>
+  </div>
+</section>
+
+<section id="montante">
+  <span class="sec-num">07 &mdash; OS ELEMENTOS A MONTANTE</span>
+  <h2>Três <span class="accent">determinantes</span></h2>
+  <p class="sec-sub">O conceito que dá título ao artigo.</p>
+  <p>Segundo os autores, a resposta da testosterona e do receptor androgênico ao exercício resistido é determinada, em grande parte, por três conjuntos de fatores:</p>
+  <div class="grid2">
+    <div class="mini"><h4>Variáveis do programa agudo</h4><p>Volume, intensidade, intervalo de descanso, massa muscular envolvida e seleção de exercícios. Protocolos com <strong>alto volume, descansos curtos e grandes grupos musculares</strong> produzem as maiores elevações agudas.</p></div>
+    <div class="mini"><h4>Sexo</h4><p>Homens apresentam elevação consistente após treino pesado. Em mulheres, os achados são <strong>equívocos</strong> &mdash; alguns estudos mostram aumento, outros nenhuma mudança.</p></div>
+    <div class="mini"><h4>Idade</h4><p>A idade afeta significativamente as concentrações circulantes &mdash; tanto os níveis basais quanto a magnitude da resposta.</p></div>
+  </div>
+  <p>Há ainda um quarto elemento tratado no artigo: a <strong>regulação do próprio receptor androgênico</strong>. Trabalhos do grupo indicam que concentrações elevadas de testosterona endógena podem <strong>potencializar a resposta do receptor</strong> ao exercício &mdash; ou seja, o sistema não depende só de quanto hormônio existe, mas de quantos receptores estão disponíveis e responsivos.</p>
+</section>
+
+<section id="aguda">
+  <span class="sec-num">08 &mdash; A RESPOSTA AGUDA</span>
+  <h2>O que o artigo <span class="accent">defende</span></h2>
+  <p class="sec-sub">A tese central &mdash; e o ponto de atrito.</p>
+  <p>O artigo sustenta que a testosterona é <strong>importante para as adaptações desejadas</strong> ao treinamento, sendo considerada o principal promotor do crescimento muscular e do ganho de força em homens. E conclui, na prática, que as variáveis do programa devem ser escolhidas de modo que a sessão contenha <strong>volume alto e demanda metabólica suficiente</strong> para induzir a resposta aguda de testosterona.</p>
+  <p>Traduzindo a recomendação implícita: <em>estruture o treino para maximizar o pico hormonal pós-exercício, porque isso melhora o resultado.</em></p>
+</section>
+
+<section id="debate">
+  <span class="sec-num">09 &mdash; O DEBATE DE 2010</span>
+  <h2>Duas escolas, <span class="accent">mesmo ano</span></h2>
+  <p class="sec-sub">A parte mais instrutiva deste material.</p>
+  <p>Enquanto este artigo era publicado, outro grupo trabalhava na direção oposta. No <strong>mesmo ano de 2010</strong>, West e colegas &mdash; do laboratório de Stuart Phillips, o mesmo do material 6 &mdash; publicaram um trabalho cujo título já resume o achado: elevações em hormônios <em>supostamente</em> anabólicos após exercício resistido <strong>não melhoraram nem a hipertrofia nem a força</strong> dos flexores do cotovelo.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Escola de Kraemer</th><th>Escola de Phillips</th></tr></thead>
+      <tbody>
+        <tr><td>Tese</td><td>A resposta hormonal aguda <b>importa</b> para as adaptações</td><td>A hipertrofia é um processo <b>intrínseco</b> ao músculo</td></tr>
+        <tr><td>Foco</td><td>Hormônios sistêmicos e regulação a montante</td><td>Sinalização local, mecanotransdução, síntese proteica</td></tr>
+        <tr><td>Desenho típico</td><td>Correlações e respostas agudas</td><td>Ensaios manipulando o ambiente hormonal</td></tr>
+        <tr><td>Status atual</td><td><b>Não sustentado</b> para a resposta aguda</td><td><b>Prevaleceu</b> na literatura subsequente</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Os anos seguintes deram razão à segunda escola. Estudos que acompanharam pessoas por meses mostraram que as elevações agudas de testosterona, GH e IGF-1 <strong>não se relacionam</strong> com a magnitude da hipertrofia obtida. É a mesma conclusão que registramos no material 6.</p>
+  <div class="callout ok">
+    <span class="tag">Como ler um artigo "superado"</span>
+    <p>Isso não significa jogar o Vingren fora. Significa <strong>separar as camadas</strong>: a descrição da fisiologia do eixo HPG, das fontes de produção, dos moduladores e das diferenças por sexo e idade <strong>continua válida e útil</strong>. O que envelheceu foi a <strong>inferência causal</strong> &mdash; a conclusão de que maximizar o pico agudo melhoraria o resultado. Um artigo pode estar certo na descrição e errado na conclusão.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">A lição maior</span>
+    <p>Este é um exemplo raro e valioso de <strong>ciência funcionando</strong>: duas hipóteses concorrentes, defendidas por grupos sérios, testadas ao longo de uma década &mdash; e uma delas cedendo diante da evidência. Quando alguém cita um artigo de 2010 como se fosse o estado da arte, a pergunta é: <strong>o que foi publicado depois sobre isso?</strong> A mesma regra do material 7, aplicada a outro caso.</p>
+  </div>
+</section>
+
+<section id="sexo">
+  <span class="sec-num">10 &mdash; DIFERENÇAS SEXUAIS</span>
+  <h2>A qualificação que abre um <span class="accent">tema inteiro</span></h2>
+  <p class="sec-sub">O ponto mais importante deste artigo para o que vem a seguir.</p>
+  <p>Repare na formulação cuidadosa dos autores: a testosterona é considerada o principal promotor do crescimento muscular e do ganho de força em resposta ao treinamento <strong>em homens</strong>. E, sobre mulheres, registram que os achados da resposta de testosterona ao treino pesado são <strong>equívocos</strong> &mdash; há estudos mostrando aumento e estudos mostrando nenhuma mudança.</p>
+  <div class="callout ok">
+    <span class="tag">O que isso implica</span>
+    <p>Se mulheres têm testosterona basal muito menor, resposta aguda inconsistente, e ainda assim <strong>hipertrofiam com treinamento</strong> &mdash; então o crescimento muscular feminino não pode depender majoritariamente da testosterona. Ele acontece por outras vias: mecanotransdução, sinalização local, estrogênio (que tem papéis anabólicos e protetores próprios), e os mesmos mecanismos intrínsecos que a escola de Phillips defendia.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">E a consequência prática</span>
+    <p>Isso tem uma implicação direta e séria: um sistema que opera com concentrações androgênicas baixas é <strong>muito mais sensível</strong> à introdução de androgênio externo. A mesma quantidade absoluta que representa um ajuste modesto em um homem pode representar uma <strong>alteração de ordem de grandeza</strong> em uma mulher &mdash; com efeitos que, em parte, são <strong>irreversíveis</strong>. É o tema do próximo material.</p>
+  </div>
+</section>
+
+<section id="idade">
+  <span class="sec-num">11 &mdash; IDADE</span>
+  <h2>O terceiro <span class="accent">elemento</span></h2>
+  <p class="sec-sub">Brevemente, porque merece material próprio.</p>
+  <p>O artigo registra que a idade afeta significativamente as concentrações circulantes de testosterona. O declínio gradual com o envelhecimento é acompanhado de mudanças na sensibilidade do eixo e na responsividade do receptor.</p>
+  <p>Vale conectar com o material 6: mesmo com testosterona menor, o treino resistido continua sendo eficaz em idosos &mdash; agindo por mecanismos locais, redução de inflamação e regulação de autofagia. Ou seja, <strong>a queda hormonal não anula a capacidade de resposta ao treino</strong>, o que é mais um argumento contra a centralidade do hormônio circulante.</p>
+</section>
+
+<section id="pratica">
+  <span class="sec-num">12 &mdash; O QUE MUDA NA PRÁTICA</span>
+  <h2>Traduzindo para o <span class="accent">treino</span></h2>
+  <p class="sec-sub">O que sobra de aplicável.</p>
+  <ol class="key">
+    <li><b>Não estruture o treino para "maximizar hormônio".</b> Essa recomendação específica não se sustentou. Estruture para tensão, progressão e recuperação.</li>
+    <li><b>Cuide dos moduladores sustentados.</b> Sono, disponibilidade energética, gordura corporal e estresse afetam a testosterona basal de forma real &mdash; muito mais que qualquer detalhe de programação.</li>
+    <li><b>Entenda a supressão mecanicamente.</b> O eixo desliga por retroalimentação negativa: é o termostato funcionando, não uma falha.</li>
+    <li><b>Não assuma que mulheres respondem como homens.</b> A resposta hormonal aguda é inconsistente nelas, e o crescimento se dá por outras vias &mdash; com implicações sérias para farmacologia.</li>
+    <li><b>Idade reduz hormônio, não anula resposta.</b> Treino resistido continua eficaz.</li>
+  </ol>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">13 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial do artigo.</p>
+  <ol class="key">
+    <li>O <b>eixo HPG</b> regula a testosterona por retroalimentação negativa: hipotálamo (GnRH pulsátil) &rarr; hipófise (LH/FSH) &rarr; gônadas (testosterona) &rarr; inibição de volta.</li>
+    <li>A <b>supressão por EAA</b> é esse termostato funcionando diante de um sinal que ele não distingue de produção própria.</li>
+    <li><b>Moduladores sustentados:</b> sono, disponibilidade energética, gordura corporal, estresse &mdash; mais relevantes que programação de treino.</li>
+    <li><b>Elementos a montante:</b> variáveis do programa agudo, <b>sexo</b> e <b>idade</b> &mdash; mais a regulação do próprio receptor androgênico.</li>
+    <li>A tese de que <b>maximizar o pico agudo melhora o resultado</b> não se sustentou &mdash; a escola de Phillips prevaleceu.</li>
+    <li>Um artigo pode estar <b>certo na descrição e errado na conclusão</b>: separe as camadas ao ler.</li>
+    <li>Em <b>mulheres</b>, a resposta de testosterona ao treino é <b>equívoca</b>, e o crescimento ocorre por outras vias &mdash; o que torna o sistema muito mais sensível a androgênio exógeno.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="artigos-7-casos-limite.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 7 &middot; Casos-Limite</span></a>
+    <a href="index.html"><span class="lbl">Biblioteca</span><span class="ttl">&larr; Voltar</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">14 &mdash; REFERÊNCIAS</span>
+  <h2>Os <span class="accent">artigos</span></h2>
+  <p class="sec-sub">O principal e os contrapontos.</p>
+  <ul class="clean">
+    <li>Vingren JL, Kraemer WJ, Ratamess NA, Anderson JM, Volek JS, Maresh CM. <b>Testosterone Physiology in Resistance Exercise and Training: The Up-Stream Regulatory Elements.</b> Sports Med. 2010;40(12):1037&ndash;1053. PMID: 21058750. DOI: 10.2165/11536910-000000000-00000</li>
+    <li>Contraponto do mesmo ano: West DWD, Burd NA, Tang JE, Moore DR, Staples AW, Holwerda AM, Baker SK, Phillips SM. <b>Elevations in ostensibly anabolic hormones with resistance exercise enhance neither training-induced muscle hypertrophy nor strength of the elbow flexors.</b> J Appl Physiol. 2010;108(1):60&ndash;67.</li>
+    <li>West DWD, Burd NA, Staples AW, Phillips SM. <b>Human exercise-mediated skeletal muscle hypertrophy is an intrinsic process.</b> Int J Biochem Cell Biol. 2010;42(9):1371&ndash;1375.</li>
+    <li>Sobre diferenças sexuais: Handelsman DJ, Hirschberg AL, Bermon S. <b>Circulating Testosterone as the Hormonal Basis of Sex Differences in Athletic Performance.</b> Endocr Rev. 2018;39(5):803&ndash;829.</li>
+    <li>Complementar: Nuzzo JL. <b>Narrative Review of Sex Differences in Muscle Strength, Endurance, Activation, Size, Fiber Type...</b> J Strength Cond Res. 2023;37(2):494&ndash;536.</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de método</span>
+    <p>Análise e síntese autoral na voz MG COACH &mdash; não é tradução do artigo, que é protegido por direito autoral. Os contrapontos <strong>não estavam no lote original</strong>: foram buscados para situar o artigo no debate histórico, seguindo o mesmo método do material 7. Use os DOIs para acessar as fontes.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Artigos Comentados &middot; Parte 8 &middot; Testosterona Endógena e Eixo HPG</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Análise autoral de literatura científica. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
