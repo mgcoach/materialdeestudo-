@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmacologia Hormonal 7: EAA no Público Feminino | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Farmacologia Hormonal 7: EAA no Público Feminino | MG COACH">
+    <meta property="og:description" content="Material educativo e de redução de danos sobre esteroides androgênicos anabólicos em mulheres: por que a resposta é desproporcional, a virilização e a distinção crítica entre efeitos reversíveis e irreversíveis, impacto sobre ciclo menstrual, fertilidade, saúde óssea e cardiovascular, perfil por composto e monitoramento.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/farmacologia-hormonal-7-mulheres.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Farmacologia Hormonal 7: EAA no Público Feminino | MG COACH">
+    <meta name="twitter:description" content="Por que a resposta é desproporcional e o que não volta atrás.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#escopo">Escopo</a>
+    <a href="#diferenca">A diferença fundamental</a>
+    <a href="#hipertrofia">Hipertrofia</a>
+    <a href="#virilizacao">Virilização</a>
+    <a href="#reversivel">Reversível vs irreversível</a>
+    <a href="#voz">O caso da voz</a>
+    <a href="#ciclo">Ciclo e fertilidade</a>
+    <a href="#osso">Estrogênio e osso</a>
+    <a href="#cardio">Cardiovascular</a>
+    <a href="#compostos">Perfil por composto</a>
+    <a href="#alto-risco">Os de maior risco</a>
+    <a href="#indice">Por que o índice engana</a>
+    <a href="#monitoramento">Monitoramento</a>
+    <a href="#performance">Alta performance</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#ref">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Farmacologia Hormonal &middot; Parte 7</div>
+  <div class="serie-bar">
+    <a href="farmacologia-hormonal-1-fundamentos-receptores.html">1 &middot; Fundamentos</a>
+    <a href="farmacologia-hormonal-2-testosterona-dht.html">2 &middot; Testo e DHT</a>
+    <a href="farmacologia-hormonal-3-19-nor.html">3 &middot; 19-nor</a>
+    <a href="farmacologia-hormonal-4-exames-monitoramento.html">4 &middot; Exames</a>
+    <a href="farmacologia-hormonal-5-potencial-anabolico.html">5 &middot; Potencial Anabólico</a>
+    <a href="farmacologia-hormonal-6-alem-dos-eaa.html">6 &middot; Além dos EAA</a>
+    <span class="atual">7 &middot; Público Feminino</span>
+  </div>
+  <h1>EAA no público <span class="em">feminino</span></h1>
+  <p class="lede">Toda a série anterior foi construída sobre fisiologia masculina. Aqui o quadro muda de natureza: por que a resposta é <b>desproporcional</b>, o que é <b>reversível e o que não é</b>, o impacto sobre <b>ciclo, fertilidade e osso</b>, o perfil por composto e o monitoramento que realmente protege. Educativo e de redução de danos &mdash; sem doses.</p>
+</div>
+
+<main>
+
+<section id="escopo">
+  <span class="sec-num">01 &mdash; ESCOPO DESTE MATERIAL</span>
+  <h2>Por que ele <span class="accent">existe</span></h2>
+  <p class="sec-sub">E o que ele deliberadamente não faz.</p>
+  <p>Os seis materiais anteriores desta série foram construídos, na prática, sobre <strong>fisiologia masculina</strong> &mdash; como quase toda a literatura de EAA. Aplicar aquele conteúdo diretamente a mulheres seria um erro grave, porque os riscos mudam de natureza, não apenas de intensidade.</p>
+  <p>Mulheres usam EAA em contextos de alta performance e estética. Isso é um fato. E a informação disponível para elas é, em geral, <strong>pior</strong> do que a disponível para homens: menos estudada, mais anedótica, e frequentemente traduzida de protocolos masculinos com um ajuste ingênuo de escala.</p>
+  <div class="callout warn">
+    <span class="tag">O que este material é</span>
+    <p><strong>Educativo e de redução de danos.</strong> Não há doses, protocolos ou combinações &mdash; pelo mesmo critério dos materiais anteriores, e com ainda mais razão aqui. O foco é <strong>mecanismo, risco e, sobretudo, a distinção entre o que é reversível e o que não é</strong>. Essa última informação é a mais crítica e a menos disponível &mdash; e é a única que precisa ser conhecida <em>antes</em>, porque depois não há correção possível.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Escopo profissional</span>
+    <p>Nada aqui é prescrição. Uso de androgênios em mulheres é território <strong>estritamente médico</strong> (endocrinologia e ginecologia). Como consultor de performance, o papel é orientar treino, reconhecer sinais de alerta e <strong>encaminhar</strong> &mdash; nunca sugerir, ajustar ou validar uso. Uma aluna que relata sinais de virilização precisa de médico, não de ajuste de protocolo.</p>
+  </div>
+</section>
+
+<section id="diferenca">
+  <span class="sec-num">02 &mdash; A DIFERENÇA FUNDAMENTAL</span>
+  <h2>Outra <span class="accent">escala</span>, outra arquitetura</h2>
+  <p class="sec-sub">Por que não é "a mesma coisa em dose menor".</p>
+  <p>Como vimos no material sobre o eixo HPG, a fisiologia androgênica feminina difere em três aspectos que mudam tudo:</p>
+  <ol class="key">
+    <li><b>Concentração basal muito menor.</b> A testosterona circulante em mulheres é uma fração da masculina &mdash; ordens de grandeza abaixo.</li>
+    <li><b>Fontes diferentes.</b> Produção ovariana somada a contribuição adrenal proporcionalmente maior, além de conversão periférica.</li>
+    <li><b>O crescimento muscular não depende majoritariamente de androgênio.</b> Mulheres hipertrofiam bem com treino, por mecanotransdução e sinalização local &mdash; com o estrogênio exercendo papéis anabólicos e protetores próprios.</li>
+  </ol>
+  <div class="callout warn">
+    <span class="tag">A consequência aritmética</span>
+    <p>Introduzir androgênio exógeno em um sistema que opera em concentrações baixas produz uma <strong>alteração relativa muito maior</strong>. Uma quantidade absoluta que representaria um ajuste modesto em um homem pode multiplicar várias vezes a exposição androgênica de uma mulher. É por isso que <strong>"dose reduzida" não equivale a "risco reduzido proporcionalmente"</strong> &mdash; a curva não é a mesma.</p>
+  </div>
+  <div class="callout">
+    <span class="tag">E a variação individual pesa mais aqui</span>
+    <p>A sensibilidade androgênica varia geneticamente (repetições CAG no receptor, atividade de 5-alfa-redutase nos tecidos). Isso significa que <strong>não existe limiar seguro previsível</strong>: algumas mulheres desenvolvem sinais de virilização com exposições que outras toleram. Não há como saber antes &mdash; e o teste é o próprio corpo, com efeitos que podem não voltar.</p>
+  </div>
+</section>
+
+<section id="hipertrofia">
+  <span class="sec-num">03 &mdash; HIPERTROFIA</span>
+  <h2>A resposta é <span class="accent">forte</span></h2>
+  <p class="sec-sub">E é justamente isso que torna o cálculo enganoso.</p>
+  <p>Precisa ser dito com honestidade: androgênios <strong>funcionam muito bem</strong> em mulheres. Como a base androgênica é baixa, a mudança relativa no ambiente hormonal é grande, e a resposta em massa magra e força costuma ser <strong>proporcionalmente expressiva</strong> &mdash; frequentemente mais perceptível, em termos relativos, do que em homens usando quantidades bem maiores.</p>
+  <p>Efeitos observados incluem ganho de massa magra, aumentos de força marcantes, melhora de recuperação e partição de nutrientes favorável.</p>
+  <div class="callout warn">
+    <span class="tag">Por que a eficácia é uma armadilha</span>
+    <p>Exatamente porque funciona rápido e visivelmente, o custo tende a ser subestimado no início. Os ganhos aparecem em semanas; boa parte dos efeitos virilizantes se instala de forma <strong>gradual e silenciosa</strong>, e quando se torna evidente já pode estar consolidada. O resultado positivo chega antes da conta &mdash; e isso distorce a percepção de risco de quem está no meio do processo.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">O contraponto que importa</span>
+    <p>Mulheres constroem quantidades substanciais de massa magra e força <strong>sem farmacologia</strong> &mdash; a literatura de treinamento é clara nisso, e os materiais de Artigos Comentados desta biblioteca mostram os mecanismos. O teto natural feminino é rotineiramente subestimado, inclusive por quem treina. Boa parte da percepção de "não consigo evoluir" vem de <strong>volume insuficiente, progressão inexistente ou déficit calórico crônico</strong> &mdash; não de limitação hormonal.</p>
+  </div>
+</section>
+
+<section id="virilizacao">
+  <span class="sec-num">04 &mdash; VIRILIZAÇÃO</span>
+  <h2>O eixo <span class="accent">central</span> do risco</h2>
+  <p class="sec-sub">O que diferencia radicalmente o quadro feminino.</p>
+  <div class="def">
+    <div class="word">Virilização</div>
+    <p>Desenvolvimento de <strong>características sexuais secundárias masculinas</strong> em resposta à exposição androgênica: alterações vocais, crescimento de pelos em padrão masculino, aumento do clitóris, alopecia de padrão masculino, alterações de traços faciais e de composição corporal.</p>
+  </div>
+  <p>Em homens, os colaterais dos EAA são majoritariamente <strong>metabólicos e funcionais</strong> &mdash; lipídios, fígado, hematócrito, eixo. Todos sérios, e a maioria reversível ou manejável. Em mulheres, soma-se uma categoria inteira que os homens não enfrentam: <strong>alterações estruturais permanentes</strong>.</p>
+  <div class="callout warn">
+    <span class="tag">A distinção que organiza tudo</span>
+    <p>Não é que mulheres tenham "os mesmos colaterais, com virilização a mais". É que a virilização <strong>muda a categoria do risco</strong>: de reversível para permanente, de laboratorial para visível, de manejável para definitivo. Um HDL derrubado se recupera. Uma voz que engrossou, não.</p>
+  </div>
+</section>
+
+<section id="reversivel">
+  <span class="sec-num">05 &mdash; REVERSÍVEL VS. IRREVERSÍVEL</span>
+  <h2>A tabela mais importante <span class="accent">deste material</span></h2>
+  <p class="sec-sub">A informação que precisa ser conhecida antes &mdash; role para o lado.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Efeito</th><th>Reversibilidade</th><th>Observação</th></tr></thead>
+      <tbody>
+        <tr><td><b>Aprofundamento da voz</b></td><td><b>Irreversível</b></td><td>Alteração estrutural das pregas vocais; não regride com a suspensão</td></tr>
+        <tr><td><b>Aumento do clitóris</b></td><td><b>Largamente irreversível</b></td><td>Pode regredir parcialmente; costuma persistir em grau significativo</td></tr>
+        <tr><td><b>Alopecia androgenética</b></td><td><b>Frequentemente permanente</b></td><td>Perda folicular em padrão masculino tende a não se recuperar</td></tr>
+        <tr><td><b>Alterações de traços faciais</b></td><td><b>Irreversível</b></td><td>Espessamento e mudanças ósseas/de tecido com exposição prolongada</td></tr>
+        <tr><td>Hirsutismo (pelos faciais e corporais)</td><td><b>Parcialmente reversível</b></td><td>Densidade pode reduzir, mas folículos alterados tendem a persistir</td></tr>
+        <tr><td>Acne e oleosidade</td><td>Reversível</td><td>Regride após a suspensão; pode deixar cicatrizes</td></tr>
+        <tr><td>Alterações menstruais</td><td>Geralmente reversível</td><td>Retorno costuma ocorrer, mas o prazo é variável</td></tr>
+        <tr><td>Aumento de libido</td><td>Reversível</td><td>Acompanha a exposição</td></tr>
+        <tr><td>Retenção hídrica</td><td>Reversível</td><td>Depende do composto</td></tr>
+        <tr><td>Perfil lipídico (HDL&darr;)</td><td>Reversível</td><td>Mas o risco cardiovascular acumulado no período é real</td></tr>
+        <tr><td>Alterações de humor e agressividade</td><td>Geralmente reversível</td><td>Consequências interpessoais do período, não</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout warn">
+    <span class="tag">A regra prática que salva</span>
+    <p>Os efeitos irreversíveis <strong>não aparecem de uma vez</strong> &mdash; começam sutis. Rouquidão leve, alguns pelos novos, sensibilidade diferente. O único fator protetor real documentado é <strong>interromper ao primeiro sinal</strong>, porque a partir daí o processo tende a progredir e consolidar. Isso significa que quem usa precisa saber reconhecer os sinais precoces e ter disposição de parar imediatamente &mdash; o que, na prática, colide com o momento em que os resultados estão aparecendo.</p>
+  </div>
+</section>
+
+<section id="voz">
+  <span class="sec-num">06 &mdash; O CASO DA VOZ</span>
+  <h2>O sinal mais <span class="accent">emblemático</span></h2>
+  <p class="sec-sub">Porque é precoce, visível e definitivo.</p>
+  <p>A alteração vocal ocorre por <strong>mudança estrutural nas pregas vocais</strong> &mdash; espessamento induzido por androgênio. Diferente de pele ou pelo, esse tecido não retorna ao estado anterior quando a exposição cessa. Fonoaudiologia pode ajudar em adaptação e uso da voz, mas não reverte a alteração física.</p>
+  <div class="callout warn">
+    <span class="tag">O sinal precoce</span>
+    <p><strong>Rouquidão persistente ou mudança na tessitura</strong> &mdash; dificuldade em notas agudas, sensação de voz "quebrando", timbre mais grave &mdash; é frequentemente <strong>o primeiro sinal de virilização</strong>. E, crucialmente, <strong>já indica processo em curso</strong>, não risco futuro. Não é um aviso prévio: é o começo do efeito.</p>
+  </div>
+  <p>Para quem depende profissionalmente da voz &mdash; e para qualquer pessoa que considere sua voz parte de sua identidade &mdash; esse é um custo de natureza diferente de todos os outros discutidos nesta série. É o único colateral que outras pessoas percebem antes de você.</p>
+</section>
+
+<section id="ciclo">
+  <span class="sec-num">07 &mdash; CICLO MENSTRUAL E FERTILIDADE</span>
+  <h2>O eixo <span class="accent">reprodutivo</span></h2>
+  <p class="sec-sub">Supressão em um sistema cíclico.</p>
+  <p>O eixo HPG feminino é <strong>cíclico</strong>, não tônico &mdash; depende de uma sequência coordenada de pulsos de GnRH, LH e FSH ao longo do mês. Androgênio exógeno perturba essa coordenação por retroalimentação negativa, e as manifestações incluem <strong>irregularidade menstrual, oligomenorreia ou amenorreia</strong> (ausência de menstruação), além de anovulação.</p>
+  <ul class="clean">
+    <li><b>Retorno:</b> a função costuma se restabelecer após a suspensão, mas o <b>prazo é variável</b> e imprevisível.</li>
+    <li><b>Quadro tipo SOP:</b> exposição androgênica sustentada pode produzir manifestações semelhantes às da síndrome dos ovários policísticos.</li>
+    <li><b>Fertilidade:</b> anovulação implica infertilidade durante o período de uso.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">Um risco que precisa ser dito com clareza</span>
+    <p>Se ocorrer gravidez durante exposição a androgênios, há <strong>risco de virilização do feto feminino</strong> &mdash; alterações no desenvolvimento genital. E a irregularidade menstrual torna a detecção de gravidez mais difícil e tardia. Esse é um ponto que raramente aparece nas conversas de vestiário e que tem consequências sobre <strong>outra pessoa</strong>. É informação médica obrigatória para qualquer mulher em idade reprodutiva.</p>
+  </div>
+</section>
+
+<section id="osso">
+  <span class="sec-num">08 &mdash; ESTROGÊNIO E OSSO</span>
+  <h2>O que a supressão <span class="accent">custa</span></h2>
+  <p class="sec-sub">Um risco silencioso e de longo prazo.</p>
+  <p>O estrogênio é <strong>determinante para a saúde óssea feminina</strong> &mdash; regula remodelação e manutenção de densidade mineral. Supressão do eixo, amenorreia prolongada e queda de estradiol levam a <strong>perda de densidade óssea</strong>, com risco aumentado de fraturas por estresse a médio prazo e osteoporose precoce a longo prazo.</p>
+  <div class="callout warn">
+    <span class="tag">A combinação perigosa em performance</span>
+    <p>No contexto competitivo, esse risco raramente aparece isolado. Ele costuma se somar a <strong>déficit calórico agressivo, baixa disponibilidade energética e volume alto de treino</strong> &mdash; a mesma tríade associada a comprometimento ósseo e hormonal em atletas femininas. Androgênio exógeno adiciona supressão a um sistema que já pode estar comprometido pelas outras frentes. O osso não dá sintoma até quebrar.</p>
+  </div>
+</section>
+
+<section id="cardio">
+  <span class="sec-num">09 &mdash; CARDIOVASCULAR E METABÓLICO</span>
+  <h2>Os riscos <span class="accent">compartilhados</span></h2>
+  <p class="sec-sub">Iguais aos masculinos &mdash; com um agravante.</p>
+  <p>Tudo o que foi discutido no material 4 se aplica: <strong>queda acentuada de HDL</strong>, elevação de LDL e apoB, hepatotoxicidade com orais 17-alfa-alquilados, aumento de hematócrito e pressão arterial.</p>
+  <div class="callout warn">
+    <span class="tag">O agravante</span>
+    <p>Mulheres em idade reprodutiva têm <strong>proteção cardiovascular relativa conferida pelo estrogênio</strong>. Suprimir esse sistema e simultaneamente derrubar o HDL remove uma proteção que existia de base &mdash; o impacto relativo sobre o risco cardiovascular pode ser <strong>proporcionalmente maior</strong> do que os mesmos números representariam em um homem. Compostos que não aromatizam, muito usados por serem "secos", são justamente os que mais agridem o perfil lipídico.</p>
+  </div>
+</section>
+
+<section id="compostos">
+  <span class="sec-num">10 &mdash; PERFIL POR COMPOSTO</span>
+  <h2>O que muda entre <span class="accent">as moléculas</span></h2>
+  <p class="sec-sub">Com uma ressalva que vale mais que a tabela.</p>
+  <div class="callout warn">
+    <span class="tag">Leia antes da tabela</span>
+    <p>"Menor risco virilizante" <strong>não significa seguro</strong>. Significa <em>menos provável em exposições menores</em> &mdash; e a variação individual pode anular completamente essa vantagem. Há relatos consistentes de virilização com todos os compostos desta tabela, inclusive os classificados como mais brandos. A tabela descreve <strong>tendências farmacológicas</strong>, não margens de segurança.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Composto</th><th>Risco virilizante relativo</th><th>Por quê</th><th>Outros pontos</th></tr></thead>
+      <tbody>
+        <tr><td>Oxandrolona</td><td>Menor</td><td>Baixa androgenicidade relativa; não aromatiza</td><td>Derruba HDL de forma marcante mesmo em exposições baixas</td></tr>
+        <tr><td>Metenolona</td><td>Menor</td><td>Androgenicidade baixa; derivado do DHT brando</td><td>Anabolismo modesto; muito falsificada</td></tr>
+        <tr><td>Nandrolona</td><td>Intermediário</td><td>5-AR a enfraquece em tecidos androgênicos</td><td>Progestagenia, prolactina, supressão longa</td></tr>
+        <tr><td>Boldenona</td><td>Intermediário</td><td>Androgenicidade moderada</td><td>Hematócrito; ação lenta</td></tr>
+        <tr><td>Estanozolol</td><td><b>Alto</b></td><td>Androgênico e não aromatiza</td><td>Muito lesivo a lipídios e tecido conjuntivo</td></tr>
+        <tr><td>Drostanolona</td><td><b>Alto</b></td><td>Androgênio forte por definição</td><td>Efeito estético rápido, risco vocal e capilar</td></tr>
+        <tr><td>Testosterona</td><td><b>Alto</b></td><td>Androgênio de referência</td><td>Exposição desproporcional à fisiologia feminina</td></tr>
+        <tr><td>Trembolona</td><td><b>Muito alto</b></td><td>Agonista potente do AR</td><td>Progestagenia, sides intensos &mdash; risco elevado</td></tr>
+        <tr><td>Fluoximesterona</td><td><b>Muito alto</b></td><td>Extremamente androgênico</td><td>Hepatotoxicidade alta; agressividade</td></tr>
+        <tr><td>Oximetolona</td><td><b>Muito alto</b></td><td>Androgênico e hepatotóxico</td><td>Efeito estrogênico direto</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="alto-risco">
+  <span class="sec-num">11 &mdash; OS DE MAIOR RISCO</span>
+  <h2>Onde o dano é mais <span class="accent">rápido</span></h2>
+  <p class="sec-sub">Um alerta específico.</p>
+  <p>Compostos <strong>fortemente androgênicos</strong> &mdash; trembolona, fluoximesterona, estanozolol, drostanolona &mdash; produzem sinais de virilização com <strong>exposições menores e em menos tempo</strong>. No caso da trembolona, soma-se ainda a atividade progestogênica e um perfil de efeitos sistêmicos particularmente pesado.</p>
+  <div class="callout warn">
+    <span class="tag">O padrão que se repete</span>
+    <p>Os compostos com efeito estético mais <strong>rápido e visível</strong> (dureza, densidade, vascularização) são geralmente os <strong>mais androgênicos</strong> &mdash; e portanto os de maior risco virilizante. Isso cria um incentivo perverso: o que entrega resultado aparente mais depressa é o que consolida dano permanente mais depressa. A velocidade do efeito desejado é <strong>proporcional</strong> à velocidade do efeito indesejado, porque vêm do mesmo mecanismo.</p>
+  </div>
+</section>
+
+<section id="indice">
+  <span class="sec-num">12 &mdash; POR QUE O ÍNDICE ENGANA AQUI TAMBÉM</span>
+  <h2>A limitação do <span class="accent">"anabólico:androgênico"</span></h2>
+  <p class="sec-sub">Retomando o material 1 com uma aplicação específica.</p>
+  <p>É comum justificar a escolha de compostos para mulheres pelo índice anabólico:androgênico &mdash; "razão alta, logo mais anabólico e menos virilizante". Já vimos no material 1 por que esse número é frágil: nasceu de <strong>ensaio em ratos castrados</strong> (teste de Hershberger), comparando músculo levantador do ânus com próstata e vesícula seminal.</p>
+  <div class="callout warn">
+    <span class="tag">Por que a fragilidade é pior no contexto feminino</span>
+    <p>O ensaio original mediu <strong>tecidos androgênicos masculinos</strong> em roedores. Ele nunca avaliou pregas vocais, folículo capilar, clitóris ou pele facial &mdash; que são exatamente os tecidos que importam aqui. Usar esse índice para estimar risco de virilização é aplicar uma medida a uma pergunta <strong>que ela nunca respondeu</strong>. Some-se a variação genética individual, e o número perde qualquer valor preditivo útil.</p>
+  </div>
+</section>
+
+<section id="monitoramento">
+  <span class="sec-num">13 &mdash; MONITORAMENTO</span>
+  <h2>O que <span class="accent">acompanhar</span></h2>
+  <p class="sec-sub">Para levar ao médico &mdash; não para autogerir.</p>
+  <p>Além de todo o painel do material 4 (lipídios com apoB, hemograma, função hepática, renal, glicemia, pressão), o contexto feminino acrescenta:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Domínio</th><th>O que acompanhar</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td>Hormonal</td><td>Testosterona total e livre, SHBG, estradiol, LH, FSH</td><td>Grau de exposição e supressão do eixo cíclico</td></tr>
+        <tr><td>Adrenal/ovariano</td><td>DHEA-S, androstenediona, prolactina</td><td>Diferenciar fontes e avaliar progestagenia (19-nor)</td></tr>
+        <tr><td>Ginecológico</td><td>Acompanhamento com ginecologista; ciclo menstrual registrado</td><td>Detecção precoce de anovulação e quadro tipo SOP</td></tr>
+        <tr><td>Ósseo</td><td>Densitometria óssea, vitamina D, cálcio</td><td>Risco silencioso, sobretudo com amenorreia</td></tr>
+        <tr><td><b>Clínico &mdash; virilização</b></td><td><b>Voz, pelos, pele, cabelo, clitóris</b></td><td><b>Sinais precoces; nenhum aparece em exame de sangue</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout ok">
+    <span class="tag">O ponto que a última linha carrega</span>
+    <p>Os efeitos <strong>irreversíveis não têm marcador laboratorial</strong>. Nenhum exame de sangue avisa que a voz está mudando. O monitoramento que realmente protege contra o dano permanente é <strong>clínico e subjetivo</strong> &mdash; prestar atenção ao corpo e agir imediatamente. Isso torna a orientação médica próxima ainda mais necessária, não menos.</p>
+  </div>
+</section>
+
+<section id="performance">
+  <span class="sec-num">14 &mdash; ALTA PERFORMANCE: O CONTEXTO</span>
+  <h2>Onde a conversa <span class="accent">realmente</span> acontece</h2>
+  <p class="sec-sub">Sem moralismo e sem ingenuidade.</p>
+  <p>Em categorias competitivas de fisiculturismo e em alguns esportes de força, o uso é prevalente e frequentemente pressuposto. Fingir que não existe não protege ninguém &mdash; empurra a informação para fóruns e para orientação de pessoas sem formação.</p>
+  <p>Alguns pontos que costumam ficar de fora dessa conversa:</p>
+  <ul class="clean">
+    <li><b>O custo é assimétrico entre os sexos.</b> Homens e mulheres na mesma modalidade não pagam o mesmo preço: a categoria "permanente" existe só de um lado.</li>
+    <li><b>Pressão estética e de categoria</b> empurram para compostos mais androgênicos justamente na fase de maior visibilidade &mdash; quando o incentivo de continuar é máximo e a disposição de parar ao primeiro sinal é mínima.</li>
+    <li><b>Carreiras competitivas são curtas; efeitos permanentes não.</b> A conta se paga por décadas depois que a competição acabou.</li>
+    <li><b>Antidoping</b> é uma dimensão à parte, com implicações de carreira que independem de saúde.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">O papel do profissional de exercício</span>
+    <p>Não é julgar nem orientar uso. É <strong>garantir que a pessoa tenha a informação completa antes</strong> &mdash; especialmente sobre irreversibilidade &mdash; <strong>encaminhar para acompanhamento médico</strong>, e reconhecer sinais precoces que a própria pessoa pode estar normalizando. Muitas mulheres relatam que ninguém lhes disse que a voz não voltaria. Essa é uma falha de informação que dá para corrigir, e corrigi-la é trabalho legítimo do consultor.</p>
+  </div>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">15 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span></h2>
+  <p class="sec-sub">O essencial do material.</p>
+  <ol class="key">
+    <li>A fisiologia feminina opera com androgênio <b>ordens de grandeza menor</b> &mdash; exposição exógena produz alteração relativa muito maior.</li>
+    <li>Androgênios <b>funcionam bem</b> em mulheres, e isso torna o custo fácil de subestimar no início.</li>
+    <li>A <b>virilização muda a categoria do risco</b>: de reversível para permanente.</li>
+    <li><b>Irreversíveis:</b> voz, clitóris (largamente), alopecia (frequentemente), traços faciais. <b>Reversíveis:</b> acne, retenção, ciclo, libido, lipídios.</li>
+    <li><b>Rouquidão é o sinal precoce mais importante</b> &mdash; e já indica processo em curso.</li>
+    <li>O único fator protetor real é <b>interromper ao primeiro sinal</b>.</li>
+    <li><b>Ciclo, fertilidade e osso</b> são domínios de risco próprios; gravidez durante exposição traz risco de virilização fetal.</li>
+    <li>O <b>índice anabólico:androgênico não prevê</b> risco virilizante &mdash; nunca mediu esses tecidos.</li>
+    <li>Efeitos irreversíveis <b>não têm marcador laboratorial</b>: o monitoramento que protege é clínico.</li>
+    <li><b>Conduta e acompanhamento são médicos</b> &mdash; endocrinologia e ginecologia.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="farmacologia-hormonal-6-alem-dos-eaa.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 6 &middot; Além dos EAA</span></a>
+    <a href="index.html"><span class="lbl">Biblioteca</span><span class="ttl">&larr; Voltar</span></a>
+  </div>
+</section>
+
+<section id="ref">
+  <span class="sec-num">16 &mdash; REFERÊNCIAS</span>
+  <h2>De onde vem <span class="accent">a evidência</span></h2>
+  <p class="sec-sub">Para aprofundar direto na fonte.</p>
+  <ul class="clean">
+    <li>Pope HG Jr. et al. <b>Adverse health consequences of performance-enhancing drugs: an Endocrine Society scientific statement.</b> Endocr Rev. 2014;35(3):341&ndash;375.</li>
+    <li>Handelsman DJ, Hirschberg AL, Bermon S. <b>Circulating Testosterone as the Hormonal Basis of Sex Differences in Athletic Performance.</b> Endocr Rev. 2018;39(5):803&ndash;829.</li>
+    <li>Kicman AT. <b>Pharmacology of anabolic steroids.</b> Br J Pharmacol. 2008;154(3):502&ndash;521.</li>
+    <li>Handelsman DJ. <b>Androgen Physiology, Pharmacology, Use and Misuse.</b> Endotext.</li>
+    <li>Literatura sobre <b>virilização e alterações vocais irreversíveis</b> por androgênios em mulheres, e sobre <b>disponibilidade energética, amenorreia e saúde óssea</b> em atletas femininas (tríade da atleta / RED-S).</li>
+  </ul>
+  <div class="callout">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>A literatura sobre EAA especificamente em mulheres é <strong>substancialmente menor</strong> que a masculina &mdash; por razões éticas e históricas. Muitas informações de perfil vêm de relatos de caso, séries clínicas e experiência acumulada, não de ensaios controlados. Isso significa <strong>mais incerteza</strong>, e incerteza maior justifica cautela maior, não menor. Onde a evidência é fraca, este material sinaliza. <strong>Conduta e monitoramento são do médico.</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Farmacologia Hormonal &middot; Parte 7 &middot; Público Feminino</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material educativo e de redução de danos. Não substitui acompanhamento médico. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
