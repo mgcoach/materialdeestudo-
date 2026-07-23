@@ -1,5 +1,157 @@
 [
   {
+    "titulo": "Artigos Comentados 1: Proximidade da Falha e RIR",
+    "categoria": "treino",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Primeiro material da série Artigos Comentados: análise didática de dois estudos sobre proximidade da falha. (1) Refalo et al., Sports Medicine 2023 — revisão sistemática com meta-análise de 15 estudos, agrupados em três temas conforme a definição de falha usada (falha momentânea, falha da série, limiares de perda de velocidade); achou vantagem TRIVIAL para a falha (ES 0,19; IC95% 0,00–0,37; p=0,045), nenhuma superioridade da falha momentânea, relação NÃO-LINEAR com proximidade, e nenhum efeito moderador de volume ou carga relativa. (2) Refalo et al., Journal of Sports Sciences 2024 — ensaio de 8 semanas, 2x/semana, com 18 treinados (12H/6M), desenho UNILATERAL (uma perna até a falha, outra com 2-RIR no leg press e 1-RIR na extensora), medindo espessura de reto femoral e vasto lateral por ultrassom com análise bayesiana; hipertrofia semelhante entre condições, com mais fadiga na condição de falha. Inclui glossário para ler qualquer artigo (tamanho de efeito, intervalo de confiança, valor de p, análise bayesiana/HDI, moderador), aplicação prática (mirar a faixa próxima da falha, não a falha; fadiga economizada vira frequência) e seção de limitações.",
+    "arquivo": "artigos-1-proximidade-da-falha.html"
+  },
+  {
+    "titulo": "Artigos Comentados 2: Sobrecarga Progressiva",
+    "categoria": "treino",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Segundo material da série Artigos Comentados: análise didática de dois estudos sobre COMO progredir. (1) Plotkin et al., PeerJ 2022 — ensaio randomizado e supervisionado com 43 treinados (≥1 ano de experiência) durante 8 semanas, comparando grupo LOAD (aumentar carga, repetições constantes) vs grupo REPS (aumentar repetições, carga constante); resultados semelhantes em hipertrofia, força (1RM agachamento no Smith), resistência local e salto vertical. Inclui a discordância instrutiva com Nóbrega 2022 (que achou ES=2,03 a favor da carga, mas era análise retrospectiva sem randomização) — uma aula embutida de leitura crítica sobre por que efeito grande com método fraco vale menos. (2) Enes et al., MSSE 2024 — grupo brasileiro da UFPR, 31 homens treinados (5,1 anos de experiência), 12 semanas, três grupos: constante com 22 séries semanais de quadríceps, progressão de 4 séries e de 6 séries a cada quinzena; progredir volume gerou MAIOR FORÇA (todos melhoraram ~18,5 kg / 13,6% no 1RM), sem diferença estatística em hipertrofia mas com sinal sugestivo pelos IC 95%. Um grupo chegou a 52 séries semanais — o maior volume já reportado na literatura. Fecha com o mapa das TRÊS VIAS de progressão (carga, repetições, séries semanais), aplicação prática e limitações.",
+    "arquivo": "artigos-2-sobrecarga-progressiva.html"
+  },
+  {
+    "titulo": "Artigos Comentados 3: Glúteo — EMG vs. Hipertrofia Real",
+    "categoria": "treino",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Terceiro material da série Artigos Comentados: quatro estudos sobre o glúteo máximo encadeados num arco de dez anos que demonstra empiricamente que ATIVAÇÃO AGUDA NÃO PREVÊ HIPERTROFIA. (1) Contreras et al., J Appl Biomech 2015 — EMG de 13 mulheres treinadas com 10RM: hip thrust gerou atividade muito maior que agachamento no glúteo máximo superior (média 69,5% vs 29,4%; pico 172% vs 84,9%), inferior (86,8% vs 45,4%; 216% vs 130%) e bíceps femoral, sem diferença no vasto lateral; os autores PEDIRAM estudos longitudinais. (2) Krause Neto et al., J Sports Sci Med 2020 — revisão sistemática de 16 artigos mapeando ativação (>60% CIVM: step-ups, terra hexagonal, elevações pélvicas). (3) Plotkin et al., Frontiers in Physiology 2023 — o ensaio longitudinal pedido, com Contreras entre os autores: 34 não treinados, 9 semanas supervisionadas, volume equiparado, hipertrofia por RESSONÂNCIA MAGNÉTICA em três porções do glúteo; EMG novamente muito maior no hip thrust, mas HIPERTROFIA SEMELHANTE (todos os IC cruzando zero), com agachamento gerando mais coxa, força seguindo especificidade e transferência similar para o terra. (4) Krause Neto et al., Front Physiol 2025 — meta-análise de 12 artigos com desfecho real: efeito moderado (SMD 0,71; IC95% 0,50–0,91; I²=22%). Inclui seção explicando POR QUE o EMG não prevê (medida aguda, influência de comprimento muscular e regime de contração, tensão em comprimentos longos), vocabulário novo (SMD, I², preprint), aplicação prática e limitações.",
+    "arquivo": "artigos-3-gluteo-emg-vs-hipertrofia.html"
+  },
+  {
+    "titulo": "Artigos Comentados 4: Hipertrofia Regional, ADM e Seleção de Exercício",
+    "categoria": "treino",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Quarto material da série Artigos Comentados: três estudos sobre ONDE o músculo cresce. (1) Earp et al., MSSE 2015 — 36 homens não treinados, 8 semanas, quatro grupos (agachamento pesado paralelo, jump squat paralelo, jump squat voluntário, controle); confirmou hipertrofia NÃO-HOMOGÊNEA do quadríceps, com padrões variando conforme a demanda mecânica, e hipótese de que a hipertrofia seletiva seria biomecanicamente vantajosa (momento de inércia, braços de momento). (2) Kassiano et al., JSCR 2023 — revisão sistemática de 11 estudos sobre amplitude de movimento, com a distinção-chave entre parciais na parte INICIAL (músculo alongado) e FINAL (encurtado); amplitude completa e parciais iniciais geraram maior hipertrofia de reto femoral, vasto lateral e flexores do cotovelo (ES 0,20–0,90), com parciais iniciais superando até a ADM completa no reto femoral proximal (ES 0,35–0,38). (3) Kassiano et al., JSCR 2026 — 63 mulheres não treinadas, 8 semanas, agachamento no Smith vs cadeira extensora, com espessura medida em três sítios; extensora cresceu muito mais o RETO FEMORAL (proximal +11,4% vs +2,0%; médio +12,3% vs +5,7%; distal +17,5%), agachamento favoreceu o VASTO LATERAL distal e a força específica no agachamento. Inclui a explicação biomecânica do QUASE-CANCELAMENTO BIARTICULAR do reto femoral no agachamento (quadril flexiona/encurta + joelho flexiona/alonga = regime quase isométrico), a ponte com a relação força-comprimento, aplicação prática e limitações.",
+    "arquivo": "artigos-4-hipertrofia-regional-adm.html"
+  },
+  {
+    "titulo": "Artigos Comentados 5: Organização do Treino",
+    "categoria": "treino",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Quinto material da série Artigos Comentados: três estudos sobre a arquitetura do treino. (1) Nunes et al., Eur J Sport Sci 2021 — revisão sistemática com meta-análise sobre ordem dos exercícios: sem efeito na hipertrofia (ES 0,03; p=0,862), mas ganhos de força maiores no exercício realizado PRIMEIRO (multiarticular ES 0,32, p=0,034; monoarticular ES −0,58, p=0,032) — o princípio da prioridade substitui a regra 'grande antes de pequeno'. (2) Kessinger et al., J Sport Rehabil 2020 — Critically Appraised Topic com 4 estudos em homens BEM TREINADOS: todos mostraram que frequências menores já geram força e hipertrofia, com apenas um sugerindo leve vantagem para frequência maior; inclui seção honesta desarmando os dois erros de leitura (nem 'alta frequência é inútil' nem 'alta frequência é superior') — frequência é meio de distribuir volume com qualidade, não fator independente. (3) Vargas-Molina et al., Eur J Appl Physiol 2025 — 10 treinados, 8 semanas, desenho unilateral intra-sujeito, 5×12 no leg press e extensora, cluster com 3 blocos de 4 reps e 20s de descanso interno, cargas ajustadas a RIR 0–1: hipertrofia SEMELHANTE; a vantagem prévia do cluster vinha de equiparar volume load, um artefato de desenho. Princípio unificador: a organização redistribui o estímulo, não o cria.",
+    "arquivo": "artigos-5-organizacao-do-treino.html"
+  },
+  {
+    "titulo": "Artigos Comentados 6: Mecanismos da Hipertrofia",
+    "categoria": "fisiologia",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Sexto material da série Artigos Comentados: três estudos sobre os mecanismos da hipertrofia. (1) Lim et al., MSSE 2022 — revisão narrativa baseada em evidências do grupo de Stuart Phillips (McMaster), que organiza a hipertrofia em VARIÁVEIS EXTERNAS (programação do treino, dieta, suplementos) e INTERNAS (mecanotransdução, capacidade ribossomal, expressão gênica, células satélite), afirmando que o exercício resistido é a variável externa não-farmacológica mais potente. (2) Gonzalez, JSCR 2016 — questiona a dicotomia rígida entre protocolos 'de força' (≥85% 1RM, ≤6 reps, descanso longo) e 'de hipertrofia' (<85% 1RM, 8–12 reps, descanso curto), apontando que a literatura que sustenta essa classificação é escassa em treinados e provavelmente uma simplificação excessiva; traz também o DESMONTE DO MITO HORMONAL — elevações agudas de testosterona, GH e IGF-1 pós-treino não predizem hipertrofia, mesma lição do EMG (com a ressalva de que isso NÃO se aplica a doses suprafisiológicas sustentadas). (3) Cao et al., Front Immunol 2025 — modelo de camundongos com envelhecimento natural: treino resistido aumentou peso úmido de gastrocnêmio e quadríceps, número de fibras e área de secção transversa, agindo por redução da inflamação crônica e regulação da autofagia comprometida, com mTORC1 envolvida. Inclui seção sobre o peso do modelo animal e a hierarquia de evidência (célula → animal → humano destreinado → humano treinado).",
+    "arquivo": "artigos-6-mecanismos-da-hipertrofia.html"
+  },
+  {
+    "titulo": "Artigos Comentados 7: Casos-Limite — Hipóxia e Hipertrofia Patológica",
+    "categoria": "treino",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Sétimo e último material da série Artigos Comentados (fechamento): dois casos-limite. (1) Fernández-Lázaro et al., Biomédica 2019 — revisão narrativa sobre treino de força-resistência em hipóxia normobárica, que concluiu haver efeito SINÉRGICO e adaptações 'melhores e mais acentuadas'; o material confronta essa conclusão com as META-ANÁLISES POSTERIORES (Benavente/Schoenfeld 2023, 17 estudos: efeitos triviais — CSA SMD 0,17 IC −0,07 a 0,42; 1RM SMD 0,13 IC 0,0 a 0,27; e meta-análise de 2018 sem benefício significativo sobre normóxia), além do detalhe de que hipóxia severa e crônica pode causar PERDA de massa. Traz a melhor lição de leitura crítica da série: por que revisão narrativa entusiasmada perde para meta-análise quantificada, e a regra de verificar tipo de estudo, data e existência de meta-análise mais recente. (2) Kornegay et al., Phys Med Rehabil Clin N Am 2012 — o paradoxo da hipertrofia na distrofia muscular: divergência entre espécies (humanos e cães atrofiam, camundongos mdx hipertrofiam e depois atrofiam, gatos hipertrofiam persistentemente), o conceito de PSEUDO-HIPERTROFIA (aumento por gordura e tecido conjuntivo, não tecido contrátil — daí circunferência não ser massa muscular) e as consequências deletérias da hipertrofia sobre instabilidade postural e contraturas. Fecha com a SÍNTESE DOS 19 ARTIGOS da série e os sete princípios que emergiram do conjunto.",
+    "arquivo": "artigos-7-casos-limite.html"
+  },
+  {
+    "titulo": "Artigos Comentados 8: Testosterona Endógena e o Eixo HPG",
+    "categoria": "fisiologia",
+    "serie": "Artigos Comentados",
+    "data": "Jul · 2026",
+    "resumo": "Oitavo material da série Artigos Comentados: análise de Vingren, Kraemer et al. (Sports Medicine, 2010), 'Testosterone Physiology in Resistance Exercise and Training: The Up-Stream Regulatory Elements'. Cobre o que o artigo acrescenta à biblioteca: (1) o EIXO HPG em funcionamento normal — hipotálamo (GnRH pulsátil) → hipófise (LH/FSH) → gônadas (testosterona) → retroalimentação negativa, o que explica mecanicamente a supressão por EAA como o termostato funcionando; (2) as fontes de produção e a diferença entre sexos (Leydig vs ovários, com contribuição adrenal proporcionalmente maior em mulheres); (3) os moduladores sustentados do eixo (sono, disponibilidade energética, gordura corporal, estresse) — mais relevantes que programação de treino; (4) os ELEMENTOS A MONTANTE: variáveis do programa agudo, sexo e idade, mais a regulação do próprio receptor androgênico. Traz a LEITURA CRÍTICA do debate histórico de 2010 entre a escola de Kraemer (resposta hormonal aguda importa) e a de Phillips (hipertrofia é processo intrínseco) — com West et al. 2010 publicando no mesmo ano o resultado oposto, e a escola de Phillips prevalecendo; lição de que um artigo pode estar certo na descrição e errado na conclusão. Fecha com as diferenças sexuais (resposta de testosterona em mulheres é EQUÍVOCA; o crescimento feminino ocorre por outras vias, o que torna o sistema muito mais sensível a androgênio exógeno) — ponte para o material sobre EAA em mulheres.",
+    "arquivo": "artigos-8-testosterona-endogena-eixo-hpg.html"
+  },
+  {
+    "titulo": "Interações Hormonais: como cada composto mexe nos seus marcadores",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Material transversal da Farmacologia Hormonal (educativa / redução de danos): organiza as correlações do tipo 'masteron reduz estradiol' e 'nandrolona reduz DHT' numa MATRIZ COMPOSTO × MARCADOR com 16 compostos (E2, DHT, SHBG, prolactina, hematócrito, HDL). Explica os 4 mecanismos de interação (competição por enzima, ocupação de transportador, remoção de substrato, ação em outro receptor) e distingue 'reduzir E2 de verdade' (masteron/proviron, fraco) de 'E2 cair por supressão' — marcando que 'primobolan reduz estradiol' é alegação fraca. Traz uma seção dedicada RODADO SOZINHO VS. SOBRE BASE DE TESTOSTERONA (contexto da alta performance): por que a testo é a âncora do sistema, tabela de quais setas da matriz mudam e quais persistem, de onde vem realmente o 'seco' (razão androgênio:E2, SHBG, água — não queda de E2), a distinção somar vs. substituir, o 'deca dick' reenquadrado (prolactina e competição pela 5-AR em vez de DHT zerada) e o que a base de testo NÃO resolve (fígado, lipídios, hematócrito, prolactina — todos aditivos). Cobre ainda DHT e função sexual, SHBG e fração livre, cortisol/anticatabolismo, o falso alarme tireoidiano da TBG, IGF-1, hematócrito, lipídios e insulina, fechando com a tabela 'benéfica quando / vira problema quando'. Sem doses. Com referências e nota de honestidade científica.",
+    "arquivo": "interacoes-hormonais-marcadores.html"
+  },
+  {
+    "titulo": "Perfis 1: Família da Testosterona",
+    "categoria": "fisiologia",
+    "serie": "Perfis dos Compostos",
+    "data": "Jul · 2026",
+    "resumo": "Sub-série Perfis (Parte 1 de 3), complementa a Farmacologia Hormonal (educativa / redução de danos): perfil detalhado composto a composto da família da testosterona — testosterona e ésteres (propionato, enantato, cipionato, undecanoato, suspensão, Sustanon), boldenona/EQ, dianabol, turinabol e os menos comuns (metiltestosterona, undecanoato oral). Cada um com força, libido, efeito no E2 (sobe/desce), hipertrofia, shape e colaterais. Seção dedicada de INTERAÇÕES ENTRE COMPOSTOS: mito ou verdade (base de testo, Dbol kickstart, Proviron liberando testo via SHBG, boldenona/E2, 'nandrolona reduz DHT', finasterida que ajuda na testo mas piora na nandrolona, sinergia de stack) — com veredito e o mecanismo (enzima, SHBG, cinética). Sem doses. Com referências e nota de honestidade científica.",
+    "arquivo": "perfil-1-familia-testosterona.html"
+  },
+  {
+    "titulo": "Perfis 2: Derivados do DHT",
+    "categoria": "fisiologia",
+    "serie": "Perfis dos Compostos",
+    "data": "Jul · 2026",
+    "resumo": "Sub-série Perfis (Parte 2 de 3), complementa a Farmacologia Hormonal (educativa / redução de danos): perfil detalhado composto a composto dos derivados do DHT — masteron (drostanolona), primobolan (metenolona), anavar (oxandrolona), winstrol (estanozolol), proviron (mesterolona), anadrol (oximetolona), superdrol (metildrostanolona), halotestin (fluoximesterona) e DHB (di-hidroboldenona). Cada um com força, libido, efeito no E2, hipertrofia, shape e colaterais. Destaques: por que a família toda arrisca a libido (não gera E2), o mito do 'Anavar inofensivo' (HDL despenca), o risco tendíneo do Winstrol (colágeno), o paradoxo do Anadrol (efeito estrogênico direto que IA não resolve e exame não mostra), a agressividade do Halotestin e a PIP do DHB. Seção de INTERAÇÕES: mito ou verdade (Proviron/Winstrol e SHBG, Masteron como antiestrogênico fraco, dois orais 17aa somando carga hepática, e por que finasterida NÃO ajuda nesta família). Sem doses. Com referências e nota de honestidade científica.",
+    "arquivo": "perfil-2-derivados-dht.html"
+  },
+  {
+    "titulo": "Perfis 3: Família 19-nor",
+    "categoria": "fisiologia",
+    "serie": "Perfis dos Compostos",
+    "data": "Jul · 2026",
+    "resumo": "Sub-série Perfis (Parte 3 de 3, final): perfil detalhado da família 19-nor — nandrolona (Deca e NPP), trembolona (acetato, enantato, parabolan), trestolona (MENT) e os designer (metribolona, miboleron, THG, dienolona). Cada um com força, libido, E2, prolactina, hipertrofia, shape e colaterais. Traz o caso 'nandrolona reduz DHT' destrinchado em três mecanismos e a inversão da finasterida (ajuda na testo, inútil no DHT, piora no 19-nor). Sem doses. Com referências e nota de honestidade científica.",
+    "arquivo": "perfil-3-familia-19-nor.html"
+  },
+  {
+    "titulo": "Farmacologia Hormonal 1: Fundamentos e Receptores",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Parte 1 da série de Farmacologia Hormonal (educativa / redução de danos): o que são os esteroides androgênicos anabólicos e por que androgênico e anabólico vêm do mesmo receptor; as 4 perguntas em que a estrutura prevê o comportamento; o receptor androgênico (AR), densidade por tecido e repetições CAG; as vias genômica (satélites e mionúcleos) e não-genômica; as enzimas 5-alfa-redutase (amplifica a testo, enfraquece os 19-nor) e aromatase; os outros receptores (estrogênico, progesterona, glicocorticoide); a SHBG e a fração livre; ésteres vs 17-alfa-alquilação; e o mito do índice anabólico:androgênico. Com referências e nota de honestidade científica — não substitui acompanhamento médico.",
+    "arquivo": "farmacologia-hormonal-1-fundamentos-receptores.html"
+  },
+  {
+    "titulo": "Farmacologia Hormonal 2: Testosterona e Derivados do DHT",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Parte 2 da série de Farmacologia Hormonal (educativa / redução de danos): o perfil farmacológico composto a composto da família da testosterona (testosterona e ésteres, boldenona/EQ, dianabol, turinabol) e dos derivados do DHT (DHT, masteron, primobolan, anavar, winstrol, proviron, anadrol, superdrol, halotestin, DHB) — com colunas de aromatização, hepatotoxicidade, impacto lipídico (HDL), efeito no estradiol e nos tecidos. Explica por que o DHT puro é inativado no músculo (3α-HSD), o paradoxo estrogênico do Anadrol, o efeito do Winstrol sobre colágeno/SHBG, e os padrões gerais (oral 17aa = fígado + lipídio; 'seco' custa HDL). Sem doses nem protocolos. Com referências e nota de honestidade científica — não substitui acompanhamento médico.",
+    "arquivo": "farmacologia-hormonal-2-testosterona-dht.html"
+  },
+  {
+    "titulo": "Farmacologia Hormonal 3: Família 19-nor",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Parte 3 da série de Farmacologia Hormonal (educativa / redução de danos): a família 19-nor composto a composto — nandrolona decanoato (Deca) e fenilpropionato (NPP), trembolona (acetato/enantato/parabolan), trestolona (MENT) e os menos comuns/designer (metribolona/oral-tren/R1881, miboleron/cheque drops, THG do caso BALCO, dienolona e pró-hormônios, 19-nor orais antigos). Explica por que a 5-alfa-redutase enfraquece o 19-nor (inverso da testo), a assinatura progestogênica (prolactina, 'deca dick', gino sem estrogênio alto), a supressão intensa do eixo HPG, e desfaz mitos ('nandrolona é seca', 'tren não dá gino', 'MENT é seco'). Tabela com aromatização, hepatotoxicidade, lipídios, estrogênio/progesterona. Sem doses. Com referências e nota de honestidade científica — não substitui acompanhamento médico.",
+    "arquivo": "farmacologia-hormonal-3-19-nor.html"
+  },
+  {
+    "titulo": "Farmacologia Hormonal 4: Exames e Monitoramento",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Parte 4 (final) da série de Farmacologia Hormonal (educativa / redução de danos): o roteiro completo de monitoramento — painel lipídico (HDL/LDL/apoB/Lp(a)/hs-CRP), hematócrito/hemoglobina/ferritina (o risco mais subestimado), fígado (AST/ALT/GGT/bilirrubina, com o cuidado do falso positivo do treino), eixo HPG (LH, FSH, testo total e livre, SHBG), estradiol sensível e prolactina, PSA, renal (creatinina vs cistatina C), glicemia/HbA1c/insulina, pressão e cardiovascular (ECG/ecocardiograma). Traz uma tabela de como cada família distorce a leitura e um roteiro agrupado por sistema para levar ao endocrinologista. Sem doses. Com referências e nota de honestidade científica — interpretação e conduta são sempre do médico.",
+    "arquivo": "farmacologia-hormonal-4-exames-monitoramento.html"
+  },
+  {
+    "titulo": "Farmacologia Hormonal 5: Potencial Anabólico e Hipertrofia",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Complemento (Parte 5) da série de Farmacologia Hormonal (educativa / redução de danos): o potencial anabólico de cada composto e como se traduz em hipertrofia real (tecido), força, volume/água, partição de nutrientes e dureza. Cobre os mecanismos da hipertrofia por androgênio (síntese proteica, anticatabolismo via GR, células satélite e mionúcleos, upregulation de AR, partição, glicogênio/água, recuperação e drive neural), uma tabela comparativa por dimensão com 17 compostos, os 'reis' de cada categoria (massa seca, peso rápido, força pura, recomposição, dureza), por que a nota anabólica engana (variação genética/CAG, idade de treino, água ≠ tecido) e o que o EAA NÃO faz (não substitui tensão mecânica, comida, sono e constância). Sem doses. Com referências e nota de honestidade científica.",
+    "arquivo": "farmacologia-hormonal-5-potencial-anabolico.html"
+  },
+  {
+    "titulo": "Farmacologia Hormonal 6: Além dos EAA (GH, Insulina, Peptídeos, Tireoide, SARMs)",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Complemento 2 da série de Farmacologia Hormonal (educativa / redução de danos): os compostos não-EAA do fisiculturismo. GH (recuperação e gordura mais que massa; acromegalia, 'GH gut', resistência à insulina), IGF-1/LR3 (hiperplasia controversa, hype vs evidência, hipoglicemia), INSULINA (potente e o mais perigoso — hipoglicemia com risco agudo de morte, alerta reforçado), PEPTÍDEOS (secretagogos de GH — sermorelina, CJC-1295, ipamorelina, GHRP, MK-677; e reparo — BPC-157, TB-500, com evidência humana fraca e mercado cinza), TIREOIDE (T3/T4 — queima gordura e músculo, arritmia, supressão do eixo) e SARMs (ostarina, ligandrol, RAD-140, andarina, S-23, YK-11 — não são 'esteroide sem colateral'; impostores como cardarina/GW-501516 com sinal de câncer). Tabela geral por classe (mecanismo, promessa, risco). Sem doses. Com referências e nota de honestidade científica — não substitui acompanhamento médico.",
+    "arquivo": "farmacologia-hormonal-6-alem-dos-eaa.html"
+  },
+  {
+    "titulo": "Farmacologia Hormonal 7: EAA no Público Feminino",
+    "categoria": "fisiologia",
+    "serie": "Farmacologia Hormonal",
+    "data": "Jul · 2026",
+    "resumo": "Parte 7 da série de Farmacologia Hormonal (educativa / redução de danos): o quadro feminino, que muda de NATUREZA e não apenas de intensidade em relação aos materiais anteriores (todos construídos sobre fisiologia masculina). Cobre: por que a resposta é desproporcional (testosterona basal ordens de grandeza menor, fontes diferentes, crescimento muscular não dependente majoritariamente de androgênio, variação genética de sensibilidade que impede prever limiar seguro); a eficácia real em hipertrofia e por que isso é uma armadilha de percepção de risco; VIRILIZAÇÃO como categoria de risco própria; a TABELA CENTRAL de efeitos REVERSÍVEIS vs IRREVERSÍVEIS (irreversíveis: voz, clitóris largamente, alopecia frequentemente, traços faciais; reversíveis: acne, retenção, ciclo, libido, lipídios); o caso da voz e a rouquidão como sinal precoce que já indica processo em curso; ciclo menstrual, anovulação, quadro tipo SOP, fertilidade e risco de virilização fetal; estrogênio e saúde óssea com a sobreposição de baixa disponibilidade energética (RED-S); riscos cardiovasculares com o agravante da perda da proteção estrogênica; tabela de perfil por composto com risco virilizante relativo; por que o índice anabólico:androgênico não prevê virilização (nunca mediu pregas vocais, folículo ou clitóris); monitoramento específico com a ressalva de que efeitos irreversíveis NÃO têm marcador laboratorial; e o contexto de alta performance com o papel do profissional de exercício (informar, encaminhar, reconhecer sinais — nunca orientar uso). Sem doses nem protocolos. Com referências e nota de honestidade científica sobre a escassez de literatura específica em mulheres.",
+    "arquivo": "farmacologia-hormonal-7-mulheres.html"
+  },
+  {
     "titulo": "Biomecânica do Joelho",
     "categoria": "biomecanica",
     "data": "Jun · 2026",
