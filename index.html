@@ -107,6 +107,41 @@
   footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
   footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
   .scrim{display:none}
+  /* ===== BUSCA NO CONTEUDO ===== */
+  .searchbox{margin:26px 0 6px}
+  .searchbox .field{position:relative;display:flex;align-items:center}
+  .searchbox .field svg{position:absolute;left:16px;width:17px;height:17px;color:var(--text-faint);pointer-events:none}
+  #q{width:100%;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text);font-size:16px;padding:15px 44px 15px 44px;font-family:inherit;transition:.18s}
+  #q::placeholder{color:var(--text-faint)}
+  #q:focus{outline:none;border-color:var(--orange-line);background:var(--bg-card-2)}
+  .clearq{position:absolute;right:10px;background:transparent;border:none;color:var(--text-faint);font-size:20px;cursor:pointer;padding:4px 10px;line-height:1;display:none}
+  .clearq:hover{color:var(--orange)}
+  .searchbox.has-q .clearq{display:block}
+  .idxbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--text-faint)}
+  .idxbar b{color:var(--orange);font-weight:600}
+  .idxbtn{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .idxbtn:hover{color:var(--orange);border-color:var(--orange-line)}
+  .idxbtn.primary{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .bar{flex:1;min-width:120px;height:5px;background:var(--bg-card-2);border-radius:99px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--orange);width:0;transition:width .2s}
+  .hint{font-family:var(--mono);font-size:11px;color:var(--text-faint);margin-top:8px;line-height:1.6}
+  .hint code{background:var(--bg-card-2);padding:1px 6px;border-radius:5px;color:var(--orange-soft)}
+  .res-head{font-family:var(--mono);font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin:34px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .hit{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px}
+  .hit-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+  .hit-top a{color:var(--text);font-weight:700;font-size:16.5px;text-decoration:none;letter-spacing:-.2px}
+  .hit-top a:hover{color:var(--orange)}
+  .hit-top .n{font-family:var(--mono);font-size:11px;color:var(--orange);background:var(--orange-dim);padding:2px 8px;border-radius:6px;white-space:nowrap}
+  .hit-serie{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+  .snip{display:block;text-decoration:none;border-left:2px solid var(--line);padding:9px 0 9px 14px;margin-top:10px;transition:.18s}
+  .snip:hover{border-left-color:var(--orange)}
+  .snip .sec{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--orange-soft);display:block;margin-bottom:5px}
+  .snip .txt{color:var(--text-dim);font-size:14.5px;line-height:1.65}
+  .snip:hover .txt{color:var(--text)}
+  mark{background:rgba(255,107,26,.28);color:var(--text);border-radius:3px;padding:0 2px;font-weight:600}
+  [data-theme="light"] mark{background:rgba(232,93,4,.22)}
+  .more{width:100%;background:var(--bg-card);border:1px dashed var(--line);border-radius:12px;color:var(--text-dim);font-family:var(--mono);font-size:12px;padding:13px;cursor:pointer;transition:.18s;margin-top:4px}
+  .more:hover{color:var(--orange);border-color:var(--orange-line)}
   @media(max-width:860px){
     .menu-btn{display:block}
     aside.sidebar{position:fixed;left:0;top:0;height:100vh;z-index:100;transform:translateX(-100%);transition:transform .25s ease;box-shadow:0 0 40px rgba(0,0,0,.4);padding-top:22px}
@@ -126,7 +161,7 @@
       <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
       <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
     </a>
-    <div class="brand-meta">Biblioteca de estudos<br><b id="meta-count">&mdash;</b></div>
+    <div class="brand-meta">Biblioteca de estudos &middot; v1.1<br><b id="meta-count">&mdash;</b></div>
     <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
   </div>
 </header>
@@ -144,6 +179,16 @@
       <h1>Biblioteca<span class="lib">de estudos</span></h1>
       <p class="lede">Materiais aprofundados sobre <b>biomecanica, treino, nutricao e fisiologia</b> &mdash; construidos para estudar de verdade, sem ser raso. Navegue por tema na barra lateral.</p>
     </div>
+    <div class="searchbox" id="searchbox">
+      <div class="field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5" stroke-linecap="round"/></svg>
+        <input type="text" id="q" placeholder="Buscar palavra ou frase em todos os materiais..." autocomplete="off" spellcheck="false">
+        <button class="clearq" id="clearq" aria-label="Limpar busca">&times;</button>
+      </div>
+      <div class="idxbar" id="idxbar"></div>
+      <div class="hint" id="hint">Busca t&iacute;tulos e resumos na hora. Ative a busca no conte&uacute;do para procurar <b>dentro</b> dos materiais, se&ccedil;&atilde;o por se&ccedil;&atilde;o.</div>
+    </div>
+    <div id="searchResults"></div>
     <div class="count" id="count"></div>
     <div id="sections"><div class="state">Carregando materiais...</div></div>
     <footer>
@@ -271,16 +316,211 @@
 
   function setCat(cat){currentCat=cat;sideAll.classList.toggle('active',cat==='todos');renderMain();}
   sideAll.addEventListener('click',function(){setCat('todos');window.scrollTo({top:0,behavior:'smooth'});closeMobile();});
-  sideSearch.addEventListener('input',function(){query=this.value.trim();if(query){currentCat='todos';sideAll.classList.add('active');}renderMain();});
+  sideSearch.addEventListener('input',function(){qEl.value=this.value;currentCat='todos';sideAll.classList.add('active');onType();});
 
   var menuBtn=document.getElementById('menuBtn'),scrim=document.getElementById('scrim');
   function closeMobile(){document.body.classList.remove('nav-open');}
   menuBtn.addEventListener('click',function(){document.body.classList.toggle('nav-open');});
   scrim.addEventListener('click',closeMobile);
 
+  /* ================= BUSCA NO CONTEUDO =================
+     Indexa o texto de cada <section> de cada material e guarda no IndexedDB.
+     Uma vez construido, a busca e instantanea e funciona offline.
+     Materiais novos ou alterados sao reindexados sozinhos (compara o campo "data"). */
+  var qEl=document.getElementById('q'),clearBtn=document.getElementById('clearq'),searchbox=document.getElementById('searchbox'),
+      idxbar=document.getElementById('idxbar'),hintEl=document.getElementById('hint'),resEl=document.getElementById('searchResults');
+  var IDX={},IDX_ON='mgcoach-idx-on',DBN='mgcoach_biblioteca',STORE='conteudo',building=false,shownAll=false;
+
+  var ACC='\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u00e8\u00e9\u00ea\u00eb\u00ec\u00ed\u00ee\u00ef\u00f2\u00f3\u00f4\u00f5\u00f6\u00f9\u00fa\u00fb\u00fc\u00fd\u00ff\u00f1\u00e7';
+  var PLA='aaaaaaeeeeiiiiooooouuuuyync';
+  // normalizacao que PRESERVA o comprimento -> os indices batem com o texto original
+  function norm(s){s=String(s).toLowerCase();var o='',k;for(var i=0;i<s.length;i++){k=ACC.indexOf(s[i]);o+=(k>=0?PLA[k]:s[i]);}return o;}
+
+  function db(){return new Promise(function(res,rej){
+    var r=indexedDB.open(DBN,1);
+    r.onupgradeneeded=function(e){var d=e.target.result;if(!d.objectStoreNames.contains(STORE))d.createObjectStore(STORE,{keyPath:'arquivo'});};
+    r.onsuccess=function(){res(r.result);};r.onerror=function(){rej(r.error);};});}
+  function dbAll(){return db().then(function(d){return new Promise(function(res,rej){
+    var q=d.transaction(STORE,'readonly').objectStore(STORE).getAll();
+    q.onsuccess=function(){res(q.result||[]);};q.onerror=function(){rej(q.error);};});});}
+  function dbPut(rec){return db().then(function(d){return new Promise(function(res,rej){
+    var t=d.transaction(STORE,'readwrite');t.objectStore(STORE).put(rec);
+    t.oncomplete=function(){res();};t.onerror=function(){rej(t.error);};});});}
+  function dbDel(k){return db().then(function(d){return new Promise(function(res){
+    var t=d.transaction(STORE,'readwrite');t.objectStore(STORE).delete(k);t.oncomplete=function(){res();};t.onerror=function(){res();};});});}
+
+  // extrai o texto de cada secao de um material
+  function parseDoc(htmlText,st){
+    var doc=new DOMParser().parseFromString(htmlText,'text/html');
+    var secs=[];
+    var lede=doc.querySelector('.hero .lede'),h1=doc.querySelector('.hero h1');
+    if(h1||lede){var ab=((h1?h1.textContent:'')+' '+(lede?lede.textContent:'')).replace(/\s+/g,' ').trim();
+      if(ab)secs.push({id:'',num:'Abertura',tit:'',txt:ab});}
+    Array.prototype.forEach.call(doc.querySelectorAll('section[id]'),function(sec){
+      var num=sec.querySelector('.sec-num'),h2=sec.querySelector('h2');
+      var txt=(sec.textContent||'').replace(/\s+/g,' ').trim();
+      if(!txt)return;
+      secs.push({id:sec.id,
+        num:num?num.textContent.replace(/\s+/g,' ').trim():'',
+        tit:h2?h2.textContent.replace(/\s+/g,' ').trim():'',
+        txt:txt});
+    });
+    return {arquivo:st.arquivo,data:st.data||'',titulo:st.titulo,serie:st.serie||'',secs:secs};
+  }
+
+  function paint(html){idxbar.innerHTML=html;}
+  function idxCount(){var n=0;for(var k in IDX)n++;return n;}
+
+  function renderIdxBar(){
+    if(building)return;
+    var n=idxCount(),tot=allStudies.length;
+    if(!n){paint('<button class="idxbtn primary" id="bIdx">Ativar busca no conte&uacute;do</button><span>indexa os '+tot+' materiais uma vez (~alguns segundos)</span>');}
+    else if(n<tot){paint('<span><b>'+n+'</b> de '+tot+' materiais indexados</span><button class="idxbtn" id="bIdx">Completar &iacute;ndice</button>');}
+    else{paint('<span>&#9679; conte&uacute;do indexado &middot; <b>'+n+'</b> materiais</span><button class="idxbtn" id="bIdx">Reindexar</button>');}
+    var b=document.getElementById('bIdx');
+    if(b)b.addEventListener('click',function(){buildIndex(b.textContent.indexOf('Reindexar')>=0);});
+  }
+
+  function buildIndex(force){
+    if(building)return;building=true;
+    try{localStorage.setItem(IDX_ON,'1');}catch(e){}
+    var todo=allStudies.filter(function(s){
+      if(force)return true;
+      var r=IDX[s.arquivo];return !r||r.data!==(s.data||'');
+    });
+    if(!todo.length){building=false;renderIdxBar();return;}
+    var done=0,fail=0,total=todo.length,i=0,CONC=4;
+    paint('<span>Indexando&hellip;</span><div class="bar"><i id="pbar"></i></div><span id="pnum">0/'+total+'</span>');
+    function tick(){
+      var p=document.getElementById('pbar'),t=document.getElementById('pnum');
+      if(p)p.style.width=Math.round(done/total*100)+'%';
+      if(t)t.textContent=done+'/'+total;
+    }
+    function next(){
+      if(i>=todo.length)return Promise.resolve();
+      var st=todo[i++];
+      return fetch(st.arquivo,{cache:'no-cache'})
+        .then(function(r){if(!r.ok)throw 0;return r.text();})
+        .then(function(tx){var rec=parseDoc(tx,st);IDX[st.arquivo]=rec;return dbPut(rec);})
+        .catch(function(){fail++;})
+        .then(function(){done++;tick();return next();});
+    }
+    var runners=[];for(var c=0;c<CONC;c++)runners.push(next());
+    Promise.all(runners).then(function(){
+      building=false;
+      // limpa materiais que sairam do estudos.json
+      var vivos={};allStudies.forEach(function(s){vivos[s.arquivo]=1;});
+      Object.keys(IDX).forEach(function(k){if(!vivos[k]){delete IDX[k];dbDel(k);}});
+      renderIdxBar();
+      if(fail)hintEl.innerHTML='<b>'+fail+'</b> material(is) n&atilde;o p&ocirc;de(ram) ser lido(s). Se voc&ecirc; abriu este arquivo direto do celular/PC, a busca no conte&uacute;do s&oacute; funciona publicada no GitHub Pages.';
+      if(qEl.value.trim())doSearch();
+    });
+  }
+
+  // "frase exata" entre aspas; fora das aspas, todos os termos precisam aparecer
+  function parseQuery(raw){
+    var phrases=[],rest=raw.replace(/"([^"]+)"/g,function(_,p){phrases.push(norm(p.trim()));return ' ';});
+    var terms=norm(rest).split(/[^a-z0-9]+/).filter(function(t){return t.length>=2;});
+    return {all:phrases.concat(terms),phrases:phrases,terms:terms};
+  }
+  function hitsIn(nt,parts){for(var i=0;i<parts.length;i++){if(nt.indexOf(parts[i])<0)return false;}return true;}
+
+  function snippet(txt,parts){
+    var nt=norm(txt),first=-1;
+    for(var i=0;i<parts.length;i++){var p=nt.indexOf(parts[i]);if(p>=0&&(first<0||p<first))first=p;}
+    if(first<0)first=0;
+    var a=Math.max(0,first-95),b=Math.min(txt.length,first+205);
+    if(a>0){var sp=txt.indexOf(' ',a);if(sp>=0&&sp<a+25)a=sp+1;}
+    var frag=txt.slice(a,b),nf=norm(frag);
+    // marca todas as ocorrencias sem quebrar os indices
+    var marks=[];
+    parts.forEach(function(p){var from=0,k;while((k=nf.indexOf(p,from))>=0){marks.push([k,k+p.length]);from=k+p.length;}});
+    marks.sort(function(x,y){return x[0]-y[0];});
+    var merged=[];marks.forEach(function(m){var l=merged[merged.length-1];
+      if(l&&m[0]<=l[1]){l[1]=Math.max(l[1],m[1]);}else merged.push([m[0],m[1]]);});
+    var out='',pos=0;
+    merged.forEach(function(m){out+=esc(frag.slice(pos,m[0]))+'<mark>'+esc(frag.slice(m[0],m[1]))+'</mark>';pos=m[1];});
+    out+=esc(frag.slice(pos));
+    return (a>0?'&hellip; ':'')+out+(b<txt.length?' &hellip;':'');
+  }
+
+  function searchContent(parts){
+    var out=[];
+    allStudies.forEach(function(st){
+      var rec=IDX[st.arquivo];if(!rec)return;
+      var secs=[];
+      rec.secs.forEach(function(sc){
+        var nt=norm(sc.txt);
+        if(hitsIn(nt,parts))secs.push({id:sc.id,label:(sc.num||sc.tit||'Se&ccedil;&atilde;o'),snip:snippet(sc.txt,parts)});
+      });
+      if(secs.length)out.push({st:st,secs:secs});
+    });
+    return out;
+  }
+
+  function doSearch(){
+    var raw=qEl.value.trim();
+    searchbox.classList.toggle('has-q',!!raw);
+    if(sideSearch.value!==qEl.value)sideSearch.value=qEl.value;
+    if(!raw){resEl.innerHTML='';resEl.style.display='none';countEl.style.display='';sectionsEl.style.display='';query='';renderMain();return;}
+    countEl.style.display='none';sectionsEl.style.display='none';resEl.style.display='';
+
+    var pq=parseQuery(raw),parts=pq.all;
+    if(!parts.length){resEl.innerHTML='<div class="state">Digite ao menos 2 letras.</div>';return;}
+
+    // 1) titulos e resumos
+    var metaHits=allStudies.filter(function(s){
+      return hitsIn(norm(s.titulo+' '+s.resumo+' '+(s.serie||'')+' '+(THEME_LABELS[s.categoria]||'')),parts);
+    });
+    // 2) dentro dos materiais
+    var deep=idxCount()?searchContent(parts):[];
+    var totalSecs=deep.reduce(function(a,x){return a+x.secs.length;},0);
+
+    var html='';
+    if(metaHits.length){
+      html+='<div class="res-head">T&iacute;tulos e resumos &middot; '+metaHits.length+'</div><div class="grid">'+metaHits.map(cardHTML).join('')+'</div>';
+    }
+    if(deep.length){
+      html+='<div class="res-head">Dentro dos materiais &middot; '+totalSecs+' se&ccedil;&otilde;es em '+deep.length+' materia'+(deep.length===1?'l':'is')+'</div>';
+      var lim=shownAll?deep.length:Math.min(deep.length,12);
+      for(var i=0;i<lim;i++){
+        var d=deep[i],secs=d.secs,cap=shownAll?secs.length:Math.min(secs.length,4);
+        html+='<div class="hit"><div class="hit-top"><a href="'+esc(d.st.arquivo)+'">'+esc(d.st.titulo)+'</a><span class="n">'+secs.length+' se&ccedil;'+(secs.length===1?'&atilde;o':'&otilde;es')+'</span></div>';
+        html+='<div class="hit-serie">'+esc(d.st.serie||(THEME_LABELS[d.st.categoria]||d.st.categoria))+'</div>';
+        for(var j=0;j<cap;j++){var s2=secs[j];
+          html+='<a class="snip" href="'+esc(d.st.arquivo)+(s2.id?'#'+esc(s2.id):'')+'"><span class="sec">'+s2.label+'</span><span class="txt">'+s2.snip+'</span></a>';}
+        if(cap<secs.length)html+='<a class="snip" href="'+esc(d.st.arquivo)+'"><span class="txt">+ '+(secs.length-cap)+' outras se&ccedil;&otilde;es neste material</span></a>';
+        html+='</div>';
+      }
+      if(lim<deep.length)html+='<button class="more" id="moreBtn">Mostrar os outros '+(deep.length-lim)+' materiais</button>';
+    }
+    if(!metaHits.length&&!deep.length){
+      html='<div class="state">Nenhum resultado para <b>'+esc(raw)+'</b>.'+
+        (idxCount()?'':'<br>A busca no conte&uacute;do ainda n&atilde;o foi ativada &mdash; por enquanto s&oacute; procurei em t&iacute;tulos e resumos.')+'</div>';
+    }
+    resEl.innerHTML=html;
+    var mb=document.getElementById('moreBtn');
+    if(mb)mb.addEventListener('click',function(){shownAll=true;doSearch();});
+  }
+
+  var tmr;
+  function onType(){shownAll=false;clearTimeout(tmr);tmr=setTimeout(doSearch,140);}
+  qEl.addEventListener('input',onType);
+  clearBtn.addEventListener('click',function(){qEl.value='';sideSearch.value='';doSearch();qEl.focus();});
+
+  function initSearch(){
+    resEl.style.display='none';
+    dbAll().then(function(recs){
+      recs.forEach(function(r){IDX[r.arquivo]=r;});
+      renderIdxBar();
+      var on=false;try{on=localStorage.getItem(IDX_ON)==='1';}catch(e){}
+      if(on)buildIndex(false); // ja ativado antes: atualiza so o que mudou
+    }).catch(function(){paint('<span>Este navegador n&atilde;o suporta o &iacute;ndice offline. A busca funciona em t&iacute;tulos e resumos.</span>');});
+  }
+
   fetch('estudos.json?v='+Date.now())
     .then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json();})
-    .then(function(data){allStudies=Array.isArray(data)?data:[];groups=buildGroups();metaEl.textContent=allStudies.length+(allStudies.length===1?' material':' materiais');renderSidebar();renderMain();})
+    .then(function(data){allStudies=Array.isArray(data)?data:[];groups=buildGroups();metaEl.textContent=allStudies.length+(allStudies.length===1?' material':' materiais');renderSidebar();renderMain();initSearch();})
     .catch(function(err){metaEl.textContent='\u2014';sectionsEl.innerHTML='<div class="state">Não foi possível carregar a lista de estudos.<br>Isso é normal se você abriu o arquivo direto do computador.<br>No <b>GitHub Pages</b> funcionará normalmente.</div>';console.error(err);});
 })();
 </script>
