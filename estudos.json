@@ -473,6 +473,54 @@
     "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
+    "titulo": "Avaliação Postural 1 · Fundamentos e método",
+    "categoria": "biomecanica",
+    "serie": "Avaliação Postural (CBMF)",
+    "data": "Jul · 2026",
+    "resumo": "Abertura da série. Músculos tônicos e fásicos (tônicos enrijecem e hiperativam no desuso; fásicos inibem e atrofiam), inibição recíproca via interneurônio medular e a síntese de como o desequilíbrio se instala em ciclo. Protocolo completo: preparação e vestimenta, linha de prumo nas três vistas com os pontos de passagem de cada uma, listas de observação de frente/lado/costas, e os objetivos da avaliação estática. Avaliação dinâmica em pé, sentado e decúbito — o teste do braço a 180° revelando compensação de coluna e pelve pela via do grande dorsal, o ritmo lombopélvico sentado e o decúbito eliminando a cadeia posterior para revelar o causador da lordose. Cadeias musculares (anterior, posterior, lateral, cruzada e respiratória) com composição, função e consequência do desequilíbrio, mais fáscia e tensegridade. Leitura crítica: o modelo tônico/fásico de Janda descreve bem a prática mas não se sustenta pela composição de fibras; 'encurtamento' quase sempre significa rigidez e não perda real de comprimento; e a associação entre desvio postural e dor é fraca na literatura, o que muda a promessa sem invalidar a conduta.",
+    "arquivo": "postural-1-fundamentos.html"
+  },
+  {
+    "titulo": "Avaliação Postural 2 · Pés e tornozelo",
+    "categoria": "biomecanica",
+    "serie": "Avaliação Postural (CBMF)",
+    "data": "Jul · 2026",
+    "resumo": "O pé como base do eixo postural: única interface com o solo, ponto fixo em apoio, e amplificador de erro angular pela distância. Padrão normal — as três bases de sustentação (cabeças do primeiro e do quinto metatarso e calcâneo), arcos longitudinal e transverso com as três camadas de sustentação, mecanismo de sarrilho, alinhamento dos dedos, tornozelo neutro e eixo do calcâneo (o achado que mais vale). Roteiro de avaliação em seis passos, incluindo teste joelho-parede. As sete alterações com MAPA MUSCULAR completo de encurtados e alongados: pé plano, pé cavo, pé pronado, pé varo, joanete (com o efeito de corda de arco), dedo em martelo e dedos em garra (pé intrínseco-negativo). Tabela comparando as vias da pronação e da supinação ao longo de toda a cadeia ascendente, e o teste que identifica se o valgo de joelho vem de baixo ou de cima. Leitura crítica: pé plano flexível vs. rígido — o flexível é a maioria e responde a exercício, ao contrário do que a anotação sugere; tipo de arco tem associação fraca com lesão; e a descrição do pé pronado nas anotações parece embaralhada com a do varo.",
+    "arquivo": "postural-2-pes-tornozelo.html"
+  },
+  {
+    "titulo": "Avaliação Postural 3 · Joelho",
+    "categoria": "biomecanica",
+    "serie": "Avaliação Postural (CBMF)",
+    "data": "Jul · 2026",
+    "resumo": "O joelho preso entre duas articulações muito móveis, recebendo a compensação da cadeia. As três articulações, os quatro ligamentos com o comportamento de tensão ao longo do movimento (colaterais tensos em extensão; LCA esticando na rotação interna com joelho fletido; feixes que se alternam), meniscos e a matemática da área de contato. Padrão normal, ângulo Q com a diferença entre pelves e alinhamento patelar — com a observação de que é o fêmur que gira sob a patela, não o contrário. As cinco alterações com MAPA MUSCULAR: joelho hiperestendido, joelho flexo ('bunda de gaveta'), geno valgo, geno varo e artrose. Leitura crítica de peso alto: a descrição de artrose como desgaste mecânico é o modelo antigo e leva à conclusão errada de poupar a articulação — cartilagem se nutre por compressão cíclica e exercício é intervenção de primeira linha. Também: a anotação inverte a relação entre valgismo e raquitismo; a definição do ângulo Q está truncada; os percentuais de força de contato precisam de fonte; e o ângulo Q estático prediz mal dor patelofemoral.",
+    "arquivo": "postural-3-joelho.html"
+  },
+  {
+    "titulo": "Avaliação Postural 4 · Coluna vertebral",
+    "categoria": "biomecanica",
+    "serie": "Avaliação Postural (CBMF)",
+    "data": "Jul · 2026",
+    "resumo": "As curvas são a função — coluna reta não é o objetivo. Divisões e particularidades vertebrais (atlas, áxis, C7 como régua de palpação, costelas flutuantes, corpos lombares em feijão, o sacro como ponte para a pelve), mobilidade alternada entre regiões, e as curvaturas primárias e secundárias com a explicação de por que curva resiste melhor que reta. A régua do prumo aplicada a cada segmento. As alterações com MAPA MUSCULAR: hiperlordose lombar (mapa vindo das próprias anotações, incluindo a via do grande dorsal), retificação lombar e por que ela castiga mais o disco que a hiperlordose, hipercifose torácica com a cadeia completa até a cabeça, retificação torácica, e alterações cervicais — com a melhor orientação prática do módulo: raramente se alonga a região, porque tratada a origem o quadro se resolve sozinho. Escoliose: natureza tridimensional, ângulo de Cobb, gibosidade como osso e não músculo, teste de flexão do tronco, estrutural vs. funcional, curvas em C e em S. Bandeiras vermelhas a saber de cor.",
+    "arquivo": "postural-4-coluna.html"
+  },
+  {
+    "titulo": "Avaliação Postural 5 · Escápula, ombro e cotovelo",
+    "categoria": "biomecanica",
+    "serie": "Avaliação Postural (CBMF)",
+    "data": "Jul · 2026",
+    "resumo": "A escápula flutua sobre o gradil costal, sem articulação óssea que a segure — mantida em posição só por músculos. Por isso é a região com mais alterações descritas e a que mais responde a desequilíbrio de programa. Anatomia da escápula com os três pontos que se precisa saber palpar e o coracoide como 'gancho anterior'. Alinhamento normal com os números de referência (T1–T2, 7 a 7,5 cm da linha média, clavícula a 15°). Os oito movimentos escapulares com músculos e amplitudes, e o par de forças da rotação superior. AS SETE ALTERAÇÕES ESCAPULARES com mapa muscular vindo integralmente das anotações: depressão, abdução (protusão), adução, inclinação anterior, rotação interna, rotação externa e alamento. Depois: glenoumeral e suas amplitudes, rotação interna do úmero (com teste visual de cinco segundos), slide anterior, e cotovelo — cúbito varo, cúbito valgo e hiperextensão. Leitura crítica: discinesia escapular é frequente em pessoas sem dor, inclusive atletas, e a associação com sintoma é modesta — a afirmação de que toda discinesia deve ser corrigida é forte demais, e a própria aula fornece o antídoto ao pedir contexto.",
+    "arquivo": "postural-5-escapula-ombro.html"
+  },
+  {
+    "titulo": "Avaliação Postural 6 · Pelve e quadril",
+    "categoria": "biomecanica",
+    "serie": "Avaliação Postural (CBMF)",
+    "data": "Jul · 2026",
+    "resumo": "Fecho da série. A pelve como bloco rígido — quando uma ponta gira, a outra obrigatoriamente vai para o lado oposto. Cadeias ascendente e descendente com a regra de nomenclatura e três testes práticos para descobrir a direção. O conceito de NOVA CAUSA: depois de alterada, a pelve passa a gerar consequências próprias nas duas direções, o que explica por que quadros antigos se retroalimentam e por que não é preciso resolver a arqueologia do caso. O modelo da gangorra, que permite deduzir qualquer mapa muscular de pelve sem decorar listas. As seis alterações com MAPA MUSCULAR: anteversão, retroversão, inclinação lateral (com o mecanismo de substituição do glúteo médio pelo tensor da fáscia lata e quadrado lombar, gerando o 'rebolado'), rotação lateral, torção lateral e artrose de quadril. Inclui o trecho mais fino das anotações: por que o stiff e o good morning jogam a extensão de quadril para os posteriores de coxa em vez do glúteo, pela vantagem mecânica dos isquiotibiais naquela configuração. Fecha com os oito princípios que atravessam as seis partes. Leitura crítica: palpação de EIAS e EIPS tem confiabilidade limitada; a sacroilíaca é muito pouco móvel em qualquer pessoa; e o valor de 64° de lordose é medida radiográfica, fora do nosso escopo.",
+    "arquivo": "postural-6-pelve-quadril.html"
+  },
+  {
     "titulo": "Contração Muscular: do Nervo ao Filamento",
     "categoria": "fisiologia",
     "data": "Jun · 2026",

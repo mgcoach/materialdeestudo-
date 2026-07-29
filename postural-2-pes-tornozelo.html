@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avaliação Postural 2 &middot; Pés e tornozelo | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Avaliação Postural · Parte 2 — Pés e tornozelo | MG COACH">
+    <meta property="og:description" content="Padrão normal do pé, pé plano, cavo, pronado, varo, joanete, dedo em martelo e dedos em garra — com mapa muscular de encurtados e alongados, causas e conduta prática do educador físico.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/postural-2-pes-tornozelo.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Avaliação Postural · Parte 2 — Pés e tornozelo">
+    <meta name="twitter:description" content="Padrão normal do pé, pé plano, cavo, pronado, varo, joanete, dedo em martelo e dedos em garra — com mapa muscular de encurtados e alongados, causas e ">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+
+  .aula{border-left:3px solid var(--blue);background:rgba(77,154,255,.08);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .aula .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:8px}
+  .aula p:last-child{margin-bottom:0}
+  .aula ul.clean{margin-bottom:0}
+  .subtipo{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-top:-4px;margin-bottom:10px}
+  .serie-bar{max-width:880px;margin:0 auto;padding:12px 22px 0;font-family:var(--mono);font-size:11.5px;color:var(--text-faint);letter-spacing:1px}
+  .serie-bar b{color:var(--orange)}
+  .mm{border:1px solid var(--orange-line);border-radius:12px;overflow:hidden;margin:22px 0}
+  .mm h4{background:var(--orange-dim);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;padding:11px 18px;margin:0}
+  .mm .mm-body{padding:4px 18px 14px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#base">O pé como base</a>
+    <a href="#bases">Três bases</a>
+    <a href="#arcos">Arcos</a>
+    <a href="#dedos-tornozelo">Dedos e calcâneo</a>
+    <a href="#avaliar">Como avaliar</a>
+    <a href="#pe-plano">Pé plano</a>
+    <a href="#pe-cavo">Pé cavo</a>
+    <a href="#pe-pronado">Pé pronado</a>
+    <a href="#pe-varo">Pé varo</a>
+    <a href="#joanete">Joanete</a>
+    <a href="#dedos">Martelo e garra</a>
+    <a href="#cadeia-ascendente">Cadeia ascendente</a>
+    <a href="#programa">Programa de pé</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#confirmar">A confirmar</a>
+    <a href="#referencias">Referências</a>
+  </nav>
+</header>
+
+<div class="serie-bar">AVALIAÇÃO POSTURAL &middot; CBMF &nbsp;·&nbsp; <b>PARTE 2 DE 6</b></div>
+
+<div class="hero">
+  <div class="eyebrow">Avaliação Postural &middot; CBMF &middot; Parte 2 de 6</div>
+  <h1>Pés e <span class="em">tornozelo</span></h1>
+  <p class="lede">O pé é a <b>base do eixo postural</b> e a única interface do corpo com o solo — um desvio de poucos graus aqui vira centímetros lá em cima. Esta parte cobre o padrão normal (tripé, arcos, eixo do calcâneo), as sete alterações do pé com o <b>mapa muscular completo</b> de cada uma, e como o desvio sobe pela cadeia até a coluna.</p>
+</div>
+
+<main>
+
+<section id="base">
+  <span class="sec-num">01 &mdash; O PÉ COMO BASE DO EIXO POSTURAL</span>
+  <h2>Tudo começa <span class="accent">no chão</span></h2>
+  <p class="sec-sub">Por que o segmento mais distal é o que mais influencia a cadeia.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Posição dos pés → base do eixo postural</strong>, suporte essencial para postura ereta e estabilidade corporal. Alterações nessa estrutura podem provocar <strong>diversos desequilíbrios</strong>, impactando na postura e no funcionamento de diversas partes do corpo.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que o pé pesa tanto na cadeia</span>
+    <p>O pé tem uma posição privilegiada na cadeia por três razões geométricas, e vale entender cada uma.</p>
+    <p style="margin-top:12px"><strong>1. É a única interface com o solo.</strong> Toda força que o corpo recebe do chão passa por ele. Se a distribuição dessa força está alterada na entrada, ela chega alterada em todos os segmentos acima.</p>
+    <p style="margin-top:12px"><strong>2. É o ponto fixo.</strong> Em pé, o pé está preso ao solo e não pode se deslocar livremente. Quando uma articulação precisa de amplitude e o pé não pode ceder, quem cede é o segmento de cima. Isso inverte a lógica habitual: no membro inferior em apoio, o movimento do pé <em>determina</em> o movimento do joelho e do quadril, e não o contrário.</p>
+    <p style="margin-top:12px"><strong>3. Erros de angulação se amplificam com a distância.</strong> Um desvio de poucos graus no calcâneo produz um deslocamento pequeno no tornozelo, maior no joelho e muito maior na pelve — pela simples geometria de uma alavanca longa. Um erro de 3° na base vira centímetros lá em cima.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>A consequência prática mais importante desta seção: <strong>diante de valgo dinâmico de joelho, olhe o pé antes de concluir que o problema é glúteo médio.</strong></p>
+    <p style="margin-top:12px">A pronação excessiva do retropé leva a tíbia à rotação interna, que leva o fêmur à rotação interna, que aparece como valgo. Nesse caso, fortalecer abdutores de quadril ajuda pouco — o motor está embaixo. O teste é simples: peça o mesmo movimento com o retropé controlado (calcanhar neutro, arco ativo) e veja se o valgo reduz.</p>
+  </div>
+</section>
+
+<section id="bases">
+  <span class="sec-num">02 &mdash; AS TRÊS BASES DE SUSTENTAÇÃO</span>
+  <h2>O tripé <span class="accent">do apoio</span></h2>
+  <p class="sec-sub">Distribuição de peso, e o que cada ponto sustenta.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Distribuição de peso</strong> → deve ser igualmente distribuído entre as <strong>3 bases de sustentação do pé</strong>: <strong>cabeça do primeiro metatarso</strong> (próxima ao dedão), <strong>cabeça do quinto metatarso</strong> (parte externa) e <strong>calcâneo</strong> (calcanhar).</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que três pontos e não quatro</span>
+    <p>Três pontos definem um plano. Qualquer estrutura apoiada em três pontos é <strong>estaticamente estável</strong> sem precisar de ajuste — é a razão pela qual banquinhos de três pernas não balançam mesmo em piso irregular.</p>
+    <p style="margin-top:12px">Entre esses três pontos se erguem os arcos, e é essa combinação — tripé de apoio com arcos suspensos — que dá ao pé sua dupla capacidade: ser <strong>rígido o bastante</strong> para transmitir força na propulsão e <strong>flexível o bastante</strong> para absorver impacto e se adaptar ao terreno.</p>
+    <p style="margin-top:12px">Quando o peso sai de um dos vértices, o pé perde essa dupla função. Peso demais na borda externa e o pé fica rígido e mau absorvedor. Peso demais na borda interna e ele fica frouxo e mau transmissor.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; o comando do tripé</span>
+    <p>Este é um dos comandos mais úteis que existem para agachamento, terra e qualquer exercício em apoio.</p>
+    <p style="margin-top:12px">Peça ao aluno para sentir <strong>três pontos de contato</strong>: base do dedão, base do dedinho e calcanhar. E para manter os três pressionando o chão durante todo o movimento.</p>
+    <p style="margin-top:12px">O que isso resolve, na prática:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li>Impede o colapso do arco medial na descida do agachamento, que é a origem de boa parte do valgo dinâmico.</li>
+      <li>Impede o deslocamento excessivo para a borda externa, comum em quem tenta "abrir os joelhos" demais.</li>
+      <li>Melhora a percepção de posição do pé, que costuma ser péssima em quem usa calçado rígido o dia inteiro.</li>
+      <li>Dá um critério objetivo de profundidade: a amplitude útil termina quando um dos três pontos perde contato.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="arcos">
+  <span class="sec-num">03 &mdash; OS ARCOS DO PÉ</span>
+  <h2>A mola <span class="accent">entre os apoios</span></h2>
+  <p class="sec-sub">Arco longitudinal, arco transverso e o que sustenta cada um.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Arco do pé</strong> → o arco que corre ao longo da parte interna do pé (<strong>longitudinal</strong>) e o arco na base dos dedos (<strong>transverso</strong>) devem ser <strong>visíveis e sustentados</strong>.</p>
+    <p style="margin-top:12px">Arcos <strong>colapsados</strong> indicam <strong>pés planos</strong>, enquanto arcos <strong>muito altos</strong> (pé cavo) podem sinalizar <strong>desequilíbrio na postura</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o arco não é osso, é sistema</span>
+    <p>Um erro comum é pensar no arco como uma característica óssea fixa. Ele é sustentado por três camadas, e entender isso é o que permite intervir.</p>
+    <ol class="key" style="margin-top:12px">
+      <li><b>Formato ósseo</b> — a arquitetura dos ossos do tarso e metatarso. É a camada que <b>não</b> se modifica com treino.</li>
+      <li><b>Estruturas passivas</b> — fáscia plantar, ligamento plantar longo e, principalmente, o <b>ligamento calcaneonavicular plantar</b> (o "ligamento mola"). Sustentam sem gasto de energia, mas cedem sob carga contínua.</li>
+      <li><b>Estruturas ativas</b> — músculos. O <b>tibial posterior</b> é o principal sustentador dinâmico do arco medial; junto dele atuam o flexor longo dos dedos, o flexor longo do hálux, o fibular longo e toda a <b>musculatura intrínseca plantar</b>. Esta é a camada <b>treinável</b>.</li>
+    </ol>
+    <p>Consequência direta: quando o arco cede por falha da camada ativa, exercício funciona. Quando cede por deformidade da camada óssea, não funciona. Distinguir as duas é o ponto central da seção 06.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o mecanismo de sarrilho</span>
+    <p>Existe um mecanismo elegante que explica por que os dedos importam para o arco, e que quase nunca é ensinado.</p>
+    <p style="margin-top:12px">A fáscia plantar vai do calcâneo até a base dos dedos. Quando você eleva os dedos — o que acontece naturalmente na fase final do passo, ao empurrar o chão —, a fáscia se enrola em torno das cabeças dos metatarsos como um cabo enrolando num sarrilho. Isso <strong>encurta</strong> a distância entre calcâneo e antepé e <strong>eleva o arco automaticamente</strong>.</p>
+    <p style="margin-top:12px">O efeito prático: o pé se torna rígido no momento exato em que precisa transmitir força para a propulsão, sem que nenhum músculo precise gastar energia para isso. É engenharia passiva.</p>
+    <p style="margin-top:12px">E a consequência clínica: rigidez ou limitação de extensão do hálux prejudica esse mecanismo, e o pé perde eficiência na propulsão. Mobilidade do dedão não é detalhe cosmético.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: achado não é sintoma — peso alto</span>
+    <p>A frase "arcos colapsados indicam pés planos" está correta como descrição. O que precisa de calibragem é a conclusão implícita de que isso constitui, por si só, um problema.</p>
+    <p style="margin-top:12px">Pé plano é <strong>extremamente comum</strong> e, na maioria dos casos, <strong>assintomático</strong>. Uma parcela relevante da população adulta tem arco reduzido e nunca desenvolve dor, limitação ou lesão. Da mesma forma, existem pessoas com arco alto que correm maratona sem queixa.</p>
+    <p style="margin-top:12px">A literatura que tentou associar tipo de arco a risco de lesão encontra relações <strong>fracas e inconsistentes</strong>. Não existe base para dizer a alguém assintomático que o pé dele vai causar problema.</p>
+    <p style="margin-top:12px"><strong>O que muda a conduta é a combinação achado + sintoma + função</strong>, não o achado isolado:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li>Arco reduzido, <b>sem</b> dor, <b>sem</b> limitação → é a variação anatômica daquela pessoa. Observe, não trate.</li>
+      <li>Arco reduzido <b>com</b> dor, fadiga precoce ou colapso progressivo sob carga → aí sim há o que trabalhar, e possivelmente o que encaminhar.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="dedos-tornozelo">
+  <span class="sec-num">04 &mdash; DEDOS, TORNOZELO E EIXO DO CALCÂNEO</span>
+  <h2>Os três últimos <span class="accent">critérios do padrão normal</span></h2>
+  <p class="sec-sub">E o mais importante deles.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; alinhamento dos dedos</span>
+    <p>Devem estar <strong>relaxados e voltados para frente</strong>, sem nenhuma pressão ou sobreposição. O <strong>dedão deve apontar levemente para frente e para fora</strong>, alinhando o pé com o restante da perna.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; posição neutra do tornozelo</span>
+    <p>Sem inclinação excessiva para dentro (<strong>pronação</strong>) ou para fora (<strong>supinação</strong>). Isso garante que as <strong>forças geradas pelo corpo sejam transmitidas corretamente ao solo</strong>.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; eixo do calcâneo</span>
+    <p>Deve estar <strong>alinhado com o eixo da perna</strong>, evitando que incline para dentro ou para fora. A posição correta do calcâneo é <strong>essencial para o alinhamento de toda a cadeia muscular inferior</strong>.</p>
+  </div>
+
+  <div class="def">
+    <div class="word">Pronação e supinação</div>
+    <p>Movimentos compostos do pé, que acontecem principalmente na articulação subtalar. <b>Pronação</b> = eversão do calcâneo (borda medial descendo) + abdução do antepé + dorsiflexão. <b>Supinação</b> = inversão do calcâneo (borda medial subindo) + adução do antepé + flexão plantar. Nenhum dos dois é patológico: ambos fazem parte do passo normal. O problema é o excesso, a falta ou o momento errado.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; o eixo do calcâneo é o achado que mais vale</span>
+    <p>De todos os critérios do padrão normal do pé, o <strong>eixo do calcâneo é o mais informativo e o mais fácil de observar</strong> — e é onde vale concentrar a atenção de quem está começando.</p>
+    <p style="margin-top:12px"><strong>Como avaliar:</strong> aluno em pé, de costas, pés na largura do quadril, olhando para frente. Observe a linha vertical do tendão de Aquiles descendo até o calcâneo.</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Linha reta</b>, tendão descendo vertical até o centro do calcâneo → retropé neutro.</li>
+      <li><b>Tendão curvando para fora</b> na parte de baixo, calcâneo caindo para dentro → <b>retropé valgo</b> (pronado).</li>
+      <li><b>Tendão curvando para dentro</b>, calcâneo inclinando para fora → <b>retropé varo</b> (supinado).</li>
+    </ul>
+    <p><strong>Por que este achado vale mais que o arco:</strong> a posição do calcâneo determina a posição da subtalar, que determina a rotação da tíbia, que determina a orientação do joelho. É o elo que efetivamente transmite o desvio para cima na cadeia. O arco é consequência; o retropé é causa.</p>
+    <p style="margin-top:12px">E é dinâmico: observe também durante o agachamento e no apoio unipodal, não só parado. Muita gente tem retropé neutro em pé e valgo acentuado sob carga.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que o dedão aponta "levemente para fora"</span>
+    <p>A instrução parece estranha à primeira vista — não deveria tudo apontar reto para frente?</p>
+    <p style="margin-top:12px">Não, e a razão é a <strong>torção tibial externa</strong>. A tíbia humana tem uma torção natural ao longo do seu eixo, tipicamente entre 15° e 20°, de modo que o tornozelo fica ligeiramente rodado para fora em relação ao joelho. É anatomia normal, presente na maioria das pessoas.</p>
+    <p style="margin-top:12px">Consequência prática importante para a sala de treino: <strong>exigir que todo mundo agache com os pés perfeitamente paralelos é biomecanicamente errado</strong> para a maioria. O ângulo natural de abertura do pé varia bastante entre indivíduos, e forçar um padrão único gera torção compensatória no joelho.</p>
+    <p style="margin-top:12px">O critério correto não é um ângulo fixo, e sim a <strong>congruência</strong>: a patela deve apontar na mesma direção do segundo dedo. Onde o pé aponta importa menos do que o joelho acompanhar.</p>
+  </div>
+</section>
+
+<section id="avaliar">
+  <span class="sec-num">05 &mdash; COMO AVALIAR O PÉ NA PRÁTICA</span>
+  <h2>Um roteiro <span class="accent">de cinco minutos</span></h2>
+  <p class="sec-sub">Sem equipamento, dentro da rotina de qualquer avaliação.</p>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; roteiro</span>
+    <div class="stepwrap" style="margin-top:12px">
+      <div class="step"><h4>Descalço, em pé, vista posterior</h4><p>Observe o eixo do calcâneo nos dois pés. É o achado principal. Compare os lados.</p></div>
+      <div class="step"><h4>Vista anterior</h4><p>Observe o alinhamento dos dedos, presença de desvio do hálux, sobreposição, dedos em garra ou martelo. Observe também se sobra "muito pé" visível pelo lado de dentro — sinal indireto de queda do arco.</p></div>
+      <div class="step"><h4>Vista medial</h4><p>Arco longitudinal: visível e sustentado, colapsado ou muito elevado? Compare com o outro pé.</p></div>
+      <div class="step"><h4>Teste de elevação do arco</h4><p>Peça para elevar o arco sem enrolar os dedos e sem tirar o dedão do chão. Consegue? Sustenta? Isso testa a <strong>camada ativa</strong> e é o que distingue arco que cede por fraqueza de arco que não existe estruturalmente.</p></div>
+      <div class="step"><h4>Teste dinâmico</h4><p>Agachamento e apoio unipodal. Observe se o retropé desaba, se o arco colapsa e se o joelho segue o pé. É aqui que a maior parte dos achados relevantes aparece.</p></div>
+      <div class="step"><h4>Dorsiflexão</h4><p>Teste joelho-parede: pé a alguns centímetros da parede, tente tocar o joelho na parede sem levantar o calcanhar. Restrição de dorsiflexão é uma das causas mais comuns de pronação compensatória.</p></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que a dorsiflexão entra num roteiro de pé</span>
+    <p>Este é um dos encadeamentos mais úteis da avaliação de membro inferior.</p>
+    <p style="margin-top:12px">Para agachar, o joelho precisa avançar sobre o pé — isso exige <strong>dorsiflexão de tornozelo</strong>. Se o tríceps sural está rígido ou a articulação do tornozelo tem restrição, essa amplitude não está disponível.</p>
+    <p style="margin-top:12px">Mas o corpo ainda precisa descer. Então ele busca amplitude onde consegue: a articulação subtalar <strong>prona</strong>, o arco desaba, o mediopé cede. Isso cria uma dorsiflexão aparente sem que o tornozelo verdadeiro tenha se movido.</p>
+    <p style="margin-top:12px">O resultado visível é pronação excessiva no agachamento — mas a causa está no tríceps sural, não no pé. Tratar o pé nesse caso não resolve. É o mesmo raciocínio da parte 1: o local do sintoma não é o local da causa.</p>
+  </div>
+</section>
+
+<section id="pe-plano">
+  <span class="sec-num">06 &mdash; PÉ PLANO</span>
+  <h2>Arco <span class="accent">reduzido</span></h2>
+  <p class="sec-sub">E a distinção que muda completamente a conduta.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Pé plano ou pé chato</strong> → deformidade em <strong>valgo do retropé</strong>, acompanhada frequentemente pela <strong>redução parcial ou total do arco plantar</strong>, o que resulta na projeção dos calcanhares para dentro.</p>
+    <p style="margin-top:12px">Comum observar uma <strong>pronação excessiva, estática e dinâmica</strong>, especialmente em agachamentos, onde há bastante flexão no joelho e tornozelo.</p>
+    <p style="margin-top:12px">Falha geralmente <strong>congênita estrutural (irreversível)</strong> → intervenções com <strong>palmilha ortopédica</strong>, com auxílio de um <strong>fisioterapeuta</strong>.</p>
+  </div>
+
+  <div class="mm">
+    <h4>Mapa muscular &middot; pé plano / pronado</h4>
+    <div class="mm-body">
+      <p style="margin-top:14px"><strong>Alongados e frequentemente enfraquecidos</strong> — são os supinadores e sustentadores do arco. A pronação afasta origem e inserção deles:</p>
+      <ul class="clean" style="margin-top:10px">
+        <li><b>Tibial posterior</b> — o mais importante. É o principal sustentador dinâmico do arco medial e o principal inversor. Na pronação, o calcâneo everte e o navicular desce: o músculo é levado a comprimento longo e perde eficiência. Insuficiência dele é a via clássica de colapso progressivo do arco no adulto.</li>
+        <li><b>Flexor longo dos dedos</b> e <b>flexor longo do hálux</b> — passam por baixo do sustentáculo do tálus e ajudam a sustentar o arco. Alongados pela queda do mediopé.</li>
+        <li><b>Abdutor do hálux</b> e <b>musculatura intrínseca plantar</b> — a camada ativa curta do arco. Com o arco desabado, ficam alongados e inibidos.</li>
+        <li><b>Tibial anterior</b> — participa da inversão e da sustentação do arco pela sua inserção no cuneiforme medial e base do primeiro metatarso.</li>
+      </ul>
+      <p style="margin-top:16px"><strong>Encurtados e frequentemente hiperativos</strong> — são os evertores e os que levam à pronação. A pronação aproxima origem e inserção deles:</p>
+      <ul class="clean" style="margin-top:10px">
+        <li><b>Fibular longo</b> e <b>fibular curto</b> — evertores principais. Com o pé permanentemente everdido, trabalham em comprimento curto e ganham rigidez.</li>
+        <li><b>Tríceps sural (gastrocnêmio e sóleo)</b> — atenção especial. Aqui a relação é de <b>causa</b>, não só de consequência: rigidez do tríceps sural limita a dorsiflexão e força o mediopé a pronar para compensar. É o mecanismo descrito na seção 05.</li>
+        <li><b>Extensor longo dos dedos</b> — tem componente de eversão.</li>
+      </ul>
+      <p style="margin-top:16px"><strong>Fáscia plantar</strong> — situação particular: fica sob <strong>tensão aumentada</strong> por estiramento contínuo, e não encurtada. É a razão pela qual pé plano se associa a dor plantar por sobrecarga da fáscia.</p>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: generalização que muda a conduta — peso alto</span>
+    <p>A afirmação de que o pé plano é "geralmente congênita estrutural, irreversível" precisa de uma distinção importante, porque ela determina se você trata ou não trata.</p>
+    <p style="margin-top:12px">Existem <strong>dois tipos de pé plano</strong>, e eles se comportam de forma oposta:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Pé plano flexível</b> — o mais comum, de longe. O arco <b>desaparece em carga e reaparece sem carga</b>. Você vê isso pedindo ao aluno para ficar na ponta dos pés ou sentar: se o arco se forma, é flexível. <b>Este responde a exercício</b> e não é irreversível.</li>
+      <li><b>Pé plano rígido</b> — o arco não se forma em nenhuma condição, nem na ponta dos pés, nem sem carga. Costuma ter causa estrutural, como coalizão tarsal. <b>Este realmente não responde a exercício</b> e é território médico.</li>
+    </ul>
+    <p>Somando à ressalva da seção 03: a maior parte dos pés planos que você vai encontrar é <strong>flexível e assintomática</strong>, e uma parcela dos sintomáticos melhora com fortalecimento de tibial posterior e musculatura intrínseca. Classificar todos como irreversíveis desnecessariamente retira do aluno uma intervenção que funcionaria.</p>
+    <p style="margin-top:12px">A parte da anotação que está inteiramente correta é o <strong>encaminhamento</strong>: palmilha é prescrição de profissional habilitado, e o educador físico não indica nem confecciona. Suspeitar e encaminhar é o certo.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <ul class="clean">
+      <li><b>Teste flexível vs. rígido antes de qualquer coisa.</b> Ponta dos pés e sem carga. Se o arco aparece, há o que trabalhar.</li>
+      <li><b>Fortaleça o tibial posterior</b> — elevação de calcanhar com o pé em leve inversão, elevação unilateral, inversão resistida com elástico. É o músculo-chave.</li>
+      <li><b>Trabalhe a musculatura intrínseca</b> — exercício de arco curto (<em>short foot</em>): encurtar o pé aproximando a cabeça do primeiro metatarso do calcâneo, sem enrolar os dedos e sem tirar o dedão do chão. Comece sentado, progrida para em pé, depois unipodal.</li>
+      <li><b>Ganhe dorsiflexão</b> — se o teste joelho-parede está restrito, essa é possivelmente a causa raiz. Mobilidade de tornozelo e alongamento de gastrocnêmio e sóleo separadamente (joelho estendido e joelho fletido).</li>
+      <li><b>Use o comando do tripé sob carga</b> — no agachamento, no avanço, no terra. A correção precisa migrar para os padrões que o aluno realmente usa.</li>
+      <li><b>Encaminhe</b> se houver dor persistente, colapso progressivo, arco que não se forma em nenhuma condição, ou dificuldade de fazer elevação unilateral de calcanhar.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="pe-cavo">
+  <span class="sec-num">07 &mdash; PÉ CAVO</span>
+  <h2>Arco <span class="accent">acentuado</span></h2>
+  <p class="sec-sub">O oposto do plano, com problemas próprios.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Pé cavo</strong> → arco plantar <strong>acentuado</strong>, intensificando a curvatura do arco do pé. Comumente associado a uma <strong>maior suscetibilidade à fascite plantar</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que arco alto também é problema</span>
+    <p>Se arco caído é ruim, arco alto deveria ser ótimo. Não é — e a razão está na função de absorção.</p>
+    <p style="margin-top:12px">O pé precisa <strong>pronar</strong> na fase inicial do apoio. Essa pronação é o mecanismo de amortecimento: ela permite que o mediopé ceda um pouco e dissipe energia de impacto ao longo do tempo, em vez de transmiti-la de uma vez.</p>
+    <p style="margin-top:12px">O pé cavo é rígido e supinado. Ele <strong>prona pouco</strong>, e portanto absorve pouco. A força de impacto sobe pela cadeia com menos dissipação, e a carga se concentra em duas regiões pequenas: o calcâneo e as cabeças dos metatarsos. Daí a associação com dor plantar, metatarsalgia e fraturas por estresse.</p>
+    <p style="margin-top:12px">A relação com <strong>fascite plantar</strong> que a anotação registra tem duas vias possíveis: no pé cavo, a fáscia trabalha sob tensão elevada continuamente pela curvatura acentuada; no pé plano, ela trabalha sob estiramento pelo colapso. Os dois extremos convergem para o mesmo sintoma por mecanismos opostos.</p>
+  </div>
+
+  <div class="mm">
+    <h4>Mapa muscular &middot; pé cavo / supinado</h4>
+    <div class="mm-body">
+      <p style="margin-top:14px"><strong>Encurtados e hiperativos</strong> — os inversores e flexores plantares. A supinação os mantém em comprimento curto:</p>
+      <ul class="clean" style="margin-top:10px">
+        <li><b>Tibial posterior</b> — aqui a situação se inverte em relação ao pé plano: em vez de insuficiente e alongado, está encurtado e tracionando o arco para cima.</li>
+        <li><b>Tibial anterior</b> — inversor e dorsiflexor. Quando domina sobre o fibular longo, eleva o primeiro raio e acentua o arco.</li>
+        <li><b>Flexor longo dos dedos</b> e <b>flexor longo do hálux</b> — encurtados, contribuem para a garra dos dedos que frequentemente acompanha o pé cavo.</li>
+        <li><b>Tríceps sural</b> — em flexão plantar relativa mantida.</li>
+        <li><b>Fáscia plantar</b> — não é músculo, mas trabalha sob <strong>tensão elevada permanente</strong> pela curvatura acentuada.</li>
+      </ul>
+      <p style="margin-top:16px"><strong>Alongados e frequentemente enfraquecidos</strong> — os evertores:</p>
+      <ul class="clean" style="margin-top:10px">
+        <li><b>Fibular longo</b> — merece destaque. Além de evertir, ele <b>flexiona plantarmente o primeiro raio</b>, ou seja, empurra a cabeça do primeiro metatarso contra o chão. Fraqueza dele deixa o primeiro raio elevado e é uma das vias de formação do arco alto.</li>
+        <li><b>Fibular curto</b> — evertor puro, alongado pela inversão mantida.</li>
+        <li><b>Musculatura intrínseca</b> — pode estar em desequilíbrio, com predomínio dos flexores sobre os lumbricais e interósseos, o que gera a deformidade em garra dos dedos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <ul class="clean">
+      <li><b>Fortaleça os fibulares</b> — eversão resistida com elástico, apoio unipodal em superfície levemente instável. Especialmente o fibular longo, que baixa o primeiro raio.</li>
+      <li><b>Mobilidade em pronação</b> — o pé cavo precisa <b>ganhar</b> pronação, não perder. Mobilizações de mediopé e trabalho de descarga de peso na borda medial.</li>
+      <li><b>Cuide da fáscia plantar</b> — mobilização com bolinha, alongamento específico com extensão dos dedos, e principalmente carga progressiva. Fáscia responde melhor a carga graduada do que a alongamento passivo.</li>
+      <li><b>Amortecimento importa mais aqui</b> — em atividades de impacto, este é o pé que mais se beneficia de calçado com amortecimento adequado. Sugestão de calçado é orientação geral; prescrição de palmilha é do profissional habilitado.</li>
+      <li><b>Progrida impacto com cautela</b> — corrida, saltos e pliometria em pé cavo rígido pedem progressão mais lenta, pela menor capacidade de absorção.</li>
+      <li><b>Encaminhe</b> se houver dor plantar persistente, dormência, fraqueza progressiva ou pé cavo que se acentua com o tempo — pé cavo de instalação progressiva pode ter causa neurológica e precisa de avaliação médica.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="pe-pronado">
+  <span class="sec-num">08 &mdash; PÉ PRONADO (VALGO)</span>
+  <h2>O retropé <span class="accent">caindo para dentro</span></h2>
+  <p class="sec-sub">Com uma dúvida de transcrição registrada de forma transparente.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Pé pronado (ou valgo)</strong> → tendão calcâneo <strong>para fora do alinhamento</strong> com o osso calcâneo e a tíbia, levando o tendão de Aquiles a se inclinar em direção à <strong>parte interna do tornozelo</strong>.</p>
+    <p style="margin-top:12px">Quando observados por trás, os <strong>tornozelos podem encostar facilmente</strong>, mesmo que as bordas internas dos pés estejam afastadas.</p>
+    <p style="margin-top:12px"><strong>Dois fatores principais:</strong> abdução do antepé e rotação sobre o próprio eixo.</p>
+    <p style="margin-top:12px">Pode estar associada a uma <strong>anteversão do quadril</strong>, gerando compensação de coluna.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: transcrição a confirmar</span>
+    <p>Um trecho da anotação original desta seção descreve que <em>"a borda interna não toca o chão, ao contrário do pé plano, e a externa serve de ponto de apoio, sendo tensionada"</em>.</p>
+    <p style="margin-top:12px">Essa descrição não corresponde ao pé pronado. Na pronação, a borda <strong>medial</strong> é justamente a que desce em direção ao solo — é isso que faz o arco desabar. Apoio na borda lateral com borda medial elevada descreve <strong>supinação</strong>, e a descrição reaparece quase idêntica na seção seguinte, do pé varo.</p>
+    <p style="margin-top:12px">A hipótese mais provável é que a diagramação da página tenha embaralhado os dois blocos e o trecho pertença ao varo. <strong>Não resolvi por conta própria</strong>: registrei aqui e deixei o item na lista de pontos a confirmar. O restante da descrição do pronado — Aquiles inclinado para dentro, tornozelos que se tocam, abdução do antepé — é coerente e está mantido no bloco azul acima.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o sinal dos tornozelos que se tocam</span>
+    <p>Esta é uma observação clínica excelente e vale entender por que funciona.</p>
+    <p style="margin-top:12px">Quando o calcâneo everte, o maléolo medial — a proeminência óssea do lado de dentro do tornozelo — é levado <strong>para baixo e para dentro</strong>. Nos dois pés simultaneamente, isso aproxima os tornozelos.</p>
+    <p style="margin-top:12px">O detalhe que dá valor ao sinal é o contraste: os <strong>tornozelos se tocam</strong> enquanto as <strong>bordas internas dos pés continuam afastadas</strong>. Isso mostra que a aproximação não vem da posição dos pés no chão, e sim do <strong>desabamento do retropé</strong>. É um sinal específico, não apenas "pés juntos".</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; a ligação com o quadril</span>
+    <p>A associação com <strong>anteversão do quadril</strong> registrada na anotação tem um mecanismo claro, e é a aplicação direta da cadeia ascendente.</p>
+    <p style="margin-top:12px">A pronação subtalar leva o tálus à <strong>adução e flexão plantar</strong>. Como o tálus está encaixado na pinça tibiofibular, ele arrasta a <strong>tíbia para rotação interna</strong>. A tíbia rodada internamente leva o <strong>fêmur à rotação interna</strong>. E o fêmur rodado internamente favorece a <strong>anteversão pélvica</strong>, que por sua vez aumenta a lordose lombar.</p>
+    <p style="margin-top:12px">É a mesma cadeia descrita na parte 6, percorrida de baixo para cima: pé → tíbia → fêmur → pelve → coluna. E é a explicação concreta para a frase da parte 1, de que o pé pode acabar sendo o culpado por dores distantes.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>O mapa muscular e a conduta do pé pronado são os mesmos do pé plano, seção 06 — as duas condições descrevem o mesmo padrão mecânico visto por ângulos diferentes: o pronado descreve a posição do retropé, o plano descreve a consequência no arco.</p>
+    <p style="margin-top:12px">Dois acréscimos específicos:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Trabalhe o controle de rotação do quadril junto.</b> Como a cadeia sobe, fortalecer rotadores externos e abdutores de quadril ajuda a conter a rotação interna da tíbia por cima, enquanto o trabalho de pé age por baixo. Atacar os dois lados acelera o resultado.</li>
+      <li><b>Verifique o momento da pronação, não só a quantidade.</b> Pronar é normal e necessário na fase inicial do apoio. O problema é pronar demais, pronar tarde demais, ou não voltar a supinar na fase de propulsão. Observar a marcha diz mais que observar o pé parado.</li>
+    </ul>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: correlação achado-sintoma</span>
+    <p>O <strong>esporão do calcâneo</strong> é citado na anotação como possível desfecho. Vale uma calibragem, porque é um achado muito mal compreendido.</p>
+    <p style="margin-top:12px">Esporões de calcâneo são <strong>frequentes em pessoas sem nenhuma dor</strong>, e muitas pessoas com dor plantar intensa <strong>não têm esporão</strong>. A correlação entre a imagem e o sintoma é fraca. O esporão é, na maior parte dos casos, um marcador de que houve tração crônica naquela região — não a causa da dor em si.</p>
+    <p style="margin-top:12px">Isso importa na comunicação: dizer a um aluno que ele "tem um esporão e por isso dói" pode gerar medo desnecessário e evitação de atividade, que é justamente o oposto do que costuma ajudar. E, de todo modo, o diagnóstico não é nosso.</p>
+  </div>
+</section>
+
+<section id="pe-varo">
+  <span class="sec-num">09 &mdash; PÉ VARO (SUPINADO)</span>
+  <h2>O retropé <span class="accent">inclinando para fora</span></h2>
+  <p class="sec-sub">O espelho do pronado, com cadeia própria.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Pé varo</strong> → projeção do <strong>tendão calcâneo para o lado externo</strong>, visível por trás. O calcâneo se inclina para dentro, influenciado por <strong>adução do antepé</strong> e <strong>rotação sobre o próprio eixo</strong>.</p>
+    <p style="margin-top:12px">A <strong>borda interna do pé fica elevada</strong>, e a <strong>externa serve de ponto de apoio</strong>, o que faz a planta do pé se orientar para dentro e para trás, enquanto o dorso para fora e para frente.</p>
+    <p style="margin-top:12px">Associada à <strong>retificação da lombar</strong> e <strong>retroversão do quadril</strong>, embora não seja regra absoluta.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; a cadeia ascendente do varo</span>
+    <p>É o inverso exato do pronado, e vale percorrer para fixar a lógica.</p>
+    <p style="margin-top:12px">A supinação subtalar leva o tálus à <strong>abdução e dorsiflexão relativa</strong>, o que roda a <strong>tíbia externamente</strong>. A tíbia em rotação externa leva o <strong>fêmur à rotação externa</strong>, o que favorece a <strong>retroversão pélvica</strong> e, consequentemente, a <strong>retificação lombar</strong>. Exatamente o que a anotação registra.</p>
+    <p style="margin-top:12px">Repare na ressalva que a própria aula faz: <strong>"embora não seja regra absoluta"</strong>. Isso é importante e honesto. As cadeias descrevem tendências, não determinismo. Existem pessoas com pé varo e hiperlordose, porque outros fatores da cadeia — hábito, formato ósseo, padrão de treino — podem sobrepor a influência vinda de baixo.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o risco específico do varo</span>
+    <p>O pé supinado tem uma vulnerabilidade característica: <strong>entorse em inversão</strong>.</p>
+    <p style="margin-top:12px">Com o retropé já inclinado em inversão, o pé parte de uma posição mais próxima do limite dessa amplitude. Uma pisada em terreno irregular ou uma aterrissagem descontrolada encontra menos margem antes de exceder o que os ligamentos laterais toleram. Somado à menor capacidade de absorção do pé rígido, o resultado é maior exposição.</p>
+    <p style="margin-top:12px">Isso conversa diretamente com a conduta: trabalho de <strong>propriocepção e força de fibulares</strong> tem valor preventivo aqui, já que os fibulares são exatamente os músculos que freiam a inversão.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>O mapa muscular é o do pé cavo, seção 07 — encurtamento dos inversores e fraqueza dos fibulares. Acréscimos específicos do varo:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Propriocepção com prioridade alta</b> — apoio unipodal com progressão de dificuldade: olhos abertos, olhos fechados, superfície instável, com perturbação externa. É a intervenção com melhor evidência para reduzir recidiva de entorse.</li>
+      <li><b>Fibulares em regime excêntrico</b> — eles precisam frear a inversão, que é uma ação excêntrica. Trabalho apenas concêntrico com elástico não treina exatamente a função protetora.</li>
+      <li><b>Descarga de peso na borda medial</b> — exercícios que ensinam a levar peso para o primeiro raio, recuperando o tripé completo.</li>
+      <li><b>Cuidado com superfícies irregulares no início</b> — a progressão de propriocepção deve ser gradual justamente porque a margem de segurança é menor.</li>
+      <li><b>Histórico de entorses repetidas</b> é sinal de encaminhamento: instabilidade crônica de tornozelo tem componente ligamentar que precisa de avaliação.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="joanete">
+  <span class="sec-num">10 &mdash; JOANETE (HÁLUX VALGO)</span>
+  <h2>O desvio <span class="accent">do dedão</span></h2>
+  <p class="sec-sub">Deformidade progressiva com componente mecânico treinável.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Joanete</strong> → o dedão se desvia em direção aos outros dedos, formando um <strong>ângulo anormal na articulação metatarsofalângica</strong>.</p>
+    <p style="margin-top:12px"><strong>Causada por</strong> predisposição genética, calçados inadequados ou pressão excessiva na região.</p>
+    <p style="margin-top:12px"><strong>Consequências:</strong> dor, inflamação na articulação, formação de calosidades e alteração na distribuição de peso sobre o pé, <strong>impactando a marcha</strong> e aumentando a pressão em outras áreas do pé.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que ele piora sozinho</span>
+    <p>O joanete tem uma característica que o distingue de outras alterações: ele é <strong>autoagravante</strong>. Uma vez iniciado, a própria mecânica do desvio empurra o desvio adiante.</p>
+    <p style="margin-top:12px">O mecanismo se chama <strong>efeito de corda de arco</strong>. Os tendões que cruzam a articulação metatarsofalângica do hálux — extensor longo do hálux e flexor longo do hálux — normalmente correm alinhados com o eixo do dedo. Quando o dedo começa a desviar lateralmente, esses tendões passam a correr <strong>por fora</strong> do novo eixo articular.</p>
+    <p style="margin-top:12px">A partir daí, cada vez que eles se contraem — o que acontece a cada passo —, além de mover o dedo, eles o <strong>puxam ainda mais para o lado</strong>, como a corda de um arco puxando a madeira. Músculos que antes moviam o dedo passam a ser forças deformantes.</p>
+    <p style="margin-top:12px">Simultaneamente, o <strong>abdutor do hálux</strong> — o músculo que puxaria o dedão de volta para a linha média — desliza para baixo do dedo conforme o desvio progride. Sua linha de ação deixa de ser abdutora e ele perde a capacidade de resistir. O único freio ativo do desvio para de funcionar.</p>
+  </div>
+
+  <div class="mm">
+    <h4>Mapa muscular &middot; hálux valgo</h4>
+    <div class="mm-body">
+      <p style="margin-top:14px"><strong>Alongado e mecanicamente desativado</strong>:</p>
+      <ul class="clean" style="margin-top:10px">
+        <li><b>Abdutor do hálux</b> — o protagonista. É o músculo que traz o dedão para longe dos outros. Com o desvio, ele é alongado e, pior, sua linha de ação migra para uma posição em que deixa de abduzir. Fica alongado <em>e</em> mecanicamente inútil na função original.</li>
+      </ul>
+      <p style="margin-top:16px"><strong>Encurtados e deformantes</strong>:</p>
+      <ul class="clean" style="margin-top:10px">
+        <li><b>Adutor do hálux</b> — puxa o dedão em direção aos outros dedos. Com o desvio instalado, trabalha em comprimento curto e reforça o quadro.</li>
+        <li><b>Extensor longo do hálux</b> e <b>flexor longo do hálux</b> — não estão propriamente encurtados, mas <b>desviados de linha de ação</b>, atuando como corda de arco conforme descrito acima.</li>
+      </ul>
+      <p style="margin-top:16px"><strong>Frequentemente associado</strong>: fraqueza da musculatura intrínseca plantar como um todo, e queda do arco medial. Pé pronado favorece a progressão do hálux valgo porque aumenta a carga sobre o primeiro raio na fase de propulsão — o que conecta esta seção diretamente às seções 06 e 08.</p>
+    </div>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>O que é possível fazer — e o que não é. Comecemos pela honestidade: <strong>exercício não desfaz um hálux valgo instalado.</strong> A angulação óssea não se reverte com treino. O que se pode fazer é reduzir o ritmo de progressão, melhorar a função e diminuir sintoma.</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Fortaleça o abdutor do hálux</b> — o exercício clássico é afastar o dedão dos outros dedos mantendo-o no chão, sem levantar. É difícil no início e exige aprendizado; muitos precisam de semanas para conseguir isolar o movimento.</li>
+      <li><b>Trabalhe a musculatura intrínseca em conjunto</b> — arco curto, separação de dedos, elevação isolada do hálux com os outros dedos no chão e vice-versa.</li>
+      <li><b>Trate o pé pronado, se houver</b> — reduzir a sobrecarga sobre o primeiro raio ataca uma das forças que empurram o desvio.</li>
+      <li><b>Orientação de calçado</b> — caixa anterior larga o suficiente para os dedos ficarem na posição natural, sem bico estreito e sem salto alto, que joga peso sobre o antepé. Isso é orientação geral de hábito, dentro do nosso escopo.</li>
+      <li><b>Ajuste os exercícios que doem</b> — em fase inflamada, movimentos que exigem extensão máxima do hálux sob carga (agachamento profundo, avanço, saltos) podem ser adaptados temporariamente sem que se perca o treino.</li>
+      <li><b>Encaminhe</b> na presença de dor persistente, inflamação, dificuldade de calçar ou progressão rápida. Correção estrutural é cirúrgica e a decisão é médica.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="dedos">
+  <span class="sec-num">11 &mdash; DEDO EM MARTELO E DEDOS EM GARRA</span>
+  <h2>Quando os dedos <span class="accent">enrolam</span></h2>
+  <p class="sec-sub">Duas deformidades com a mesma raiz muscular.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; dedo em martelo</span>
+    <p>Um dos dedos do pé, <strong>geralmente o segundo</strong>, assume uma posição dobrada e forma um ângulo nas <strong>articulações interfalângicas</strong>, lembrando o formato de um martelo.</p>
+    <p style="margin-top:12px"><strong>Causada por desequilíbrios musculares</strong>, que levam a um <strong>encurtamento de tendões e músculos específicos</strong>, puxando o dedo para uma posição curvada.</p>
+    <p style="margin-top:12px"><strong>Consequências:</strong> desconforto ao caminhar, desgaste das articulações afetadas e calosidades devido ao atrito com o calçado.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; dedos em garra</span>
+    <p>Dedos <strong>permanentemente dobrados em forma de garra</strong>, devido a <strong>encurtamento e desequilíbrio dos músculos e tendões</strong> envolvidos nos movimentos dos dedos.</p>
+    <p style="margin-top:12px"><strong>Consequências:</strong> desconforto, calosidades e dor. Também gera desgaste articular e inflamação.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; a raiz comum: o desequilíbrio intrínseco-extrínseco</span>
+    <p>As duas deformidades vêm do mesmo desequilíbrio, e entendê-lo permite tratar as duas com a mesma lógica.</p>
+    <p style="margin-top:12px">Os dedos do pé são movidos por dois grupos com funções complementares:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Extrínsecos</b> — flexor longo dos dedos e extensor longo dos dedos. Vêm da perna, têm tendões longos e produzem <b>força</b>. Agem principalmente sobre as articulações interfalângicas.</li>
+      <li><b>Intrínsecos</b> — lumbricais e interósseos. Ficam dentro do próprio pé e produzem <b>controle fino</b>. Sua função característica é <b>flexionar a metatarsofalângica enquanto estendem as interfalângicas</b> — ou seja, manter o dedo reto e apoiado no chão.</li>
+    </ul>
+    <p style="margin-top:12px">Quando os intrínsecos enfraquecem — o que acontece com desuso, calçado rígido que faz o trabalho por eles, e falta de contato com o solo —, os extrínsecos passam a agir sem contrapeso. O resultado é exatamente a deformidade: metatarsofalângica em extensão e interfalângicas em flexão. O dedo levanta na base e enrola na ponta.</p>
+    <p style="margin-top:12px">É o que se chama de <strong>pé intrínseco-negativo</strong>. Dedo em martelo e dedos em garra são graus e distribuições diferentes do mesmo fenômeno.</p>
+  </div>
+
+  <div class="mm">
+    <h4>Mapa muscular &middot; dedo em martelo e dedos em garra</h4>
+    <div class="mm-body">
+      <p style="margin-top:14px"><strong>Enfraquecidos e inibidos</strong> — os intrínsecos, que perderam a disputa:</p>
+      <ul class="clean" style="margin-top:10px">
+        <li><b>Lumbricais</b> — flexionam a metatarsofalângica e estendem as interfalângicas. São exatamente os antagonistas da deformidade.</li>
+        <li><b>Interósseos dorsais e plantares</b> — mesma função sobre os dedos, além de afastar e aproximar.</li>
+        <li><b>Flexor curto dos dedos</b> — auxilia na estabilização do dedo contra o solo.</li>
+      </ul>
+      <p style="margin-top:16px"><strong>Encurtados e dominantes</strong> — os extrínsecos, que assumiram sozinhos:</p>
+      <ul class="clean" style="margin-top:10px">
+        <li><b>Flexor longo dos dedos</b> — flexiona as interfalângicas. Sem o contrapeso dos lumbricais, enrola a ponta do dedo.</li>
+        <li><b>Extensor longo dos dedos</b> — estende a metatarsofalângica. Sem contrapeso, levanta a base do dedo.</li>
+        <li><b>Extensor longo do hálux</b> — quando o hálux está envolvido.</li>
+      </ul>
+      <p style="margin-top:16px"><strong>Por que os intrínsecos enfraquecem:</strong> calçado com sola rígida e caixa estreita imobiliza os dedos e assume a função de estabilização; ausência de contato com o solo reduz o estímulo proprioceptivo; e o pé pronado ou cavo altera a linha de ação, agravando o desequilíbrio. É desuso clássico da parte 1, aplicado a músculos pequenos.</p>
+    </div>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>Aqui vale a mesma honestidade da seção anterior: <strong>deformidade rígida não se reverte com exercício.</strong> Mas a distinção que importa é a mesma do pé plano.</p>
+    <p style="margin-top:12px"><strong>Teste primeiro se é flexível ou rígida:</strong> tente endireitar o dedo passivamente com a mão. Se ele cede e volta à posição reta, a deformidade é <strong>flexível</strong> e há muito o que fazer. Se não cede, é rígida e o trabalho é de manejo de sintoma e prevenção de piora.</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Fortaleça os intrínsecos</b> — exercício de arco curto, elevação do hálux mantendo os outros dedos no chão e o inverso, separação dos dedos, "pegar" uma toalha com os dedos sem enrolá-los excessivamente.</li>
+      <li><b>Trabalhe descalço quando possível</b> — parte do treino ou do aquecimento sem calçado devolve estímulo aos intrínsecos e à propriocepção plantar. Progrida gradualmente: quem passou anos em calçado rígido não tolera volume alto descalço de imediato.</li>
+      <li><b>Mobilize as articulações dos dedos</b> — mobilização passiva suave, especialmente nas deformidades flexíveis, para manter amplitude disponível.</li>
+      <li><b>Orientação de calçado</b> — caixa anterior alta e larga, para que o dedo não seja pressionado contra o teto do calçado, que é o que gera as calosidades por atrito.</li>
+      <li><b>Cheque a cadeia acima</b> — dedos em garra acompanham frequentemente pé cavo, e este pode ter causa neurológica quando de instalação progressiva. Piora rápida, associada a perda de força ou alteração de sensibilidade, é encaminhamento imediato.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="cadeia-ascendente">
+  <span class="sec-num">12 &mdash; O PÉ NA CADEIA ASCENDENTE</span>
+  <h2>Como o desvio <span class="accent">sobe</span></h2>
+  <p class="sec-sub">Síntese das duas grandes vias, e como usá-las na avaliação.</p>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; as duas cadeias, lado a lado</span>
+    <p>Todas as alterações desta parte se organizam em duas vias opostas. Ter esta tabela na cabeça acelera muito a leitura de qualquer avaliação.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Segmento</th><th>Via da pronação</th><th>Via da supinação</th></tr></thead>
+      <tbody>
+        <tr><td>Retropé</td><td>Calcâneo em <b>valgo</b> (cai para dentro)</td><td>Calcâneo em <b>varo</b> (inclina para fora)</td></tr>
+        <tr><td>Arco</td><td>Colapsado &middot; pé plano</td><td>Acentuado &middot; pé cavo</td></tr>
+        <tr><td>Tálus</td><td>Adução e flexão plantar</td><td>Abdução e dorsiflexão relativa</td></tr>
+        <tr><td>Tíbia</td><td><b>Rotação interna</b></td><td><b>Rotação externa</b></td></tr>
+        <tr><td>Fêmur</td><td>Rotação interna &middot; tendência a <b>valgo</b></td><td>Rotação externa &middot; tendência a <b>varo</b></td></tr>
+        <tr><td>Pelve</td><td>Tendência a <b>anteversão</b></td><td>Tendência a <b>retroversão</b></td></tr>
+        <tr><td>Lombar</td><td>Tendência a <b>hiperlordose</b></td><td>Tendência a <b>retificação</b></td></tr>
+        <tr><td>Absorção de impacto</td><td>Excessiva &middot; pé frouxo</td><td>Insuficiente &middot; pé rígido</td></tr>
+        <tr><td>Vulnerabilidade típica</td><td>Fascite, tibial posterior, valgo dinâmico, dor patelofemoral</td><td>Entorse em inversão, metatarsalgia, fratura por estresse</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: tendência, não determinismo</span>
+    <p>A tabela acima é uma ferramenta de raciocínio, não uma lei. A própria aula fez essa ressalva ao dizer, sobre o pé varo, "embora não seja regra absoluta" — e ela vale para a coluna inteira da tabela.</p>
+    <p style="margin-top:12px">Três razões pelas quais a cadeia pode não se cumprir:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>A cadeia também desce.</b> Uma anteversão pélvica de causa alta pode produzir rotação interna de fêmur e pronação compensatória no pé. O mesmo conjunto de achados, com a causa no extremo oposto.</li>
+      <li><b>Variação óssea individual.</b> Versão femoral, torção tibial e formato do acetábulo variam muito entre pessoas e podem sobrepor o efeito vindo de baixo.</li>
+      <li><b>Compensações se cancelam.</b> Alguém pode ter pé pronado e, por outro motivo, retroversão pélvica. Os efeitos se anulam parcialmente no meio da cadeia.</li>
+    </ul>
+    <p>Por isso a avaliação precisa ser feita <strong>nos dois sentidos</strong>, e a pergunta "onde isso começou" só se responde testando: corrija provisoriamente um segmento e veja se os outros mudam.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; o teste que identifica a origem</span>
+    <p>Existe um teste simples e muito informativo para saber se o desvio do joelho vem de baixo ou de cima.</p>
+    <div class="stepwrap" style="margin-top:12px">
+      <div class="step"><h4>Observe o padrão livre</h4><p>Agachamento ou apoio unipodal, sem nenhuma correção. Registre o grau de valgo e o comportamento do retropé.</p></div>
+      <div class="step"><h4>Corrija por baixo</h4><p>Peça para manter o tripé ativo e o calcanhar neutro — ou coloque uma cunha sob a borda medial. Repita o movimento.</p></div>
+      <div class="step"><h4>Corrija por cima</h4><p>Volte o pé ao normal e agora peça para empurrar os joelhos para fora ativamente, ou use um elástico acima dos joelhos. Repita.</p></div>
+      <div class="step"><h4>Compare</h4><p>Se o valgo reduz muito com a correção <strong>de baixo</strong>, a origem é o pé. Se reduz muito com a correção <strong>de cima</strong>, a origem é o quadril. Se as duas ajudam parcialmente, há contribuição das duas pontas — o que é o mais comum.</p></div>
+    </div>
+    <p style="margin-top:12px">O resultado define a prioridade do programa. Não elimina trabalhar as duas pontas, mas define onde investir o tempo principal.</p>
+  </div>
+</section>
+
+<section id="programa">
+  <span class="sec-num">13 &mdash; MONTANDO O PROGRAMA DE PÉ</span>
+  <h2>Do achado <span class="accent">à sessão</span></h2>
+  <p class="sec-sub">Como o trabalho de pé entra num programa real, sem virar mais uma sessão.</p>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; onde encaixar</span>
+    <p>Trabalho de pé é de baixa carga e alta demanda de atenção — o que o torna ideal para dois momentos:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>No aquecimento dos dias de inferior</b> — 3 a 5 minutos, antes dos exercícios principais. Além do efeito de treino, prepara o pé para o padrão que ele vai executar sob carga logo em seguida.</li>
+      <li><b>Nos dias de superior ou de descanso ativo</b> — pela mesma lógica da parte 1: não compete por recurso com os exercícios pesados de membro inferior.</li>
+    </ul>
+    <p>Trabalho de pé não precisa de sessão própria e não deve consumir o tempo dos exercícios que geram a maior parte da adaptação.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; progressão em quatro estágios</span>
+    <div class="stepwrap" style="margin-top:12px">
+      <div class="step"><h4>Consciência, sem carga</h4><p>Sentado. Arco curto, separação de dedos, elevação isolada do hálux. O objetivo é conseguir produzir o movimento — muitos não conseguem no início, e isso é normal.</p></div>
+      <div class="step"><h4>Sustentação, com peso corporal</h4><p>Em pé, bipodal. Manter o arco ativo e o tripé enquanto respira normalmente. Progrida o tempo.</p></div>
+      <div class="step"><h4>Unipodal e dinâmico</h4><p>Apoio em uma perna, elevação de calcanhar, deslocamentos. Aqui entra a demanda real, e é onde aparece a diferença entre os lados.</p></div>
+      <div class="step"><h4>Integração sob carga</h4><p>O comando do tripé aplicado no agachamento, no avanço, no terra e no leg press. É a etapa que consolida — sem ela, o ganho fica restrito ao exercício isolado.</p></div>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: expectativa de resultado</span>
+    <p>Duas calibragens honestas sobre o que esperar deste trabalho.</p>
+    <p style="margin-top:12px"><strong>1. Mudança estrutural do arco é limitada.</strong> Fortalecimento de intrínsecos e tibial posterior melhora consistentemente <em>força</em> e <em>controle</em>; a mudança na altura do arco em repouso, quando existe, é modesta. Isso não é problema — o ganho funcional é o que importa clinicamente —, mas evita prometer transformação de formato.</p>
+    <p style="margin-top:12px"><strong>2. A evidência de que corrigir o pé previne lesão a distância ainda é limitada.</strong> A cadeia ascendente é biomecanicamente coerente e clinicamente útil como raciocínio, mas ensaios mostrando que intervir no pé reduz dor de joelho, quadril ou coluna são poucos e heterogêneos.</p>
+    <p style="margin-top:12px"><strong>Formulação defensável:</strong> "vamos trabalhar o controle do seu pé porque ele melhora a qualidade do seu agachamento e a estabilidade em apoio unipodal" é verdadeiro e verificável. "Isso vai resolver sua dor lombar" afirma mais do que se sabe.</p>
+  </div>
+</section>
+
+<section id="glossario">
+  <span class="sec-num">14 &mdash; GLOSSÁRIO</span>
+  <h2>Os termos <span class="accent">da parte 2</span></h2>
+  <p class="sec-sub">Referência rápida.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Termo</th><th>Definição</th></tr></thead>
+      <tbody>
+        <tr><td>Retropé</td><td>Parte posterior do pé: tálus e calcâneo. É onde se avalia o eixo do calcâneo.</td></tr>
+        <tr><td>Mediopé</td><td>Região central: navicular, cuboide e cuneiformes. Onde o arco cede no pé plano.</td></tr>
+        <tr><td>Antepé</td><td>Metatarsos e falanges. Onde ocorrem joanete, dedo em martelo e garra.</td></tr>
+        <tr><td>Articulação subtalar</td><td>Entre tálus e calcâneo. É a principal responsável por pronação e supinação.</td></tr>
+        <tr><td>Pronação</td><td>Eversão do calcâneo + abdução do antepé + dorsiflexão. Normal e necessária no passo; problema quando excessiva ou fora de hora.</td></tr>
+        <tr><td>Supinação</td><td>Inversão do calcâneo + adução do antepé + flexão plantar. O oposto da pronação.</td></tr>
+        <tr><td>Eversão / Inversão</td><td>Movimentos no plano frontal: eversão leva a planta para fora, inversão leva a planta para dentro.</td></tr>
+        <tr><td>Retropé valgo</td><td>Calcâneo caindo para dentro. Corresponde ao pé pronado.</td></tr>
+        <tr><td>Retropé varo</td><td>Calcâneo inclinando para fora. Corresponde ao pé supinado.</td></tr>
+        <tr><td>Arco longitudinal medial</td><td>O arco da borda interna do pé, do calcâneo à cabeça do primeiro metatarso.</td></tr>
+        <tr><td>Arco transverso</td><td>Arco na base dos dedos, entre as cabeças dos metatarsos.</td></tr>
+        <tr><td>Fáscia plantar</td><td>Faixa fibrosa do calcâneo à base dos dedos. Sustenta o arco passivamente e participa do mecanismo de sarrilho.</td></tr>
+        <tr><td>Mecanismo de sarrilho</td><td>Elevação automática do arco quando os dedos se estendem, pelo enrolamento da fáscia plantar sobre as cabeças dos metatarsos.</td></tr>
+        <tr><td>Musculatura intrínseca</td><td>Músculos que se originam e se inserem dentro do próprio pé. Responsáveis pelo controle fino e pela sustentação ativa do arco.</td></tr>
+        <tr><td>Musculatura extrínseca</td><td>Músculos que vêm da perna e terminam no pé por tendões longos. Produzem força.</td></tr>
+        <tr><td>Pé intrínseco-negativo</td><td>Padrão em que os intrínsecos enfraquecem e os extrínsecos dominam, gerando dedos em garra e em martelo.</td></tr>
+        <tr><td>Efeito de corda de arco</td><td>Situação em que um tendão desviado de sua linha normal passa a agravar a deformidade a cada contração. Central no hálux valgo.</td></tr>
+        <tr><td>Pé plano flexível</td><td>Arco desaparece em carga e reaparece sem carga ou na ponta dos pés. Responde a exercício.</td></tr>
+        <tr><td>Pé plano rígido</td><td>Arco não se forma em nenhuma condição. Causa estrutural, não responde a exercício.</td></tr>
+        <tr><td>Teste joelho-parede</td><td>Avaliação simples de dorsiflexão de tornozelo: tocar o joelho na parede sem levantar o calcanhar.</td></tr>
+        <tr><td>Exercício de arco curto</td><td><em>Short foot</em>. Aproximar a cabeça do primeiro metatarso do calcâneo sem enrolar os dedos, ativando os intrínsecos.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="confirmar">
+  <span class="sec-num">15 &mdash; PONTOS A CONFIRMAR</span>
+  <h2>O que checar <span class="accent">com o professor</span></h2>
+  <p class="sec-sub">Lacunas do registro, não erros da aula.</p>
+
+  <ol class="key">
+    <li><b>Descrição do pé pronado (seção 08).</b> O trecho "a borda interna não toca o chão, e a externa serve de ponto de apoio" descreve supinação, não pronação, e reaparece quase idêntico na descrição do pé varo. Provável embaralhamento de diagramação entre os dois blocos. É o principal item a checar desta parte.</li>
+    <li><b>Pé plano como falha congênita irreversível (seção 06).</b> Confirmar se a aula distinguiu pé plano flexível de rígido. A distinção muda completamente a conduta e vale saber se ela foi feita e apenas não coube na anotação.</li>
+    <li><b>Associação pé varo → retificação lombar e retroversão (seção 09).</b> A aula já registra "não é regra absoluta". Vale confirmar se há alguma referência específica adotada para essas associações de cadeia.</li>
+  </ol>
+</section>
+
+<section id="referencias">
+  <span class="sec-num">16 &mdash; REFERÊNCIAS E HONESTIDADE CIENTÍFICA</span>
+  <h2>De onde vem <span class="accent">cada afirmação</span></h2>
+  <p class="sec-sub">O que é da aula, o que é da literatura e o que é interpretação.</p>
+
+  <h3>Conceitos e modelos utilizados</h3>
+
+  <ul class="clean">
+    <li><b>Mecanismo de sarrilho</b> (<em>windlass mechanism</em>) — descrito classicamente por <b>J. H. Hicks</b>, é conteúdo estabelecido de biomecânica do pé.</li>
+    <li><b>Tibial posterior como sustentador dinâmico do arco medial</b> — bem documentado na literatura de disfunção do tibial posterior.</li>
+    <li><b>Cadeia ascendente pé → tíbia → fêmur → pelve</b> — modelo biomecânico amplamente utilizado em avaliação de membro inferior. Coerente do ponto de vista cinemático; a força da associação com desfechos clínicos a distância é mais discutida.</li>
+    <li><b>Pé intrínseco-negativo</b> — conceito usado em podologia e reabilitação para descrever o desequilíbrio entre musculatura intrínseca e extrínseca.</li>
+    <li><b>Classificação flexível vs. rígido</b> — distinção clínica padrão para pé plano e para deformidades de dedos.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">Nota de honestidade científica</span>
+    <p><strong>Sobre as anotações:</strong> tudo nos blocos azuis reproduz o que foi registrado durante o módulo. O ponto de maior incerteza de registro nesta parte é a descrição do pé pronado, tratada abertamente na seção 08 e listada na seção 15.</p>
+    <p style="margin-top:12px"><strong>Sobre os mapas musculares:</strong> as listas de músculos encurtados e alongados de cada alteração <strong>não estavam nas anotações</strong> — elas foram construídas a partir da anatomia funcional de cada músculo aplicada à posição descrita, seguindo a regra de que a articulação que executa a mesma ação da função do músculo o encurta, e a ação oposta o alonga. São <strong>inferências anatômicas</strong>, coerentes e verificáveis, mas não achados experimentais individualizados. Cada pessoa apresenta seu próprio padrão, e a avaliação continua sendo necessária.</p>
+    <p style="margin-top:12px"><strong>Sobre tipo de pé e lesão:</strong> a literatura que tentou associar altura do arco ou tipo de pisada a risco de lesão apresenta resultados <strong>fracos e inconsistentes</strong>. Pé plano e pé cavo são, na maioria dos casos, variações anatômicas assintomáticas. O que orienta conduta é a combinação de achado, sintoma e função — nunca o achado isolado.</p>
+    <p style="margin-top:12px"><strong>Sobre palmilhas:</strong> prescrição, indicação e confecção de órteses plantares são competência de profissional habilitado. O educador físico pode suspeitar e encaminhar; não indica nem ajusta.</p>
+    <p style="margin-top:12px"><strong>Sobre escopo:</strong> fascite plantar, esporão, disfunção do tibial posterior, hálux valgo e deformidades de dedos são <strong>diagnósticos</strong>. O educador físico observa achados compatíveis, adapta o treino e encaminha. Não nomeia a condição ao aluno como diagnóstico nem propõe tratamento.</p>
+  </div>
+
+  <div class="nav-next"><a href="postural-1-fundamentos.html"><span class="lbl">Parte anterior</span><span class="ttl">&larr; 1 · Fundamentos e método</span></a><a href="postural-3-joelho.html"><span class="lbl">Próxima parte</span><span class="ttl">3 · Joelho &rarr;</span></a><a href="index.html"><span class="lbl">Voltar</span><span class="ttl">Biblioteca de estudos</span></a></div>
+</section>
+
+</main>
+
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Avaliação Postural &middot; Parte 2 de 6 &middot; Pés e tornozelo</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado em anotações do módulo de Avaliação Postural (CBMF), organizado de forma didática e complementado com leitura crítica da literatura e conduta prática. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

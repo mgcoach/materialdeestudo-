@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avaliação Postural 1 &middot; Fundamentos e método | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Avaliação Postural · Parte 1 — Fundamentos e método | MG COACH">
+    <meta property="og:description" content="Músculos tônicos e fásicos, inibição recíproca, linha de prumo, avaliação estática e dinâmica, cadeias musculares, fáscia e tensegridade — com leitura crítica e conduta prática do educador físico.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/postural-1-fundamentos.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Avaliação Postural · Parte 1 — Fundamentos e método">
+    <meta name="twitter:description" content="A base da avaliação postural: por que o corpo se desalinha e como se observa.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<style>
+  :root{
+    --bg:#0a0a0a;--bg-card:#141414;--bg-card-2:#1b1b1b;
+    --orange:#ff6b1a;--orange-soft:#ff8c4d;--orange-dim:rgba(255,107,26,.12);--orange-line:rgba(255,107,26,.35);
+    --text:#f2efe9;--text-dim:#a7a29a;--text-faint:#6f6a62;
+    --green:#37c871;--red:#e0533d;--yellow:#e8b53a;--blue:#4d9aff;
+    --line:rgba(255,255,255,.08);
+    --mono:"SF Mono",ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;
+  }
+  :root{--topbar-bg:rgba(10,10,10,.82)}
+  [data-theme="light"]{
+    --bg:#f7f5f1;--bg-card:#ffffff;--bg-card-2:#f0ece4;
+    --orange:#e85d04;--orange-soft:#c2410c;--orange-dim:rgba(232,93,4,.10);--orange-line:rgba(232,93,4,.30);
+    --text:#1a1a1a;--text-dim:#55504a;--text-faint:#8a847c;
+    --green:#1a8a4a;--red:#c23b27;--yellow:#a87a10;--blue:#2563c9;
+    --line:rgba(0,0,0,.10);
+    --topbar-bg:rgba(247,245,241,.85);
+  }
+  .theme-toggle{font-family:var(--mono);font-size:11.5px;cursor:pointer;color:var(--text-dim);background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s;display:inline-flex;align-items:center;gap:6px}
+  .theme-toggle:hover{color:var(--orange);border-color:var(--orange-line)}
+  .theme-toggle svg{width:14px;height:14px;display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  header.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:15px}
+  .star{width:22px;height:22px;flex:none}
+  .brand .mg{color:var(--text)}.brand .coach{color:var(--orange)}
+  .backlink{margin-left:auto;font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 12px;border-radius:999px;transition:.18s}
+  .backlink:hover{color:var(--orange);border-color:var(--orange-line)}
+  nav.toc{max-width:880px;margin:0 auto;padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav.toc a{font-family:var(--mono);font-size:11.5px;text-decoration:none;color:var(--text-dim);border:1px solid var(--line);padding:6px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav.toc a:hover{color:var(--orange);border-color:var(--orange-line);background:var(--orange-dim)}
+  .hero{max-width:880px;margin:0 auto;padding:54px 22px 36px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .serie-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+  .serie-bar a,.serie-bar span{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--text-dim);transition:.18s}
+  .serie-bar a:hover{color:var(--orange);border-color:var(--orange-line)}
+  .serie-bar .atual{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;font-weight:800;letter-spacing:-1.4px;margin-bottom:22px}
+  .hero h1 .em{color:var(--orange);font-style:italic;font-weight:400;font-family:Georgia,serif}
+  .hero .lede{font-size:19px;color:var(--text-dim);max-width:660px}
+  .hero .lede b{color:var(--text);font-weight:600}
+  main{max-width:880px;margin:0 auto;padding:0 22px 100px}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--orange);letter-spacing:2px;display:block;margin-bottom:10px}
+  h2{font-size:clamp(25px,4.4vw,34px);font-weight:800;letter-spacing:-.6px;margin-bottom:8px;line-height:1.15}
+  h2 .accent{color:var(--orange)}
+  .sec-sub{color:var(--text-faint);font-size:15px;margin-bottom:26px;font-style:italic}
+  h3{font-size:20px;font-weight:700;margin:30px 0 12px;color:var(--orange-soft)}
+  p{margin-bottom:16px}
+  strong{color:var(--text);font-weight:700}
+  em.term{font-style:normal;color:var(--orange-soft);font-weight:600}
+  ul.clean{list-style:none;margin:8px 0 20px}
+  ul.clean li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--text-dim)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+  ul.clean li b{color:var(--text)}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:24px 0}
+  .callout{border-left:3px solid var(--orange);background:var(--orange-dim);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .callout .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:8px}
+  .callout.warn{border-left-color:var(--red);background:rgba(224,83,61,.1)}
+  .callout.warn .tag{color:var(--red)}
+  .callout.ok{border-left-color:var(--green);background:rgba(55,200,113,.09)}
+  .callout.ok .tag{color:var(--green)}
+  .callout p:last-child{margin-bottom:0}
+  .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:var(--bg-card-2);color:var(--orange);font-family:var(--mono);font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  tbody td:first-child{color:var(--text);font-weight:600}
+  .pill{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;white-space:nowrap}
+  .pill.a{color:var(--blue);background:rgba(77,154,255,.13)}
+  .pill.b{color:var(--green);background:rgba(55,200,113,.13)}
+  .pill.c{color:var(--yellow);background:rgba(232,181,58,.13)}
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto;background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:14px}
+  figcaption{font-size:13px;color:var(--text-faint);margin-top:12px;font-style:italic}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .mini{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mini h4{font-size:13px;font-family:var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--orange)}
+  .mini p{font-size:14.5px;color:var(--text-dim);margin-bottom:0}
+  .def{border:1px dashed var(--orange-line);border-radius:12px;padding:20px 22px;margin:22px 0;background:var(--orange-dim)}
+  .def .word{font-size:18px;font-weight:800;color:var(--orange);margin-bottom:6px;letter-spacing:-.3px}
+  .def p{margin-bottom:0;color:var(--text-dim);font-size:15.5px}
+  ol.key{counter-reset:k;list-style:none;margin:18px 0}
+  ol.key li{counter-increment:k;position:relative;padding:14px 14px 14px 56px;margin-bottom:12px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;color:var(--text-dim);font-size:15px}
+  ol.key li::before{counter-increment:k;content:counter(k,decimal-leading-zero);position:absolute;left:18px;top:14px;font-family:var(--mono);color:var(--orange);font-weight:700;font-size:15px}
+  ol.key li b{color:var(--text)}
+  .stepwrap{counter-reset:st;margin:22px 0}
+  .step{counter-increment:st;position:relative;padding:18px 18px 18px 64px;margin-bottom:14px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px}
+  .step::before{content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--bg);background:var(--orange);border-radius:50%;font-size:15px}
+  .step h4{color:var(--orange-soft);font-size:16px;margin-bottom:5px}
+  .step p{margin-bottom:0;color:var(--text-dim);font-size:15px}
+  .nav-next{display:flex;justify-content:space-between;gap:14px;margin-top:38px;flex-wrap:wrap}
+  .nav-next a{flex:1;min-width:200px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;transition:.18s}
+  .nav-next a:hover{border-color:var(--orange-line);background:var(--orange-dim)}
+  .nav-next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-bottom:6px}
+  .nav-next .ttl{color:var(--orange);font-weight:700;font-size:15px}
+  footer{max-width:880px;margin:0 auto;padding:40px 22px 80px;border-top:1px solid var(--line);text-align:center}
+  footer .star{width:30px;height:30px;margin-bottom:14px}
+  footer p{color:var(--text-faint);font-size:13px;font-family:var(--mono);letter-spacing:.5px}
+  footer .tag-row{margin-top:8px;color:var(--orange);font-weight:700;letter-spacing:1px;font-size:14px;font-family:var(--mono)}
+
+  .aula{border-left:3px solid var(--blue);background:rgba(77,154,255,.08);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+  .aula .tag{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:8px}
+  .aula p:last-child{margin-bottom:0}
+  .aula ul.clean{margin-bottom:0}
+  .subtipo{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);display:block;margin-top:-4px;margin-bottom:10px}
+  .serie-bar{max-width:880px;margin:0 auto;padding:12px 22px 0;font-family:var(--mono);font-size:11.5px;color:var(--text-faint);letter-spacing:1px}
+  .serie-bar b{color:var(--orange)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <nav class="toc">
+    <a href="#como-ler">Como ler</a>
+    <a href="#tonicos-fasicos">Tônicos e fásicos</a>
+    <a href="#inibicao-reciproca">Inibição recíproca</a>
+    <a href="#como-instala">Como se instala</a>
+    <a href="#preparacao">Preparação</a>
+    <a href="#linha-prumo">Linha de prumo</a>
+    <a href="#tres-vistas">Três vistas</a>
+    <a href="#objetivos-estatica">Objetivos da estática</a>
+    <a href="#dinamica">Avaliação dinâmica</a>
+    <a href="#dinamica-superior">Dinâmica superior</a>
+    <a href="#dinamica-inferior">Sentado e decúbito</a>
+    <a href="#cadeias">Cadeias musculares</a>
+    <a href="#cadeia-anterior">Cadeia anterior</a>
+    <a href="#cadeia-posterior">Cadeia posterior</a>
+    <a href="#cadeia-lateral">Cadeia lateral</a>
+    <a href="#cadeia-cruzada-resp">Cruzada e respiratória</a>
+    <a href="#fascia">Fáscia e tensegridade</a>
+    <a href="#padroes-alterados">Padrões alterados</a>
+    <a href="#objetivos">Os 5 objetivos</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#confirmar">A confirmar</a>
+    <a href="#referencias">Referências</a>
+  </nav>
+</header>
+
+<div class="serie-bar">AVALIAÇÃO POSTURAL &middot; CBMF &nbsp;·&nbsp; <b>PARTE 1 DE 6</b></div>
+
+<div class="hero">
+  <div class="eyebrow">Avaliação Postural &middot; CBMF &middot; Parte 1 de 6</div>
+  <h1>Fundamentos e <span class="em">método</span></h1>
+  <p class="lede">Antes de olhar para qualquer desvio, é preciso entender <b>por que o corpo se desalinha</b> e <b>como se observa</b>. Esta parte cobre o comportamento dos músculos tônicos e fásicos, a inibição recíproca, o protocolo completo de avaliação estática e dinâmica, e as cadeias musculares que conectam tudo. É a base sobre a qual as outras cinco partes se apoiam.</p>
+</div>
+
+<main>
+
+<section id="como-ler">
+  <span class="sec-num">01 &mdash; COMO LER ESTA SÉRIE</span>
+  <h2>O mapa das <span class="accent">seis partes</span></h2>
+  <p class="sec-sub">E as convenções que se repetem em todas elas.</p>
+
+  <p>Avaliação postural é um assunto que só faz sentido inteiro. O pé influencia o joelho, que influencia a pelve, que influencia a coluna, que influencia a escápula. Separar em partes é uma necessidade prática de leitura, não uma divisão conceitual — e por isso cada parte remete às outras onde a cadeia continua.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Parte</th><th>Conteúdo</th></tr></thead>
+      <tbody>
+        <tr><td>1 &middot; Fundamentos e método</td><td>Tônicos e fásicos, inibição recíproca, linha de prumo, avaliação estática e dinâmica, cadeias musculares, fáscia e tensegridade</td></tr>
+        <tr><td>2 &middot; Pés e tornozelo</td><td>Padrão normal, pé plano, cavo, pronado, varo, joanete, dedo em martelo, dedos em garra</td></tr>
+        <tr><td>3 &middot; Joelho</td><td>Ligamentos, meniscos, ângulo Q, hiperestendido, flexo, geno valgo, geno varo, artrose</td></tr>
+        <tr><td>4 &middot; Coluna vertebral</td><td>Divisões e curvaturas, hiperlordose, retificações, hipercifose, alterações cervicais, escoliose e ângulo de Cobb</td></tr>
+        <tr><td>5 &middot; Escápula, ombro e cotovelo</td><td>Anatomia escapular, alinhamento normal, as sete alterações escapulares, glenoumeral, cúbito varo e valgo</td></tr>
+        <tr><td>6 &middot; Pelve e quadril</td><td>Cadeias ascendente e descendente, anteversão, retroversão, inclinação, rotação e torção lateral</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>As três camadas de cada material</h3>
+
+  <p>Todo material desta série separa visualmente três tipos de conteúdo, para que você sempre saiba de onde vem cada afirmação:</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p>Blocos azuis reproduzem o conteúdo do módulo, desenvolvido e explicado, mas sem alteração de substância.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor</span>
+    <p>Blocos laranja aprofundam: o mecanismo por trás, a definição do termo, o exemplo prático. Não discordam da aula.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: exemplo</span>
+    <p>Blocos vermelhos marcam onde há nuance, divergência ou salto de evidência. Cada um traz o <strong>tipo</strong> da ressalva, porque nem toda discordância tem o mesmo peso.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>Blocos verdes são o que fazer com a informação: o que observar, o que priorizar, o que prescrever, o que evitar e quando encaminhar. É a camada que transforma avaliação em treino.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Escopo profissional &middot; leia antes de tudo</span>
+    <p>Este ponto atravessa a série inteira e por isso fica aqui, na abertura, em vez de ser repetido em cada seção.</p>
+    <p style="margin-top:12px"><strong>O que é nosso:</strong> observar a postura, identificar padrões de movimento, selecionar e prescrever exercício, orientar hábitos, progredir carga e amplitude, reavaliar.</p>
+    <p style="margin-top:12px"><strong>O que não é nosso:</strong> diagnosticar. Hérnia discal, espondilolistese, escoliose estrutural, artrose, fascite plantar, tendinopatia — nomear e tratar essas condições é competência da medicina e da fisioterapia. O educador físico pode <em>suspeitar</em> e <em>encaminhar</em>; não pode afirmar nem tratar.</p>
+    <p style="margin-top:12px">Na prática, a fronteira é simples: <strong>dor persistente, dor noturna, dor irradiada, perda de força, formigamento, alteração de sensibilidade ou qualquer sintoma que piora progressivamente</strong> → encaminhamento imediato, e o treino se adapta enquanto isso em vez de virar tratamento.</p>
+    <p style="margin-top:12px">Isso não enfraquece o nosso trabalho. Seleção de exercício, controle de amplitude, progressão de carga e reeducação de padrão motor <strong>são</strong> intervenção legítima e potente — e são nossas.</p>
+  </div>
+</section>
+
+<section id="tonicos-fasicos">
+  <span class="sec-num">02 &mdash; MÚSCULOS TÔNICOS E FÁSICOS</span>
+  <h2>Dois comportamentos <span class="accent">diante do desuso</span></h2>
+  <p class="sec-sub">O modelo que explica por que alguns músculos "travam" e outros "somem".</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p>As fibras <strong>tônicas</strong> estão presentes em maior proporção nos músculos <strong>antigravitacionais</strong> ("estáticos"), e as <strong>fásicas</strong> em músculos que realizam movimentos.</p>
+    <p style="margin-top:12px"><strong>Tônicos:</strong> maior predominância de fibras do <strong>tipo I</strong>, de contração lenta, vascularizados e de metabolismo aeróbio. Tendem a <strong>se encurtar com facilidade</strong> e entram em <strong>hiperatividade quando estão em desuso</strong> — ficam "ligados" mesmo em repouso, como resposta compensatória para sustentar o corpo em posições inadequadas. Feitos para resistir à força da gravidade.</p>
+    <p style="margin-top:12px"><strong>Fásicos:</strong> mantêm o equilíbrio dinâmico e controlam o alinhamento das articulações durante atividades de grande movimentação, como corrida ou exercícios de força. Ação voluntária e consciente. Maior predominância de fibras do <strong>tipo II</strong>, de contração rápida, recrutados em atividades de força e velocidade. Tendem a <strong>se inibir e atrofiar quando estão em desuso</strong>.</p>
+  </div>
+
+  <p>Este é o modelo mais importante da parte 1, porque ele é o que explica a assimetria fundamental da postura: <strong>o desuso não afeta todos os músculos da mesma forma</strong>.</p>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; a assimetria que gera tudo</span>
+    <p>Imagine uma pessoa que passa dez horas por dia sentada. O que acontece com os músculos dela?</p>
+    <p style="margin-top:12px">Se todos respondessem igual ao desuso, todos ficariam igualmente fracos e o corpo continuaria equilibrado — mais fraco, mas alinhado. Não é isso que acontece.</p>
+    <p style="margin-top:12px">Os <strong>tônicos</strong> (iliopsoas, reto femoral, isquiotibiais, peitorais, trapézio superior, levantador da escápula, tríceps sural) respondem ao desuso <strong>aumentando o tônus e reduzindo o comprimento de trabalho</strong>. Eles ficam mais rígidos, não mais fracos.</p>
+    <p style="margin-top:12px">Os <strong>fásicos</strong> (glúteos, abdominais profundos, trapézio médio e inferior, romboides, serrátil anterior, tibial anterior) respondem ao desuso <strong>desligando</strong>. Ficam inibidos e atrofiam.</p>
+    <p style="margin-top:12px">O resultado é um desequilíbrio: de um lado da articulação, músculos rígidos e hiperativos; do outro, músculos apagados e fracos. <strong>É essa assimetria — e não a fraqueza generalizada — que puxa o segmento para fora do alinhamento.</strong></p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que "hiperatividade no desuso" não é contraditório</span>
+    <p>À primeira vista parece estranho: como um músculo em desuso fica <em>mais</em> ativo?</p>
+    <p style="margin-top:12px">A chave está na palavra <strong>compensatória</strong> que aparece na anotação. O corpo em uma posição desalinhada precisa ser sustentado de alguma forma. Se os fásicos que deveriam estabilizar estão inibidos, os tônicos assumem a tarefa — e assumem em regime contínuo, porque é para isso que foram feitos: resistir à gravidade por longos períodos com baixo custo metabólico.</p>
+    <p style="margin-top:12px">Ou seja, "desuso" aqui significa <strong>ausência de movimento amplo e variado</strong>, não ausência de ativação. O músculo tônico está sendo usado o tempo todo, mas sempre no mesmo comprimento curto, sem nunca percorrer a amplitude completa. É esse regime que gera a rigidez.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: modelo clínico consagrado, base fisiológica frágil — peso médio</span>
+    <p>Esta é uma ressalva importante e vale entender bem, porque o modelo é ensinado como se fosse fisiologia estabelecida e ele é, na verdade, um <strong>modelo clínico descritivo</strong>.</p>
+    <p style="margin-top:12px">A classificação tônico/fásico vem da escola tcheca de medicina de reabilitação, associada principalmente a <strong>Vladimír Janda</strong>. Ela descreve muito bem um padrão que qualquer avaliador experiente reconhece na prática: certos músculos tendem mesmo a ficar rígidos e certos outros tendem mesmo a inibir.</p>
+    <p style="margin-top:12px"><strong>O que não se sustenta bem é a explicação por tipo de fibra.</strong> A distribuição de fibras tipo I e tipo II nos músculos humanos é muito mais heterogênea e individualmente variável do que a dicotomia sugere. Não existe um conjunto de músculos "tipo I" e outro "tipo II" limpo o bastante para sustentar a classificação. Vários músculos ditos tônicos têm proporções de tipo II relevantes, e vice-versa.</p>
+    <p style="margin-top:12px"><strong>Como usar isso então?</strong> Trate a lista tônico/fásico como o que ela é: um <strong>mapa empírico de tendências</strong>, útil para saber onde tipicamente procurar rigidez e onde tipicamente procurar inibição. É um bom ponto de partida para a avaliação. O que não se deve fazer é apresentá-lo como consequência necessária da composição de fibras, nem aplicá-lo como regra fixa em vez de avaliar cada pessoa.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: nomenclatura — atenção especial</span>
+    <p>A palavra <strong>"encurtar"</strong> aparece o tempo todo nesta série, e ela tem <strong>dois significados completamente diferentes</strong> que são confundidos rotineiramente. Fixar essa distinção agora evita erro em todas as seis partes.</p>
+    <p style="margin-top:12px"><strong>Significado 1 — a ação (correto):</strong> encurtar é o que todo músculo faz quando contrai concentricamente. O bíceps encurta na rosca. Isso é fisiologia normal, acontece milhares de vezes por dia e não tem nada de patológico.</p>
+    <p style="margin-top:12px"><strong>Significado 2 — o estado permanente (quase sempre falso):</strong> a ideia de que um músculo "está encurtado", isto é, que perdeu sarcômeros e ficou fisicamente mais curto de forma estável. Isso <em>existe</em>, mas é raro e exige imobilização prolongada, cicatriz ou condição neurológica. Não é o que acontece com o iliopsoas de quem trabalha sentado.</p>
+    <p style="margin-top:12px"><strong>O que realmente acontece na maioria dos casos é aumento de rigidez</strong> — o músculo resiste mais ao alongamento por razões de tônus neural, de propriedades do tecido conjuntivo e de tolerância ao estiramento, e não porque encolheu. Isso muda a conduta: rigidez responde a movimento, amplitude e carga em comprimento longo; comprimento perdido de verdade exigiria outra abordagem.</p>
+    <p style="margin-top:12px"><strong>Convenção desta série:</strong> onde a anotação diz "encurtado", eu mantenho a palavra, porque é o vocabulário do curso e da prática. Mas leia sempre como <em>"rígido, resistente ao alongamento, operando em comprimento curto"</em> — e não como <em>"fisicamente menor"</em>.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>O modelo tônico/fásico, mesmo com a ressalva acima, gera uma orientação prática muito boa e que vale para praticamente toda a série:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Onde há rigidez (tônicos):</b> priorize <b>amplitude e carga em comprimento longo</b>. Não é alongamento passivo isolado que resolve — é exercício resistido percorrendo a amplitude completa, que aumenta simultaneamente a tolerância ao estiramento e a força na posição alongada.</li>
+      <li><b>Onde há inibição (fásicos):</b> priorize <b>ativação consciente e volume</b>. O problema aqui não é comprimento, é recrutamento. Comece com exercícios de baixa complexidade e alta clareza de sensação, e só depois integre em movimentos compostos.</li>
+      <li><b>Nunca trate só um lado.</b> Alongar o rígido sem fortalecer o inibido devolve o desequilíbrio em poucas semanas, porque a causa (o padrão de uso) não mudou.</li>
+      <li><b>A variável mais poderosa é a rotina, não a sessão.</b> Uma hora de treino não compensa dez horas sentado. Orientação de pausas, mudança de posição e movimento ao longo do dia costuma valer mais do que qualquer exercício isolado.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="inibicao-reciproca">
+  <span class="sec-num">03 &mdash; INIBIÇÃO RECÍPROCA</span>
+  <h2>Por que o antagonista <span class="accent">relaxa sozinho</span></h2>
+  <p class="sec-sub">O circuito medular que sustenta a postura sem gasto consciente.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p>O <strong>neurônio motor alfa do agonista</strong> se ativa → sinais de contração vão para o músculo <strong>e</strong> para um <strong>interneurônio da medula espinal com função inibitória</strong>, que age sobre o <strong>neurônio motor alfa do músculo antagonista</strong>, inibindo-o → permite que o agonista contraia e o antagonista relaxe.</p>
+    <p style="margin-top:12px">Esse fenômeno desempenha um papel fundamental na <strong>manutenção da postura</strong>, permitindo que os músculos ao redor da articulação trabalhem em equilíbrio para sustentar o corpo. Evita que músculos opostos se contraiam simultaneamente, o que poderia causar <strong>rigidez e desperdício de energia</strong>.</p>
+  </div>
+
+  <div class="def">
+    <div class="word">Inibição recíproca</div>
+    <p>Reflexo medular em que a ativação de um músculo agonista produz, pela mesma via, a inibição automática do seu antagonista. Não depende de decisão consciente: acontece no nível da medula espinal, antes de qualquer comando do cérebro.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o circuito, passo a passo</span>
+    <p>Vale destrinchar porque a lógica é elegante e explica muita coisa adiante.</p>
+    <div class="stepwrap" style="margin-top:12px">
+      <div class="step"><h4>O comando chega</h4><p>Você decide flexionar o cotovelo. O neurônio motor alfa do bíceps dispara.</p></div>
+      <div class="step"><h4>O sinal se divide</h4><p>O mesmo sinal segue por dois caminhos: um vai direto ao bíceps, mandando contrair. O outro vai para um <strong>interneurônio inibitório</strong> dentro da medula.</p></div>
+      <div class="step"><h4>O interneurônio age</h4><p>Esse interneurônio se conecta ao neurônio motor alfa do tríceps e o <strong>desliga</strong>.</p></div>
+      <div class="step"><h4>O resultado</h4><p>Bíceps contrai, tríceps relaxa, o cotovelo flexiona com eficiência. Você não precisou pensar em "relaxar o tríceps" — o circuito fez isso sozinho.</p></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que isso importa para postura</span>
+    <p>A anotação faz a conexão certa, mas ela merece ser explicitada, porque é aqui que a inibição recíproca deixa de ser curiosidade de neurofisiologia e vira ferramenta de trabalho.</p>
+    <p style="margin-top:12px">Se um músculo tônico está <strong>cronicamente hiperativo</strong> — o iliopsoas de quem passa o dia sentado, por exemplo —, ele está enviando sinal o tempo todo. E, pela via da inibição recíproca, esse sinal contínuo mantém o antagonista sob inibição contínua.</p>
+    <p style="margin-top:12px">No caso do iliopsoas, o antagonista é o <strong>glúteo máximo</strong>. Resultado: o glúteo não está fraco apenas por falta de treino — ele está <strong>ativamente desligado</strong> por um circuito medular que responde à hiperatividade do flexor de quadril.</p>
+    <p style="margin-top:12px">Isso explica um fenômeno que todo treinador já viu: o aluno que treina glúteo com volume alto e mesmo assim não desenvolve, não sente o músculo trabalhar, e compensa com lombar. O problema não é o volume de glúteo — é o que está acontecendo do outro lado da articulação.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>Da inibição recíproca sai uma das estratégias práticas mais úteis da avaliação postural: <strong>para acordar um músculo inibido, reduza primeiro a hiperatividade do antagonista.</strong></p>
+    <p style="margin-top:12px">Sequência que funciona bem na prática:</p>
+    <ol class="key" style="margin-top:12px">
+      <li><b>Reduzir a hiperatividade do antagonista</b> — mobilidade, amplitude ampla, trabalho em comprimento longo do músculo rígido. No exemplo, flexores de quadril.</li>
+      <li><b>Ativar o inibido em contexto simples</b> — exercício de baixa carga e alta clareza sensorial, sem competição de outros grupos. Ponte de glúteo, isometrias, com foco na percepção.</li>
+      <li><b>Integrar em padrão composto</b> — só depois que a ativação está disponível, levar para agachamento, terra, avanço.</li>
+      <li><b>Carregar</b> — e aí sim progredir carga, que é o que gera adaptação estrutural.</li>
+    </ol>
+    <p>Pular a etapa 1 e ir direto para carga é o erro mais comum. O aluno acaba treinando a compensação, não o músculo-alvo.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: extrapolação do mecanismo</span>
+    <p>A inibição recíproca é um reflexo medular bem documentado — isso não está em disputa. O que exige cuidado é o tamanho da conclusão que se tira dela.</p>
+    <p style="margin-top:12px">A cadeia "músculo rígido → inibição recíproca → antagonista fraco → desvio postural → dor" é <strong>plausível e mecanicamente coerente</strong>, mas é uma cadeia longa, e cada elo dela tem grau de evidência diferente. O reflexo em si é sólido; a ideia de que ele explica sozinho fraquezas crônicas específicas é inferência.</p>
+    <p style="margin-top:12px">Na prática isso quase não muda a conduta — a sequência recomendada acima é boa independentemente do mecanismo exato. Mas muda o que você <strong>afirma</strong> para o aluno. "Vamos soltar os flexores de quadril porque isso costuma facilitar a ativação do glúteo" é honesto. "Seu glúteo não funciona porque seu psoas o inibe" afirma mais do que se pode saber olhando de fora.</p>
+  </div>
+</section>
+
+<section id="como-instala">
+  <span class="sec-num">04 &mdash; COMO O DESEQUILÍBRIO SE INSTALA</span>
+  <h2>Juntando as duas peças <span class="accent">anteriores</span></h2>
+  <p class="sec-sub">Uma síntese curta, porque este é o motor de tudo que vem nas outras cinco partes.</p>
+
+  <p>As seções 02 e 03 apresentaram dois mecanismos separados. Juntos, eles descrevem um ciclo que se retroalimenta — e é esse ciclo que produz praticamente todas as alterações posturais que a série vai detalhar.</p>
+
+  <div class="stepwrap">
+    <div class="step"><h4>Uma posição se repete</h4><p>Sentado, no volante, no celular, no mesmo padrão de treino. A posição em si não é o problema; a <strong>repetição sem variação</strong> é.</p></div>
+    <div class="step"><h4>Os tônicos assumem</h4><p>Sustentar a posição é tarefa antigravitacional. Os tônicos ficam continuamente ativos, sempre no mesmo comprimento curto, e ganham rigidez.</p></div>
+    <div class="step"><h4>Os fásicos desligam</h4><p>Sem demanda de movimento amplo, os fásicos perdem recrutamento. A inibição recíproca, vinda dos tônicos hiperativos, acelera esse desligamento.</p></div>
+    <div class="step"><h4>O segmento se desloca</h4><p>Com força desequilibrada dos dois lados da articulação, o osso assume nova posição de repouso. Aparece o desvio visível.</p></div>
+    <div class="step"><h4>A cadeia compensa</h4><p>O segmento vizinho se ajusta para manter os olhos no horizonte e o centro de massa sobre a base. Nasce a compensação em outro ponto do corpo.</p></div>
+    <div class="step"><h4>O ciclo se fecha</h4><p>A nova posição vira a posição habitual, e o processo recomeça a partir dela. É por isso que desvios tendem a se aprofundar com o tempo em vez de se corrigirem sozinhos.</p></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; a implicação prática</span>
+    <p>Repare em qual etapa a intervenção precisa entrar. Se você age apenas na etapa 4 — tratando o desvio visível —, está tratando o sintoma. O motor continua girando nas etapas 1 a 3.</p>
+    <p style="margin-top:12px">É por isso que a anotação, mais adiante, registra que <strong>tratada a origem, o quadro da região frequentemente se resolve sozinho</strong>. Não é otimismo: é consequência direta da estrutura do ciclo.</p>
+  </div>
+</section>
+
+<section id="preparacao">
+  <span class="sec-num">05 &mdash; PREPARAÇÃO E PADRÃO DA AVALIAÇÃO</span>
+  <h2>Antes de <span class="accent">olhar</span></h2>
+  <p class="sec-sub">Condições sem as quais a avaliação não vale.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Padrão de avaliação, em pé:</strong> vista frontal, lateral (ambos os lados) e posterior.</p>
+    <p style="margin-top:12px"><strong>Vestimenta:</strong> biquíni e sunga, para visualização das <strong>pregas glúteas</strong> e <strong>cristas ilíacas</strong> (alinhamento, desnível). A parte de cima precisa ser de <strong>alça fina</strong>, para visualização das escápulas.</p>
+    <p style="margin-top:12px"><strong>Estruturas a serem vistas:</strong> pés, tornozelos, joelhos, quadril/pelve, coluna, ombros/escápula, braços e cabeça.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que ambos os lados</span>
+    <p>A instrução de avaliar a lateral dos <strong>dois</strong> lados parece redundante e não é. Muitas alterações são assimétricas — torção de pelve, escoliose, rotação de um membro. Avaliar só um lado pode mascarar completamente o achado ou, pior, fazer você interpretar uma assimetria como se fosse um padrão bilateral.</p>
+    <p style="margin-top:12px">Além disso, a comparação entre os dois lados é frequentemente <strong>mais informativa que a comparação com o "ideal"</strong>. Uma diferença entre lados no mesmo indivíduo é um achado muito mais confiável do que um desvio em relação a um padrão populacional.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; ambiente e consentimento</span>
+    <p>A exigência de roupa mínima é tecnicamente correta e clinicamente delicada. Alguns cuidados que não estavam na anotação e que valem como padrão de conduta:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Explique antes de marcar.</b> O aluno precisa saber o que será avaliado, por quê e com que roupa, com antecedência suficiente para consentir ou recusar.</li>
+      <li><b>Ofereça alternativa.</b> Roupa de treino justa permite a maior parte da avaliação. Perde-se algum detalhe de contorno, mas é preferível a um aluno constrangido — que, além do desconforto, altera a própria postura por tensão.</li>
+      <li><b>Ambiente reservado e iluminação uniforme.</b> Luz lateral cria sombras que inventam assimetrias que não existem.</li>
+      <li><b>Registro fotográfico só com consentimento explícito</b>, com finalidade declarada, armazenamento seguro e possibilidade de exclusão a pedido.</li>
+      <li><b>Considere a presença de acompanhante</b> quando o contexto pedir. Protege o aluno e protege você.</li>
+    </ul>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: condições que alteram o achado</span>
+    <p>Três fatores mudam o resultado de uma avaliação postural e raramente são controlados:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Momento do dia e fadiga.</b> Avaliar alguém no fim do expediente ou logo após treinar produz um retrato diferente do mesmo corpo descansado. Padronize o horário nas reavaliações.</li>
+      <li><b>Consciência de estar sendo observado.</b> Ninguém fica na postura habitual sabendo que está sendo avaliado. O achado tende a ser a <em>melhor</em> versão da postura da pessoa, não a média dela.</li>
+      <li><b>Variação entre avaliadores e entre dias.</b> A avaliação postural visual tem concordância apenas moderada, tanto entre profissionais diferentes quanto do mesmo profissional em dias diferentes. Alterações pequenas entre reavaliações podem ser ruído de medida, não mudança real.</li>
+    </ul>
+    <p>Consequência prática: confie mais em <strong>achados grandes e consistentes</strong> do que em milímetros, e mais em <strong>como a pessoa se move</strong> do que em como ela fica parada.</p>
+  </div>
+</section>
+
+<section id="linha-prumo">
+  <span class="sec-num">06 &mdash; A LINHA DE PRUMO</span>
+  <h2>A referência <span class="accent">de centralidade</span></h2>
+  <p class="sec-sub">Os pontos de passagem em cada uma das três vistas.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p>A <strong>linha de prumo</strong> é a referência à centralidade do corpo. Divide o corpo no centro e, em cada posição, ela irá passar por um ponto específico.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Vista</th><th>Por onde a linha de prumo deve passar</th></tr></thead>
+      <tbody>
+        <tr><td>Frontal</td><td>Ponta do nariz → meio do queixo → entre as clavículas → entre o esterno → umbigo → centralidade da sínfise púbica (linha vertical)</td></tr>
+        <tr><td>Lateral</td><td>Orelha → cabeça do úmero → cabeça do fêmur → anteriormente ao joelho → levemente à frente do maléolo externo</td></tr>
+        <tr><td>Posterior</td><td>Centro do crânio → por toda a coluna vertebral → até o final da divisão glútea</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que esses pontos e não outros</span>
+    <p>A linha de prumo não é uma convenção arbitrária. Ela representa, aproximadamente, a <strong>projeção vertical do centro de massa</strong> sobre a base de apoio.</p>
+    <p style="margin-top:12px">Na vista lateral, os pontos escolhidos são os <strong>centros articulares</strong> dos grandes segmentos. Quando a linha passa por eles, o peso de cada segmento cai praticamente sobre o eixo da articulação abaixo — o braço de momento é mínimo, e portanto o torque que a musculatura precisa produzir para manter a posição também é mínimo.</p>
+    <p style="margin-top:12px">É por isso que a postura alinhada é <strong>economicamente eficiente</strong>: ela transfere a carga majoritariamente para o esqueleto e os ligamentos, poupando trabalho muscular contínuo. Cada centímetro que um segmento se afasta da linha aumenta o braço de momento naquela articulação e exige força muscular permanente para compensar.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; as duas exceções da vista lateral</span>
+    <p>Dois pontos da vista lateral não são exatamente o centro articular, e isso é intencional.</p>
+    <p style="margin-top:12px"><strong>"Anteriormente ao joelho":</strong> a linha passa ligeiramente à frente do eixo do joelho. Isso cria um pequeno momento extensor passivo que ajuda a "travar" o joelho em pé, sem exigir contração contínua do quadríceps. É um mecanismo de economia.</p>
+    <p style="margin-top:12px"><strong>"Levemente à frente do maléolo externo":</strong> mesma lógica invertida. Com a linha à frente do tornozelo, o corpo tende a cair para frente, e o tríceps sural trabalha em baixa intensidade contínua para conter. Isso mantém o sistema ativo e pronto para reagir, em vez de completamente passivo.</p>
+    <p style="margin-top:12px">Ou seja: o alinhamento "ideal" não é aquele em que nenhum músculo trabalha. É aquele em que o trabalho é mínimo e distribuído.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; a linha de prumo aplicada à coluna</span>
+    <p><strong>No plano frontal</strong> observaremos os pontos laterais em relação à linha mediana corporal. Em alinhamento correto, o fio de prumo deve passar: em <strong>visão posterior</strong>, sobre todos os processos espinhosos; em <strong>visão anterior</strong>, prolongando-se do nariz ao esterno até a sínfise púbica, de forma vertical.</p>
+    <p style="margin-top:12px"><strong>No plano sagital</strong>, observaremos na visão lateral as curvas no sentido anterior com acentuação das curvaturas secundárias e redução das primárias, e no sentido posterior o inverso. O fio de prumo deve passar:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Coluna cervical</b> → através da maioria dos corpos vertebrais</li>
+      <li><b>Coluna torácica</b> → anterior aos corpos vertebrais</li>
+      <li><b>Coluna lombar</b> → através dos corpos vertebrais</li>
+    </ul>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; a régua que você vai usar o tempo todo</span>
+    <p>Guarde esta relação, porque ela é a base de leitura de <strong>toda a parte 4</strong> (coluna) e reaparece em várias outras:</p>
+    <div class="table-wrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>Onde o prumo passa</th><th>O que significa</th></tr></thead>
+        <tbody>
+          <tr><td><b>Posterior</b> aos corpos vertebrais lombares</td><td>Curva lombar <b>acentuada</b> → hiperlordose</td></tr>
+          <tr><td><b>Anterior</b> aos corpos vertebrais lombares</td><td>Curva lombar <b>apagada</b> → retificação</td></tr>
+          <tr><td><b>Muito anterior</b> aos corpos torácicos</td><td>Curva torácica <b>acentuada</b> → hipercifose</td></tr>
+          <tr><td><b>Através</b> dos corpos torácicos</td><td>Curva torácica <b>reduzida</b> → retificação torácica</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>A lógica é sempre a mesma: <strong>a linha se afasta da curva na direção oposta ao aumento dela</strong>. Se a lombar avança (lordose maior), o prumo fica para trás. Se a torácica recua (cifose maior), o prumo fica à frente.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: limite do instrumento</span>
+    <p>A linha de prumo é uma ferramenta de <strong>triagem visual</strong>, não de medida. Ela não quantifica nada: dizer "passou atrás dos corpos vertebrais" descreve uma direção, não um valor.</p>
+    <p style="margin-top:12px">Quantificação real de curvaturas exige radiografia e ângulo de Cobb — que é exame médico, fora do nosso escopo (ver parte 4). O que a linha de prumo entrega, e entrega bem, é: <strong>onde procurar</strong>, <strong>o que comparar entre lados</strong> e <strong>o que acompanhar ao longo do tempo</strong> no mesmo indivíduo, com o mesmo método.</p>
+  </div>
+</section>
+
+<section id="tres-vistas">
+  <span class="sec-num">07 &mdash; O QUE OBSERVAR EM CADA VISTA</span>
+  <h2>A varredura <span class="accent">completa</span></h2>
+  <p class="sec-sub">Listas de checagem das três vistas, e como usá-las sem se perder.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; de frente</span>
+    <p>Podemos notar: alteração na <strong>altura de olhos e orelhas</strong>, <strong>horizontalização das clavículas</strong>, <strong>rebaixamento dos ombros</strong>, diferença entre os <strong>mamilos</strong> e altura dos <strong>seios</strong>, alteração da <strong>centralidade do umbigo</strong>, <strong>nível entre as EIAS</strong>, <strong>rotação das patelas</strong>, <strong>alinhamento dos joelhos</strong>, <strong>projeção e posição dos pés</strong>.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; de lado</span>
+    <p>Podemos notar: alteração na <strong>posição da cabeça</strong>, <strong>ombros</strong>, <strong>acentuação das curvas fisiológicas da coluna</strong>, <strong>rotação da pelve</strong>, <strong>nível entre as EIAS e EIPS</strong>, <strong>projeção do tronco</strong>, <strong>posição dos joelhos</strong>.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; de costas</span>
+    <p>Podemos notar: alterações na <strong>rotação e inclinação da cabeça</strong>, <strong>posição dos ombros e braços</strong>, <strong>alteração da coluna</strong>, <strong>inclinação e torção da pelve</strong>, <strong>lateralidade do tronco</strong>, <strong>rotação dos joelhos e tíbia</strong>, <strong>posição dos pés</strong>.</p>
+  </div>
+
+  <div class="def">
+    <div class="word">EIAS e EIPS</div>
+    <p><b>EIAS</b> = espinha ilíaca ântero-superior, a proeminência óssea que você palpa na frente da pelve, logo abaixo da cintura. <b>EIPS</b> = espinha ilíaca póstero-superior, a correspondente atrás, frequentemente visível como uma pequena depressão na pele. São os dois pontos de referência mais usados para avaliar posição pélvica — a relação entre eles indica anteversão, retroversão, inclinação e torção (ver parte 6).</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; como não se perder na lista</span>
+    <p>Vinte e poucos itens de checagem paralisam qualquer avaliador iniciante. Duas estratégias resolvem.</p>
+    <p style="margin-top:12px"><strong>1. Ordem fixa, sempre a mesma.</strong> Escolha um sentido — do chão para a cabeça ou o inverso — e nunca varie. Isso transforma a lista em rotina automática e reduz drasticamente a chance de pular um segmento. A ordem de baixo para cima tem uma vantagem conceitual: como o pé é a base de sustentação, começar por ele já sugere causas ascendentes.</p>
+    <p style="margin-top:12px"><strong>2. Duas passadas, não uma.</strong> A primeira passada é <em>panorâmica</em>: olhe a pessoa inteira por alguns segundos e registre apenas o que "salta aos olhos". A segunda é <em>segmentar</em>, percorrendo a lista. Achados que aparecem nas duas passadas são os relevantes; achados que só aparecem na busca detalhada costumam ser pequenos demais para orientar conduta.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o que cada vista entrega de melhor</span>
+    <p>As três vistas não são redundantes. Cada uma enxerga bem um plano e mal os outros:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Frontal e posterior</b> → melhores para o <b>plano frontal</b>: desníveis, inclinações laterais, assimetrias entre lados, valgo e varo.</li>
+      <li><b>Lateral</b> → melhor para o <b>plano sagital</b>: curvaturas da coluna, anteversão e retroversão pélvica, posição da cabeça, joelho flexo e hiperestendido.</li>
+      <li><b>Frontal e posterior combinadas</b> → única forma de sugerir o <b>plano transversal</b>: rotações. Uma rotação só se revela por sinais indiretos, como uma patela apontando para dentro ou parte do púbis visível de um lado e não do outro.</li>
+    </ul>
+    <p>Por isso a avaliação exige as três. Pular a lateral, que é o erro mais comum, cega você inteiramente para o plano sagital — onde estão hiperlordose, hipercifose e posição de pelve.</p>
+  </div>
+</section>
+
+<section id="objetivos-estatica">
+  <span class="sec-num">08 &mdash; OBJETIVOS DA AVALIAÇÃO ESTÁTICA</span>
+  <h2>O que se está <span class="accent">procurando</span></h2>
+  <p class="sec-sub">E a frase mais importante de todo o módulo.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p>Analisar também a <strong>distribuição do peso entre os pés</strong>, avaliando a posição dos mesmos, indicando <strong>se há sobrecarga em um dos lados</strong> do corpo, e qual a <strong>dominância de compensação</strong>. Avaliar <strong>prováveis presenças de encurtamentos musculares</strong> no padrão postural, em forma estática, vindo a compreender as possibilidades de alterações no alinhamento postural, principalmente de coluna.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; "prováveis" é a palavra-chave</span>
+    <p>Repare no vocabulário da anotação: <strong>"avaliar prováveis presenças"</strong>, <strong>"compreender as possibilidades"</strong>. Isso não é hesitação — é precisão.</p>
+    <p style="margin-top:12px">A avaliação estática <strong>não demonstra</strong> que um músculo está rígido. Ela mostra a posição em que os ossos estão. Dessa posição, você <strong>infere</strong> quais músculos provavelmente estão puxando mais e quais provavelmente estão cedendo. É hipótese, e precisa ser testada — pelo movimento, pela resposta ao exercício, pela reavaliação.</p>
+    <p style="margin-top:12px">Manter esse vocabulário na comunicação com o aluno é uma questão de honestidade e também de segurança. "Sua pelve está anteriorizada, o que sugere que os flexores de quadril estejam rígidos — vamos testar" é uma frase verdadeira. "Seu psoas está encurtado" afirma algo que você não mediu.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; a frase central do módulo</span>
+    <p><strong>Não existe padrão postural correto, mas sim um padrão postural adequado a cada indivíduo.</strong></p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Por que essa é a melhor linha do módulo</span>
+    <p>Vale parar nela, porque ela reposiciona tudo que veio antes e tudo que vem depois — e porque é a afirmação do módulo que mais se alinha com a evidência atual.</p>
+    <p style="margin-top:12px">A pesquisa das últimas décadas tem mostrado, de forma bastante consistente, que a associação entre desvios posturais e dor é <strong>muito mais fraca do que o senso comum da área assume</strong>. Existem pessoas com hiperlordose acentuada e nenhuma dor lombar, e pessoas com coluna "exemplar" e dor crônica. A variação anatômica normal entre indivíduos é enorme — versão femoral, formato do acetábulo, comprimento relativo dos segmentos, inclinação sacral. Um mesmo ângulo pode ser confortável para uma pessoa e problemático para outra.</p>
+    <p style="margin-top:12px">A frase da aula captura exatamente isso. O alvo não é encaixar todo mundo em um gabarito, é encontrar o arranjo que funciona para <em>aquele</em> corpo, com <em>aquela</em> anatomia, naquele contexto de vida e de treino.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: o risco de usar mal a avaliação postural — peso alto</span>
+    <p>Esta é a ressalva mais importante da parte 1, e ela protege o aluno e o profissional.</p>
+    <p style="margin-top:12px">Avaliação postural é uma ferramenta valiosa quando usada para <strong>orientar seleção de exercício</strong>. Ela vira um problema quando usada para <strong>convencer alguém de que o corpo dele está quebrado</strong>.</p>
+    <p style="margin-top:12px">Existe um efeito bem documentado na literatura de dor: informação que enfatiza fragilidade, desalinhamento e "desgaste" aumenta medo do movimento, reduz atividade física e piora desfechos — inclusive dor. Uma avaliação postural apresentada de forma alarmista pode literalmente deixar a pessoa pior do que estava.</p>
+    <p style="margin-top:12px"><strong>Duas formas de dizer a mesma coisa:</strong></p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Prejudicial:</b> "Sua postura está muito ruim, sua coluna está desalinhada, se continuar assim vai ter problema sério."</li>
+      <li><b>Correto:</b> "Notei que você fica bastante tempo nesta posição e alguns grupos parecem menos ativos que outros. Vamos trabalhar isso — é comum, responde bem ao treino e vamos acompanhar."</li>
+    </ul>
+    <p>O achado é o mesmo. O efeito sobre a pessoa é oposto. E a segunda versão é, além de mais gentil, mais precisa.</p>
+  </div>
+</section>
+
+<section id="dinamica">
+  <span class="sec-num">09 &mdash; POR QUE A AVALIAÇÃO DINÂMICA É INDISPENSÁVEL</span>
+  <h2>A postura parada <span class="accent">conta metade</span></h2>
+  <p class="sec-sub">O que só aparece quando o corpo se move.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p>Comportamento de <strong>movimentos funcionais do dia a dia</strong>: levantar uma caixa, agachar para pegar algo do chão, ou simplesmente correr.</p>
+    <p style="margin-top:12px">O objetivo é <strong>verificar se há compensação das estruturas esqueléticas em relação ao movimento</strong> e <strong>identificar possíveis desalinhamentos ou desequilíbrios musculares</strong> que podem comprometer a saúde articular durante atividades diárias ou a performance.</p>
+    <p style="margin-top:12px"><strong>Padrão de avaliação dinâmica:</strong> em pé, sentado e em decúbito (deitado).</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o que a estática esconde</span>
+    <p>Existem duas categorias de achado que a avaliação estática é estruturalmente incapaz de detectar, e as duas são clinicamente relevantes.</p>
+    <p style="margin-top:12px"><strong>1. Compensações que só aparecem sob demanda.</strong> Uma pessoa pode ficar em pé com pelve perfeitamente nivelada e, ao agachar, apresentar valgo dinâmico acentuado. Parada, o sistema não está sendo desafiado; a fraqueza de abdutores e rotadores externos não se manifesta porque não há força suficiente para revelá-la.</p>
+    <p style="margin-top:12px"><strong>2. Restrições de amplitude.</strong> Rigidez de isquiotibiais não se vê em pé. Ela aparece no momento em que o quadril precisa flexionar — e aí a pelve roda em retroversão e a lombar arredonda para compensar.</p>
+    <p style="margin-top:12px">A relação entre as duas avaliações é hierárquica: <strong>a estática levanta hipóteses, a dinâmica as testa</strong>. Uma sem a outra é meio trabalho.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>Para quem treina pessoas, a avaliação dinâmica tem uma vantagem prática enorme: <strong>ela usa os próprios exercícios do programa</strong>. Você não precisa de bateria de testes separada.</p>
+    <p style="margin-top:12px">Agachamento, avanço, remada, desenvolvimento, levantamento terra e marcha já são testes de avaliação dinâmica se você olhar com intenção. As primeiras séries de aquecimento de qualquer sessão são uma reavaliação contínua e gratuita.</p>
+    <p style="margin-top:12px">O que muda é a atenção: em vez de contar repetições, você observa <strong>onde o padrão quebra</strong> — em que amplitude, com que carga, em que repetição da série, e qual segmento cede primeiro.</p>
+  </div>
+</section>
+
+<section id="dinamica-superior">
+  <span class="sec-num">10 &mdash; DINÂMICA DE MEMBROS SUPERIORES</span>
+  <h2>O braço acima da cabeça <span class="accent">revela a coluna</span></h2>
+  <p class="sec-sub">Um dos testes mais informativos do módulo, e um número prático para guardar.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p>A avaliação dinâmica superior é feita nos <strong>3 planos de movimento</strong>, para identificar a mecânica articular durante movimentos dinâmicos complexos.</p>
+    <p style="margin-top:12px"><strong>Em pé, em vista lateral:</strong> determinar acentuações em joelhos, coluna, ombros, braços e cabeça. Mas quando notamos o avaliado com o <strong>braço no prolongamento do corpo, acima da cabeça</strong>, poderemos notar acentuações diretamente na <strong>coluna e pelve</strong>, assim como avaliar o padrão de movimento da escápula em <strong>rotação lateral</strong> e demais compensações que possam ser geradas. <strong>Braço levantado em 180° de flexão de ombro, acima da cabeça. Deve ser feito em ambos os lados</strong> (algo pode afetar apenas um lado).</p>
+    <p style="margin-top:12px"><strong>Em pé, vista posterior:</strong> pés, joelhos (largura do quadril), altura dos ombros, movimento rotacional da coluna e pelve, cabeça. Buscamos avaliar o padrão das escápulas realizando o movimento de <strong>retração</strong>, analisando se há compensação por hiperatividade ou inibição gerada por encurtamentos em músculos opostos. O indivíduo deverá estufar o peito e apertar o miolo das costas.</p>
+    <p style="margin-top:12px">O padrão de <strong>rotação lateral</strong> é analisado quando os braços estão no prolongamento do corpo, acima da cabeça, durante a flexão total dos ombros. A posição deve ser notada juntamente com as anteriores.</p>
+    <p style="margin-top:12px"><strong>A borda inferior da escápula abre em um ângulo de 50° a 60° quando ocorre 180° de flexão de ombro.</strong></p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que levantar o braço mostra a lombar</span>
+    <p>Este é o teste mais elegante do módulo e a explicação vale a pena.</p>
+    <p style="margin-top:12px">Para levar o braço a 180° de flexão, você precisa de amplitude na glenoumeral <em>e</em> de rotação superior da escápula. Se qualquer uma das duas estiver limitada, o corpo ainda assim vai levar a mão até onde foi pedido — porque o cérebro resolve tarefas, não articulações. Ele simplesmente <strong>pega a amplitude que falta em outro lugar</strong>.</p>
+    <p style="margin-top:12px">O lugar mais fácil de roubar amplitude é a <strong>coluna lombar</strong>, por hiperextensão. A pessoa levanta o braço e as costelas se abrem, a lombar arqueia, a pelve vai para anteversão. Ela conseguiu chegar aos 180° visuais — mas metade veio da coluna.</p>
+    <p style="margin-top:12px">Existe ainda uma via específica muito comum: o <strong>grande dorsal</strong>. Ele se insere no úmero e tem origem, por meio da fáscia toracolombar, na pelve e nos processos espinhosos lombares. Se ele estiver rígido, levar o braço acima da cabeça o traciona — e ele responde puxando a pelve para <strong>anteversão</strong>. É exatamente o fenômeno que a anotação registra na seção de hiperlordose, na parte 4.</p>
+    <p style="margin-top:12px">Ou seja: um teste de ombro está, na verdade, avaliando a cadeia inteira do braço à pelve.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; como aplicar o teste</span>
+    <div class="stepwrap" style="margin-top:12px">
+      <div class="step"><h4>Posicione de lado</h4><p>Vista lateral, aluno em pé, postura habitual, braços ao lado do corpo.</p></div>
+      <div class="step"><h4>Estabeleça a referência</h4><p>Observe a curvatura lombar e a posição das costelas <strong>antes</strong> do movimento. Sem essa referência você não sabe o que mudou.</p></div>
+      <div class="step"><h4>Peça a elevação, um braço por vez</h4><p>Lentamente, até onde for confortável. Um lado de cada vez, porque a limitação pode ser unilateral.</p></div>
+      <div class="step"><h4>Observe onde o padrão quebra</h4><p>As costelas abriram? A lombar aumentou a curva? A pelve rodou? Em que ponto da amplitude isso começou?</p></div>
+      <div class="step"><h4>Repita com a lombar controlada</h4><p>Peça para manter as costelas fechadas e o abdômen ativo, e repita. A amplitude que sobra é a amplitude <strong>real</strong> do ombro. A diferença entre as duas é o quanto ele estava roubando da coluna.</p></div>
+    </div>
+    <p style="margin-top:12px"><strong>O que fazer com o achado:</strong> se a amplitude cai muito ao controlar a lombar, o alvo é mobilidade de ombro e torácica, não força — e movimentos overhead pesados (desenvolvimento, arranco, pull-over com carga alta) devem esperar. Prescrever carga acima da cabeça para quem só chega lá pela lombar é carregar a compensação.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o número dos 50°–60°</span>
+    <p>A anotação registra que a borda inferior da escápula abre entre <strong>50° e 60°</strong> quando ocorrem 180° de flexão de ombro. Esse número é a expressão do <strong>ritmo escapuloumeral</strong>.</p>
+    <p style="margin-top:12px">A ideia: os 180° de elevação do braço não vêm todos da glenoumeral. Aproximadamente dois terços vêm da articulação do ombro propriamente dita e um terço da <strong>rotação superior da escápula</strong> sobre o gradil costal. Daí os cerca de 60° escapulares.</p>
+    <p style="margin-top:12px">Consequência prática direta: <strong>se a escápula não roda, o braço não sobe.</strong> Um aluno com escápula travada — por rigidez de peitoral menor, romboides ou levantador da escápula — não vai conseguir flexão completa de ombro por mais que se alongue a glenoumeral. O gargalo está na escapulotorácica. Isso é desenvolvido na parte 5.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: número a confirmar</span>
+    <p>Os valores de ritmo escapuloumeral variam bastante entre fontes e entre indivíduos, e também <strong>ao longo da amplitude</strong> — nos primeiros graus de elevação a escápula quase não participa, e sua contribuição cresce progressivamente. A proporção clássica de 2:1 é uma média, não uma constante.</p>
+    <p style="margin-top:12px">Use os 50°–60° como <strong>ordem de grandeza</strong> e como referência para comparar um lado com o outro no mesmo aluno — que é o uso confiável. Não como valor de corte para classificar alguém como normal ou alterado.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; observações finais do bloco</span>
+    <p>Com os movimentos de braços e ombros em pé podemos notar alteração no <strong>padrão de movimento</strong> e no <strong>padrão de contração muscular</strong> dos dorsais, peitorais, ombros e braços, assim como <strong>assimetria no volume</strong>, compensações geradas por tensão das musculaturas quando contraídas, alteração da centralidade e projeção da pelve, alteração do nível entre as EIAS e EIPS, extensão ou flexão de joelhos, rotação da pelve e joelhos, e em alguns casos pés também.</p>
+    <p style="margin-top:12px">Com os movimentos das escápulas em pé, iremos visualizar o padrão de rotação lateral e medial, abdução, adução, levantamento e abaixamento das escápulas, padrão de ativação muscular dos interescapulares, deslizamento da escápula no gradil costal, nível e altura padrão das escápulas em relação à coluna.</p>
+    <p style="margin-top:12px">Alguns movimentos podem gerar respostas que envolvam <strong>torções do tronco ou pelve</strong>, devido ao padrão de compensações e dominâncias unilaterais. Podem dar respostas sobre <strong>desconfortos lombares</strong>.</p>
+  </div>
+</section>
+
+<section id="dinamica-inferior">
+  <span class="sec-num">11 &mdash; DINÂMICA SENTADO E EM DECÚBITO</span>
+  <h2>Tirando a gravidade <span class="accent">da equação</span></h2>
+  <p class="sec-sub">Duas posições que revelam o que a posição em pé mascara.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; sentado, em vista lateral</span>
+    <p><strong>Pernas unidas.</strong> A homogeneidade da flexão do tronco e quadril, ditada pelo <strong>ritmo lombopélvico</strong>, analisando a tensão que há em toda a cadeia muscular posterior, principalmente em <strong>sóleos, isquiotibiais e músculos lombares</strong> → mãos tocam os pés.</p>
+    <p style="margin-top:12px">Posições podem gerar "benefícios" de flexibilidade e posição segmentada, como por exemplo o <strong>afastamento das pernas</strong> e aumento da flexão de tronco sentado.</p>
+    <p style="margin-top:12px">Vale certificar sempre como a posição em que <strong>pés e joelhos</strong> ficam em relação a posições sentadas, pois demonstram tensão em determinadas conjunções de movimento articular e muscular.</p>
+  </div>
+
+  <div class="def">
+    <div class="word">Ritmo lombopélvico</div>
+    <p>A coordenação entre flexão da coluna lombar e rotação da pelve durante a flexão do tronco. Num padrão saudável, os dois acontecem de forma proporcional e sequenciada. Quando um dos componentes está restrito, o outro assume a tarefa inteira — e é aí que aparece sobrecarga.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o que o teste sentado isola</span>
+    <p>O detalhe de estar <strong>sentado</strong>, e não em pé, é o que dá valor ao teste.</p>
+    <p style="margin-top:12px">Na flexão de tronco em pé, o movimento é uma soma de três coisas: flexão de coluna, rotação da pelve sobre os fêmures e alguma flexão de joelho. Difícil separar o que está limitando o quê.</p>
+    <p style="margin-top:12px">Sentado, o quadril já parte de aproximadamente 90° de flexão e o tronco está apoiado. A contribuição do quadril fica muito reduzida, e o que você observa é predominantemente a <strong>capacidade de flexão da coluna e a tolerância dos isquiotibiais nesse comprimento</strong>.</p>
+    <p style="margin-top:12px">A observação sobre o <strong>afastamento das pernas</strong> é a mesma lógica invertida: afastar reduz a tensão sobre adutores e parte dos isquiotibiais, e o aluno subitamente "ganha flexibilidade". Não ganhou — apenas retirou a restrição. Comparar as duas versões diz exatamente onde estava o limite.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; em decúbito, vista lateral</span>
+    <p>A posição deitada, em certo momento, <strong>elimina a ação da sua cadeia posterior</strong> e revela algumas nuances na postura, facilitando a visualização. Na falta de presença de pressão nos joelhos durante a flexão dos mesmos, é possível notar <strong>movimentos compensatórios sobre a lombar</strong>, mostrando assim um <strong>possível causador de acentuação lordótica</strong>.</p>
+    <p style="margin-top:12px">Em decúbito iremos verificar o <strong>apagamento ou acentuação da curva lombar</strong>, projeção de pelve, tensão sob os paravertebrais ao longo da coluna até a cabeça, encurtamento muscular de ísquios, quadríceps, panturrilhas e demais fraquezas musculares.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que deitado revela o causador</span>
+    <p>Este é um raciocínio muito bom e vale explicitar o mecanismo.</p>
+    <p style="margin-top:12px">Em pé, a lombar está sob carga axial e sob a ação de toda a cadeia posterior tentando manter você ereto. Muita coisa acontecendo ao mesmo tempo.</p>
+    <p style="margin-top:12px">Deitado em decúbito dorsal, a carga axial some e a cadeia posterior relaxa. Se, mesmo assim, existe um <strong>espaço grande entre a lombar e a maca</strong>, aquilo não é postura ativa — é <strong>restrição</strong>. E como o quadril está estendido nessa posição, o suspeito principal é o grupo que resiste à extensão de quadril: os <strong>flexores</strong>, iliopsoas e reto femoral.</p>
+    <p style="margin-top:12px">O refinamento vem em seguida: peça para o aluno <strong>flexionar um joelho e trazer em direção ao peito</strong>. Se a lombar aproxima da maca, a restrição vem do quadril e é dinâmica. Se a lombar continua arqueada mesmo assim, ou se a coxa oposta se eleva da maca, a restrição é maior e mais estrutural. Se o joelho não consegue estender enquanto a coxa está apoiada, o reto femoral entra como suspeito específico.</p>
+    <p style="margin-top:12px">Ou seja: a posição deitada transforma uma observação estática em um <strong>teste com resposta</strong>.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; sentados</span>
+    <p>Podemos notar alterações na posição da cabeça, acentuação ou apagamento das curvas fisiológicas da coluna, alteração da pelve, projeção ou recuo do tronco, posição dos joelhos e pés, <strong>encurtamento de adutores, isquiotibiais, quadríceps, panturrilhas, rotadores externos do quadril, paravertebrais lombares</strong> e demais fraquezas musculares.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; síntese do bloco</span>
+    <p>Algumas posições podem mostrar algo a mais ou não, pois <strong>cada postura, por ser única, tem uma particularidade diferente de pessoa para pessoa</strong>, mesmo que exista um padrão a ser seguido.</p>
+    <p style="margin-top:12px">Cada uma dessas posições oferece informações necessárias sobre as articulações do <strong>tornozelo, joelho e pelve</strong>, e, claro, na influência dos inferiores na <strong>estabilidade da coluna</strong> e, consequentemente, da <strong>cintura escapular</strong>.</p>
+    <p style="margin-top:12px"><strong>O pé pode ser o causador de vários problemas posturais e acabar sendo o culpado por dores nos ombros.</strong></p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; a lição da última frase</span>
+    <p>"O pé pode ser o culpado por dores nos ombros" resume o princípio operacional da avaliação postural inteira: <strong>o local do sintoma raramente é o local da causa.</strong></p>
+    <p style="margin-top:12px">Isso tem consequência direta na prescrição. Diante de uma queixa localizada, a pergunta não é "que exercício trata esta região", e sim "<strong>o que, na cadeia, está obrigando esta região a compensar</strong>".</p>
+    <p style="margin-top:12px">É o mesmo raciocínio que aparece na parte 4, na observação de que raramente se prescreve alongamento para a região sintomática — porque, tratada a origem, o quadro local costuma se resolver sozinho.</p>
+  </div>
+</section>
+
+<section id="cadeias">
+  <span class="sec-num">12 &mdash; CADEIAS MUSCULARES: O CONCEITO</span>
+  <h2>O corpo como <span class="accent">unidade única</span></h2>
+  <p class="sec-sub">O modelo que dá sentido a "o pé causa dor no ombro".</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p>Organização do corpo como uma <strong>unidade única</strong>, onde os músculos são organizados em <strong>cadeias funcionais</strong>, onde seguem realizando movimentos sequenciais. São <strong>circuitos anatômicos</strong> que conectam diferentes partes do corpo, da cabeça aos pés. Formadas por <strong>músculos, fáscias, ossos e articulações</strong> que trabalham em conjunto para realizar movimentos e manter a postura.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o que o modelo acrescenta</span>
+    <p>A anatomia clássica ensina músculo por músculo: origem, inserção, ação. Esse recorte é essencial, mas incompleto para entender postura, porque nenhum músculo age isolado no corpo em funcionamento.</p>
+    <p style="margin-top:12px">O modelo de cadeias propõe olhar para <strong>sequências</strong>: grupos que compartilham continuidade anatômica e função, e que por isso transmitem tensão de um segmento a outro. Isso explica dois fenômenos que a anatomia isolada não explica bem:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Por que a compensação viaja.</b> Uma restrição no tornozelo não fica no tornozelo: ela se propaga pela cadeia até onde encontrar mobilidade disponível para absorvê-la.</li>
+      <li><b>Por que tratar localmente falha.</b> Se você libera o ponto sintomático mas a cadeia continua tracionando, a tensão volta em dias.</li>
+    </ul>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: modelo útil, evidência parcial — peso médio</span>
+    <p>Vale calibrar o quanto se pode afirmar com base neste modelo, porque ele é frequentemente apresentado com mais certeza do que a evidência sustenta.</p>
+    <p style="margin-top:12px"><strong>O que é bem estabelecido:</strong> existe continuidade de tecido conjuntivo entre músculos, e existe transmissão de força fora do trajeto tendíneo clássico — o fenômeno é real e documentado em estudos anatômicos e biomecânicos. A fáscia toracolombar conectando grande dorsal, glúteo máximo contralateral e eretores é um exemplo bem descrito.</p>
+    <p style="margin-top:12px"><strong>O que é menos estabelecido:</strong> que a força se transmita de forma funcionalmente relevante ao longo de <em>toda</em> uma cadeia, do pé à cabeça, em magnitude suficiente para explicar sintomas à distância. Os estudos que mediram transmissão entre segmentos adjacentes encontram efeitos reais, porém modestos, e que decaem rapidamente com a distância.</p>
+    <p style="margin-top:12px"><strong>Como usar:</strong> as cadeias são um excelente <strong>mapa organizador</strong> — ajudam a lembrar de olhar acima e abaixo do sintoma, e agrupam a prescrição de forma coerente. O que não se deve fazer é tratá-las como circuitos hidráulicos previsíveis, do tipo "puxou aqui, moveu lá", nem prometer que soltar a fáscia plantar vai resolver uma cervicalgia.</p>
+  </div>
+</section>
+
+<section id="cadeia-anterior">
+  <span class="sec-num">13 &mdash; CADEIA ANTERIOR</span>
+  <h2>A frente <span class="accent">do corpo</span></h2>
+  <p class="sec-sub">A cadeia da flexão e da anteversão pélvica.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Composição:</strong> reto abdominal, flexores do quadril (iliopsoas), reto femoral e tibial anterior.</p>
+    <p style="margin-top:12px"><strong>Função:</strong> mantém a flexão do tronco e a estabilização anterior da pelve.</p>
+    <p style="margin-top:12px"><strong>Desequilíbrio:</strong> flexores do quadril encurtados ou músculos abdominais fracos podem gerar <strong>inclinação anterior da pelve e hiperlordose lombar</strong>, gerando sobrecargas nos discos intervertebrais e tensões exageradas na lombar, resultando em dor.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o mecanismo da anteversão</span>
+    <p>Vale detalhar como flexor de quadril rígido vira lordose, porque esse é o encadeamento mais frequente de toda a avaliação postural.</p>
+    <p style="margin-top:12px">O <strong>iliopsoas</strong> tem origem nas vértebras lombares e na fossa ilíaca, e inserção no pequeno trocânter do fêmur. Quando o fêmur está fixo — em pé, com o pé no chão —, a contração do iliopsoas não flexiona o quadril: ela <strong>puxa a pelve e a coluna lombar para frente e para baixo</strong>.</p>
+    <p style="margin-top:12px">O <strong>reto femoral</strong> reforça isso por outra via. Ele se origina na espinha ilíaca ântero-inferior, na frente da pelve. Rígido, ele traciona esse ponto para baixo, rodando a pelve em anteversão.</p>
+    <p style="margin-top:12px">A pelve em anteversão arrasta o sacro consigo, aumentando a inclinação da base sobre a qual a coluna lombar se apoia. A lombar responde aumentando a curva — hiperlordose.</p>
+    <p style="margin-top:12px">E aqui entra a segunda metade da equação: <strong>abdominais fracos</strong>. Os abdominais, especialmente o reto e os oblíquos, tracionam a crista ilíaca para cima e para trás, contrabalançando os flexores. Se eles não fazem esse trabalho, nada se opõe à tração anterior. É por isso que a anotação cita as duas condições juntas — rigidez de um lado <em>e</em> fraqueza do outro. É a assimetria da seção 02 aplicada ao quadril.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <ul class="clean">
+      <li><b>Mobilidade de flexores de quadril em amplitude ativa</b> — avanço com foco na perna de trás, ajoelhado com contração de glúteo do lado alongado. O ponto é fazer o quadril <b>estender de verdade</b>, com a pelve controlada. Alongar com a pelve solta em anteversão não alonga o psoas: alonga a lombar.</li>
+      <li><b>Força de abdominais em anti-extensão</b> — prancha, dead-bug, roda abdominal em amplitude controlada. O alvo é a capacidade de <b>resistir</b> à anteversão sob carga, não flexionar o tronco. Abdominal tradicional em série alta não treina isso.</li>
+      <li><b>Extensores de quadril em comprimento longo</b> — glúteo máximo e isquiotibiais são retroversores. Fortalecê-los ataca a mesma alavanca pelo outro lado.</li>
+      <li><b>Cuidado com o volume de exercícios que reforçam o padrão</b> — muito trabalho de flexor de quadril (elevação de pernas, abdominal infra mal executado) em quem já tem anteversão acentuada aprofunda o quadro.</li>
+      <li><b>Rotina:</b> tempo sentado é o principal alimentador dessa cadeia. Pausas de pé a cada 45–60 minutos valem mais que qualquer alongamento isolado no fim do dia.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="cadeia-posterior">
+  <span class="sec-num">14 &mdash; CADEIA POSTERIOR</span>
+  <h2>As costas <span class="accent">do corpo</span></h2>
+  <p class="sec-sub">A cadeia da extensão e da postura ereta.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Composição:</strong> trapézio, eretor da espinha, longuíssimo, iliocostal, romboides, espinal e grande dorsal (coluna e tórax); glúteo máximo e quadrado lombar (quadril e lombar); isquiotibiais (bíceps femoral, semitendíneo e semimembranoso); gastrocnêmios e sóleos.</p>
+    <p style="margin-top:12px"><strong>Função:</strong> responsável pela extensão do tronco, suporte ereto e controle da postura em pé.</p>
+    <p style="margin-top:12px"><strong>Desequilíbrio:</strong> encurtamentos geram padrão postural de <strong>flexão de tronco e inclinação pélvica posterior</strong>, causando <strong>redução da curvatura lombar</strong>, sobrecarregando a <strong>articulação sacroilíaca</strong> e a <strong>fáscia toracolombar</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o mecanismo da retroversão</span>
+    <p>É o espelho exato da cadeia anterior, e entender os dois juntos fixa o raciocínio.</p>
+    <p style="margin-top:12px">Os <strong>isquiotibiais</strong> se originam na tuberosidade isquiática — o ísquio, na parte de baixo e atrás da pelve. Quando estão rígidos e o joelho está estendido, eles tracionam o ísquio <strong>para baixo e para trás</strong>.</p>
+    <p style="margin-top:12px">Como a pelve é um osso rígido, puxar uma extremidade para baixo obrigatoriamente eleva a outra: a crista ilíaca sobe e vai para frente. A pelve "tomba para trás" — <strong>retroversão</strong>. Essa é exatamente a analogia da gangorra que aparece na parte 6.</p>
+    <p style="margin-top:12px">Com o sacro nessa nova inclinação, a lombar perde curvatura — <strong>retificação</strong>. E aí surge a consequência que a anotação aponta: com a lombar reta, ela perde parte da capacidade de distribuir carga por meio da curva, e a demanda migra para a <strong>sacroilíaca</strong> e para a <strong>fáscia toracolombar</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que a lombar precisa da curva</span>
+    <p>Uma coluna curvada resiste melhor à compressão do que uma coluna reta. As curvaturas funcionam como uma mola: elas permitem que a coluna se deforme elasticamente sob carga e distribua a força ao longo de vários segmentos, em vez de concentrá-la.</p>
+    <p style="margin-top:12px">Além disso, a curva lombar posiciona os discos intervertebrais de forma a distribuir a pressão de maneira mais uniforme. Com a lombar retificada, o padrão de pressão sobre o disco muda — e essa é a base da observação, registrada na parte 4, de que a retificação se associa mais a herniação discal do que a hiperlordose.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <ul class="clean">
+      <li><b>Isquiotibiais em comprimento longo com carga</b> — stiff, levantamento terra romeno, mesa flexora com amplitude completa. Carga em posição alongada aumenta tolerância ao estiramento de forma mais duradoura que alongamento passivo isolado.</li>
+      <li><b>Restaure a anteversão disponível</b> — em quem tem retroversão marcada, exercícios que ensinam a rodar a pelve para frente ativamente (quadrupedia com báscula, elevação pélvica com controle de amplitude) devolvem a opção que estava perdida.</li>
+      <li><b>Fortaleça os anteversores</b> — iliopsoas, reto femoral, sartório e eretores da espinha são os antagonistas nessa equação. Em retroversão eles costumam estar fracos, não rígidos.</li>
+      <li><b>Cuidado com o excesso de "retroversão de proteção"</b> — muita instrução de academia manda "encaixar o quadril" em todo exercício. Em quem já tem retroversão e lombar retificada, isso aprofunda o problema.</li>
+      <li><b>Atenção especial em quem passa o dia sentado</b> — sentar mantém isquiotibiais em posição curta e a pelve em retroversão por horas. Esse é o mesmo padrão que gera o joelho flexo descrito na parte 3.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="cadeia-lateral">
+  <span class="sec-num">15 &mdash; CADEIA LATERAL</span>
+  <h2>O equilíbrio no <span class="accent">plano frontal</span></h2>
+  <p class="sec-sub">A cadeia das assimetrias entre lados.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Composição:</strong> glúteo médio, glúteo mínimo e tensor da fáscia lata (quadril e pelve); vasto lateral e adutores (coxa); fibulares longo e curto e tibial anterior (perna); quadrado lombar e oblíquos internos e externos (tronco e coluna).</p>
+    <p style="margin-top:12px"><strong>Função:</strong> mantém o equilíbrio no <strong>plano frontal</strong>, controlando as inclinações laterais do tronco e da pelve.</p>
+    <p style="margin-top:12px"><strong>Desequilíbrio:</strong> pode ocorrer <strong>inclinação pélvica lateral</strong>, gerando fraqueza na musculatura do quadril e sobrecarga na <strong>sacroilíaca</strong>, gerando <strong>assimetria em membros inferiores</strong>. Pode gerar <strong>postura escoliótica</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que esta cadeia é a mais assimétrica</span>
+    <p>As cadeias anterior e posterior tendem a produzir alterações <strong>bilaterais</strong> — os dois lados se comportam de forma parecida, e o resultado é uma anteversão ou retroversão simétrica.</p>
+    <p style="margin-top:12px">A cadeia lateral é diferente por natureza: ela controla o equilíbrio entre <strong>direito e esquerdo</strong>. Um desequilíbrio aqui é, quase por definição, unilateral. E é isso que a torna clinicamente mais complicada — assimetrias produzem torções, rotações compensatórias e padrões que se propagam de forma cruzada.</p>
+    <p style="margin-top:12px">É por isso que a anotação chega à <strong>postura escoliótica</strong>. Uma pelve inclinada lateralmente oferece uma base torta para a coluna. Para manter os olhos no horizonte, a coluna curva para o lado oposto — e nasce uma curva funcional, sem rotação vertebral, totalmente reversível se a causa for tratada. Isso é desenvolvido na parte 4.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o trio glúteo médio, TFL e quadrado lombar</span>
+    <p>Estes três aparecem juntos repetidamente ao longo da série, e é bom entender a relação desde já.</p>
+    <p style="margin-top:12px">O <strong>glúteo médio</strong> é o abdutor e estabilizador pélvico principal. Quando você apoia em uma perna só — o que acontece a cada passo —, é ele que impede a pelve do lado sem apoio de cair.</p>
+    <p style="margin-top:12px">Quando o glúteo médio não cumpre esse papel, dois substitutos assumem: o <strong>tensor da fáscia lata</strong>, que também abduz mas com forte componente de rotação interna e flexão, e o <strong>quadrado lombar</strong>, que em vez de estabilizar a pelve por baixo, a <em>puxa por cima</em>, elevando o quadril pelo tronco.</p>
+    <p style="margin-top:12px">O resultado é o quadro que a parte 6 descreve: rigidez de TFL e quadrado lombar, inibição do glúteo médio, rotação interna de quadril, valgo dinâmico e aquele "rebolado" excessivo na marcha. Um único elo fraco reorganiza a mecânica de todo o membro.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <ul class="clean">
+      <li><b>Priorize trabalho unilateral</b> — apoio unipodal, avanço, búlgaro, subida no step, terra unilateral. Exercícios bilaterais permitem que o lado dominante mascare o déficit do outro; unilaterais expõem.</li>
+      <li><b>Abdução com quadril neutro</b> — sem deixar rodar externamente e sem flexionar. Se a ponta do pé aponta para o teto na abdução deitado, o TFL assumiu e o glúteo médio continua de fora.</li>
+      <li><b>Compare sempre os dois lados</b> — em número de repetições, em qualidade de execução e em amplitude. A diferença entre lados é o dado, mais do que o valor absoluto.</li>
+      <li><b>Teste de triagem simples</b> — apoio unipodal por 30 segundos. Observe se a pelve do lado livre cai, se o tronco inclina, se o joelho colapsa para dentro.</li>
+      <li><b>Atenção a assimetrias grandes</b> — diferença marcante e persistente entre lados, especialmente com dor, merece encaminhamento antes de virar programa de treino.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="cadeia-cruzada-resp">
+  <span class="sec-num">16 &mdash; CADEIA CRUZADA E CADEIA RESPIRATÓRIA</span>
+  <h2>A rotação e <span class="accent">a respiração</span></h2>
+  <p class="sec-sub">Duas cadeias menos óbvias e com impacto grande.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; cadeia cruzada</span>
+    <p>Conexão de membros superiores com inferiores. <strong>Passa pelas cinturas escapular e pélvica.</strong></p>
+    <p style="margin-top:12px"><strong>Composição:</strong> peitoral maior, oblíquos externos, glúteo máximo, bíceps femoral, trapézio, serrátil anterior e romboides. Também isquiotibiais, gastrocnêmios e tibial anterior.</p>
+    <p style="margin-top:12px"><strong>Função:</strong> essencial para movimentos de <strong>rotação e cruzamento do corpo</strong>, como andar e correr.</p>
+    <p style="margin-top:12px"><strong>Desequilíbrio:</strong> disfunções podem gerar compensações como <strong>rotação excessiva da pelve</strong>, <strong>torção da coluna vertebral</strong>, podendo causar alterações de força entre membros superiores e inferiores, prejudicando a marcha.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; a diagonal da marcha</span>
+    <p>A cadeia cruzada é a que explica por que, ao andar, o braço direito vai para frente junto com a perna esquerda.</p>
+    <p style="margin-top:12px">Essa coordenação não é hábito: é mecânica. Existe continuidade de tecido conjuntivo, através da <strong>fáscia toracolombar</strong>, ligando o <strong>grande dorsal de um lado ao glúteo máximo do lado oposto</strong>. Quando o braço direito vai para trás, o dorsal direito se tensiona, essa tensão atravessa a fáscia na diagonal e chega ao glúteo máximo esquerdo — que é justamente o que está estendendo o quadril esquerdo naquele instante.</p>
+    <p style="margin-top:12px">É um sistema de armazenamento e devolução de energia elástica: parte do trabalho da marcha e da corrida não é feita por contração muscular, mas por tensão elástica transmitida na diagonal.</p>
+    <p style="margin-top:12px">Consequência prática: uma restrição no ombro pode alterar a mecânica do quadril contralateral, e vice-versa. É a base anatômica mais sólida do modelo de cadeias — este par específico é bem documentado.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <ul class="clean">
+      <li><b>Inclua padrões rotacionais e antirrotacionais</b> — a maior parte dos programas trabalha só nos planos sagital e frontal. Rotações na polia, chop e lift, press Pallof.</li>
+      <li><b>Exercícios contralaterais</b> — terra unilateral, remada unilateral em apoio, carregamentos assimétricos. Eles carregam a diagonal diretamente.</li>
+      <li><b>Observe a marcha</b> — é o teste dinâmico mais barato que existe. Braços que não balançam, ou balançam de forma assimétrica, sugerem restrição na cadeia cruzada.</li>
+      <li><b>Não isole demais</b> — a cadeia cruzada é, por definição, integrativa. Trabalho isolado por músculo não a treina.</li>
+    </ul>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; cadeia respiratória</span>
+    <p><strong>Composição:</strong> diafragma, escaleno e abdominais.</p>
+    <p style="margin-top:12px"><strong>Função:</strong> ventilação pulmonar e postura, já que o diafragma atua como <strong>estabilizador da coluna vertebral</strong>.</p>
+    <p style="margin-top:12px"><strong>Desequilíbrio:</strong> padrão respiratório insuficiente pode gerar <strong>insuficiência diafragmática</strong>, ocasionando maior tensão da coluna lombar e torácica, contribuindo com desalinhamento postural, podendo gerar <strong>hipercifose</strong> ou acentuação no padrão de <strong>retificação torácica</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o diafragma como estabilizador</span>
+    <p>O diafragma é o teto da caixa lombopélvica. Ele tem inserções diretas nas <strong>vértebras lombares</strong>, pelos pilares diafragmáticos, o que faz dele um músculo postural além de respiratório.</p>
+    <p style="margin-top:12px">Quando ele desce na inspiração, comprime o conteúdo abdominal e contribui para a <strong>pressão intra-abdominal</strong> — o suporte hidráulico que ajuda a coluna a resistir a cargas. Um diafragma que não desce bem entrega menos pressão, e a estabilização precisa ser compensada por contração mais intensa de eretores e paravertebrais. Daí a "maior tensão da coluna lombar e torácica" que a anotação registra.</p>
+    <p style="margin-top:12px">Há ainda a via da <strong>respiração acessória</strong>: quando o diafragma não dá conta, escalenos, esternocleidomastóideo e trapézio superior assumem parte do trabalho, elevando as costelas superiores a cada ciclo. Repetido milhares de vezes por dia, isso alimenta rigidez cervical, elevação dos ombros e anteriorização da cabeça.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <ul class="clean">
+      <li><b>Observe o padrão respiratório em repouso</b> — deitado, mão no abdômen e mão no peito. Se a mão de cima se move mais que a de baixo, o padrão é predominantemente torácico.</li>
+      <li><b>Ensine respiração com expansão inferior e lateral</b> — deitado, joelhos flexionados, foco em expandir as costelas inferiores lateralmente em vez de elevar o peito.</li>
+      <li><b>Integre respiração ao bracing</b> — manter a rigidez do tronco <b>respirando</b>, e não prendendo o ar, é uma habilidade treinável e diretamente aplicável a agachamento e terra.</li>
+      <li><b>Mobilidade torácica</b> — uma caixa torácica rígida limita a excursão diafragmática. Rotações e extensões torácicas ajudam pelos dois lados, respiratório e postural.</li>
+    </ul>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; o princípio que fecha o bloco</span>
+    <p><strong>Disfunções que afetam diretamente uma área irão afetar o funcionamento de outras regiões do corpo.</strong></p>
+  </div>
+</section>
+
+<section id="fascia">
+  <span class="sec-num">17 &mdash; FÁSCIA E TENSEGRIDADE</span>
+  <h2>O tecido que <span class="accent">liga tudo</span></h2>
+  <p class="sec-sub">Dois conceitos que sustentam o modelo de cadeias — com o que cada um realmente entrega.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; fáscia muscular</span>
+    <p><strong>Tecido de conexão.</strong> Envolve músculos, ossos, órgãos e nervos. Atua em <strong>transmissão de forças e propriocepção</strong>. Quando se torna restrita, pode causar <strong>limitações de movimento, desequilíbrio e dores</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor</span>
+    <p>A fáscia é o tecido conjuntivo que envolve e separa cada músculo, cada feixe de fibras e cada fibra individual, formando uma rede contínua por todo o corpo. Ela não é embalagem inerte: é tecido vivo, ricamente inervado.</p>
+    <p style="margin-top:12px">Dois papéis merecem destaque:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Transmissão de força</b> — parte da força gerada por um músculo não sai apenas pelo tendão. Ela se distribui lateralmente pela fáscia para estruturas vizinhas. É o mecanismo que dá base física ao conceito de cadeia.</li>
+      <li><b>Propriocepção</b> — a fáscia tem alta densidade de receptores sensoriais. Ela é uma fonte importante da informação que o sistema nervoso usa para saber onde os segmentos estão. Isso explica por que restrição fascial pode alterar coordenação, e não apenas amplitude.</li>
+    </ul>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Da aula &middot; tensegridade</span>
+    <p><strong>Integridade tensional.</strong> A estrutura se mantém estável e equilibrada graças à distribuição de forças. Nosso corpo é um <strong>sistema perfeito de polias sendo puxadas constantemente e brigando pelo equilíbrio perfeito</strong>.</p>
+  </div>
+
+  <div class="def">
+    <div class="word">Tensegridade</div>
+    <p>Termo da arquitetura, de <em>tensional integrity</em>. Descreve estruturas em que elementos rígidos comprimidos (no corpo, os ossos) não se tocam diretamente, sendo mantidos em posição por uma rede contínua de elementos tensionados (músculos, tendões, fáscia, ligamentos). A estabilidade vem do <b>equilíbrio de tensões</b>, não do empilhamento.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que a metáfora é boa</span>
+    <p>O modelo de tensegridade oferece uma imagem mental muito mais fiel do que a alternativa comum, que é pensar o esqueleto como uma pilha de blocos onde cada osso se apoia no de baixo.</p>
+    <p style="margin-top:12px">Se fosse pilha, um desvio em um bloco afetaria apenas os blocos acima. Na tensegridade, <strong>alterar a tensão em qualquer ponto redistribui tensão em toda a rede</strong> — inclusive em pontos distantes e em direções não intuitivas.</p>
+    <p style="margin-top:12px">É exatamente isso que se observa na clínica, e é a razão pela qual "o pé pode causar dor no ombro" deixa de ser frase de efeito e passa a ter um modelo por trás.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: metáfora útil, não modelo literal</span>
+    <p>Duas calibragens, ambas de peso moderado.</p>
+    <p style="margin-top:12px"><strong>Sobre tensegridade:</strong> o corpo humano não é uma estrutura de tensegridade em sentido estrito. Nossos ossos <em>se tocam</em> nas articulações e transmitem compressão diretamente — o fêmur apoia na tíbia, as vértebras apoiam umas nas outras através dos discos. A tensegridade é uma <strong>analogia esclarecedora</strong> sobre distribuição de tensão, não uma descrição literal da mecânica esquelética. Ótima para ensinar; imprecisa se levada ao pé da letra.</p>
+    <p style="margin-top:12px"><strong>Sobre "restrição fascial":</strong> a existência de restrição fascial e a possibilidade de modificá-la manualmente são bem menos estabelecidas do que o discurso comercial em torno de liberação miofascial sugere. A fáscia é um tecido notavelmente resistente, e a força necessária para deformá-la plasticamente é muito maior do que a aplicada em uma sessão de rolo ou de terapia manual.</p>
+    <p style="margin-top:12px">O que essas intervenções parecem produzir de fato é um efeito <strong>neural</strong> — redução transitória do tônus, aumento de tolerância ao estiramento, modulação da percepção de dor. Isso é real e é útil. Mas é diferente de "desfazer aderências". Ganhos de amplitude obtidos assim tendem a ser de curta duração se não forem consolidados com <strong>movimento ativo e carga na nova amplitude</strong>.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico</span>
+    <p>A tradução prática é direta: <strong>liberação miofascial e alongamento abrem uma janela; o exercício é o que faz a janela ficar aberta.</strong></p>
+    <p style="margin-top:12px">Sequência que funciona: liberar ou mobilizar → mover ativamente na nova amplitude → carregar nessa amplitude. Parar na primeira etapa é o erro comum, e é por isso que tanta gente rola o mesmo ponto há anos sem mudança duradoura.</p>
+  </div>
+</section>
+
+<section id="padroes-alterados">
+  <span class="sec-num">18 &mdash; PADRÕES ALTERADOS DE MOVIMENTO</span>
+  <h2>Quando a compensação <span class="accent">vira hábito</span></h2>
+  <p class="sec-sub">E o que isso significa dentro da sala de musculação.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <p><strong>Adaptações do corpo para compensar desequilíbrios musculares, fraquezas ou restrições de mobilidade.</strong> O padrão compensatório pode gerar <strong>sobrecarga nas articulações e grupos musculares ao longo do tempo</strong>.</p>
+    <p style="margin-top:12px"><strong>Na musculação:</strong> movimentos incorretos, além de prejudicar a integridade do sistema musculoesquelético, levam inevitavelmente a <strong>dismorfias e assimetrias musculares</strong>, comprometendo a busca por um corpo harmônico e esteticamente equilibrado.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; a compensação não é erro, é solução</span>
+    <p>Vale reenquadrar: uma compensação não é o corpo funcionando mal. É o corpo funcionando <strong>muito bem</strong> — resolvendo uma tarefa apesar de uma limitação.</p>
+    <p style="margin-top:12px">Se falta amplitude de dorsiflexão para agachar fundo, o corpo levanta o calcanhar ou inclina mais o tronco. Ele cumpriu a tarefa. O problema não está na compensação em si: está no fato de ela ser <strong>repetida sob carga, milhares de vezes</strong>, concentrando estresse em estruturas que não foram feitas para aquilo.</p>
+    <p style="margin-top:12px">Isso muda a conduta. Não adianta apenas mandar "não faça assim" — o corpo faz assim porque é a única solução disponível. É preciso <strong>remover a restrição que criou a necessidade</strong>, ou reduzir a demanda até que o padrão limpo seja possível.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; o ponto onde a série encontra a sala de treino</span>
+    <p>A observação sobre musculação é o elo mais direto entre avaliação postural e o seu trabalho diário. Alguns princípios:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Carga revela e amplifica.</b> Um padrão compensatório que passa despercebido com peso leve fica evidente com peso alto — e também mais lesivo. Use as séries de aquecimento como reavaliação.</li>
+      <li><b>Onde o padrão quebra é o teto da carga.</b> Se a lombar arredonda no terra a partir de determinado peso, aquele peso é o limite atual, não uma meta a superar com cinto.</li>
+      <li><b>Amplitude antes de carga; carga antes de volume.</b> Progredir volume sobre um padrão ruim é multiplicar o problema pelo número de repetições.</li>
+      <li><b>Assimetria de volume gera assimetria postural.</b> Programas com excesso de peitoral e pouca região média e inferior de escápula produzem, previsivelmente, protusão de ombros. Isso está detalhado na parte 5.</li>
+      <li><b>Escolha do exercício é intervenção postural.</b> Você não precisa de uma "sessão corretiva" separada: selecionar bem o que entra no programa já corrige.</li>
+    </ul>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: linguagem determinista</span>
+    <p>A palavra <strong>"inevitavelmente"</strong> na anotação é mais forte do que a evidência sustenta, e vale suavizar quando você repassar isso.</p>
+    <p style="margin-top:12px">Movimento tecnicamente imperfeito sob carga <em>aumenta o risco</em> de sobrecarga e de assimetria — isso é razoável. Mas "inevitavelmente leva a dismorfias" trata como certeza o que é probabilidade, e ignora a enorme capacidade de adaptação do tecido. Muita gente treina com técnica imperfeita por anos sem consequência relevante; outras se lesionam com técnica impecável.</p>
+    <p style="margin-top:12px">A formulação mais honesta e igualmente motivadora: <strong>técnica melhor aumenta a chance de treinar por mais tempo, com mais carga e melhor distribuição de estímulo</strong> — e isso, sim, se traduz em resultado. O argumento a favor da boa execução não precisa de catastrofização.</p>
+  </div>
+</section>
+
+<section id="objetivos">
+  <span class="sec-num">19 &mdash; OS CINCO OBJETIVOS E A CONDUTA</span>
+  <h2>O que se faz <span class="accent">com tudo isso</span></h2>
+  <p class="sec-sub">O fecho do módulo, e a ponte para as próximas cinco partes.</p>
+
+  <div class="aula">
+    <span class="tag">Da aula</span>
+    <ol class="key" style="margin-top:8px">
+      <li><b>Identificar padrões compensatórios</b> que comprometem a postura global e a funcionalidade corporal. Exemplo: disfunção no pé pode desencadear adaptações biomecânicas em quadril, joelho e coluna, impactando a mecânica corporal de maneira sistêmica.</li>
+      <li><b>Avaliar mobilidade e sinergia muscular</b> — articulações e músculos atuando de maneira integrada e harmônica.</li>
+      <li><b>Corrigir e equilibrar as cadeias musculares</b> encurtadas e rotas, por meio de intervenções corretivas e reeducação postural.</li>
+      <li><b>Alongar, mobilizar, fortalecer e alinhar</b> — muitas disfunções em cadeia muscular são resultado de tensões excessivas em áreas específicas do corpo. Liberação miofascial, alongamentos terapêuticos e mobilizações articulares para restauração de alinhamento e postura.</li>
+      <li><b>Manter equilíbrio postural e a integração de movimentos</b> — postura eficiente tanto em repouso quanto em movimento, com o mínimo de esforço muscular e articular. Alcançado quando as cadeias atuam de forma sinérgica, sem compensações ou sobrecargas.</li>
+    </ol>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Conduta do educador físico &middot; um roteiro em cinco passos</span>
+    <p>Traduzindo os cinco objetivos em uma sequência aplicável a qualquer aluno:</p>
+    <div class="stepwrap" style="margin-top:12px">
+      <div class="step"><h4>Observe antes de intervir</h4><p>Estática nas três vistas, dinâmica nos padrões que o aluno realmente usa. Registre o que salta aos olhos, não milímetros.</p></div>
+      <div class="step"><h4>Procure a origem, não o sintoma</h4><p>Pergunte o que, na cadeia, está obrigando aquela região a compensar. Olhe um segmento acima e um abaixo do achado.</p></div>
+      <div class="step"><h4>Abra a restrição</h4><p>Mobilidade e amplitude onde há rigidez. Isso cria a possibilidade do movimento correto — mas ainda não o consolida.</p></div>
+      <div class="step"><h4>Ative e carregue o que estava inibido</h4><p>Primeiro em contexto simples, com clareza de sensação. Depois integrado em padrões compostos. Depois com carga progressiva — que é o que gera adaptação duradoura.</p></div>
+      <div class="step"><h4>Reavalie no mesmo método</h4><p>Mesmas vistas, mesmo horário, mesmas condições. Compare com o registro anterior, e ajuste. Sem reavaliação, você não sabe se funcionou.</p></div>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: expectativa de resultado</span>
+    <p>Uma calibragem final sobre o verbo <strong>"corrigir"</strong>, que aparece nos objetivos 3 e 4.</p>
+    <p style="margin-top:12px">Nem toda alteração postural é corrigível, e isso não é fracasso. As próprias anotações fazem essa distinção em vários pontos: pé plano estrutural é descrito como falha congênita irreversível; escoliose estrutural é descrita como irreversível; valgismo que persiste por muito tempo tende a se tornar fixo.</p>
+    <p style="margin-top:12px">A distinção que organiza tudo é <strong>funcional versus estrutural</strong>:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Funcional</b> — decorre de desequilíbrio muscular, hábito ou restrição de mobilidade. Responde a exercício. É o nosso território.</li>
+      <li><b>Estrutural</b> — decorre da forma do osso, de fusão, de deformidade estabelecida. Não responde a exercício.</li>
+    </ul>
+    <p>E aqui está o ponto que salva a conduta, registrado na parte 4: <strong>desvio estrutural quase sempre tem um componente funcional associado</strong>. Corrigido o componente funcional, o quadro global melhora, mesmo que a parte estrutural permaneça. Ou seja: a existência de componente estrutural não é motivo para não treinar — é motivo para ajustar a expectativa do que se promete.</p>
+  </div>
+</section>
+
+<section id="glossario">
+  <span class="sec-num">20 &mdash; GLOSSÁRIO</span>
+  <h2>Os termos <span class="accent">da parte 1</span></h2>
+  <p class="sec-sub">Referência rápida. Reaparecem em todas as outras partes.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Termo</th><th>Definição</th></tr></thead>
+      <tbody>
+        <tr><td>Músculo tônico</td><td>Predominantemente antigravitacional e postural. Tende a ganhar rigidez e hiperatividade no desuso.</td></tr>
+        <tr><td>Músculo fásico</td><td>Predominantemente de movimento e força. Tende a inibir e atrofiar no desuso.</td></tr>
+        <tr><td>Inibição recíproca</td><td>Reflexo medular em que a ativação do agonista inibe automaticamente o antagonista.</td></tr>
+        <tr><td>Neurônio motor alfa</td><td>Neurônio da medula que inerva diretamente as fibras musculares e comanda a contração.</td></tr>
+        <tr><td>Interneurônio</td><td>Neurônio intermediário, dentro da medula, que conecta e modula outros neurônios. Na inibição recíproca, é ele que desliga o antagonista.</td></tr>
+        <tr><td>Encurtamento</td><td>Duplo sentido. <b>Ação:</b> contração concêntrica, normal. <b>Estado:</b> perda real de comprimento, raro. Na prática, quase sempre significa <b>rigidez</b>.</td></tr>
+        <tr><td>Linha de prumo</td><td>Referência vertical de centralidade, aproximando a projeção do centro de massa sobre a base.</td></tr>
+        <tr><td>Braço de momento</td><td>Distância perpendicular entre a linha de força e o centro articular. Determina o torque.</td></tr>
+        <tr><td>EIAS</td><td>Espinha ilíaca ântero-superior. Proeminência óssea frontal da pelve.</td></tr>
+        <tr><td>EIPS</td><td>Espinha ilíaca póstero-superior. Correspondente posterior.</td></tr>
+        <tr><td>Anteversão pélvica</td><td>Pelve gira para frente e para baixo. Associa-se a aumento da lordose lombar.</td></tr>
+        <tr><td>Retroversão pélvica</td><td>Pelve gira para trás e para cima. Associa-se a retificação lombar.</td></tr>
+        <tr><td>Ritmo lombopélvico</td><td>Coordenação entre flexão lombar e rotação pélvica durante a flexão de tronco.</td></tr>
+        <tr><td>Ritmo escapuloumeral</td><td>Proporção entre movimento da glenoumeral e rotação da escápula na elevação do braço.</td></tr>
+        <tr><td>Cadeia muscular</td><td>Sequência de músculos, fáscias e articulações que atuam de forma integrada e transmitem tensão entre segmentos.</td></tr>
+        <tr><td>Fáscia</td><td>Tecido conjuntivo contínuo que envolve e conecta estruturas. Transmite força e é rica em receptores.</td></tr>
+        <tr><td>Fáscia toracolombar</td><td>Lâmina fascial da região lombar, onde convergem grande dorsal, glúteo máximo contralateral, eretores e abdominais. Base anatômica da cadeia cruzada.</td></tr>
+        <tr><td>Tensegridade</td><td>Estabilidade obtida por equilíbrio de tensões distribuídas, não por empilhamento. Analogia útil, não descrição literal.</td></tr>
+        <tr><td>Pressão intra-abdominal</td><td>Pressão gerada pela compressão do conteúdo abdominal. Suporte hidráulico interno da coluna.</td></tr>
+        <tr><td>Padrão compensatório</td><td>Solução motora que o corpo adota para cumprir uma tarefa apesar de uma restrição.</td></tr>
+        <tr><td>Funcional (desvio)</td><td>Decorre de desequilíbrio muscular ou hábito. Reversível com exercício.</td></tr>
+        <tr><td>Estrutural (desvio)</td><td>Decorre da forma óssea ou deformidade estabelecida. Não reversível com exercício.</td></tr>
+        <tr><td>Valgo</td><td>Segmento distal desviado para <b>fora</b>; o joelho aponta para <b>dentro</b>.</td></tr>
+        <tr><td>Varo</td><td>Segmento distal desviado para <b>dentro</b>; o joelho aponta para <b>fora</b>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="confirmar">
+  <span class="sec-num">21 &mdash; PONTOS A CONFIRMAR</span>
+  <h2>O que checar <span class="accent">com o professor</span></h2>
+  <p class="sec-sub">Lacunas do registro, não erros da aula.</p>
+
+  <div class="callout">
+    <span class="tag">Como usar esta lista</span>
+    <p>Estes são pontos em que a anotação pode ter capturado imperfeitamente o que foi dito, ou em que a afirmação é específica o bastante para merecer a fonte. Confirmados, viram conteúdo sólido. Não confirmados, ficam marcados como incertos. A lista completa da série está distribuída pelas seis partes; aqui estão os da parte 1.</p>
+  </div>
+
+  <ol class="key">
+    <li><b>Ritmo escapuloumeral (seção 10).</b> A anotação registra "abdução de até 180° (60° pela escápula e 180 pela glenoumeral)". A soma não fecha — o padrão clássico é 120° glenoumeral + 60° escapular = 180°. Confirmar se o segundo valor é <b>120</b>.</li>
+    <li><b>Os 50°–60° de abertura da borda inferior da escápula (seção 10).</b> Confirmar se o valor se refere à rotação superior da escápula e qual a fonte adotada no curso.</li>
+    <li><b>Composição das cadeias (seções 13 a 16).</b> As listas de músculos por cadeia variam bastante entre autores. Vale saber qual referência o módulo segue — Busquet, Souchard, Myers ou outra —, porque isso muda a composição e o nome das cadeias.</li>
+    <li><b>Cadeia cruzada (seção 16).</b> A lista inclui isquiotibiais, gastrocnêmios e tibial anterior junto com os músculos da diagonal. Confirmar se são parte da cadeia cruzada propriamente dita ou uma observação sobre a marcha.</li>
+  </ol>
+</section>
+
+<section id="referencias">
+  <span class="sec-num">22 &mdash; REFERÊNCIAS E HONESTIDADE CIENTÍFICA</span>
+  <h2>De onde vem <span class="accent">cada afirmação</span></h2>
+  <p class="sec-sub">O que é da aula, o que é da literatura e o que é interpretação.</p>
+
+  <h3>Modelos e referências mencionados</h3>
+
+  <ul class="clean">
+    <li><b>Modelo tônico/fásico</b> — atribuído à escola tcheca de medicina de reabilitação, especialmente a <b>Vladimír Janda</b>, e amplamente difundido em reeducação postural.</li>
+    <li><b>Inibição recíproca</b> — descrita classicamente por <b>Charles Sherrington</b>, é conteúdo estabelecido de neurofisiologia do movimento.</li>
+    <li><b>Cadeias musculares</b> — o conceito tem múltiplas escolas, com composições diferentes: <b>Françoise Mézières</b>, <b>Philippe Souchard</b> (RPG), <b>Léopold Busquet</b> e, na tradição anglófona, os <em>Anatomy Trains</em> de <b>Thomas Myers</b>.</li>
+    <li><b>Tensegridade aplicada à biologia</b> — o conceito arquitetônico é de <b>Buckminster Fuller</b> e <b>Kenneth Snelson</b>; a aplicação a sistemas biológicos é associada a <b>Donald Ingber</b>, originalmente em nível celular.</li>
+    <li><b>Fáscia toracolombar e transmissão de força</b> — a continuidade entre grande dorsal, fáscia toracolombar e glúteo máximo contralateral é descrita em estudos anatômicos e é a base mais bem documentada do modelo de cadeias.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">Nota de honestidade científica</span>
+    <p><strong>Sobre as anotações:</strong> tudo nos blocos azuis reproduz o que foi registrado durante o módulo. Anotação de aula é um registro imperfeito por natureza. Os pontos onde essa possibilidade é maior estão na seção 21.</p>
+    <p style="margin-top:12px"><strong>Sobre as referências:</strong> os nomes acima identificam as escolas e autores associados a cada modelo, para que você possa buscar as fontes primárias. Não listei ano, edição ou página porque não pude verificá-los aqui — e prefiro omitir a inventar. Nenhuma referência foi criada por analogia ou memória.</p>
+    <p style="margin-top:12px"><strong>Sobre as leituras críticas:</strong> não são correções ao professor. São a distância entre o que uma afirmação promete e o que a evidência atualmente entrega. Onde a evidência é forte, está dito. Onde é modelo clínico ou inferência mecanicista, está dito também.</p>
+    <p style="margin-top:12px"><strong>Sobre a relação entre postura e dor:</strong> este é o ponto mais importante desta nota. A literatura das últimas décadas mostra associação <strong>fraca e inconsistente</strong> entre desvios posturais mensuráveis e presença de dor. Isso não torna a avaliação postural inútil — ela continua sendo excelente para orientar seleção de exercício, identificar restrições de movimento e acompanhar mudanças. O que ela não sustenta é o discurso de que desalinhamento causa dor e que corrigir postura é tratamento de dor. Manter essa distinção protege o aluno de medo desnecessário e protege você de prometer o que não se pode entregar.</p>
+    <p style="margin-top:12px"><strong>Sobre escopo:</strong> conteúdo de estudo para profissionais de Educação Física. O educador físico observa, prescreve exercício e orienta. Diagnóstico e tratamento de dor, lesão ou patologia pertencem à medicina e à fisioterapia.</p>
+  </div>
+
+  <div class="nav-next">
+    <a href="postural-2-pes-tornozelo.html">
+      <span class="lbl">Próxima parte</span>
+      <span class="ttl">2 &middot; Pés e tornozelo &rarr;</span>
+    </a>
+    <a href="index.html">
+      <span class="lbl">Voltar</span>
+      <span class="ttl">Biblioteca de estudos</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Avaliação Postural &middot; Parte 1 de 6 &middot; Fundamentos e método</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado em anotações do módulo de Avaliação Postural (CBMF), organizado de forma didática e complementado com leitura crítica da literatura e conduta prática. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script>
+(function(){
+  var KEY="mgcoach-theme";
+  function apply(t){
+    if(t==="light"){document.documentElement.setAttribute("data-theme","light");}
+    else{document.documentElement.removeAttribute("data-theme");}
+    var lbl=document.querySelector(".theme-toggle .tt-label");
+    var icon=document.querySelector(".theme-toggle .tt-icon");
+    if(lbl)lbl.textContent=(t==="light")?"Escuro":"Claro";
+    if(icon)icon.innerHTML=(t==="light")
+      ? '<path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/>'
+      : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||"dark");
+  document.addEventListener("click",function(e){
+    var btn=e.target.closest&&e.target.closest(".theme-toggle");
+    if(!btn)return;
+    var cur=document.documentElement.getAttribute("data-theme")==="light"?"light":"dark";
+    var next=cur==="light"?"dark":"light";
+    apply(next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
