@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jornada Kaminski 1 &middot; Fundamentos moleculares | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Jornada Kaminski · Parte 1 — Fundamentos moleculares | MG COACH">
+    <meta property="og:description" content="Receptor androgênico, aromatização, 5α-redutase e DHT, 17α-alquilação, metabólitos e supressão do eixo — material de estudo sobre a Jornada Prática em Farmacologia Hormonal de Gabriel Kaminski.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/kaminski-1-fundamentos-moleculares.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jornada Kaminski · Parte 1 — Fundamentos moleculares">
+    <meta name="twitter:description" content="Receptor androgênico, aromatização, 5α-redutase e DHT, 17α-alquilação, metabólitos e supressão do eixo — material de estudo sobre a Jornada Prática em">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<link rel="stylesheet" href="mgcoach.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <div class="toc-bar">
+    <button class="toc-toggle" id="tocBtn" type="button" aria-expanded="false" aria-controls="tocNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="width:11px;height:11px;flex:none"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+      <span id="tocLbl">&Iacute;ndice</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <nav class="toc" id="tocNav">
+    <a href="#como-ler">Como ler</a>
+    <a href="#tese">A tese central</a>
+    <a href="#receptor">Receptor androgênico</a>
+    <a href="#aromatizacao">Aromatização</a>
+    <a href="#5alfa">5α-redutase e DHT</a>
+    <a href="#alquilacao">17α-alquilação</a>
+    <a href="#metabolitos">Metabólitos e eixo</a>
+    <a href="#19nor">19-nor e prolactina</a>
+    <a href="#assinatura-final">Assinatura completa</a>
+    <a href="#glossario">Glossário</a>
+    <a href="#confirmar">A confirmar</a>
+    <a href="#referencias">Fonte e honestidade</a>
+  </nav>
+</header>
+
+<div class="parte-bar">JORNADA KAMINSKI &middot; FARMACOLOGIA HORMONAL &nbsp;·&nbsp; <b>PARTE 1 DE 7</b></div>
+
+<div class="hero">
+  <div class="eyebrow">Jornada Kaminski &middot; Farmacologia Hormonal &middot; Parte 1 de 7</div>
+  <h1>Fundamentos <span class="em">moleculares</span></h1>
+  <p class="lede">A tese que organiza o curso inteiro: <b>esteroides têm assinaturas, não rótulos</b>. Esta parte cobre o receptor androgênico e por que não existe receptor "anabólico" separado, aromatização como contínuo, 5α-redutase como amplificação local, 17α-alquilação e o que ela cobra, metabólitos e supressão do eixo.</p>
+</div>
+
+<main>
+
+<section id="como-ler">
+  <span class="sec-num">01 &mdash; COMO LER ESTA SÉRIE</span>
+  <h2>O mapa das <span class="accent">sete partes</span></h2>
+  <p class="sec-sub">E o enquadramento que vale para todas elas.</p>
+
+  <div class="callout warn">
+    <span class="tag">Escopo profissional &middot; leia antes de tudo</span>
+    <p>Este material é <strong>estudo pessoal sobre o conteúdo de um curso</strong>, organizado para consulta. Ele não é, e não pode ser usado como, orientação de uso.</p>
+    <p style="margin-top:12px"><strong>Farmacologia hormonal é prescrição médica.</strong> Quem indica, prescreve, monitora e ajusta é o médico. O educador físico não prescreve fármaco, não sugere composto, não define dose e não orienta ciclo — em nenhuma circunstância, e independentemente do que o aluno peça ou já esteja usando.</p>
+    <p style="margin-top:12px"><strong>Então para que serve estudar isto?</strong> Para três coisas legítimas e importantes:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Entender o que está acontecendo</b> com um aluno que usa, para ajustar treino, volume, recuperação e expectativa de forma coerente com o quadro dele.</li>
+      <li><b>Reconhecer sinais que exigem encaminhamento</b> — e saber que eles existem, o que se ganha ao conhecer as assinaturas de risco.</li>
+      <li><b>Conversar com o médico do aluno na mesma linguagem</b>, quando houver essa ponte.</li>
+    </ul>
+    <p><strong>Os números de dose que aparecem nesta série são registro do que o curso apresentou</strong>, mantidos porque este é um material de estudo sobre aquele conteúdo. Eles são proposições autorais do professor, não recomendações, não são referendados aqui, e não devem ser repassados a ninguém como orientação.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Parte</th><th>Conteúdo</th></tr></thead>
+      <tbody>
+        <tr><td>1 &middot; Fundamentos moleculares</td><td>Receptor androgênico, aromatização, 5α-redutase, 17α-alquilação, metabólitos</td></tr>
+        <tr><td>2 &middot; Farmacocinética e assinatura</td><td>Ésteres, picos e vales, acumulação, afinidade × potência × eficácia × seletividade</td></tr>
+        <tr><td>3 &middot; Leitura de exames</td><td>Anamnese, basal, fenótipo, e cada marcador com o que ele realmente informa</td></tr>
+        <tr><td>4 &middot; As oito assinaturas de risco</td><td>Hematológica, lipídica, hepática, hemodinâmica, cardíaca, estrogênica, androgênica, neuropsiquiátrica</td></tr>
+        <tr><td>5 &middot; Compostos</td><td>Análise molécula a molécula, sem selo de segurança por família</td></tr>
+        <tr><td>6 &middot; Protocolos e casos</td><td>Fluxo masculino, fluxo feminino, monitorização com regra de ação</td></tr>
+        <tr><td>7 &middot; Peptídeos</td><td>GH, secretagogos, GHRH, GHRPs e a distância entre mecanismo e desfecho</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>As camadas do material</h3>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p>Blocos azuis reproduzem o conteúdo apresentado, reescrito e desenvolvido. Nada aqui é cópia literal dos slides — é registro do que foi ensinado, na minha própria formulação.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor</span>
+    <p>Blocos laranja aprofundam o mecanismo, definem o termo, dão o exemplo. Não discordam do curso.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: exemplo</span>
+    <p>Blocos vermelhos marcam nuance, divergência ou salto de evidência — e também os pontos em que o registro pode ter falhado.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O que isso muda na prática</span>
+    <p>Blocos verdes traduzem o conceito para o que ele significa no acompanhamento de um aluno — dentro do escopo do educador físico.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Nota sobre o registro</span>
+    <span class="subtipo">Tipo: método de captura</span>
+    <p>Este material foi construído a partir de <strong>fotografias dos slides</strong> e de <strong>anotações manuscritas</strong> feitas durante as aulas. O texto dos slides foi extraído por reconhecimento óptico, que erra com frequência em <strong>nomes técnicos, símbolos e números</strong>.</p>
+    <p style="margin-top:12px">Onde havia dúvida, marquei. Onde o número era crítico, sinalizei para conferência. As anotações manuscritas, por serem registro direto, têm prioridade sobre a leitura automática dos slides quando as duas divergem.</p>
+  </div>
+</section>
+
+<section id="tese">
+  <span class="sec-num">02 &mdash; A TESE CENTRAL DO CURSO</span>
+  <h2>Assinatura, <span class="accent">não rótulo</span></h2>
+  <p class="sec-sub">A ideia que organiza tudo o que vem nas outras seis partes.</p>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p><strong>Esteroides têm assinaturas, não rótulos.</strong></p>
+    <p style="margin-top:12px">"Corte", "leve" e "seco" são <strong>percepções</strong> — não assinaturas farmacológicas.</p>
+    <p style="margin-top:12px">O nome da família prevê pouco sem contexto. A assinatura completa cruza quatro dimensões:</p>
+    <p style="margin-top:12px" class="def"><strong>ESTRUTURA × FARMACODINÂMICA × EXPOSIÇÃO × PACIENTE</strong></p>
+    <p style="margin-top:12px">E o risco é <strong>multiplicativo</strong>:</p>
+    <p style="margin-top:12px" class="def"><strong>RISCO = assinatura × exposição × vulnerabilidade × persistência</strong></p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que "multiplicativo" muda tudo</span>
+    <p>A palavra é escolhida com precisão, e vale entender a diferença.</p>
+    <p style="margin-top:12px">Se o risco fosse <strong>aditivo</strong>, cada fator somaria um pouco e o total seria a soma das partes. Reduzir um fator reduziria o total proporcionalmente, e um fator zerado ainda deixaria os outros de pé.</p>
+    <p style="margin-top:12px">Sendo <strong>multiplicativo</strong>, duas consequências aparecem:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Um fator muito alto contamina o conjunto.</b> Uma vulnerabilidade individual grande — história familiar, um marcador basal já ruim — multiplica tudo o mais, mesmo com exposição modesta.</li>
+      <li><b>Um fator próximo de zero derruba o produto.</b> É por isso que a decisão mais poderosa costuma ser <em>não expor</em>, e não "expor com cuidado".</li>
+    </ul>
+    <p>Também explica por que duas pessoas com o mesmo composto e a mesma dose podem ter desfechos completamente diferentes: os outros dois fatores não são iguais.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O que isso muda na prática</span>
+    <p>Para quem treina alguém que usa, a lição operacional é: <strong>o composto sozinho não diz o que esperar</strong>. Duas perguntas valem mais que o nome da substância:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Qual a vulnerabilidade dessa pessoa?</b> Histórico familiar, marcadores basais, condições prévias, idade, uso de outras substâncias.</li>
+      <li><b>Há quanto tempo e com que continuidade?</b> Persistência é fator próprio na equação — e é o que a próxima seção desenvolve.</li>
+    </ul>
+    <p>Nada disso é para você decidir alguma coisa sobre o fármaco. É para <strong>calibrar sua expectativa de treino</strong> e para saber quando o assunto deixou de ser seu.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Do curso &middot; as cinco perguntas</span>
+    <p>Antes de qualquer análise, cinco perguntas ordenam o raciocínio:</p>
+    <ol class="key" style="margin-top:12px">
+      <li>Qual é o <b>objetivo real</b>?</li>
+      <li>Qual é o <b>contexto clínico completo</b>?</li>
+      <li>Quais são as <b>informações prioritárias agora</b>?</li>
+      <li><b>O que ainda não sabemos</b>?</li>
+      <li>Qual é o <b>próximo passo responsável</b>?</li>
+    </ol>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; as duas perguntas que quase ninguém faz</span>
+    <p>As três primeiras são intuitivas. A quarta e a quinta são as que distinguem raciocínio clínico de opinião.</p>
+    <p style="margin-top:12px"><strong>"O que ainda não sabemos"</strong> obriga a nomear a incerteza em vez de preenchê-la com suposição. É a pergunta que impede de tratar ausência de informação como se fosse informação tranquilizadora.</p>
+    <p style="margin-top:12px"><strong>"Qual o próximo passo responsável"</strong> força a conclusão a ser uma <em>ação</em>, e não um julgamento. Frequentemente o próximo passo responsável é: coletar mais dado, esperar, ou encaminhar. Isso é resposta legítima — e é, muitas vezes, a certa.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Do curso &middot; o organismo como rede</span>
+    <p>Um único agente pode alterar simultaneamente <strong>eixo, sangue, lipoproteínas, rim, fígado e músculo</strong>.</p>
+    <p style="margin-top:12px">Quatro consequências disso:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Normalidade populacional pode ser fisiologicamente inadequada</b> para aquele indivíduo.</li>
+      <li><b>Discordância entre marcadores pode revelar o mecanismo</b> — dois exames que não fecham entre si costumam ser mais informativos que dois exames concordantes.</li>
+      <li><b>Tendência e cronologia superam a fotografia isolada.</b></li>
+      <li>O objetivo é separar <b>adaptação, efeito, vulnerabilidade e lesão</b> — quatro coisas diferentes que um exame alterado não distingue sozinho.</li>
+    </ul>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O que isso muda na prática</span>
+    <p>A distinção entre <strong>adaptação, efeito, vulnerabilidade e lesão</strong> é a mais transferível de todo o curso, e vale bem além da farmacologia.</p>
+    <p style="margin-top:12px">Ela é exatamente o raciocínio que você já aplica em avaliação postural e em leitura de exercício: um achado alterado não é, por si só, um problema. Ele pode ser o corpo se adaptando, pode ser efeito esperado da intervenção, pode ser marcador de que aquela pessoa é mais suscetível, ou pode ser dano instalado. <strong>São quatro leituras com condutas diferentes</strong>, e confundi-las é o erro mais comum.</p>
+  </div>
+</section>
+
+<section id="receptor">
+  <span class="sec-num">03 &mdash; O RECEPTOR ANDROGÊNICO</span>
+  <h2>De ligação molecular <span class="accent">a transcrição</span></h2>
+  <p class="sec-sub">O mecanismo básico, e por que não existe receptor "anabólico".</p>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p>O receptor androgênico converte <strong>ligação molecular em transcrição gênica</strong>. A cascata:</p>
+    <p style="margin-top:12px">Andrógeno → complexo AR + proteínas de choque térmico → dímero nuclear → ligação ao DNA</p>
+    <ul class="clean" style="margin-top:12px">
+      <li>O <b>ligante altera a conformação</b> do receptor.</li>
+      <li><b>Cofatores remodelam a cromatina</b>.</li>
+      <li>Genes podem ser <b>ativados ou reprimidos</b>.</li>
+      <li>A <b>resposta final depende do tipo celular</b>.</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o receptor é um interruptor de leitura, não um motor</span>
+    <p>É tentador imaginar que o andrógeno "manda o músculo crescer". Não é isso que acontece.</p>
+    <p style="margin-top:12px">O receptor androgênico é um <strong>fator de transcrição</strong>. Em repouso, ele fica no citoplasma associado a proteínas chaperonas que o mantêm inativo. Quando o andrógeno se liga, o receptor <strong>muda de forma</strong>, solta as chaperonas, se emparelha com outro receptor igual (o dímero) e migra para o núcleo.</p>
+    <p style="margin-top:12px">Lá dentro, ele se liga a regiões específicas do DNA e recruta <strong>cofatores</strong> — proteínas que abrem ou fecham a cromatina, tornando genes acessíveis ou inacessíveis à maquinaria de transcrição.</p>
+    <p style="margin-top:12px">A consequência é decisiva: <strong>o mesmo receptor, ativado pelo mesmo hormônio, produz resultados diferentes conforme quais cofatores existem naquela célula</strong>. Não é o hormônio que decide o efeito. É o tecido que lê o sinal.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Do curso &middot; a consequência prática</span>
+    <p><strong>Cada tecido lê o mesmo AR de modo próprio.</strong></p>
+    <p style="margin-top:12px"><strong>Não existe um receptor "anabólico" separado do receptor androgênico.</strong></p>
+    <p style="margin-top:12px">O mesmo receptor atua em pele e folículo piloso, na próstata e no músculo — e o que muda entre eles é a <strong>5α-redutase local</strong>, o <strong>metabolismo do tecido</strong>, a <strong>idade</strong>, a <strong>reserva funcional</strong> e a <strong>predisposição genética</strong>.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Por que essa é a frase mais importante da parte 1</span>
+    <p>"Não existe receptor anabólico separado do androgênico" desmonta, de uma vez, a premissa que sustenta boa parte do discurso comercial da área.</p>
+    <p style="margin-top:12px">A ideia de um composto "anabólico mas pouco androgênico" pressupõe que existiriam duas vias separáveis — uma que constrói músculo e outra que causa acne, calvície e efeitos prostáticos. <strong>Não existem duas vias.</strong> Existe um receptor só, lido de formas diferentes por tecidos diferentes.</p>
+    <p style="margin-top:12px">Isso significa que a chamada "razão anabólico:androgênico" descreve, na melhor das hipóteses, uma <strong>tendência relativa em modelos específicos</strong> — não uma separação real de efeitos. E é por isso que o curso volta várias vezes ao mesmo ponto: <strong>todo AAS continua androgênico</strong>.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">⚖️ Leitura crítica</span>
+    <span class="subtipo">Tipo: OCR — termo a confirmar</span>
+    <p>A leitura automática do slide devolveu "AR+HSPSO", quase certamente <strong>HSP90</strong> — a proteína de choque térmico de 90 kDa, que é a chaperona classicamente descrita mantendo o receptor androgênico inativo no citoplasma. Adotei HSP90 por ser o termo estabelecido, mas vale conferir no slide original.</p>
+  </div>
+</section>
+
+<section id="aromatizacao">
+  <span class="sec-num">04 &mdash; AROMATIZAÇÃO</span>
+  <h2>Um contínuo, <span class="accent">não um interruptor</span></h2>
+  <p class="sec-sub">Por que percentuais fixos de conversão não existem.</p>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p><strong>Aromatização é um contínuo, não um interruptor.</strong></p>
+    <p style="margin-top:12px">O quanto se converte depende de:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Compatibilidade estrutural</b> da molécula com a enzima</li>
+      <li><b>Expressão de CYP19A1</b> — o gene da aromatase</li>
+      <li><b>Dose e concentração livre</b></li>
+      <li><b>Produção intraglandular</b></li>
+      <li>Qual <b>metabólito estrogênico</b> é formado</li>
+      <li><b>Método e momento da coleta</b> do exame</li>
+    </ul>
+    <p style="margin-top:12px"><strong>Percentuais fixos não são constantes universais.</strong></p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; onde a aromatase mora</span>
+    <p>A aromatase não fica concentrada num órgão só. Ela é expressa em <strong>tecido adiposo</strong>, no fígado, no osso, no cérebro, na mama e na própria gônada.</p>
+    <p style="margin-top:12px">Isso tem duas implicações diretas:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Adiposidade importa.</b> Mais tecido adiposo significa mais aromatase disponível, e portanto mais conversão para a mesma exposição. É por isso que a mesma quantidade produz respostas estrogênicas diferentes em pessoas com composição corporal diferente — algo que a anotação registra como "estradiol = substrato androgênico + aromatase + adiposidade".</li>
+      <li><b>A conversão é local, não só sistêmica.</b> Parte do estradiol que age num tecido foi produzido <em>naquele</em> tecido, e não chegou pelo sangue. Um exame sérico não captura isso.</li>
+    </ul>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O que isso muda na prática</span>
+    <p>A frase "percentuais fixos não são constantes universais" tem um alvo específico: as tabelas que circulam dizendo que tal composto "aromatiza X%".</p>
+    <p style="margin-top:12px">Esses números vêm de condições experimentais particulares e não se transferem para indivíduos. A mesma molécula, na mesma dose, converte diferente conforme <strong>composição corporal, genética da aromatase, idade e o que mais estiver sendo usado junto</strong>.</p>
+    <p style="margin-top:12px">Para o treinador, a leitura útil é: <strong>não há como prever o comportamento estrogênico de alguém pela substância que ele usa</strong>. Só o acompanhamento clínico daquele indivíduo responde — e esse acompanhamento é médico.</p>
+  </div>
+</section>
+
+<section id="5alfa">
+  <span class="sec-num">05 &mdash; 5α-REDUTASE E DHT</span>
+  <h2>Amplificação <span class="accent">local</span></h2>
+  <p class="sec-sub">O conceito que explica por que um exame sérico não conta a história toda.</p>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p><strong>A 5α-redutase pode amplificar ou atenuar.</strong></p>
+    <ul class="clean" style="margin-top:12px">
+      <li>Produz <b>sinal local amplificado</b></li>
+      <li>Atua em <b>pelo, próstata e genitais</b></li>
+      <li>Gera <b>complexo AR mais estável</b></li>
+      <li><b>DHT sérica não equivale a toda a ação tecidual</b></li>
+      <li>Para algumas moléculas, o metabólito é <b>relativamente menos potente</b> — daí "atenuar"</li>
+    </ul>
+    <p style="margin-top:12px"><strong>DHT é amplificação local — não apenas um exame sérico.</strong></p>
+    <p style="margin-top:12px">A enzima importa de modo <strong>tecido-dependente</strong>: tipo 1 em pele e outros tecidos, tipo 2 em próstata, genitais e folículos. E os <strong>AAS sintéticos também podem ativar o AR diretamente</strong>, sem depender da conversão.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que "amplificar ou atenuar"</span>
+    <p>A 5α-redutase converte a molécula em outra. Se o produto dessa conversão é <strong>mais potente</strong> no receptor que o original, a enzima amplifica. Se é <strong>menos potente</strong>, ela atenua.</p>
+    <p style="margin-top:12px">Com a <strong>testosterona</strong>, a conversão amplifica: a di-hidrotestosterona liga-se ao receptor androgênico com afinidade maior e forma um complexo mais estável. É por isso que os efeitos em pele, folículo e próstata são desproporcionais em relação à concentração sérica — nesses tecidos, o sinal chega <em>multiplicado</em>.</p>
+    <p style="margin-top:12px">Com outras moléculas, a mesma enzima produz um metabólito menos ativo. Aí a 5α-redutase funciona como <strong>freio local</strong>, e o tecido rico na enzima fica relativamente protegido.</p>
+    <p style="margin-top:12px">A mesma enzima, portanto, tem efeito oposto conforme a molécula. É a razão pela qual "derivado de DHT" não significa nada de uniforme.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O que isso muda na prática</span>
+    <p><strong>"DHT sérica não equivale a toda a ação tecidual"</strong> é a mesma lógica de "EMG não é hipertrofia": o marcador mede uma coisa, o desfecho é outra.</p>
+    <p style="margin-top:12px">A conversão acontece <em>dentro</em> do tecido-alvo, e o produto age ali mesmo, sem necessariamente aparecer na circulação. Alguém pode ter DHT sérica dentro da faixa e efeito cutâneo intenso — porque a amplificação relevante é local, não sistêmica.</p>
+    <p style="margin-top:12px">Consequência para o acompanhamento: <strong>o que a pessoa relata e o que se vê nela pesam</strong>, mesmo quando o exame não acusa. Acne, queda de cabelo e alteração de pele são achados clínicos que não dependem de confirmação sérica para existirem.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Do curso &middot; a advertência</span>
+    <p><strong>"Derivado de DHT" não é selo de segurança.</strong></p>
+    <p style="margin-top:12px">Compartilhar um núcleo 5α-reduzido <strong>não produz uma assinatura clínica uniforme</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que a família não prevê</span>
+    <p>Esta é a aplicação concreta da tese da seção 02. "Derivado de DHT" é um agrupamento <strong>estrutural</strong> — diz que as moléculas compartilham um esqueleto químico. Não diz nada sobre farmacodinâmica, exposição ou paciente.</p>
+    <p style="margin-top:12px">Dentro desse mesmo grupo convivem moléculas com comportamentos completamente diferentes: umas 17α-alquiladas e outras não, umas com forte impacto lipídico e outras com perfil distinto, umas com evidência clínica razoável e outras praticamente sem dado humano. A parte 5 desenvolve isso composto a composto.</p>
+    <p style="margin-top:12px">A única coisa que a família garante é o que ela nomeia: aquele esqueleto. Todo o resto precisa ser verificado molécula por molécula.</p>
+  </div>
+</section>
+
+<section id="alquilacao">
+  <span class="sec-num">06 &mdash; 17α-ALQUILAÇÃO</span>
+  <h2>Estabilidade <span class="accent">trocada por risco</span></h2>
+  <p class="sec-sub">A modificação que permite a via oral — e o que ela cobra.</p>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p><strong>A 17α-alquilação troca estabilidade por risco próprio.</strong></p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Protege o C17 da inativação rápida</b></li>
+      <li><b>Aumenta atividade e biodisponibilidade oral</b></li>
+      <li><b>A estrutura persiste mesmo por via injetável</b></li>
+      <li><b>Colestase pode ocorrer com AST e ALT apenas moderadamente alteradas</b></li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; o problema que a alquilação resolve</span>
+    <p>Uma molécula tomada por via oral é absorvida no intestino e vai <strong>direto para o fígado</strong> antes de alcançar a circulação geral. Esse trajeto obrigatório se chama <em>primeira passagem</em>.</p>
+    <p style="margin-top:12px">O fígado inativa esteroides rapidamente, atacando principalmente a posição <strong>C17</strong>. Resultado: a maior parte da dose é destruída antes de fazer qualquer coisa. A testosterona oral pura é praticamente inútil por isso.</p>
+    <p style="margin-top:12px">Adicionar um grupo alquil na posição 17α <strong>bloqueia fisicamente esse ataque</strong>. A molécula sobrevive à primeira passagem e chega à circulação em quantidade útil.</p>
+    <p style="margin-top:12px">O custo é que a molécula <strong>permanece no fígado por mais tempo, em concentração alta, resistindo à eliminação</strong>. A mesma propriedade que a torna oralmente ativa é a que gera sobrecarga hepatobiliar.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Os dois pontos mais importantes desta seção</span>
+    <p><strong>1. "A estrutura persiste mesmo por via injetável."</strong> Este é um achado contraintuitivo e clinicamente relevante. A alquilação é uma <strong>propriedade da molécula</strong>, não da via de administração. Injetar um composto 17α-alquilado não elimina o risco hepatobiliar — a molécula continua alquilada, continua circulando pelo fígado e continua resistindo à eliminação. O curso registra que colestase grave já foi descrita após uso intramuscular de composto alquilado.</p>
+    <p style="margin-top:12px"><strong>2. "Colestase pode ocorrer com AST e ALT moderadas."</strong> Esta é a informação mais importante da seção para quem acompanha alguém. Transaminases dentro de faixas pouco alteradas <strong>não descartam</strong> sofrimento hepatobiliar — porque colestase é um mecanismo diferente de lesão hepatocelular, e o marcador que a acusa não é o mesmo. A parte 3 desenvolve isso.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Escopo profissional &middot; sinais que exigem encaminhamento</span>
+    <p>Independentemente de exame, alguns sinais pedem avaliação médica imediata e devem ser conhecidos por quem acompanha treino:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Icterícia</b> — amarelamento de pele ou da parte branca dos olhos</li>
+      <li><b>Prurido persistente</b>, especialmente sem lesão de pele que o explique</li>
+      <li><b>Urina muito escura</b> ou fezes descoradas</li>
+      <li><b>Dor no quadrante superior direito</b> do abdômen</li>
+      <li><b>Náusea, perda de apetite e fadiga desproporcional</b>, instaladas em dias ou semanas</li>
+    </ul>
+    <p>Não cabe a nós investigar, nomear ou tratar. Cabe reconhecer, interromper o esforço de treino e encaminhar.</p>
+  </div>
+</section>
+
+<section id="metabolitos">
+  <span class="sec-num">07 &mdash; METABÓLITOS E O EIXO</span>
+  <h2>Amplificar, atenuar <span class="accent">ou redirecionar</span></h2>
+  <p class="sec-sub">O que o corpo faz com a molécula depois que ela entra.</p>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p><strong>Metabólitos amplificam, atenuam ou redirecionam.</strong> Três destinos diferentes:</p>
+    <div class="table-wrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>Destino</th><th>O que acontece</th></tr></thead>
+        <tbody>
+          <tr><td><b>Amplificação</b></td><td>O metabólito é mais potente que a molécula original — testosterona convertida em DHT</td></tr>
+          <tr><td><b>Redirecionamento</b></td><td>O metabólito age em outro sistema — conversão para estradiol muda o eixo de ação</td></tr>
+          <tr><td><b>Atenuação</b></td><td>O metabólito é menos ativo que o original</td></tr>
+          <tr><td><b>Liberação</b></td><td>O éster é clivado e libera a base ativa — não é metabolismo do núcleo, é entrega</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Do curso &middot; a testosterona</span>
+    <p><strong>A testosterona gera três sinais — e suprime o eixo.</strong></p>
+    <p style="margin-top:12px">Ela atua como andrógeno direto, converte-se em DHT (amplificação androgênica local) e converte-se em estradiol (sinal estrogênico). Simultaneamente, suprime o eixo hipotálamo-hipófise-gônada.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; por que a supressão do eixo é automática</span>
+    <p>O eixo funciona por <strong>retroalimentação negativa</strong>. O hipotálamo libera GnRH, que faz a hipófise liberar LH e FSH, que estimulam a gônada a produzir testosterona. Quando a testosterona sobe, ela sinaliza de volta para hipotálamo e hipófise reduzirem a produção.</p>
+    <p style="margin-top:12px">O sistema não distingue origem. Andrógeno exógeno em concentração alta é lido exatamente como andrógeno endógeno em concentração alta — e o eixo desliga. Por isso a supressão não é efeito colateral: é <strong>consequência obrigatória do mecanismo</strong>.</p>
+    <p style="margin-top:12px">O curso acrescenta um ponto fino: <strong>o próprio AR já suprime LH e FSH</strong>. A supressão não depende da conversão estrogênica — a ativação androgênica direta basta.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Do curso &middot; recuperação</span>
+    <p><strong>O eixo hormonal pode recuperar antes da fertilidade.</strong></p>
+    <p style="margin-top:12px">A sequência de retorno vai de <strong>exposição → testículo → sêmen</strong>, e o intervalo descrito vai de <strong>meses a cerca de um ano</strong>. LH e testosterona podem normalizar enquanto a espermatogênese ainda não retornou.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O que isso muda na prática</span>
+    <p>Este é um dos pontos em que a informação importa diretamente para quem acompanha, porque envolve <strong>expectativa e planejamento de vida</strong>.</p>
+    <p style="margin-top:12px">Um exame de testosterona que voltou ao normal <strong>não indica que a fertilidade retornou</strong>. São processos com escalas de tempo diferentes: a produção hormonal responde em semanas a meses; a espermatogênese é um ciclo longo e pode levar consideravelmente mais.</p>
+    <p style="margin-top:12px">Se um aluno menciona planos de ter filhos, essa é uma conversa que precisa acontecer <strong>com o médico dele</strong>, e o papel do treinador é apenas garantir que ele saiba que essa conversa existe. Não é nosso o assunto — mas o silêncio também informa mal.</p>
+  </div>
+
+  <div class="aula">
+    <span class="tag">Do curso &middot; a exposição não termina com a última dose</span>
+    <p><strong>Depósitos continuam ativos após a suspensão.</strong> A supressão gonadal pode persistir. O <strong>remodelamento cardíaco é cumulativo</strong>. <strong>Alopecia e mudança vocal podem não regredir.</strong></p>
+    <p style="margin-top:12px">Álcool, nicotina, cannabis e anfetaminas <strong>também contam</strong> na conta da exposição.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O quarto fator da equação: persistência</span>
+    <p>Aqui a equação da seção 02 fecha. <strong>Persistência</strong> é fator próprio porque alguns desfechos não são reversíveis com a retirada:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Podem melhorar após a retirada</b> — marcadores lipídicos, hematológicos, hepáticos, eixo hormonal, retenção hídrica.</li>
+      <li><b>Podem ser persistentes</b> — alopecia androgenética, alterações vocais, remodelamento cardíaco, virilização em mulheres.</li>
+    </ul>
+    <p>Essa distinção é o que o curso chama de <strong>"a reversibilidade define a prioridade"</strong>. Diante de dois riscos, o que não regride pesa mais — mesmo que o outro pareça mais grave no momento.</p>
+    <p style="margin-top:12px">A menção a álcool, nicotina, cannabis e anfetaminas amplia o conceito: <strong>exposição não é só o fármaco em questão</strong>. A conta é somada, e o organismo não separa as origens.</p>
+  </div>
+</section>
+
+<section id="19nor">
+  <span class="sec-num">08 &mdash; 19-NOR E PROLACTINA</span>
+  <h2>Estrutura descreve, <span class="accent">não diagnostica</span></h2>
+  <p class="sec-sub">Um caso exemplar de como o rótulo produz conclusão errada.</p>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p><strong>"19-nor" descreve estrutura — não uma síndrome.</strong></p>
+    <p style="margin-top:12px"><strong>Atividade progestagênica não é prolactina sérica.</strong> E 19-nor não prova hiperprolactinemia:</p>
+    <ul class="clean" style="margin-top:12px">
+      <li><b>Ligação não equivale a agonismo clínico</b></li>
+      <li><b>O próprio AR já suprime LH e FSH</b></li>
+      <li><b>Sono, estresse, TSH, rim e fármacos alteram prolactina</b></li>
+      <li><b>A medida deve responder a uma pergunta clínica</b></li>
+    </ul>
+    <p style="margin-top:12px">A anotação acrescenta: <strong>elevação leve de prolactina não é sintoma de prolactinoma</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; a cadeia de inferência que falha</span>
+    <p>O raciocínio popular é: composto 19-nor tem atividade progestagênica → atividade progestagênica eleva prolactina → prolactina alta causa determinados sintomas. Cada elo dessa cadeia tem um problema.</p>
+    <p style="margin-top:12px"><strong>Primeiro elo:</strong> ligação ao receptor de progesterona não significa <em>agonismo clínico relevante</em>. Uma molécula pode se ligar sem ativar, ou ativar em magnitude irrelevante nas concentrações reais.</p>
+    <p style="margin-top:12px"><strong>Segundo elo:</strong> a prolactina é influenciada por <strong>sono, estresse, função tireoidiana, função renal e diversos fármacos</strong> — incluindo vários de uso comum. Atribuir uma elevação ao composto sem excluir essas causas é pular etapas.</p>
+    <p style="margin-top:12px"><strong>Terceiro elo:</strong> sintomas frequentemente atribuídos à prolactina — queda de libido, disfunção erétil — <strong>também decorrem da própria supressão do eixo</strong>, que acontece de qualquer forma pela ativação do AR. A causa mais provável nem precisa da prolactina para se explicar.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">"A medida deve responder a uma pergunta clínica"</span>
+    <p>Esta frase é a melhor síntese do curso sobre exames, e antecipa a parte 3 inteira.</p>
+    <p style="margin-top:12px">Pedir um exame porque "é bom saber" produz números sem pergunta. E número sem pergunta gera duas armadilhas: <strong>tratar um valor</strong> em vez de tratar uma pessoa, e <strong>encontrar alterações irrelevantes</strong> que geram ansiedade e intervenções desnecessárias.</p>
+    <p style="margin-top:12px">O exame útil é o que foi pedido para responder algo — e cuja resposta <strong>mudaria uma decisão</strong>. Se o resultado não muda nada, a pergunta não estava formulada.</p>
+  </div>
+</section>
+
+<section id="assinatura-final">
+  <span class="sec-num">09 &mdash; A ASSINATURA COMPLETA</span>
+  <h2>Fechando <span class="accent">a parte 1</span></h2>
+  <p class="sec-sub">Como as peças moleculares se combinam no raciocínio final.</p>
+
+  <div class="aula">
+    <span class="tag">Do curso</span>
+    <p><strong>A assinatura final cruza molécula, exposição e paciente.</strong> O roteiro apresentado:</p>
+    <ol class="key" style="margin-top:12px">
+      <li><b>Identifique o núcleo</b> e as modificações estruturais</li>
+      <li><b>Mapeie o metabolismo</b> — o que a molécula vira no corpo</li>
+      <li><b>Defina metabólitos</b> e o comportamento farmacocinético</li>
+      <li><b>Separe as curvas por desfecho</b> — cada efeito segue a sua</li>
+      <li><b>Integre vulnerabilidades</b> individuais</li>
+      <li><b>Nomeie o risco dominante</b></li>
+    </ol>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Entenda melhor &middot; "cada desfecho segue sua própria curva"</span>
+    <p>Este é um dos conceitos mais úteis do curso e vale explicitar, porque contraria a intuição de que "mais dose = mais de tudo, proporcionalmente".</p>
+    <p style="margin-top:12px">Não é assim. <strong>Cada desfecho tem sua própria relação dose-resposta</strong>, com formato e inclinação diferentes. Ganho de massa magra, força, alteração lipídica, elevação de hematócrito, supressão do eixo, efeito cutâneo — todos respondem à exposição, mas <em>em ritmos diferentes</em>.</p>
+    <p style="margin-top:12px">A consequência prática é importante: pode existir uma faixa em que o benefício desejado já está próximo do platô enquanto algum risco ainda está subindo de forma acentuada. <strong>Aumentar a exposição nessa faixa compra pouco benefício e paga muito risco.</strong></p>
+    <p style="margin-top:12px">É exatamente o raciocínio por trás da noção de teto operacional que aparece na parte 6 — e é um raciocínio, não um número.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O que levar da parte 1</span>
+    <ol class="key" style="margin-top:12px">
+      <li><b>Não existe receptor anabólico separado do androgênico.</b> Um receptor só, lido de formas diferentes por tecidos diferentes.</li>
+      <li><b>Risco é multiplicativo</b> — assinatura × exposição × vulnerabilidade × persistência. Um fator alto contamina tudo; um fator próximo de zero derruba o produto.</li>
+      <li><b>Família não prevê comportamento.</b> "Derivado de DHT" e "19-nor" descrevem estrutura, não desfecho clínico.</li>
+      <li><b>A 17α-alquilação viaja com a molécula</b>, não com a via. Injetar não neutraliza.</li>
+      <li><b>Amplificação e conversão são locais.</b> Exame sérico não captura o que acontece dentro do tecido.</li>
+      <li><b>A exposição não termina com a última dose</b>, e alguns desfechos não regridem. Reversibilidade define prioridade.</li>
+      <li><b>Cada desfecho tem sua própria curva.</b> Não há proporcionalidade única entre dose e efeitos.</li>
+      <li><b>A medida deve responder a uma pergunta clínica.</b> Exame sem pergunta produz número sem significado.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="glossario">
+  <span class="sec-num">10 &mdash; GLOSSÁRIO</span>
+  <h2>Os termos <span class="accent">da parte 1</span></h2>
+  <p class="sec-sub">Referência rápida.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Termo</th><th>Definição</th></tr></thead>
+      <tbody>
+        <tr><td>AR (receptor androgênico)</td><td>Fator de transcrição que converte a ligação do andrógeno em ativação ou repressão de genes. Um só, para todos os tecidos.</td></tr>
+        <tr><td>Fator de transcrição</td><td>Proteína que se liga ao DNA e regula quais genes são lidos. Não executa a ação — determina o que será produzido.</td></tr>
+        <tr><td>HSP90</td><td>Proteína chaperona que mantém o AR inativo no citoplasma até a chegada do ligante.</td></tr>
+        <tr><td>Cofator</td><td>Proteína recrutada pelo receptor que remodela a cromatina, tornando genes acessíveis ou não. Varia entre tecidos — é o que faz a resposta ser tecido-específica.</td></tr>
+        <tr><td>Cromatina</td><td>DNA associado a proteínas. Seu grau de compactação determina quais genes podem ser transcritos.</td></tr>
+        <tr><td>Aromatase (CYP19A1)</td><td>Enzima que converte andrógenos em estrogênios. Expressa em tecido adiposo, fígado, osso, cérebro e gônada.</td></tr>
+        <tr><td>5α-redutase</td><td>Enzima que converte andrógenos em seus metabólitos 5α-reduzidos. Tipo 1 predominante em pele; tipo 2 em próstata, genitais e folículos.</td></tr>
+        <tr><td>DHT</td><td>Di-hidrotestosterona. Metabólito 5α-reduzido da testosterona, com maior afinidade pelo AR e complexo mais estável.</td></tr>
+        <tr><td>17α-alquilação</td><td>Modificação estrutural que protege o C17 da inativação hepática, permitindo via oral. Viaja com a molécula, não com a via.</td></tr>
+        <tr><td>Primeira passagem</td><td>Trajeto obrigatório pelo fígado que toda substância absorvida no intestino percorre antes de alcançar a circulação geral.</td></tr>
+        <tr><td>Colestase</td><td>Redução ou interrupção do fluxo biliar. Mecanismo distinto da lesão hepatocelular — pode ocorrer com transaminases pouco alteradas.</td></tr>
+        <tr><td>Éster</td><td>Grupo acoplado à molécula que modula a velocidade de liberação. Não altera a base ativa; altera a entrega.</td></tr>
+        <tr><td>Retroalimentação negativa</td><td>Mecanismo em que o produto final de um eixo sinaliza de volta para reduzir sua própria produção. Base da supressão gonadal.</td></tr>
+        <tr><td>Eixo HPG</td><td>Hipotálamo–hipófise–gônada. GnRH → LH e FSH → produção gonadal.</td></tr>
+        <tr><td>19-nor</td><td>Agrupamento estrutural de moléculas sem o carbono 19. Descreve estrutura, não síndrome clínica.</td></tr>
+        <tr><td>Assinatura</td><td>Conceito central do curso: estrutura × farmacodinâmica × exposição × paciente. Substitui o rótulo de família.</td></tr>
+        <tr><td>Curva dose-resposta</td><td>Relação entre exposição e magnitude de um desfecho. Cada desfecho tem a sua, com formato próprio.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="confirmar">
+  <span class="sec-num">11 &mdash; PONTOS A CONFIRMAR</span>
+  <h2>O que checar <span class="accent">nos slides originais</span></h2>
+  <p class="sec-sub">Lacunas do registro, sobretudo de leitura automática.</p>
+
+  <div class="callout">
+    <span class="tag">Como usar esta lista</span>
+    <p>O texto dos slides foi extraído por reconhecimento óptico, que erra com frequência em nomes técnicos, símbolos e números. Onde a leitura ficou duvidosa, registrei aqui em vez de adivinhar.</p>
+  </div>
+
+  <ol class="key">
+    <li><b>HSP90 (seção 03).</b> A leitura devolveu "HSP&Oslash;O"; adotei HSP90 por ser o termo estabelecido. Confirmar no slide.</li>
+    <li><b>Número de assinaturas de risco.</b> As anotações manuscritas numeram <b>oito</b> (hematológica, lipídica, hepática, hemodinâmica, cardíaca, estrogênica/progestagênica, androgênica, neuropsiquiátrica) e os slides trazem oito pirâmides nomeadas, uma por slide. Mas dois slides mencionam "seis pirâmides" no contexto do risco masculino. Confirmar se são oito no total com seis destacadas no fluxo masculino, ou se houve erro de leitura. Adotei oito, seguindo a anotação manuscrita.</li>
+    <li><b>"Metabólito relativamente menos potente" (seção 05).</b> A leitura ficou parcial. Confirmar a quais moléculas o curso atribui atenuação pela 5α-redutase.</li>
+    <li><b>Tipos 1 e 2 da 5α-redutase (seção 05).</b> A distribuição tecidual lida foi parcial. Confirmar a descrição exata do slide.</li>
+    <li><b>Intervalo de recuperação da fertilidade (seção 07).</b> A leitura sugere "meses a cerca de um ano". Confirmar o intervalo apresentado.</li>
+  </ol>
+</section>
+
+<section id="referencias">
+  <span class="sec-num">12 &mdash; FONTE E HONESTIDADE CIENTÍFICA</span>
+  <h2>De onde vem <span class="accent">cada afirmação</span></h2>
+  <p class="sec-sub">O que é do curso, o que é desenvolvimento e o que é ressalva.</p>
+
+  <h3>Fonte</h3>
+
+  <ul class="clean">
+    <li><b>Jornada Prática em Farmacologia Hormonal</b> — curso ministrado por <b>Gabriel Kaminski</b>. Todo o conteúdo dos blocos azuis desta série provém das aulas e dos slides desse curso.</li>
+    <li>As <b>Pirâmides Kaminski</b>, desenvolvidas na parte 4, são identificadas no próprio material como <b>modelo autoral para raciocínio e redução de danos</b> — não como classificação consensual da literatura.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">Nota de honestidade científica</span>
+    <p><strong>Sobre a reprodução do conteúdo:</strong> nada aqui é cópia literal dos slides. O conteúdo foi reescrito e desenvolvido em formulação própria, como material de estudo. A autoria do curso é creditada acima, e este material não substitui nem reproduz a formação.</p>
+    <p style="margin-top:12px"><strong>Sobre o método de captura:</strong> o texto dos slides foi obtido por reconhecimento óptico de fotografias, com taxa de erro relevante em termos técnicos e números. As anotações manuscritas feitas em aula têm prioridade quando divergem. Os pontos duvidosos estão na seção 11.</p>
+    <p style="margin-top:12px"><strong>Sobre ranking autoral e nível de evidência:</strong> o próprio curso faz essa distinção explicitamente, e ela é preservada aqui. Um ranking de risco proposto por um autor organiza raciocínio e prioriza decisões — mas não equivale a hierarquia demonstrada por evidência clínica. Onde o material original marca isso, o registro mantém a marcação.</p>
+    <p style="margin-top:12px"><strong>Sobre a base de evidência da área:</strong> a farmacologia de esteroides androgênicos anabólicos em contexto não terapêutico tem, por razões éticas óbvias, <strong>base experimental limitada em humanos</strong>. Grande parte do conhecimento vem de séries de casos, estudos observacionais, extrapolação de contextos terapêuticos e de dados pré-clínicos. Isso não invalida o raciocínio — impõe humildade sobre o grau de certeza de qualquer afirmação, inclusive das aqui registradas.</p>
+    <p style="margin-top:12px"><strong>Sobre escopo:</strong> repetindo o que abre a série, porque é o ponto que mais importa. Prescrição, indicação, escolha de composto, definição de dose e monitorização são <strong>atos médicos</strong>. O educador físico estuda isto para entender o contexto do aluno, ajustar treino e reconhecer quando encaminhar. Os números registrados nesta série são <strong>documentação do que o curso apresentou</strong> — proposições autorais do professor —, não recomendações, e não devem ser repassados como orientação a ninguém.</p>
+  </div>
+
+  <div class="nav-next"><a href="kaminski-2-farmacocinetica.html"><span class="lbl">Próxima parte</span><span class="ttl">2 · Farmacocinética e assinatura &rarr;</span></a><a href="index.html"><span class="lbl">Voltar</span><span class="ttl">Biblioteca de estudos</span></a></div>
+</section>
+
+</main>
+
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Jornada Kaminski &middot; Parte 1 de 7 &middot; Fundamentos moleculares</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material de estudo pessoal sobre a Jornada Prática em Farmacologia Hormonal, de Gabriel Kaminski. Conteúdo reescrito em formulação própria. Não substitui a formação original. Prescrição é ato médico.</p>
+</footer>
+<script src="mgcoach.js"></script>
+</body>
+</html>

@@ -1,151 +1,104 @@
-# Biblioteca MG COACH — índice recolhível + CSS e JS compartilhados
+# Biblioteca MG COACH — Jornada Kaminski
 
-Atualização geral: **todos os 82 materiais**.
-
----
-
-## ⚠️ LEIA ANTES DE SUBIR
-
-Os materiais agora dependem de **dois arquivos novos**: `mgcoach.css` e `mgcoach.js`.
-
-**Se você subir só os HTMLs e esquecer esses dois, a biblioteca inteira fica sem estilo nenhum.**
-
-Suba tudo junto. O jeito mais seguro é substituir o repositório inteiro de uma vez.
+**90 materiais.** Esta entrega adiciona a série **Jornada Kaminski · Farmacologia Hormonal**, com 7 partes.
 
 ---
 
-## 1. O índice agora recolhe
+## Suba estes 8 arquivos
 
-Era o pedido original. O índice de tópicos ficava dentro do cabeçalho `sticky` e ocupava metade da tela o tempo todo.
+| Arquivo | |
+|---|---|
+| `kaminski-1-fundamentos-moleculares.html` | novo |
+| `kaminski-2-farmacocinetica.html` | novo |
+| `kaminski-3-leitura-exames.html` | novo |
+| `kaminski-4-assinaturas-risco.html` | novo |
+| `kaminski-5-compostos.html` | novo |
+| `kaminski-6-protocolos-casos.html` | novo |
+| `kaminski-7-peptideos.html` | novo |
+| `estudos.json` | 83 → 90 materiais |
 
-| | Cabeçalho | Da tela do celular |
-|---|---|---|
-| Antes | 370–578 px | 44% a 68% |
-| Agora | 100 px | 12% |
+`mgcoach.css` e `mgcoach.js` **não mudaram** — não precisa subir.
 
-- Vem **fechado**, com um botão mostrando `Índice · N seções`
-- Um toque abre, a setinha gira
-- **Ao escolher um tópico, fecha sozinho** — você cai na seção com a tela livre
-- Lembra sua preferência entre materiais e visitas
-
-### Salto instantâneo
-
-Nos materiais longos, pular para uma seção distante percorria mais de 46.000 px de rolagem animada — vários segundos. Agora o salto pelo índice é instantâneo e posicionado, com o título parando logo abaixo do cabeçalho.
-
----
-
-## 2. CSS e JS agora são compartilhados
-
-Antes, cada material carregava sua própria cópia de ~9 KB de CSS e ~1 KB de JS. Qualquer ajuste visual significava editar 82 arquivos.
-
-Agora existem `mgcoach.css` e `mgcoach.js`, e todo material aponta para eles.
-
-### O que isso muda
-
-| | Antes | Depois |
-|---|---|---|
-| Tamanho total dos HTMLs | 2,96 MB | 2,20 MB |
-| Primeira visita a um material | 37 KB | 44 KB |
-| **Visitas seguintes** (css/js em cache) | 37 KB | **27 KB** |
-| Mudar algo no visual | editar 82 arquivos | **editar 1 arquivo** |
-
-A primeira visita fica levemente maior porque baixa os três arquivos. Da segunda em diante, o navegador reaproveita o CSS e o JS e cada material fica **27% mais leve**.
+> Suba as 7 partes **juntas**. Elas se linkam entre si.
 
 ---
 
-## 3. Defeitos corrigidos no caminho
+## As sete partes
 
-| Defeito | Onde | O que era |
-|---|---|---|
-| **Tags de fechamento duplicadas** | 35 materiais | `</body>` e `</html>` repetidos de 2 a 4 vezes. HTML inválido, herdado do template original. |
-| **`ol.key li b` com `color:#fff`** | 13 materiais | Texto em negrito dentro das listas numeradas ficava branco no branco, **ilegível no tema claro**. |
-| **Colisão de classe `.serie-bar`** | 6 materiais | A série postural usava esse nome para outra coisa; 66 materiais já usavam para uma barra de pills. Renomeada para `.parte-bar`. |
-| **Material sem link de volta** | `agachamento-vs-legpress.html` | Não tinha o `← Biblioteca`. Beco sem saída. Adicionado. |
-
----
-
-## 4. O que mudou de aparência — e onde
-
-A biblioteca tinha **17 variações diferentes de CSS**, resultado de o padrão ter evoluído ao longo do tempo. O arquivo compartilhado adota a variação usada em **60 dos 82** materiais.
-
-**67 materiais ficaram pixel-idênticos.**
-
-**15 materiais mudaram de forma sutil:**
-
-- `h2` de 26 px para 25 px
-- Título do hero um pouco menor (a maioria de 32 px para 30 px; um de 34 px)
-- Fundo das caixas `.def` levemente mais laranja
-
-Arquivos afetados: `agachamento-gluteo-livre-vs-smith`, `agachamento-vs-legpress`, `ciclo-de-carboidratos`, `contracao-muscular`, `creatina-superestimada`, `dor-lombar-core-gluteos`, `forca-e-hipertrofia`, `hipertrofia-biceps-braquial`, `hipertrofia-regional-gluteo`, `hipertrofia-triceps-overhead`, `perfil-de-resistencia`, `posicao-dos-pes-leg-press`, `pre-treinos-subdosados`, `testosterona-natural`, `volume-de-treino`.
-
-Na prática isso **unifica a identidade visual**, que estava com deriva. Mas é uma mudança real — se você preferir manter algum deles como estava, me avisa que eu devolvo o tamanho original só para ele.
+| Parte | Conteúdo |
+|---|---|
+| 1 · Fundamentos moleculares | Receptor androgênico, aromatização, 5α-redutase, 17α-alquilação, metabólitos, supressão do eixo |
+| 2 · Farmacocinética e assinatura | Ésteres, picos e vales, acumulação, afinidade × potência × eficácia × seletividade |
+| 3 · Leitura de exames | Basal, fenótipo, e cada marcador com o que ele realmente informa |
+| 4 · As oito assinaturas de risco | As Pirâmides Kaminski, convergência, ápices, pirâmides femininas |
+| 5 · Compostos | Análise molécula a molécula, sem selo de segurança por família |
+| 6 · Protocolos e casos | Bulking, cutting, o oral, fluxos masculino e feminino, monitorização |
+| 7 · Peptídeos | GH e secretagogos, GHRPs, mecanismo versus desfecho, qualidade de produto |
 
 ---
 
-## 5. Como subir
+## Como o material foi construído
 
-O mais seguro é substituir tudo:
+**Fonte:** 143 fotografias de slides do curso + 4 páginas de anotações manuscritas suas.
 
-1. Descompacte o ZIP
-2. Em `github.com/mgcoach/materialdeestudo-`, **Add file → Upload files**
-3. Arraste **todo o conteúdo** da pasta
-4. Marque **Replace** onde pedir
-5. **Commit changes**
-6. Aguarde 2–3 minutos
-7. Teste em **aba anônima** (para não pegar cache antigo)
+**Método:** o texto dos slides foi extraído por **reconhecimento óptico em português** (Tesseract), gerando cerca de 68 mil caracteres. As anotações manuscritas foram lidas diretamente.
 
-### Confira depois de subir
+**Prioridade:** onde slides e anotações divergem, **as anotações manuscritas prevalecem** — são registro direto, enquanto o OCR erra com frequência em termos técnicos e, principalmente, em números.
 
-- [ ] Um material abre com fundo preto e o laranja da marca
-- [ ] O botão `Índice · N seções` aparece e abre/fecha
-- [ ] Clicar num tópico salta e recolhe o índice
-- [ ] O tema claro/escuro alterna
-- [ ] O `← Biblioteca` volta para a home
-- [ ] A home lista 82 materiais e a busca no conteúdo indexa
+**Reprodução:** nada é cópia literal dos slides. Todo o conteúdo foi reescrito em formulação própria, com a autoria do curso creditada em todas as partes.
 
 ---
 
-## 6. Daqui pra frente
+## Duas decisões que você deve conhecer
 
-Para mudar qualquer coisa no visual da biblioteca inteira — cor, fonte, espaçamento, um bloco novo —, agora é **um arquivo**: `mgcoach.css`.
+### 1. Adotei oito assinaturas, não seis
 
-Materiais novos devem seguir este padrão:
+Suas anotações numeram **8** explicitamente (hematológica, lipídica, hepática, hemodinâmica, cardíaca, estrogênica/progestagênica, androgênica, neuropsiquiátrica). Os slides trazem **8 pirâmides nomeadas**, uma por slide — o que confirma.
 
-```html
-<head>
-  <meta charset="UTF-8">
-  <script>(function(){try{var t=localStorage.getItem("mgcoach-theme");
-    if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>...</title>
-  <!-- bloco OG -->
-  <link rel="stylesheet" href="mgcoach.css">
-</head>
-```
+Mas dois slides mencionam "seis pirâmides" no contexto do fluxo masculino. Pode ser que seis sejam destacadas nesse fluxo, ou erro de leitura automática.
 
-E, antes do `</body>`:
+**Adotei oito**, seguindo sua anotação numerada. A divergência está registrada nos pontos a confirmar.
 
-```html
-<script src="mgcoach.js"></script>
-```
+### 2. Os números de dose entraram, com enquadramento
 
-O script curto do `<head>` **continua inline de propósito** — ele aplica o tema antes da página pintar, evitando o flash branco ao abrir no tema claro.
+Conforme você decidiu, os valores apresentados no curso foram mantidos como **registro do conteúdo**. Eles aparecem com marcação explícita de **proposição autoral do professor** — não recomendação, não referendada, não orientação.
 
-O cabeçalho precisa ter a barra do índice e o `id="tocNav"` no nav. O `mgcoach.js` conta as seções sozinho e monta o rótulo.
+O enquadramento aparece na abertura da parte 1 e é repetido no bloco onde os números surgem, na parte 6. O foco do texto está no **raciocínio** que produz o teto — curvas que saturam para benefício e continuam subindo para risco — e não no miligrama.
+
+---
+
+## Pontos a confirmar
+
+Dez itens, consolidados na parte 7, seção 07. Os principais:
+
+- **Número de assinaturas** — oito ou seis (o mais importante)
+- **Valores do caso de bulking** — ApoB e HDL vieram de OCR, não confirmados
+- **Teto operacional** — confirmar valor e enquadramento dado em aula
+- **Tabela comparativa das cinco moléculas** — colunas de risco e evidência reconstruídas de extração parcial
+- **Ápice da pirâmide hematológica** — atribuição por leitura parcial
+
+---
+
+## Escopo profissional
+
+A série declara, na abertura e no fechamento de cada parte:
+
+**Farmacologia hormonal é prescrição médica.** O educador físico não prescreve, não sugere composto, não define dose e não orienta ciclo.
+
+O material serve para três coisas legítimas: **entender o contexto** de um aluno que usa, para ajustar treino e expectativa; **reconhecer sinais que exigem encaminhamento**; e **conversar com o médico do aluno** na mesma linguagem.
 
 ---
 
 ## Validação executada
 
-Nos 82 materiais, servidos por HTTP, com contexto de navegador limpo a cada arquivo:
+Nos **90 materiais**, servidos por HTTP com contexto de navegador limpo a cada arquivo:
 
-- `html.parser` sem erros
-- CSS aplicando (fundo `rgb(10,10,10)`)
-- Índice fechado por padrão, abrindo e fechando
-- Cabeçalho crescendo ao abrir o índice
-- Salto para a **última seção** de cada material caindo na posição certa
-- Índice recolhendo ao clicar num tópico
-- Tema claro/escuro alternando
-- **Zero erro de JavaScript**
-
-Além disso: comparação de estilos computados contra a versão original em 8 materiais de amostra, home listando 82, busca no conteúdo indexando os 82 e retornando resultados com links de seção corretos, e o `← Biblioteca` navegando de volta.
+- `html.parser` limpo · marcadores obrigatórios em 1 ocorrência cada
+- `sec-num` sequencial · âncoras batendo com as seções
+- CSS aplicando · índice fechando, abrindo e recolhendo ao clicar
+- Salto para a última seção de cada material na posição correta
+- Tema claro/escuro alternando · **zero erro de JavaScript**
+- **Zero link interno quebrado**
+- `estudos.json` com 90 entradas, todas com arquivo correspondente
+- Cadeia da série Kaminski percorrida de 1 a 7 pelos links de "próxima parte"
+- Home listando 90 materiais

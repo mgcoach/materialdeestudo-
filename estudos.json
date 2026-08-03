@@ -529,6 +529,62 @@
     "arquivo": "postural-7-testes-praticos.html"
   },
   {
+    "titulo": "Jornada Kaminski 1 · Fundamentos moleculares",
+    "categoria": "fisiologia",
+    "serie": "Jornada Kaminski",
+    "data": "Ago · 2026",
+    "resumo": "Abertura da série. A tese que organiza o curso inteiro: esteroides têm ASSINATURAS, não rótulos — estrutura × farmacodinâmica × exposição × paciente — e o risco é MULTIPLICATIVO (assinatura × exposição × vulnerabilidade × persistência), o que significa que um fator alto contamina o conjunto e um fator próximo de zero derruba o produto. Receptor androgênico como fator de transcrição, com a frase que desmonta o discurso comercial da área: NÃO EXISTE RECEPTOR ANABÓLICO SEPARADO DO ANDROGÊNICO — é um receptor só, lido de formas diferentes por cada tecido, o que invalida a premissa da razão anabólico:androgênico. Aromatização como contínuo e não interruptor (percentuais fixos não são constantes universais). 5α-redutase como amplificação LOCAL, com 'DHT sérica não equivale a toda ação tecidual'. 17α-alquilação: protege o C17 e permite via oral, mas a estrutura VIAJA COM A MOLÉCULA, não com a via — injetar não neutraliza —, e colestase pode ocorrer com AST/ALT apenas moderadas. Metabólitos que amplificam, atenuam ou redirecionam; supressão do eixo como consequência obrigatória do mecanismo; recuperação hormonal que antecede a fertilidade. Fecha com 19-nor e prolactina, mostrando por que a cadeia de inferência popular falha em cada elo. Escopo declarado: prescrição é ato médico.",
+    "arquivo": "kaminski-1-fundamentos-moleculares.html"
+  },
+  {
+    "titulo": "Jornada Kaminski 2 · Farmacocinética e assinatura",
+    "categoria": "fisiologia",
+    "serie": "Jornada Kaminski",
+    "data": "Ago · 2026",
+    "resumo": "O éster governa QUANDO, não O QUÊ: depósito oleoso → liberação do éster → base ativa, sempre a mesma molécula. Massa do éster não é massa de base ativa, o que torna a comparação de apresentações 'pelo número do rótulo' uma fonte sistemática de erro. Veículo, local e técnica também moldam a exposição. Picos, vales e acumulação pertencem ao esquema: o equilíbrio exige 4 a 5 meias-vidas, tanto na entrada quanto na saída — nem começar nem parar produz efeito imediato. O momento da coleta define o resultado, e um exame só é interpretável se o intervalo desde a última aplicação for conhecido. 'Meia-vida curta aumenta a capacidade de recuar' — duração longa é compromisso com uma janela irreversível. Afinidade, potência, eficácia e seletividade como quatro perguntas distintas tratadas como sinônimos: potência é posição na escala de dose, eficácia é teto de resposta, e as duas são independentes. Seletividade é propriedade da EXPOSIÇÃO, não da molécula.",
+    "arquivo": "kaminski-2-farmacocinetica.html"
+  },
+  {
+    "titulo": "Jornada Kaminski 3 · Leitura de exames",
+    "categoria": "fisiologia",
+    "serie": "Jornada Kaminski",
+    "data": "Ago · 2026",
+    "resumo": "A parte mais aplicável do curso, construída sobre as anotações manuscritas de aula. O BASAL como controle inicial de um experimento clínico individual, com a redefinição que muda tudo: alteração é desvio em relação à PRÓPRIA PESSOA, não à faixa de referência — sem basal não existe monitorização, apenas coleta de números. Documentar o fenótipo antes do laboratório (cardiovascular, sono e SNC, reprodução), com o alerta de que vários desses achados aparecem no treino antes de qualquer exame. Pressão e frequência com técnica, MRPA/MAPA quando consultório e contexto discordam. Depois, marcador por marcador: hematócrito alto não é diagnóstico (excluir hemoconcentração antes de investigar produção; hematócrito alto com ferritina baixa se explicam mutuamente); LDL-C mede carga e ApoB CONTA PARTÍCULAS, e quando discordam a contagem informa melhor; rim não se resume à creatinina, que sobe com massa muscular, creatina, carne e treino — praticamente todo o perfil de quem treina; TGO e TGP medem LESÃO e não FUNÇÃO, e vêm também do músculo, além de não acusarem colestase; testosterona total sem SHBG é meia informação; LH e FSH LOCALIZAM o eixo (supressão, falência ou resistência periférica); estradiol alto não autoriza conduta automática, e supressão excessiva afeta osso, sexualidade e metabolismo; hormônios pulsáteis exigem tendência e não ponto isolado; TSH e T4 livre como par. Fecha com 'o laboratório entrega números, mas o corpo conta uma história'.",
+    "arquivo": "kaminski-3-leitura-exames.html"
+  },
+  {
+    "titulo": "Jornada Kaminski 4 · As oito assinaturas de risco",
+    "categoria": "fisiologia",
+    "serie": "Jornada Kaminski",
+    "data": "Ago · 2026",
+    "resumo": "As PIRÂMIDES KAMINSKI, apresentadas no próprio curso como modelo autoral para raciocínio e redução de danos — com as limitações que o material declara: não medem incidência, não são validadas, não substituem nível de evidência, e só reduzem dano quando mudam a decisão. As oito assinaturas: hematológica, lipídica, hepática, hemodinâmica, cardíaca, estrogênica/progestagênica, androgênica e neuropsiquiátrica — esta última sem marcador laboratorial, dependendo inteiramente de observação, e com a advertência de que 'a média esconde suscetíveis'. A mesma molécula ocupa posições diferentes conforme o sistema, e a pirâmide dominante é definida pelo PACIENTE, não pelo objetivo nem pelo composto. CONVERGÊNCIA como mecanismo silencioso: um oral alquilado carrega as pirâmides hepática e lipídica simultaneamente, e como o risco é multiplicativo o efeito combinado supera a soma. 'Sem aromatização o risco migra para outros eixos' e 'aparência seca não informa endotélio, artéria ou miocárdio' — o descompasso entre feedback estético imediato e dano vascular silencioso. Ápices autorais e pirâmides femininas (virilização, hepática feminina, pele e cabelo), com a regra que organiza o feminino: a reversibilidade define a prioridade. Fecha com 'red flags encerram a exposição antes da discussão de otimização'.",
+    "arquivo": "kaminski-4-assinaturas-risco.html"
+  },
+  {
+    "titulo": "Jornada Kaminski 5 · Compostos",
+    "categoria": "fisiologia",
+    "serie": "Jornada Kaminski",
+    "data": "Ago · 2026",
+    "resumo": "Análise molécula a molécula, sob o princípio de que cada composto carrega uma assinatura e não um selo de segurança — mesmo núcleo não significa mesma farmacocinética, dose, segurança ou evidência. Testosterona como referência: três sinais (androgênico direto, DHT, estradiol) mais supressão do eixo, e eritropoiese por vias paralelas com apneia, hipóxia e tabagismo amplificando. Metenolona e drostanolona, os não aromatizáveis lidos como 'leves': a drostanolona NÃO é antiestrogênico injetável e não bloqueia o estradiol vindo da testosterona, e 'evidência escassa' significa incerteza e não ausência de problema. Oxandrolona e estanozolol, os orais alquilados: 'pouca retenção não neutraliza o restante' (HDL reduzido, LDL e não-HDL elevados, colestase e peliose), e o estanozolol como demonstração concreta de que a alquilação viaja com a molécula — via IM não elimina a circulação hepática, e colestase grave foi descrita nessa via. Os 19-nor, com nandrolona e trembolona explicitamente NÃO sendo versões da mesma intervenção. Metandienona e oximetolona, esta última provando que EDEMA NÃO EXIGE AROMATIZAÇÃO — retenção não é marcador de atividade estrogênica. Tabela comparativa cruzando alquilação, aromatização, risco dominante e grau de evidência.",
+    "arquivo": "kaminski-5-compostos.html"
+  },
+  {
+    "titulo": "Jornada Kaminski 6 · Protocolos e casos",
+    "categoria": "fisiologia",
+    "serie": "Jornada Kaminski",
+    "data": "Ago · 2026",
+    "resumo": "A decisão começa ANTES do fármaco, e a pirâmide vem antes da escolha estética: objetivo não é indicação — querer um resultado não gera justificativa clínica para nada. Bulking: 'não é maximizar o peso da balança', e 'volume adicional troca um gargalo por outro' — os novos gargalos costumam ser recuperação, sono e programação, que são território do educador físico. Qualidade muscular não significa neutralidade metabólica. Caso apresentado em que o basal (ApoB e HDL desfavoráveis mais história familiar) JÁ ESCOLHEU a pirâmide antes de qualquer discussão de objetivo. Cutting: definição não é efeito farmacológico isolado, o cutting não rebaixa o risco androgênico, e 'déficit energético reduz a margem fisiológica' — a fase de melhor aparência é a de menor reserva. 'O HDL não precisa esperar sintomas'. O oral como quebra de platô que COMPRIME A MARGEM em duas pirâmides ao mesmo tempo. Fluxo masculino com o teto operacional autoral registrado como proposição do curso, divisão de aplicações e redução diante de colaterais. Fluxo feminino que se REORGANIZA e não se reduz: produção endógena de 0,25 a 1 mg/dia, 'baixa dose ≠ dose segura' quando o desfecho é irreversível, e AMENORREIA NO CUTTING EXIGE DIAGNÓSTICO E NÃO NORMALIZAÇÃO — item diretamente acionável no escopo do treinador. Fecha com monitorização em cinco etapas e a regra de ação definida antes.",
+    "arquivo": "kaminski-6-protocolos-casos.html"
+  },
+  {
+    "titulo": "Jornada Kaminski 7 · Peptídeos",
+    "categoria": "fisiologia",
+    "serie": "Jornada Kaminski",
+    "data": "Ago · 2026",
+    "resumo": "Fecho da série. Outra química, mesma lógica: peptídeos são cadeias de aminoácidos, degradadas por proteases e atuando em receptores de superfície — e substituições pequenas de sequência mudam resistência, afinidade e meia-vida sem que a molécula deixe de ter 'o mesmo núcleo'. Duas advertências organizam o bloco: concentração plasmática não demonstra acesso ao alvo, e CONCENTRAÇÃO IN VITRO PODE SER INALCANÇÁVEL EM HUMANOS. Dessensibilização como fenômeno inerente ao tipo de receptor, o que explica por que a fisiologia endógena desses eixos é pulsátil. As quatro estratégias sobre o eixo do GH (estimular, administrar GH, administrar IGF-1, retirar o freio), com a observação de que quanto mais distal a intervenção, mais previsível e MENOS REGULADA. 'Secretagogos amplificam apenas o que a hipófise consegue entregar.' GHRPs que 'carregam mais farmacologia que a liberação de GH' — apetite e edema não são efeitos imprevistos, são consequência do alvo escolhido, já que o receptor é o mesmo da grelina. Tesamorelina que 'prova eficácia em UM CONTEXTO'. MOTS-c e SS-31 mostrando a DISTÂNCIA ENTRE MECANISMO E DESFECHO — o mesmo erro que EMG versus hipertrofia, em outro domínio. Qualidade de produto: identidade, pureza, quantidade e potência como quatro testes distintos, área cromatográfica relativa que não certifica nada, perigos invisíveis do injetável e imunogenicidade como propriedade do sistema molécula-produto-paciente. Fecha com os dez princípios que atravessam as sete partes e o que deles é aplicável a quem prescreve exercício.",
+    "arquivo": "kaminski-7-peptideos.html"
+  },
+  {
     "titulo": "Contração Muscular: do Nervo ao Filamento",
     "categoria": "fisiologia",
     "data": "Jun · 2026",
