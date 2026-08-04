@@ -1,97 +1,121 @@
-# Biblioteca MG COACH — Jornada Kaminski
+# Biblioteca MG COACH — Anatomia (CBMF)
 
-**90 materiais.** Esta entrega adiciona a série **Jornada Kaminski · Farmacologia Hormonal**, com 7 partes.
+**98 materiais.** Esta entrega adiciona a série **Anatomia · CBMF**, com 8 partes.
 
 ---
 
-## Suba estes 8 arquivos
+## Suba estes 9 arquivos
 
 | Arquivo | |
 |---|---|
-| `kaminski-1-fundamentos-moleculares.html` | novo |
-| `kaminski-2-farmacocinetica.html` | novo |
-| `kaminski-3-leitura-exames.html` | novo |
-| `kaminski-4-assinaturas-risco.html` | novo |
-| `kaminski-5-compostos.html` | novo |
-| `kaminski-6-protocolos-casos.html` | novo |
-| `kaminski-7-peptideos.html` | novo |
-| `estudos.json` | 83 → 90 materiais |
+| `anatomia-1-fundamentos.html` | novo |
+| `anatomia-2-locomotora.html` | novo |
+| `anatomia-3-sistema-esqueletico.html` | novo |
+| `anatomia-4-articulacoes.html` | novo |
+| `anatomia-5-sistema-nervoso.html` | novo |
+| `anatomia-6-nervos-autonomo.html` | novo |
+| `anatomia-7-cardio-respiratorio.html` | novo |
+| `anatomia-8-sistemas-viscerais.html` | novo |
+| `estudos.json` | 90 → 98 materiais |
 
 `mgcoach.css` e `mgcoach.js` **não mudaram** — não precisa subir.
 
-> Suba as 7 partes **juntas**. Elas se linkam entre si.
+> Suba as 8 partes **juntas**. Elas se linkam entre si.
 
 ---
 
-## As sete partes
+## Como os 18 PDFs viraram 8 partes
 
-| Parte | Conteúdo |
+O agrupamento seguiu duas regras: **juntar o que é do mesmo sistema** e **respeitar o volume de cada bloco**.
+
+| Parte | Fontes agrupadas |
 |---|---|
-| 1 · Fundamentos moleculares | Receptor androgênico, aromatização, 5α-redutase, 17α-alquilação, metabólitos, supressão do eixo |
-| 2 · Farmacocinética e assinatura | Ésteres, picos e vales, acumulação, afinidade × potência × eficácia × seletividade |
-| 3 · Leitura de exames | Basal, fenótipo, e cada marcador com o que ele realmente informa |
-| 4 · As oito assinaturas de risco | As Pirâmides Kaminski, convergência, ápices, pirâmides femininas |
-| 5 · Compostos | Análise molécula a molécula, sem selo de segurança por família |
-| 6 · Protocolos e casos | Bulking, cutting, o oral, fluxos masculino e feminino, monitorização |
-| 7 · Peptídeos | GH e secretagogos, GHRPs, mecanismo versus desfecho, qualidade de produto |
+| 1 · Fundamentos | Aulas 1 e 2 (aula inaugural) |
+| 2 · Anatomia locomotora | Locomotora + sistema muscular das aulas 1 e 2 |
+| 3 · Sistema esquelético | Função dos ossos + classificação + ossificações + células ósseas |
+| 4 · Articulações | Articulações (sozinha) |
+| 5 · Sistema nervoso | Divisão do SN + SNP |
+| 6 · Nervos e autônomo | Cranianos + espinais + SNA |
+| 7 · Cardiovascular e respiratório | Cardíaco + circulatório + respiratório + vias aéreas inferiores |
+| 8 · Sistemas viscerais | Digestivo + urinário + endócrino/reprodutor |
+
+**Duas decisões que vale explicar:**
+
+**Articulações ficou sozinha.** É o maior arquivo do módulo (11 páginas) e o mais aplicável — cobre 10 articulações num formato consistente, com blocos de *Musculação & Coaching* e *Lesões/alertas*. Diluí-la em outra parte desperdiçaria o melhor do conjunto.
+
+**Sistema nervoso ficou em duas partes, não três.** O SNA sozinho seria curto demais; junto com nervos cranianos e espinais, forma um bloco coerente de "como o comando sai do centro e chega à periferia".
 
 ---
 
-## Como o material foi construído
+## Qualidade da fonte
 
-**Fonte:** 143 fotografias de slides do curso + 4 páginas de anotações manuscritas suas.
+Diferente dos materiais anteriores, os PDFs deste módulo têm **texto nativo** — extração direta, sem OCR. A fidelidade é bem maior.
 
-**Método:** o texto dos slides foi extraído por **reconhecimento óptico em português** (Tesseract), gerando cerca de 68 mil caracteres. As anotações manuscritas foram lidas diretamente.
+O único defeito foi de **ligadura na exportação**: as sequências "ti" e "fi" se perderam em muitas palavras ("ar culação" por articulação, "car laginoso" por cartilaginoso, "bial" por tibial, "deglu ção" por deglutição). Reconstruí cada ocorrência pelo contexto, verificando contra a terminologia anatômica padrão.
 
-**Prioridade:** onde slides e anotações divergem, **as anotações manuscritas prevalecem** — são registro direto, enquanto o OCR erra com frequência em termos técnicos e, principalmente, em números.
+### Três correções assumidas
 
-**Reprodução:** nada é cópia literal dos slides. Todo o conteúdo foi reescrito em formulação própria, com a autoria do curso creditada em todas as partes.
+Como não há material adicional para conferir, os três pontos duvidosos foram **resolvidos** em vez de ficarem pendentes. Todos estão declarados dentro dos próprios materiais.
 
----
+**1. "III ao XIII" → "III ao XII".** A aula de sistema nervoso menciona núcleos de nervos cranianos "III ao XIII". Como são **12 pares**, XIII não corresponde a nervo algum. Erro de digitação no original; adotada a numeração correta.
 
-## Duas decisões que você deve conhecer
+**2. Pares XI e XII completados.** A extração parou no nervo vago. Preenchi **acessório (XI)** e **hipoglosso (XII)** pela nomenclatura anatômica internacional — que é padronizada e não admite variação. Não é suposição sobre o que a aula diria: é completar uma lista de ordem fixa.
 
-### 1. Adotei oito assinaturas, não seis
+**3. Sistema reprodutor desenvolvido.** A extração parou no pâncreas endócrino. Em vez de encerrar a série com uma lacuna, complementei a seção com anatomia estabelecida, sinalizada como complemento e não como registro de aula:
 
-Suas anotações numeram **8** explicitamente (hematológica, lipídica, hepática, hemodinâmica, cardíaca, estrogênica/progestagênica, androgênica, neuropsiquiátrica). Os slides trazem **8 pirâmides nomeadas**, uma por slide — o que confirma.
+- **Masculino** — escroto e regulação térmica, **células de Sertoli** (FSH, espermatogênese) e **células de Leydig** (LH, testosterona), trajeto e glândulas acessórias
+- **Feminino** — ovários, trajeto, camadas do útero e o comando do ciclo por FSH e LH
 
-Mas dois slides mencionam "seis pirâmides" no contexto do fluxo masculino. Pode ser que seis sejam destacadas nesse fluxo, ou erro de leitura automática.
+A divisão Sertoli/Leydig ganhou destaque porque **explica algo que a série de farmacologia registra**: por que o eixo hormonal recupera antes da fertilidade. São linhas celulares distintas, com comandos e escalas de tempo diferentes — e é por isso que testosterona normal no exame não indica fertilidade restabelecida.
 
-**Adotei oito**, seguindo sua anotação numerada. A divergência está registrada nos pontos a confirmar.
-
-### 2. Os números de dose entraram, com enquadramento
-
-Conforme você decidiu, os valores apresentados no curso foram mantidos como **registro do conteúdo**. Eles aparecem com marcação explícita de **proposição autoral do professor** — não recomendação, não referendada, não orientação.
-
-O enquadramento aparece na abertura da parte 1 e é repetido no bloco onde os números surgem, na parte 6. O foco do texto está no **raciocínio** que produz o teto — curvas que saturam para benefício e continuam subindo para risco — e não no miligrama.
+O bloco feminino conecta amenorreia, estrogênio baixo e densidade óssea, fechando o circuito com a parte 3 deste módulo e com a orientação de que **amenorreia em restrição exige investigação, não normalização**.
 
 ---
 
-## Pontos a confirmar
+## O que acrescentei além das aulas
 
-Dez itens, consolidados na parte 7, seção 07. Os principais:
+Todo bloco azul reproduz o conteúdo do módulo. Os desenvolvimentos próprios estão declarados na seção "Fonte e observações" de cada parte. Os principais:
 
-- **Número de assinaturas** — oito ou seis (o mais importante)
-- **Valores do caso de bulking** — ApoB e HDL vieram de OCR, não confirmados
-- **Teto operacional** — confirmar valor e enquadramento dado em aula
-- **Tabela comparativa das cinco moléculas** — colunas de risco e evidência reconstruídas de extração parcial
-- **Ápice da pirâmide hematológica** — atribuição por leitura parcial
+- **Parte 1** — a auditoria de programa por planos de movimento; a ressalva sobre o sufixo "ceps"; a nota sobre a manobra de Valsalva como exceção à regra de expirar na concêntrica
+- **Parte 2** — a **inversão de origem e inserção**, que explica famílias inteiras de exercícios; a troca entre número e comprimento de fibra; o quarto papel do estabilizador
+- **Parte 3** — a analogia do banco de cálcio; a patela como sesamoide e o braço de momento; o desmonte do mito de que musculação atrapalha o crescimento
+- **Parte 4** — por que a pegada muda o músculo; cadeia fechada × aberta no tornozelo; o equilíbrio adutores × abdominais na sínfise
+- **Parte 5** — o arco reflexo e sua ligação com o ciclo alongamento-encurtamento; a graduação de força por recrutamento e frequência
+- **Parte 6** — a síntese "estímulo é simpático, adaptação é parassimpática"
+- **Parte 7** — a regra correta de artéria e veia por direção; a bomba muscular; inspiração como sucção
+- **Parte 8** — o desenvolvimento da nota sobre creatinina em atletas; a tabela de eixos hormonais
 
 ---
 
-## Escopo profissional
+## Uma ressalva que marquei
 
-A série declara, na abertura e no fechamento de cada parte:
+Na **parte 5**, a aula descreve o hemisfério esquerdo como "lógico" e o direito como "criativo". Registrei a formulação e marquei a nuance: existe **lateralização real** de algumas funções (linguagem, por exemplo), mas a ideia de pessoas "de cérebro esquerdo ou direito" não se sustenta — funções complexas envolvem redes distribuídas nos dois hemisférios.
 
-**Farmacologia hormonal é prescrição médica.** O educador físico não prescreve, não sugere composto, não define dose e não orienta ciclo.
+Como referência didática de que existe lateralização, é útil. Como descrição de personalidade ou estilo de aprendizagem, não tem base.
 
-O material serve para três coisas legítimas: **entender o contexto** de um aluno que usa, para ajustar treino e expectativa; **reconhecer sinais que exigem encaminhamento**; e **conversar com o médico do aluno** na mesma linguagem.
+---
+
+## Como subir
+
+1. Descompacte o ZIP
+2. Em `github.com/mgcoach/materialdeestudo-`, **Add file → Upload files**
+3. Arraste os 9 arquivos
+4. Marque **Replace** no `estudos.json`
+5. **Commit changes**
+6. Aguarde 2–3 minutos e teste em **aba anônima**
+
+### Confira depois de subir
+
+- [ ] A home lista **98 materiais**
+- [ ] A série Anatomia mostra **8 partes** na barra lateral
+- [ ] Na parte 1, o link "próxima parte" leva à parte 2
+- [ ] A busca no conteúdo reindexa (o contador vai a 98)
 
 ---
 
 ## Validação executada
 
-Nos **90 materiais**, servidos por HTTP com contexto de navegador limpo a cada arquivo:
+Nos **98 materiais**, servidos por HTTP com contexto de navegador limpo a cada arquivo:
 
 - `html.parser` limpo · marcadores obrigatórios em 1 ocorrência cada
 - `sec-num` sequencial · âncoras batendo com as seções
@@ -99,6 +123,5 @@ Nos **90 materiais**, servidos por HTTP com contexto de navegador limpo a cada a
 - Salto para a última seção de cada material na posição correta
 - Tema claro/escuro alternando · **zero erro de JavaScript**
 - **Zero link interno quebrado**
-- `estudos.json` com 90 entradas, todas com arquivo correspondente
-- Cadeia da série Kaminski percorrida de 1 a 7 pelos links de "próxima parte"
-- Home listando 90 materiais
+- `estudos.json` com 98 entradas, todas com arquivo correspondente
+- Cadeia da série percorrida de 1 a 8 pelos links de "próxima parte"

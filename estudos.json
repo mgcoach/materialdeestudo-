@@ -529,6 +529,70 @@
     "arquivo": "postural-7-testes-praticos.html"
   },
   {
+    "titulo": "Anatomia 1 · Fundamentos",
+    "categoria": "biomecanica",
+    "serie": "Anatomia (CBMF)",
+    "data": "Ago · 2026",
+    "resumo": "Abertura da série. Posição anatômica de estudo e por que as palmas ficam voltadas para frente — com rádio e ulna paralelos, o que define medial e lateral no antebraço e explica por que o nervo ulnar corre pelo lado do dedo mínimo. Decúbito dorsal (supino) e ventral (prono), com o macete de que o nome descreve para onde aponta a face anterior do corpo. Os três planos anatômicos com movimentos e exemplos, e o uso mais valioso deles: AUDITAR O PROGRAMA — a maioria dos treinos acontece quase inteiramente no plano sagital, com o transversal praticamente vazio, que é justamente onde ficam os músculos que controlam rotação. Termos de localização (medial, lateral, proximal, distal, superficial, profundo, parietal, visceral), todos relativos e nunca absolutos, com a explicação da arquitetura de membrana dupla que se repete em pleuras, pericárdio, peritônio e articulações sinoviais. Fecha com a visão geral dos sistemas que as próximas partes desenvolvem, a nota de que o sufixo 'ceps' conta ORIGENS e não funções, e uma ressalva sobre respiração: expirar na concêntrica é bom padrão, mas a manobra de Valsalva tem lugar em levantamentos pesados — com contraindicações declaradas.",
+    "arquivo": "anatomia-1-fundamentos.html"
+  },
+  {
+    "titulo": "Anatomia 2 · Anatomia locomotora e sistema muscular",
+    "categoria": "biomecanica",
+    "serie": "Anatomia (CBMF)",
+    "data": "Ago · 2026",
+    "resumo": "Movimentos articulares definidos por ÂNGULO e não por direção no espaço, o que resolve a confusão de flexão e extensão irem para lados opostos em articulações diferentes. Origem e inserção com o conceito que vale mais que a regra: a INVERSÃO — o músculo não sabe qual ponta é qual, ele apenas puxa as duas extremidades uma em direção à outra, e quem determina o osso que se move é qual extremidade está fixa. Isso explica famílias inteiras de exercícios (puxada versus barra fixa, cadeira extensora versus agachamento, supino versus flexão de braço) e por que o abdominal com pés presos recruta fortemente o iliopsoas, tracionando a lombar. Orientação das fibras com a troca fundamental entre número e comprimento: fusiformes favorecem amplitude e velocidade, penados favorecem força por comportarem mais fibras no mesmo volume — e o deltoide multipenado explica por que um só exercício não cobre o músculo inteiro. Tipos de contração, com a nota de que a EXCÊNTRICA produz mais força e mais dano estrutural, o que a torna estímulo potente e caro em recuperação. E os papéis de agonista, antagonista e sinergista como FUNÇÕES E NÃO IDENTIDADES — o tríceps é antagonista na rosca e sinergista no supino —, mais o quarto papel que a aula não nomeia: o estabilizador.",
+    "arquivo": "anatomia-2-locomotora.html"
+  },
+  {
+    "titulo": "Anatomia 3 · Sistema esquelético",
+    "categoria": "biomecanica",
+    "serie": "Anatomia (CBMF)",
+    "data": "Ago · 2026",
+    "resumo": "O osso como tecido vivo em remodelação permanente. Funções que vão além da sustentação: proteção, HEMATOPOIESE (com a conexão entre ferro, hemácias e desempenho, e entre volume de treino e imunidade) e metabolismo de cálcio e fósforo, com a via de ativação da vitamina D passando por pele, fígado e rins, e o PTH fazendo o oposto. A analogia do banco de cálcio explica o ponto mais importante: o corpo prioriza manter o cálcio sérico MESMO À CUSTA DO OSSO, e por isso um exame de cálcio normal não descarta déficit. O trio de células ósseas com a informação mais relevante para o educador físico: osteócitos funcionam como SENSORES DE DEFORMAÇÃO e sinalizam para deposição nas linhas de força — treino de força é intervenção para densidade óssea, e o osso perde o que não é solicitado. Os cinco formatos com a função de cada um, incluindo a patela como maior sesamoide e o conceito de braço de momento que ela ilustra. As duas rotas de ossificação, e a placa epifisária com o desmonte do mito de que musculação atrapalha o crescimento.",
+    "arquivo": "anatomia-3-sistema-esqueletico.html"
+  },
+  {
+    "titulo": "Anatomia 4 · Articulações",
+    "categoria": "biomecanica",
+    "serie": "Anatomia (CBMF)",
+    "data": "Ago · 2026",
+    "resumo": "A parte mais aplicável do módulo. Toda articulação é um EQUILÍBRIO ENTRE MOBILIDADE E ESTABILIDADE, e é esse equilíbrio que define a conduta de treino em cada uma. Classificação em sinartroses, anfiartroses e diartroses; os seis tipos sinoviais com graus de liberdade (DOF) e a regra prática de que movimento aparecendo num eixo que a articulação não possui é COMPENSAÇÃO, não amplitude. Depois, dez articulações no formato da aula — local, tipo e DOF, ligamentos, ROM, musculação e coaching, lesões e alertas: atlanto-axial (metade da rotação cervical em um único nível), acromioclavicular (os coracoclaviculares SUSPENDEM a escápula, e a osteólise distal da clavícula em quem faz muito supino e mergulho), cotovelo (com a explicação de por que a pegada muda o músculo — bíceps se insere no rádio que gira, braquial na ulna que não gira), punho, CMC e interfalangianas, sínfise púbica (o equilíbrio adutores × abdominais que explica a osteíte púbica em corredores), quadril (a PROFUNDIDADE DE AGACHAMENTO DEPENDE DE VERSÃO FEMORAL E COBERTURA ACETABULAR — limite ósseo que não muda com treino), joelho (mecanismo do parafuso e por que cadeia posterior alivia a patela) e tornozelo e pé (cadeia fechada × aberta, arcos, mecanismo windlass, tripé do pé, testes rápidos). Fecha com tabela-resumo, checkpoints práticos e a melhor frase do módulo: o ajuste individual sempre vence a receita universal.",
+    "arquivo": "anatomia-4-articulacoes.html"
+  },
+  {
+    "titulo": "Anatomia 5 · Sistema nervoso: organização",
+    "categoria": "biomecanica",
+    "serie": "Anatomia (CBMF)",
+    "data": "Ago · 2026",
+    "resumo": "SNC e SNP, com o critério da divisão sendo topográfico e não funcional — e a consequência clínica de que a capacidade de regeneração é muito diferente nos dois. Estruturas do encéfalo: lobos cerebrais, diencéfalo com o HIPOTÁLAMO como ponte entre sistema nervoso e endócrino (mesma estrutura que regula fome, sede, sono e temperatura, e que comanda o eixo HPG), cerebelo e tronco encefálico. Inclui ressalva sobre a divisão entre hemisfério 'lógico' e 'criativo', que é simplificação didática difundida sem sustentação. Medula espinhal com a INVERSÃO da substância cinzenta e branca em relação ao encéfalo, e o arco reflexo — que não sobe até o encéfalo, e por isso é rápido. Isso conecta com o REFLEXO DE ESTIRAMENTO e o ciclo alongamento-encurtamento, explicando por que salto com contramovimento supera o estático e por que pausas no alongamento tornam o exercício mais difícil. Estrutura do nervo, bainha de mielina e condução saltatória, com a consequência prática da vascularização neural (formigamento por compressão). Fecha com o potencial de ação e o mecanismo pelo qual o sistema nervoso GRADUA A FORÇA: recrutamento de unidades motoras pelo princípio do tamanho, mais frequência de disparo.",
+    "arquivo": "anatomia-5-sistema-nervoso.html"
+  },
+  {
+    "titulo": "Anatomia 6 · Nervos e sistema autônomo",
+    "categoria": "biomecanica",
+    "serie": "Anatomia (CBMF)",
+    "data": "Ago · 2026",
+    "resumo": "Os doze pares cranianos em tabela completa, com destaque para os dois que mais importam no treino: o ACESSÓRIO (XI), que inerva trapézio e esternocleidomastóideo, e o VAGO (X), principal nervo parassimpático. Nervos espinais com a regra constante ANTERIOR = MOTOR, POSTERIOR = SENSITIVO, e o valor clínico de localizar o problema pelo padrão do sintoma. Plexos cervical, braquial e lombar, com a explicação de POR QUE eles existem — as raízes se misturam porque um músculo precisa de fibras de vários níveis medulares — e a distinção entre lesão de raiz (radiculopatia, padrão em faixa) e de nervo periférico. Inclui o nervo frênico e a conexão entre tensão cervical e padrão respiratório. Sistema nervoso autônomo com simpático (toracolombar, luta ou fuga) e parassimpático (craniossacral, repouso e digestão), e a SÍNTESE MAIS ÚTIL DA SÉRIE: o estímulo é simpático, mas a ADAPTAÇÃO É PARASSIMPÁTICA — quem vive em predomínio simpático fornece estímulo sem permitir adaptação, o que reenquadra sono, descanso e gestão de estresse como parte do treino e não como acessório. Fecha com as vias de dois neurônios, os neurotransmissores e onde eles aparecem na prática (estimulantes pré-treino e prejuízo de sono).",
+    "arquivo": "anatomia-6-nervos-autonomo.html"
+  },
+  {
+    "titulo": "Anatomia 7 · Cardiovascular e respiratório",
+    "categoria": "biomecanica",
+    "serie": "Anatomia (CBMF)",
+    "data": "Ago · 2026",
+    "resumo": "Coração: mediastino, pericárdio, camadas da parede, quatro câmaras e válvulas, com as cordas tendíneas explicando o fluxo unidirecional e a origem dos sons cardíacos. A parede esquerda mais espessa abre a discussão sobre ADAPTAÇÃO CARDÍACA — excêntrica no treino aeróbio, concêntrica no treino de força —, ambas fisiológicas, com a ressalva de que distinguir adaptação de patologia é competência médica. Sangue e vasos, com a correção da regra mais confundida da área: ARTÉRIA E VEIA SE DEFINEM POR DIREÇÃO, NÃO POR OXIGENAÇÃO — sai do coração é artéria, chega ao coração é veia, e assim a 'exceção pulmonar' deixa de existir. Túnicas, classificação de artérias e veias, e duas aplicações diretas: as arteríolas redistribuindo fluxo (por que treinar após refeição volumosa incomoda) e a BOMBA MUSCULAR sustentando o retorno venoso (desaquecimento ativo, tontura ao levantar rápido). Sistema respiratório com a terceira função que quase ninguém lembra — REGULAÇÃO DO pH —, que explica a hiperventilação em esforço intenso e fundamenta o teste da fala. Vias aéreas superiores e inferiores, o mecanismo que separa comer de respirar, a glote como base da manobra de Valsalva, anéis traqueais em C, assimetria dos lobos pulmonares, e a mecânica da respiração pelo acoplamento pleural: INSPIRAÇÃO É SUCÇÃO, não bombeamento.",
+    "arquivo": "anatomia-7-cardio-respiratorio.html"
+  },
+  {
+    "titulo": "Anatomia 8 · Sistemas viscerais",
+    "categoria": "biomecanica",
+    "serie": "Anatomia (CBMF)",
+    "data": "Ago · 2026",
+    "resumo": "Fecho da série. Sistema digestivo com os quatro processos, deglutição em três fases, e o estômago explicando a digestão de proteína — o ácido desnatura, a pepsina quebra, e a pepsina só funciona em pH muito baixo, o que tem implicações em uso crônico de inibidores de bomba de prótons. O fígado como o órgão que CONECTA TODA A BIBLIOTECA: glicogênio hepático (diferente do muscular por poder virar glicose circulante), albumina como marcador de função e não de lesão, detoxificação e primeira passagem, e a etapa hepática da vitamina D. Sistema renal com a NOTA MAIS IMPORTANTE para quem treina, registrada pela própria aula: atletas produzem mais creatinina pelo maior trabalho muscular, mas o rim saudável mantém a eliminação — o que evita alarme desnecessário e conecta com a cistatina C. O néfron com a lógica de filtrar muito para reabsorver quase tudo, e o ADH ligando hidratação, cor da urina e hemoconcentração em exames. Sistema endócrino com hipotálamo e hipófise (e a origem embriológica distinta dos dois lobos, que explica por que um produz e o outro apenas armazena), as demais glândulas, a TABELA DE EIXOS HORMONAIS que reaparecem em toda a biblioteca, e uma nuance sobre cortisol — necessário, e problema apenas quando cronicamente elevado. A seção de sistema reprodutor traz a divisão entre CÉLULAS DE SERTOLI (FSH, espermatogênese) e CÉLULAS DE LEYDIG (LH, testosterona), que explica por que o eixo hormonal recupera antes da fertilidade — são linhas celulares distintas, com comandos e escalas de tempo diferentes. E o eixo feminino com a sensibilidade à disponibilidade energética, conectando amenorreia, estrogênio baixo e densidade óssea. Termina com os seis princípios que atravessam as oito partes.",
+    "arquivo": "anatomia-8-sistemas-viscerais.html"
+  },
+  {
     "titulo": "Jornada Kaminski 1 · Fundamentos moleculares",
     "categoria": "fisiologia",
     "serie": "Jornada Kaminski",
