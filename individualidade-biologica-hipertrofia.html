@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Individualidade Biológica na Hipertrofia — Ela Realmente Existe? | MG COACH</title>
+<meta name="description" content="Análise crítica da individualidade biológica no treinamento para hipertrofia: variabilidade verdadeira vs. ruído, genética, tensão mecânica, volume e intensidade.">
+
+<!-- OG -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MG COACH — Biblioteca de Estudo">
+<meta property="og:title" content="Individualidade Biológica na Hipertrofia — Ela Realmente Existe?">
+<meta property="og:description" content="Variabilidade bruta não é individualidade. O que a evidência realmente mostra sobre genética, volume, intensidade e resposta individual ao treino.">
+<meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/individualidade-biologica-hipertrofia.html">
+<meta property="og:locale" content="pt_BR">
+
+<style>
+:root{
+  --bg:#000000;
+  --bg-soft:#0b0b0c;
+  --card:#121214;
+  --card-2:#17171a;
+  --border:#2a2a2e;
+  --txt:#f2f2f3;
+  --txt-soft:#b8b8bd;
+  --txt-dim:#87878e;
+  --orange:#ff6b1a;
+  --orange-soft:rgba(255,107,26,.12);
+  --orange-line:rgba(255,107,26,.35);
+  --green:#3ecf8e;
+  --red:#ff5c5c;
+  --blue:#4aa3ff;
+}
+[data-theme="light"]{
+  --bg:#f5f5f7;
+  --bg-soft:#ffffff;
+  --card:#ffffff;
+  --card-2:#f0f0f3;
+  --border:#dcdce2;
+  --txt:#16161a;
+  --txt-soft:#3f3f47;
+  --txt-dim:#6c6c76;
+  --orange:#e05500;
+  --orange-soft:rgba(224,85,0,.10);
+  --orange-line:rgba(224,85,0,.30);
+  --green:#12875a;
+  --red:#c92a2a;
+  --blue:#1263c4;
+}
+html{background:var(--bg)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.7;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px;
+}
+.wrap{max-width:840px;margin:0 auto;padding:0 20px}
+
+/* HEADER */
+header.top{
+  border-bottom:1px solid var(--border);
+  background:var(--bg-soft);
+  padding:22px 0 20px;
+  margin-bottom:34px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.star{color:var(--orange);font-size:22px;line-height:1}
+.brand-name{font-weight:800;letter-spacing:.16em;font-size:14px;text-transform:uppercase}
+.brand-meta{
+  margin-top:10px;font-size:12px;color:var(--txt-dim);
+  display:flex;gap:14px;flex-wrap:wrap;letter-spacing:.04em;text-transform:uppercase
+}
+.backlink{
+  display:inline-block;margin-bottom:16px;color:var(--txt-dim);
+  text-decoration:none;font-size:13px;letter-spacing:.04em
+}
+.backlink:hover{color:var(--orange)}
+.theme-toggle{
+  position:fixed;top:14px;right:14px;z-index:50;
+  background:var(--card);border:1px solid var(--border);color:var(--txt);
+  width:40px;height:40px;border-radius:50%;font-size:17px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.theme-toggle:hover{border-color:var(--orange);color:var(--orange)}
+
+/* TÍTULO */
+h1{
+  font-size:32px;line-height:1.22;font-weight:800;margin:8px 0 14px;letter-spacing:-.02em
+}
+h1 .hl{color:var(--orange)}
+.sub{color:var(--txt-soft);font-size:17px;margin-bottom:8px}
+.tagline{
+  display:inline-block;margin-top:14px;padding:6px 12px;border-radius:999px;
+  background:var(--orange-soft);border:1px solid var(--orange-line);
+  color:var(--orange);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700
+}
+
+/* TOC */
+nav.toc{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:20px 22px;margin:30px 0 40px
+}
+nav.toc h2{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--txt-dim);margin-bottom:14px;font-weight:700
+}
+nav.toc ol{list-style:none;counter-reset:toc}
+nav.toc li{counter-increment:toc;margin:7px 0}
+nav.toc a{
+  color:var(--txt-soft);text-decoration:none;font-size:15px;display:flex;gap:10px
+}
+nav.toc a::before{
+  content:counter(toc,decimal-leading-zero);
+  color:var(--orange);font-weight:700;font-size:13px;min-width:24px;padding-top:2px
+}
+nav.toc a:hover{color:var(--orange)}
+
+/* SEÇÕES */
+section{margin:0 0 44px;scroll-margin-top:20px}
+h2.sec{
+  font-size:23px;font-weight:800;line-height:1.3;margin-bottom:16px;
+  padding-bottom:12px;border-bottom:1px solid var(--border);letter-spacing:-.01em
+}
+.sec-num{color:var(--orange);font-weight:800}
+h3{font-size:18px;font-weight:700;margin:26px 0 10px;color:var(--txt)}
+p{margin:0 0 15px;color:var(--txt-soft)}
+p strong,li strong{color:var(--txt);font-weight:700}
+em{color:var(--txt);font-style:italic}
+ul,ol{margin:0 0 16px 20px}
+li{margin:8px 0;color:var(--txt-soft)}
+
+/* PERGUNTA */
+.q{
+  background:linear-gradient(180deg,var(--orange-soft),transparent);
+  border:1px solid var(--orange-line);border-left:4px solid var(--orange);
+  border-radius:10px;padding:16px 18px;margin:0 0 20px
+}
+.q .lab{
+  display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--orange);font-weight:800;margin-bottom:6px
+}
+.q p{margin:0;color:var(--txt);font-size:17px;font-weight:600;line-height:1.55}
+
+/* CALLOUT */
+.callout{
+  background:var(--card);border:1px solid var(--border);border-left:4px solid var(--orange);
+  border-radius:10px;padding:16px 18px;margin:20px 0
+}
+.callout .lab{
+  display:block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--orange);font-weight:800;margin-bottom:7px
+}
+.callout p:last-child{margin-bottom:0}
+.callout.alerta{border-left-color:var(--red)}
+.callout.alerta .lab{color:var(--red)}
+.callout.ok{border-left-color:var(--green)}
+.callout.ok .lab{color:var(--green)}
+.callout.info{border-left-color:var(--blue)}
+.callout.info .lab{color:var(--blue)}
+
+/* DEFINIÇÃO */
+.def{
+  background:var(--card-2);border:1px solid var(--border);border-radius:10px;
+  padding:15px 17px;margin:15px 0
+}
+.def .termo{
+  display:block;color:var(--orange);font-weight:800;font-size:15px;
+  margin-bottom:6px;letter-spacing:.01em
+}
+.def p:last-child{margin-bottom:0}
+
+/* GRID */
+.grid{display:grid;gap:14px;margin:20px 0}
+.grid.g2{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid.g3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 17px
+}
+.card h4{
+  font-size:14px;font-weight:800;margin-bottom:8px;color:var(--orange);
+  letter-spacing:.03em;text-transform:uppercase
+}
+.card p{font-size:15px;margin-bottom:0}
+
+/* STEPS */
+.steps{counter-reset:st;list-style:none;margin:20px 0 20px 0}
+.steps li{
+  counter-increment:st;position:relative;padding-left:44px;margin:16px 0
+}
+.steps li::before{
+  content:counter(st);position:absolute;left:0;top:0;
+  width:30px;height:30px;border-radius:50%;
+  background:var(--orange-soft);border:1px solid var(--orange-line);
+  color:var(--orange);font-weight:800;font-size:14px;
+  display:flex;align-items:center;justify-content:center
+}
+
+/* TABELA */
+.tbl-wrap{overflow-x:auto;margin:20px 0;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:460px}
+th,td{
+  text-align:left;padding:11px 13px;border-bottom:1px solid var(--border);
+  vertical-align:top;color:var(--txt-soft)
+}
+th{
+  color:var(--orange);font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+  font-weight:800;background:var(--card)
+}
+td strong{color:var(--txt)}
+tr:last-child td{border-bottom:none}
+
+/* REFS */
+.refs{list-style:none;margin:0;counter-reset:rf}
+.refs li{
+  counter-increment:rf;position:relative;padding-left:34px;
+  font-size:14px;margin:12px 0;color:var(--txt-dim);line-height:1.6
+}
+.refs li::before{
+  content:counter(rf)".";position:absolute;left:0;color:var(--orange);font-weight:800
+}
+.refs a{color:var(--txt-dim);text-decoration:underline;word-break:break-word}
+.refs a:hover{color:var(--orange)}
+
+footer{
+  border-top:1px solid var(--border);margin-top:44px;padding-top:22px;
+  color:var(--txt-dim);font-size:13px
+}
+footer .star{font-size:15px}
+
+@media (max-width:600px){
+  body{font-size:16px}
+  h1{font-size:26px}
+  h2.sec{font-size:20px}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">☀</button>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="star">★</span>
+      <span class="brand-name">MG Coach — Biblioteca de Estudo</span>
+    </div>
+    <div class="brand-meta">
+      <span>Treino</span>
+      <span>Fisiologia</span>
+      <span>Metodologia científica</span>
+      <span>Leitura ~22 min</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <a class="backlink" href="index.html">← Biblioteca</a>
+
+  <h1>Individualidade biológica na hipertrofia: <span class="hl">ela realmente existe?</span></h1>
+  <p class="sub">Uma investigação em formato de perguntas e respostas sobre variabilidade verdadeira, ruído estatístico, genética, tensão mecânica, volume e intensidade — e sobre o que sobra de legítimo no conceito mais repetido da academia.</p>
+  <span class="tagline">Material conceitual · baseado em evidência</span>
+
+  <nav class="toc">
+    <h2>Índice</h2>
+    <ol>
+      <li><a href="#s1">O que estamos realmente perguntando</a></li>
+      <li><a href="#s2">Anatomia de um resultado: os três componentes</a></li>
+      <li><a href="#s3">Variabilidade bruta não é individualidade</a></li>
+      <li><a href="#s4">A distinção que muda tudo: IRV geral × condição-específica</a></li>
+      <li><a href="#s5">O experimento crucial: volume alto × baixo no mesmo sujeito</a></li>
+      <li><a href="#s6">O mito do não-respondedor</a></li>
+      <li><a href="#s7">Fator genético I: o que de fato se herda</a></li>
+      <li><a href="#s8">Fator genético II: o genótipo prescreve treino?</a></li>
+      <li><a href="#s9">Tensão mecânica: por que o mecanismo não é personalizável</a></li>
+      <li><a href="#s10">Volume: dose-resposta média × decisão individual</a></li>
+      <li><a href="#s11">Intensidade e a cláusula "se equalizado"</a></li>
+      <li><a href="#s12">Onde a individualização realmente se sustenta</a></li>
+      <li><a href="#s13">Aderência: o argumento certo pelo motivo certo</a></li>
+      <li><a href="#s14">Veredito em três níveis</a></li>
+      <li><a href="#s15">Honestidade científica e limitações</a></li>
+      <li><a href="#s16">Referências</a></li>
+    </ol>
+  </nav>
+
+  <!-- 01 -->
+  <section id="s1">
+    <h2 class="sec"><span class="sec-num">01 &mdash;</span> O que estamos realmente perguntando</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Quando alguém diz "individualidade biológica", está afirmando o quê, exatamente?</p>
+    </div>
+
+    <p>O termo é usado para justificar coisas radicalmente diferentes, e essa ambiguidade é o motivo de o debate nunca se resolver. Antes de qualquer evidência, é preciso separar três afirmações que costumam vir embrulhadas na mesma palavra:</p>
+
+    <div class="grid g3">
+      <div class="card">
+        <h4>Afirmação A — Magnitude</h4>
+        <p>"Umas pessoas ganham mais massa que outras com o mesmo estímulo." Trata de <strong>quanto</strong>. É a versão fraca e mais defensável.</p>
+      </div>
+      <div class="card">
+        <h4>Afirmação B — Prescrição</h4>
+        <p>"Cada pessoa precisa de um <strong>modelo de treino diferente</strong> para crescer." Trata de <strong>qual</strong>. É a versão forte — e a que se vende.</p>
+      </div>
+      <div class="card">
+        <h4>Afirmação C — Resposta nula</h4>
+        <p>"Existem pessoas que simplesmente não respondem ao treino." Trata de <strong>se</strong>. É a versão fatalista.</p>
+      </div>
+    </div>
+
+    <p>A provocação central deste material é que <strong>A tem sustentação parcial, B praticamente não tem nenhuma, e C é em grande parte artefato de medição</strong>. Só que na prática de academia as três são tratadas como a mesma coisa — e é a B que aparece disfarçada em frases como "meu corpo só responde a volume baixo" ou "esse método não funciona pro meu tipo".</p>
+
+    <div class="callout">
+      <span class="lab">Delimitação</span>
+      <p>Todo este material trata de <strong>indivíduos saudáveis e sem limitações patológicas</strong>. Doenças, lesões, distúrbios endócrinos e uso de fármacos são outra discussão — não são "individualidade biológica", são condições clínicas, e boa parte delas está fora do escopo do personal trainer.</p>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section id="s2">
+    <h2 class="sec"><span class="sec-num">02 &mdash;</span> Anatomia de um resultado: os três componentes</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Quando um sujeito ganha 8% de área de secção transversa em 12 semanas, quanto disso é "resposta dele ao treino"?</p>
+    </div>
+
+    <p>Menos do que parece. Qualquer mudança observada entre pré e pós é a <strong>soma de três coisas</strong>, e a literatura metodológica sobre resposta individual gira inteiramente em torno disso <sup>[1][2][3]</sup>:</p>
+
+    <div class="def">
+      <span class="termo">C1 — Resposta individual verdadeira (TIR)</span>
+      <p>A mudança na massa muscular efetivamente causada pela intervenção naquele indivíduo. É o que todo mundo <em>acha</em> que está medindo.</p>
+    </div>
+    <div class="def">
+      <span class="termo">C2 — Variação biológica intraindividual</span>
+      <p>A mudança que teria acontecido de qualquer forma no período, sem treino nenhum. Massa muscular oscila com hidratação, glicogênio, sono, alimentação, estresse e fase do ciclo. Não é erro de aparelho — é o corpo flutuando.</p>
+    </div>
+    <div class="def">
+      <span class="termo">C3 — Erro aleatório de medida</span>
+      <p>Ruído da técnica e do avaliador nas medidas pré e pós. Ultrassom, DXA, dobras e circunferências têm erro típico. Ele entra <strong>duas vezes</strong>: uma na medida inicial, outra na final.</p>
+    </div>
+
+    <p>O problema é que a esmagadora maioria dos estudos que documentaram "enorme variabilidade individual" nunca usou desenho capaz de isolar C1 de C2 e C3 <sup>[1]</sup>. Eles publicaram <strong>C1 + C2 + C3</strong> e chamaram de individualidade biológica.</p>
+
+    <div class="callout alerta">
+      <span class="lab">Consequência prática</span>
+      <p>Aquele gráfico de barras clássico, com sujeitos indo de −2% a +59%, é literalmente a imagem mais reproduzida em cursos de "treino individualizado". Ele não prova individualidade. Ele prova que a soma de resposta real, flutuação biológica e erro de medida é grande.</p>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section id="s3">
+    <h2 class="sec"><span class="sec-num">03 &mdash;</span> Variabilidade bruta não é individualidade</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Como se separa a resposta verdadeira do ruído?</p>
+    </div>
+
+    <p>Com um <strong>grupo controle não treinante</strong>. A lógica é elegante: o controle não recebe estímulo, então toda a variação que aparece nele é, por definição, C2 + C3. Se o grupo treinado varia <em>mais</em> que o controle, essa diferença é o que se pode atribuir a diferenças individuais verdadeiras <sup>[2][4]</sup>. É o princípio do <em>SD<sub>IR</sub></em> (desvio-padrão das respostas individuais).</p>
+
+    <p>Quando esse crivo é aplicado, o quadro encolhe muito:</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Estudo</th><th>Amostra</th><th>Achado após controlar o ruído</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ahtiainen et al. (2016)</strong><sup>[4]</sup></td>
+            <td>287 destreinados (19–78 anos) + 72 controles</td>
+            <td>Variação bruta de tamanho: 4,8 ± 6,1% (faixa −11% a +30%). Após considerar os controles: <strong>29% classificados como baixos respondedores em tamanho e apenas 7% em força</strong>. Idade e sexo não afetaram a resposta.</td>
+          </tr>
+          <tr>
+            <td><strong>Análises com correção pela lei de Taylor</strong><sup>[5]</sup></td>
+            <td>Reanálises de coortes com controle</td>
+            <td>Controles não treinantes exibiram variabilidade <strong>maior</strong> que os grupos treinados, após ajustar a relação positiva natural entre média e variância. Sugere que a variação nos desfechos é explicada majoritariamente por fontes que não são diferenças interindividuais verdadeiras.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout info">
+      <span class="lab">Lei de Taylor, em uma linha</span>
+      <p>Em sistemas biológicos, quanto maior a média de uma variável, maior tende a ser sua variância. Grupos que ganham mais <em>necessariamente</em> espalham mais. Ignorar isso faz o treino parecer gerador de heterogeneidade quando ele está apenas gerando resultado.</p>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section id="s4">
+    <h2 class="sec"><span class="sec-num">04 &mdash;</span> A distinção que muda tudo: IRV geral × condição-específica</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Existe uma forma de perguntar isso que separe "uns crescem mais" de "cada um precisa do seu método"?</p>
+    </div>
+
+    <p>Existe, e é a chave conceitual de todo o material. A literatura recente separa dois tipos de variabilidade de resposta interindividual (IRV):</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4>IRV Geral</h4>
+        <p>Alguns indivíduos respondem mais que outros <strong>em média, independentemente do protocolo</strong>. Corresponde à Afirmação A (magnitude). É a hipótese do "teto genético".</p>
+      </div>
+      <div class="card">
+        <h4>IRV Condição-específica</h4>
+        <p>A <strong>diferença entre dois protocolos</strong> varia entre indivíduos — fulano cresce mais com volume baixo, sicrano com volume alto. Corresponde à Afirmação B (prescrição).</p>
+      </div>
+    </div>
+
+    <p>São perguntas independentes. É perfeitamente possível que a primeira seja verdadeira e a segunda falsa — e é exatamente isso que os dados sugerem. Perceba a assimetria comercial: <strong>toda a indústria de "treino individualizado" depende da segunda</strong>, mas cita evidências da primeira.</p>
+
+    <div class="callout">
+      <span class="lab">Por que designs comuns não conseguem responder</span>
+      <p>Estudos com grupos paralelos (grupo A faz volume alto, grupo B faz volume baixo) nunca observam o mesmo sujeito nas duas condições. Não há como saber se aquele sujeito teria ido melhor no outro braço do estudo. Para responder, é preciso que <strong>o mesmo indivíduo passe pelas duas condições — e que pelo menos uma delas seja repetida</strong> <sup>[3]</sup>.</p>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section id="s5">
+    <h2 class="sec"><span class="sec-num">05 &mdash;</span> O experimento crucial: volume alto × baixo no mesmo sujeito</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Alguém já testou diretamente se existe um "volume ideal individual"?</p>
+    </div>
+
+    <p>Sim. Robinson, Steele, Helms, Trexler, Zourdos e colaboradores (2025) construíram um desenho feito sob medida para isolar exatamente essa pergunta <sup>[5]</sup>:</p>
+
+    <ol class="steps">
+      <li>16 indivíduos <strong>recreacionalmente treinados</strong> (não iniciantes — isso importa para a generalização).</li>
+      <li>Desenho <strong>unilateral replicado dentro do participante</strong>: cada membro inferior randomizado para volume baixo (~8 séries/semana) ou volume alto (~16 séries/semana).</li>
+      <li>Duas fases de <strong>11 semanas</strong>, separadas por <em>washout</em> de 6 a 8 semanas — ou seja, a intervenção foi <strong>repetida</strong> no mesmo sujeito.</li>
+      <li>Desfecho primário: área de secção transversa do vasto lateral e força máxima.</li>
+      <li>Análise separando <strong>IRV geral</strong> (resposta média entre condições) de <strong>IRV condição-específica</strong> (diferença entre volumes).</li>
+    </ol>
+
+    <p><strong>Resultado.</strong> No nível de grupo, volumes semanais maiores produziram benefício modesto mas detectável em hipertrofia — e não em força máxima. No nível individual, os autores <strong>não encontraram evidência irrefutável de IRV verdadeira para nenhum dos desfechos primários</strong>, com suporte mais forte para variabilidade geral do que para resposta diferencial entre as condições de volume <sup>[5]</sup>.</p>
+
+    <div class="callout ok">
+      <span class="lab">Tradução</span>
+      <p>A hipótese "cada aluno tem seu volume ótimo biológico" é, das três afirmações da seção 01, <strong>a que tem menos sustentação empírica</strong> — e é justamente a mais vendida. A repetição da intervenção mostrou que a suposta "assinatura de volume" do indivíduo não se reproduz de forma confiável.</p>
+    </div>
+
+    <p>A replicação é o ponto genial do desenho. Se o sujeito tem mesmo uma preferência biológica por volume baixo, essa preferência tem que aparecer <strong>de novo</strong> na segunda fase. Se não aparece, o que se viu na primeira fase era ruído com cara de personalidade.</p>
+  </section>
+
+  <!-- 06 -->
+  <section id="s6">
+    <h2 class="sec"><span class="sec-num">06 &mdash;</span> O mito do não-respondedor</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>E aquele aluno que "treina há anos e não muda nada"? Ele não é a prova viva da individualidade?</p>
+    </div>
+
+    <p>Não. "Não-respondedor" tem se revelado <strong>um rótulo de evento, não um traço de pessoa</strong>. Dois conjuntos de dados são decisivos aqui:</p>
+
+    <h3>1. Quando se testa mais de um volume, os não-respondedores somem</h3>
+    <p>Barbalho, Gentil, Izquierdo, Fisher, Steele e Raiol (2017) publicaram um trabalho cujo título já entrega a conclusão: <em>não existem não-respondedores a volumes baixos ou altos de treinamento resistido entre mulheres idosas</em> <sup>[6]</sup>. A ausência de resposta em um protocolo não sobreviveu à exposição a outro.</p>
+
+    <h3>2. Quando se repete a mesma intervenção, o rótulo não se repete</h3>
+    <p>Um trabalho finlandês recente submeteu os mesmos sujeitos a <strong>dois períodos idênticos de treino</strong> com controle não treinante <sup>[7]</sup>. Os achados foram duplamente instrutivos:</p>
+    <ul>
+      <li>A <strong>magnitude</strong> da resposta teve reprodutibilidade razoável: r = 0,697 para ASt do vasto lateral, r = 0,761 para bíceps braquial e r = 0,671 para 1RM de leg press entre o primeiro e o segundo período.</li>
+      <li>Mas <strong>nenhum não-respondedor foi identificado nos dois períodos em mais de uma variável</strong>.</li>
+    </ul>
+
+    <div class="callout">
+      <span class="lab">Leitura combinada</span>
+      <p>Existe alguma consistência individual no <strong>quanto</strong> a pessoa ganha (correlações em torno de 0,70 não são desprezíveis). Não existe consistência no <strong>rótulo de não-responder</strong>. Ou seja: teto genético é uma ideia razoável; "sou não-respondedor" é quase sempre uma foto de um período específico, não um diagnóstico.</p>
+    </div>
+
+    <p>Vale lembrar que no treino aeróbio o mesmo padrão apareceu: quando a dose é aumentada, a categoria de não-respondedor tende a desaparecer. O rótulo dependia da dose, não da pessoa.</p>
+  </section>
+
+  <!-- 07 -->
+  <section id="s7">
+    <h2 class="sec"><span class="sec-num">07 &mdash;</span> Fator genético I: o que de fato se herda</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Se a fisiologia é a mesma para todos, por que uns crescem muito mais?</p>
+    </div>
+
+    <p>Aqui é preciso ser honesto: a <strong>via</strong> é universal, mas o <strong>hardware</strong> não é idêntico. Há diferenças documentadas e biologicamente plausíveis:</p>
+
+    <div class="def">
+      <span class="termo">Conteúdo de células satélite e adição mionuclear</span>
+      <p>Petrella e colaboradores (2008) classificaram sujeitos em respondedores extremos, modestos e não-respondedores após 16 semanas. Os extremos apresentavam <strong>maior conteúdo basal de células satélite</strong> e foram os que efetivamente <strong>adicionaram mionúcleos</strong> às fibras; os não-respondedores não o fizeram <sup>[8]</sup>. É provavelmente o mecanismo mais bem descrito para diferença de teto hipertrófico.</p>
+    </div>
+    <div class="def">
+      <span class="termo">Proporção de tipos de fibra</span>
+      <p>A distribuição tipo I / tipo II varia entre indivíduos e é fortemente influenciada por genética. Fibras tipo II têm maior potencial de crescimento em área.</p>
+    </div>
+    <div class="def">
+      <span class="termo">Arquitetura e antropometria</span>
+      <p>Comprimento de fascículo, ângulo de penação, comprimento dos ventres musculares e pontos de inserção definem quanto "espaço" há para crescer e como a força é transmitida. Não são fisiologia da adaptação — são geometria.</p>
+    </div>
+    <div class="def">
+      <span class="termo">Perfil hormonal e ambiente sistêmico</span>
+      <p>Variações na faixa fisiológica normal existem, mas sua contribuição para diferenças de hipertrofia entre indivíduos saudáveis é muito menor do que a cultura de academia supõe.</p>
+    </div>
+
+    <div class="callout ok">
+      <span class="lab">Ponto central</span>
+      <p>Nenhum desses fatores indica <strong>um protocolo diferente</strong>. Todos indicam um <strong>teto diferente e uma velocidade diferente com o mesmo estímulo</strong>. Ninguém demonstrou que alguém com menor conteúdo satelital precisa de outra faixa de repetições, outra frequência ou outro volume — apenas que ganhará menos com qualquer um deles.</p>
+    </div>
+  </section>
+
+  <!-- 08 -->
+  <section id="s8">
+    <h2 class="sec"><span class="sec-num">08 &mdash;</span> Fator genético II: o genótipo prescreve treino?</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Se a genética define o teto, ela não poderia também definir qual modelo de treino funciona melhor para cada um?</p>
+    </div>
+
+    <p>Poderia, em tese. Para isso, seria preciso demonstrar uma <strong>interação genótipo × protocolo</strong>: que um marcador genético <em>inverte</em> qual modelo é superior. Essa é a única forma de a genética socorrer a Afirmação B. E a evidência é fraca a ponto de ser instrutiva.</p>
+
+    <h3>A tentativa</h3>
+    <p>Jones e colaboradores (2016) publicaram um algoritmo com 15 polimorfismos que alocaria atletas a treino de "potência" ou de "endurance". Reportaram que os grupos <em>pareados</em> ao genótipo melhoraram significativamente em salto vertical e teste aeróbio, enquanto os <em>despareados</em> não, e que 82% dos baixos respondedores vinham do grupo despareado <sup>[9]</sup>.</p>
+
+    <h3>A resposta da área</h3>
+    <p>O trabalho recebeu cartas ao editor imediatas apontando que <strong>o desenho e os dados apresentados não sustentam as afirmações</strong>, e que não há evidência científica que ampare testes genéticos direto-ao-consumidor para prescrição de programas de treinamento <sup>[10]</sup>. As mesmas críticas trouxeram o contexto que desmonta a premissa:</p>
+    <ul>
+      <li>O <strong>ACTN3</strong>, o polimorfismo mais famoso do esporte, explica algo em torno de <strong>2 a 3%</strong> da variabilidade em desempenho de sprint <sup>[10]</sup>.</li>
+      <li>Uma meta-análise de estudos de associação genômica ampla e suas replicações não conseguiu sequer <strong>discriminar atletas de endurance de elite de populações controle</strong> em múltiplos países <sup>[10]</sup>.</li>
+      <li>Avanços reais nessa direção exigiriam consórcios multicêntricos e replicação em larga escala — não algoritmos derivados de amostras pequenas.</li>
+    </ul>
+
+    <div class="callout alerta">
+      <span class="lab">Conclusão dura</span>
+      <p>Se um painel com 15 genes não consegue prever com confiabilidade nem categorias grosseiras de desempenho, a afirmação de que "meu corpo pede volume baixo" ou "meu tipo responde a treino de força" tem <strong>base genética documentada igual a zero</strong>. Não é uma hipótese ainda não testada — é uma hipótese testada e não sustentada.</p>
+    </div>
+  </section>
+
+  <!-- 09 -->
+  <section id="s9">
+    <h2 class="sec"><span class="sec-num">09 &mdash;</span> Tensão mecânica: por que o mecanismo não é personalizável</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Por que faz sentido esperar que o mesmo modelo de treino funcione para todo mundo?</p>
+    </div>
+
+    <p>Porque o <strong>estímulo primário da hipertrofia é um só</strong>: tensão mecânica sobre a fibra ativada. O caminho é conservado entre indivíduos e, até onde se sabe, entre espécies:</p>
+
+    <ol class="steps">
+      <li><strong>Recrutamento.</strong> O princípio do tamanho ordena o recrutamento das unidades motoras. Perto da falha, as unidades de alto limiar entram — independentemente de a carga ser alta ou baixa.</li>
+      <li><strong>Tensão na fibra ativa.</strong> Unidade recrutada e produzindo força sob resistência gera tensão mecânica na fibra. É a variável que o músculo "lê".</li>
+      <li><strong>Mecanotransdução.</strong> Sensores mecânicos convertem a deformação em sinal químico intracelular.</li>
+      <li><strong>Sinalização anabólica.</strong> Ativação da via mTORC1 e aumento da síntese proteica miofibrilar.</li>
+      <li><strong>Acúmulo.</strong> Saldo positivo repetido ao longo de semanas resulta em aumento de área de secção transversa.</li>
+    </ol>
+
+    <p>Nenhuma etapa dessa cadeia tem uma "versão alternativa" que se ativa em pessoas diferentes. Não existe um subgrupo humano cujo músculo cresça por outro sinal. O que varia é a <strong>eficiência e a capacidade da máquina</strong> (seção 07) — não o roteiro que ela executa.</p>
+
+    <div class="callout info">
+      <span class="lab">Por que isso derruba a Afirmação B</span>
+      <p>Se todos os modelos de treino que funcionam funcionam <strong>pelo mesmo mecanismo</strong>, então protocolos que entregam tensão mecânica equivalente devem entregar resultado equivalente. A pergunta deixa de ser "qual método serve para essa pessoa" e passa a ser "esse método entrega tensão mecânica suficiente, com frequência suficiente, por tempo suficiente?".</p>
+    </div>
+
+    <div class="callout alerta">
+      <span class="lab">Cuidado recorrente</span>
+      <p>Sensação de queimação, congestão, dor tardia e ativação eletromiográfica <strong>não são medidas de tensão mecânica nem de hipertrofia</strong>. Usar percepção subjetiva como prova de que "esse treino funciona pra mim" é o principal caminho pelo qual a individualidade biológica é inventada.</p>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section id="s10">
+    <h2 class="sec"><span class="sec-num">10 &mdash;</span> Volume: dose-resposta média × decisão individual</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Se o volume é o principal modulador da hipertrofia, ele não deveria ser a variável mais individualizada de todas?</p>
+    </div>
+
+    <p>É a intuição natural — e é onde ela falha. O que a literatura estabelece sobre volume:</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Nível</th><th>O que a evidência mostra</th><th>Implicação</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Grupo</strong></td>
+            <td>Relação dose-resposta positiva entre séries semanais e hipertrofia, com <strong>retornos decrescentes</strong> conforme o volume sobe <sup>[11][12]</sup>. No estudo unilateral replicado, ~16 séries superou ~8 séries de forma modesta mas detectável para hipertrofia — e não para força <sup>[5]</sup>.</td>
+            <td>Mais volume tende a render mais, até um ponto de eficiência decrescente.</td>
+          </tr>
+          <tr>
+            <td><strong>Indivíduo</strong></td>
+            <td>Sem evidência robusta de que a <em>direção</em> dessa resposta se inverta entre pessoas <sup>[5]</sup>.</td>
+            <td>Não há base para prescrever volume baixo a alguém por acreditar que ele "responde melhor assim".</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>A conclusão prática é menos glamourosa e mais útil: o volume ideal de um aluno <strong>não é um parâmetro biológico a ser descoberto</strong>. É uma decisão de engenharia entre a dose que produz mais resultado e a dose que ele consegue executar com qualidade, semana após semana, dentro da vida que tem.</p>
+
+    <div class="callout">
+      <span class="lab">Reformulação honesta</span>
+      <p>Em vez de "qual é o volume que o corpo dele pede?", a pergunta correta é <strong>"qual é o maior volume que ele consegue recuperar, executar bem e manter?"</strong>. A primeira é biologia inventada. A segunda é gestão de carga, e tem resposta.</p>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section id="s11">
+    <h2 class="sec"><span class="sec-num">11 &mdash;</span> Intensidade e a cláusula "se equalizado"</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>E os modelos de treino? Alta carga, baixa carga, alta frequência, divisões diferentes — nada disso muda nada?</p>
+    </div>
+
+    <p>Muda muito menos do que se imagina — <strong>desde que os drivers reais estejam equalizados</strong>. Essa cláusula faz quase todo o trabalho pesado do argumento, e faz de propósito:</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4>Carga / faixa de repetições</h4>
+        <p>Meta-análise mostra hipertrofia semelhante entre cargas baixas e altas quando as séries são levadas perto da falha; a diferença clara aparece na <strong>força máxima</strong>, que favorece cargas altas <sup>[13]</sup>.</p>
+      </div>
+      <div class="card">
+        <h4>Frequência</h4>
+        <p>Quando o <strong>volume semanal é equalizado</strong>, a frequência por si só não produz diferença relevante em hipertrofia <sup>[14]</sup>. Frequência é um instrumento de distribuição do volume, não um estímulo independente.</p>
+      </div>
+      <div class="card">
+        <h4>Divisão do treino</h4>
+        <p>Full body, ABC, upper/lower: com volume e proximidade da falha equalizados, são recipientes diferentes para o mesmo conteúdo.</p>
+      </div>
+      <div class="card">
+        <h4>Proximidade da falha</h4>
+        <p>Este é um driver de verdade, não embalagem. Séries muito distantes da falha reduzem o recrutamento efetivo — e é aqui que muita "não-resposta" nasce.</p>
+      </div>
+    </div>
+
+    <div class="callout ok">
+      <span class="lab">A tautologia útil</span>
+      <p>Dizer "quando volume e intensidade são equalizados, o modelo de treino não dita o resultado" é quase circular — porque volume e proximidade da falha <strong>são</strong> o resultado. Mas é uma tautologia valiosa, porque é exatamente <strong>a embalagem</strong> que se vende como "o método que funciona pro seu tipo". Nomear a divisão, o tempo de descanso e a ordem dos exercícios não cria um estímulo novo.</p>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section id="s12">
+    <h2 class="sec"><span class="sec-num">12 &mdash;</span> Onde a individualização realmente se sustenta</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Então individualizar treino é perda de tempo?</p>
+    </div>
+
+    <p>De jeito nenhum — mas o que se individualiza legitimamente é <strong>mecânico e contextual, não fisiológico</strong>. Esta é a distinção que salva a prática profissional do niilismo:</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Individualização legítima</th><th>Base</th><th>O que muda</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Seleção de exercício</strong></td>
+            <td>Antropometria e biomecânica: comprimento de segmentos, braço de momento, inserções, amplitude articular disponível.</td>
+            <td>Qual exercício entrega tensão àquele músculo naquele corpo. Fêmur longo no agachamento livre é alavanca, não biologia.</td>
+          </tr>
+          <tr>
+            <td><strong>Amplitude e posicionamento</strong></td>
+            <td>Mecânica articular individual e conforto sob carga.</td>
+            <td>Onde a curva de resistência encontra a curva de força daquele indivíduo.</td>
+          </tr>
+          <tr>
+            <td><strong>Dose executável</strong></td>
+            <td>Tempo disponível, sono, estresse, trabalho, histórico de treino.</td>
+            <td>Quanto volume cabe na vida — não quanto volume o corpo "aceita".</td>
+          </tr>
+          <tr>
+            <td><strong>Histórico de lesão</strong></td>
+            <td>Condição clínica prévia; frequentemente fora do escopo do personal.</td>
+            <td>Restrições e substituições, com encaminhamento quando necessário.</td>
+          </tr>
+          <tr>
+            <td><strong>Preferência e aderência</strong></td>
+            <td>Comportamento, não fisiologia.</td>
+            <td>A taxa de execução real ao longo dos meses.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="lab">A frase que resume</span>
+      <p>Existe individualidade <strong>de magnitude</strong> — uns crescem mais. Não há evidência de individualidade <strong>de prescrição</strong> — de que cada um precise de um protocolo diferente para crescer. E é a segunda que a indústria vende usando os dados da primeira.</p>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section id="s13">
+    <h2 class="sec"><span class="sec-num">13 &mdash;</span> Aderência: o argumento certo pelo motivo certo</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta</span>
+      <p>Se preferência não muda a biologia, por que ela importa tanto na prática?</p>
+    </div>
+
+    <p>Porque ela não determina a resposta, mas determina a <strong>dose efetivamente executada ao longo de meses</strong> — e a dose executada é o único volume que existe de fato. A planilha não hipertrofia ninguém.</p>
+
+    <p>Isso reposiciona completamente o "gosto pessoal". Ele deixa de ser uma justificativa biológica falsa e passa a ser uma variável operacional real:</p>
+
+    <div class="grid g3">
+      <div class="card">
+        <h4>Leitura errada</h4>
+        <p>"Ele odeia 20 séries semanais de quadríceps, logo ele tem biologia de baixo volume."</p>
+      </div>
+      <div class="card">
+        <h4>Leitura correta</h4>
+        <p>"Ele odeia 20 séries semanais de quadríceps, logo a taxa de comparecimento e a qualidade das séries vão cair — e o volume real executado será menor que o prescrito."</p>
+      </div>
+      <div class="card">
+        <h4>Decisão</h4>
+        <p>Prescrever a maior dose <strong>sustentável</strong>, não a maior dose teórica. Ajustar por comportamento é legítimo; rebatizar isso de individualidade biológica é que não é.</p>
+      </div>
+    </div>
+
+    <div class="callout ok">
+      <span class="lab">Implicação para consultoria</span>
+      <p>Quando um aluno diz "esse treino não funciona comigo", a hipótese mais provável quase nunca é fisiológica. Na ordem: proximidade insuficiente da falha, volume real abaixo do prescrito, sono e alimentação, progressão de carga estagnada, tempo de intervenção curto demais para detectar mudança acima do erro de medida. Individualidade biológica é a <strong>última</strong> hipótese da fila, não a primeira.</p>
+    </div>
+  </section>
+
+  <!-- 14 -->
+  <section id="s14">
+    <h2 class="sec"><span class="sec-num">14 &mdash;</span> Veredito em três níveis</h2>
+
+    <div class="q">
+      <span class="lab">Pergunta central</span>
+      <p>Individualidade biológica realmente existe?</p>
+    </div>
+
+    <div class="def">
+      <span class="termo">Nível 1 — Magnitude: existe, provavelmente</span>
+      <p>Há suporte razoável para diferenças individuais no <strong>quanto</strong> se ganha com o mesmo estímulo. Correlações em torno de 0,70 entre períodos repetidos de treino <sup>[7]</sup> e mecanismos plausíveis como conteúdo satelital e adição mionuclear <sup>[8]</sup> sustentam a ideia de teto genético. <strong>Porém</strong>: mesmo essa versão é bem menor do que os gráficos brutos sugerem, e permanece <strong>impossível de prever antes de treinar</strong>.</p>
+    </div>
+    <div class="def">
+      <span class="termo">Nível 2 — Prescrição: não há evidência</span>
+      <p>A ideia de que cada indivíduo precisa de um <strong>modelo ou volume específico</strong> para responder não sobreviveu ao único desenho construído para testá-la <sup>[5]</sup>, e não tem qualquer respaldo genético <sup>[9][10]</sup>. Com volume, proximidade da falha e tempo equalizados, a resposta média é o melhor palpite disponível para qualquer indivíduo saudável.</p>
+    </div>
+    <div class="def">
+      <span class="termo">Nível 3 — Resposta nula: essencialmente artefato</span>
+      <p>O "não-respondedor" é um rótulo de evento. Ele desaparece quando se testa outro volume <sup>[6]</sup> e não se reproduz quando se repete o mesmo protocolo <sup>[7]</sup>. Tratar isso como característica permanente de uma pessoa é erro metodológico, não achado biológico.</p>
+    </div>
+
+    <div class="callout">
+      <span class="lab">Onde fica o ônus da prova</span>
+      <p>Ele está com quem afirma que a individualização de volume ou modelo é <strong>necessária</strong>. Essa prova exige um desenho replicado dentro do sujeito, com controle de erro de medida — e até hoje ela não apareceu.</p>
+    </div>
+  </section>
+
+  <!-- 15 -->
+  <section id="s15">
+    <h2 class="sec"><span class="sec-num">15 &mdash;</span> Honestidade científica e limitações</h2>
+
+    <p>Este material defende uma posição, e por isso as fragilidades dela precisam estar explícitas:</p>
+
+    <ul>
+      <li><strong>Ausência de evidência não é evidência de ausência.</strong> Não detectar IRV condição-específica não prova que ela inexiste. Prova que, com os desenhos disponíveis, ela não apareceu.</li>
+      <li><strong>Poder estatístico.</strong> Detectar variância de <em>interação</em> (sujeito × protocolo) exige amostras muito maiores do que detectar efeito médio. O estudo unilateral replicado tem <strong>n = 16</strong> e é um <em>preprint</em> ainda não revisado por pares; a própria justificativa amostral é de viabilidade, não de cálculo de poder <sup>[5]</sup>.</li>
+      <li><strong>Escopo dos desfechos.</strong> A discussão trata de hipertrofia e força em saudáveis. Populações clínicas, atletas de elite e desfechos de desempenho específico podem se comportar de outra forma.</li>
+      <li><strong>Duração.</strong> Praticamente todos os dados vêm de intervenções de 8 a 16 semanas. Diferenças individuais que só se manifestam em anos de treino permanecem, por definição, não testadas.</li>
+      <li><strong>Generalização de população.</strong> Boa parte das análises com grupo controle usa destreinados; extrapolar para avançados exige cautela — e é exatamente por isso que o desenho unilateral em treinados é relevante.</li>
+    </ul>
+
+    <div class="callout info">
+      <span class="lab">Postura recomendada</span>
+      <p>Não é preciso afirmar que a individualidade biológica "não existe" para agir corretamente. Basta reconhecer que ela é <strong>menor, menos previsível e menos acionável</strong> do que se supõe — e que, na ausência de um método para identificá-la <em>a priori</em>, a melhor decisão para um indivíduo continua sendo aplicar bem o que funciona na média e ajustar pela resposta observada ao longo do tempo.</p>
+    </div>
+  </section>
+
+  <!-- 16 -->
+  <section id="s16">
+    <h2 class="sec"><span class="sec-num">16 &mdash;</span> Referências</h2>
+    <ol class="refs">
+      <li>Within-individual design for assessing true individual responses in resistance training-induced muscle hypertrophy. 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11825802/">pmc.ncbi.nlm.nih.gov/articles/PMC11825802</a></li>
+      <li>Atkinson G, Batterham AM. True and false interindividual differences in the physiological response to an intervention. <em>Experimental Physiology</em>. 2015;100(6):577-588.</li>
+      <li>N of 1: Optimizing Methodology for the Detection of Individual Response Variation in Resistance Training. <em>Sports Medicine</em>. 2024. doi:10.1007/s40279-024-02050-z</li>
+      <li>Ahtiainen JP, Walker S, Peltonen H, et al. Heterogeneity in resistance training-induced muscle strength and mass responses in men and women of different ages. <em>Age (Dordr)</em>. 2016;38(1):10.</li>
+      <li>Robinson ZP, Steele J, Helms ER, Trexler ET, Hall ME, Huang CJ, Pelland JC, Remmert JF, Hinson SR, Mikula SA, Hamaïde AA, Zourdos MC. The Effect of Resistance Training Volume on Individual-Level Skeletal Muscle Adaptations: A Novel Replicated Within-Participant Unilateral Trial. <em>bioRxiv</em>. 2025. doi:10.1101/2025.07.24.666533 <strong>(preprint)</strong></li>
+      <li>Barbalho MSM, Gentil P, Izquierdo M, Fisher J, Steele J, Raiol RA. There are no no-responders to low or high resistance training volumes among older women. <em>Experimental Gerontology</em>. 2017;99:18-26.</li>
+      <li>Repeated Resistance Training Reveals the Reproducibility of Muscle Strength and Size Responses Within Individuals. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12659766/">ncbi.nlm.nih.gov/pmc/articles/PMC12659766</a></li>
+      <li>Petrella JK, Kim JS, Mayhew DL, Cross JM, Bamman MM. Potent myofiber hypertrophy during resistance training in humans is associated with satellite cell-mediated myonuclear addition. <em>Journal of Applied Physiology</em>. 2008;104(6):1736-1742.</li>
+      <li>Jones N, Kiely J, Suraci B, et al. A genetic-based algorithm for personalized resistance training. <em>Biology of Sport</em>. 2016;33(2):117-126.</li>
+      <li>Carta ao editor: A genetic-based algorithm for personalized resistance training. <em>Biology of Sport</em>. 2016. <a href="https://ncbi.nlm.nih.gov/pmc/articles/PMC5377557">ncbi.nlm.nih.gov/pmc/articles/PMC5377557</a></li>
+      <li>Pelland JC, Remmert JF, Robinson ZP, Hinson SR, Zourdos MC. The Resistance Training Dose-Response: Meta-Regressions Exploring the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength. <em>SportRxiv</em>. 2024.</li>
+      <li>Currier BS, McLeod JC, Banfield L, et al. Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis. <em>British Journal of Sports Medicine</em>. 2023.</li>
+      <li>Schoenfeld BJ, Grgic J, Ogborn D, Krieger JW. Strength and hypertrophy adaptations between low- vs. high-load resistance training: a systematic review and meta-analysis. <em>Journal of Strength and Conditioning Research</em>. 2017;31(12):3508-3523.</li>
+      <li>Schoenfeld BJ, Grgic J, Krieger J. How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency. <em>Journal of Sports Sciences</em>. 2019;37(11):1286-1295.</li>
+      <li>Hecksteden A, Kraushaar J, Scharhag-Rosenberger F, Theisen D, Senn S, Meyer T. Individual response to exercise training — a statistical perspective. <em>Journal of Applied Physiology</em>. 2015;118(12):1450-1459.</li>
+    </ol>
+
+    <div class="callout info">
+      <span class="lab">Nota de honestidade científica</span>
+      <p>A referência [5], central para o argumento sobre volume, é um <strong>preprint não revisado por pares</strong> com amostra pequena. Suas conclusões devem ser lidas como o melhor teste disponível até o momento, não como fato estabelecido. Este material será revisado caso a versão publicada altere os achados. Nenhuma referência foi lida em substituição ao original: recomenda-se consultar os trabalhos citados diretamente.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="star">★</span> <strong>MG COACH</strong> — Biblioteca de Estudo · Material conceitual · Uso educacional.
+    <br>Este conteúdo não substitui avaliação individual, diagnóstico médico ou orientação de profissional habilitado.
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var KEY = "mgcoach-theme";
+  var root = document.documentElement;
+  var btn = document.getElementById("themeToggle");
+
+  function apply(t){
+    root.setAttribute("data-theme", t);
+    btn.textContent = (t === "dark") ? "☀" : "☾";
+    btn.setAttribute("aria-label", t === "dark" ? "Mudar para tema claro" : "Mudar para tema escuro");
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch(e){}
+  apply(saved === "light" ? "light" : "dark");
+
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    apply(next);
+    try { localStorage.setItem(KEY, next); } catch(err){}
+  });
+
+  document.querySelectorAll('nav.toc a[href^="#"]').forEach(function(a){
+    a.addEventListener("click", function(e){
+      var el = document.querySelector(a.getAttribute("href"));
+      if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
