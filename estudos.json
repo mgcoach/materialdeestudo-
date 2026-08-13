@@ -1,5 +1,13 @@
 [
   {
+    "titulo": "Tutoria 01: Crânio, Face, Coluna e Tecido Muscular",
+    "categoria": "fisiologia",
+    "serie": "Tutoria (Graduação)",
+    "data": "Ago · 2026",
+    "resumo": "Material completo da Tutoria 01 da graduação, em 27 seções, cobrindo os dez objetivos de Anatomia, Fisiologia e Histologia de forma integrada. Anatomia: os 8 ossos do neurocrânio e os 14 da face com seus acidentes ósseos classificados por função (passagem, inserção, articulação); articulações do crânio (suturas, gonfose, sincondrose) e a ATM em detalhe — ginglimoartrodial, revestida de fibrocartilagem, com disco dividindo dois compartimentos (rotação no infradiscal, translação no supradiscal) e o mecanismo de abertura em dois tempos; músculos da mímica (VII, 2º arco, inserção na pele) e da mastigação (V3, 1º arco, inserção óssea) com origem, inserção e ação em tabela, mais os cinco critérios de diferenciação e o caso especial do bucinador. Coluna: vértebra tipo e acidentes, particularidades regionais com a regra de que a orientação da faceta é o trilho do movimento, articulações intervertebrais (sínfise, zigapofisária, uncovertebral, atlanto-occipital, atlantoaxial), ligamentos e o que cada um limita, amplitudes por região e movimento acoplado, ritmo lombopélvico. Disco intervertebral: ânulo lamelar, núcleo hidrofílico, placas terminais, conversão hidráulica de compressão em tensão circunferencial, nutrição por difusão dependente de carga cíclica, creep e variação diurna, pressão intradiscal por posição. Curvaturas fisiológicas: primárias × secundárias, desenvolvimento ontogenético, fórmula de Euler R = N²+1, dissipação de forças ascendentes e descendentes, locomoção. Músculos do dorso com O/I/A por camada e o critério de inervação (ramos anteriores × posteriores), gradiente motor-estabilizador, estabilidade postural com modelo de Panjabi, sistema local × global, feedforward, pressão intra-abdominal e flexão-relaxamento. Histologia: comparação dos três tecidos musculares em dez critérios, organização em epimísio/perimísio/endomísio, tríade, células satélites, tipos de fibra. Fisiologia: sarcômero e classificação das proteínas em contráteis, regulatórias e acessórias; acoplamento excitação-contração em oito passos; filamentos deslizantes, relação comprimento-tensão, tipos de ação e unidade motora, fechando com a diferença fisiológica entre mover e sustentar postura. Inclui 23 perguntas de autoteste, resumo em 20 pontos e nota de honestidade científica sobre postura, imagem e treino de core.",
+    "arquivo": "tutoria-01-cranio-face-coluna.html"
+  },
+  {
     "titulo": "Glúteos 1: Glúteo Médio — Anatomia, Biomecânica e Treinamento",
     "categoria": "biomecanica",
     "serie": "Glúteos",
