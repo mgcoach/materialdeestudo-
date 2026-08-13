@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FGF21 — Sensibilidade à Insulina, Emagrecimento e Massa Muscular | MG COACH</title>
+<meta name="description" content="Material de estudo completo sobre FGF21: receptor FGFR1c/β-Klotho, cascatas de indução (PPARα, ChREBP, GCN2/ATF4), cascatas de ação (MAPK-RSK/AS160/GLUT4), sensibilidade à insulina, emagrecimento, proteína e preservação de massa muscular.">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MG COACH · Biblioteca de Estudo">
+<meta property="og:title" content="FGF21 — Sensibilidade à Insulina, Emagrecimento e Massa Muscular">
+<meta property="og:description" content="Do receptor à aplicação prática: cascatas bioquímicas, o que é rato e o que é humano, e por que proteína alta desliga o FGF21 (e por que isso é bom para quem treina).">
+<meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/fgf21-metabolismo-emagrecimento.html">
+<meta name="twitter:card" content="summary">
+
+<style>
+:root{
+  --bg:#0a0a0a;
+  --card:#141414;
+  --card2:#141818;
+  --line:#262626;
+  --t1:#f2f2f2;
+  --t2:#9a9a9a;
+  --t3:#6b6b6b;
+  --t4:#444444;
+  --or:#ff6b1a;
+  --or-soft:rgba(255,107,26,.10);
+  --or-line:rgba(255,107,26,.28);
+  --warn:#ffb020;
+  --warn-soft:rgba(255,176,32,.09);
+  --ok:#35c26a;
+  --ok-soft:rgba(53,194,106,.09);
+}
+[data-theme="light"]{
+  --bg:#f7f7f5;
+  --card:#ffffff;
+  --card2:#f1f1ef;
+  --line:#e0e0dc;
+  --t1:#131313;
+  --t2:#565656;
+  --t3:#7c7c7c;
+  --t4:#a8a8a8;
+  --or:#d95300;
+  --or-soft:rgba(217,83,0,.07);
+  --or-line:rgba(217,83,0,.24);
+  --warn:#a86a00;
+  --warn-soft:rgba(168,106,0,.07);
+  --ok:#1c7f45;
+  --ok-soft:rgba(28,127,69,.07);
+}
+
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--t1);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  font-weight:500;
+  line-height:1.65;
+  font-size:16px;
+  padding:0 0 90px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto;padding:0 18px}
+
+/* ---------- topo ---------- */
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:12px;padding:18px 0 6px;
+}
+.backlink{
+  color:var(--t2);text-decoration:none;font-size:12.5px;font-weight:600;
+  letter-spacing:1.2px;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:6px;padding:8px 12px;
+  background:var(--card);display:inline-block;transition:transform .12s ease;
+}
+.backlink:active{transform:scale(.96)}
+.theme-toggle{
+  background:var(--card);color:var(--t2);border:1px solid var(--line);
+  border-radius:6px;padding:8px 12px;font-size:12.5px;font-weight:700;
+  letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  font-family:inherit;transition:transform .12s ease;
+}
+.theme-toggle:active{transform:scale(.96)}
+
+/* ---------- hero ---------- */
+header.hero{padding:26px 0 22px;border-bottom:1px solid var(--line)}
+.eyebrow{
+  color:var(--or);font-size:11.5px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;margin-bottom:14px;
+}
+h1{
+  font-size:clamp(28px,7vw,44px);line-height:1.08;font-weight:800;
+  letter-spacing:-.03em;margin-bottom:14px;
+}
+.sub{color:var(--t2);font-size:16px;font-weight:500;max-width:62ch}
+.brand-meta{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;
+}
+.brand-meta span{
+  font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--t3);background:var(--card);border:1px solid var(--line);
+  border-radius:4px;padding:6px 10px;
+}
+.brand-meta span.hot{color:var(--or);border-color:var(--or-line);background:var(--or-soft)}
+
+/* ---------- TOC ---------- */
+nav.toc{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:8px;margin:26px 0 10px;overflow:hidden;
+}
+.toc-head{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:14px 16px;cursor:pointer;user-select:none;
+  font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--t2);background:none;border:0;width:100%;font-family:inherit;text-align:left;
+}
+.toc-head .chev{color:var(--or);font-size:13px;transition:transform .18s ease}
+nav.toc.closed .chev{transform:rotate(-90deg)}
+.toc-body{border-top:1px solid var(--line);padding:8px 6px 12px}
+nav.toc.closed .toc-body{display:none}
+.toc-body a{
+  display:block;color:var(--t2);text-decoration:none;font-size:14.5px;
+  padding:8px 12px;border-radius:4px;line-height:1.35;
+}
+.toc-body a b{color:var(--or);font-weight:800;margin-right:8px;font-variant-numeric:tabular-nums}
+.toc-body a:active{transform:scale(.98)}
+
+/* ---------- seções ---------- */
+section{padding:34px 0 4px;border-top:1px solid var(--line);margin-top:26px}
+section:first-of-type{border-top:0}
+h2{
+  font-size:clamp(21px,4.6vw,27px);line-height:1.2;font-weight:800;
+  letter-spacing:-.02em;margin-bottom:16px;
+}
+.sec-num{color:var(--or);font-weight:800;font-variant-numeric:tabular-nums}
+h3{
+  font-size:16.5px;font-weight:700;letter-spacing:-.01em;
+  margin:26px 0 10px;color:var(--t1);
+}
+h4{
+  font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--t3);margin:22px 0 10px;
+}
+p{margin-bottom:14px;color:var(--t2)}
+p strong,li strong{color:var(--t1);font-weight:700}
+em{font-style:italic;color:var(--t1)}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;
+  background:var(--card2);border:1px solid var(--line);border-radius:4px;
+  padding:1px 6px;color:var(--or);
+}
+
+/* ---------- listas ---------- */
+ul.clean,ol.clean{list-style:none;margin:0 0 16px}
+ul.clean li,ol.clean li{
+  color:var(--t2);padding:7px 0 7px 20px;position:relative;
+}
+ul.clean li::before{
+  content:"";position:absolute;left:2px;top:17px;
+  width:6px;height:1px;background:var(--or);
+}
+ol.clean{counter-reset:c}
+ol.clean li{counter-increment:c;padding-left:30px}
+ol.clean li::before{
+  content:counter(c,decimal-leading-zero);position:absolute;left:0;top:7px;
+  color:var(--or);font-weight:800;font-size:12.5px;font-variant-numeric:tabular-nums;
+}
+ul.key{list-style:none;margin:0 0 16px}
+ul.key li{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:6px;padding:12px 14px;margin-bottom:8px;color:var(--t2);font-size:15px;
+}
+
+/* ---------- callouts ---------- */
+.callout{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:8px;padding:16px 16px 4px;margin:20px 0;
+}
+.callout .tag{
+  display:block;font-size:11px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--or);margin-bottom:8px;
+}
+.callout.ok{border-left-color:var(--ok);background:var(--ok-soft)}
+.callout.ok .tag{color:var(--ok)}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+.callout.warn .tag{color:var(--warn)}
+.callout p:last-child{margin-bottom:14px}
+
+/* ---------- definições ---------- */
+.def{
+  background:var(--card2);border:1px solid var(--line);border-radius:8px;
+  padding:14px 16px 2px;margin-bottom:10px;
+}
+.def .word{
+  display:block;color:var(--t1);font-weight:800;font-size:15.5px;
+  letter-spacing:-.01em;margin-bottom:6px;
+}
+.def .word span{color:var(--or);font-weight:700;font-size:12.5px;letter-spacing:.4px}
+.def p{font-size:14.5px;margin-bottom:12px}
+
+/* ---------- steps / cascatas ---------- */
+.stepwrap{
+  background:var(--card);border:1px solid var(--line);border-radius:8px;
+  padding:8px 14px;margin:18px 0;
+}
+.step{
+  position:relative;padding:12px 0 12px 30px;border-bottom:1px solid var(--line);
+}
+.step:last-child{border-bottom:0}
+.step::before{
+  content:"";position:absolute;left:7px;top:20px;
+  width:7px;height:7px;border-radius:50%;background:var(--or);
+}
+.step::after{
+  content:"";position:absolute;left:10px;top:30px;bottom:-6px;
+  width:1px;background:var(--line);
+}
+.step:last-child::after{display:none}
+.step b{display:block;color:var(--t1);font-weight:700;font-size:15px;margin-bottom:3px}
+.step span{color:var(--t2);font-size:14.5px}
+
+/* ---------- grids ---------- */
+.grid2{display:grid;grid-template-columns:1fr;gap:10px;margin:18px 0}
+@media(min-width:640px){.grid2{grid-template-columns:1fr 1fr}}
+.mini{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:6px;padding:14px;
+}
+.mini b{display:block;color:var(--t1);font-size:14.5px;font-weight:700;margin-bottom:5px}
+.mini p{font-size:14px;margin-bottom:0}
+
+/* ---------- tabelas ---------- */
+.table-wrap{
+  overflow-x:auto;border:1px solid var(--line);border-radius:8px;
+  margin:20px 0;background:var(--card);-webkit-overflow-scrolling:touch;
+}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+th{
+  text-align:left;padding:12px 14px;color:var(--t3);font-size:11px;
+  font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+  border-bottom:1px solid var(--line);white-space:nowrap;
+}
+td{padding:12px 14px;border-bottom:1px solid var(--line);color:var(--t2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td strong{color:var(--t1)}
+.up{color:var(--or);font-weight:700}
+.dn{color:var(--ok);font-weight:700}
+.nil{color:var(--t4);font-weight:700}
+
+/* ---------- referências ---------- */
+.refs{list-style:none;counter-reset:r}
+.refs li{
+  counter-increment:r;position:relative;padding:10px 0 10px 34px;
+  border-bottom:1px solid var(--line);color:var(--t3);font-size:13.5px;line-height:1.5;
+}
+.refs li:last-child{border-bottom:0}
+.refs li::before{
+  content:counter(r);position:absolute;left:0;top:10px;color:var(--or);
+  font-weight:800;font-size:12px;font-variant-numeric:tabular-nums;
+}
+.refs li b{color:var(--t2);font-weight:600}
+
+footer{
+  margin-top:40px;padding-top:24px;border-top:1px solid var(--line);
+  color:var(--t4);font-size:12px;letter-spacing:1.2px;text-transform:uppercase;
+  font-weight:700;text-align:center;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="backlink" href="index.html">← Biblioteca</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema">Tema</button>
+  </div>
+
+  <header class="hero">
+    <div class="eyebrow">Fisiologia Metabólica · Material de Estudo</div>
+    <h1>FGF21: sensibilidade à insulina, emagrecimento e a linha tênue com a massa muscular</h1>
+    <p class="sub">Do receptor até a prática: as cascatas que fabricam o FGF21, as cascatas que ele dispara ao chegar, por que proteína alta o desliga — e por que isso é uma boa notícia para quem treina.</p>
+    <div class="brand-meta">
+      <span class="hot">19 seções</span>
+      <span>Baseado em evidência</span>
+      <span>Nível avançado</span>
+      <span>Rato vs. humano sinalizado</span>
+    </div>
+  </header>
+
+  <nav class="toc" id="toc">
+    <button class="toc-head" id="tocHead" type="button" aria-expanded="true">
+      <span>Índice do material</span><span class="chev">▾</span>
+    </button>
+    <div class="toc-body">
+      <a href="#s01"><b>01</b>O que é o FGF21</a>
+      <a href="#s02"><b>02</b>O receptor: FGFR1c + β-Klotho</a>
+      <a href="#s03"><b>03</b>Mapa de tecidos — onde ele age (e onde não age)</a>
+      <a href="#s04"><b>04</b>Glossário bioquímico expandido</a>
+      <a href="#s05"><b>05</b>Cascatas de INDUÇÃO — como o FGF21 é fabricado</a>
+      <a href="#s06"><b>06</b>Cascatas de AÇÃO — o que ele faz ao chegar</a>
+      <a href="#s07"><b>07</b>Sensibilidade à insulina: a integração completa</a>
+      <a href="#s08"><b>08</b>Emagrecimento: gasto energético e ingestão</a>
+      <a href="#s09"><b>09</b>O paradoxo: FGF21 alto na obesidade</a>
+      <a href="#s10"><b>10</b>O que eleva FGF21 no humano (≠ camundongo)</a>
+      <a href="#s11"><b>11</b>Proteína suprime FGF21 — a colisão frontal</a>
+      <a href="#s12"><b>12</b>FGF21 e massa muscular: a miocina catabólica</a>
+      <a href="#s13"><b>13</b>Exercício: agudo sobe, crônico desce</a>
+      <a href="#s14"><b>14</b>Análogos farmacológicos: a prova de conceito</a>
+      <a href="#s15"><b>15</b>Contrapontos e limites da evidência</a>
+      <a href="#s16"><b>16</b>Proteína na prática: quando, quanto, como</a>
+      <a href="#s17"><b>17</b>Erros comuns no discurso fitness</a>
+      <a href="#s18"><b>18</b>Síntese — 8 regras operacionais</a>
+      <a href="#s19"><b>19</b>Honestidade científica e referências</a>
+    </div>
+  </nav>
+
+<!-- ============ 01 ============ -->
+<section id="s01">
+  <h2><span class="sec-num">01 &mdash;</span> O que é o FGF21</h2>
+
+  <p>O <strong>FGF21 (Fibroblast Growth Factor 21)</strong> é um membro atípico da família dos fatores de crescimento fibroblásticos. Os FGFs "clássicos" (FGF1, FGF2 etc.) são fatores <em>parácrinos</em>: agem no vizinho imediato, porque possuem um domínio de ligação à heparina que os prende à matriz extracelular como um ímã prende no metal.</p>
+
+  <p>O FGF21 perdeu esse domínio. Sem a âncora de heparina, ele escapa do tecido, cai na corrente sanguínea e viaja. Por isso pertence à <strong>subfamília endócrina dos FGFs</strong>, junto com FGF19 e FGF23 — três hormônios que se comportam como fatores de crescimento, mas atuam como reguladores metabólicos sistêmicos.</p>
+
+  <div class="def">
+    <span class="word">Parácrino vs. endócrino <span>· distinção fundamental</span></span>
+    <p><strong>Parácrino</strong> = age em células vizinhas, difusão local, sem entrar no sangue de forma relevante. <strong>Endócrino</strong> = é liberado no sangue e age em órgão distante. A perda do domínio de heparina é literalmente o que converteu o FGF21 de "fator de crescimento local" em "hormônio metabólico".</p>
+  </div>
+
+  <p>Ele é produzido principalmente no <strong>fígado</strong>, mas também em tecido adiposo (branco e marrom), pâncreas e — em condições específicas de estresse — no <strong>músculo esquelético</strong>. Essa última fonte será decisiva na seção 12.</p>
+
+  <div class="callout">
+    <span class="tag">A frase que resume o hormônio</span>
+    <p>O FGF21 não é um hormônio de fartura nem de fome. Ele é um <strong>hormônio de desequilíbrio</strong>. Ele sobe quando algo está fora de proporção: carboidrato demais para pouca proteína, gordura demais chegando ao fígado, mitocôndria sob estresse, aminoácido faltando. Ele é o sinal de "as contas não estão fechando aqui dentro".</p>
+  </div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section id="s02">
+  <h2><span class="sec-num">02 &mdash;</span> O receptor: FGFR1c + β-Klotho</h2>
+
+  <p>Um hormônio circulante banha <em>todas</em> as células do corpo. O que decide quem responde é o receptor. E aqui está a chave de leitura de todo este material.</p>
+
+  <h3>O complexo receptor tem duas peças obrigatórias</h3>
+
+  <div class="def">
+    <span class="word">FGFR1c <span>· receptor tirosina quinase</span></span>
+    <p>Uma proteína transmembrana que atravessa a membrana celular. A porção externa liga o hormônio; a porção interna é uma <strong>quinase</strong> — uma enzima que adiciona grupos fosfato em resíduos de tirosina de outras proteínas. Adicionar fosfato muda a forma da proteína-alvo e liga ou desliga sua função. É assim que um sinal externo vira ação interna.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">β-Klotho (KLB) <span>· co-receptor obrigatório</span></span>
+    <p>Uma proteína transmembrana <em>sem</em> atividade enzimática própria. Ela não sinaliza nada sozinha. Sua função é servir de "encaixe de alta afinidade": o FGF21 tem afinidade péssima pelo FGFR1c isolado, e o KLB atua como adaptador que aproxima os dois. <strong>Sem KLB, não há resposta ao FGF21 — por mais FGF21 que exista no sangue.</strong></p>
+  </div>
+
+  <p>Isso significa que <strong>a distribuição do β-Klotho define o mapa de ação do hormônio</strong>. Um tecido com muito KLB é alvo; um tecido sem KLB é espectador.</p>
+
+  <h3>A cascata que se acende quando o FGF21 liga</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>1 · Ligação e dimerização</b><span>O FGF21 se prende ao complexo FGFR1c–KLB. Dois complexos se aproximam e formam um dímero. Receptores tirosina quinase precisam estar em par para funcionar — a proximidade é o gatilho.</span></div>
+    <div class="step"><b>2 · Transautofosforilação</b><span>Cada quinase fosforila a quinase parceira em resíduos de tirosina da cauda intracelular. O receptor agora está "ativo" e coberto de fosfotirosinas, que funcionam como pontos de ancoragem.</span></div>
+    <div class="step"><b>3 · Recrutamento de FRS2α</b><span>A proteína adaptadora FRS2α (FGF Receptor Substrate 2 alpha) reconhece o receptor fosforilado e se acopla. Adaptadores não fazem química — fazem <em>logística</em>: aproximam as peças seguintes.</span></div>
+    <div class="step"><b>4 · GRB2 → SOS → RAS</b><span>FRS2α recruta GRB2, que recruta SOS. SOS é um fator trocador de nucleotídeo: ele troca o GDP (inativo) por GTP (ativo) na proteína RAS. RAS ligado a GTP está "ligado".</span></div>
+    <div class="step"><b>5 · RAF → MEK → ERK1/2</b><span>RAS ativa RAF, que fosforila MEK, que fosforila ERK1/2. É a clássica cascata MAPK — uma sequência de três quinases em série que <strong>amplifica</strong> o sinal: uma molécula no topo produz milhares de moléculas ativas na base.</span></div>
+    <div class="step"><b>6 · Efeitos</b><span>ERK1/2 fosforila alvos no citoplasma (ação rápida, minutos) e migra ao núcleo para alterar transcrição gênica (ação lenta, horas). Daí vêm tanto o efeito agudo sobre captação de glicose quanto os efeitos crônicos sobre <em>browning</em> e gasto energético.</span></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Ponto de atenção</span>
+    <p>Note que a via principal do FGF21 é <strong>MAPK/ERK</strong>, não PI3K/AKT. A via da insulina é PI3K/AKT. São vias <em>diferentes</em> que convergem lá na frente. Isso vai explicar por que os efeitos são sinérgicos e não redundantes (seção 07).</p>
+  </div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section id="s03">
+  <h2><span class="sec-num">03 &mdash;</span> Mapa de tecidos — onde ele age (e onde não age)</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Tecido</th><th>β-Klotho</th><th>O que o FGF21 faz ali</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Adiposo marrom (BAT)</strong></td><td class="up">Alto</td><td>Captação de glicose, termogênese via UCP1. Sítio do efeito agudo de sensibilização à insulina.</td></tr>
+        <tr><td><strong>Adiposo branco (WAT)</strong></td><td class="up">Alto</td><td>Browning (conversão em adipócito bege), captação de glicose via GLUT1, produção de adiponectina.</td></tr>
+        <tr><td><strong>Fígado</strong></td><td class="up">Alto</td><td>Redução de lipogênese, aumento de oxidação de ácidos graxos, inibição de mTORC1 hepático.</td></tr>
+        <tr><td><strong>SNC / hipotálamo</strong></td><td class="up">Alto</td><td>Gasto energético, eixo simpático, preferência alimentar (reduz busca por doce), eixo HPA.</td></tr>
+        <tr><td><strong>Pâncreas</strong></td><td class="up">Presente</td><td>Modulação de função de célula beta (papel ainda pouco definido).</td></tr>
+        <tr><td><strong>Músculo esquelético</strong></td><td class="nil">Baixo</td><td><strong>Alvo endócrino fraco.</strong> Porém, o músculo <em>produz</em> FGF21 sob estresse, com efeito autócrino/local — que é catabólico.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Leitura obrigatória deste quadro</span>
+    <p>O músculo esquelético é <strong>produtor</strong> de FGF21 mais do que <strong>receptor</strong> de FGF21. Trabalho recente de fosfoproteômica mostrou que o FGF21 aciona as vias que aumentam sensibilidade à insulina <strong>no adiposo marrom, mas não no músculo esquelético</strong>. Quem melhora a captação de glicose muscular é a contração (AMPK/CaMKII) e a insulina — não este hormônio.</p>
+  </div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section id="s04">
+  <h2><span class="sec-num">04 &mdash;</span> Glossário bioquímico expandido</h2>
+
+  <p>Esta seção existe para você não precisar sair do material. Cada termo abaixo aparece nas cascatas das seções seguintes. Leia como referência, não como texto corrido.</p>
+
+  <h4>Sensores de energia e nutriente</h4>
+
+  <div class="def">
+    <span class="word">mTORC1 <span>· mechanistic Target of Rapamycin Complex 1</span></span>
+    <p>O <strong>interruptor mestre da síntese proteica</strong>. É um complexo enzimático que, quando ativo, fosforila S6K1 e 4E-BP1 e libera a maquinaria de tradução (ribossomos montando proteína). É ativado por: leucina e outros aminoácidos, insulina/IGF-1, e tensão mecânica do treino. É inibido por: AMPK, falta de aminoácidos, jejum, e — no fígado — pelo FGF21. <strong>No músculo, mTORC1 alto = hipertrofia. No fígado, mTORC1 alto = lipogênese e resistência à insulina.</strong> O mesmo interruptor tem sinais opostos em tecidos diferentes.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">AMPK <span>· AMP-activated Protein Kinase</span></span>
+    <p>O <strong>sensor de energia baixa</strong>. Ela lê a razão AMP/ATP: quando o ATP cai (exercício, jejum, hipóxia), o AMP sobe e ativa a AMPK. A AMPK então liga rotas que <em>produzem</em> ATP (oxidação de gordura, captação de glicose, biogênese mitocondrial via PGC-1α) e desliga rotas que <em>consomem</em> ATP (síntese proteica, via inibição de mTORC1; lipogênese). É o freio catabólico do corpo.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">GCN2 <span>· General Control Nonderepressible 2</span></span>
+    <p>O <strong>sensor de escassez de aminoácido</strong>. Ele detecta tRNAs "descarregados" — tRNAs que não conseguiram achar o aminoácido para carregar. Quando isso acontece, o GCN2 fosforila o eIF2α. É o primeiro dominó da via de restrição proteica.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">eIF2α <span>· eukaryotic Initiation Factor 2 alpha</span></span>
+    <p>Um fator de iniciação da tradução: sem ele funcional, o ribossomo não começa a montar proteína. <strong>Quando é fosforilado, a tradução geral cai.</strong> Mas com uma exceção elegante: alguns mRNAs específicos passam a ser traduzidos <em>mais</em> nessa condição — e o principal deles é o ATF4.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">ISR <span>· Integrated Stress Response (Resposta Integrada ao Estresse)</span></span>
+    <p>O nome coletivo do sistema. Quatro quinases diferentes (GCN2 para falta de aminoácido, PERK para estresse de retículo endoplasmático, PKR para vírus, HRI para falta de heme) convergem todas no <strong>mesmo</strong> ponto: fosforilar eIF2α. O resultado é sempre o mesmo pacote: <em>pare de fabricar proteína em geral, e fabrique ATF4</em>. É "integrada" porque múltiplos estresses distintos produzem uma resposta unificada.</p>
+  </div>
+
+  <h4>Fatores de transcrição</h4>
+
+  <div class="def">
+    <span class="word">ATF4 <span>· Activating Transcription Factor 4</span></span>
+    <p>O <strong>executivo da resposta ao estresse</strong>. Um fator de transcrição — proteína que se liga ao DNA e liga/desliga genes. O ATF4 se liga diretamente ao promotor do gene <em>FGF21</em> e o transcreve. Ele também liga genes de atrofia muscular e genes de transporte de aminoácido. É o nó onde "falta de aminoácido" vira "produção de FGF21".</p>
+  </div>
+
+  <div class="def">
+    <span class="word">PPARα <span>· Peroxisome Proliferator-Activated Receptor alpha</span></span>
+    <p>Um receptor nuclear que é ativado por <strong>ácidos graxos livres</strong>. Quando muita gordura chega ao fígado (jejum, dieta rica em gordura), o PPARα liga o programa de oxidação de gordura e cetogênese. Ele também induz o FGF21. É a via "fome/gordura" da produção hepática.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">ChREBP <span>· Carbohydrate Response Element Binding Protein</span></span>
+    <p>O espelho do PPARα, mas para <strong>carboidrato</strong>. É ativado por metabólitos da glicose e, sobretudo, da <strong>frutose</strong>. Liga-se diretamente ao promotor do FGF21. É a via "açúcar" da produção hepática — e explica por que refrigerante eleva FGF21.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">FOXO / atrogenes <span>· MuRF1 e Atrogina-1</span></span>
+    <p>FOXO é um fator de transcrição que, quando <em>não</em> está sendo fosforilado pela AKT, entra no núcleo e liga os "atrogenes": <strong>MuRF1</strong> e <strong>Atrogina-1 (MAFbx)</strong>. Essas duas são ubiquitina-ligases: elas marcam proteínas musculares com ubiquitina, que é o "selo de descarte" que envia a proteína ao proteassoma para ser degradada. É a via central da atrofia por degradação.</p>
+  </div>
+
+  <h4>Transporte de glicose</h4>
+
+  <div class="def">
+    <span class="word">GLUT4 <span>· transportador de glicose insulinodependente</span></span>
+    <p>O transportador que fica <strong>guardado dentro de vesículas no citoplasma</strong> e só vai para a membrana quando recebe ordem. Presente em músculo e adiposo. É a razão pela qual a glicose só entra nesses tecidos "com autorização" — da insulina ou da contração muscular.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">AS160 (TBC1D4) <span>· o freio da vesícula</span></span>
+    <p>Uma proteína que <strong>segura</strong> as vesículas de GLUT4 no citoplasma. Enquanto o AS160 está ativo, a vesícula não vai à membrana. Quando o AS160 é <em>fosforilado</em>, ele solta a vesícula. <strong>Este é o ponto de convergência</strong>: tanto a AKT (via insulina) quanto a RSK (via FGF21/MAPK) fosforilam o AS160. Dois caminhos diferentes, mesma alavanca.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">GLUT1 <span>· transportador constitutivo</span></span>
+    <p>Diferente do GLUT4, o GLUT1 fica permanentemente na membrana e transporta glicose de forma independente de insulina. O FGF21 aumenta sua <em>expressão</em> no adipócito — ou seja, aumenta a captação basal, não a captação estimulada.</p>
+  </div>
+
+  <h4>Mitocôndria, autofagia e termogênese</h4>
+
+  <div class="def">
+    <span class="word">UCP1 <span>· Uncoupling Protein 1 (termogenina)</span></span>
+    <p>A proteína que define o tecido adiposo marrom. Normalmente, o gradiente de prótons da mitocôndria é usado pela ATP-sintase para fabricar ATP. A UCP1 abre um "vazamento" nesse gradiente: os prótons voltam sem gerar ATP, e a energia sai como <strong>calor</strong>. Isso é "desacoplamento" — queimar substrato sem produzir trabalho útil. É gasto energético puro.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">Browning / adipócito bege <span>· transdiferenciação</span></span>
+    <p>Processo pelo qual adipócitos brancos (estoque) passam a expressar UCP1 e adquirem características de adipócitos marrons (queima). O FGF21 é um dos indutores desse processo, junto com frio e exercício. Robusto em roedores; <strong>de magnitude muito menor e discutida em humanos adultos.</strong></p>
+  </div>
+
+  <div class="def">
+    <span class="word">Autofagia e mitofagia <span>· reciclagem celular</span></span>
+    <p><strong>Autofagia</strong> = a célula engloba componentes próprios em uma vesícula (autofagossomo) e os digere no lisossomo, reciclando os blocos. <strong>Mitofagia</strong> = a versão específica para mitocôndrias danificadas. Em dose fisiológica é manutenção saudável. Em excesso e sustentada no músculo, é <strong>perda de massa</strong>.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">Bnip3 <span>· executor da mitofagia</span></span>
+    <p>Proteína que marca a mitocôndria para ser engolfada e destruída. Está no caminho pelo qual o FGF21 muscular reduz massa: FGF21 → Bnip3 → mitofagia aumentada + síntese proteica reduzida.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">HDAC4 <span>· Histona Desacetilase 4</span></span>
+    <p>Enzima que remove grupos acetil de histonas, compactando a cromatina e silenciando genes. No músculo, sua <strong>localização</strong> importa: quando está no citoplasma, a junção neuromuscular é mantida; quando esse pool citoplasmático cai, a inervação se deteriora. O FGF21 muscular reduz o HDAC4 citoplasmático — daí seu papel na atrofia por denervação.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">UPR<sup>mt</sup> <span>· Unfolded Protein Response mitocondrial</span></span>
+    <p>Quando proteínas mal dobradas se acumulam dentro da mitocôndria, a célula dispara um programa de socorro que inclui a secreção de miocinas de estresse — entre elas, o FGF21. É por isso que <strong>o FGF21 muscular é biomarcador de miopatia mitocondrial</strong> na prática clínica.</p>
+  </div>
+
+  <h4>Outros</h4>
+
+  <div class="def">
+    <span class="word">Adiponectina <span>· adipocina insulino-sensibilizadora</span></span>
+    <p>Hormônio produzido pelo adipócito que melhora sensibilidade à insulina em fígado e músculo (via AMPK) e é anti-inflamatório. Curiosamente, é <em>inversamente</em> proporcional à massa de gordura: obesos têm adiponectina <strong>baixa</strong>. Foi proposta como mediadora dos efeitos do FGF21 — ponto ainda em disputa (seção 15).</p>
+  </div>
+
+  <div class="def">
+    <span class="word">JNK <span>· c-Jun N-terminal Kinase</span></span>
+    <p>Quinase de estresse inflamatório. Quando ativada por citocinas ou excesso de ácidos graxos, ela fosforila o IRS-1 em <strong>serina</strong> (em vez de tirosina), o que <em>inativa</em> o IRS-1 e bloqueia o sinal da insulina. É um dos mecanismos moleculares centrais da resistência à insulina induzida por inflamação. O FGF21 modula essa via para baixo.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">GR <span>· Receptor de Glicocorticoide</span></span>
+    <p>Receptor nuclear do cortisol. Quando ativado no músculo, transcreve genes catabólicos (incluindo KLF15, REDD1 e os atrogenes) que reduzem mTORC1 e aumentam degradação proteica. É a via clássica do catabolismo por estresse — e aparece como possível mediador do efeito do FGF21 sobre massa muscular.</p>
+  </div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section id="s05">
+  <h2><span class="sec-num">05 &mdash;</span> Cascatas de INDUÇÃO — como o FGF21 é fabricado</h2>
+
+  <p>Existem quatro rotas principais que aumentam a transcrição do gene <em>FGF21</em>. Elas respondem a estímulos <strong>diferentes</strong> e têm significados <strong>diferentes</strong>. Confundi-las é a origem de quase todo erro na leitura desse hormônio.</p>
+
+  <h3>Via 1 — PPARα: "está chegando muita gordura"</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>Estímulo</b><span>Jejum prolongado, lipólise intensa, dieta muito rica em gordura, fibratos.</span></div>
+    <div class="step"><b>Ácidos graxos livres chegam ao fígado</b><span>A lipólise do adiposo libera AGL, que entram no hepatócito.</span></div>
+    <div class="step"><b>AGL ativam PPARα</b><span>Os ácidos graxos funcionam como ligantes diretos do receptor nuclear.</span></div>
+    <div class="step"><b>PPARα transcreve FGF21 + cetogênese</b><span>O mesmo programa que produz corpos cetônicos produz FGF21. Por isso o FGF21 foi inicialmente batizado de "hormônio do jejum".</span></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Cuidado — esta via é forte no rato, fraca no humano</span>
+    <p>Em camundongo, 24 h de jejum disparam o FGF21. <strong>Em humano, jejum curto não faz praticamente nada</strong> — são necessários de 7 a 10 dias sem alimento para os níveis circulantes subirem. A extrapolação direta rato→humano aqui é o erro mais comum da literatura de divulgação.</p>
+  </div>
+
+  <h3>Via 2 — ChREBP: "está chegando muito açúcar"</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>Estímulo</b><span>Frutose, sacarose, glicose em bolus; hiperglicemia sustentada.</span></div>
+    <div class="step"><b>Frutose é metabolizada quase toda no fígado</b><span>Diferente da glicose, ela escapa do controle da fosfofrutoquinase e entra na via glicolítica "por baixo", sem freio regulatório.</span></div>
+    <div class="step"><b>Metabólitos ativam ChREBP</b><span>O ChREBP transloca ao núcleo.</span></div>
+    <div class="step"><b>ChREBP se liga ao promotor do FGF21</b><span>Transcrição direta. Resultado em humanos: ~2× o FGF21 basal em cerca de 2 h após 75 g de sacarose ou frutose. A resposta à frutose é mais forte e mais precoce que à glicose.</span></div>
+  </div>
+
+  <p>E o efeito não é só agudo: sete semanas de consumo diário de bebida adoçada elevaram o FGF21 <strong>de jejum</strong> em homens magros e saudáveis, independentemente do tipo de açúcar usado.</p>
+
+  <h3>Via 3 — GCN2/eIF2α/ATF4: "está faltando aminoácido"</h3>
+
+  <p>Esta é a via mais relevante para quem treina, e a que produz o conflito central deste material.</p>
+
+  <div class="stepwrap">
+    <div class="step"><b>Estímulo</b><span>Restrição de proteína dietética — ou mesmo de um único aminoácido essencial. Treonina e triptofano são particularmente potentes como gatilho.</span></div>
+    <div class="step"><b>Menos aminoácido chega ao fígado</b><span>tRNAs ficam descarregados.</span></div>
+    <div class="step"><b>GCN2 detecta e fosforila eIF2α</b><span>A tradução proteica <em>geral</em> cai. Este é o custo que ninguém menciona.</span></div>
+    <div class="step"><b>ATF4 é traduzido preferencialmente</b><span>Paradoxo aparente: com a tradução geral inibida, o mRNA do ATF4 passa a ser lido <em>mais</em>, por conta de estruturas regulatórias na sua região 5'.</span></div>
+    <div class="step"><b>ATF4 se liga ao promotor do FGF21</b><span>Transcrição hepática robusta e persistente. Em humanos, a restrição proteica eleva o FGF21 cerca de 1,7× em 4 semanas e aproximadamente 2× em 6 semanas.</span></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">O preço embutido nessa via</span>
+    <p>Você <strong>não consegue</strong> acionar o braço "FGF21 alto" sem acionar o braço "eIF2α fosforilado / tradução proteica inibida". É a mesma alavanca. Qualquer protocolo que proponha "ciclar proteína para induzir FGF21" está propondo, sem dizer, ciclar redução de síntese proteica.</p>
+  </div>
+
+  <h3>Via 4 — Estresse mitocondrial (UPR<sup>mt</sup>) no músculo</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>Estímulo</b><span>Disfunção mitocondrial, jejum prolongado, denervação, autofagia comprometida, envelhecimento.</span></div>
+    <div class="step"><b>Proteostase mitocondrial se desequilibra</b><span>Acúmulo de proteína mal dobrada dentro da mitocôndria dispara a UPR<sup>mt</sup>.</span></div>
+    <div class="step"><b>ATF4 (novamente) induz FGF21 no miócito</b><span>Agora a fonte é o próprio músculo.</span></div>
+    <div class="step"><b>Ação local autócrina</b><span>FGF21 → Bnip3 → mitofagia ↑ e síntese proteica ↓. Aqui o hormônio não é "metabolicamente saudável": ele é executor de atrofia.</span></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Síntese da seção</span>
+    <p>Quatro vias, quatro significados. <strong>PPARα</strong> = gordura em excesso. <strong>ChREBP</strong> = açúcar em excesso. <strong>GCN2/ATF4</strong> = proteína insuficiente. <strong>UPR<sup>mt</sup></strong> = mitocôndria em sofrimento. Nenhuma delas descreve um estado que você queira habitar como praticante de musculação.</p>
+  </div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section id="s06">
+  <h2><span class="sec-num">06 &mdash;</span> Cascatas de AÇÃO — o que ele faz ao chegar</h2>
+
+  <h3>No adipócito marrom — o efeito agudo mais bem documentado</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>FGF21 → FGFR1c/KLB → ERK/MAPK</b><span>Fosfoproteômica em adipócitos marrons primários mostrou efeito fraco e transitório sobre AKT, mas ativação robusta de ERK/MAPK.</span></div>
+    <div class="step"><b>ERK → RSK</b><span>A RSK (Ribosomal S6 Kinase) é uma quinase ativada diretamente pela ERK.</span></div>
+    <div class="step"><b>RSK fosforila AS160</b><span>Exatamente o mesmo alvo que a AKT da insulina fosforila.</span></div>
+    <div class="step"><b>Vesículas de GLUT4 são liberadas</b><span>Translocação para a membrana → captação de glicose aumentada, de forma <strong>sinérgica</strong> com a insulina (duas entradas, uma alavanca).</span></div>
+  </div>
+
+  <h3>No adipócito branco</h3>
+
+  <ul class="clean">
+    <li><strong>Aumento de expressão de GLUT1</strong> — mais captação basal de glicose, independente de insulina.</li>
+    <li><strong>Browning</strong> — indução de UCP1 e do programa termogênico; adipócito de estoque adquire função de queima.</li>
+    <li><strong>Produção de adiponectina</strong> — que por sua vez ativa AMPK em fígado e músculo (mecanismo contestado; ver seção 15).</li>
+  </ul>
+
+  <h3>No fígado</h3>
+
+  <ul class="key">
+    <li><strong>Inibição de mTORC1 hepático</strong> → menos lipogênese <em>de novo</em>, melhora do sinal insulínico hepático, menor produção hepática de glicose.</li>
+    <li><strong>Modulação de PPARα</strong> → aumento da oxidação de ácidos graxos, redução do conteúdo lipídico intra-hepático.</li>
+    <li><strong>Redução da via JNK</strong> → menos fosforilação inibitória do IRS-1 em serina, portanto menos bloqueio inflamatório do sinal de insulina.</li>
+  </ul>
+
+  <h3>No sistema nervoso central</h3>
+
+  <p>O FGF21 atravessa a barreira hematoencefálica e age no hipotálamo e em núcleos do tronco. Os efeitos descritos incluem aumento do tônus simpático (que por sua vez ativa o BAT), aumento do gasto energético, e um efeito comportamental curioso: <strong>redução da preferência por doce</strong>. Em humanos, indivíduos que naturalmente não gostam de doce apresentam FGF21 basal mais alto.</p>
+
+  <div class="callout ok">
+    <span class="tag">Alça de retroalimentação elegante</span>
+    <p>Açúcar → ChREBP hepático → FGF21 → SNC → menos vontade de doce. É um circuito de feedback negativo desenhado para promover <strong>equilíbrio de macronutrientes</strong>. O FGF21 se comporta menos como "hormônio de queima de gordura" e mais como <em>fiscal da proporção</em> da dieta.</p>
+  </div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section id="s07">
+  <h2><span class="sec-num">07 &mdash;</span> Sensibilidade à insulina: a integração completa</h2>
+
+  <h3>Primeiro, a via canônica da insulina — revisão</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>1 · Insulina liga ao receptor (IR)</b><span>Também um receptor tirosina quinase, também dimérico.</span></div>
+    <div class="step"><b>2 · IR fosforila o IRS-1 em tirosina</b><span>IRS = Insulin Receptor Substrate. É a proteína adaptadora principal da via.</span></div>
+    <div class="step"><b>3 · IRS-1 recruta PI3K</b><span>A PI3K converte o fosfolipídio de membrana PIP2 em PIP3.</span></div>
+    <div class="step"><b>4 · PIP3 recruta AKT à membrana</b><span>Onde a AKT é fosforilada e ativada (por PDK1 e mTORC2).</span></div>
+    <div class="step"><b>5 · AKT fosforila AS160 e GSK3</b><span>AS160 fosforilado → GLUT4 vai à membrana → glicose entra. GSK3 inibida → glicogênio-sintase liberada → glicose vira glicogênio.</span></div>
+    <div class="step"><b>6 · AKT também fosforila FOXO</b><span>FOXO fosforilado fica retido no citoplasma → atrogenes desligados → menos degradação proteica. É por isso que a insulina é anticatabólica no músculo.</span></div>
+  </div>
+
+  <h3>Onde a resistência à insulina se instala</h3>
+
+  <ul class="clean">
+    <li><strong>Fosforilação de IRS-1 em serina</strong> (por JNK, IKKβ, PKCθ) em vez de tirosina — o adaptador fica inerte. Disparada por inflamação e por lipídios ectópicos (diacilglicerol, ceramidas).</li>
+    <li><strong>Lipídios ectópicos</strong> — gordura acumulada dentro de fígado e músculo, onde ela não deveria estar, interferindo fisicamente na sinalização.</li>
+    <li><strong>Hiperativação crônica de mTORC1/S6K1</strong> — S6K1 fosforila IRS-1 em serina, criando um <em>feedback</em> negativo que, quando cronificado, vira resistência.</li>
+  </ul>
+
+  <h3>Onde o FGF21 entra</h3>
+
+  <div class="grid2">
+    <div class="mini"><b>Convergência no AS160</b><p>Via MAPK-RSK, entrega uma segunda entrada na mesma alavanca do GLUT4 — no adiposo marrom. Efeito agudo e sinérgico com a insulina.</p></div>
+    <div class="mini"><b>Remoção de lipídio ectópico</b><p>Reduzindo gordura hepática e triglicerídeos circulantes, remove a <em>causa</em> do bloqueio de IRS-1. Efeito crônico e provavelmente o mais importante em humanos.</p></div>
+    <div class="mini"><b>mTORC1 hepático ↓</b><p>Alivia o feedback S6K1→IRS-1-serina no fígado e reduz lipogênese <em>de novo</em>.</p></div>
+    <div class="mini"><b>JNK ↓</b><p>Menos fosforilação inibitória do IRS-1 por via inflamatória.</p></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">A assimetria que define a aplicação prática</span>
+    <p>Todos esses mecanismos operam em <strong>fígado, adiposo e SNC</strong>. Nenhum deles é muscular, porque o músculo tem pouco β-Klotho. Logo: <strong>o FGF21 melhora o ambiente sistêmico no qual o músculo opera, mas não melhora a sensibilidade insulínica do músculo diretamente.</strong> Quem faz isso é o treino.</p>
+  </div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section id="s08">
+  <h2><span class="sec-num">08 &mdash;</span> Emagrecimento: gasto energético e ingestão</h2>
+
+  <p>Em modelos animais, a administração de FGF21 produz perda de peso substancial por três braços:</p>
+
+  <ol class="clean">
+    <li><strong>Gasto energético aumentado</strong> — via browning, UCP1 e tônus simpático central. É gasto por desacoplamento: substrato queimado sem produção de ATP.</li>
+    <li><strong>Mobilização de substrato</strong> — mais oxidação de ácidos graxos, menos lipogênese.</li>
+    <li><strong>Modulação da ingestão</strong> — redução da busca por doce, alteração da preferência de macronutriente (empurra na direção de proteína).</li>
+  </ol>
+
+  <p>Vale notar que os efeitos crônicos de gasto energético <strong>não dependem</strong> da sinalização no tecido adiposo — em camundongos com o co-receptor deletado no adiposo, o efeito agudo de sensibilização à insulina se perde, mas o efeito crônico sobre gasto e peso permanece. Isso aponta para o SNC como sítio dominante do braço "emagrecimento".</p>
+
+  <div class="callout warn">
+    <span class="tag">Em humanos, a magnitude despenca</span>
+    <p>Este é o ponto que separa a fisiologia da promessa comercial. Nas revisões dos ensaios clínicos com análogos, a eficácia sobre <strong>controle glicêmico e perda de peso é descrita como modesta e inconsistente</strong> — enquanto os benefícios sobre <strong>dislipidemia, esteatose hepática e fibrose</strong> são reprodutíveis. Ou seja: mesmo com FGF21 farmacológico em dose supra-fisiológica, o emagrecimento é o efeito <em>mais fraco</em> do painel.</p>
+  </div>
+
+  <p>E há um teste direto do braço endógeno: em homens jovens japoneses, a secreção de FGF21 induzida por frutose <strong>não ativou o tecido adiposo marrom</strong>, nem em dose única nem após duas semanas de consumo diário. Elevar o hormônio não produziu o efeito termogênico previsto pelo mecanismo.</p>
+
+  <div class="callout">
+    <span class="tag">A distinção que você precisa fazer</span>
+    <p>"O hormônio X <em>pode</em> fazer Y" (evidência mecanicista) é diferente de "elevar o hormônio X <em>faz</em> Y neste humano" (evidência de desfecho). O FGF21 é um caso didático de distância entre esses dois enunciados.</p>
+  </div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section id="s09">
+  <h2><span class="sec-num">09 &mdash;</span> O paradoxo: FGF21 alto na obesidade</h2>
+
+  <p>Se o FGF21 emagrece, melhora a insulina e queima gordura, o esperado seria encontrá-lo <em>baixo</em> em pessoas com obesidade. Acontece exatamente o contrário: <strong>os níveis circulantes de FGF21 estão elevados na obesidade, no diabetes tipo 2 e na doença hepática metabólica.</strong></p>
+
+  <h3>A explicação clássica: resistência ao FGF21</h3>
+
+  <p>O conceito foi proposto por analogia direta às resistências já conhecidas — à insulina, à leptina, ao hormônio de crescimento, ao hormônio tireoidiano. Em todas elas, níveis altos falham em produzir o efeito fisiológico esperado, e o organismo compensa produzindo ainda mais.</p>
+
+  <p>A evidência: camundongos obesos apresentam déficit marcado na capacidade do FGF21 de acionar a cascata ras-raf-MAPK, com fosforilação de ERK1/2 muito baixa no fígado e no adiposo branco. O sinal chega, mas não é transduzido.</p>
+
+  <h3>Onde a explicação clássica falha</h3>
+
+  <p>Assumiu-se inicialmente que a causa seria a queda de β-Klotho no adiposo branco. Mas quando pesquisadores geraram camundongos transgênicos que <em>mantinham</em> o β-Klotho alto no adiposo durante obesidade induzida por dieta, a sinalização <strong>não</strong> foi resgatada e o perfil metabólico não melhorou. A queda de KLB acompanha o quadro, mas não é o mecanismo principal.</p>
+
+  <p>Por isso o próprio termo é objeto de controvérsia na literatura, com autores questionando critérios e definições.</p>
+
+  <h3>A leitura mais moderna</h3>
+
+  <div class="callout">
+    <span class="tag">Reposicionamento conceitual</span>
+    <p>Trabalhos mais recentes sugerem que o FGF21 é mais apropriadamente descrito como <strong>um sinal de estresse metabólico ou celular</strong> do que como um "hormônio do jejum" ou "hormônio da magreza". Nessa leitura, o FGF21 alto na obesidade não é uma falha de resposta — é o relatório correto de um sistema sob sobrecarga.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Consequência prática direta</span>
+    <p><strong>Elevar o FGF21 circulante não é objetivo terapêutico nem estético.</strong> Ninguém comemora insulina de jejum alta; ninguém deveria comemorar FGF21 alto. O alvo correto é a <em>sensibilidade</em> ao FGF21 — e o instrumento para isso não é dieta indutora, é treino e composição corporal.</p>
+  </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section id="s10">
+  <h2><span class="sec-num">10 &mdash;</span> O que eleva FGF21 no humano (≠ camundongo)</h2>
+
+  <p>Esta tabela é o filtro que separa quem leu revisão de roedor de quem leu ensaio humano. Guarde-a.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Estímulo</th><th>Camundongo</th><th>Humano</th><th>Observação</th></tr></thead>
+      <tbody>
+        <tr><td>Jejum 24 h</td><td class="up">↑↑↑</td><td class="nil">~nulo</td><td>Divergência de espécie clássica.</td></tr>
+        <tr><td>Jejum 7–10 dias</td><td class="up">↑↑↑</td><td class="up">↑</td><td>Só nesse prazo o humano responde.</td></tr>
+        <tr><td>Dieta cetogênica</td><td class="up">↑↑</td><td class="nil">sem efeito</td><td>No rato, o efeito vem da <em>proteína baixa</em> da ração cetogênica, não das cetonas — suplementar metionina abole a indução. Cetogênicas humanas têm proteína adequada.</td></tr>
+        <tr><td>Restrição proteica</td><td class="up">↑↑↑</td><td class="up">↑ (1,7–2×)</td><td>Via GCN2/ATF4. Conservada entre espécies.</td></tr>
+        <tr><td>Frutose / sacarose aguda</td><td class="up">↑↑</td><td class="up">↑↑ (~2× em 2 h)</td><td>Via ChREBP. Frutose &gt; glicose.</td></tr>
+        <tr><td>Bebida adoçada por 7 semanas</td><td>—</td><td class="up">↑ basal</td><td>Em homens magros e saudáveis, independente do tipo de açúcar.</td></tr>
+        <tr><td>Superalimentação</td><td class="up">↑</td><td class="up">↑</td><td>Ocorre independentemente de restrição proteica.</td></tr>
+        <tr><td>Obesidade / DM2 / MASLD</td><td class="up">↑↑</td><td class="up">↑↑</td><td>Estado de resistência (seção 09).</td></tr>
+        <tr><td>Exercício agudo</td><td class="up">↑</td><td class="up">↑ transitório</td><td>Ver seção 13.</td></tr>
+        <tr><td>Treino crônico ≥10 sem.</td><td>variável</td><td class="dn">↓ basal</td><td>E isso é melhora, não piora.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">A armadilha da cetogênica</span>
+    <p>Metade da internet afirma que "cetogênica aumenta FGF21". A origem é real, mas o mecanismo foi mal lido: a ração cetogênica de laboratório tinha <strong>proteína muito mais baixa</strong> que a ração controle. O gatilho era escassez proteica, não cetose. Em humanos que fazem cetogênica com proteína adequada — que é o padrão — a indução simplesmente não ocorre.</p>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section id="s11">
+  <h2><span class="sec-num">11 &mdash;</span> Proteína suprime FGF21 — a colisão frontal</h2>
+
+  <p>Aqui está o núcleo prático do material, e o dado mais elegante de toda a literatura sobre o tema.</p>
+
+  <h3>O experimento</h3>
+
+  <p>Estudo de refeição <strong>randomizado, duplo-cego e cruzado</strong> em voluntários saudáveis. Três bebidas, com o conteúdo de sacarose <em>igualado</em> entre elas:</p>
+
+  <ul class="key">
+    <li><strong>Sacarose isolada</strong> → iAUC de FGF21 = <strong>484 ± 127</strong> pg/mL × h</li>
+    <li><strong>Sacarose + proteína (whey)</strong> → iAUC = <strong>−35 ± 49</strong> pg/mL × h &nbsp;(<em>p</em> &lt; 0,001 vs. sacarose)</li>
+    <li><strong>Sacarose + gordura</strong> (isocalórico à proteína) → iAUC = <strong>319 ± 102</strong> pg/mL × h &nbsp;(sem diferença significativa vs. sacarose)</li>
+  </ul>
+
+  <p>Leia o segundo número com atenção. A proteína não apenas atenuou a resposta — ela a levou para <strong>território negativo</strong>. E o braço com gordura, isocalórico, prova que o efeito é da proteína em si, não da energia adicionada.</p>
+
+  <div class="callout ok">
+    <span class="tag">Interpretação dos autores</span>
+    <p>O FGF21 responde à ingestão <em>desproporcional</em> de sacarose <strong>em relação à proteína</strong>, dentro da própria refeição — e a proteína se sobrepõe à sacarose nessa regulação. A conclusão é que o hormônio parece atuar promovendo equilíbrio de macronutrientes e ingestão proteica suficiente.</p>
+  </div>
+
+  <h3>Por que isso é decisivo para quem treina</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>Para elevar FGF21 pela dieta, você precisa restringir proteína</b><span>Não há outra alavanca dietética sustentada. Açúcar eleva, mas eleva junto com todos os custos metabólicos do açúcar em excesso.</span></div>
+    <div class="step"><b>Restringir proteína ativa GCN2 → eIF2α-P</b><span>O que reduz a tradução proteica geral — incluindo no músculo.</span></div>
+    <div class="step"><b>E reduz o substrato para síntese miofibrilar</b><span>Menos leucina para ativar mTORC1, menos aminoácidos como matéria-prima.</span></div>
+    <div class="step"><b>Resultado</b><span>Você trocaria o objetivo principal (hipertrofia) por um marcador secundário de benefício não demonstrado em indivíduo saudável.</span></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Conclusão inegociável</span>
+    <p>Para o praticante de musculação, a proteína alta <strong>desliga</strong> a via de indução do FGF21 — e isso é exatamente o que você quer. O FGF21 baixo aqui não significa "perda de benefício": significa que o fígado não está recebendo sinal de escassez. <strong>Não existe protocolo de "ciclagem proteica para FGF21" que faça sentido para hipertrofia.</strong></p>
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section id="s12">
+  <h2><span class="sec-num">12 &mdash;</span> FGF21 e massa muscular: a miocina catabólica</h2>
+
+  <p>Esta é a seção que raramente aparece nas divulgações entusiasmadas. Existe uma linha de pesquisa consistente posicionando o FGF21 como <strong>executor de programas de atrofia</strong>.</p>
+
+  <h3>Evidência 1 — necessário para a atrofia por jejum</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Condição</th><th>Achado</th></tr></thead>
+      <tbody>
+        <tr><td>Camundongo controle, alimentado</td><td>Sem efeito do FGF21 sobre tipo de fibra, tamanho de fibra ou força. <strong>Em condição basal, o FGF21 é irrelevante para a homeostase muscular.</strong></td></tr>
+        <tr><td>Camundongo controle, em jejum</td><td>Perda de <strong>15–25%</strong> da massa muscular; queda de ~70% na taxa de síntese proteica.</td></tr>
+        <tr><td>Camundongo FGF21-nulo, em jejum</td><td><strong>Protegido</strong> da perda de massa e da fraqueza; síntese proteica preservada.</td></tr>
+        <tr><td>Superexpressão de FGF21 no músculo</td><td>Suficiente <em>per se</em> para induzir autofagia e <strong>15% de perda de massa</strong>.</td></tr>
+        <tr><td>Inibição de Bnip3</td><td>Protege contra o desgaste muscular dependente de FGF21.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Evidência 2 — administração farmacológica prolongada</h3>
+
+  <p>Em camundongas tratadas com FGF21 ao longo de 32 dias, medição direta de síntese proteica por marcação com isótopo estável mostrou <strong>queda de ~11% na taxa de síntese proteica muscular</strong>, consistente com reduções de <strong>12% a 22%</strong> na massa do tibial anterior. O mecanismo proposto envolve genes-alvo do receptor de glicocorticoide que inibem mTORC1 — ou seja, um efeito <em>não</em> autônomo da célula muscular. Vale registrar também que o análogo <strong>pegbelfermin reduziu massa magra</strong> em contexto clínico.</p>
+
+  <h3>Evidência 3 — junção neuromuscular</h3>
+
+  <p>Na atrofia por denervação, o FGF21 muscular reduz o pool citoplasmático de HDAC4, o que compromete a manutenção da junção neuromuscular. A ablação de FGF21 favorece a reinervação e restaura a homeostase muscular. Trata-se de um mecanismo <strong>não endócrino</strong> — o hormônio agindo localmente no tecido que o produziu.</p>
+
+  <h3>Como interpretar sem alarmismo</h3>
+
+  <div class="grid2">
+    <div class="mini"><b>Não é causa, é executor</b><p>O sinal a montante é jejum, estresse mitocondrial ou denervação. O FGF21 é o mensageiro que traduz esse sinal em atrofia — não o originador.</p></div>
+    <div class="mini"><b>Basal ≠ estresse</b><p>Em condição alimentada e sem estresse, o FGF21 não causa atrofia. O risco só existe quando o contexto a montante já está errado.</p></div>
+    <div class="mini"><b>Dose e duração importam</b><p>Os efeitos de perda de massa aparecem em superexpressão e administração farmacológica sustentada — não em oscilações fisiológicas.</p></div>
+    <div class="mini"><b>Extrapolação limitada</b><p>Boa parte desses dados é de roedor. Em humanos, o sinal mais concreto é o de perda de massa magra com um análogo específico.</p></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">O cenário que você deve evitar montar</span>
+    <p>Déficit calórico agressivo <strong>+</strong> proteína baixa <strong>+</strong> volume de treino excessivo <strong>+</strong> jejuns longos recorrentes <strong>+</strong> sono ruim. Esse conjunto ativa exatamente a sequência: estresse mitocondrial → ATF4 → FGF21 muscular → Bnip3 → mitofagia e síntese proteica reduzida. Não é o FGF21 que está te fazendo mal — é o contexto que você construiu, e ele é o mensageiro.</p>
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section id="s13">
+  <h2><span class="sec-num">13 &mdash;</span> Exercício: agudo sobe, crônico desce</h2>
+
+  <h3>Resposta aguda a uma sessão</h3>
+
+  <p>Estudo comparando sessões de treino resistido e HIIT encontrou <strong>interação significativa entre tipo de sessão e tempo</strong> para o FGF21, com o treino resistido gerando maior área sob a curva que o HIIT. A responsividade individual variou entre 19% e 93% dependendo da citocina analisada, com a maioria dos sujeitos respondendo positivamente a pelo menos um tipo de sessão.</p>
+
+  <div class="callout">
+    <span class="tag">Individualidade biológica, de novo</span>
+    <p>Este é mais um domínio em que a resposta média esconde a variação individual. A conclusão dos próprios autores foi que <strong>importa mais a resposta individual do sujeito do que a recomendação geral de tipo de sessão</strong>. Mesma lógica já estabelecida para hipertrofia.</p>
+  </div>
+
+  <h3>Resposta crônica ao treinamento — e a inversão de sinal</h3>
+
+  <p>Meta-análise de <strong>12 ensaios randomizados, 401 participantes</strong> (obesidade, DM2, MASLD/MASH, síndrome metabólica, envelhecimento):</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Subgrupo</th><th>Efeito sobre FGF21 (SMD)</th><th>IC 95%</th><th>Leitura</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Efeito global</strong></td><td class="nil">0,30 (n.s.)</td><td>−0,30 a 0,89</td><td>Alta heterogeneidade; sem efeito médio.</td></tr>
+        <tr><td><strong>Concorrente (aeróbio + resistido)</strong></td><td class="dn">−0,38</td><td>−0,74 a −0,01</td><td>Redução significativa, baixa heterogeneidade.</td></tr>
+        <tr><td><strong>Duração ≥ 10 semanas</strong></td><td class="dn">−0,38</td><td>−0,63 a −0,13</td><td>Redução significativa, baixa heterogeneidade.</td></tr>
+        <tr><td>Resistido isolado</td><td class="up">+2,01</td><td>0,23 a 3,80</td><td>Aumento, mas heterogeneidade alta.</td></tr>
+        <tr><td>Duração &lt; 10 semanas</td><td class="up">+1,67</td><td>0,01 a 3,34</td><td>Aumento, heterogeneidade alta.</td></tr>
+        <tr><td>Intensidade (&gt;80% vs &lt;80%)</td><td class="nil">n.s.</td><td>—</td><td>Intensidade não explicou a heterogeneidade.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Como ler esses números sem se confundir</h3>
+
+  <p>A tentação é ler "treino resistido aumenta FGF21, logo é bom" — e está errado. Os próprios autores da meta-análise registram o raciocínio correto: <strong>o FGF21 raramente é baixo em indivíduos saudáveis; quem tem sobrepeso ou doença metabólica é quem tem níveis altos. Portanto, um FGF21 mais baixo pode indicar um estado mais saudável.</strong></p>
+
+  <p>E há o mecanismo do lado do receptor: o exercício pode <strong>aumentar a expressão de FGFR e de β-Klotho</strong> nos tecidos-alvo, ao reduzir ácidos graxos livres, glicose e TNF-α. Menos ruído inflamatório + mais receptor = <em>mais sinal com menos hormônio</em>.</p>
+
+  <div class="callout ok">
+    <span class="tag">O modelo mental correto</span>
+    <p>O exercício não "aproveita" o FGF21 elevando-o. Ele <strong>restaura a sensibilidade ao FGF21</strong> — e, como consequência da sensibilidade restaurada e da gordura hepática reduzida, o nível basal cai. <strong>Queda do FGF21 basal após 12 semanas de treino é vitória.</strong> É exatamente a mesma lógica com que você lê uma queda da insulina de jejum.</p>
+  </div>
+
+  <p>Traduzindo para prescrição: o perfil identificado como eficaz — <strong>concorrente, ≥ 10 semanas</strong> — é musculação somada a trabalho aeróbio de base. Zona 2 (caminhada rápida, 40 min, 100–120 bpm) associada ao treino resistido é literalmente o desenho que a meta-análise validou.</p>
+</section>
+
+<!-- ============ 14 ============ -->
+<section id="s14">
+  <h2><span class="sec-num">14 &mdash;</span> Análogos farmacológicos: a prova de conceito</h2>
+
+  <p>Vale conhecer não para uso — não é escopo de personal trainer, e são fármacos investigacionais ou de indicação hepatológica — mas porque a farmacologia é o <strong>teste de estresse da fisiologia</strong>. Quando você dá FGF21 em dose supra-fisiológica a humanos, o que sobrevive?</p>
+
+  <h3>O padrão dos resultados</h3>
+
+  <div class="grid2">
+    <div class="mini"><b>Peso e glicemia</b><p>Eficácia descrita como <strong>modesta e inconsistente</strong> nas revisões da classe.</p></div>
+    <div class="mini"><b>Lipídios e fígado</b><p>Benefícios <strong>reprodutíveis</strong>: melhora de dislipidemia (especialmente hipertrigliceridemia), redução de esteatose, queda de marcadores de fibrose e lesão, resolução de MASH.</p></div>
+  </div>
+
+  <p>Quantificando: meta-análise de <strong>11 ensaios randomizados</strong> em adultos com sobrepeso/obesidade mostrou redução de <strong>triglicerídeos (−59,33 mg/dL)</strong>, <strong>colesterol total (−17,14 mg/dL)</strong> e <strong>LDL (−10,50 mg/dL)</strong>.</p>
+
+  <h3>Agonistas duplos GLP-1/FGF21</h3>
+
+  <p>Em ensaio fase Ib/IIa, <strong>60 pacientes</strong> com MASLD e diabetes tipo 2 receberam o agonista duplo GLP-1/FGF21 HEC88473 por via subcutânea semanal durante <strong>5 semanas</strong>. O composto foi seguro e bem tolerado, com redução de gordura hepática e melhora de controle glicêmico, resistência à insulina e perfil lipídico.</p>
+
+  <p>A lógica de combinação é reveladora: o campo está posicionando o FGF21 como <strong>camada cardiometabólica complementar</strong> ao GLP-1, não como agente de emagrecimento concorrente. Isso é coerente com toda a fisiologia das seções anteriores.</p>
+
+  <div class="callout warn">
+    <span class="tag">Escopo profissional</span>
+    <p>Nada nesta seção constitui orientação de uso. São medicamentos em investigação ou de indicação hepatológica específica, prescritos por médico. Um dos compostos da classe (pegbelfermin) apresentou <strong>redução de massa magra</strong> — o que reforça, e não contradiz, o conteúdo da seção 12. Personal trainer orienta exercício; diagnóstico e tratamento farmacológico pertencem à medicina.</p>
+  </div>
+</section>
+
+<!-- ============ 15 ============ -->
+<section id="s15">
+  <h2><span class="sec-num">15 &mdash;</span> Contrapontos e limites da evidência</h2>
+
+  <p>Um material honesto precisa mostrar onde a literatura discorda de si mesma.</p>
+
+  <h3>Disputa 1 — a adiponectina é mediadora obrigatória?</h3>
+
+  <div class="grid2">
+    <div class="mini"><b>Posição A (2013)</b><p>Os efeitos do FGF21 sobre a resistência insulínica em fígado e músculo foram <strong>abolidos</strong> em camundongos knockout para adiponectina — sugerindo mediação obrigatória.</p></div>
+    <div class="mini"><b>Posição B (2017)</b><p>A adiponectina é <strong>dispensável</strong> para os efeitos do FGF21 sobre sensibilidade à insulina e gasto energético; o efeito agudo se dá via adiposo marrom.</p></div>
+  </div>
+
+  <p><strong>Estado atual:</strong> não resolvido. Quem afirma com convicção que "o FGF21 age via adiponectina" está simplificando uma controvérsia ativa.</p>
+
+  <h3>Disputa 2 — "resistência ao FGF21" é um conceito válido?</h3>
+
+  <p>O termo foi cunhado por analogia à resistência à insulina, mas o mecanismo proposto (queda de β-Klotho no adiposo branco) foi <strong>testado e refutado</strong> como causa principal. A literatura registra explicitamente controvérsia sobre critérios e definição do conceito.</p>
+
+  <h3>Disputa 3 — sítio de ação dos efeitos crônicos</h3>
+
+  <p>Adiposo, SNC, ou ambos? A evidência de que o efeito crônico sobre gasto energético <strong>persiste</strong> mesmo sem sinalização no adiposo empurra a resposta para o SNC — mas isso reorganiza o mapa mecanicista de forma ainda não consolidada.</p>
+
+  <h3>O que a evidência NÃO sustenta</h3>
+
+  <ul class="key">
+    <li><strong>Que jejum intermitente eleve FGF21 em humanos.</strong> Só há resposta consistente após 7–10 dias sem alimento.</li>
+    <li><strong>Que dieta cetogênica eleve FGF21 em humanos.</strong> O efeito no rato vinha da proteína baixa da ração.</li>
+    <li><strong>Que elevar FGF21 endógeno ative termogênese em humanos.</strong> Testado com frutose: não ativou o BAT.</li>
+    <li><strong>Que FGF21 alto seja marcador de saúde metabólica.</strong> É o oposto na população geral.</li>
+    <li><strong>Que exista suplemento que "aumente FGF21" com benefício demonstrado.</strong> Não há.</li>
+  </ul>
+</section>
+
+<!-- ============ 16 ============ -->
+<section id="s16">
+  <h2><span class="sec-num">16 &mdash;</span> Proteína na prática: quando, quanto, como</h2>
+
+  <p>Como o FGF21 é suprimido por proteína e a hipertrofia depende dela, a estratégia é simples: <strong>não negociar a proteína, e otimizar todo o resto do contexto.</strong></p>
+
+  <h3>Quanto</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Contexto</th><th>Proteína/dia</th><th>Racional</th></tr></thead>
+      <tbody>
+        <tr><td>Manutenção / superávit leve</td><td><strong>1,6–2,0 g/kg</strong></td><td>Faixa de platô para síntese proteica; mantém GCN2/ATF4 desligado.</td></tr>
+        <tr><td>Déficit calórico</td><td><strong>2,0–2,4 g/kg</strong></td><td>O objetivo muda para <em>proteção</em> de massa magra. Mais aminoácido também significa menos sinal de escassez ao fígado.</td></tr>
+        <tr><td>Déficit agressivo / atleta muito magro</td><td><strong>2,2–2,8 g/kg</strong></td><td>Contexto de maior risco catabólico; o custo de excesso de proteína é irrelevante frente ao risco de perda.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Por refeição</h3>
+
+  <ul class="clean">
+    <li><strong>~0,4 g/kg por refeição</strong> (≈ 30–45 g para a maioria), em <strong>3 a 5 refeições</strong>.</li>
+    <li>Isso maximiza a estimulação repetida de mTORC1 e mantém a supressão pós-prandial do FGF21 praticamente contínua ao longo do dia.</li>
+    <li>Fontes completas e variadas: <strong>treonina e triptofano</strong> são os aminoácidos mais potentes como gatilho de escassez. Dietas com proteína majoritariamente vegetal e pouca variedade podem ter déficit desses aminoácidos <em>mesmo com gramagem total adequada</em>.</li>
+  </ul>
+
+  <h3>Como combinar com carboidrato</h3>
+
+  <div class="callout ok">
+    <span class="tag">Aplicação direta do estudo da seção 11</span>
+    <p>Sempre que houver fonte de <strong>açúcar de rápida absorção ou frutose</strong> — fruta, mel, doce, pós com sacarose, bebida esportiva — <strong>inclua proteína na mesma refeição.</strong> No estudo controlado, isso não apenas atenuou a resposta hepática de FGF21: aboliu e inverteu. Carboidrato + whey é bioquimicamente superior a carboidrato isolado, tanto no pós-treino quanto em lanches.</p>
+  </div>
+
+  <h3>O que evitar</h3>
+
+  <ul class="key">
+    <li><strong>Jejuns prolongados recorrentes</strong> buscando "efeito FGF21". Em humanos só sobe após 7–10 dias, e o custo em massa magra nesse prazo é grave.</li>
+    <li><strong>"Ciclagem de proteína"</strong> para induzir FGF21. É ciclagem de eIF2α fosforilado — ou seja, de síntese proteica reduzida.</li>
+    <li><strong>Cetogênica esperando efeito de FGF21.</strong> Com proteína adequada, simplesmente não ocorre em humanos.</li>
+    <li><strong>Açúcar líquido em volume.</strong> Sete semanas de bebida adoçada elevam o FGF21 basal até em pessoas magras e saudáveis — sinal de sobrecarga hepática, não de "ativação metabólica".</li>
+  </ul>
+</section>
+
+<!-- ============ 17 ============ -->
+<section id="s17">
+  <h2><span class="sec-num">17 &mdash;</span> Erros comuns no discurso fitness</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Afirmação circulante</th><th>Por que está errada</th></tr></thead>
+      <tbody>
+        <tr><td>"FGF21 é o hormônio da queima de gordura — eleve-o"</td><td>Ele está <strong>elevado</strong> em obesidade, DM2 e esteatose. É sinal de estresse metabólico, não de magreza.</td></tr>
+        <tr><td>"Jejum aumenta FGF21 e isso emagrece"</td><td>Em humanos, jejum curto não eleva. São necessários 7–10 dias.</td></tr>
+        <tr><td>"Cetogênica aumenta FGF21"</td><td>Efeito de rato, causado pela proteína baixa da ração — não pela cetose. Não ocorre em humanos com proteína adequada.</td></tr>
+        <tr><td>"FGF21 melhora a captação de glicose no músculo"</td><td>Músculo tem pouco β-Klotho. A fosfoproteômica mostra o efeito no <strong>adiposo marrom, não no músculo esquelético</strong>.</td></tr>
+        <tr><td>"Musculação aumenta FGF21, logo mais é melhor"</td><td>O aumento é agudo/transitório. No crônico (≥10 sem., concorrente) o FGF21 <strong>cai</strong> — e é essa queda que acompanha a melhora metabólica.</td></tr>
+        <tr><td>"Frutose ativa o tecido adiposo marrom via FGF21"</td><td>Testado em humanos: a secreção induzida por frutose <strong>não</strong> ativou o BAT.</td></tr>
+        <tr><td>"Reduzir proteína ciclicamente traz benefício metabólico"</td><td>É a mesma alavanca que reduz tradução proteica geral. Custo direto em hipertrofia, benefício não demonstrado em saudáveis.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 18 ============ -->
+<section id="s18">
+  <h2><span class="sec-num">18 &mdash;</span> Síntese — 8 regras operacionais</h2>
+
+  <ol class="clean">
+    <li><strong>Não persiga FGF21 alto.</strong> Persiga sensibilidade ao FGF21. Nível elevado em jejum é marcador de fígado sobrecarregado e desequilíbrio de macronutrientes.</li>
+    <li><strong>Proteína é inegociável.</strong> 1,6–2,0 g/kg em manutenção, 2,0–2,4 g/kg em déficit. Ela suprime o FGF21 justamente porque desliga o sinal de escassez — e é esse o estado que você quer.</li>
+    <li><strong>Combine proteína com carboidrato de rápida absorção.</strong> Aplicação direta e barata do achado do crossover controlado.</li>
+    <li><strong>Reduza açúcar líquido.</strong> Sete semanas de bebida adoçada elevam FGF21 basal mesmo em magros e saudáveis.</li>
+    <li><strong>Treino concorrente por ≥ 10–12 semanas.</strong> Musculação + zona 2. É o único desenho com evidência de reduzir FGF21 basal e melhorar a expressão de receptor e co-receptor.</li>
+    <li><strong>Déficit moderado, não agressivo.</strong> Déficit extremo + jejum prolongado + volume excessivo constrói exatamente a cascata estresse mitocondrial → ATF4 → FGF21 muscular → Bnip3 → atrofia.</li>
+    <li><strong>Sensibilidade insulínica muscular vem da contração.</strong> O FGF21 age em fígado, adiposo e SNC. Quem abre o GLUT4 na fibra é o treino e a insulina.</li>
+    <li><strong>Trate o FGF21 como termômetro, não como alavanca.</strong> Ele é um sensor da qualidade da dieta e do estado hepático. Não é ferramenta de hipertrofia nem de emagrecimento no indivíduo saudável.</li>
+  </ol>
+
+  <div class="callout">
+    <span class="tag">A frase para o aluno</span>
+    <p>"O FGF21 é o alarme de incêndio do metabolismo. Você não quer que o alarme toque mais alto — você quer que não haja incêndio."</p>
+  </div>
+</section>
+
+<!-- ============ 19 ============ -->
+<section id="s19">
+  <h2><span class="sec-num">19 &mdash;</span> Honestidade científica e referências</h2>
+
+  <div class="callout warn">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Boa parte da mecanística apresentada — Bnip3, HDAC4, GCN2/ATF4, atrofia por superexpressão, <em>browning</em> — vem de <strong>modelos animais</strong>. A tradução para humanos é incompleta e há divergência ativa na literatura, notadamente sobre o papel da adiponectina e sobre a validade do próprio conceito de "resistência ao FGF21".</p>
+    <p>Os achados com <strong>dados humanos sólidos</strong> são: supressão por proteína dentro da refeição; indução aguda e crônica por açúcar; ausência de resposta a cetogênica e jejum curto; elevação na obesidade e doença metabólica; queda do basal com treino concorrente prolongado; e efeito hepático/lipídico consistente dos análogos farmacológicos com efeito modesto sobre peso.</p>
+    <p>Onde este material afirma algo, ele indica a espécie. Onde a literatura discorda, a seção 15 expõe as duas posições. Nenhuma recomendação prática aqui depende de extrapolação não sinalizada.</p>
+  </div>
+
+  <h4>Referências</h4>
+
+  <ol class="refs">
+    <li>Zhang H, Zhu R, Sun Q, Du L. <b>Research progress on the role of FGF21 in insulin resistance.</b> Front Endocrinol. 2025;16:1619462.</li>
+    <li><b>Targeting fibroblast growth factor (FGF)-21: a promising strategy for metabolic dysfunction-associated steatotic liver disease treatment.</b> Front Pharmacol. 2025;16:1510322.</li>
+    <li>BonDurant LD, et al. <b>FGF21 regulates metabolism through adipose-dependent and -independent mechanisms.</b> Cell Metab. 2017;25(4):935–944.</li>
+    <li><b>FGF21 targets pathways which enhance insulin sensitivity in brown adipose but not skeletal muscle in mice.</b> Endocrinology. 2026;167(5):bqag040.</li>
+    <li>Holland WL, et al. <b>Adiponectin mediates the metabolic effects of FGF21 on glucose homeostasis and insulin sensitivity in mice.</b> Cell Metab. 2013;17(5):790–797.</li>
+    <li>Laeger T, et al. <b>FGF21 is an endocrine signal of protein restriction.</b> J Clin Invest. 2014;124(9):3913–3922.</li>
+    <li>Laeger T, et al. <b>Metabolic responses to dietary protein restriction require an increase in FGF21 that is delayed by the absence of GCN2.</b> Cell Rep. 2016;16(3):707–716.</li>
+    <li>Staiger H, et al. <b>Fibroblast growth factor 21 — metabolic role in mice and men.</b> Endocr Rev. 2017;38(5):468–488.</li>
+    <li><b>Dietary protein restriction elevates FGF21 levels and energy requirements to maintain body weight in lean men.</b> Nat Metab. 2025.</li>
+    <li>Søberg S, et al. <b>FGF21 is a sugar-induced hormone associated with sweet intake and preference in humans.</b> Cell Metab. 2017;25(5):1045–1053.</li>
+    <li>Dushay JR, et al. <b>Fructose ingestion acutely stimulates circulating FGF21 levels in humans.</b> Mol Metab. 2015;4(1):51–57.</li>
+    <li><b>Meal sugar-protein balance determines postprandial FGF21 response in humans.</b> Am J Physiol Endocrinol Metab. 2023. (ensaio cruzado randomizado duplo-cego, NCT05061485)</li>
+    <li><b>Do sugar-sweetened beverages increase fasting FGF21 irrespective of the type of added sugar? A secondary exploratory analysis of a randomized controlled trial.</b> Nutrients. 2022.</li>
+    <li>Hill CM, Morrison CD. <b>FGF21 and the physiological regulation of macronutrient preference.</b> Endocrinology. 2020;161(3).</li>
+    <li>Fisher FM, et al. <b>Obesity is a fibroblast growth factor 21 (FGF21)-resistant state.</b> Diabetes. 2010;59(11):2781–2789.</li>
+    <li>Markan KR. <b>Defining "FGF21 resistance" during obesity: controversy, criteria and unresolved questions.</b> F1000Res. 2018;7:289.</li>
+    <li><b>FGF21 resistance is not mediated by downregulation of beta-klotho expression in white adipose tissue.</b> Mol Metab. 2017.</li>
+    <li>Oost LJ, et al. <b>Fibroblast growth factor 21 controls mitophagy and muscle mass.</b> J Cachexia Sarcopenia Muscle. 2019;10(3):630–642.</li>
+    <li><b>FGF21 induces skeletal muscle atrophy and increases amino acids in female mice: a potential role for glucocorticoids.</b> Endocrinology. 2024;165(3):bqae004.</li>
+    <li><b>Fibroblast growth factor 21 regulates neuromuscular junction innervation through HDAC4 in denervation-induced skeletal muscle atrophy.</b> 2025.</li>
+    <li>Liu Y, et al. <b>The effects of exercise on FGF21 in adults: a systematic review and meta-analysis.</b> PeerJ. 2024;12:e17615.</li>
+    <li>He Z, et al. <b>Myokine response to high-intensity interval vs. resistance exercise: an individual approach.</b> Front Physiol. 2018;9:1735.</li>
+    <li>Thrones M, et al. <b>The myokine FGF-21 responds in a time-dependent manner to three different types of acute exercise.</b> Muscles. 2026;5(1):3.</li>
+    <li><b>Current status and future perspectives of FGF21 analogues in clinical trials.</b> Trends Endocrinol Metab. 2024.</li>
+    <li><b>Effects and safety of FGF21 analogs on glycemic parameters, lipid profiles, and adiponectin in overweight and obese adults: a meta-analysis of randomized controlled trials.</b> 2025.</li>
+    <li>Xiang L, et al. <b>Safety and efficacy of GLP-1/FGF21 dual agonist HEC88473 in MASLD and T2DM: a randomized, double-blind, placebo-controlled study.</b> J Hepatol. 2025;82(6):967–978.</li>
+    <li><b>Fructose-induced FGF21 secretion does not activate brown adipose tissue in Japanese young men: randomized cross-over and randomized controlled trials.</b> 2024.</li>
+    <li><b>Mechanisms of protein degradation in atrophying muscles: what have we learned during the past decade?</b> J Biol Chem. 2026.</li>
+  </ol>
+
+  <div class="callout">
+    <span class="tag">Escopo profissional</span>
+    <p>Este material é educativo. O personal trainer orienta exercício e hábitos; diagnóstico, prescrição de fármacos e tratamento de doença metabólica ou hepática pertencem à medicina, e prescrição dietética individualizada pertence à nutrição.</p>
+  </div>
+</section>
+
+  <footer>MG COACH · Biblioteca de Estudo</footer>
+</div>
+
+<script>
+(function(){
+  var KEY='mgcoach-theme';
+  var TKEY='mgcoach-toc-fgf21';
+  var root=document.documentElement;
+
+  // ----- tema -----
+  try{
+    var saved=localStorage.getItem(KEY);
+    if(saved==='light'||saved==='dark'){root.setAttribute('data-theme',saved);}
+  }catch(e){}
+
+  var btn=document.getElementById('themeToggle');
+  if(btn){
+    btn.addEventListener('click',function(e){
+      e.preventDefault();
+      var next=root.getAttribute('data-theme')==='light'?'dark':'light';
+      root.setAttribute('data-theme',next);
+      try{localStorage.setItem(KEY,next);}catch(err){}
+    });
+  }
+
+  // ----- TOC colapsável -----
+  var toc=document.getElementById('toc');
+  var head=document.getElementById('tocHead');
+  try{
+    if(localStorage.getItem(TKEY)==='closed'){
+      toc.classList.add('closed');
+      head.setAttribute('aria-expanded','false');
+    }
+  }catch(e){}
+
+  if(head){
+    head.addEventListener('click',function(e){
+      e.preventDefault();
+      toc.classList.toggle('closed');
+      var closed=toc.classList.contains('closed');
+      head.setAttribute('aria-expanded',closed?'false':'true');
+      try{localStorage.setItem(TKEY,closed?'closed':'open');}catch(err){}
+    });
+  }
+})();
+</script>
+</body>
+</html>
