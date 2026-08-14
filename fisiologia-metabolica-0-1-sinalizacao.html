@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fisiologia Metabólica 0.1 — A Gramática da Sinalização Celular | MG COACH</title>
+<meta name="description" content="Material de base da série Fisiologia Metabólica: as cinco classes de receptor, fosforilação como interruptor universal, cascatas e amplificação, segundos mensageiros, fatores de transcrição, especificidade tecidual, dessensibilização e resistência hormonal.">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MG COACH · Biblioteca de Estudo">
+<meta property="og:title" content="Fisiologia Metabólica 0.1 — A Gramática da Sinalização Celular">
+<meta property="og:description" content="Aprenda a ler ERK, AKT, ATF4, AMPK e mTORC1 uma única vez. O material de base que vem antes de toda a série de Fisiologia Metabólica.">
+<meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/fisiologia-metabolica-0-1-sinalizacao.html">
+<meta name="twitter:card" content="summary">
+
+<style>
+:root{
+  --bg:#0a0a0a;
+  --card:#141414;
+  --card2:#141818;
+  --line:#262626;
+  --t1:#f2f2f2;
+  --t2:#9a9a9a;
+  --t3:#6b6b6b;
+  --t4:#444444;
+  --or:#ff6b1a;
+  --or-soft:rgba(255,107,26,.10);
+  --or-line:rgba(255,107,26,.28);
+  --warn:#ffb020;
+  --warn-soft:rgba(255,176,32,.09);
+  --ok:#35c26a;
+  --ok-soft:rgba(53,194,106,.09);
+}
+[data-theme="light"]{
+  --bg:#f7f7f5;
+  --card:#ffffff;
+  --card2:#f1f1ef;
+  --line:#e0e0dc;
+  --t1:#131313;
+  --t2:#565656;
+  --t3:#7c7c7c;
+  --t4:#a8a8a8;
+  --or:#d95300;
+  --or-soft:rgba(217,83,0,.07);
+  --or-line:rgba(217,83,0,.24);
+  --warn:#a86a00;
+  --warn-soft:rgba(168,106,0,.07);
+  --ok:#1c7f45;
+  --ok-soft:rgba(28,127,69,.07);
+}
+
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--t1);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  font-weight:500;
+  line-height:1.65;
+  font-size:16px;
+  padding:0 0 90px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto;padding:0 18px}
+
+/* ---------- topo ---------- */
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:12px;padding:18px 0 6px;
+}
+.backlink{
+  color:var(--t2);text-decoration:none;font-size:12.5px;font-weight:600;
+  letter-spacing:1.2px;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:6px;padding:8px 12px;
+  background:var(--card);display:inline-block;transition:transform .12s ease;
+}
+.backlink:active{transform:scale(.96)}
+.theme-toggle{
+  background:var(--card);color:var(--t2);border:1px solid var(--line);
+  border-radius:6px;padding:8px 12px;font-size:12.5px;font-weight:700;
+  letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;
+  font-family:inherit;transition:transform .12s ease;
+}
+.theme-toggle:active{transform:scale(.96)}
+
+/* ---------- hero ---------- */
+header.hero{padding:26px 0 22px;border-bottom:1px solid var(--line)}
+.eyebrow{
+  color:var(--or);font-size:11.5px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;margin-bottom:14px;
+}
+h1{
+  font-size:clamp(28px,7vw,44px);line-height:1.08;font-weight:800;
+  letter-spacing:-.03em;margin-bottom:14px;
+}
+.sub{color:var(--t2);font-size:16px;font-weight:500;max-width:62ch}
+.brand-meta{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;
+}
+.brand-meta span{
+  font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--t3);background:var(--card);border:1px solid var(--line);
+  border-radius:4px;padding:6px 10px;
+}
+.brand-meta span.hot{color:var(--or);border-color:var(--or-line);background:var(--or-soft)}
+
+/* ---------- TOC ---------- */
+nav.toc{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:8px;margin:26px 0 10px;overflow:hidden;
+}
+.toc-head{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:14px 16px;cursor:pointer;user-select:none;
+  font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--t2);background:none;border:0;width:100%;font-family:inherit;text-align:left;
+}
+.toc-head .chev{color:var(--or);font-size:13px;transition:transform .18s ease}
+nav.toc.closed .chev{transform:rotate(-90deg)}
+.toc-body{border-top:1px solid var(--line);padding:8px 6px 12px}
+nav.toc.closed .toc-body{display:none}
+.toc-body a{
+  display:block;color:var(--t2);text-decoration:none;font-size:14.5px;
+  padding:8px 12px;border-radius:4px;line-height:1.35;
+}
+.toc-body a b{color:var(--or);font-weight:800;margin-right:8px;font-variant-numeric:tabular-nums}
+.toc-body a:active{transform:scale(.98)}
+
+/* ---------- seções ---------- */
+section{padding:34px 0 4px;border-top:1px solid var(--line);margin-top:26px}
+section:first-of-type{border-top:0}
+h2{
+  font-size:clamp(21px,4.6vw,27px);line-height:1.2;font-weight:800;
+  letter-spacing:-.02em;margin-bottom:16px;
+}
+.sec-num{color:var(--or);font-weight:800;font-variant-numeric:tabular-nums}
+h3{
+  font-size:16.5px;font-weight:700;letter-spacing:-.01em;
+  margin:26px 0 10px;color:var(--t1);
+}
+h4{
+  font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+  color:var(--t3);margin:22px 0 10px;
+}
+p{margin-bottom:14px;color:var(--t2)}
+p strong,li strong{color:var(--t1);font-weight:700}
+em{font-style:italic;color:var(--t1)}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;
+  background:var(--card2);border:1px solid var(--line);border-radius:4px;
+  padding:1px 6px;color:var(--or);
+}
+
+/* ---------- listas ---------- */
+ul.clean,ol.clean{list-style:none;margin:0 0 16px}
+ul.clean li,ol.clean li{
+  color:var(--t2);padding:7px 0 7px 20px;position:relative;
+}
+ul.clean li::before{
+  content:"";position:absolute;left:2px;top:17px;
+  width:6px;height:1px;background:var(--or);
+}
+ol.clean{counter-reset:c}
+ol.clean li{counter-increment:c;padding-left:30px}
+ol.clean li::before{
+  content:counter(c,decimal-leading-zero);position:absolute;left:0;top:7px;
+  color:var(--or);font-weight:800;font-size:12.5px;font-variant-numeric:tabular-nums;
+}
+ul.key{list-style:none;margin:0 0 16px}
+ul.key li{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:6px;padding:12px 14px;margin-bottom:8px;color:var(--t2);font-size:15px;
+}
+
+/* ---------- callouts ---------- */
+.callout{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:8px;padding:16px 16px 4px;margin:20px 0;
+}
+.callout .tag{
+  display:block;font-size:11px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--or);margin-bottom:8px;
+}
+.callout.ok{border-left-color:var(--ok);background:var(--ok-soft)}
+.callout.ok .tag{color:var(--ok)}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+.callout.warn .tag{color:var(--warn)}
+.callout p:last-child{margin-bottom:14px}
+
+/* ---------- definições ---------- */
+.def{
+  background:var(--card2);border:1px solid var(--line);border-radius:8px;
+  padding:14px 16px 2px;margin-bottom:10px;
+}
+.def .word{
+  display:block;color:var(--t1);font-weight:800;font-size:15.5px;
+  letter-spacing:-.01em;margin-bottom:6px;
+}
+.def .word span{color:var(--or);font-weight:700;font-size:12.5px;letter-spacing:.4px}
+.def p{font-size:14.5px;margin-bottom:12px}
+
+/* ---------- steps / cascatas ---------- */
+.stepwrap{
+  background:var(--card);border:1px solid var(--line);border-radius:8px;
+  padding:8px 14px;margin:18px 0;
+}
+.step{
+  position:relative;padding:12px 0 12px 30px;border-bottom:1px solid var(--line);
+}
+.step:last-child{border-bottom:0}
+.step::before{
+  content:"";position:absolute;left:7px;top:20px;
+  width:7px;height:7px;border-radius:50%;background:var(--or);
+}
+.step::after{
+  content:"";position:absolute;left:10px;top:30px;bottom:-6px;
+  width:1px;background:var(--line);
+}
+.step:last-child::after{display:none}
+.step b{display:block;color:var(--t1);font-weight:700;font-size:15px;margin-bottom:3px}
+.step span{color:var(--t2);font-size:14.5px}
+
+/* ---------- grids ---------- */
+.grid2{display:grid;grid-template-columns:1fr;gap:10px;margin:18px 0}
+@media(min-width:640px){.grid2{grid-template-columns:1fr 1fr}}
+.mini{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:6px;padding:14px;
+}
+.mini b{display:block;color:var(--t1);font-size:14.5px;font-weight:700;margin-bottom:5px}
+.mini p{font-size:14px;margin-bottom:0}
+
+/* ---------- tabelas ---------- */
+.table-wrap{
+  overflow-x:auto;border:1px solid var(--line);border-radius:8px;
+  margin:20px 0;background:var(--card);-webkit-overflow-scrolling:touch;
+}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+th{
+  text-align:left;padding:12px 14px;color:var(--t3);font-size:11px;
+  font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+  border-bottom:1px solid var(--line);white-space:nowrap;
+}
+td{padding:12px 14px;border-bottom:1px solid var(--line);color:var(--t2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td strong{color:var(--t1)}
+.up{color:var(--or);font-weight:700}
+.dn{color:var(--ok);font-weight:700}
+.nil{color:var(--t4);font-weight:700}
+
+/* ---------- referências ---------- */
+.refs{list-style:none;counter-reset:r}
+.refs li{
+  counter-increment:r;position:relative;padding:10px 0 10px 34px;
+  border-bottom:1px solid var(--line);color:var(--t3);font-size:13.5px;line-height:1.5;
+}
+.refs li:last-child{border-bottom:0}
+.refs li::before{
+  content:counter(r);position:absolute;left:0;top:10px;color:var(--or);
+  font-weight:800;font-size:12px;font-variant-numeric:tabular-nums;
+}
+.refs li b{color:var(--t2);font-weight:600}
+
+footer{
+  margin-top:40px;padding-top:24px;border-top:1px solid var(--line);
+  color:var(--t4);font-size:12px;letter-spacing:1.2px;text-transform:uppercase;
+  font-weight:700;text-align:center;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="backlink" href="index.html">← Biblioteca</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema">Tema</button>
+  </div>
+
+  <header class="hero">
+    <div class="eyebrow">Fisiologia Metabólica · Bloco 0 · Material 0.1</div>
+    <h1>A gramática da sinalização celular: como um sinal vira adaptação</h1>
+    <p class="sub">O material que vem antes de todos os outros da série. Aqui você aprende a ler ERK, AKT, ATF4, AMPK e mTORC1 uma única vez — para que nos próximos 29 materiais eles sejam vocabulário, não obstáculo.</p>
+    <div class="brand-meta">
+      <span class="hot">22 seções</span>
+      <span>Material de base</span>
+      <span>Pré-requisito da série</span>
+      <span>Nível avançado</span>
+    </div>
+  </header>
+
+  <nav class="toc" id="toc">
+    <button class="toc-head" id="tocHead" type="button" aria-expanded="true">
+      <span>Índice do material</span><span class="chev">▾</span>
+    </button>
+    <div class="toc-body">
+      <a href="#s01"><b>01</b>Por que este material vem primeiro</a>
+      <a href="#s02"><b>02</b>O problema que a célula precisa resolver</a>
+      <a href="#s03"><b>03</b>A anatomia de um sinal: os cinco elementos</a>
+      <a href="#s04"><b>04</b>A primeira bifurcação: lipossolúvel ou hidrossolúvel</a>
+      <a href="#s05"><b>05</b>Classe 1 — Receptores tirosina quinase (RTK)</a>
+      <a href="#s06"><b>06</b>Classe 2 — GPCR e proteína G</a>
+      <a href="#s07"><b>07</b>Classe 3 — Receptores nucleares</a>
+      <a href="#s08"><b>08</b>Classe 4 — Receptores de citocina e JAK-STAT</a>
+      <a href="#s09"><b>09</b>Classe 5 — Canais iônicos</a>
+      <a href="#s10"><b>10</b>Fosforilação: o interruptor universal</a>
+      <a href="#s11"><b>11</b>Cascatas: por que quinases em série</a>
+      <a href="#s12"><b>12</b>Segundos mensageiros</a>
+      <a href="#s13"><b>13</b>Adaptadores e andaimes: a logística do sinal</a>
+      <a href="#s14"><b>14</b>Fatores de transcrição: onde o sinal vira proteína nova</a>
+      <a href="#s15"><b>15</b>Especificidade tecidual</a>
+      <a href="#s16"><b>16</b>Amplitude, duração e cinética</a>
+      <a href="#s17"><b>17</b>Feedback, dessensibilização e resistência hormonal</a>
+      <a href="#s18"><b>18</b>Crosstalk: AMPK × mTORC1 como caso-modelo</a>
+      <a href="#s19"><b>19</b>Como ler um paper de sinalização</a>
+      <a href="#s20"><b>20</b>Erros comuns de interpretação</a>
+      <a href="#s21"><b>21</b>Síntese: o mapa da gramática</a>
+      <a href="#s22"><b>22</b>Honestidade científica e referências</a>
+    </div>
+  </nav>
+
+<!-- ============ 01 ============ -->
+<section id="s01">
+  <h2><span class="sec-num">01 &mdash;</span> Por que este material vem primeiro</h2>
+
+  <p>Quando você lê que "o treino ativa a AMPK", que "a leucina estimula o mTORC1" ou que "o FGF21 sinaliza via ERK", cada uma dessas frases pressupõe um sistema que raramente é ensinado por inteiro. O resultado prático é conhecido: a pessoa decora que AMPK é catabólica e mTORC1 é anabólico, mas <strong>não consegue prever nada</strong> — porque decorou rótulos, não a máquina.</p>
+
+  <p>A boa notícia é que a máquina é pequena. A célula resolve <em>todos</em> os seus problemas de comunicação com um repertório limitado: cinco famílias de receptor, um punhado de segundos mensageiros, e um único truque químico universal — colocar e tirar fosfato. Aprendida essa gramática, o resto da série vira leitura.</p>
+
+  <div class="callout">
+    <span class="tag">O que este material entrega</span>
+    <p>Ao final, você deve conseguir pegar um hormônio que nunca estudou, olhar sua ficha (que receptor usa, que via aciona, que fator de transcrição liga) e <strong>prever o comportamento dele</strong>: se é rápido ou lento, se o efeito é reversível, se pode gerar resistência, e por que ele faz coisas opostas em tecidos diferentes.</p>
+  </div>
+
+  <p>Este material não tem "aplicação prática" direta na sala de musculação. Ele é infraestrutura. É o equivalente a aprender anatomia antes de biomecânica.</p>
+</section>
+
+<!-- ============ 02 ============ -->
+<section id="s02">
+  <h2><span class="sec-num">02 &mdash;</span> O problema que a célula precisa resolver</h2>
+
+  <p>Uma célula muscular está isolada dentro de uma membrana lipídica. Ela não enxerga, não ouve, e não sabe se você está em jejum, em superávit calórico, dormindo ou fazendo agachamento. Ainda assim, ela precisa tomar decisões de altíssimo custo energético: sintetizar proteína contrátil, construir mitocôndria, degradar organela velha, captar ou liberar substrato.</p>
+
+  <p>O problema, então, é: <strong>como uma informação que existe fora da célula atravessa a membrana e vira mudança de comportamento dentro dela?</strong></p>
+
+  <h3>As três restrições que moldam a solução</h3>
+
+  <ol class="clean">
+    <li><strong>A membrana é uma barreira seletiva.</strong> Ela é feita de lipídio. Moléculas hidrossolúveis (proteínas, peptídeos, a maioria dos hormônios) simplesmente não passam. Moléculas lipossolúveis (esteroides, hormônios tireoidianos) passam com facilidade. Essa única propriedade física divide toda a endocrinologia em duas metades.</li>
+    <li><strong>O sinal precisa ser amplificado.</strong> A concentração de hormônio no sangue é ridiculamente baixa — na faixa de picomolar a nanomolar. Poucas moléculas precisam gerar uma resposta celular massiva. Isso exige um sistema de multiplicação.</li>
+    <li><strong>O sinal precisa ser desligável.</strong> Uma resposta que não termina é uma doença. Todo mecanismo de "ligar" que você aprender tem obrigatoriamente um mecanismo de "desligar" — e é frequentemente no desligamento que a patologia mora.</li>
+  </ol>
+
+  <div class="callout ok">
+    <span class="tag">A chave de leitura da série inteira</span>
+    <p>Sempre que você encontrar um novo mensageiro, faça três perguntas: <strong>(1)</strong> como ele atravessa a barreira? <strong>(2)</strong> como o sinal é amplificado? <strong>(3)</strong> como ele é desligado — e o que acontece quando o desligamento falha?</p>
+  </div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section id="s03">
+  <h2><span class="sec-num">03 &mdash;</span> A anatomia de um sinal: os cinco elementos</h2>
+
+  <p>Toda via de sinalização, sem exceção, tem a mesma estrutura de cinco peças. Aprenda esse esqueleto e você conseguirá desmontar qualquer via nova.</p>
+
+  <div class="stepwrap">
+    <div class="step"><b>1 · Ligante (o mensageiro)</b><span>A molécula que carrega a informação. Hormônio, miocina, citocina, neurotransmissor, ou até um nutriente (a leucina é, funcionalmente, um ligante). Ele não faz nada sozinho — é apenas informação.</span></div>
+    <div class="step"><b>2 · Receptor (o tradutor)</b><span>A proteína que reconhece o ligante e muda de conformação. É aqui que a informação química vira informação estrutural. <strong>É o receptor, não o ligante, que determina a resposta.</strong></span></div>
+    <div class="step"><b>3 · Transdutores (a cascata)</b><span>A sequência de proteínas — quinases, proteínas G, segundos mensageiros, adaptadores — que carrega e amplifica o sinal do receptor até o efetor.</span></div>
+    <div class="step"><b>4 · Efetores (quem executa)</b><span>As proteínas que produzem a mudança concreta: uma enzima metabólica, um transportador que vai à membrana, um fator de transcrição que entra no núcleo.</span></div>
+    <div class="step"><b>5 · Resposta e término</b><span>A mudança de comportamento celular — e o mecanismo que a encerra: fosfatases, degradação do ligante, internalização do receptor, feedback negativo.</span></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">A inversão contraintuitiva que você precisa absorver</span>
+    <p>O mesmo ligante pode produzir efeitos opostos em tecidos diferentes — porque a informação não está no hormônio, está no <strong>equipamento receptor do tecido</strong>. A adrenalina dilata brônquio e contrai vaso sanguíneo. Não porque existem duas adrenalinas, mas porque existem receptores β₂ e α₁. <em>O ligante é a pergunta; o receptor é quem escolhe a resposta.</em></p>
+  </div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section id="s04">
+  <h2><span class="sec-num">04 &mdash;</span> A primeira bifurcação: lipossolúvel ou hidrossolúvel</h2>
+
+  <p>Antes de classificar receptores, classifique o ligante. Essa única propriedade prediz quase tudo sobre o comportamento temporal do hormônio.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Propriedade</th><th>Hidrossolúvel</th><th>Lipossolúvel</th></tr></thead>
+      <tbody>
+        <tr><td>Exemplos</td><td>Insulina, GH, leptina, FGF21, GLP-1, adrenalina</td><td>Testosterona, cortisol, estradiol, T3/T4, vitamina D</td></tr>
+        <tr><td>Atravessa a membrana?</td><td class="nil">Não</td><td class="up">Sim</td></tr>
+        <tr><td>Onde está o receptor</td><td>Na superfície da célula</td><td>No citoplasma ou no núcleo</td></tr>
+        <tr><td>Transporte no sangue</td><td>Livre, dissolvido no plasma</td><td>Ligado a proteínas carreadoras (SHBG, albumina, TBG)</td></tr>
+        <tr><td>Meia-vida</td><td>Curta (minutos)</td><td>Longa (horas a dias)</td></tr>
+        <tr><td>Velocidade da resposta</td><td>Segundos a minutos</td><td>Horas a dias</td></tr>
+        <tr><td>Mecanismo dominante</td><td>Cascatas de fosforilação</td><td>Transcrição gênica direta</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Por que isso importa na prática</span>
+    <p>É por aqui que se entende a diferença entre <strong>"hormônio livre" e "hormônio total"</strong>. Hormônios lipossolúveis circulam majoritariamente ligados a carreadoras e só a fração livre é biologicamente ativa. Por isso testosterona total pode enganar: se a SHBG está alta, o total parece bom e a fração ativa é baixa. Hormônios hidrossolúveis não têm esse problema — não precisam de carreadora.</p>
+  </div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section id="s05">
+  <h2><span class="sec-num">05 &mdash;</span> Classe 1 — Receptores tirosina quinase (RTK)</h2>
+
+  <p><strong>Quem usa:</strong> insulina, IGF-1, FGF21 (via FGFR1c), EGF, VEGF, e boa parte dos fatores de crescimento.</p>
+
+  <h3>Arquitetura</h3>
+
+  <p>Uma proteína que atravessa a membrana uma única vez, com três regiões: um <strong>domínio extracelular</strong> que reconhece o ligante, uma <strong>hélice transmembrana</strong>, e um <strong>domínio quinase intracelular</strong> na porção C-terminal. A quinase é o motor — ela transfere fosfato do ATP para resíduos de tirosina.</p>
+
+  <h3>Ativação</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>Dimerização (ou reorganização)</b><span>A maioria dos RTKs é monomérica e a ligação do ligante induz a formação de dímero. Estudos estruturais revelaram que as estratégias de dimerização são surpreendentemente diversas entre as famílias de RTK.</span></div>
+    <div class="step"><b>Exceção importante: insulina e IGF-1</b><span>Esses receptores já existem como dímeros <em>antes</em> do ligante chegar. Neles a ativação não é aproximação — é <strong>mudança conformacional</strong> dentro de um dímero preexistente. Guarde isso: é a razão pela qual a farmacologia do receptor de insulina se comporta de forma distinta.</span></div>
+    <div class="step"><b>Transautofosforilação</b><span>Cada quinase fosforila a parceira em tirosinas específicas da cauda intracelular. Isso ativa plenamente a quinase e, ao mesmo tempo, cria pontos de ancoragem.</span></div>
+    <div class="step"><b>Recrutamento por domínios SH2 e PTB</b><span>Proteínas de sinalização que possuem domínios SH2 ou PTB se ligam <strong>especificamente a fosfotirosina</strong> — e apenas ao receptor já fosforilado. É assim que o receptor "chama" o time certo.</span></div>
+    <div class="step"><b>Proteínas de ancoragem (docking)</b><span>Muitas vezes o recrutamento é indireto, via proteínas de ancoragem como <strong>FRS2</strong> (usada pelos FGFRs), <strong>IRS-1</strong> (usada pelo receptor de insulina) e <strong>Gab1</strong>.</span></div>
+  </div>
+
+  <h3>As duas saídas principais</h3>
+
+  <div class="grid2">
+    <div class="mini"><b>Ramo PI3K–AKT</b><p>Metabólico e de sobrevivência. PI3K converte PIP2 em PIP3 → AKT é recrutada e ativada → fosforila AS160 (GLUT4), GSK3 (glicogênio), FOXO (atrogenes), TSC2 (libera mTORC1). É o ramo dominante da <strong>insulina</strong>.</p></div>
+    <div class="mini"><b>Ramo RAS–MAPK–ERK</b><p>Proliferativo e transcricional. GRB2 → SOS → RAS-GTP → RAF → MEK → ERK1/2. É o ramo dominante do <strong>FGF21</strong> e dos fatores de crescimento clássicos.</p></div>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Insight que vale a série inteira</span>
+    <p>Insulina e FGF21 usam a <em>mesma classe</em> de receptor, mas <strong>ramos diferentes</strong>: insulina puxa PI3K-AKT, FGF21 puxa MAPK-ERK. Ambos terminam fosforilando o AS160 e liberando GLUT4 — por caminhos distintos. É por isso que o efeito dos dois é sinérgico, e não redundante. <em>Duas mãos diferentes girando a mesma maçaneta.</em></p>
+  </div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section id="s06">
+  <h2><span class="sec-num">06 &mdash;</span> Classe 2 — GPCR e proteína G</h2>
+
+  <p><strong>Quem usa:</strong> adrenalina e noradrenalina, glucagon, GLP-1, grelina, TSH, LH, FSH, paratormônio. É a maior família de receptores do genoma humano e alvo de aproximadamente 40% dos fármacos prescritos.</p>
+
+  <h3>Arquitetura</h3>
+
+  <p>Uma proteína que atravessa a membrana <strong>sete vezes</strong> — daí o nome alternativo "receptor de sete domínios transmembrana". Diferente do RTK, ele <strong>não tem atividade enzimática própria</strong>. Ele terceiriza: usa uma proteína G acoplada do lado interno.</p>
+
+  <h3>O ciclo da proteína G</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>Estado de repouso</b><span>A proteína G é um trímero (α, β, γ) com GDP preso na subunidade α. Trímero com GDP = desligado.</span></div>
+    <div class="step"><b>Ligante chega, receptor muda de forma</b><span>O receptor ativado funciona como trocador de nucleotídeo: força a subunidade α a soltar o GDP e pegar um GTP.</span></div>
+    <div class="step"><b>Dissociação</b><span>Gα-GTP se separa do dímero Gβγ. <strong>As duas partes sinalizam</strong> — Gβγ não é sobra, tem alvos próprios.</span></div>
+    <div class="step"><b>Efeito depende do tipo de Gα</b><span><strong>Gs</strong> ativa adenilato ciclase → AMPc ↑ → PKA (adrenalina em β, glucagon, GLP-1). <strong>Gi</strong> inibe a ciclase → AMPc ↓. <strong>Gq</strong> ativa fosfolipase C → IP₃ e DAG → Ca²⁺ e PKC (adrenalina em α₁).</span></div>
+    <div class="step"><b>Desligamento automático</b><span>A própria Gα é uma GTPase: ela hidrolisa o GTP em GDP sozinha. <strong>O sinal tem cronômetro embutido.</strong> Trímero se reforma, sistema volta ao repouso.</span></div>
+  </div>
+
+  <h3>Dessensibilização: GRK e β-arrestina</h3>
+
+  <p>O mecanismo de desligamento de segundo nível é elegante e explica muita farmacologia. As <strong>GRKs (GPCR kinases)</strong> são a principal classe de quinases que fosforilam receptores <em>ativos</em>, e essa fosforilação promove o recrutamento da <strong>β-arrestina</strong>, que medeia dessensibilização e internalização do receptor.</p>
+
+  <p>Repare na lógica: <strong>a GRK só age no receptor que está ativo</strong>. Ou seja, quanto mais o receptor é estimulado, mais rápido ele é desligado. É um freio proporcional ao uso — e a base molecular de fenômenos como taquifilaxia e tolerância.</p>
+
+  <div class="callout">
+    <span class="tag">Agonismo enviesado (biased agonism)</span>
+    <p>Descobriu-se que a β-arrestina não apenas desliga: ela <strong>sinaliza por conta própria</strong>, por vias distintas das da proteína G. Isso abriu a possibilidade de projetar fármacos "enviesados", que preferencialmente acionam um dos dois braços. Sinalização enviesada é definida como a capacidade de um ligante, em um dado receptor, de disparar preferencialmente uma via em relação a outra, quando comparado a um ligante de referência. É por isso que dois agonistas do mesmo receptor podem ter perfis clínicos diferentes.</p>
+  </div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section id="s07">
+  <h2><span class="sec-num">07 &mdash;</span> Classe 3 — Receptores nucleares</h2>
+
+  <p><strong>Quem usa:</strong> testosterona, cortisol, estradiol, aldosterona, T3, vitamina D, e os sensores lipídicos PPARα, PPARγ, PPARδ.</p>
+
+  <h3>Como funciona</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>O ligante entra na célula</b><span>Por ser lipossolúvel, atravessa a membrana por difusão. Não precisa de receptor de superfície.</span></div>
+    <div class="step"><b>Liga ao receptor no citoplasma ou núcleo</b><span>Em repouso, muitos receptores esteroides ficam presos a proteínas de choque térmico (HSP) que os mantêm inativos. O ligante desloca as HSPs.</span></div>
+    <div class="step"><b>Dimerização e translocação ao núcleo</b><span>O complexo receptor-ligante forma dímero e entra no núcleo.</span></div>
+    <div class="step"><b>Ligação ao DNA</b><span>O dímero se liga a sequências específicas do DNA — os elementos responsivos (ARE para andrógeno, GRE para glicocorticoide, PPRE para PPAR).</span></div>
+    <div class="step"><b>Recrutamento de coativadores ou corepressores</b><span>Aqui mora a especificidade fina: o mesmo receptor pode <em>ligar</em> ou <em>desligar</em> genes dependendo de quais coreguladores estão disponíveis naquele tecido.</span></div>
+    <div class="step"><b>Transcrição → tradução → proteína nova</b><span>Horas depois, a célula tem uma composição proteica diferente.</span></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Por que esteroide "demora" e por que o efeito persiste</span>
+    <p>O receptor nuclear <strong>não amplifica por cascata</strong> — ele age direto no DNA. Isso explica dois fenômenos: <strong>(1)</strong> a resposta é lenta, porque exige transcrição e tradução; <strong>(2)</strong> a resposta é duradoura, porque a proteína sintetizada permanece na célula muito depois de o hormônio ter sumido. É a diferença entre apertar um interruptor (rápido, reversível) e reformar a instalação elétrica (lento, permanente).</p>
+  </div>
+
+  <p>Observação para a série: os <strong>PPARs</strong> pertencem a esta classe e são ativados por ácidos graxos. É por isso que "comer gordura" pode alterar transcrição gênica diretamente — o ácido graxo funciona como hormônio. O PPARα induzindo FGF21 no fígado, visto no material 4.1, é exatamente este mecanismo.</p>
+</section>
+
+<!-- ============ 08 ============ -->
+<section id="s08">
+  <h2><span class="sec-num">08 &mdash;</span> Classe 4 — Receptores de citocina e JAK-STAT</h2>
+
+  <p><strong>Quem usa:</strong> leptina, hormônio do crescimento, prolactina, eritropoetina, IL-6 e boa parte das citocinas inflamatórias.</p>
+
+  <p>Esses receptores têm um problema: são de superfície, como os RTKs, mas <strong>não possuem domínio quinase próprio</strong>. A solução é uma quinase avulsa que fica grudada na cauda do receptor — a <strong>JAK (Janus Kinase)</strong>.</p>
+
+  <div class="stepwrap">
+    <div class="step"><b>Ligante liga, receptor dimeriza</b><span>As JAKs associadas são aproximadas.</span></div>
+    <div class="step"><b>JAKs se fosforilam mutuamente e fosforilam o receptor</b><span>Criam fosfotirosinas de ancoragem, como no RTK.</span></div>
+    <div class="step"><b>STAT é recrutada e fosforilada</b><span>A STAT (Signal Transducer and Activator of Transcription) tem domínio SH2 e se prende às fosfotirosinas.</span></div>
+    <div class="step"><b>STAT dimeriza e vai ao núcleo</b><span>Ela é, ao mesmo tempo, transdutor e fator de transcrição — daí o nome. É a via mais curta do repertório celular: do receptor ao DNA em um passo.</span></div>
+    <div class="step"><b>Desligamento por SOCS</b><span>Entre os genes que a STAT liga estão os <strong>SOCS (Suppressor of Cytokine Signaling)</strong>, que inibem a JAK. <strong>A via produz seu próprio freio.</strong></span></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Guarde o SOCS — ele volta na seção 17</span>
+    <p>Esse feedback é o mecanismo molecular central da <strong>resistência à leptina</strong> na obesidade: leptina cronicamente alta → STAT3 constantemente ativa → SOCS3 elevado → JAK inibida → o sinal da leptina para de chegar. Mais hormônio produzindo menos efeito. O mesmo desenho lógico reaparece em várias resistências hormonais.</p>
+  </div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section id="s09">
+  <h2><span class="sec-num">09 &mdash;</span> Classe 5 — Canais iônicos</h2>
+
+  <p><strong>Quem usa:</strong> acetilcolina na placa motora, receptor de rianodina no retículo sarcoplasmático, receptores de neurotransmissores em geral.</p>
+
+  <p>É a classe mais rápida e mais simples conceitualmente: o receptor <em>é</em> o poro. O ligante liga, o canal abre, íons atravessam. Escala de tempo: <strong>milissegundos</strong>.</p>
+
+  <p>Para a fisiologia do exercício, o exemplo que importa é o acoplamento excitação-contração: acetilcolina abre canal na placa motora → despolarização → o receptor de di-hidropiridina no túbulo T muda de conformação → abre o receptor de rianodina → <strong>Ca²⁺ inunda o citosol</strong> → troponina C → contração.</p>
+
+  <div class="callout">
+    <span class="tag">O cálcio é sinal, não só executor</span>
+    <p>O Ca²⁺ liberado a cada contração não serve apenas para mover o filamento. Ele também é <strong>segundo mensageiro</strong>: ativa a CaMK (Calcium/Calmodulin-dependent Kinase) e a calcineurina, que sinalizam biogênese mitocondrial e mudança de tipo de fibra. <em>É um dos mecanismos pelos quais a repetição de contrações vira adaptação crônica.</em></p>
+  </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section id="s10">
+  <h2><span class="sec-num">10 &mdash;</span> Fosforilação: o interruptor universal</h2>
+
+  <p>Se você entender apenas um mecanismo deste material, que seja este. <strong>A esmagadora maioria da regulação celular rápida é feita colocando e tirando grupos fosfato de proteínas.</strong></p>
+
+  <h3>Por que fosfato, especificamente?</h3>
+
+  <ul class="clean">
+    <li><strong>É volumoso e tem duas cargas negativas.</strong> Anexar um fosfato numa proteína é como pendurar um ímã pesado: força uma mudança de forma. E forma, em proteína, é função.</li>
+    <li><strong>É reversível.</strong> Quinases colocam; fosfatases tiram. O mesmo sítio pode ser ligado e desligado milhares de vezes.</li>
+    <li><strong>É rápido e barato.</strong> Não exige fabricar proteína nova. Usa ATP, que é abundante.</li>
+    <li><strong>É específico.</strong> Uma proteína pode ter dezenas de sítios fosforiláveis, cada um com efeito próprio — permitindo regulação combinatória fina.</li>
+  </ul>
+
+  <h3>Os dois grandes grupos de quinase</h3>
+
+  <div class="grid2">
+    <div class="mini"><b>Tirosina quinases</b><p>Fosforilam resíduos de tirosina. Raras e altamente reguladas. Domínio dos receptores de fatores de crescimento e da insulina. Sinal de "há informação externa importante chegando".</p></div>
+    <div class="mini"><b>Serina/treonina quinases</b><p>Fosforilam serina ou treonina. Muito mais numerosas. AKT, PKA, PKC, AMPK, mTOR, ERK, GSK3, S6K1 — praticamente todo o miolo do metabolismo.</p></div>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">A distinção que explica a resistência à insulina</span>
+    <p>O IRS-1 pode ser fosforilado em <strong>tirosina</strong> (pelo receptor de insulina — <em>ativa</em> a via) ou em <strong>serina</strong> (por JNK, IKKβ, PKCθ, S6K1 — <em>inativa</em> a via). Mesma proteína, dois tipos de fosforilação, efeitos opostos. É o mecanismo molecular pelo qual inflamação, excesso de lipídio intracelular e hiperativação crônica de mTORC1 produzem resistência à insulina. <strong>Não é o hormônio que falta — é o adaptador que foi sabotado.</strong></p>
+  </div>
+
+  <h3>As fosfatases: o lado esquecido</h3>
+
+  <p>Para cada quinase existe uma fosfatase que desfaz o trabalho. Elas são muito menos estudadas e raramente aparecem em divulgação, mas determinam a <strong>duração</strong> do sinal. Uma via com fosfatase ativa produz picos curtos; uma via com fosfatase inibida produz sinal sustentado. Como veremos na seção 16, a duração muda o resultado biológico.</p>
+</section>
+
+<!-- ============ 11 ============ -->
+<section id="s11">
+  <h2><span class="sec-num">11 &mdash;</span> Cascatas: por que quinases em série</h2>
+
+  <p>A cascata MAPK tem três quinases em sequência: RAF fosforila MEK, que fosforila ERK. Por que não ir direto?</p>
+
+  <h3>Três razões, todas boas</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>1 · Amplificação</b><span>Cada quinase ativada fosforila <em>muitas</em> moléculas da quinase seguinte antes de ser desligada. Se cada nível multiplica por 100, três níveis multiplicam por um milhão. É assim que concentração picomolar de hormônio produz resposta celular massiva.</span></div>
+    <div class="step"><b>2 · Pontos de regulação</b><span>Cada degrau é um ponto onde o sinal pode ser modulado, bloqueado ou integrado com outra via. Uma via de um passo é tudo-ou-nada; uma via de três passos é ajustável.</span></div>
+    <div class="step"><b>3 · Ultrassensibilidade</b><span>Cascatas em série convertem uma entrada gradual em uma saída tipo interruptor. Abaixo de um limiar, quase nada acontece; acima dele, a resposta dispara. Isso filtra ruído e permite decisões celulares nítidas.</span></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Consequência prática para leitura de literatura</span>
+    <p>Como a cascata amplifica, uma <strong>mudança pequena no topo pode ser fisiologicamente enorme</strong> — e uma mudança grande medida no meio pode ser fisiologicamente irrelevante. É por isso que "aumentou 40% a fosforilação de X" não diz nada sozinho: depende do degrau em que X está, e de quanto desse aumento chega ao efetor final.</p>
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section id="s12">
+  <h2><span class="sec-num">12 &mdash;</span> Segundos mensageiros</h2>
+
+  <p>Um <strong>segundo mensageiro</strong> é uma molécula pequena, produzida dentro da célula em resposta ao sinal externo, que se difunde rapidamente e ativa múltiplos alvos. O hormônio é o primeiro mensageiro; ele fica do lado de fora. O segundo mensageiro é quem espalha a notícia por dentro.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Mensageiro</th><th>Produzido por</th><th>Ativa</th><th>Contexto típico</th></tr></thead>
+      <tbody>
+        <tr><td><strong>AMPc</strong></td><td>Adenilato ciclase (via Gs)</td><td>PKA</td><td>Adrenalina, glucagon: lipólise, glicogenólise</td></tr>
+        <tr><td><strong>Ca²⁺</strong></td><td>Canais e retículo sarcoplasmático</td><td>Calmodulina → CaMK, calcineurina</td><td>Contração, adaptação a exercício</td></tr>
+        <tr><td><strong>IP₃ / DAG</strong></td><td>Fosfolipase C (via Gq)</td><td>IP₃ libera Ca²⁺; DAG ativa PKC</td><td>Adrenalina em α₁, angiotensina</td></tr>
+        <tr><td><strong>PIP₃</strong></td><td>PI3K</td><td>Recruta AKT à membrana</td><td>Insulina, IGF-1</td></tr>
+        <tr><td><strong>NO</strong></td><td>Óxido nítrico sintase</td><td>Guanilato ciclase → GMPc</td><td>Vasodilatação, fluxo sanguíneo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O caso didático da lipólise</span>
+    <p>Adrenalina (fora da célula) → receptor β-adrenérgico → Gs → adenilato ciclase → <strong>AMPc</strong> (dentro da célula) → PKA → PKA fosforila a lipase hormônio-sensível e a perilipina → gotícula de gordura é aberta e hidrolisada. A adrenalina nunca entrou na célula. O AMPc fez todo o trabalho interno. Esse é o modelo mental completo de segundo mensageiro.</p>
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section id="s13">
+  <h2><span class="sec-num">13 &mdash;</span> Adaptadores e andaimes: a logística do sinal</h2>
+
+  <p>Uma categoria de proteína que confunde muita gente porque <strong>ela não faz química nenhuma</strong>. Adaptadores e andaimes não fosforilam, não hidrolisam, não transportam. Eles fazem <em>logística</em>: aproximam as peças certas, no lugar certo, na hora certa.</p>
+
+  <div class="def">
+    <span class="word">Proteína adaptadora <span>· ex.: GRB2, SHC</span></span>
+    <p>Contém apenas domínios de interação (SH2, SH3, PTB) e nenhum domínio catalítico. Sua única função é ser uma ponte: liga-se ao receptor fosforilado de um lado e à próxima peça do outro. GRB2 conecta receptor a SOS; sem ela, RAS nunca seria ativada.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">Proteína de ancoragem (docking) <span>· ex.: IRS-1, FRS2, Gab1</span></span>
+    <p>É um adaptador expandido: ela própria é fosforilada pelo receptor e passa a exibir <em>múltiplas</em> fosfotirosinas, virando uma plataforma capaz de recrutar vários efetores simultaneamente. O IRS-1 é o exemplo canônico — ele é a mesa em que a via da insulina se organiza.</p>
+  </div>
+
+  <div class="def">
+    <span class="word">Proteína de andaime (scaffold)</span>
+    <p>Segura todos os membros de uma cascata em um mesmo complexo físico, garantindo que RAF, MEK e ERK se encontrem rapidamente e que o sinal não vaze para outras vias. Andaime é o que dá <strong>especificidade espacial</strong> a uma cascata compartilhada.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="tag">Por que isso é clinicamente decisivo</span>
+    <p>Sabotar o adaptador é tão eficaz quanto sabotar o receptor — e é o que de fato acontece na resistência à insulina. O receptor de insulina pode estar íntegro e o hormônio presente; se o IRS-1 estiver fosforilado em serina, a mesa foi virada e nada se organiza sobre ela. <strong>A patologia frequentemente mora na logística, não na enzima.</strong></p>
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section id="s14">
+  <h2><span class="sec-num">14 &mdash;</span> Fatores de transcrição: onde o sinal vira proteína nova</h2>
+
+  <p>Toda cascata rápida acaba, mais cedo ou mais tarde, encostando em um <strong>fator de transcrição (FT)</strong> — a proteína que se liga ao DNA e determina quais genes serão lidos. É aqui que um estímulo transitório vira mudança estrutural.</p>
+
+  <h3>Como um FT funciona</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>Ele é mantido inativo</b><span>Por três estratégias: preso no citoplasma (NF-κB, FOXO, STAT), preso a uma proteína inibidora (HSPs nos receptores esteroides), ou simplesmente ausente (ATF4, que precisa ser traduzido).</span></div>
+    <div class="step"><b>O sinal o libera</b><span>Fosforilação, desfosforilação, degradação do inibidor, ou aumento de tradução.</span></div>
+    <div class="step"><b>Ele entra no núcleo e encontra sua sequência</b><span>Reconhece um motivo curto de DNA na região promotora ou reguladora dos genes-alvo.</span></div>
+    <div class="step"><b>Recruta a maquinaria</b><span>Coativadores, remodeladores de cromatina e RNA polimerase II. Ou, ao contrário, corepressores que silenciam.</span></div>
+    <div class="step"><b>Transcrição → mRNA → proteína</b><span>Escala de tempo: horas. Duração do efeito: dias.</span></div>
+  </div>
+
+  <h3>Os FTs que você vai reencontrar na série</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Fator</th><th>Ativado por</th><th>Liga o programa de</th></tr></thead>
+      <tbody>
+        <tr><td><strong>PGC-1α</strong></td><td>AMPK, CaMK, SIRT1 (exercício)</td><td>Biogênese mitocondrial — coativador mestre</td></tr>
+        <tr><td><strong>FOXO</strong></td><td>Ausência de AKT (jejum, catabolismo)</td><td>Atrogenes (MuRF1, atrogina-1), autofagia</td></tr>
+        <tr><td><strong>ATF4</strong></td><td>Falta de aminoácido, estresse (via eIF2α)</td><td>Resposta ao estresse, FGF21, atrofia</td></tr>
+        <tr><td><strong>ChREBP</strong></td><td>Metabólitos de glicose e frutose</td><td>Lipogênese, FGF21</td></tr>
+        <tr><td><strong>PPARα / PPARδ</strong></td><td>Ácidos graxos</td><td>Oxidação de gordura, cetogênese</td></tr>
+        <tr><td><strong>NF-κB</strong></td><td>Citocinas, estresse oxidativo</td><td>Inflamação, catabolismo muscular</td></tr>
+        <tr><td><strong>HIF-1α</strong></td><td>Hipóxia</td><td>Glicólise, angiogênese</td></tr>
+        <tr><td><strong>SMAD2/3</strong></td><td>Miostatina, ativina</td><td>Repressão do crescimento muscular</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="tag">Regra de ouro para a série</span>
+    <p>Quando quiser saber o que um estímulo <em>realmente</em> faz a longo prazo, <strong>não olhe a quinase — olhe o fator de transcrição que ela acende.</strong> Quinase é o que a célula faz agora; fator de transcrição é o que a célula vai virar.</p>
+  </div>
+</section>
+
+<!-- ============ 15 ============ -->
+<section id="s15">
+  <h2><span class="sec-num">15 &mdash;</span> Especificidade tecidual</h2>
+
+  <p>Um hormônio banha todas as células do corpo, mas produz efeitos diferentes — às vezes opostos — em tecidos diferentes. Existem quatro mecanismos que explicam isso, e nenhum deles está no hormônio.</p>
+
+  <ol class="clean">
+    <li><strong>Presença ou ausência do receptor.</strong> O mais óbvio. Sem receptor, o tecido é espectador.</li>
+    <li><strong>Presença de co-receptor obrigatório.</strong> O caso do FGF21 e do β-Klotho: o receptor FGFR1c existe em muitos tecidos, mas sem o co-receptor a afinidade é baixa demais para haver resposta. <em>O co-receptor é o filtro fino.</em></li>
+    <li><strong>Isoformas de receptor.</strong> Adrenalina em receptor β₂ relaxa musculatura lisa brônquica; em α₁ contrai musculatura lisa vascular. Mesmo ligante, receptores diferentes, efeitos opostos.</li>
+    <li><strong>Contexto de efetores e coreguladores.</strong> A cascata chega igual, mas encontra maquinarias diferentes. É por isso que o mesmo fator de transcrição pode ativar genes em um tecido e reprimir em outro.</li>
+  </ol>
+
+  <div class="callout ok">
+    <span class="tag">O exemplo que resolve a confusão do mTORC1</span>
+    <p><strong>No músculo</strong>, mTORC1 ativo = síntese proteica = hipertrofia. Você quer. <strong>No fígado</strong>, mTORC1 cronicamente ativo = lipogênese aumentada + S6K1 fosforilando IRS-1 em serina = resistência à insulina. Você não quer. É a <em>mesma</em> enzima, a <em>mesma</em> reação bioquímica. O que muda é o repertório de efetores do tecido. Por isso "mTOR é bom" e "mTOR é ruim" são ambas frases sem sentido sem o complemento "onde".</p>
+  </div>
+</section>
+
+<!-- ============ 16 ============ -->
+<section id="s16">
+  <h2><span class="sec-num">16 &mdash;</span> Amplitude, duração e cinética</h2>
+
+  <p>Duas células podem receber o mesmo sinal, na mesma intensidade, e fazer coisas opostas — se a <strong>duração</strong> for diferente. Isso não é detalhe: é um princípio organizador.</p>
+
+  <div class="grid2">
+    <div class="mini"><b>Sinal transitório</b><p>Pico rápido, retorno à base. Tipicamente produz resposta metabólica aguda e reversível. Exemplo: pico de ERK curto → proliferação.</p></div>
+    <div class="mini"><b>Sinal sustentado</b><p>Elevação mantida por horas. Tipicamente produz mudança de programa gênico e de identidade celular. Exemplo: ERK sustentada → diferenciação.</p></div>
+  </div>
+
+  <p>Aplicado à fisiologia do exercício, isso reorganiza a leitura de várias coisas:</p>
+
+  <ul class="key">
+    <li><strong>Uma sessão de treino</strong> produz picos transitórios de AMPK, ERK, p38 e de sinalização de mTORC1. Cada pico isolado é irrelevante para a estrutura.</li>
+    <li><strong>A adaptação crônica</strong> não é a soma dos picos, e sim a consequência da <em>repetição</em> de picos ao longo de semanas, que altera de forma estável a expressão gênica basal.</li>
+    <li><strong>Elevação cronicamente sustentada</strong> do mesmo sinal costuma ser patológica, não adaptativa: cortisol agudo é útil, cortisol cronicamente alto é catabólico; inflamação aguda é reparo, inflamação crônica é destruição.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">A hormese em uma frase</span>
+    <p>Muitos sinais benéficos ao exercício — ROS, cortisol, inflamação, AMPK — seguem curva em U invertido: <strong>necessários em pulsos, deletérios em platô</strong>. Nenhum deles deve ser tratado como "quanto mais, melhor" nem como "quanto menos, melhor". Este princípio volta com força no material sobre espécies reativas de oxigênio, no Bloco 2.</p>
+  </div>
+</section>
+
+<!-- ============ 17 ============ -->
+<section id="s17">
+  <h2><span class="sec-num">17 &mdash;</span> Feedback, dessensibilização e resistência hormonal</h2>
+
+  <p>Todo sistema de sinalização precisa de freio. E quase toda doença endócrina metabólica é, no fundo, um freio que travou.</p>
+
+  <h3>Os cinco mecanismos de desligamento</h3>
+
+  <ol class="clean">
+    <li><strong>Remoção do ligante</strong> — degradação enzimática, depuração hepática ou renal. Meia-vida curta é, por si só, um mecanismo de controle.</li>
+    <li><strong>Desligamento intrínseco</strong> — a GTPase da proteína G hidrolisando seu próprio GTP; fosfatases removendo fosfato.</li>
+    <li><strong>Dessensibilização por fosforilação</strong> — GRKs fosforilam o receptor ativo, β-arrestina é recrutada, o acoplamento com a proteína G é interrompido.</li>
+    <li><strong>Internalização e degradação do receptor</strong> — o receptor é retirado da membrana. Isso é <em>regulação para baixo</em> (downregulation) de verdade: menos alvo disponível.</li>
+    <li><strong>Feedback negativo transcricional</strong> — a própria via liga genes que a inibem. O SOCS3 é o exemplo clássico.</li>
+  </ol>
+
+  <h3>Como isso vira "resistência"</h3>
+
+  <div class="stepwrap">
+    <div class="step"><b>Estímulo cronicamente elevado</b><span>Hormônio alto o tempo todo — por dieta, adiposidade, inflamação ou administração exógena.</span></div>
+    <div class="step"><b>Freios acionados continuamente</b><span>Dessensibilização, internalização, feedback transcricional — todos ativos de forma permanente.</span></div>
+    <div class="step"><b>Resposta cai</b><span>A mesma concentração de hormônio produz menos efeito.</span></div>
+    <div class="step"><b>O organismo compensa produzindo mais</b><span>E o ciclo se aprofunda. <strong>Resultado: hormônio alto + efeito baixo.</strong></span></div>
+  </div>
+
+  <div class="callout">
+    <span class="tag">O padrão que unifica meia dúzia de patologias</span>
+    <p>Resistência à insulina, resistência à leptina, resistência ao FGF21, tolerância a agonistas β₂, taquifilaxia a descongestionantes nasais — todos seguem o <strong>mesmo desenho lógico</strong>. Por isso, ao encontrar qualquer hormônio "paradoxalmente alto" em uma condição metabólica, sua primeira hipótese deve ser resistência, e não deficiência. E a intervenção lógica raramente é "dar mais hormônio": é <strong>remover o estímulo crônico</strong>.</p>
+  </div>
+</section>
+
+<!-- ============ 18 ============ -->
+<section id="s18">
+  <h2><span class="sec-num">18 &mdash;</span> Crosstalk: AMPK × mTORC1 como caso-modelo</h2>
+
+  <p>Vias não são canos independentes. Elas conversam — e o par AMPK/mTORC1 é o exemplo mais importante da fisiologia do exercício. Ele será destrinchado nos materiais 1.1 e 1.2; aqui interessa a <em>lógica</em> do crosstalk.</p>
+
+  <p>AMPK e mTORC1 são descritas como <strong>sensores de nutrientes recíprocos e reguladores antagônicos</strong>: a AMPK governa o catabolismo, o mTORC1 governa o anabolismo, e juntos controlam sobrevivência, crescimento e proliferação celular.</p>
+
+  <h3>Como eles conversam</h3>
+
+  <ul class="key">
+    <li><strong>AMPK inibe mTORC1</strong> por eventos de fosforilação diretos e indiretos, quando há estresse energético ou nutricional.</li>
+    <li><strong>mTORC1 inibe AMPK de volta</strong> — por fosforilação direta da subunidade α (sítio α2-S345). O antagonismo é <em>mútuo</em>, não unidirecional.</li>
+    <li><strong>Ambos regulam a mesma proteína</strong>: a ULK1, iniciadora mestre da autofagia. AMPK a ativa, mTORC1 a inibe. É um substrato compartilhado sendo puxado dos dois lados.</li>
+    <li><strong>O ponto de encontro físico é o lisossomo</strong>, onde ambas as quinases são recrutadas e ativadas.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">Onde a simplificação quebra — e por que isso importa</span>
+    <p>O modelo "AMPK desliga mTORC1, logo aeróbio atrapalha hipertrofia" é elegante em cultura de célula e frágil <em>in vivo</em>. Há observação de que o treino resistido aumentou simultaneamente PGC-1α e a atividade de mTOR em músculo de homens jovens saudáveis — sugerindo que o efeito de interferência previsto pela bioquímica não se manifesta necessariamente no organismo intacto. Há inclusive evidência de que o mTOR promove indiretamente sinalização de PGC-1α.</p>
+    <p>Guarde isto como <strong>princípio geral da série</strong>: antagonismo molecular demonstrado <em>in vitro</em> não é sinônimo de conflito de treinamento <em>in vivo</em>. Concentração local, duração, compartimentalização e tempo de recuperação mudam o desfecho.</p>
+  </div>
+</section>
+
+<!-- ============ 19 ============ -->
+<section id="s19">
+  <h2><span class="sec-num">19 &mdash;</span> Como ler um paper de sinalização</h2>
+
+  <p>Esta seção existe porque a série inteira vai citar esse tipo de estudo, e a maior parte dos erros de interpretação nasce aqui.</p>
+
+  <h3>As ferramentas e o que cada uma prova</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Método</th><th>O que mede</th><th>O que NÃO prova</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Western blot fosfo-específico</strong></td><td>Quanto de uma proteína está fosforilada em um sítio, num instante</td><td>Que houve efeito funcional. Fosforilação é meio, não fim.</td></tr>
+        <tr><td><strong>Knockout genético</strong></td><td>Que a proteína é <em>necessária</em> para o fenômeno</td><td>Que ela é suficiente. E há risco de compensação ao longo do desenvolvimento.</td></tr>
+        <tr><td><strong>Superexpressão</strong></td><td>Que a proteína é <em>suficiente</em> para causar o fenômeno</td><td>Que ela faz isso em concentração fisiológica.</td></tr>
+        <tr><td><strong>Inibidor farmacológico</strong></td><td>Efeito da perda aguda de função</td><td>Especificidade — quase todo inibidor tem alvos secundários.</td></tr>
+        <tr><td><strong>Fosfoproteômica</strong></td><td>Milhares de sítios de uma vez, sem hipótese prévia</td><td>Causalidade. Gera hipótese, não conclusão.</td></tr>
+        <tr><td><strong>Cultura de células</strong></td><td>Mecanismo isolado, com controle total</td><td>Relevância <em>in vivo</em>: falta circulação, outros tecidos e concentrações reais.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Cinco perguntas para fazer a qualquer estudo de sinalização</h3>
+
+  <ol class="clean">
+    <li><strong>Qual espécie?</strong> Camundongo, humano, ou célula em placa? O material 4.1 mostrou como essa diferença isolada inverte conclusões.</li>
+    <li><strong>Qual dose?</strong> Farmacológica ou fisiológica? Superexpressão não é fisiologia.</li>
+    <li><strong>Qual tempo de coleta?</strong> Uma via com pico em 30 min e retorno em 2 h parece "sem efeito" se você mediu em 4 h.</li>
+    <li><strong>Mediu função ou só fosforilação?</strong> O desfecho ideal é força, massa, captação de glicose, gasto energético — não uma banda em gel.</li>
+    <li><strong>Qual tecido?</strong> Um efeito hepático não é um efeito muscular, por mais que o gráfico seja bonito.</li>
+  </ol>
+</section>
+
+<!-- ============ 20 ============ -->
+<section id="s20">
+  <h2><span class="sec-num">20 &mdash;</span> Erros comuns de interpretação</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Erro</th><th>Correção</th></tr></thead>
+      <tbody>
+        <tr><td>"Hormônio X é bom / é ruim"</td><td>Nenhum hormônio tem valência. Tem <strong>contexto, tecido, dose e duração</strong>.</td></tr>
+        <tr><td>"Aumentou a fosforilação, logo funcionou"</td><td>Fosforilação é intermediária. Só o desfecho funcional prova efeito.</td></tr>
+        <tr><td>"Hormônio alto = mais efeito"</td><td>Frequentemente é o contrário: alto crônico sinaliza <strong>resistência</strong>.</td></tr>
+        <tr><td>"A via A inibe a via B, logo não posso fazer A e B"</td><td>Antagonismo molecular ≠ conflito de treinamento. Ver seção 18.</td></tr>
+        <tr><td>"Funcionou no rato, deve funcionar no humano"</td><td>Especialmente falso em sinalização metabólica. Trate como hipótese.</td></tr>
+        <tr><td>"O suplemento ativa a AMPK, logo emagrece"</td><td>Ativar uma quinase em placa de cultura, com concentração inalcançável por via oral, não é um efeito fisiológico.</td></tr>
+        <tr><td>"É o mesmo receptor, logo o mesmo efeito"</td><td>Co-receptores, isoformas e coreguladores mudam completamente o desfecho.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 21 ============ -->
+<section id="s21">
+  <h2><span class="sec-num">21 &mdash;</span> Síntese: o mapa da gramática</h2>
+
+  <div class="stepwrap">
+    <div class="step"><b>Lipossolúvel ou hidrossolúvel?</b><span>Define se o receptor está dentro ou fora, e se a resposta é lenta e duradoura ou rápida e reversível.</span></div>
+    <div class="step"><b>Qual das cinco classes de receptor?</b><span>RTK (insulina, FGF21) · GPCR (adrenalina, glucagon, GLP-1) · nuclear (esteroides, PPARs) · citocina/JAK-STAT (leptina, GH) · canal iônico (acetilcolina, rianodina).</span></div>
+    <div class="step"><b>Qual cascata e quais segundos mensageiros?</b><span>PI3K-AKT, RAS-MAPK-ERK, AMPc-PKA, Ca²⁺-CaMK, JAK-STAT.</span></div>
+    <div class="step"><b>Qual fator de transcrição no final?</b><span>É ele que diz o que a célula vai virar: PGC-1α, FOXO, ATF4, ChREBP, PPARs, NF-κB, SMAD.</span></div>
+    <div class="step"><b>Como é desligado — e o que acontece se não desligar?</b><span>Fosfatases, GTPase, GRK/β-arrestina, internalização, SOCS. Aqui mora a resistência hormonal.</span></div>
+    <div class="step"><b>Onde? Por quanto tempo? Em que dose?</b><span>As três perguntas que transformam "esse hormônio faz X" em uma afirmação verdadeira.</span></div>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">O que você deve levar deste material</span>
+    <p>Sinalização não é uma lista de siglas a decorar. É um sistema com pouquíssimas peças e regras estáveis. <strong>Ligante propõe, receptor decide, cascata amplifica, fator de transcrição consolida, freio encerra.</strong> Todos os 29 materiais seguintes da série são variações sobre essas cinco frases.</p>
+  </div>
+</section>
+
+<!-- ============ 22 ============ -->
+<section id="s22">
+  <h2><span class="sec-num">22 &mdash;</span> Honestidade científica e referências</h2>
+
+  <div class="callout warn">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Este é um material de <strong>base conceitual</strong>. A maior parte do conteúdo é bioquímica consolidada, estável há décadas e presente em qualquer livro-texto de biologia celular — não é literatura de fronteira e não deve ser tratada como tal.</p>
+    <p>Onde o material toca fronteira ativa, isso está sinalizado: os mecanismos de agonismo enviesado em GPCR e o crosstalk AMPK/mTORC1 são áreas em movimento, com achados recentes que ainda estão reorganizando o modelo. A observação da seção 18 — de que o antagonismo AMPK/mTORC1 pode não se traduzir em interferência <em>in vivo</em> — é apresentada como evidência que <strong>complica</strong> o modelo simples, não como conclusão fechada.</p>
+    <p>As simplificações deliberadas deste material (cascatas apresentadas como lineares, classes de receptor como categorias estanques) existem para fins didáticos. A realidade tem ramificações, exceções e redundâncias que serão introduzidas nos materiais específicos.</p>
+  </div>
+
+  <h4>Referências</h4>
+
+  <ol class="refs">
+    <li>Lemmon MA, Schlessinger J. <b>Cell signaling by receptor tyrosine kinases.</b> Cell. 2010;141(7):1117–1134.</li>
+    <li>Schlessinger J. <b>Receptor tyrosine kinases: legacy of the first two decades.</b> Cold Spring Harb Perspect Biol. 2014;6(3):a008912.</li>
+    <li><b>Recent advances in the structural biology of tyrosine kinases.</b> Curr Opin Struct Biol. 2023.</li>
+    <li>Smiles WJ, Ovens AJ, Kemp BE, Galic S, Petersen J, Oakhill JS. <b>New developments in AMPK and mTORC1 cross-talk.</b> Essays Biochem. 2024;68(3):321–336.</li>
+    <li>Ling NXY, et al. <b>mTORC1 directly inhibits AMPK to promote cell proliferation under nutrient stress.</b> Nat Metab. 2020;2:41–49.</li>
+    <li>Smith BK, et al. <b>AMPK at the interface of nutrient sensing, metabolic flux and energy homeostasis.</b> Nat Metab. 2026.</li>
+    <li>Hardie DG. <b>AMPK — sensing energy while talking to other signaling pathways.</b> Cell Metab. 2014;20(6):939–952.</li>
+    <li>Saxton RA, Sabatini DM. <b>mTOR signaling in growth, metabolism, and disease.</b> Cell. 2017;168(6):960–976.</li>
+    <li><b>GRK specificity and Gβγ dependency determines the potential of a GPCR for arrestin-biased agonism.</b> Commun Biol. 2024.</li>
+    <li><b>GPCR signaling via β-arrestin-dependent mechanisms.</b> (revisão sobre dessensibilização e agonismo enviesado)</li>
+    <li><b>Biased agonism: an emerging paradigm in GPCR drug discovery.</b> Bioorg Med Chem Lett. 2016.</li>
+    <li><b>Interference effect between aerobic and resistance training: mTOR, PGC-1α e adaptações integradas.</b> Front Med. 2025;12:1635219.</li>
+    <li><b>Ribosome biogenesis, mTORC1, c-Myc, AMPK e FOXO na regulação translacional do músculo esquelético.</b> (revisão)</li>
+  </ol>
+
+  <div class="callout">
+    <span class="tag">Próximo material da série</span>
+    <p><strong>Fisiologia Metabólica 1.1 — AMPK: o sensor de energia baixa.</strong> Com a gramática deste material, a AMPK deixa de ser "a quinase que atrapalha a hipertrofia" e passa a ser o que ela é: um sensor de razão AMP/ATP com dezenas de substratos, complexo alostérico com três subunidades, e o principal tradutor entre contração muscular e adaptação mitocondrial.</p>
+  </div>
+</section>
+
+  <footer>MG COACH · Biblioteca de Estudo</footer>
+
+</div>
+
+<script>
+(function(){
+  var KEY='mgcoach-theme';
+  var TKEY='mgcoach-toc-fm01';
+  var root=document.documentElement;
+
+  // ----- tema -----
+  try{
+    var saved=localStorage.getItem(KEY);
+    if(saved==='light'||saved==='dark'){root.setAttribute('data-theme',saved);}
+  }catch(e){}
+
+  var btn=document.getElementById('themeToggle');
+  if(btn){
+    btn.addEventListener('click',function(e){
+      e.preventDefault();
+      var next=root.getAttribute('data-theme')==='light'?'dark':'light';
+      root.setAttribute('data-theme',next);
+      try{localStorage.setItem(KEY,next);}catch(err){}
+    });
+  }
+
+  // ----- TOC colapsável -----
+  var toc=document.getElementById('toc');
+  var head=document.getElementById('tocHead');
+  try{
+    if(localStorage.getItem(TKEY)==='closed'){
+      toc.classList.add('closed');
+      head.setAttribute('aria-expanded','false');
+    }
+  }catch(e){}
+
+  if(head){
+    head.addEventListener('click',function(e){
+      e.preventDefault();
+      toc.classList.toggle('closed');
+      var closed=toc.classList.contains('closed');
+      head.setAttribute('aria-expanded',closed?'false':'true');
+      try{localStorage.setItem(TKEY,closed?'closed':'open');}catch(err){}
+    });
+  }
+})();
+</script>
+</body>
+</html>
