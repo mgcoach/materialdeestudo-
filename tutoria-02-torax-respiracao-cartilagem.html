@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutoria 02: Conexão Corpo-Respiração | MG COACH</title>
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Tutoria 02: Conexão Corpo-Respiração | MG COACH">
+    <meta property="og:description" content="Material completo da Tutoria 02: ossos e articulações da caixa torácica, músculos do tórax e do core, funcionamento do diafragma, mecânica respiratória e tecido cartilaginoso.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/tutoria-02-torax-respiracao-cartilagem.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tutoria 02: Conexão Corpo-Respiração | MG COACH">
+    <meta name="twitter:description" content="Anatomia, Fisiologia e Histologia integradas: da matriz cartilaginosa à mecânica da respiração.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<link rel="stylesheet" href="mgcoach.css">
+<style>
+/* figuras esquemáticas — fundo fixo escuro em ambos os temas */
+.fig{margin:22px 0;background:#0e0d0c;border:1px solid #241f1b;border-radius:12px;padding:14px}
+.fig svg{width:100%;height:auto;display:block}
+.figt{font-size:15.5px;font-weight:800;color:#fff;margin-bottom:12px}
+.fign{display:inline-block;font-size:11px;font-weight:800;color:#0a0a0a;background:#ff6b1a;padding:2px 8px;border-radius:99px;margin-right:9px;vertical-align:middle}
+.figcap{color:#8f8880;font-size:13px;margin-top:10px;padding:0 3px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
+  </div>
+  <div class="toc-bar">
+    <button class="toc-toggle" id="tocBtn" type="button" aria-expanded="false" aria-controls="tocNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="width:11px;height:11px;flex:none"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+      <span id="tocLbl">&Iacute;ndice</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <nav class="toc" id="tocNav">
+    <a href="#mapa">Mapa do caso</a>
+    <a href="#problema">O problema de engenharia</a>
+    <a href="#esterno">O esterno</a>
+    <a href="#costelas">As costelas</a>
+    <a href="#cartilagens">Cartilagens costais e vértebras</a>
+    <a href="#articulacoes">Articulações do tórax</a>
+    <a href="#movimentos">Movimentos da caixa</a>
+    <a href="#intercostais">Músculos intercostais</a>
+    <a href="#outros-torax">Outros músculos do tórax</a>
+    <a href="#diafragma-anat">Diafragma: anatomia</a>
+    <a href="#diafragma-mec">Diafragma: mecânica</a>
+    <a href="#diafragma-hiatos">Diafragma: hiatos</a>
+    <a href="#abdome">Parede abdominal</a>
+    <a href="#bainha">Bainha do reto e linha alba</a>
+    <a href="#core">O cilindro do core</a>
+    <a href="#acessorios">Músculos acessórios</a>
+    <a href="#ventilacao">Mecânica ventilatória</a>
+    <a href="#volumes">Volumes e capacidades</a>
+    <a href="#complacencia">Complacência e surfactante</a>
+    <a href="#controle">Controle nervoso</a>
+    <a href="#gato-vaca">Respiração e movimento</a>
+    <a href="#botox">Junção neuromuscular e botox</a>
+    <a href="#cartilagem-geral">Tecido cartilaginoso</a>
+    <a href="#tipos">Os três tipos de cartilagem</a>
+    <a href="#pericondrio">Pericôndrio e nutrição</a>
+    <a href="#condrogenese">Formação da cartilagem</a>
+    <a href="#crescimento">Crescimento da cartilagem</a>
+    <a href="#regeneracao">Regeneração e envelhecimento</a>
+    <a href="#integracao">Integração final</a>
+    <a href="#perguntas">Perguntas de tutoria</a>
+    <a href="#resumo">Resumo</a>
+    <a href="#refs">Referências</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Série Tutoria &middot; Graduação em Educação Física</div>
+  <div class="serie-bar">
+    <span class="atual">02 &middot; Conexão Corpo-Respiração</span>
+  </div>
+  <h1>Do <span class="em">tórax à cartilagem</span>, da matriz à respiração</h1>
+  <p class="lede">Material completo da <b>Tutoria 02</b> (Biomorfofuncional I, caso 03). Percorre os seis objetivos do caso — <b>ossos e articulações da caixa torácica</b>, <b>músculos do tórax e do core</b> com origens e inserções, <b>correlação com a respiração</b>, <b>funcionamento do diafragma</b> e o bloqueio neuromuscular, <b>tipos de cartilagem</b> e suas células, e <b>formação e regeneração</b> do tecido cartilaginoso — sempre ligando estrutura à função e à prática do movimento.</p>
+</div>
+
+<main>
+
+<section id="mapa">
+  <span class="sec-num">01 &mdash; MAPA DO CASO</span>
+  <h2>O que Rodrigo <span class="accent">precisa entender</span></h2>
+  <p class="sec-sub">Os seis objetivos traduzidos em uma linha de raciocínio única.</p>
+  <p>O caso parece pedir três coisas separadas — ossos, músculos e cartilagem. Mas há <strong>uma pergunta só</strong> por trás de tudo: <em>por que Rodrigo sentiu rigidez ao inspirar?</em></p>
+  <p>A resposta exige três camadas de explicação. A caixa torácica precisa ser <strong>rígida o bastante para proteger</strong> coração e pulmões, e <strong>móvel o bastante para ventilar</strong>. Ela resolve esse conflito com um esqueleto ósseo preso à coluna por articulações sinoviais e completado à frente por <strong>barras de cartilagem elástica</strong>. Os músculos aproveitam essa mobilidade — mas só se a posição da coluna permitir. E a cartilagem, que é o elemento que torna tudo isso possível, tem uma histologia particular que explica tanto sua elasticidade quanto sua incapacidade de se regenerar.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Objetivo</th><th>O que precisa dominar</th><th>Seções</th></tr></thead>
+    <tbody>
+      <tr><td><b>1</b></td><td>Ossos e articulações da caixa torácica</td><td>02 – 07</td></tr>
+      <tr><td><b>2</b></td><td>Músculos do tórax e do core, com origens, inserções e movimentos</td><td>08 – 16</td></tr>
+      <tr><td><b>3</b></td><td>Correlação com a respiração corporal</td><td>17 – 22</td></tr>
+      <tr><td><b>4</b></td><td>Funcionamento do diafragma e o bloqueio neuromuscular</td><td>10 – 12, 23</td></tr>
+      <tr><td><b>5</b></td><td>Tipos de cartilagem e características de suas células</td><td>24 – 26</td></tr>
+      <tr><td><b>6</b></td><td>Formação e regeneração da cartilagem</td><td>27 – 29</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout ok">
+    <span class="tag">Como estudar este material</span>
+    <p>Leia na ordem. Cada bloco prepara o seguinte: os ossos definem onde os músculos se prendem; as articulações definem quais movimentos são possíveis; os músculos convertem isso em variação de volume; a variação de volume é a respiração; e a cartilagem é o que permite que essa estrutura se deforme milhares de vezes por dia sem se romper. Se você entender a <strong>cadeia causal</strong>, não precisa decorar lista.</p>
+  </div>
+</section>
+
+<section id="problema">
+  <span class="sec-num">02 &mdash; O PROBLEMA DE ENGENHARIA</span>
+  <h2>Por que a caixa torácica é <span class="accent">como é</span></h2>
+  <p class="sec-sub">Antes de listar ossos, entenda a exigência que essa estrutura precisa atender.</p>
+  <p>A caixa torácica tem duas tarefas que se opõem diretamente:</p>
+  <div class="grid2">
+    <div class="mini"><h4>Proteger</h4><p>Aloja coração, pulmões, grandes vasos, traqueia e esôfago. Órgãos que não toleram deformação. Isso pede <strong>rigidez</strong>.</p></div>
+    <div class="mini"><h4>Ventilar</h4><p>Precisa aumentar e diminuir de volume cerca de <strong>20 mil vezes por dia</strong>, a vida inteira. Isso pede <strong>mobilidade</strong>.</p></div>
+  </div>
+  <p>Uma caixa totalmente óssea protegeria bem, mas não ventilaria. Uma caixa flexível ventilaria, mas não protegeria. A solução anatômica combina <strong>três estratégias</strong>:</p>
+  <div class="stepwrap"><div class="step"><h4>1. Osso onde precisa proteger</h4><p>Costelas, esterno e vértebras formam o anel rígido que blinda as vísceras.</p></div>
+  <div class="step"><h4>2. Articulações sinoviais atrás</h4><p>Cada costela se prende à coluna por <strong>duas articulações sinoviais</strong> — o que permite que ela gire. É aqui que está toda a mobilidade real.</p></div>
+  <div class="step"><h4>3. Cartilagem à frente</h4><p>As <strong>cartilagens costais</strong> substituem o osso na porção anterior. Elas se <em>torcem</em> quando a costela sobe e devolvem energia ao relaxar, funcionando como molas.</p></div>
+  </div><div class="callout">
+    <span class="tag">A consequência que responde o caso</span>
+    <p>Como a mobilidade da costela depende de <strong>articulações com a coluna</strong>, a posição da coluna determina quanta amplitude costal está disponível. Uma coluna torácica em flexão parte de uma posição em que as costelas já estão relativamente <em>deprimidas</em> — sobra menos movimento para elevar. Foi exatamente isso que Rodrigo sentiu. Não era falta de força nem "rigidez de tecido": era <strong>conflito entre a posição da coluna e a fase respiratória</strong>.</p>
+  </div>
+</section>
+
+<section id="esterno">
+  <span class="sec-num">03 &mdash; O ESTERNO</span>
+  <h2>Três peças e um <span class="accent">ponto de referência</span></h2>
+  <p class="sec-sub">O osso plano da frente do tórax, e por que o ângulo dele é o acidente mais útil do corpo.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Parte</th><th>Descrição</th><th>Articula com</th></tr></thead>
+    <tbody>
+      <tr><td><b>Manúbrio</b></td><td>Superior, mais largo e espesso. Tem a <b>incisura jugular</b> (supraesternal) no centro da borda superior e as <b>incisuras claviculares</b> nas laterais</td><td>Clavículas, 1ª costela e metade superior da 2ª</td></tr>
+      <tr><td><b>Corpo</b></td><td>Alongado e achatado. Suas bordas têm incisuras costais</td><td>Metade inferior da 2ª costela até a 7ª</td></tr>
+      <tr><td><b>Processo xifoide</b></td><td>Inferior, pequeno e variável. <b>Cartilagíneo no jovem</b>, ossifica e se funde ao corpo por volta dos 40 anos</td><td>Não recebe costelas; é origem do diafragma (parte esternal) e do reto do abdome</td></tr>
+    </tbody>
+  </table></div>
+  <div class="def">
+    <div class="word">Ângulo do esterno (ângulo de Louis)</div>
+    <p>É a saliência transversal palpável na junção entre manúbrio e corpo, correspondente à articulação <strong>manubrioesternal</strong> — que é uma <strong>sínfise</strong>, ou seja, articulação cartilagínea secundária com pequeno movimento.</p>
+    <p>Ele existe porque o manúbrio e o corpo não estão no mesmo plano: formam um ângulo aberto para trás. E esse pequeno movimento na sínfise contribui para a elevação do esterno na inspiração.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Por que o ângulo do esterno é a referência central do tórax</span>
+    <p>Um único acidente palpável entrega, ao mesmo tempo:</p>
+    <ul>
+      <li>A articulação da <strong>2ª costela</strong> — é a partir dela que se conta todas as outras na inspeção clínica, porque a 1ª fica escondida sob a clavícula.</li>
+      <li>O nível do disco entre <strong>T4 e T5</strong>.</li>
+      <li>O <strong>plano transverso do tórax</strong>, que separa mediastino superior de inferior.</li>
+      <li>A <strong>bifurcação da traqueia</strong>, o início e o fim do <strong>arco da aorta</strong> e a junção da veia ázigo com a cava superior.</li>
+    </ul>
+    <p>Você toca a superfície e sabe onde estão estruturas profundas. É o exemplo mais elegante de referência anatômica que existe.</p>
+  </div>
+</section>
+
+<section id="costelas">
+  <span class="sec-num">04 &mdash; AS COSTELAS</span>
+  <h2>Doze pares, três <span class="accent">classificações</span></h2>
+  <p class="sec-sub">Como se organizam e o que faz uma costela ser típica ou atípica.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Grupo</th><th>Números</th><th>Como se liga ao esterno</th></tr></thead>
+    <tbody>
+      <tr><td><b>Verdadeiras</b> (vertebroesternais)</td><td>1 a 7</td><td>Por <b>cartilagem própria</b>, diretamente ao esterno</td></tr>
+      <tr><td><b>Falsas</b> (vertebrocondrais)</td><td>8 a 10</td><td>Sua cartilagem se une à <b>cartilagem da costela acima</b>, formando o arco costal</td></tr>
+      <tr><td><b>Flutuantes</b> (vertebrais)</td><td>11 e 12</td><td><b>Não alcançam</b> o esterno; terminam livres na musculatura da parede</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="fig"><div class="figt"><span class="fign">FIG 01</span>Caixa torácica — vista anterior</div><svg class="t2f0" viewBox="0 0 880 620" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f0 .b{fill:#221d19;stroke:#6b6058;stroke-width:2.4}.t2f0 .cc{fill:rgba(255,107,26,.22);stroke:#ff6b1a;stroke-width:2.2}.t2f0 .v{fill:#2b2520;stroke:#6b6058;stroke-width:2}.t2f0 .l{stroke:#6f665e;stroke-width:1.1}.t2f0 .t{font:600 12.5px Inter,sans-serif;fill:#d0c9c2}.t2f0 .o{font:800 12.5px Inter,sans-serif;fill:#ff6b1a}.t2f0 .s{font:700 11px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}.t2f0 .n{font:700 11px Inter,sans-serif;fill:#8f8880}</style></defs>
+<text class="s" x="16" y="34">CAIXA TORÁCICA · VISTA ANTERIOR · ESQUEMÁTICA</text>
+
+<!-- esterno -->
+<path class="b" d="M416 84 L464 84 L468 132 L412 132 Z"/>
+<path class="b" d="M414 136 L466 136 L462 296 L418 296 Z"/>
+<path class="b" d="M424 300 L456 300 L446 336 L434 336 Z"/>
+<line x1="410" y1="134" x2="470" y2="134" stroke="#ff6b1a" stroke-width="3.4"/>
+
+<!-- coluna -->
+<rect class="v" x="424" y="72" width="32" height="0"/>
+
+<!-- costelas (esquerda da imagem = lado direito do corpo) -->
+<g>
+<path class="b" d="M410 100 C330 92 262 116 236 156 C222 178 236 196 258 190 C310 176 372 152 412 132" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M412 152 C318 142 236 172 206 220 C190 246 208 268 232 258 C296 232 372 192 414 168" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M414 190 C310 182 218 216 186 272 C170 300 190 322 216 310 C288 278 372 232 416 206" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M416 228 C306 222 208 260 176 320 C160 350 182 372 208 358 C284 322 374 272 418 244" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M418 266 C304 262 202 304 172 368 C156 400 180 420 206 404 C284 366 376 312 420 282" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M420 304 C304 302 200 348 172 414 C158 446 182 466 208 448 C288 408 378 352 422 320" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M422 342 C306 342 202 390 176 458 C164 490 188 508 214 490 C292 448 380 392 424 358" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M370 404 C284 418 208 464 186 522 C176 550 200 566 224 550 C292 508 340 470 378 428" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M340 444 C266 462 206 502 190 552 C182 578 204 592 226 578 C282 544 316 508 348 470" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M262 500 C222 520 200 546 196 574" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M240 540 C210 556 196 576 194 596" fill="none" stroke-width="7" stroke-linecap="round"/>
+</g>
+<!-- lado direito da imagem (espelhado) -->
+<g transform="translate(880,0) scale(-1,1)">
+<path class="b" d="M410 100 C330 92 262 116 236 156 C222 178 236 196 258 190 C310 176 372 152 412 132" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M412 152 C318 142 236 172 206 220 C190 246 208 268 232 258 C296 232 372 192 414 168" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M414 190 C310 182 218 216 186 272 C170 300 190 322 216 310 C288 278 372 232 416 206" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M416 228 C306 222 208 260 176 320 C160 350 182 372 208 358 C284 322 374 272 418 244" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M418 266 C304 262 202 304 172 368 C156 400 180 420 206 404 C284 366 376 312 420 282" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M420 304 C304 302 200 348 172 414 C158 446 182 466 208 448 C288 408 378 352 422 320" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M422 342 C306 342 202 390 176 458 C164 490 188 508 214 490 C292 448 380 392 424 358" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M370 404 C284 418 208 464 186 522 C176 550 200 566 224 550 C292 508 340 470 378 428" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M340 444 C266 462 206 502 190 552 C182 578 204 592 226 578 C282 544 316 508 348 470" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M262 500 C222 520 200 546 196 574" fill="none" stroke-width="7" stroke-linecap="round"/>
+<path class="b" d="M240 540 C210 556 196 576 194 596" fill="none" stroke-width="7" stroke-linecap="round"/>
+</g>
+
+<!-- cartilagens costais (destaque laranja) -->
+<g stroke="#ff6b1a" stroke-width="6" fill="none" stroke-linecap="round" opacity=".85">
+<path d="M412 132 L378 122"/><path d="M414 168 L376 160"/><path d="M416 206 L374 200"/>
+<path d="M418 244 L376 240"/><path d="M420 282 L378 280"/><path d="M422 320 L380 320"/>
+<path d="M424 358 L382 360"/>
+<path d="M378 428 C398 410 412 384 422 360"/>
+<path d="M348 470 C374 448 392 420 400 400"/>
+</g>
+<g stroke="#ff6b1a" stroke-width="6" fill="none" stroke-linecap="round" opacity=".85" transform="translate(880,0) scale(-1,1)">
+<path d="M412 132 L378 122"/><path d="M414 168 L376 160"/><path d="M416 206 L374 200"/>
+<path d="M418 244 L376 240"/><path d="M420 282 L378 280"/><path d="M422 320 L380 320"/>
+<path d="M424 358 L382 360"/>
+<path d="M378 428 C398 410 412 384 422 360"/>
+<path d="M348 470 C374 448 392 420 400 400"/>
+</g>
+
+<text class="n" x="196" y="146">1</text><text class="n" x="176" y="210">2</text><text class="n" x="158" y="264">3</text>
+<text class="n" x="148" y="314">4</text><text class="n" x="146" y="362">5</text><text class="n" x="146" y="410">6</text>
+<text class="n" x="150" y="456">7</text><text class="n" x="164" y="522">8</text><text class="n" x="172" y="562">9</text>
+<text class="n" x="204" y="592">10</text>
+
+<line class="l" x1="440" y1="100" x2="600" y2="76"/><text class="o" x="606" y="80">MANÚBRIO</text>
+<line class="l" x1="440" y1="134" x2="600" y2="120"/><text class="o" x="606" y="124">ÂNGULO DO ESTERNO</text>
+<text class="t" x="606" y="142">2ª costela · disco T4–T5</text>
+<line class="l" x1="440" y1="210" x2="600" y2="180"/><text class="o" x="606" y="184">CORPO DO ESTERNO</text>
+<line class="l" x1="440" y1="318" x2="600" y2="226"/><text class="o" x="606" y="230">PROCESSO XIFOIDE</text>
+<line class="l" x1="392" y1="240" x2="600" y2="290"/><text class="o" x="606" y="294">CARTILAGENS COSTAIS</text>
+<text class="t" x="606" y="312">cartilagem hialina</text>
+<line class="l" x1="368" y1="440" x2="600" y2="352"/><text class="o" x="606" y="356">ARCO COSTAL</text>
+<text class="t" x="606" y="374">cartilagens 7–10 fundidas</text>
+
+<line class="l" x1="240" y1="180" x2="120" y2="120"/><text class="o" x="16" y="112">VERDADEIRAS</text><text class="t" x="16" y="130">1 a 7 · cartilagem própria</text>
+<line class="l" x1="200" y1="500" x2="90" y2="470"/><text class="o" x="16" y="462">FALSAS</text><text class="t" x="16" y="480">8 a 10 · via arco costal</text>
+<line class="l" x1="200" y1="580" x2="90" y2="556"/><text class="o" x="16" y="548">FLUTUANTES</text><text class="t" x="16" y="566">11 e 12 · livres</text>
+</svg><p class="figcap">Verdadeiras (1–7) ligam-se ao esterno por cartilagem própria; falsas (8–10) pelo arco costal; flutuantes (11–12) terminam livres.</p></div><h3>A costela típica (3ª a 9ª)</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Acidente</th><th>Descrição</th><th>Função</th></tr></thead>
+    <tbody>
+      <tr><td><b>Cabeça</b></td><td><b>Duas</b> faces articulares separadas por uma crista</td><td>Articula com <b>duas vértebras</b> e com o disco entre elas</td></tr>
+      <tr><td><b>Colo</b></td><td>Segmento estreito entre cabeça e tubérculo</td><td>Recebe o ligamento costotransversário</td></tr>
+      <tr><td><b>Tubérculo</b></td><td>Tem parte <b>articular</b> (lisa) e parte não articular (rugosa)</td><td>A parte articular encaixa na fóvea costal do processo transverso</td></tr>
+      <tr><td><b>Ângulo</b></td><td>Ponto de maior curvatura, onde a costela muda de direção</td><td>Limite lateral dos músculos profundos do dorso</td></tr>
+      <tr><td><b>Corpo</b></td><td>Achatado, com o <b>sulco da costela</b> na borda inferior da face interna</td><td>Aloja e protege o feixe neurovascular</td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="figt"><span class="fign">FIG 02</span>Costela típica</div><svg class="t2f1" viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f1 .b{fill:#221d19;stroke:#6b6058;stroke-width:2.4}.t2f1 .h{fill:#0a0a0a;stroke:#ff6b1a;stroke-width:2.6}.t2f1 .l{stroke:#6f665e;stroke-width:1.1}.t2f1 .t{font:600 12.5px Inter,sans-serif;fill:#d0c9c2}.t2f1 .o{font:800 12.5px Inter,sans-serif;fill:#ff6b1a}.t2f1 .s{font:700 11px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}</style></defs>
+<text class="s" x="16" y="34">COSTELA TÍPICA (3ª À 9ª) · VISTA POSTERIOR · ESQUEMÁTICA</text>
+
+<!-- corpo da costela -->
+<path class="b" d="M700 132 C560 92 380 108 250 190 C160 246 128 322 150 372 C160 396 190 396 196 370 C214 300 262 240 344 200 C452 148 596 148 700 176 Z"/>
+<!-- cabeça -->
+<path class="b" d="M700 128 C742 122 776 138 778 156 C780 176 748 190 700 182 Z"/>
+<line x1="700" y1="130" x2="700" y2="180" stroke="#ff6b1a" stroke-width="3"/>
+<!-- tuberculo -->
+<ellipse class="b" cx="620" cy="150" rx="30" ry="20"/>
+<ellipse class="h" cx="628" cy="146" rx="13" ry="9"/>
+<!-- angulo -->
+<circle class="h" cx="446" cy="164" r="10"/>
+<!-- sulco da costela -->
+<path d="M250 216 C182 268 158 330 172 368" fill="none" stroke="#ff6b1a" stroke-width="4" stroke-dasharray="7 6"/>
+
+<line class="l" x1="740" y1="152" x2="740" y2="76"/><text class="o" x="676" y="70">CABEÇA</text>
+<text class="t" x="620" y="52">2 faces articulares + crista</text>
+<line class="l" x1="672" y1="156" x2="700" y2="252"/><text class="t" x="672" y="270">Colo</text>
+<line class="l" x1="628" y1="146" x2="600" y2="70"/><text class="o" x="516" y="60">TUBÉRCULO</text>
+<text class="t" x="470" y="42">articula com o proc. transverso</text>
+<line class="l" x1="446" y1="164" x2="446" y2="258"/><text class="o" x="404" y="276">ÂNGULO</text>
+<line class="l" x1="340" y1="212" x2="340" y2="300"/><text class="t" x="300" y="318">Corpo</text>
+<line class="l" x1="176" y1="330" x2="60" y2="290"/><text class="o" x="16" y="282">SULCO DA COSTELA</text>
+<text class="t" x="16" y="330">Feixe intercostal na borda</text>
+<text class="t" x="16" y="348">inferior, de cima para baixo:</text>
+<text class="o" x="16" y="368">VEIA · ARTÉRIA · NERVO</text>
+<text class="t" x="16" y="396">Por isso a punção torácica é</text>
+<text class="t" x="16" y="414">feita rente à borda SUPERIOR</text>
+<text class="t" x="16" y="432">da costela de baixo.</text>
+</svg><p class="figcap">Cabeça, colo, tubérculo, ângulo e corpo. O feixe VAN corre no sulco, na borda inferior.</p></div><div class="def">
+    <div class="word">Por que a cabeça tem DUAS faces articulares</div>
+    <p>Porque cada costela típica se apoia em <strong>duas vértebras ao mesmo tempo</strong>: a fóvea costal <em>inferior</em> da vértebra de cima e a fóvea costal <em>superior</em> da vértebra de mesmo número. A crista entre as duas faces se prende ao <em>disco intervertebral</em> por um ligamento intra-articular.</p>
+    <p>Isso não é detalhe decorativo: apoiar-se em duas vértebras significa que a costela <strong>trava parcialmente o movimento entre elas</strong>. É uma das razões pelas quais a coluna torácica tem flexo-extensão limitada.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">O sulco da costela e o feixe VAN</span>
+    <p>No sulco corre o feixe intercostal, na ordem, de cima para baixo: <strong>Veia, Artéria, Nervo (VAN)</strong>. Ele fica alojado na <strong>borda inferior</strong> da costela, protegido pela projeção óssea.</p>
+    <p><strong>Consequência prática direta:</strong> qualquer punção torácica deve ser feita rente à <strong>borda superior da costela de baixo</strong>, que é a região mais distante do feixe. Anatomia definindo procedimento.</p>
+  </div>
+
+  <h3>As costelas atípicas</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Costela</th><th>O que a torna atípica</th></tr></thead>
+    <tbody>
+      <tr><td><b>1ª</b></td><td>A mais <b>curta, larga e achatada</b>, com curvatura acentuada. Cabeça com <b>uma única</b> face articular (só T1). Apresenta o <b>tubérculo do escaleno anterior</b>, que separa o <b>sulco da veia subclávia</b> (à frente) do <b>sulco da artéria subclávia</b> (atrás)</td></tr>
+      <tr><td><b>2ª</b></td><td>Mais longa e fina que a 1ª; tem a <b>tuberosidade do serrátil anterior</b></td></tr>
+      <tr><td><b>10ª</b></td><td><b>Uma</b> face articular na cabeça</td></tr>
+      <tr><td><b>11ª e 12ª</b></td><td><b>Uma</b> face articular e <b>ausência de colo, tubérculo e ângulo</b>. São curtas e terminam livres</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout ok">
+    <span class="tag">A 1ª costela é a âncora do sistema</span>
+    <p>Ela é curta, muito curva, tem apenas <em>uma</em> articulação com a coluna e se liga ao manúbrio por uma <strong>sincondrose</strong> — articulação cartilagínea imóvel. Resultado: a 1ª costela é praticamente <strong>fixa</strong>.</p>
+    <p>Isso é funcional. Ela serve de <strong>ponto de apoio superior</strong> para que as demais costelas se movam em relação a ela, e de base de inserção estável para escalenos e músculos do pescoço. Um sistema móvel precisa de uma extremidade fixa — mesmo princípio dos infra-hióideos fixando o hioide.</p>
+  </div>
+</section>
+
+<section id="cartilagens">
+  <span class="sec-num">05 &mdash; CARTILAGENS COSTAIS E VÉRTEBRAS</span>
+  <h2>As <span class="accent">molas</span> e os pontos de apoio</h2>
+  <p class="sec-sub">O elemento que Rodrigo estranhou — e a vértebra que recebe a costela.</p>
+  <div class="def">
+    <div class="word">Cartilagem costal</div>
+    <p>São barras de <strong>cartilagem hialina</strong> que prolongam a extremidade anterior de cada costela em direção ao esterno. São elas a "estrutura transparente" que despertou a curiosidade de Rodrigo.</p>
+    <p><strong>Função mecânica:</strong> funcionam como <strong>molas de torção</strong>. Quando os músculos elevam a costela, a cartilagem se torce e <em>armazena energia elástica</em>. Ao cessar a contração, essa energia é devolvida e ajuda a trazer a costela de volta — parte do mecanismo da expiração passiva.</p>
+    <p><strong>Envelhecimento:</strong> sofrem <strong>calcificação</strong> progressiva. A matriz perde água e capacidade de deformação, o tórax enrijece e o trabalho respiratório aumenta. É um dos fatores da queda da capacidade vital com a idade.</p>
+  </div>
+  <div class="callout">
+    <span class="tag">Cartilagem costal × articulação costocondral — não confunda</span>
+    <p>A <strong>cartilagem costal</strong> é o <em>tecido</em>: a barra de cartilagem hialina. A <strong>articulação costocondral</strong> é a <em>junção</em> entre a extremidade óssea da costela e essa cartilagem — classificada como <strong>sincondrose</strong> (cartilagínea primária). Ali o periósteo é contínuo com o pericôndrio, a união é firmíssima e praticamente não há movimento.</p>
+    <p>Ou seja: a <em>elasticidade</em> não vem da articulação costocondral, e sim da <strong>deformação da própria barra de cartilagem</strong> ao longo de seu comprimento.</p>
+  </div>
+
+  <h3>As vértebras torácicas — o que importa aqui</h3>
+  <ul class="clean">
+    <li><b>Fóveas costais superior e inferior</b> nas bordas do corpo vertebral — recebem a cabeça da costela.</li>
+    <li><b>Fóvea costal no processo transverso</b> — recebe o tubérculo. Existe de <b>T1 a T10</b>; T11 e T12 não a têm, e por isso essas costelas não fazem articulação costotransversária.</li>
+    <li><b>Processo espinhoso longo e obliquamente inferior</b>, sobrepondo-se à vértebra seguinte como telhas.</li>
+    <li><b>Forame vertebral redondo</b> e relativamente pequeno.</li>
+  </ul>
+  <p>Repare no encaixe: a costela sobe da coluna, contorna a parede e termina em cartilagem no esterno. Ela é <strong>presa em três pontos</strong> — dois na coluna (sinoviais, móveis) e um à frente (cartilagíneo, elástico). Toda a mecânica respiratória decorre dessa arquitetura.</p>
+</section>
+
+<section id="articulacoes">
+  <span class="sec-num">06 &mdash; ARTICULAÇÕES DO TÓRAX</span>
+  <h2>Todas <span class="accent">classificadas</span> — e por quê</h2>
+  <p class="sec-sub">Objetivo 1 completo. Lembre dos três degraus: qual tecido une → que propriedade ele tem → que mobilidade resulta.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Articulação</th><th>Entre</th><th>Estrutural</th><th>Funcional</th><th>Movimento</th></tr></thead>
+    <tbody>
+      <tr><td><b>Cabeça da costela</b></td><td>Cabeça × fóveas de 2 vértebras + disco</td><td>Sinovial <b>plana</b></td><td>Diartrose</td><td>Rotação da costela em torno do eixo do colo</td></tr>
+      <tr><td><b>Costotransversária</b></td><td>Tubérculo × fóvea do processo transverso</td><td>Sinovial <b>plana</b></td><td>Diartrose</td><td>Deslizamento; só existe de <b>T1 a T10</b></td></tr>
+      <tr><td><b>Costocondral</b></td><td>Costela óssea × sua cartilagem</td><td>Cartilagínea <b>primária (sincondrose)</b></td><td>Sinartrose</td><td>Praticamente nenhum</td></tr>
+      <tr><td><b>Esternocostal da 1ª</b></td><td>1ª cartilagem × manúbrio</td><td>Cartilagínea <b>primária</b></td><td>Sinartrose</td><td>Nenhum — a 1ª costela é fixa</td></tr>
+      <tr><td><b>Esternocostais 2ª–7ª</b></td><td>Cartilagem × incisuras do esterno</td><td>Sinovial <b>plana</b></td><td>Diartrose</td><td>Pequeno deslizamento na respiração</td></tr>
+      <tr><td><b>Intercondrais</b></td><td>Cartilagens 6–7, 7–8, 8–9, 9–10</td><td>Sinovial plana</td><td>Diartrose</td><td>Formam o <b>arco costal</b></td></tr>
+      <tr><td><b>Manubrioesternal</b></td><td>Manúbrio × corpo</td><td>Cartilagínea <b>secundária (sínfise)</b></td><td>Anfiartrose</td><td>Pequeno movimento — o <b>ângulo do esterno</b></td></tr>
+      <tr><td><b>Xifoesternal</b></td><td>Corpo × processo xifoide</td><td>Sincondrose</td><td>Sinartrose</td><td>Ossifica por volta dos 40 anos</td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="figt"><span class="fign">FIG 03</span>Articulações costovertebrais</div><svg class="t2f3" viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f3 .v{fill:#221d19;stroke:#6b6058;stroke-width:2.4}.t2f3 .c{fill:#2e2822;stroke:#6b6058;stroke-width:2.4}.t2f3 .f{fill:#3a2f26;stroke:#ffb37a;stroke-width:2.4}.t2f3 .fo{fill:#0a0a0a;stroke:#ff6b1a;stroke-width:2.6}.t2f3 .l{stroke:#6f665e;stroke-width:1.1}.t2f3 .t{font:600 12.5px Inter,sans-serif;fill:#d0c9c2}.t2f3 .o{font:800 12.5px Inter,sans-serif;fill:#ff6b1a}.t2f3 .s{font:700 11px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}</style></defs>
+<text class="s" x="16" y="34">ARTICULAÇÕES COSTOVERTEBRAIS · VISTA SUPERIOR · ESQUEMÁTICA</text>
+
+<!-- vertebra toracica -->
+<path class="v" d="M356 90 C400 74 480 74 524 90 C550 104 552 148 532 162 L348 162 C328 148 330 104 356 90 Z"/>
+<path class="v" d="M346 164 L328 210 L362 224 L376 168 Z"/>
+<path class="v" d="M534 164 L552 210 L518 224 L504 168 Z"/>
+<path class="v" d="M330 212 L392 278 L412 262 L362 224 Z"/>
+<path class="v" d="M550 212 L488 278 L468 262 L518 224 Z"/>
+<path class="v" d="M392 276 L488 276 L466 340 L414 340 Z"/>
+<circle class="fo" cx="440" cy="200" r="30"/>
+<!-- processos transversos -->
+<path class="v" d="M328 202 L246 186 L242 220 L328 232 Z"/>
+<path class="v" d="M552 202 L634 186 L638 220 L552 232 Z"/>
+<ellipse class="f" cx="254" cy="206" rx="12" ry="11"/>
+<ellipse class="f" cx="626" cy="206" rx="12" ry="11"/>
+<!-- fovea costal no corpo -->
+<ellipse class="f" cx="344" cy="112" rx="11" ry="15"/>
+<ellipse class="f" cx="536" cy="112" rx="11" ry="15"/>
+
+<!-- costelas -->
+<path class="c" d="M330 108 C300 96 260 100 236 118 C214 134 218 158 240 160 C270 162 306 140 332 122 Z"/>
+<path d="M236 128 C180 146 130 194 106 254" fill="none" stroke="#6b6058" stroke-width="8" stroke-linecap="round"/>
+<path class="c" d="M550 108 C580 96 620 100 644 118 C666 134 662 158 640 160 C610 162 574 140 548 122 Z"/>
+<path d="M644 128 C700 146 750 194 774 254" fill="none" stroke="#6b6058" stroke-width="8" stroke-linecap="round"/>
+
+<line class="l" x1="344" y1="112" x2="240" y2="60"/><text class="o" x="86" y="54">ART. DA CABEÇA DA COSTELA</text>
+<text class="t" x="86" y="74">sinovial plana · cabeça × 2 vértebras + disco</text>
+<line class="l" x1="254" y1="206" x2="150" y2="300"/><text class="o" x="16" y="320">ART. COSTOTRANSVERSÁRIA</text>
+<text class="t" x="16" y="340">sinovial plana · tubérculo × proc. transverso</text>
+<text class="t" x="16" y="358">existe apenas de T1 a T10</text>
+<line class="l" x1="462" y1="210" x2="640" y2="418"/><text class="t" x="646" y="422">Forame vertebral</text>
+<line class="l" x1="440" y1="316" x2="440" y2="388"/><text class="t" x="376" y="406">Processo espinhoso</text>
+
+<text class="o" x="640" y="290">A LINHA ENTRE OS DOIS PONTOS</text>
+<text class="o" x="640" y="308">DE ARTICULAÇÃO É O EIXO</text>
+<text class="t" x="640" y="328">de rotação da costela — e é ele</text>
+<text class="t" x="640" y="346">que define braço de bomba</text>
+<text class="t" x="640" y="364">ou alça de balde.</text>
+</svg><p class="figcap">Dois pontos de articulação por costela. A linha entre eles é o eixo de rotação.</p></div><div class="callout ok">
+    <span class="tag">A lógica da distribuição</span>
+    <p>Repare no padrão: as articulações <strong>móveis (sinoviais)</strong> estão <strong>atrás</strong>, na conexão com a coluna, e as <strong>pouco móveis (cartilagíneas)</strong> estão <strong>à frente</strong>. Isso não é acaso.</p>
+    <p>Atrás, a costela precisa <em>girar</em> — e girar exige uma cavidade articular com superfícies que deslizem. À frente, a costela não precisa de articulação móvel, porque a mobilidade é obtida de outro jeito: pela <strong>deformação elástica da própria cartilagem</strong>. É mais econômico deformar um material elástico do que manter uma articulação sinovial, com cápsula, líquido e risco de instabilidade.</p>
+  </div>
+  <div class="def">
+    <div class="word">Por que a costocondral é sincondrose e não sínfise</div>
+    <p>Sincondrose (primária) tem <strong>cartilagem hialina</strong> unindo diretamente as peças. Sínfise (secundária) tem <strong>fibrocartilagem</strong> entre duas lâminas de hialina, e permite pequeno movimento.</p>
+    <p>Na costocondral, a cartilagem costal hialina é <em>contínua</em> com o osso, com periósteo e pericôndrio se fundindo. Não há fibrocartilagem interposta e não há movimento — logo, <strong>sincondrose</strong>.</p>
+    <p>Já a manubrioesternal tem fibrocartilagem e permite pequeno movimento — logo, <strong>sínfise</strong>. A diferença de material determina a diferença de mobilidade.</p>
+  </div>
+</section>
+
+<section id="movimentos">
+  <span class="sec-num">07 &mdash; MOVIMENTOS DA CAIXA</span>
+  <h2>Três diâmetros, três <span class="accent">mecanismos</span></h2>
+  <p class="sec-sub">A ponte entre o objetivo 1 e o objetivo 3.</p>
+  <p>Ventilar é <strong>aumentar o volume</strong> da cavidade torácica. Volume tem três dimensões, e cada uma é produzida por um mecanismo diferente:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Diâmetro</th><th>Responsável</th><th>Mecanismo</th></tr></thead>
+    <tbody>
+      <tr><td><b>Vertical</b></td><td><b>Diafragma</b></td><td>Descida do centro tendíneo</td></tr>
+      <tr><td><b>Ântero-posterior</b></td><td>Costelas <b>1 a 6</b> + esterno</td><td><b>Braço de bomba</b> (pump handle)</td></tr>
+      <tr><td><b>Transverso</b></td><td>Costelas <b>7 a 10</b></td><td><b>Alça de balde</b> (bucket handle)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="figt"><span class="fign">FIG 04</span>Braço de bomba × alça de balde</div><svg class="t2f2" viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f2 .b{fill:none;stroke:#6b6058;stroke-width:6;stroke-linecap:round}.t2f2 .b2{fill:none;stroke:#ff6b1a;stroke-width:6;stroke-linecap:round}.t2f2 .ax{stroke:#e0b341;stroke-width:2.6;stroke-dasharray:8 6}.t2f2 .t{font:600 12.5px Inter,sans-serif;fill:#d0c9c2}.t2f2 .o{font:800 13px Inter,sans-serif;fill:#ff6b1a}.t2f2 .h{font:800 14px Inter,sans-serif;fill:#fff}.t2f2 .s{font:700 11px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}.t2f2 .ar{fill:none;stroke:#ff6b1a;stroke-width:2.6}</style></defs>
+
+<text class="h" x="60" y="40">BRAÇO DE BOMBA · costelas 1–6</text>
+<text class="s" x="60" y="60">VISTA LATERAL · AUMENTA O DIÂMETRO ÂNTERO-POSTERIOR</text>
+<circle cx="100" cy="140" r="11" fill="#6b6058"/>
+<path class="b" d="M100 140 C180 176 260 194 330 190"/>
+<path class="b2" d="M100 140 C182 152 264 156 336 146"/>
+<line class="ax" x1="70" y1="120" x2="130" y2="160"/>
+<path class="ar" d="M336 178 C356 168 360 154 348 144"/>
+<path d="M348 138 l4 12 l-12 -2 Z" fill="#ff6b1a"/>
+<text class="t" x="96" y="238">Eixo quase FRONTAL</text>
+<text class="t" x="96" y="256">→ a costela sobe e leva o</text>
+<text class="t" x="96" y="274">esterno para FRENTE e para CIMA</text>
+<text class="o" x="96" y="304">Diâmetro ântero-posterior ↑</text>
+
+<text class="h" x="520" y="40">ALÇA DE BALDE · costelas 7–10</text>
+<text class="s" x="520" y="60">VISTA ANTERIOR · AUMENTA O DIÂMETRO TRANSVERSO</text>
+<circle cx="700" cy="130" r="11" fill="#6b6058"/>
+<path class="b" d="M700 130 C640 176 578 214 530 226"/>
+<path class="b2" d="M700 130 C644 158 584 182 528 186"/>
+<line class="ax" x1="672" y1="112" x2="730" y2="150"/>
+<path class="ar" d="M524 216 C506 204 504 192 516 182"/>
+<path d="M518 176 l-4 12 l12 -2 Z" fill="#ff6b1a"/>
+<text class="t" x="520" y="270">Eixo mais SAGITAL</text>
+<text class="t" x="520" y="288">→ a porção lateral sobe e</text>
+<text class="t" x="520" y="306">se AFASTA da linha média</text>
+<text class="o" x="520" y="336">Diâmetro transverso ↑</text>
+
+<line x1="440" y1="30" x2="440" y2="360" stroke="#241f1b" stroke-width="2"/>
+<text class="s" x="60" y="386">A ORIENTAÇÃO DO EIXO QUE PASSA PELAS DUAS ARTICULAÇÕES COSTOVERTEBRAIS DETERMINA A DIREÇÃO DO MOVIMENTO</text>
+<text class="o" x="60" y="410">O DIÂMETRO VERTICAL VEM DA DESCIDA DO DIAFRAGMA</text>
+</svg><p class="figcap">A orientação do eixo costovertebral define a direção do movimento resultante.</p></div><div class="def">
+    <div class="word">Por que as costelas superiores e inferiores se movem diferente</div>
+    <p>Cada costela típica tem <strong>dois pontos de articulação</strong> com a coluna: a cabeça (no corpo vertebral) e o tubérculo (no processo transverso). A linha imaginária que une esses dois pontos é o <strong>eixo de rotação</strong> da costela — ela só pode girar em torno dele.</p>
+    <p>Nas costelas <strong>superiores</strong>, esse eixo é quase <strong>frontal</strong> (transversal). Girar em torno de um eixo frontal faz a extremidade anterior subir <em>para frente e para cima</em> — e como ela está presa ao esterno, empurra o esterno junto. Resultado: <strong>braço de bomba</strong>, aumentando o diâmetro ântero-posterior.</p>
+    <p>Nas costelas <strong>inferiores</strong>, o eixo é mais <strong>sagital</strong> (ântero-posterior). Girar em torno de um eixo sagital faz a porção lateral — que é a mais baixa — subir e se <em>afastar da linha média</em>. Resultado: <strong>alça de balde</strong>, aumentando o diâmetro transverso.</p>
+    <p>É o mesmo raciocínio das facetas vertebrais: <strong>a orientação da superfície articular determina a direção do movimento possível</strong>.</p>
+  </div>
+  <ul class="clean">
+    <li><b>Costelas 11 e 12</b> fazem movimento em <b>pinça (caliper)</b> — deslocam-se lateral e posteriormente. Sem ligação anterior, não têm braço de bomba nem alça de balde.</li>
+    <li>Na <b>expiração tranquila</b> não há contração: as costelas voltam pelo recuo elástico das cartilagens costais e do pulmão.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">Ligando com o caso</span>
+    <p>Se a coluna torácica está fixa em flexão, os processos transversos mudam de posição e a articulação costotransversária parte de uma posição já deslocada. A costela ainda pode girar, mas com <strong>menos amplitude disponível</strong>. Some-se a isso a compressão abdominal que dificulta a descida do diafragma, e você tem os três diâmetros comprometidos simultaneamente. É a explicação mecânica da rigidez relatada.</p>
+  </div>
+</section>
+
+<section id="intercostais">
+  <span class="sec-num">08 &mdash; MÚSCULOS INTERCOSTAIS</span>
+  <h2>Três camadas com fibras <span class="accent">cruzadas</span></h2>
+  <p class="sec-sub">A mesma arquitetura que você vai reencontrar no abdome.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Músculo</th><th>Extensão</th><th>Direção das fibras</th><th>Ação</th></tr></thead>
+    <tbody>
+      <tr><td><b>Intercostal externo</b><br>(11 pares)</td><td>Do <b>tubérculo</b> até a <b>junção costocondral</b>; adiante vira membrana intercostal anterior</td><td>Oblíquas para <b>baixo e para frente</b> ("mãos no bolso")</td><td><b>Eleva</b> as costelas — <b>inspiração</b></td></tr>
+      <tr><td><b>Intercostal interno</b></td><td>Do <b>esterno</b> até o <b>ângulo</b> da costela; atrás vira membrana intercostal posterior</td><td><b>Perpendicular</b> às do externo — para cima e para frente</td><td>Porção <b>interóssea</b>: deprime (expiração forçada). Porção <b>intercondral</b>: eleva (inspiração)</td></tr>
+      <tr><td><b>Intercostal íntimo</b></td><td>Camada mais profunda, incompleta</td><td>Mesma direção do interno</td><td>Acompanha o interno</td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="figt"><span class="fign">FIG 05</span>Intercostais e o feixe VAN</div><svg class="t2f6" viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f6 .c{fill:#2e2822;stroke:#6b6058;stroke-width:2.4}.t2f6 .e{stroke:#ff6b1a;stroke-width:3.2;stroke-linecap:round}.t2f6 .i{stroke:#e0b341;stroke-width:3.2;stroke-linecap:round}.t2f6 .im{stroke:#63b681;stroke-width:3.2;stroke-linecap:round}.t2f6 .l{stroke:#6f665e;stroke-width:1.1}.t2f6 .t{font:600 12.5px Inter,sans-serif;fill:#d0c9c2}.t2f6 .o{font:800 12.5px Inter,sans-serif;fill:#ff6b1a}.t2f6 .s{font:700 11px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}</style></defs>
+<text class="s" x="16" y="34">MÚSCULOS INTERCOSTAIS E O FEIXE NEUROVASCULAR · ESQUEMÁTICA</text>
+
+<!-- costela superior -->
+<path class="c" d="M120 90 L620 90 L620 132 C620 148 604 156 588 152 L120 152 Z"/>
+<!-- costela inferior -->
+<path class="c" d="M120 268 L620 268 L620 310 L120 310 Z"/>
+
+<!-- intercostal externo (oblíquo p/ baixo e frente) -->
+<g class="e"><path d="M160 156 L206 264"/><path d="M200 156 L246 264"/><path d="M240 156 L286 264"/><path d="M280 156 L326 264"/></g>
+<!-- intercostal interno (perpendicular) -->
+<g class="i"><path d="M370 264 L416 156"/><path d="M410 264 L456 156"/><path d="M450 264 L496 156"/><path d="M490 264 L536 156"/></g>
+<!-- intimo -->
+<g class="im"><path d="M540 264 L578 176"/><path d="M576 264 L610 186"/></g>
+
+<!-- feixe VAN no sulco -->
+<circle cx="200" cy="142" r="7" fill="#5b86c9"/>
+<circle cx="230" cy="142" r="7" fill="#c94b4b"/>
+<circle cx="260" cy="142" r="7" fill="#e6e1db"/>
+<text class="t" x="190" y="126">V</text><text class="t" x="222" y="126">A</text><text class="t" x="252" y="126">N</text>
+
+<line class="l" x1="230" y1="210" x2="120" y2="200"/><text class="o" x="16" y="196">INTERCOSTAL EXTERNO</text>
+<text class="t" x="16" y="214">↓ e p/ frente · ELEVA (inspiração)</text>
+<line class="l" x1="450" y1="210" x2="660" y2="200"/><text class="o" x="666" y="196">INTERCOSTAL INTERNO</text>
+<text class="t" x="666" y="214">perpendicular · DEPRIME (expiração)</text>
+<line class="l" x1="580" y1="220" x2="660" y2="272"/><text class="o" x="666" y="268">INTERCOSTAL ÍNTIMO</text>
+<text class="t" x="666" y="286">mesma direção do interno</text>
+<line class="l" x1="230" y1="142" x2="120" y2="60"/><text class="o" x="16" y="54">FEIXE VAN</text>
+<text class="t" x="90" y="72">no sulco da costela</text>
+
+<text class="o" x="16" y="360">O FEIXE CORRE ENTRE O INTERNO E O ÍNTIMO, PROTEGIDO NA BORDA INFERIOR</text>
+<text class="t" x="16" y="384">Por isso a punção torácica é feita rente à BORDA SUPERIOR da costela de baixo — longe do feixe.</text>
+</svg><p class="figcap">Três camadas com fibras cruzadas. O feixe corre entre o interno e o íntimo.</p></div><div class="def">
+    <div class="word">Onde corre o feixe neurovascular</div>
+    <p>Entre o intercostal <strong>interno</strong> e o <strong>íntimo</strong>, alojado no <strong>sulco da costela</strong>, na borda inferior. A ordem, de cima para baixo, é <strong>Veia, Artéria, Nervo (VAN)</strong>.</p>
+    <p>Essa posição — na borda inferior e entre duas camadas musculares — é uma solução de proteção: o feixe fica no ponto do espaço intercostal que menos se deforma durante a respiração.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Além de mover: os intercostais mantêm a rigidez do espaço</span>
+    <p>Uma função frequentemente esquecida. Durante a inspiração, a pressão dentro do tórax fica <strong>negativa</strong> em relação à atmosfera. Se os espaços entre as costelas fossem apenas membrana, eles seriam <strong>sugados para dentro</strong> a cada inspiração, e a expansão da caixa seria em grande parte desperdiçada.</p>
+    <p>Os intercostais mantêm o espaço tenso, impedindo abaulamento na expiração forçada e retração na inspiração. Eles transformam a caixa em uma estrutura <strong>funcionalmente contínua</strong>. É por isso que a retração intercostal visível é sinal clássico de esforço respiratório aumentado.</p>
+  </div>
+  <p class="src">Inervação: nervos intercostais — ramos anteriores dos nervos espinais T1 a T11 (o ramo anterior de T12 é o nervo subcostal).</p>
+</section>
+
+<section id="outros-torax">
+  <span class="sec-num">09 &mdash; OUTROS MÚSCULOS DO TÓRAX</span>
+  <h2>Os <span class="accent">coadjuvantes</span> da parede</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Músculo</th><th>Origem</th><th>Inserção</th><th>Ação</th></tr></thead>
+    <tbody>
+      <tr><td><b>Transverso do tórax</b></td><td>Face <b>posterior</b> do esterno e do processo xifoide</td><td>Cartilagens costais 2 a 6, por dentro</td><td><b>Deprime</b> as costelas — expiração fraca</td></tr>
+      <tr><td><b>Subcostais</b></td><td>Face interna das costelas inferiores, perto do ângulo</td><td>Costela 2 ou 3 níveis abaixo</td><td>Deprimem as costelas</td></tr>
+      <tr><td><b>Levantadores das costelas</b></td><td>Processos transversos de C7–T11</td><td>Costela subjacente, entre tubérculo e ângulo</td><td><b>Elevam</b> as costelas. Inervados por <b>ramos posteriores</b></td></tr>
+      <tr><td><b>Serrátil posterior superior</b></td><td>Ligamento nucal e espinhosos C7–T3</td><td>Costelas 2 a 5</td><td><b>Eleva</b> as costelas — inspiração</td></tr>
+      <tr><td><b>Serrátil posterior inferior</b></td><td>Processos espinhosos T11–L2</td><td>Costelas 9 a 12</td><td><b>Abaixa</b> as costelas; resiste à tração do diafragma</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">
+    <span class="tag">A função escondida do serrátil posterior inferior</span>
+    <p>Ele "abaixa as costelas", o que soa como ação expiratória. Mas a função mais relevante é outra: a parte <strong>costal do diafragma</strong> se origina justamente nas últimas costelas. Quando o diafragma contrai, ele tende a <strong>puxar essas costelas para cima e para dentro</strong>.</p>
+    <p>O serrátil posterior inferior — junto com o <strong>quadrado lombar</strong>, que fixa a 12ª costela — <strong>ancora</strong> essa base. Sem essa ancoragem, parte da força diafragmática se dissiparia elevando costelas em vez de descer o centro tendíneo.</p>
+    <p>Princípio geral que se repete em todo este material: <strong>para um músculo mover, outro precisa fixar</strong>.</p>
+  </div>
+</section>
+
+<section id="diafragma-anat">
+  <span class="sec-num">10 &mdash; DIAFRAGMA: ANATOMIA</span>
+  <h2>O músculo que se insere em <span class="accent">si mesmo</span></h2>
+  <p class="sec-sub">Objetivo 4, primeira parte.</p>
+  <p>O diafragma é uma <strong>lâmina musculotendínea em forma de cúpula dupla</strong> que separa completamente a cavidade torácica da abdominal. É o único músculo do corpo cuja inserção não é em osso: <strong>todas as suas fibras convergem para um tendão central</strong>.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Parte</th><th>Origem</th></tr></thead>
+    <tbody>
+      <tr><td><b>Esternal</b></td><td>Face posterior do <b>processo xifoide</b> — duas pequenas lâminas</td></tr>
+      <tr><td><b>Costal</b></td><td>Faces internas das <b>seis últimas cartilagens costais</b> e costelas adjacentes. É a porção mais extensa</td></tr>
+      <tr><td><b>Lombar</b></td><td><b>Pilar direito</b>: corpos e discos de <b>L1 a L3</b>. <b>Pilar esquerdo</b>: <b>L1 a L2</b>.<br><b>Ligamento arqueado medial</b>: sobre o músculo <b>psoas maior</b>.<br><b>Ligamento arqueado lateral</b>: sobre o <b>quadrado lombar</b>.<br><b>Ligamento arqueado mediano</b>: une os dois pilares, passando sobre a aorta</td></tr>
+    </tbody>
+  </table></div>
+  <div class="def">
+    <div class="word">Centro tendíneo</div>
+    <p>Aponeurose fibrosa central, em forma de trevo de três folhas, para onde convergem todas as fibras musculares. Não se prende a osso algum — está "suspenso" pelas próprias fibras que puxam de todas as direções.</p>
+    <p>Isso tem uma consequência mecânica importante: quando as fibras contraem, o que se move é o <strong>centro tendíneo</strong>, que desce. E quando ele encontra resistência das vísceras, passa a funcionar como <strong>ponto fixo</strong>, invertendo a ação — as fibras então elevam as costelas inferiores. Um mesmo músculo com dois efeitos, dependendo de qual extremidade está mais estabilizada.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Por que a inervação é cervical: C3, C4, C5</span>
+    <p>Parece absurdo que um músculo situado entre tórax e abdome seja inervado por raízes do <strong>pescoço</strong>. A explicação é embriológica.</p>
+    <p>O diafragma se desenvolve principalmente a partir do <strong>septo transverso</strong>, uma estrutura que surge na <strong>região cervical</strong> do embrião. Ali ele recebe sua inervação, dos segmentos C3 a C5, formando o <strong>nervo frênico</strong>. Depois, com o crescimento desproporcional da região cervical, o septo <strong>migra caudalmente</strong> até sua posição definitiva — <em>levando o nervo consigo</em>, que se alonga enormemente.</p>
+    <p>Mnemônico clássico: <strong>"C3, 4, 5 mantém o diafragma vivo"</strong>. E é por isso que lesões medulares acima de C3 comprometem a ventilação espontânea.</p>
+    <p>Vale registrar que a origem cervical também explica a <strong>dor referida no ombro</strong> em irritações diafragmáticas — o cérebro interpreta a aferência frênica como vindo do dermátomo C4.</p>
+  </div>
+</section>
+
+<section id="diafragma-mec">
+  <span class="sec-num">11 &mdash; DIAFRAGMA: MECÂNICA</span>
+  <h2>Como ele <span class="accent">enche o pulmão</span></h2>
+  <p class="sec-sub">Objetivo 4, segunda parte — e a ponte para o objetivo 3.</p>
+  <div class="stepwrap"><div class="step"><h4>Em repouso</h4><p>Duas cúpulas abauladas para cima, a <strong>direita ligeiramente mais alta</strong> por causa do fígado. O diafragma está alongado, com boa sobreposição de actina e miosina.</p></div>
+  <div class="step"><h4>Contração — primeira fase</h4><p>As fibras encurtam e o <strong>centro tendíneo desce</strong>, achatando as cúpulas. Aumenta o <strong>diâmetro vertical</strong> do tórax. Simultaneamente, as vísceras abdominais são comprimidas e a <strong>pressão intra-abdominal sobe</strong>.</p></div>
+  <div class="step"><h4>Contração — segunda fase</h4><p>Ao encontrar a resistência das vísceras, o centro tendíneo <strong>para de descer</strong> e vira ponto fixo. A contração continuada agora <strong>eleva e everte as costelas inferiores</strong>, contribuindo também para o diâmetro transverso.</p></div>
+  <div class="step"><h4>Efeito sobre a pressão</h4><p>O aumento de volume torácico <strong>reduz a pressão intratorácica</strong>. Isso faz duas coisas ao mesmo tempo: o ar entra pelas vias aéreas, e o <strong>sangue venoso é sugado</strong> das veias abdominais para o átrio direito.</p></div>
+  <div class="step"><h4>Relaxamento</h4><p>O diafragma retorna <strong>passivamente</strong> à posição de cúpula, empurrado pelo recuo elástico do pulmão e pela pressão abdominal. Não há contração na expiração tranquila.</p></div>
+  </div><div class="callout">
+    <span class="tag">O número que importa</span>
+    <p>O diafragma responde por cerca de <strong>70 a 75% do volume corrente</strong> em respiração tranquila. Ele não é "um dos" músculos da inspiração — ele é <em>o</em> músculo da inspiração, e os demais são complementares.</p>
+  </div>
+  <div class="def">
+    <div class="word">Bomba respiratória — a segunda função circulatória</div>
+    <p>Na inspiração a pressão intratorácica <strong>cai</strong> e a intra-abdominal <strong>sobe</strong>. Esse gradiente empurra o sangue das veias abdominais em direção ao tórax, <strong>aumentando o retorno venoso</strong>. Na expiração o efeito diminui.</p>
+    <p>O diafragma funciona, portanto, como uma bomba auxiliar da circulação. E o inverso também é verdadeiro: na <strong>manobra de Valsalva</strong>, a pressão intratorácica sobe muito e <strong>impede</strong> o retorno venoso, reduzindo o débito cardíaco — mesmo sistema, sinal invertido.</p>
+  </div>
+</section>
+
+<section id="diafragma-hiatos">
+  <span class="sec-num">12 &mdash; DIAFRAGMA: HIATOS</span>
+  <h2>Três passagens em <span class="accent">três níveis</span></h2>
+  <p class="sec-sub">Se o diafragma separa completamente as duas cavidades, algo precisa atravessá-lo.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Hiato</th><th>Nível</th><th>Onde exatamente</th><th>O que passa</th></tr></thead>
+    <tbody>
+      <tr><td><b>Veia cava</b></td><td><b>T8</b></td><td>No <b>centro tendíneo</b></td><td>Veia cava inferior e <b>nervo frênico direito</b></td></tr>
+      <tr><td><b>Esofágico</b></td><td><b>T10</b></td><td>Nas fibras do <b>pilar direito</b></td><td>Esôfago e <b>troncos vagais</b></td></tr>
+      <tr><td><b>Aórtico</b></td><td><b>T12</b></td><td><b>Atrás</b> do diafragma, sob o ligamento arqueado mediano</td><td>Aorta, <b>ducto torácico</b> e veia ázigo</td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="figt"><span class="fign">FIG 06</span>Diafragma — vista inferior</div><svg class="t2f4" viewBox="0 0 880 560" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f4 .m{fill:rgba(255,107,26,.24);stroke:#ff6b1a;stroke-width:2.4}.t2f4 .ct{fill:rgba(224,179,65,.24);stroke:#e0b341;stroke-width:2.4}.t2f4 .h{fill:#0a0a0a;stroke:#ff6b1a;stroke-width:3}.t2f4 .b{fill:#221d19;stroke:#6b6058;stroke-width:2}.t2f4 .l{stroke:#6f665e;stroke-width:1.1}.t2f4 .t{font:600 12.5px Inter,sans-serif;fill:#d0c9c2}.t2f4 .o{font:800 12.5px Inter,sans-serif;fill:#ff6b1a}.t2f4 .s{font:700 11px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}.t2f4 .lv{font:800 12px Inter,sans-serif;fill:#e0b341}</style></defs>
+<text class="s" x="16" y="34">DIAFRAGMA · VISTA INFERIOR · ESQUEMÁTICA</text>
+
+<!-- contorno costal -->
+<path class="b" d="M440 78 C300 78 190 150 168 264 C150 356 200 430 262 456 L618 456 C680 430 730 356 712 264 C690 150 580 78 440 78 Z"/>
+<!-- musculo -->
+<path class="m" d="M440 96 C312 96 212 162 192 266 C176 350 222 414 278 438 L602 438 C658 414 704 350 688 266 C668 162 568 96 440 96 Z"/>
+<!-- centro tendineo (trevo) -->
+<path class="ct" d="M440 150 C376 150 336 182 336 220 C300 224 286 254 300 278 C318 306 372 314 404 300 C424 316 456 316 476 300 C508 314 562 306 580 278 C594 254 580 224 544 220 C544 182 504 150 440 150 Z"/>
+
+<!-- hiatos -->
+<ellipse class="h" cx="500" cy="212" rx="24" ry="17"/>
+<ellipse class="h" cx="424" cy="286" rx="21" ry="26"/>
+<ellipse class="h" cx="440" cy="404" rx="19" ry="15"/>
+
+<!-- pilares -->
+<path class="m" d="M406 344 C396 384 396 424 402 452 L432 452 C428 416 428 380 434 346 Z"/>
+<path class="m" d="M474 344 C484 384 484 420 478 452 L450 452 C454 418 454 380 448 346 Z"/>
+
+<text class="lv" x="540" y="208">T8</text>
+<text class="lv" x="378" y="292">T10</text>
+<text class="lv" x="482" y="410">T12</text>
+
+<line class="l" x1="500" y1="212" x2="700" y2="140"/><text class="o" x="706" y="134">HIATO DA VEIA CAVA</text>
+<text class="t" x="706" y="152">T8 · no centro tendíneo</text>
+<text class="t" x="706" y="170">v. cava inferior + n. frênico D</text>
+<line class="l" x1="424" y1="286" x2="200" y2="196"/><text class="o" x="16" y="190">HIATO ESOFÁGICO</text>
+<text class="t" x="16" y="208">T10 · no pilar direito</text>
+<text class="t" x="16" y="226">esôfago + troncos vagais</text>
+<line class="l" x1="440" y1="404" x2="700" y2="376"/><text class="o" x="706" y="372">HIATO AÓRTICO</text>
+<text class="t" x="706" y="390">T12 · atrás do lig. arqueado</text>
+<text class="t" x="706" y="408">mediano · aorta + ducto</text>
+<text class="t" x="706" y="426">torácico + v. ázigo</text>
+<line class="l" x1="440" y1="230" x2="240" y2="300"/><text class="o" x="16" y="296">CENTRO TENDÍNEO</text>
+<text class="t" x="16" y="314">todas as fibras convergem aqui</text>
+<line class="l" x1="418" y1="430" x2="230" y2="470"/><text class="o" x="16" y="466">PILARES (parte lombar)</text>
+<text class="t" x="16" y="484">direito L1–L3 · esquerdo L1–L2</text>
+<line class="l" x1="250" y1="200" x2="180" y2="120"/><text class="t" x="16" y="112">Parte costal</text>
+<line class="l" x1="440" y1="100" x2="440" y2="62"/><text class="t" x="382" y="56">Parte esternal</text>
+
+<text class="o" x="16" y="530">INERVAÇÃO: NERVO FRÊNICO (C3, C4, C5)</text>
+<text class="s" x="330" y="530">— ORIGEM CERVICAL PORQUE O DIAFRAGMA MIGRA DO SEPTO TRANSVERSO</text>
+</svg><p class="figcap">Partes esternal, costal e lombar convergindo para o centro tendíneo. Hiatos em T8, T10 e T12.</p></div><div class="callout ok">
+    <span class="tag">A lógica dos três — não é arbitrário</span>
+    <p><strong>Veia cava (T8):</strong> está no <strong>centro tendíneo</strong>, que é fibroso e <em>não contrai</em>. Mais que isso: quando o centro tendíneo desce e é tracionado, a abertura tende a ser <strong>dilatada</strong>. Perfeito para uma veia de parede fina e baixa pressão, que precisa estar aberta justamente no momento em que o retorno venoso aumenta.</p>
+    <p><strong>Esôfago (T10):</strong> está <em>dentro</em> das fibras musculares do pilar direito. Aqui a contração <strong>comprime</strong> a passagem — o que é desejável: funciona como um esfíncter externo, ajudando a impedir o refluxo do conteúdo gástrico quando a pressão abdominal sobe.</p>
+    <p><strong>Aorta (T12):</strong> passa <strong>atrás</strong> do diafragma, numa passagem osteofibrosa entre os pilares e a coluna. Ela nunca é comprimida pela contração — o que é obrigatório: um vaso de altíssima pressão que fosse estrangulado a cada inspiração seria catastrófico.</p>
+    <p>Três estruturas, três exigências mecânicas diferentes, três soluções anatômicas distintas. <strong>A posição de cada hiato é a resposta ao que passa por ele.</strong></p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Mnemônico de nível</span>
+    <p>Conte as vogais: <b>vena Cava</b> = 8 letras... melhor usar o clássico: <b>"I ate (8) ten (10) eggs at twelve (12)"</b> — <b>V</b>eia cava em T8, <b>E</b>sôfago em T10, <b>A</b>orta em T12.</p>
+  </div>
+</section>
+
+<section id="abdome">
+  <span class="sec-num">13 &mdash; PAREDE ABDOMINAL</span>
+  <h2>Quatro músculos, quatro <span class="accent">direções de fibra</span></h2>
+  <p class="sec-sub">Objetivo 2, segunda parte.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Músculo</th><th>Origem</th><th>Inserção</th><th>Direção das fibras</th><th>Ação</th></tr></thead>
+    <tbody>
+      <tr><td><b>Reto do abdome</b></td><td>Crista púbica e sínfise púbica</td><td>Processo xifoide e cartilagens costais <b>5 a 7</b></td><td><b>Vertical</b></td><td><b>Flexão</b> do tronco; eleva a pelve com o tórax fixo; aumenta a pressão intra-abdominal</td></tr>
+      <tr><td><b>Oblíquo externo</b></td><td>Faces externas das costelas <b>5 a 12</b></td><td>Crista ilíaca, linha alba e ligamento inguinal</td><td>Para <b>baixo e para frente</b></td><td>Flexão, inclinação lateral, rotação <b>CONTRAlateral</b></td></tr>
+      <tr><td><b>Oblíquo interno</b></td><td>Fáscia toracolombar, crista ilíaca e ligamento inguinal</td><td>Costelas <b>10 a 12</b>, linha alba e crista púbica</td><td>Para <b>cima e para frente</b></td><td>Flexão, inclinação lateral, rotação <b>IPSIlateral</b></td></tr>
+      <tr><td><b>Transverso do abdome</b></td><td>Cartilagens costais <b>7 a 12</b>, fáscia toracolombar, crista ilíaca, ligamento inguinal</td><td>Linha alba, crista púbica</td><td><b>Horizontal</b></td><td>Não gera movimento relevante: <b>comprime as vísceras</b> e aumenta a pressão intra-abdominal</td></tr>
+      <tr><td><b>Quadrado lombar</b></td><td>Crista ilíaca e ligamento iliolombar</td><td><b>12ª costela</b> e processos transversos L1–L4</td><td>Vertical, posterior</td><td>Inclinação lateral; <b>fixa a 12ª costela</b> na inspiração</td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="figt"><span class="fign">FIG 07</span>Parede abdominal e bainha do reto</div><svg class="t2f5" viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f5 .e{fill:rgba(255,107,26,.26);stroke:#ff6b1a;stroke-width:2.2}.t2f5 .i{fill:rgba(224,179,65,.24);stroke:#e0b341;stroke-width:2.2}.t2f5 .tr{fill:rgba(120,190,140,.24);stroke:#63b681;stroke-width:2.2}.t2f5 .r{fill:rgba(180,150,220,.22);stroke:#a98fd0;stroke-width:2.2}.t2f5 .b{fill:#181513;stroke:#4a423b;stroke-width:2}.t2f5 .l{stroke:#6f665e;stroke-width:1.1}.t2f5 .t{font:600 12.5px Inter,sans-serif;fill:#d0c9c2}.t2f5 .o{font:800 12.5px Inter,sans-serif;fill:#ff6b1a}.t2f5 .h{font:800 13.5px Inter,sans-serif;fill:#fff}.t2f5 .s{font:700 11px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}</style></defs>
+
+<text class="h" x="30" y="34">CAMADAS DA PAREDE ANTEROLATERAL</text>
+<path class="b" d="M60 60 L360 60 L360 400 L60 400 Z"/>
+<path class="e" d="M78 82 L204 82 L204 176 L78 176 Z"/>
+<path d="M84 88 L198 168 M96 88 L198 156 M108 88 L198 144 M120 88 L198 132 M132 88 L198 120 M84 100 L186 168 M84 112 L174 168 M84 124 L162 168 M84 136 L150 168" stroke="#ff6b1a" stroke-width="1.6" opacity=".7"/>
+<text class="o" x="214" y="112">OBLÍQUO EXTERNO</text><text class="t" x="214" y="130">fibras p/ baixo e p/ frente</text><text class="t" x="214" y="148">rotação CONTRAlateral</text>
+<path class="i" d="M78 196 L204 196 L204 290 L78 290 Z"/>
+<path d="M84 284 L198 204 M96 284 L198 216 M108 284 L198 228 M120 284 L198 240 M132 284 L198 252 M84 272 L186 204 M84 260 L174 204 M84 248 L162 204 M84 236 L150 204" stroke="#e0b341" stroke-width="1.6" opacity=".7"/>
+<text class="o" x="214" y="226">OBLÍQUO INTERNO</text><text class="t" x="214" y="244">fibras p/ cima e p/ frente</text><text class="t" x="214" y="262">rotação IPSIlateral</text>
+<path class="tr" d="M78 310 L204 310 L204 380 L78 380 Z"/>
+<path d="M78 322 L204 322 M78 334 L204 334 M78 346 L204 346 M78 358 L204 358 M78 370 L204 370" stroke="#63b681" stroke-width="1.6" opacity=".7"/>
+<text class="o" x="214" y="336">TRANSVERSO DO ABDOME</text><text class="t" x="214" y="354">fibras HORIZONTAIS</text><text class="t" x="214" y="372">comprime · pressão intra-abdominal</text>
+
+<text class="h" x="470" y="34">CORTE TRANSVERSAL · BAINHA DO RETO</text>
+<path class="b" d="M450 60 L850 60 L850 400 L450 400 Z"/>
+<text class="s" x="470" y="86">ACIMA DA LINHA ARQUEADA</text>
+<path class="r" d="M596 108 L660 108 L660 154 L596 154 Z"/>
+<path class="r" d="M676 108 L740 108 L740 154 L676 154 Z"/>
+<path d="M540 104 L796 104" stroke="#ff6b1a" stroke-width="4"/>
+<path d="M540 158 L796 158" stroke="#63b681" stroke-width="4"/>
+<line x1="668" y1="98" x2="668" y2="164" stroke="#e6e1db" stroke-width="3"/>
+<text class="t" x="470" y="188">Lâmina ANTERIOR + lâmina POSTERIOR</text>
+<text class="s" x="470" y="240">ABAIXO DA LINHA ARQUEADA</text>
+<path class="r" d="M596 262 L660 262 L660 308 L596 308 Z"/>
+<path class="r" d="M676 262 L740 262 L740 308 L676 308 Z"/>
+<path d="M540 256 L796 256" stroke="#ff6b1a" stroke-width="4"/>
+<path d="M540 248 L796 248" stroke="#63b681" stroke-width="4"/>
+<line x1="668" y1="242" x2="668" y2="318" stroke="#e6e1db" stroke-width="3"/>
+<text class="t" x="470" y="342">Todas as aponeuroses passam À FRENTE.</text>
+<text class="t" x="470" y="360">Atrás resta só a fáscia transversal.</text>
+<text class="o" x="470" y="386">A linha branca central é a LINHA ALBA</text>
+
+<text class="s" x="30" y="440">AS TRÊS CAMADAS COM FIBRAS CRUZADAS SÃO A CONTINUAÇÃO DIRETA DOS INTERCOSTAIS — MESMA PAREDE, MESMA LÓGICA</text>
+<text class="s" x="30" y="460">FIBRAS EM DIREÇÕES OPOSTAS = RESISTÊNCIA MULTIDIRECIONAL, COMO AS LAMELAS DO ÂNULO FIBROSO</text>
+</svg><p class="figcap">As três camadas cruzadas são a continuação direta dos intercostais.</p></div><div class="callout ok">
+    <span class="tag">Tórax e abdome são a mesma parede</span>
+    <p>Compare as camadas:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Camada</th><th>Tórax</th><th>Abdome</th></tr></thead>
+      <tbody>
+        <tr><td>Superficial</td><td>Intercostal externo</td><td>Oblíquo externo</td></tr>
+        <tr><td>Média</td><td>Intercostal interno</td><td>Oblíquo interno</td></tr>
+        <tr><td>Profunda</td><td>Intercostal íntimo</td><td>Transverso do abdome</td></tr>
+      </tbody>
+    </table></div>
+    <p>Não é analogia: é <strong>continuidade embriológica</strong>. A musculatura abdominal é o prolongamento da intercostal na região onde não há costelas. Por isso a direção das fibras é a mesma, e por isso o <strong>feixe neurovascular ocupa o mesmo plano</strong> nos dois — entre a camada média e a profunda.</p>
+  </div>
+  <div class="def">
+    <div class="word">Por que fibras cruzadas</div>
+    <p>Uma única camada de fibras resiste bem à tração <em>apenas na sua direção</em>. Três camadas com fibras em direções diferentes resistem em <strong>múltiplas direções</strong> e, sobretudo, resistem à <strong>torção</strong>.</p>
+    <p>É exatamente o mesmo princípio das lamelas alternadas do <strong>ânulo fibroso</strong> do disco intervertebral, e das camadas cruzadas de um compensado de madeira. Sempre que a natureza precisa de resistência multidirecional com pouco material, ela usa camadas cruzadas.</p>
+  </div>
+</section>
+
+<section id="bainha">
+  <span class="sec-num">14 &mdash; BAINHA DO RETO E LINHA ALBA</span>
+  <h2>O que acontece com as <span class="accent">aponeuroses</span></h2>
+  <p class="sec-sub">Onde as três camadas se encontram na frente.</p>
+  <p>Os três músculos laterais terminam à frente não em tendão, mas em <strong>aponeuroses</strong> — lâminas largas e achatadas. Essas aponeuroses envolvem o reto do abdome, formando a <em class="term">bainha do reto</em>, e se entrelaçam na linha média com as do lado oposto, formando a <em class="term">linha alba</em>.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th></th><th>Acima da linha arqueada</th><th>Abaixo da linha arqueada</th></tr></thead>
+    <tbody>
+      <tr><td>Oblíquo externo</td><td>Passa <b>à frente</b></td><td>Passa <b>à frente</b></td></tr>
+      <tr><td>Oblíquo interno</td><td><b>Divide-se</b>: uma lâmina à frente, outra atrás</td><td>Passa <b>à frente</b> (não se divide)</td></tr>
+      <tr><td>Transverso</td><td>Passa <b>atrás</b></td><td>Passa <b>à frente</b></td></tr>
+      <tr><td>Resultado</td><td>Lâmina <b>anterior</b> + lâmina <b>posterior</b></td><td>Só lâmina <b>anterior</b>; atrás resta a <b>fáscia transversal</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout warn">
+    <span class="tag">Consequência da linha arqueada</span>
+    <p>A linha arqueada fica aproximadamente no ponto médio entre o umbigo e o púbis. Abaixo dela, a parede posterior da bainha se reduz à fina fáscia transversal. É uma <strong>zona de menor resistência</strong> — relevante para a compreensão de hérnias e para entender que a pressão intra-abdominal não se distribui de forma uniforme pela parede.</p>
+  </div>
+  <div class="def">
+    <div class="word">Linha alba</div>
+    <p>Faixa fibrosa avascular na linha média, do processo xifoide à sínfise púbica, formada pelo entrelaçamento das aponeuroses dos dois lados. É por ela que a força de um oblíquo é transmitida ao oblíquo <strong>contralateral</strong> — o que permite que a parede funcione como uma unidade única e não como dois lados independentes.</p>
+  </div>
+</section>
+
+<section id="core">
+  <span class="sec-num">15 &mdash; O CILINDRO DO CORE</span>
+  <h2>Estabilizar e respirar com o <span class="accent">mesmo músculo</span></h2>
+  <p class="sec-sub">O ponto de encontro entre o objetivo 2 e o objetivo 3.</p>
+  <div class="def">
+    <div class="word">O cilindro</div>
+    <p><strong>Teto:</strong> diafragma. <strong>Paredes laterais e anterior:</strong> transverso do abdome. <strong>Parede posterior:</strong> fáscia toracolombar e multífidos. <strong>Piso:</strong> musculatura do assoalho pélvico.</p>
+    <p>As quatro estruturas ativam de forma <strong>coordenada e simultânea</strong>, comprimindo o conteúdo abdominal.</p>
+  </div>
+  <p>Como o conteúdo abdominal é essencialmente <strong>incompressível</strong> (água e vísceras), comprimi-lo eleva a <strong>pressão intra-abdominal</strong>. E o conteúdo pressurizado enrijece a parede — exatamente como uma <strong>lata de refrigerante fechada</strong>, cuja parede finíssima suporta carga apenas porque o conteúdo está sob pressão. Abra a lata e ela amassa com dois dedos.</p>
+  <div class="stepwrap"><div class="step"><h4>Ativação antecipatória (feedforward)</h4><p>Antes de você levantar o braço, o <strong>transverso do abdome</strong>, o <strong>diafragma</strong> e os <strong>multífidos</strong> já ativaram — em milissegundos, <em>antes</em> do deltoide. O sistema nervoso prevê a perturbação e enrijece o tronco preventivamente.</p></div>
+  <div class="step"><h4>Redução da carga na coluna</h4><p>A pressão intra-abdominal cria uma força que ajuda a "descomprimir" a coluna lombar, reduzindo a força que o eretor da espinha precisa gerar — e, com ela, a compressão sobre os discos.</p></div>
+  <div class="step"><h4>Manobra de Valsalva</h4><p>Expiração forçada contra a <strong>glote fechada</strong>. Eleva ao máximo a pressão intra-abdominal e a rigidez do tronco. É por isso que ocorre espontaneamente em esforços máximos. Custo: <strong>reduz o retorno venoso</strong> e o débito cardíaco durante o esforço.</p></div>
+  </div><div class="callout warn">
+    <span class="tag">O conflito funcional — e a honestidade científica</span>
+    <p>O diafragma tem <strong>duas funções que competem</strong>. Em demanda ventilatória muito alta, sua contribuição estabilizadora diminui. Em demanda de estabilização muito alta e sustentada, a ventilação é sacrificada — daí a apneia espontânea em cargas máximas.</p>
+    <p>Tudo isso é fisiologia bem estabelecida. O que <strong>não</strong> está estabelecido é a conclusão popular que se construiu a partir disso: de que "instabilidade do core" seria causa universal de dor lombar e que treino específico de estabilização seria superior. Revisões mostram que exercício de estabilização <strong>não é superior ao exercício geral</strong> para dor lombar crônica no médio prazo. Entenda o mecanismo — não transforme mecanismo em dogma de prescrição.</p>
+  </div>
+</section>
+
+<section id="acessorios">
+  <span class="sec-num">16 &mdash; MÚSCULOS ACESSÓRIOS</span>
+  <h2>Quem entra quando a <span class="accent">demanda sobe</span></h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Fase</th><th>Tranquila</th><th>Forçada — quem se soma</th></tr></thead>
+    <tbody>
+      <tr><td><b>Inspiração</b></td><td>Diafragma + intercostais externos</td><td><b>Escalenos</b> (elevam 1ª e 2ª costelas), <b>ECOM</b> (eleva esterno e clavícula), peitorais maior e menor, serrátil anterior, serrátil posterior superior, levantadores das costelas</td></tr>
+      <tr><td><b>Expiração</b></td><td><b>PASSIVA</b> — apenas recuo elástico</td><td><b>Abdominais</b> (reto, oblíquos, transverso), intercostais internos (porção interóssea), transverso do tórax, serrátil posterior inferior</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout ok">
+    <span class="tag">Como os abdominais expiram sem tocar o pulmão</span>
+    <p>Eles não agem sobre o pulmão diretamente. Ao contrair, <strong>comprimem as vísceras</strong>, que empurram o <strong>diafragma para cima</strong>, reduzindo o diâmetro vertical do tórax. É uma ação <em>indireta</em>, mediada pelo conteúdo abdominal.</p>
+    <p>Isso explica também por que os abdominais atuam <strong>excentricamente</strong> durante a inspiração: eles controlam o deslocamento visceral, mantendo um apoio para o diafragma em vez de deixar as vísceras simplesmente serem empurradas para frente.</p>
+  </div>
+  <div class="def">
+    <div class="word">Escalenos: acessórios ou não?</div>
+    <p>Classicamente são acessórios. Mas há evidência de que atuam <strong>mesmo em respiração tranquila</strong>, com uma função sutil: <strong>estabilizar</strong> as duas primeiras costelas, impedindo que sejam puxadas <em>para baixo</em> pela queda da pressão intratorácica. Mais um caso de músculo que fixa para que outro possa mover.</p>
+  </div>
+  <p class="src">Nota clínica: uso visível e sustentado de musculatura acessória <em>em repouso</em> é sinal de esforço respiratório aumentado — avaliação é competência médica.</p>
+</section>
+
+<section id="ventilacao">
+  <span class="sec-num">17 &mdash; MECÂNICA VENTILATÓRIA</span>
+  <h2>O pulmão <span class="accent">não puxa ar</span></h2>
+  <p class="sec-sub">Objetivo 3. Toda a respiração se explica por um princípio físico.</p>
+  <div class="def">
+    <div class="word">Lei de Boyle</div>
+    <p>A pressão de um gás é <strong>inversamente proporcional</strong> ao seu volume, à temperatura constante. Aumentar o volume de um compartimento fechado <strong>reduz</strong> sua pressão; reduzir o volume <strong>aumenta</strong> a pressão.</p>
+  </div>
+  <div class="stepwrap"><div class="step"><h4>Inspiração</h4><p>Diafragma e intercostais externos <strong>aumentam o volume</strong> torácico. As pleuras mantêm o pulmão aderido à parede, então o pulmão acompanha. O volume alveolar aumenta, a <strong>pressão alveolar cai</strong> abaixo da atmosférica (cerca de &minus;1 cmH₂O) e o ar <strong>flui para dentro</strong>.</p></div>
+  <div class="step"><h4>Expiração tranquila</h4><p>Os músculos relaxam. O <strong>recuo elástico</strong> do pulmão e da parede reduz o volume, a pressão alveolar sobe acima da atmosférica (cerca de +1 cmH₂O) e o ar <strong>sai</strong>. Sem contração.</p></div>
+  </div><div class="callout ok">
+    <span class="tag">A ideia mais importante desta seção</span>
+    <p>O pulmão é um saco passivo — ele não tem músculo próprio e <strong>não puxa ar</strong>. Ele é <em>enchido pela atmosfera</em>, que empurra o ar para dentro sempre que criamos uma pressão menor lá dentro. Respirar é, literalmente, <strong>criar um gradiente de pressão</strong>.</p>
+  </div>
+  <h3>As pressões que importam</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Pressão</th><th>O que é</th><th>Valor típico</th></tr></thead>
+    <tbody>
+      <tr><td><b>Alveolar</b></td><td>Dentro dos alvéolos</td><td>0 no repouso; &minus;1 na inspiração; +1 na expiração</td></tr>
+      <tr><td><b>Intrapleural</b></td><td>No espaço pleural</td><td><b>Sempre negativa</b>: ~&minus;5 cmH₂O no fim da expiração, ~&minus;8 na inspiração</td></tr>
+      <tr><td><b>Transpulmonar</b></td><td>Alveolar <b>menos</b> intrapleural</td><td>É ela que <b>mantém o alvéolo aberto</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="def">
+    <div class="word">Por que a pressão intrapleural é negativa</div>
+    <p>Duas forças <strong>opostas</strong> atuam sobre o espaço pleural. O <strong>pulmão</strong> tende a colapsar, por seu recuo elástico e pela tensão superficial alveolar. A <strong>parede torácica</strong> tende a se expandir, por sua própria elasticidade.</p>
+    <p>Como o espaço pleural é <strong>fechado</strong> e contém apenas uma fina lâmina de líquido, essas trações opostas "esticam" o espaço e geram pressão <strong>subatmosférica</strong>. É essa pressão negativa que mantém o pulmão <strong>colado</strong> à parede, fazendo com que ele acompanhe cada movimento da caixa.</p>
+    <p><strong>Se ela se perde</strong> — havendo comunicação do espaço pleural com o exterior ou com a via aérea —, a pressão se iguala à atmosférica, a pressão transpulmonar cai e o pulmão <strong>colapsa</strong>. É a demonstração direta de que o acoplamento pulmão–parede é <em>puramente físico</em>, e não anatômico.</p>
+  </div>
+</section>
+
+<section id="volumes">
+  <span class="sec-num">18 &mdash; VOLUMES E CAPACIDADES</span>
+  <h2>Quanto ar <span class="accent">realmente</span> se move</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Medida</th><th>Definição</th><th>Valor médio</th></tr></thead>
+    <tbody>
+      <tr><td><b>Volume corrente (VC)</b></td><td>Ar mobilizado numa respiração tranquila</td><td>~500 mL</td></tr>
+      <tr><td><b>Volume de reserva inspiratório</b></td><td>Ar adicional inspirado com esforço máximo</td><td>~3.000 mL</td></tr>
+      <tr><td><b>Volume de reserva expiratório</b></td><td>Ar adicional expirado com esforço máximo</td><td>~1.100 mL</td></tr>
+      <tr><td><b>Volume residual (VR)</b></td><td>Ar que <b>permanece</b> após expiração máxima</td><td>~1.200 mL</td></tr>
+      <tr><td><b>Capacidade inspiratória</b></td><td>VC + VRI</td><td>~3.500 mL</td></tr>
+      <tr><td><b>Capacidade residual funcional</b></td><td>VRE + VR — ar ao fim da expiração tranquila</td><td>~2.300 mL</td></tr>
+      <tr><td><b>Capacidade vital</b></td><td>VC + VRI + VRE</td><td>~4.600 mL</td></tr>
+      <tr><td><b>Capacidade pulmonar total</b></td><td>Capacidade vital + VR</td><td>~5.800 mL</td></tr>
+    </tbody>
+  </table></div>
+  <p class="src">Valores aproximados para adulto jovem do sexo masculino. Há grande variação com sexo, estatura, idade e condicionamento — use como ordem de grandeza.</p>
+  <ul class="clean">
+    <li><b>Toda capacidade é a soma de dois ou mais volumes.</b> Se você entender isso, deduz qualquer uma sem decorar.</li>
+    <li>O <b>volume residual</b> não pode ser medido por espirometria simples — ele nunca é expirado. Exige métodos como diluição de hélio ou pletismografia.</li>
+    <li>O volume residual existe porque as pequenas vias aéreas <b>se fecham</b> antes que o alvéolo colapse completamente. É uma proteção: reabrir um alvéolo totalmente colapsado exigiria pressão altíssima.</li>
+  </ul>
+  <div class="def">
+    <div class="word">Espaço morto — o dado que muda a prática</div>
+    <p><strong>Espaço morto anatômico:</strong> o volume das vias de <em>condução</em> (nariz, faringe, laringe, traqueia, brônquios, bronquíolos), onde <strong>não há troca gasosa</strong>. Cerca de <strong>150 mL</strong>.</p>
+    <p>De um volume corrente de 500 mL, apenas cerca de <strong>350 mL</strong> chegam efetivamente aos alvéolos. O que importa para a troca é a <strong>ventilação alveolar</strong>: <em>(volume corrente &minus; espaço morto) × frequência respiratória</em>.</p>
+    <p><strong>A consequência prática:</strong> respirar <em>rápido e superficial</em> é ineficiente.</p>
+    <ul class="clean">
+      <li>250 mL × 20 rpm = 5 L/min de ventilação-minuto, mas apenas <b>2 L/min</b> de ventilação alveolar.</li>
+      <li>500 mL × 10 rpm = os mesmos 5 L/min, mas <b>3,5 L/min</b> de ventilação alveolar.</li>
+    </ul>
+    <p>Mesma ventilação-minuto, <strong>75% mais troca efetiva</strong>. É esse o fundamento fisiológico da respiração <strong>lenta e profunda</strong> praticada na yoga — não é misticismo, é aritmética de espaço morto.</p>
+  </div>
+</section>
+
+<section id="complacencia">
+  <span class="sec-num">19 &mdash; COMPLACÊNCIA E SURFACTANTE</span>
+  <h2>Por que encher o pulmão <span class="accent">custa trabalho</span></h2>
+  <div class="def">
+    <div class="word">Complacência pulmonar</div>
+    <p>Variação de volume obtida por unidade de variação de pressão — ou seja, a <strong>facilidade</strong> com que o pulmão se distende. Alta complacência = pouco esforço produz grande expansão.</p>
+  </div>
+  <div class="grid2">
+    <div class="mini"><h4>1. Elasticidade do tecido</h4><p>Fibras elásticas e colágenas do interstício pulmonar. Responde por cerca de <strong>um terço</strong> do recuo elástico.</p></div>
+    <div class="mini"><h4>2. Tensão superficial alveolar</h4><p>A interface ar–líquido no alvéolo. Responde por cerca de <strong>dois terços</strong>. É o fator dominante.</p></div>
+  </div>
+  <div class="def">
+    <div class="word">Tensão superficial e a lei de Laplace</div>
+    <p>O alvéolo é revestido internamente por uma fina camada de líquido. As moléculas de água se atraem, criando uma força que tende a <strong>reduzir a área</strong> da superfície — ou seja, a <strong>colapsar</strong> o alvéolo.</p>
+    <p>Pela <strong>lei de Laplace</strong>, a pressão de colapso é <em>inversamente proporcional ao raio</em>. Alvéolos <strong>menores</strong> teriam pressão de colapso <strong>maior</strong> — e esvaziariam dentro dos maiores, como duas bolhas de sabão conectadas.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Surfactante — a solução elegante</span>
+    <p>Produzido pelos <strong>pneumócitos tipo II</strong>, é um complexo de fosfolipídios que se interpõe entre as moléculas de água, <strong>reduzindo drasticamente a tensão superficial</strong>.</p>
+    <p>Mas o detalhe genial é outro: como a quantidade de surfactante por unidade de área é <strong>maior</strong> quando o alvéolo está menor (as moléculas ficam mais concentradas), seu efeito é <strong>proporcionalmente maior nos alvéolos pequenos</strong>. Isso <em>inverte</em> o problema de Laplace e <strong>estabiliza</strong> alvéolos de tamanhos diferentes lado a lado.</p>
+    <p>Sem surfactante, o trabalho respiratório seria muitas vezes maior e os alvéolos menores colapsariam progressivamente.</p>
+  </div>
+  <h3>Trabalho respiratório</h3>
+  <p>É a energia gasta pelos músculos para vencer as resistências. Em repouso consome apenas <strong>3 a 5%</strong> do gasto energético total. Tem três componentes: <strong>elástico</strong> (vencer complacência), <strong>de resistência tecidual</strong> (viscosidade dos tecidos) e <strong>de resistência das vias aéreas</strong> (atrito do ar).</p>
+  <p><strong>O que o aumenta:</strong> queda da complacência, aumento da resistência das vias aéreas, <strong>rigidez da caixa torácica</strong> — incluindo a calcificação das cartilagens costais com a idade — e fraqueza da musculatura respiratória.</p>
+  <div class="callout">
+    <span class="tag">Onde isso encontra o caso de Rodrigo</span>
+    <p>A mobilidade da caixa torácica é um <strong>componente direto do trabalho respiratório</strong>. Quanto menos amplitude disponível nas articulações costovertebrais, mais esforço para o mesmo volume. Trabalhar mobilidade torácica e coordenação respiratória tende a <strong>reduzir o custo</strong> da ventilação — e essa é a justificativa fisiológica do que o instrutor de yoga estava propondo.</p>
+  </div>
+</section>
+
+<section id="controle">
+  <span class="sec-num">20 &mdash; CONTROLE NERVOSO</span>
+  <h2>Quem <span class="accent">comanda</span> a respiração</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Nível</th><th>Estrutura</th><th>Função</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="2"><b>Bulbo</b></td><td>Grupo respiratório <b>dorsal</b></td><td>Gera o ritmo básico da <b>inspiração</b></td></tr>
+      <tr><td>Grupo respiratório <b>ventral</b></td><td>Recrutado na respiração forçada, incluindo a <b>expiração ativa</b></td></tr>
+      <tr><td><b>Ponte</b></td><td>Centros pontinos</td><td>Modulam a transição inspiração/expiração — suavizam o ciclo</td></tr>
+      <tr><td><b>Via motora</b></td><td>C3–C5 (frênico) e T1–T11 (intercostais)</td><td>Levam o comando aos músculos</td></tr>
+      <tr><td><b>Quimiorreceptores centrais</b></td><td>No bulbo</td><td>Sensíveis a <b>H⁺</b> no líquido cefalorraquidiano, decorrente do <b>CO₂</b></td></tr>
+      <tr><td><b>Quimiorreceptores periféricos</b></td><td>Corpos carotídeos e aórticos</td><td>Sensíveis principalmente à queda acentuada de <b>O₂</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout warn">
+    <span class="tag">O ponto contraintuitivo</span>
+    <p>O principal regulador da respiração em repouso é o <strong>CO₂</strong>, e não o oxigênio. Uma pequena elevação de CO₂ aumenta imediatamente a ventilação; o estímulo hipóxico só se torna dominante em hipoxemia importante.</p>
+    <p>Isso explica por que hiperventilar antes de prender a respiração é <strong>perigoso</strong>: você "lava" o CO₂, elimina o estímulo que faria voltar a respirar, mas <em>não</em> aumenta significativamente a reserva de O₂. O resultado pode ser perda de consciência sem aviso prévio.</p>
+  </div>
+  <div class="def">
+    <div class="word">Controle voluntário — o que a yoga usa</div>
+    <p>O <strong>córtex</strong> pode sobrepor-se temporariamente ao ritmo automático do bulbo, através de vias corticoespinais diretas aos motoneurônios frênicos e intercostais. É isso que permite prender a respiração, alterar deliberadamente a profundidade e a frequência, falar e cantar.</p>
+    <p>Mas essa sobreposição é <strong>limitada no tempo</strong>: quando o CO₂ sobe o suficiente, o comando automático retoma. A respiração é o único parâmetro autonômico com controle voluntário tão direto — e é justamente por isso que ela serve de <em>porta de entrada</em> para modular o estado do sistema nervoso autônomo.</p>
+  </div>
+</section>
+
+<section id="gato-vaca">
+  <span class="sec-num">21 &mdash; RESPIRAÇÃO E MOVIMENTO</span>
+  <h2>O <span class="accent">gato-vaca</span> explicado</h2>
+  <p class="sec-sub">A resposta completa ao que aconteceu com Rodrigo.</p>
+  <div class="grid2">
+    <div class="mini"><h4>VACA — extensão → INSPIRA</h4><p>A coluna torácica estende, a pelve báscula anteriormente, o <strong>esterno se eleva</strong> e as costelas ficam livres para executar braço de bomba e alça de balde. A cavidade abdominal se alonga e as vísceras se deslocam anteriormente, oferecendo <strong>menos resistência</strong> à descida do diafragma. Todos os vetores favorecem o aumento de volume.</p></div>
+    <div class="mini"><h4>GATO — flexão → EXPIRA</h4><p>A coluna flexiona, a pelve báscula posteriormente, as <strong>costelas se aproximam do púbis</strong> e os abdominais encurtam, comprimindo as vísceras contra o diafragma e <strong>elevando-o</strong>. Todos os vetores favorecem a redução de volume.</p></div>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Por que Rodrigo sentiu rigidez — a resposta em três camadas</span>
+    <p><strong>1. Articular.</strong> Cada costela está presa à coluna por duas articulações sinoviais. Uma coluna em flexão coloca essas articulações numa posição em que resta <strong>menos amplitude disponível</strong> para elevar a costela.</p>
+    <p><strong>2. Muscular.</strong> Em flexão, os abdominais estão encurtados e comprimem as vísceras contra o diafragma. O diafragma precisa vencer <strong>mais resistência</strong> para descer.</p>
+    <p><strong>3. Elástica.</strong> As cartilagens costais já estão numa posição de menor pré-tensão para o movimento de elevação, e a caixa parte de uma configuração menos favorável.</p>
+    <p><strong>Conclusão:</strong> não era falta de força, nem "encurtamento" de tecido, nem problema respiratório. Era <strong>conflito mecânico entre a posição da coluna e a fase respiratória</strong>. A mobilidade da caixa torácica <em>depende</em> da posição da coluna — e essa é a mensagem central do caso.</p>
+  </div>
+  <div class="callout">
+    <span class="tag">Aplicação prática ao treino</span>
+    <p>O princípio geral é: a fase do movimento que exige <strong>maior estabilidade</strong> tende a coincidir com o momento de maior <strong>pressão intra-abdominal</strong> — daí a orientação clássica de "expirar no esforço" na maior parte dos padrões. Em cargas muito altas, a apneia (Valsalva) surge espontaneamente porque a estabilização passa a ter prioridade sobre a ventilação.</p>
+    <p>E o inverso vale para mobilidade: se você quer <strong>amplitude respiratória</strong>, precisa de uma posição de coluna que a permita. Prescrever "respiração diafragmática" numa postura que trava a caixa é pedir o impossível.</p>
+  </div>
+</section>
+
+<section id="botox">
+  <span class="sec-num">22 &mdash; JUNÇÃO NEUROMUSCULAR E TOXINA BOTULÍNICA</span>
+  <h2>O que acontece quando o sinal <span class="accent">não chega</span></h2>
+  <p class="sec-sub">Objetivo 4, terceira parte — o "botox" do enunciado.</p>
+  <h3>Como o comando normalmente chega ao músculo</h3>
+  <div class="stepwrap"><div class="step"><h4>1</h4><p>O potencial de ação percorre o motoneurônio e chega ao <strong>terminal axônico</strong>.</p></div>
+  <div class="step"><h4>2</h4><p>Abrem-se canais de <strong>Ca²⁺ voltagem-dependentes</strong>; o influxo de cálcio dispara a <strong>fusão das vesículas</strong> com a membrana pré-sináptica.</p></div>
+  <div class="step"><h4>3</h4><p>A <strong>acetilcolina</strong> é liberada na fenda e liga-se a receptores <strong>nicotínicos</strong> da placa motora — que são canais iônicos.</p></div>
+  <div class="step"><h4>4</h4><p>Entra Na⁺, gera-se o <strong>potencial de placa</strong>; atingido o limiar, dispara o <strong>potencial de ação no sarcolema</strong>.</p></div>
+  <div class="step"><h4>5</h4><p>O PA percorre os <strong>túbulos T</strong>, o receptor de di-hidropiridina aciona o de rianodina, o <strong>Ca²⁺ sai do retículo sarcoplasmático</strong>, liga-se à troponina C, a tropomiosina desliza e a contração ocorre.</p></div>
+  </div><div class="def">
+    <div class="word">Onde a toxina botulínica age</div>
+    <p>No <strong>terminal pré-sináptico</strong> — e não no músculo. Ela é internalizada e sua cadeia leve funciona como uma <strong>protease</strong> que cliva proteínas do complexo <strong>SNARE</strong> (a SNAP-25, no caso do tipo A).</p>
+    <p>As proteínas SNARE são as responsáveis por <strong>ancorar e fundir</strong> as vesículas sinápticas à membrana. Clivadas, a maquinaria de fusão deixa de funcionar.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">O resultado: paralisia flácida</span>
+    <p>Repare no que <em>continua</em> acontecendo normalmente: o potencial de ação chega ao terminal, e o Ca²⁺ entra. O que falha é apenas a <strong>fusão das vesículas</strong>.</p>
+    <p>Sem fusão → sem liberação de acetilcolina → sem potencial de placa → sem PA no sarcolema → sem liberação de Ca²⁺ pelo retículo → <strong>sem contração</strong>. A paralisia é <strong>flácida</strong> porque o músculo simplesmente não recebe comando algum.</p>
+    <p><strong>Por que o efeito é temporário:</strong> o terminal axônico responde formando <strong>brotamentos colaterais</strong> e, ao longo de semanas a meses, ressintetiza as proteínas SNARE, restabelecendo a transmissão.</p>
+  </div>
+  <div class="callout">
+    <span class="tag">Aplicado ao diafragma — por que isso importa no caso</span>
+    <p>Qualquer bloqueio dessa transmissão no diafragma — seja por toxina, seja por lesão do <strong>nervo frênico</strong>, seja por doença neuromuscular — abole a descida do centro tendíneo. As consequências são:</p>
+    <ul class="clean">
+      <li>Queda importante do <b>volume corrente</b>, por perda do diâmetro vertical.</li>
+      <li><b>Elevação da cúpula</b> em repouso, empurrada pela pressão abdominal, já que não há tônus.</li>
+      <li><b>Movimento paradoxal</b>: na inspiração, a queda da pressão intratorácica gerada pelos outros músculos <b>puxa o hemidiafragma paralisado para cima</b>, em vez de ele descer. Parte do ar apenas se desloca de um pulmão para o outro, sem ventilação efetiva.</li>
+      <li>Recrutamento marcado de <b>musculatura acessória</b> e piora importante em <b>decúbito dorsal</b>, quando as vísceras empurram ainda mais o diafragma para cima.</li>
+    </ul>
+    <p>É por isso que o diafragma é considerado estrutura crítica: sua paralisia é situação de <strong>risco respiratório</strong>. Diagnóstico e conduta são competência médica.</p>
+  </div>
+</section>
+
+<section id="cartilagem-geral">
+  <span class="sec-num">23 &mdash; TECIDO CARTILAGINOSO</span>
+  <h2>Matriz, células e a <span class="accent">ausência de vasos</span></h2>
+  <p class="sec-sub">Objetivo 5, primeira parte. Comece pela matriz — ela explica tudo o mais.</p>
+  <p>A cartilagem é um tecido conjuntivo <strong>especializado</strong>, composto por células (os condrócitos) imersas em uma matriz extracelular abundante e firme. Diferentemente de quase todos os tecidos do corpo, ela é <strong>avascular, alinfática e não inervada</strong>.</p>
+  <h3>A matriz</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Componente</th><th>O que é</th><th>Função</th></tr></thead>
+    <tbody>
+      <tr><td><b>Colágeno</b></td><td><b>Tipo II</b> na hialina e na elástica; <b>tipo I</b> na fibrocartilagem</td><td>Rede que resiste à <b>tração</b> e contém os proteoglicanos</td></tr>
+      <tr><td><b>Proteoglicanos</b></td><td>Principalmente a <b>agrecana</b>, com cadeias de <b>condroitim-4 e 6-sulfato</b> e <b>queratam-sulfato</b></td><td>Retêm água — base da resistência à <b>compressão</b></td></tr>
+      <tr><td><b>Ácido hialurônico</b></td><td>Eixo central ao qual as agrecanas se ligam</td><td>Forma agregados enormes, imobilizados na rede de colágeno</td></tr>
+      <tr><td><b>Glicoproteínas</b></td><td><b>Condronectina</b></td><td>Medeia a adesão dos condrócitos ao colágeno</td></tr>
+      <tr><td><b>Água</b></td><td><b>60 a 80%</b> do peso</td><td>O amortecedor propriamente dito</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout ok">
+    <span class="tag">Como a cartilagem resiste à compressão — o mecanismo real</span>
+    <p>Os glicosaminoglicanos sulfatados são fortemente <strong>aniônicos</strong> (carga negativa). Cargas negativas atraem cátions, e cátions atraem <strong>água</strong>. O resultado é uma matriz <strong>avidamente hidrofílica</strong>, saturada de água presa dentro de uma malha de colágeno.</p>
+    <p>Sob carga, essa água é <strong>lentamente deslocada</strong> através da malha — o que dissipa energia. Ao aliviar a carga, as cargas negativas a <strong>atraem de volta</strong>. É um <strong>amortecedor hidráulico reversível</strong>, e é o mesmo princípio do núcleo pulposo do disco intervertebral.</p>
+    <p>É também essa densidade de cargas negativas que torna a matriz <strong>basófila</strong> e metacromática à coloração.</p>
+  </div>
+  <h3>As células — objetivo 5, "características celulares"</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Célula</th><th>Onde</th><th>Característica</th></tr></thead>
+    <tbody>
+      <tr><td><b>Célula condrogênica</b></td><td>Camada interna do <b>pericôndrio</b></td><td>Fusiforme, indiferenciada. É a <b>reserva</b> do tecido</td></tr>
+      <tr><td><b>Condroblasto</b></td><td>Periferia, junto ao pericôndrio</td><td>Arredondado, citoplasma <b>basófilo</b>, retículo rugoso e Golgi bem desenvolvidos — célula <b>secretora ativa</b></td></tr>
+      <tr><td><b>Condrócito</b></td><td>Dentro de <b>lacunas</b>, no interior da matriz</td><td>Condroblasto <b>aprisionado</b> na matriz que produziu. Reduz a secreção e passa a <b>manter</b> a matriz</td></tr>
+    </tbody>
+  </table></div>
+  <div class="def">
+    <div class="word">Grupos isógenos</div>
+    <p>Conjuntos de <strong>2 a 8 condrócitos</strong> dentro de uma mesma lacuna ou de lacunas muito próximas, separados por finas traves de matriz. Resultam da <strong>mitose</strong> de um único condrócito, cujas células-filhas não conseguiram migrar através da matriz densa. <em>Isógeno</em> = "de mesma origem".</p>
+    <p>São a <strong>evidência histológica direta do crescimento intersticial</strong>. Ao redor deles a matriz é mais <strong>basófila</strong> (matriz <em>territorial</em>) — é a mais recentemente sintetizada, mais rica em proteoglicanos.</p>
+  </div>
+  <p class="src">Nota de leitura de lâmina: nos preparados, os condrócitos costumam aparecer retraídos, deixando um espaço aparente dentro da lacuna. É <b>artefato de fixação</b>, não estrutura real.</p>
+</section>
+
+<section id="tipos">
+  <span class="sec-num">24 &mdash; OS TRÊS TIPOS DE CARTILAGEM</span>
+  <h2>Mesma célula, <span class="accent">matrizes diferentes</span></h2>
+  <p class="sec-sub">Objetivo 5, segunda parte. O que muda é o que está <em>entre</em> as células.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th></th><th>Hialina</th><th>Elástica</th><th>Fibrocartilagem</th></tr></thead>
+    <tbody>
+      <tr><td><b>Colágeno</b></td><td><b>Tipo II</b>, fibrilas finas</td><td><b>Tipo II</b> + rede de <b>fibras elásticas</b></td><td><b>Tipo I</b> predominante, em feixes densos</td></tr>
+      <tr><td><b>Aspecto da matriz</b></td><td>Homogênea, vítrea, <b>basófila</b></td><td>Basófila, com rede elástica visível; <b>amarelada</b> ao fresco</td><td><b>Acidófila</b>, com feixes de colágeno bem visíveis</td></tr>
+      <tr><td><b>Condrócitos</b></td><td>Em lacunas, com <b>grupos isógenos</b> evidentes</td><td>Em lacunas, geralmente mais numerosos e maiores</td><td>Em <b>FILEIRAS</b> entre os feixes de colágeno</td></tr>
+      <tr><td><b>Pericôndrio</b></td><td><b>Presente</b> — exceto na cartilagem articular</td><td><b>Presente</b></td><td><b>AUSENTE</b> sempre</td></tr>
+      <tr><td><b>Propriedade dominante</b></td><td>Resistência à <b>compressão</b> + elasticidade</td><td><b>Flexibilidade</b> com retorno à forma</td><td>Resistência à <b>tração</b> e ao <b>cisalhamento</b></td></tr>
+      <tr><td><b>Onde está</b></td><td><b>CARTILAGENS COSTAIS</b>, superfícies articulares, traqueia e brônquios, disco epifisário, nariz, laringe</td><td>Pavilhão auricular, meato acústico externo, tuba auditiva, <b>epiglote</b></td><td><b>Disco intervertebral</b>, meniscos, sínfise púbica, disco da ATM, inserções tendíneas</td></tr>
+      <tr><td><b>Calcifica com a idade?</b></td><td><b>Sim</b>, com frequência</td><td>Pouco — a elastina protege</td><td>Variável</td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="figt"><span class="fign">FIG 08</span>Os três tipos de cartilagem</div><svg class="t2f7" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f7 .p{fill:#141210;stroke:#2e2822;stroke-width:2}.t2f7 .mx{fill:rgba(120,150,220,.16)}.t2f7 .mf{fill:rgba(224,179,65,.12)}.t2f7 .lac{fill:#2b2520;stroke:#8f8880;stroke-width:1.6}.t2f7 .cel{fill:#ff6b1a}.t2f7 .per{fill:rgba(255,107,26,.18);stroke:#ff6b1a;stroke-width:2}.t2f7 .h{font:800 13.5px Inter,sans-serif;fill:#fff}.t2f7 .o{font:800 11.5px Inter,sans-serif;fill:#ff6b1a}.t2f7 .t{font:600 12px Inter,sans-serif;fill:#c3bcb4}.t2f7 .s{font:700 10.5px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}</style></defs>
+<text class="s" x="16" y="30">OS TRÊS TIPOS DE CARTILAGEM · ESQUEMA HISTOLÓGICO</text>
+
+<!-- HIALINA -->
+<text class="h" x="30" y="66">HIALINA</text>
+<rect class="p" x="30" y="80" width="256" height="230"/>
+<rect class="mx" x="32" y="112" width="252" height="196"/>
+<rect class="per" x="32" y="82" width="252" height="30"/>
+<text class="o" x="98" y="102">PERICÔNDRIO</text>
+<g>
+<ellipse class="lac" cx="90" cy="150" rx="22" ry="16"/><circle class="cel" cx="90" cy="150" r="8"/>
+<ellipse class="lac" cx="180" cy="146" rx="22" ry="16"/><circle class="cel" cx="180" cy="146" r="8"/>
+<ellipse class="lac" cx="120" cy="210" rx="34" ry="20"/><circle class="cel" cx="106" cy="210" r="8"/><circle class="cel" cx="134" cy="210" r="8"/>
+<ellipse class="lac" cx="216" cy="212" rx="34" ry="20"/><circle class="cel" cx="202" cy="212" r="8"/><circle class="cel" cx="230" cy="212" r="8"/>
+<ellipse class="lac" cx="150" cy="272" rx="22" ry="16"/><circle class="cel" cx="150" cy="272" r="8"/>
+<ellipse class="lac" cx="234" cy="270" rx="22" ry="16"/><circle class="cel" cx="234" cy="270" r="8"/>
+</g>
+<text class="t" x="30" y="332">Colágeno <tspan class="o">tipo II</tspan> · matriz basófila e homogênea</text>
+<text class="t" x="30" y="352">Grupos isógenos evidentes · pericôndrio presente</text>
+<text class="o" x="30" y="378">CARTILAGENS COSTAIS, traqueia, brônquios,</text>
+<text class="o" x="30" y="396">superfícies articulares, disco epifisário, nariz</text>
+<text class="t" x="30" y="422">Resistência à compressão + elasticidade</text>
+
+<!-- ELÁSTICA -->
+<text class="h" x="322" y="66">ELÁSTICA</text>
+<rect class="p" x="322" y="80" width="256" height="230"/>
+<rect class="mx" x="324" y="112" width="252" height="196"/>
+<rect class="per" x="324" y="82" width="252" height="30"/>
+<text class="o" x="390" y="102">PERICÔNDRIO</text>
+<g stroke="#e0b341" stroke-width="1.5" fill="none" opacity=".85">
+<path d="M330 128 C368 148 400 122 440 146 C480 168 520 134 574 152"/>
+<path d="M330 172 C372 192 404 162 448 188 C490 210 528 178 574 196"/>
+<path d="M330 218 C368 240 402 210 444 234 C486 256 524 226 574 244"/>
+<path d="M330 264 C370 284 404 256 446 278 C488 300 526 272 574 288"/>
+<path d="M346 118 C356 160 342 210 352 300"/>
+<path d="M416 116 C428 158 412 214 422 302"/>
+<path d="M494 116 C506 156 490 212 500 300"/>
+</g>
+<g>
+<ellipse class="lac" cx="382" cy="152" rx="20" ry="15"/><circle class="cel" cx="382" cy="152" r="8"/>
+<ellipse class="lac" cx="470" cy="176" rx="20" ry="15"/><circle class="cel" cx="470" cy="176" r="8"/>
+<ellipse class="lac" cx="380" cy="232" rx="20" ry="15"/><circle class="cel" cx="380" cy="232" r="8"/>
+<ellipse class="lac" cx="472" cy="252" rx="20" ry="15"/><circle class="cel" cx="472" cy="252" r="8"/>
+<ellipse class="lac" cx="540" cy="212" rx="20" ry="15"/><circle class="cel" cx="540" cy="212" r="8"/>
+</g>
+<text class="t" x="322" y="332">Colágeno tipo II + rede de <tspan class="o">FIBRAS ELÁSTICAS</tspan></text>
+<text class="t" x="322" y="352">Amarelada ao fresco · pericôndrio presente</text>
+<text class="o" x="322" y="378">Pavilhão auricular, meato acústico externo,</text>
+<text class="o" x="322" y="396">tuba auditiva, epiglote</text>
+<text class="t" x="322" y="422">Flexibilidade com retorno à forma</text>
+
+<!-- FIBROCARTILAGEM -->
+<text class="h" x="614" y="66">FIBROCARTILAGEM</text>
+<rect class="p" x="614" y="80" width="256" height="230"/>
+<rect class="mf" x="616" y="82" width="252" height="226"/>
+<g stroke="#a09488" stroke-width="4" fill="none" opacity=".9">
+<path d="M616 108 L868 100"/><path d="M616 140 L868 132"/><path d="M616 172 L868 164"/>
+<path d="M616 204 L868 196"/><path d="M616 236 L868 228"/><path d="M616 268 L868 260"/>
+<path d="M616 298 L868 290"/>
+</g>
+<g>
+<ellipse class="lac" cx="670" cy="124" rx="17" ry="12"/><circle class="cel" cx="670" cy="124" r="7"/>
+<ellipse class="lac" cx="740" cy="122" rx="17" ry="12"/><circle class="cel" cx="740" cy="122" r="7"/>
+<ellipse class="lac" cx="812" cy="119" rx="17" ry="12"/><circle class="cel" cx="812" cy="119" r="7"/>
+<ellipse class="lac" cx="680" cy="188" rx="17" ry="12"/><circle class="cel" cx="680" cy="188" r="7"/>
+<ellipse class="lac" cx="752" cy="186" rx="17" ry="12"/><circle class="cel" cx="752" cy="186" r="7"/>
+<ellipse class="lac" cx="824" cy="183" rx="17" ry="12"/><circle class="cel" cx="824" cy="183" r="7"/>
+<ellipse class="lac" cx="672" cy="252" rx="17" ry="12"/><circle class="cel" cx="672" cy="252" r="7"/>
+<ellipse class="lac" cx="744" cy="250" rx="17" ry="12"/><circle class="cel" cx="744" cy="250" r="7"/>
+<ellipse class="lac" cx="816" cy="247" rx="17" ry="12"/><circle class="cel" cx="816" cy="247" r="7"/>
+</g>
+<text class="t" x="614" y="332">Colágeno <tspan class="o">tipo I</tspan> em feixes densos visíveis</text>
+<text class="t" x="614" y="352">Condrócitos em FILEIRAS · <tspan class="o">SEM pericôndrio</tspan></text>
+<text class="o" x="614" y="378">Disco intervertebral, meniscos, sínfise púbica,</text>
+<text class="o" x="614" y="396">disco da ATM, inserções tendíneas</text>
+<text class="t" x="614" y="422">Resistência à tração e ao cisalhamento</text>
+
+<text class="s" x="30" y="452">TRAÇÃO E CISALHAMENTO → COLÁGENO TIPO I → FIBROCARTILAGEM</text><text class="s" x="30" y="472">COMPRESSÃO COM ELASTICIDADE → TIPO II + PROTEOGLICANOS → HIALINA</text>
+</svg><p class="figcap">Matriz, células, pericôndrio e localização de cada tipo.</p></div><div class="callout ok">
+    <span class="tag">A regra que dispensa a tabela</span>
+    <p><strong>A composição da matriz é sempre a resposta à demanda mecânica.</strong></p>
+    <p><strong>Compressão com necessidade de elasticidade</strong> → colágeno <b>tipo II</b> fino + muitos proteoglicanos hidratados → <b>HIALINA</b>. É o caso da cartilagem costal, que precisa transmitir carga <em>e</em> se torcer a cada respiração.</p>
+    <p><strong>Deformação ampla com retorno rápido à forma</strong> → acrescenta-se <b>elastina</b> → <b>ELÁSTICA</b>. Orelha que se amassa e volta, epiglote que baixa a cada deglutição.</p>
+    <p><strong>Tração e cisalhamento</strong> → colágeno <b>tipo I</b> em feixes densos → <b>FIBROCARTILAGEM</b>. Ânulo fibroso, menisco, sínfise púbica — lugares onde a hialina se romperia.</p>
+  </div>
+  <div class="def">
+    <div class="word">Por que a fibrocartilagem nunca tem pericôndrio</div>
+    <p>Porque ela <strong>nunca existe como peça isolada</strong>. É sempre uma <em>zona de transição</em> — entre cartilagem hialina e tecido conjuntivo denso, ou entre tendão/ligamento e osso. Não havendo uma superfície livre delimitada, não há uma camada condrogênica própria envolvendo-a.</p>
+    <p>Isso tem consequência direta: sem pericôndrio, ela é uma das estruturas com <strong>pior capacidade de reparo</strong> do corpo — o que você já viu na prática ao estudar lesões meniscais e discais.</p>
+  </div>
+  <div class="callout">
+    <span class="tag">Roteiro de leitura de lâmina — em três perguntas</span>
+    <p><strong>1. Vejo feixes de colágeno bem definidos na matriz?</strong> Se sim → <b>fibrocartilagem</b>. Confirme: matriz acidófila, condrócitos em fileiras, sem pericôndrio.</p>
+    <p><strong>2. A matriz é homogênea e basófila?</strong> Então é hialina ou elástica. Procure uma <b>rede de fibras ramificadas</b> entre as lacunas → se houver, <b>elástica</b>; se a matriz for homogênea e vítrea, <b>hialina</b>.</p>
+    <p><strong>3. Confirme pelo contexto anatômico.</strong> Traqueia, brônquio, cartilagem costal, superfície articular, disco epifisário → hialina. Pavilhão auricular, epiglote → elástica. Disco intervertebral, menisco, sínfise púbica → fibrocartilagem.</p>
+  </div>
+</section>
+
+<section id="pericondrio">
+  <span class="sec-num">25 &mdash; PERICÔNDRIO E NUTRIÇÃO</span>
+  <h2>Como um tecido <span class="accent">sem vasos</span> sobrevive</h2>
+  <div class="def">
+    <div class="word">Pericôndrio</div>
+    <p>Bainha de tecido conjuntivo que envolve a cartilagem, com <strong>duas camadas</strong>:</p>
+    <p><strong>Fibrosa externa</strong> — conjuntivo denso, com fibroblastos, colágeno tipo I e, principalmente, <strong>vasos sanguíneos</strong>.</p>
+    <p><strong>Condrogênica interna</strong> — células mesenquimais indiferenciadas, capazes de se diferenciar em condroblastos.</p>
+  </div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Função do pericôndrio</th><th>Por quê</th></tr></thead>
+    <tbody>
+      <tr><td><b>Nutrição</b></td><td>Como a cartilagem é avascular, <b>todos</b> os nutrientes chegam por <b>difusão</b> a partir dos vasos da camada fibrosa</td></tr>
+      <tr><td><b>Crescimento aposicional</b></td><td>Fornece as células que depositam nova matriz na superfície</td></tr>
+      <tr><td><b>Reparo</b></td><td>É a fonte celular da (limitada) capacidade de regeneração</td></tr>
+      <tr><td><b>Transição mecânica</b></td><td>Faz a passagem gradual entre a cartilagem e os tecidos vizinhos</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout warn">
+    <span class="tag">As duas exceções — e não é coincidência</span>
+    <p>A <strong>cartilagem articular</strong> não tem pericôndrio na sua superfície livre (nutre-se do <strong>líquido sinovial</strong>), e a <strong>fibrocartilagem</strong> nunca o possui.</p>
+    <p>Essas são exatamente as duas cartilagens que <strong>reparam pior</strong>. A correlação é causal: sem pericôndrio, não há fonte de células condrogênicas.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Por que movimento é o mecanismo de nutrição</span>
+    <p>A difusão através de uma matriz densa e hidratada é <strong>lenta</strong> — e é ela que limita a espessura máxima que uma cartilagem pode ter. Mas esse transporte é <strong>enormemente potencializado</strong> pela alternância de carga e descarga.</p>
+    <p>Sob compressão, o líquido é <strong>expulso</strong> da matriz. Ao aliviar, ele <strong>retorna</strong> trazendo nutrientes dissolvidos. É um mecanismo de <strong>bomba</strong>.</p>
+    <p><strong>Consequência prática, e você já viu isso no disco intervertebral:</strong> movimento e carga cíclica moderada <em>nutrem</em> a cartilagem. Imobilidade prolongada não a poupa — <strong>priva-a</strong> do mecanismo pelo qual ela se alimenta.</p>
+  </div>
+  <div class="def">
+    <div class="word">Por que a cartilagem não dói</div>
+    <p>Ela é <strong>não inervada</strong>. Não há terminações nervosas na matriz. A dor articular vem de estruturas <em>inervadas</em>: membrana sinovial, cápsula, ligamentos, periósteo e <strong>osso subcondral</strong>.</p>
+    <p>Duas implicações: lesões cartilaginosas podem ser <strong>silenciosas</strong> por muito tempo; e a intensidade da dor <strong>não é proporcional</strong> ao grau de degeneração visto em imagem — um dos motivos pelos quais achados degenerativos são altamente prevalentes em pessoas <em>assintomáticas</em>.</p>
+  </div>
+</section>
+
+<section id="condrogenese">
+  <span class="sec-num">26 &mdash; FORMAÇÃO DA CARTILAGEM</span>
+  <h2>Condrogênese: do <span class="accent">mesênquima</span> ao tecido</h2>
+  <p class="sec-sub">Objetivo 6, primeira parte.</p>
+  <div class="stepwrap"><div class="step"><h4>1 · Condensação mesenquimal</h4><p>Células mesenquimais retraem seus prolongamentos, <strong>arredondam-se</strong> e se aglomeram densamente, formando o <strong>centro de condrificação</strong> — um blastema pré-cartilaginoso.</p></div>
+  <div class="step"><h4>2 · Diferenciação</h4><p>Essas células se diferenciam em <strong>condroblastos</strong>, com forte expressão do fator de transcrição <strong>SOX9</strong> e desenvolvimento marcado de retículo endoplasmático rugoso e complexo de Golgi.</p></div>
+  <div class="step"><h4>3 · Secreção da matriz</h4><p>Os condroblastos secretam <strong>colágeno tipo II</strong> e <strong>proteoglicanos</strong>. À medida que a matriz se acumula, as células vão sendo <strong>afastadas</strong> umas das outras.</p></div>
+  <div class="step"><h4>4 · Aprisionamento</h4><p>Completamente cercados pela própria matriz, os condroblastos tornam-se <strong>condrócitos</strong>, alojados em <strong>lacunas</strong>.</p></div>
+  <div class="step"><h4>5 · Formação do pericôndrio</h4><p>As células mesenquimais da <strong>periferia</strong> <em>não</em> se diferenciam em condroblastos: permanecem como o <strong>pericôndrio</strong>, mantendo a reserva condrogênica e trazendo os vasos.</p></div>
+  <div class="step"><h4>6 · Crescimento</h4><p>A partir daí a peça cresce por <strong>dois mecanismos simultâneos</strong>: intersticial (de dentro) e aposicional (da superfície).</p></div>
+  </div><div class="callout">
+    <span class="tag">Detalhe que costuma passar batido</span>
+    <p>Repare que o condroblasto <strong>se aprisiona no produto do próprio trabalho</strong>. É por isso que ele muda de comportamento ao virar condrócito: cercado por matriz densa, perde contato com a periferia, recebe menos nutrientes, reduz drasticamente a síntese e passa apenas a <strong>manter</strong> o que existe.</p>
+    <p>Essa mudança é a raiz de quase todas as limitações do tecido — baixa taxa mitótica, incapacidade de migrar, reparo precário.</p>
+  </div>
+</section>
+
+<section id="crescimento">
+  <span class="sec-num">27 &mdash; CRESCIMENTO DA CARTILAGEM</span>
+  <h2>Dois mecanismos, <span class="accent">duas direções</span></h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th></th><th>APOSICIONAL</th><th>INTERSTICIAL</th></tr></thead>
+    <tbody>
+      <tr><td><b>Origem das células</b></td><td><b>Pericôndrio</b> (camada condrogênica)</td><td><b>Condrócitos já existentes</b>, dentro das lacunas</td></tr>
+      <tr><td><b>Onde ocorre</b></td><td>Na <b>superfície</b></td><td>No <b>interior</b> da peça</td></tr>
+      <tr><td><b>Como</b></td><td>Célula condrogênica → condroblasto → deposita matriz por fora</td><td>Condrócito sofre <b>mitose</b> e as filhas produzem matriz entre si</td></tr>
+      <tr><td><b>Resultado</b></td><td>Aumento em <b>espessura</b>, por camadas sucessivas</td><td>Aumento em <b>volume</b>, a partir de dentro</td></tr>
+      <tr><td><b>Marca histológica</b></td><td>Condroblastos achatados na periferia, sob o pericôndrio</td><td><b>GRUPOS ISÓGENOS</b></td></tr>
+      <tr><td><b>Quando</b></td><td>Ao longo de <b>toda a vida</b>, onde houver pericôndrio</td><td><b>Apenas em cartilagem jovem</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="figt"><span class="fign">FIG 09</span>Crescimento aposicional × intersticial</div><svg class="t2f8" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.t2f8 .p{fill:#141210;stroke:#2e2822;stroke-width:2}.t2f8 .mx{fill:rgba(120,150,220,.16)}.t2f8 .per{fill:rgba(255,107,26,.20);stroke:#ff6b1a;stroke-width:2}.t2f8 .lac{fill:#2b2520;stroke:#8f8880;stroke-width:1.6}.t2f8 .cel{fill:#ff6b1a}.t2f8 .nv{fill:#63b681}.t2f8 .h{font:800 13.5px Inter,sans-serif;fill:#fff}.t2f8 .o{font:800 12px Inter,sans-serif;fill:#ff6b1a}.t2f8 .t{font:600 12.5px Inter,sans-serif;fill:#c3bcb4}.t2f8 .s{font:700 10.5px Inter,sans-serif;fill:#8f8880;letter-spacing:1px}.t2f8 .ar{fill:none;stroke:#ff6b1a;stroke-width:2.4}</style></defs>
+<text class="s" x="16" y="30">CRESCIMENTO DA CARTILAGEM · DOIS MECANISMOS</text>
+
+<text class="h" x="40" y="70">APOSICIONAL — de fora para dentro</text>
+<rect class="p" x="40" y="86" width="380" height="220"/>
+<rect class="mx" x="42" y="132" width="376" height="172"/>
+<rect class="per" x="42" y="88" width="376" height="44"/>
+<text class="o" x="52" y="106">PERICÔNDRIO</text>
+<text class="t" x="240" y="106">camada condrogênica</text>
+<g><ellipse class="lac" cx="120" cy="120" rx="20" ry="9"/><circle class="nv" cx="120" cy="120" r="6"/>
+<ellipse class="lac" cx="230" cy="118" rx="20" ry="9"/><circle class="nv" cx="230" cy="118" r="6"/>
+<ellipse class="lac" cx="336" cy="120" rx="20" ry="9"/><circle class="nv" cx="336" cy="120" r="6"/></g>
+<g><ellipse class="lac" cx="110" cy="180" rx="24" ry="16"/><circle class="cel" cx="110" cy="180" r="8"/>
+<ellipse class="lac" cx="216" cy="184" rx="24" ry="16"/><circle class="cel" cx="216" cy="184" r="8"/>
+<ellipse class="lac" cx="330" cy="180" rx="24" ry="16"/><circle class="cel" cx="330" cy="180" r="8"/>
+<ellipse class="lac" cx="152" cy="250" rx="24" ry="16"/><circle class="cel" cx="152" cy="250" r="8"/>
+<ellipse class="lac" cx="272" cy="252" rx="24" ry="16"/><circle class="cel" cx="272" cy="252" r="8"/></g>
+<path class="ar" d="M230 140 L230 162"/><path d="M230 168 l-6 -10 l12 0 Z" fill="#ff6b1a"/>
+<text class="t" x="40" y="330">Células condrogênicas do <tspan class="o">pericôndrio</tspan> viram</text>
+<text class="t" x="40" y="350">condroblastos e depositam matriz nova na SUPERFÍCIE.</text>
+<text class="o" x="40" y="378">A cartilagem cresce em ESPESSURA, por camadas.</text>
+<text class="t" x="40" y="404">Ocorre a vida toda, onde houver pericôndrio.</text>
+
+<text class="h" x="480" y="70">INTERSTICIAL — de dentro para fora</text>
+<rect class="p" x="480" y="86" width="380" height="220"/>
+<rect class="mx" x="482" y="88" width="376" height="216"/>
+<g>
+<ellipse class="lac" cx="560" cy="140" rx="24" ry="16"/><circle class="cel" cx="560" cy="140" r="8"/>
+<ellipse class="lac" cx="700" cy="136" rx="40" ry="20"/><circle class="cel" cx="684" cy="136" r="8"/><circle class="cel" cx="716" cy="136" r="8"/>
+<ellipse class="lac" cx="806" cy="146" rx="24" ry="16"/><circle class="cel" cx="806" cy="146" r="8"/>
+<ellipse class="lac" cx="592" cy="216" rx="46" ry="22"/><circle class="cel" cx="570" cy="216" r="8"/><circle class="cel" cx="592" cy="216" r="8"/><circle class="cel" cx="614" cy="216" r="8"/>
+<ellipse class="lac" cx="740" cy="220" rx="40" ry="20"/><circle class="cel" cx="724" cy="220" r="8"/><circle class="cel" cx="756" cy="220" r="8"/>
+<ellipse class="lac" cx="600" cy="278" rx="24" ry="16"/><circle class="cel" cx="600" cy="278" r="8"/>
+<ellipse class="lac" cx="800" cy="272" rx="40" ry="20"/><circle class="cel" cx="784" cy="272" r="8"/><circle class="cel" cx="816" cy="272" r="8"/>
+</g>
+<path class="ar" d="M660 216 L690 216"/><path d="M696 216 l-10 -6 l0 12 Z" fill="#ff6b1a"/>
+<text class="t" x="480" y="330">Condrócitos já existentes se DIVIDEM dentro das</text>
+<text class="t" x="480" y="350">lacunas, formando <tspan class="o">GRUPOS ISÓGENOS</tspan>.</text>
+<text class="o" x="480" y="378">A cartilagem cresce a partir de DENTRO.</text>
+<text class="t" x="480" y="404">Só em cartilagem JOVEM — exige matriz maleável.</text>
+
+<text class="s" x="40" y="446">GRUPOS ISÓGENOS SÃO A EVIDÊNCIA HISTOLÓGICA DIRETA DO CRESCIMENTO INTERSTICIAL</text><text class="s" x="40" y="466">A MATRIZ AO REDOR DELES É MAIS BASÓFILA — É A RECÉM-SINTETIZADA</text>
+</svg><p class="figcap">Um vem do pericôndrio e engrossa; o outro vem de dentro e só ocorre em cartilagem jovem.</p></div><div class="def">
+    <div class="word">Por que o crescimento intersticial cessa</div>
+    <p>Ele exige que a matriz seja <strong>maleável</strong> o bastante para permitir que as células-filhas se <em>afastem</em> depois da mitose. Numa matriz jovem, ainda pouco reticulada, isso é possível.</p>
+    <p>Com o amadurecimento, o colágeno faz ligações cruzadas e a matriz enrijece progressivamente. As células-filhas simplesmente não conseguem mais empurrar a matriz para se separar — e o mecanismo se esgota.</p>
+    <p>Note a lógica: <strong>o mesmo enrijecimento que torna a cartilagem madura funcionalmente competente é o que a impede de crescer por dentro.</strong> Não dá para ter as duas coisas.</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Onde o crescimento intersticial é decisivo: o disco epifisário</span>
+    <p>Na <strong>placa de crescimento</strong> dos ossos longos, a cartilagem hialina se organiza em zonas sucessivas:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Zona</th><th>O que ocorre</th></tr></thead>
+      <tbody>
+        <tr><td><b>Repouso</b></td><td>Cartilagem hialina típica — reserva celular</td></tr>
+        <tr><td><b>Proliferação</b></td><td>Condrócitos se dividem e se empilham em <b>colunas</b> — crescimento intersticial puro</td></tr>
+        <tr><td><b>Hipertrofia</b></td><td>Condrócitos aumentam muito de volume</td></tr>
+        <tr><td><b>Calcificação</b></td><td>A matriz calcifica; privados de difusão, os condrócitos <b>morrem</b></td></tr>
+        <tr><td><b>Ossificação</b></td><td>Vasos invadem as lacunas vazias; osteoblastos depositam osso sobre o molde calcificado</td></tr>
+      </tbody>
+    </table></div>
+    <p>O osso cresce em comprimento porque a zona de proliferação <strong>empurra a epífise para longe</strong> enquanto a ossificação avança atrás. Quando a proliferação cessa, a ossificação alcança o disco, que é substituído por osso — e o crescimento em comprimento <strong>termina definitivamente</strong>.</p>
+  </div>
+</section>
+
+<section id="regeneracao">
+  <span class="sec-num">28 &mdash; REGENERAÇÃO E ENVELHECIMENTO</span>
+  <h2>Por que a cartilagem <span class="accent">quase não repara</span></h2>
+  <p class="sec-sub">Objetivo 6, segunda parte.</p>
+  <ol class="key">
+    <li><b>É avascular.</b> Sem vasos, a resposta inflamatória e reparadora clássica não chega. Células-tronco, fatores de crescimento e células inflamatórias têm acesso muito restrito.</li>
+    <li><b>Nutrição apenas por difusão.</b> Lenta e limitada pela espessura, o que restringe a atividade metabólica disponível para reparar.</li>
+    <li><b>Condrócitos têm baixa taxa mitótica</b> no adulto — e estão <b>isolados em lacunas</b>, sem capacidade de migrar até o local da lesão.</li>
+    <li><b>O crescimento intersticial já cessou</b> no tecido maduro.</li>
+  </ol>
+  <div class="callout warn">
+    <span class="tag">O que acontece na prática</span>
+    <p>Quando há reparo, ele depende quase inteiramente do <strong>pericôndrio</strong> — e o tecido formado é geralmente <strong>conjuntivo fibroso</strong> ou fibrocartilagem cicatricial, mecanicamente <em>inferior</em> à hialina original.</p>
+    <p><strong>Pior caso — cartilagem articular:</strong> não tem pericôndrio. Lesões <em>superficiais</em> praticamente não reparam. Lesões que atingem o <strong>osso subcondral</strong> permitem a chegada de células da medula óssea, mas o tecido resultante é <strong>fibrocartilagem</strong>, menos resistente ao desgaste repetido.</p>
+  </div>
+  <div class="def">
+    <div class="word">Calcificação — quando é fisiológica e quando é envelhecimento</div>
+    <p><strong>Fisiológica e obrigatória:</strong> na <strong>ossificação endocondral</strong> e no disco epifisário, a calcificação é etapa necessária — a cartilagem calcificada serve de <em>molde</em> para a deposição de osso.</p>
+    <p><strong>Envelhecimento:</strong> nas <strong>cartilagens costais</strong>, na laringe e na traqueia, a calcificação progressiva com a idade é comum e indesejada. A matriz se torna impermeável, os condrócitos hipertrofiam e morrem, e o tecido perde elasticidade.</p>
+    <p><strong>No tórax, especificamente:</strong> a caixa torácica <strong>enrijece</strong>, a complacência da parede cai, o <strong>trabalho respiratório aumenta</strong> e o padrão ventilatório passa a depender proporcionalmente mais do diafragma e menos da expansão costal. É um dos fatores da queda da capacidade vital com a idade.</p>
+  </div>
+  <div class="callout">
+    <span class="tag">Aplicação profissional — e o limite do escopo</span>
+    <p>Você <strong>não</strong> reverte calcificação com exercício. O que se pode fazer é <strong>preservar a amplitude disponível</strong> nas articulações costovertebrais e a coordenação respiratória, o que justifica trabalho de mobilidade torácica e de amplitude ventilatória, especialmente em populações mais velhas.</p>
+    <p><strong>Escopo:</strong> diagnóstico e tratamento de lesões cartilaginosas e articulares são competência da medicina e da fisioterapia. O papel do profissional de Educação Física é orientar exercício com segurança dentro do quadro já estabelecido — e para isso é preciso entender a mecânica, que é exatamente o que este material cobre.</p>
+  </div>
+</section>
+
+<section id="integracao">
+  <span class="sec-num">29 &mdash; INTEGRAÇÃO</span>
+  <h2>Da <span class="accent">molécula</span> à respiração</h2>
+  <p class="sec-sub">Os seis objetivos costurados em uma cadeia causal só.</p>
+  <div class="stepwrap"><div class="step"><h4>Nível molecular</h4><p>Os <strong>proteoglicanos</strong> da matriz cartilaginosa, fortemente aniônicos, retêm água numa malha de <strong>colágeno tipo II</strong>. Isso cria um material que resiste à compressão e se deforma de forma <strong>reversível</strong>.</p></div>
+  <div class="step"><h4>Nível tecidual</h4><p>Esse material é a <strong>cartilagem hialina</strong> das cartilagens costais. Ele completa a costela à frente e funciona como <strong>mola de torção</strong>, armazenando e devolvendo energia a cada ciclo.</p></div>
+  <div class="step"><h4>Nível articular</h4><p>Atrás, cada costela é presa à coluna por <strong>duas articulações sinoviais</strong>. A linha entre elas é o <strong>eixo</strong> que determina se o movimento será braço de bomba ou alça de balde.</p></div>
+  <div class="step"><h4>Nível muscular</h4><p>Os <strong>intercostais externos</strong> giram as costelas nesse eixo; o <strong>diafragma</strong> desce o centro tendíneo. Outros músculos <strong>fixam</strong> — quadrado lombar na 12ª costela, escalenos nas duas primeiras — para que a força não se dissipe.</p></div>
+  <div class="step"><h4>Nível físico</h4><p>O volume torácico aumenta nos três diâmetros. Pela <strong>lei de Boyle</strong>, a pressão alveolar cai e o ar entra. O pulmão acompanha porque a <strong>pressão intrapleural negativa</strong> o mantém colado à parede.</p></div>
+  <div class="step"><h4>Nível sistêmico</h4><p>A mesma contração diafragmática eleva a <strong>pressão intra-abdominal</strong>, enrijecendo o tronco e aumentando o retorno venoso. Respirar, estabilizar e bombear sangue são funções do <strong>mesmo</strong> músculo.</p></div>
+  </div><div class="callout ok">
+    <span class="tag">A frase para levar para a tutoria</span>
+    <p><strong>A respiração não é um evento pulmonar — é um evento musculoesquelético.</strong> O pulmão é passivo: ele é enchido pela atmosfera sempre que o sistema osteomuscular cria um gradiente de pressão. Por isso qualquer coisa que limite a mobilidade da caixa torácica — posição da coluna, rigidez das cartilagens costais, disfunção diafragmática, distensão abdominal — limita a respiração.</p>
+    <p>E foi exatamente isso que Rodrigo experimentou: uma limitação <strong>mecânica</strong>, não respiratória.</p>
+  </div>
+</section>
+
+<section id="perguntas">
+  <span class="sec-num">30 &mdash; PERGUNTAS DE TUTORIA</span>
+  <h2>Teste se você <span class="accent">realmente domina</span></h2>
+  <p class="sec-sub">Responda em voz alta antes de conferir. Se travar, volte à seção indicada.</p>
+  <ol class="key">
+    <li>Quais ossos formam a caixa torácica e como se classificam as costelas? <span class="pill">04</span></li>
+    <li>Descreva os acidentes de uma costela típica. O que corre no sulco da costela e qual a consequência prática? <span class="pill">04</span></li>
+    <li>Por que a cabeça de uma costela típica tem <b>duas</b> faces articulares? <span class="pill">04</span></li>
+    <li>Cite as costelas atípicas e o que as diferencia. Por que a 1ª é praticamente fixa? <span class="pill">04</span></li>
+    <li>Classifique <b>todas</b> as articulações do tórax, estrutural e funcionalmente. <span class="pill">06</span></li>
+    <li>Por que as articulações móveis estão atrás e as pouco móveis à frente? <span class="pill">06</span></li>
+    <li>Diferencie cartilagem costal de articulação costocondral. <span class="pill">05, 06</span></li>
+    <li>Explique braço de bomba e alça de balde, e por que costelas superiores e inferiores se movem diferente. <span class="pill">07</span></li>
+    <li>Por que o ângulo do esterno é a referência anatômica mais importante do tórax? <span class="pill">03</span></li>
+    <li>Descreva as três camadas dos intercostais, direção de fibras e ação. Onde corre o feixe VAN? <span class="pill">08</span></li>
+    <li>Qual a função dos intercostais <b>além</b> de mover as costelas? <span class="pill">08</span></li>
+    <li>Descreva origem, inserção, inervação e hiatos do diafragma. <span class="pill">10, 12</span></li>
+    <li>Por que a inervação do diafragma é cervical (C3–C5)? <span class="pill">10</span></li>
+    <li>Explique o que acontece mecanicamente quando o diafragma contrai, em duas fases. <span class="pill">11</span></li>
+    <li>Por que cada hiato está exatamente onde está? <span class="pill">12</span></li>
+    <li>Dê origem, inserção, direção de fibras e ação dos quatro músculos da parede abdominal. <span class="pill">13</span></li>
+    <li>O que muda na bainha do reto abaixo da linha arqueada? <span class="pill">14</span></li>
+    <li>O que compõe o cilindro do core e como ele enrijece o tronco? <span class="pill">15</span></li>
+    <li>Quais músculos atuam na respiração tranquila e na forçada? Como os abdominais expiram? <span class="pill">16</span></li>
+    <li>Explique a ventilação a partir da lei de Boyle. Por que se diz que o pulmão não puxa ar? <span class="pill">17</span></li>
+    <li>Por que a pressão intrapleural é negativa e o que acontece se ela se perder? <span class="pill">17</span></li>
+    <li>Defina volumes e capacidades. Por que o volume residual não é medido por espirometria simples? <span class="pill">18</span></li>
+    <li>O que é espaço morto e por que respirar lento e profundo é mais eficiente? <span class="pill">18</span></li>
+    <li>O que determina a complacência pulmonar? Qual o papel do surfactante e por que ele estabiliza alvéolos de tamanhos diferentes? <span class="pill">19</span></li>
+    <li>Qual o principal estímulo regulador da respiração em repouso? <span class="pill">20</span></li>
+    <li>Explique mecanicamente por que se inspira na extensão e se expira na flexão da coluna. <span class="pill">21</span></li>
+    <li>Descreva o mecanismo da toxina botulínica na junção neuromuscular e por que a paralisia é flácida e temporária. <span class="pill">22</span></li>
+    <li>O que aconteceria com a mecânica respiratória na paralisia de um hemidiafragma? <span class="pill">22</span></li>
+    <li>Descreva a matriz cartilaginosa e explique o mecanismo de resistência à compressão. <span class="pill">23</span></li>
+    <li>Diferencie célula condrogênica, condroblasto e condrócito. O que são grupos isógenos? <span class="pill">23</span></li>
+    <li>Compare os três tipos de cartilagem quanto a colágeno, células, pericôndrio e localização. <span class="pill">24</span></li>
+    <li>Por que a fibrocartilagem nunca tem pericôndrio, e qual a consequência disso? <span class="pill">24, 25</span></li>
+    <li>Quais as funções do pericôndrio? Como a cartilagem se nutre, sendo avascular? <span class="pill">25</span></li>
+    <li>Por que a cartilagem não dói, e qual a implicação prática? <span class="pill">25</span></li>
+    <li>Descreva a condrogênese, do mesênquima ao tecido formado. <span class="pill">26</span></li>
+    <li>Diferencie crescimento aposicional e intersticial. Por que o intersticial cessa? <span class="pill">27</span></li>
+    <li>Explique o papel da cartilagem hialina no crescimento dos ossos longos. <span class="pill">27</span></li>
+    <li>Por que a regeneração da cartilagem é tão limitada, e pior ainda na cartilagem articular? <span class="pill">28</span></li>
+    <li>O que a calcificação das cartilagens costais provoca na mecânica respiratória? <span class="pill">28</span></li>
+    <li>Responda o caso: por que Rodrigo sentiu rigidez ao inspirar? <span class="pill">02, 07, 21</span></li>
+  </ol>
+</section>
+
+<section id="resumo">
+  <span class="sec-num">31 &mdash; PARA FIXAR</span>
+  <h2>Os <span class="accent">pontos-chave</span> da Tutoria 02</h2>
+  <ol class="key">
+    <li>A caixa torácica resolve o conflito <b>proteger × ventilar</b> com osso atrás e nas laterais, <b>articulações sinoviais</b> na coluna e <b>cartilagem elástica</b> à frente.</li>
+    <li><b>Esterno:</b> manúbrio, corpo e xifoide. O <b>ângulo do esterno</b> entrega 2ª costela, disco T4–T5, bifurcação da traqueia e limite do mediastino — tudo palpável.</li>
+    <li><b>Costelas:</b> verdadeiras 1–7, falsas 8–10, flutuantes 11–12. Típicas (3–9) têm cabeça com <b>duas</b> faces, colo, tubérculo, ângulo e corpo com sulco.</li>
+    <li>No sulco corre o feixe <b>VAN</b> na borda inferior — por isso a punção é rente à borda <b>superior</b> da costela de baixo.</li>
+    <li>A <b>1ª costela é fixa</b> (uma faceta + sincondrose com o manúbrio) e serve de âncora superior.</li>
+    <li><b>Móvel atrás, elástico à frente:</b> sinoviais costovertebrais e esternocostais 2–7; sincondroses costocondral e da 1ª; sínfise manubrioesternal.</li>
+    <li>O <b>eixo</b> entre as duas articulações costovertebrais define o movimento: frontal → <b>braço de bomba</b>; sagital → <b>alça de balde</b>. O <b>vertical</b> vem do diafragma.</li>
+    <li><b>Intercostais:</b> externo eleva (inspiração), interno interósseo deprime (expiração), íntimo acompanha. Feixe entre interno e íntimo. Também mantêm a <b>rigidez</b> do espaço.</li>
+    <li><b>Diafragma:</b> partes esternal, costal e lombar → <b>centro tendíneo</b>. Inervação <b>C3–C5</b> (frênico) por migração do septo transverso. Responde por <b>70–75%</b> do volume corrente.</li>
+    <li><b>Hiatos:</b> cava <b>T8</b> (centro tendíneo, dilata), esôfago <b>T10</b> (pilar direito, comprime), aorta <b>T12</b> (atrás, nunca comprime). A posição responde ao que passa.</li>
+    <li><b>Abdome:</b> reto (flexão), oblíquo externo (rotação contralateral), oblíquo interno (ipsilateral), transverso (comprime). Mesmas três camadas cruzadas dos intercostais.</li>
+    <li><b>Abaixo da linha arqueada</b> todas as aponeuroses passam à frente; atrás resta só a fáscia transversal.</li>
+    <li><b>Cilindro do core:</b> diafragma (teto) + transverso (paredes) + assoalho pélvico (piso) + fáscia toracolombar. Pressuriza e enrijece — princípio da lata de refrigerante.</li>
+    <li><b>Inspiração é sempre ativa; expiração tranquila é passiva.</b> Abdominais expiram <em>indiretamente</em>, empurrando as vísceras contra o diafragma.</li>
+    <li><b>Lei de Boyle:</b> o pulmão não puxa ar — ele é enchido pela atmosfera quando criamos pressão negativa. A <b>pressão intrapleural negativa</b> mantém o pulmão colado à parede.</li>
+    <li><b>Espaço morto ~150 mL:</b> respirar lento e profundo entrega muito mais ventilação alveolar com a mesma ventilação-minuto.</li>
+    <li><b>Complacência</b> depende de elasticidade tecidual (1/3) e <b>tensão superficial</b> (2/3). O <b>surfactante</b> a reduz e estabiliza alvéolos pequenos, invertendo o problema de Laplace.</li>
+    <li>O regulador principal da respiração em repouso é o <b>CO₂</b>, não o O₂.</li>
+    <li><b>Extensão → inspira; flexão → expira.</b> A mobilidade da caixa depende da posição da coluna — a explicação da rigidez de Rodrigo.</li>
+    <li><b>Toxina botulínica</b> cliva proteínas <b>SNARE</b> no terminal pré-sináptico → sem exocitose de ACh → <b>paralisia flácida</b>, temporária pela regeneração do terminal.</li>
+    <li><b>Cartilagem:</b> avascular, alinfática, não inervada. Matriz = colágeno + proteoglicanos hidrofílicos + 60–80% de água. Resistência à compressão é <b>hidráulica e reversível</b>.</li>
+    <li><b>Células:</b> condrogênica (reserva) → condroblasto (produz) → condrócito (mantém, em lacuna). <b>Grupos isógenos</b> = crescimento intersticial.</li>
+    <li><b>Hialina</b> (tipo II, costais e articulares) · <b>Elástica</b> (tipo II + elastina, orelha e epiglote) · <b>Fibrocartilagem</b> (tipo I, disco e menisco, sem pericôndrio).</li>
+    <li><b>Pericôndrio</b> nutre, faz crescer e repara. Cartilagem articular e fibrocartilagem não o têm — e são as que reparam pior.</li>
+    <li><b>Movimento nutre a cartilagem</b> — carga cíclica funciona como bomba de difusão. Imobilidade priva, não poupa.</li>
+    <li><b>Aposicional</b> (pericôndrio, superfície, vida toda) × <b>intersticial</b> (mitose interna, só em cartilagem jovem, exige matriz maleável).</li>
+    <li><b>Regeneração precária</b> porque é avascular, os condrócitos não migram nem se dividem muito, e o reparo produz fibrocartilagem cicatricial.</li>
+    <li><b>Calcificação das cartilagens costais</b> enrijece o tórax e aumenta o trabalho respiratório com a idade.</li>
+    <li>A <b>respiração é um evento musculoesquelético</b>, não pulmonar. É a mensagem central do caso.</li>
+  </ol>
+  <div class="nav-next">
+    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&larr; Biblioteca</span></a>
+  </div>
+</section>
+
+<section id="refs">
+  <span class="sec-num">32 &mdash; REFERÊNCIAS E NOTA DE HONESTIDADE</span>
+  <h2>De onde vem <span class="accent">cada afirmação</span></h2>
+  <ul class="clean">
+    <li><b>Referências do caso:</b> Drake, Vogl &amp; Mitchell — <i>Gray: Anatomia Clínica para Estudantes</i>, 4ª ed. · Agur — <i>Fundamentos de Anatomia Clínica</i>, 6ª ed. · Junqueira &amp; Carneiro — <i>Histologia Básica: Texto e Atlas</i>, 14ª ed. · Hansen — <i>Netter Anatomia Clínica</i>, 4ª ed.</li>
+    <li><b>Complementares:</b> Moore, Dalley &amp; Agur — <i>Anatomia Orientada para a Clínica</i> · Ross &amp; Pawlina — <i>Histologia: Texto e Atlas</i> · Guyton &amp; Hall — <i>Tratado de Fisiologia Médica</i> · West — <i>Fisiologia Respiratória</i> · Silverthorn — <i>Fisiologia Humana</i> · Neumann — <i>Cinesiologia do Aparelho Musculoesquelético</i> · Hodges &amp; Richardson (1996) — ativação antecipatória do transverso do abdome.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">Nota de honestidade científica</span>
+    <p>Os valores de volumes, capacidades e pressões são <strong>médias com ampla variação individual</strong> — use-os como ordem de grandeza, não como número absoluto. A associação entre desvios posturais estáticos e sintomas é <strong>fraca</strong> na literatura, e achados degenerativos de imagem são muito prevalentes em pessoas assintomáticas. A superioridade do treino específico de estabilização sobre exercício geral para dor lombar <strong>não</strong> está demonstrada.</p>
+    <p>Por fim: diagnóstico e tratamento de lesão são competência da medicina e da fisioterapia. O profissional de Educação Física orienta o exercício.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Série Tutoria &middot; Graduação em Educação Física &mdash; Tutoria 02</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material construído a partir dos objetivos de aprendizagem do caso tutorial. Diagramas originais e esquemáticos &mdash; não substituem o atlas. Conteúdo de estudo MG COACH.</p>
+</footer>
+<script src="mgcoach.js"></script>
+</body>
+</html>
