@@ -2,305 +2,227 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("mgcoach-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Workshop de Biomec&acirc;nica: Joelho, Coluna e Ombro | MG COACH</title>
-<meta name="description" content="Material completo do workshop de biomec&acirc;nica em 36 se&ccedil;&otilde;es: hipertrofia de qu&aacute;driceps e dor no joelho, treino de for&ccedil;a com h&eacute;rnia discal, corre&ccedil;&atilde;o postural e hipertrofia de delt&oacute;ides.">
-<meta name="theme-color" content="#ff6b1a">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Workshop de Biomec&acirc;nica: Joelho, Coluna e Ombro | MG COACH">
-<meta property="og:description" content="Quatro blocos, 36 se&ccedil;&otilde;es e 11 diagramas originais: joelho, coluna lombar, escapula e ombro.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- OG START -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MG COACH">
+    <meta property="og:title" content="Workshop de Biomec&acirc;nica: Joelho, Coluna e Ombro | MG COACH">
+    <meta property="og:description" content="Material completo do workshop de biomec&acirc;nica: hipertrofia do qu&aacute;driceps e dor no joelho, treinamento de for&ccedil;a com h&eacute;rnia discal, corre&ccedil;&atilde;o postural e hipertrofia de delt&oacute;ides.">
+    <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/workshop-biomecanica-joelho-coluna-ombro.html">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Workshop de Biomec&acirc;nica: Joelho, Coluna e Ombro | MG COACH">
+    <meta name="twitter:description" content="37 se&ccedil;&otilde;es e 11 diagramas originais, preservando cada anota&ccedil;&atilde;o do caderno.">
+    <meta name="theme-color" content="#ff6b1a">
+    <!-- OG END -->
+<link rel="stylesheet" href="mgcoach.css">
 <style>
-:root{
-  --bg:#0a0a0a; --bg2:#121212; --bg3:#171717;
-  --tx:#e8e6e3; --tx2:#a8a4a0; --tx3:#78736e;
-  --ac:#ff6b1a; --ac2:#ffa06b; --li:#242424;
-}
-html[data-theme="light"]{
-  --bg:#f7f5f1; --bg2:#ffffff; --bg3:#f0ece5;
-  --tx:#1a1a1a; --tx2:#4a4744; --tx3:#7a756f;
-  --ac:#d9530a; --ac2:#a63f06; --li:#e2ddd4;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);
-  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
-  font-size:17px;line-height:1.72;-webkit-text-size-adjust:100%}
-.wrap{max-width:820px;margin:0 auto;padding:0 22px 90px}
-a{color:var(--ac);text-decoration:none}
-a:hover{text-decoration:underline}
-:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
-
-header.top{border-bottom:1px solid var(--li);padding:34px 0 30px;margin-bottom:34px}
-.brand{font-size:12px;letter-spacing:.22em;font-weight:700;color:var(--ac);text-transform:uppercase}
-h1{font-size:clamp(28px,6vw,44px);line-height:1.14;font-weight:800;margin:16px 0 14px;letter-spacing:-.02em}
-.sub{color:var(--tx2);font-size:16px;margin:0 0 20px}
-.meta{display:flex;flex-wrap:wrap;gap:8px}
-.tag{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
-  border:1px solid var(--li);color:var(--tx2);padding:5px 11px;border-radius:999px}
-.tag.on{border-color:var(--ac);color:var(--ac)}
-.tools{display:flex;gap:10px;align-items:center;margin-top:22px;flex-wrap:wrap}
-button.tg{font:inherit;font-size:13px;font-weight:600;cursor:pointer;background:var(--bg3);
-  color:var(--tx2);border:1px solid var(--li);border-radius:8px;padding:8px 14px}
-button.tg:hover{color:var(--ac);border-color:var(--ac)}
-
-details.toc{background:var(--bg2);border:1px solid var(--li);border-radius:12px;margin:0 0 44px}
-details.toc>summary{cursor:pointer;padding:16px 20px;font-weight:700;font-size:14px;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--ac);list-style:none}
-details.toc>summary::-webkit-details-marker{display:none}
-details.toc>summary::after{content:"+";float:right;font-weight:700}
-details.toc[open]>summary::after{content:"\2212"}
-.toc-in{padding:0 20px 20px}
-.toc-grp{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3);
-  font-weight:700;margin:18px 0 8px;padding-top:14px;border-top:1px solid var(--li)}
-.toc-grp:first-child{margin-top:4px;padding-top:0;border-top:0}
-.toc-in ol{list-style:none;margin:0;padding:0}
-.toc-in li{margin:0 0 5px}
-.toc-in a{color:var(--tx2);font-size:15px;display:block;padding:2px 0}
-.toc-in a:hover{color:var(--ac);text-decoration:none}
-.toc-in a b{color:var(--tx3);font-weight:700;font-variant-numeric:tabular-nums;margin-right:9px}
-
-.block{margin:66px 0 0;padding:26px 0 0;border-top:2px solid var(--ac)}
-.block .bk{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ac);font-weight:700}
-.block h2{font-size:clamp(23px,4.6vw,31px);line-height:1.2;margin:10px 0 6px;font-weight:800;letter-spacing:-.015em}
-.block .who{color:var(--tx3);font-size:14px;margin:0}
-
-section{margin:44px 0 0;scroll-margin-top:20px}
-section h3{font-size:20px;line-height:1.32;font-weight:700;margin:0 0 14px;letter-spacing:-.01em}
-.sec-num{display:inline-block;color:var(--ac);font-weight:800;font-variant-numeric:tabular-nums;margin-right:10px}
-p{margin:0 0 16px}
-ul,ol.body{margin:0 0 18px;padding-left:22px}
-li{margin:0 0 8px}
-strong{color:var(--tx);font-weight:700}
-em{color:var(--ac2);font-style:normal;font-weight:600}
-
-.nota{background:var(--bg2);border-left:3px solid var(--ac);border-radius:0 10px 10px 0;
-  padding:15px 18px;margin:0 0 20px}
-.nota .lb{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ac);
-  font-weight:700;display:block;margin-bottom:7px}
-.nota p{margin:0 0 7px;color:var(--tx2);font-size:15.5px;line-height:1.62}
-.nota p:last-child{margin:0}
-
-.box{background:var(--bg3);border:1px solid var(--li);border-radius:10px;padding:16px 18px;margin:0 0 20px}
-.box .lb{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tx3);
-  font-weight:700;display:block;margin-bottom:8px}
-.box p:last-child,.box ul:last-child{margin-bottom:0}
-.box.pratica{border-color:var(--ac)}
-.box.pratica .lb{color:var(--ac)}
-
-table{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:15px;display:block;overflow-x:auto}
-th,td{border:1px solid var(--li);padding:10px 12px;text-align:left;vertical-align:top}
-th{background:var(--bg3);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--tx2)}
-
-figure{margin:0 0 24px}
-figure svg{display:block;width:100%;height:auto;background:#101010;border:1px solid var(--li);border-radius:10px}
-figcaption{font-size:13.5px;color:var(--tx3);margin-top:9px;line-height:1.5}
-
-footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color:var(--tx3);font-size:14px}
-@media(max-width:520px){body{font-size:16px}.wrap{padding:0 16px 70px}}
+/* figuras esquem&aacute;ticas &mdash; fundo fixo escuro em ambos os temas */
+.fig{margin:22px 0;background:#0e0d0c;border:1px solid #241f1b;border-radius:12px;padding:14px}
+.fig svg{width:100%;height:auto;display:block}
+.figt{font-size:15.5px;font-weight:800;color:#fff;margin-bottom:12px}
+.fign{display:inline-block;font-size:11px;font-weight:800;color:#0a0a0a;background:#ff6b1a;padding:2px 8px;border-radius:99px;margin-right:9px;vertical-align:middle}
+.figcap{color:#8f8880;font-size:13px;margin-top:10px;padding:0 3px}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<header class="top">
-  <div class="brand">MG COACH &middot; Biblioteca de Estudos</div>
-  <h1>Workshop de Biomec&acirc;nica: Joelho, Coluna e Ombro</h1>
-  <p class="sub">Quatro blocos, 36 se&ccedil;&otilde;es e 11 diagramas originais. Cada se&ccedil;&atilde;o preserva a anota&ccedil;&atilde;o de caderno como foi escrita e abre o racioc&iacute;nio por tr&aacute;s dela.</p>
-  <div class="meta">
-    <span class="tag on">Biomec&acirc;nica</span>
-    <span class="tag">Joelho</span>
-    <span class="tag">Coluna lombar</span>
-    <span class="tag">Esc&aacute;pula e ombro</span>
-    <span class="tag">Ago &middot; 2026</span>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+      <span><span class="mg">MG</span> <span class="coach">COACH</span></span>
+    </div>
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" type="button"><svg class="tt-icon" viewBox="0 0 24 24"></svg><span class="tt-label">Claro</span></button>
+    <a href="index.html" class="backlink">&#8592; Biblioteca</a>
   </div>
-  <div class="tools">
-    <button class="tg" id="tgtheme" type="button">Tema claro</button>
+  <div class="toc-bar">
+    <button class="toc-toggle" id="tocBtn" type="button" aria-expanded="false" aria-controls="tocNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="width:11px;height:11px;flex:none"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+      <span id="tocLbl">&Iacute;ndice</span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </div>
+  <nav class="toc" id="tocNav">
+    <a href="#torque">Torque e braço de momento</a>
+    <a href="#condromalacia">Condromalácia</a>
+    <a href="#mobilizacao-patela">Mobilização da patela</a>
+    <a href="#adutores">Adutores e glúteo médio</a>
+    <a href="#alongamento-adutor">Alongar adutor</a>
+    <a href="#quadriceps">Fortalecer o quádriceps</a>
+    <a href="#teste-patela">Teste de compressão da patela</a>
+    <a href="#agachamento-torque">Agachamento e torque</a>
+    <a href="#leg-press">Leg press</a>
+    <a href="#joelho-travado">Joelho travado</a>
+    <a href="#area-contato">Área de contato e menisco</a>
+    <a href="#amplitude-parcial">Amplitude parcial</a>
+    <a href="#cadeira-extensora">Cadeira extensora</a>
+    <a href="#dor-lombar">Dor lombar ≠ hérnia</a>
+    <a href="#disco">Disco e raiz nervosa</a>
+    <a href="#escala-dor">Escala de dor 0–10</a>
+    <a href="#cisalhamento">Cisalhamento</a>
+    <a href="#terra-stiff">Terra e stiff como remédio</a>
+    <a href="#angulo-fibras">Ângulo das fibras</a>
+    <a href="#core">Core e bracing</a>
+    <a href="#calco">Calço no agachamento</a>
+    <a href="#cinturao">Cinturão</a>
+    <a href="#hipercifose">Hipercifose torácica</a>
+    <a href="#remada">Remada sem apoio</a>
+    <a href="#binario">Trapézio e serrátil</a>
+    <a href="#serratil">Serrátil anterior</a>
+    <a href="#inclinacao">Inclinação anterior</a>
+    <a href="#supino-serratil">Serrátil no supino</a>
+    <a href="#acromio">Tipos de acrômio</a>
+    <a href="#impacto">Impacto subacromial</a>
+    <a href="#ritmo">Ritmo escapuloumeral</a>
+    <a href="#flexao-ombro">Flexão de ombro</a>
+    <a href="#manguito">Manguito rotador</a>
+    <a href="#testes-ombro">Teste da parede e Jobe</a>
+    <a href="#elevacao-lateral">Elevação lateral</a>
+    <a href="#manguito-funcional">Manguito funcional</a>
+    <a href="#sintese">Síntese</a>
+  </nav>
 </header>
 
-<p>Este material foi montado a partir das anota&ccedil;&otilde;es de caderno feitas durante o workshop. A regra de constru&ccedil;&atilde;o foi simples: <strong>nada do que foi anotado se perde</strong>. Cada bloco laranja marcado como <em>anota&ccedil;&atilde;o original</em> reproduz a frase do caderno; o texto ao redor a destrincha at&eacute; o mecanismo, com exemplo pr&aacute;tico e, quando ajuda, um diagrama.</p>
-
-<p>Os quatro temas parecem soltos &mdash; joelho, lombar, postura, ombro &mdash; mas repetem a mesma l&oacute;gica tr&ecirc;s vezes: <strong>o tecido n&atilde;o adoece pela carga, adoece pela desproporc&atilde;o entre a carga e a capacidade que aquele tecido teve chance de construir</strong>. Guarde essa frase; ela reaparece em cada bloco.</p>
-
-<details class="toc" open>
-<summary>&Iacute;ndice &mdash; 36 se&ccedil;&otilde;es</summary>
-<div class="toc-in">
-
-<div class="toc-grp">Bloco 1 &middot; Hipertrofia do qu&aacute;driceps e dor no joelho</div>
-<ol>
-<li><a href="#s01"><b>01</b>O problema mec&acirc;nico que o joelho precisa resolver</a></li>
-<li><a href="#s02"><b>02</b>Condromal&aacute;cia: amolecimento n&atilde;o &eacute; sin&ocirc;nimo de dor</a></li>
-<li><a href="#s03"><b>03</b>Mobiliza&ccedil;&atilde;o da patela e a tal &quot;lubrifica&ccedil;&atilde;o&quot;</a></li>
-<li><a href="#s04"><b>04</b>Adutores hiperativos e gl&uacute;teo m&eacute;dio fraco</a></li>
-<li><a href="#s05"><b>05</b>Por que alongar adutor exige flex&atilde;o de quadril</a></li>
-<li><a href="#s06"><b>06</b>Fortalecer o qu&aacute;driceps &eacute; o ponto-chave</a></li>
-<li><a href="#s07"><b>07</b>Teste de compress&atilde;o da patela: o que ele n&atilde;o &eacute;</a></li>
-<li><a href="#s08"><b>08</b>Agachamento: avan&ccedil;o do joelho e torque</a></li>
-<li><a href="#s09"><b>09</b>Leg press: a altura do p&eacute; decide quem paga a conta</a></li>
-<li><a href="#s10"><b>10</b>Dor lateral e medial: o &quot;joelho travado&quot;</a></li>
-<li><a href="#s11"><b>11</b>&Aacute;rea de contato e press&atilde;o no menisco</a></li>
-<li><a href="#s12"><b>12</b>Amplitude parcial com carga alta como porta de entrada</a></li>
-<li><a href="#s13"><b>13</b>Cadeira extensora come&ccedil;ando curta: vasto lateral</a></li>
-</ol>
-
-<div class="toc-grp">Bloco 2 &middot; Treinamento de for&ccedil;a em sujeitos com h&eacute;rnia discal</div>
-<ol start="14">
-<li><a href="#s14"><b>14</b>Dor lombar n&atilde;o &eacute; h&eacute;rnia de disco</a></li>
-<li><a href="#s15"><b>15</b>O disco, a protrus&atilde;o e a raiz nervosa</a></li>
-<li><a href="#s16"><b>16</b>Classificar a dor de 0 a 10 e decidir treinar</a></li>
-<li><a href="#s17"><b>17</b>Cisalhamento faz parte do movimento</a></li>
-<li><a href="#s18"><b>18</b>Agachamento, terra e stiff como tratamento</a></li>
-<li><a href="#s19"><b>19</b>Terra em flex&atilde;o: o &acirc;ngulo das fibras</a></li>
-<li><a href="#s20"><b>20</b>Core, bracing e manobras respirat&oacute;rias</a></li>
-<li><a href="#s21"><b>21</b>Agachamento com cal&ccedil;o: transferir estresse</a></li>
-<li><a href="#s22"><b>22</b>Cinturão: o que entrega e o que n&atilde;o entrega</a></li>
-</ol>
-
-<div class="toc-grp">Bloco 3 &middot; Corre&ccedil;&atilde;o postural</div>
-<ol start="23">
-<li><a href="#s23"><b>23</b>Hipercifose tor&aacute;cica: o quadro completo</a></li>
-<li><a href="#s24"><b>24</b>Remada sem apoiar o peito: por qu&ecirc;</a></li>
-<li><a href="#s25"><b>25</b>Trap&eacute;zio superior e serr&aacute;til: a dupla desregulada</a></li>
-<li><a href="#s26"><b>26</b>Serr&aacute;til anterior: anatomia e fun&ccedil;&atilde;o</a></li>
-<li><a href="#s27"><b>27</b>Inclina&ccedil;&atilde;o anterior da esc&aacute;pula</a></li>
-<li><a href="#s28"><b>28</b>O serr&aacute;til n&atilde;o aparece na remada, aparece no supino</a></li>
-</ol>
-
-<div class="toc-grp">Bloco 4 &middot; Hipertrofia de delt&oacute;ides e impacto subacromial</div>
-<ol start="29">
-<li><a href="#s29"><b>29</b>Espa&ccedil;o subacromial e os tr&ecirc;s tipos de acr&ocirc;mio</a></li>
-<li><a href="#s30"><b>30</b>S&iacute;ndrome do impacto subacromial</a></li>
-<li><a href="#s31"><b>31</b>Ritmo escapuloumeral: 120&deg; + 60&deg;</a></li>
-<li><a href="#s32"><b>32</b>Flex&atilde;o de ombro inclina a esc&aacute;pula posteriormente</a></li>
-<li><a href="#s33"><b>33</b>Manguito rotador: coaptar, para dentro e para baixo</a></li>
-<li><a href="#s34"><b>34</b>Teste da parede e teste de Jobe</a></li>
-<li><a href="#s35"><b>35</b>Eleva&ccedil;&atilde;o lateral: 50&deg;, plano escapular e rota&ccedil;&atilde;o externa</a></li>
-<li><a href="#s36"><b>36</b>Exerc&iacute;cios funcionais e o manguito</a></li>
-</ol>
-
-</div>
-</details>
-
-<div class="block">
-  <div class="bk">Bloco 1</div>
-  <h2>Hipertrofia do qu&aacute;driceps e dor no joelho</h2>
-  <p class="who">Andr&eacute; Albuquerque</p>
+<div class="hero">
+  <div class="eyebrow">Workshop &middot; Biomec&acirc;nica Aplicada</div>
+  <div class="serie-bar">
+    <span class="atual">Joelho, Coluna e Ombro</span>
+    <span>01 &middot; Andr&eacute; Albuquerque &mdash; joelho</span>
+    <span>02 &middot; Gustavo Zorzi &mdash; coluna</span>
+    <span>03 &middot; Andr&eacute; Albuquerque &mdash; postura</span>
+    <span>04 &middot; Bruno S&aacute; &mdash; ombro</span>
+  </div>
+  <h1>Do <span class="em">caderno do workshop</span> ao mecanismo</h1>
+  <p class="lede">Material completo em <b>37 se&ccedil;&otilde;es</b> e <b>11 diagramas originais</b>, construído a partir das anota&ccedil;&otilde;es feitas durante o evento. Cada se&ccedil;&atilde;o preserva a anota&ccedil;&atilde;o do caderno <b>como ela foi escrita</b> e abre o racioc&iacute;nio por tr&aacute;s dela &mdash; <b>hipertrofia do qu&aacute;driceps e dor no joelho</b>, <b>treinamento de for&ccedil;a com h&eacute;rnia discal</b>, <b>corre&ccedil;&atilde;o postural</b> e <b>hipertrofia de delt&oacute;ides</b>.</p>
 </div>
 
-<section id="s01">
-<h3><span class="sec-num">01</span>O problema mec&acirc;nico que o joelho precisa resolver</h3>
-<p>Antes de qualquer anota&ccedil;&atilde;o do bloco fazer sentido, &eacute; preciso ter uma palavra bem instalada na cabe&ccedil;a: <strong>torque</strong>. Torque &eacute; a tend&ecirc;ncia que uma for&ccedil;a tem de girar uma articula&ccedil;&atilde;o, e ele n&atilde;o depende s&oacute; do tamanho da for&ccedil;a. Depende de <em>onde</em> essa for&ccedil;a passa em rela&ccedil;&atilde;o ao eixo da articula&ccedil;&atilde;o. A dist&acirc;ncia perpendicular entre a linha de for&ccedil;a e o eixo se chama <strong>bra&ccedil;o de momento</strong>, e o torque &eacute; o produto dos dois: for&ccedil;a &times; bra&ccedil;o de momento.</p>
+<main>
+
+<section id="torque">
+  <span class="sec-num">01 &mdash; JOELHO &middot; O PROBLEMA MEC&Acirc;NICO</span>
+  <h2>O que o joelho <span class="accent">precisa resolver</span></h2>
+  <p class="sec-sub">Torque e bra&ccedil;o de momento: a chave de leitura de todo o bloco.</p>
+  <div class="callout ok"><span class="tag">O fio condutor</span><p>Os quatro temas parecem soltos &mdash; joelho, lombar, postura, ombro &mdash; mas repetem a mesma l&oacute;gica tr&ecirc;s vezes: <strong>o tecido n&atilde;o adoece pela carga, adoece pela desproporc&atilde;o entre a carga e a capacidade que aquele tecido teve chance de construir</strong>. Ela reaparece em cada bloco.</p></div>
+<p>Antes de qualquer anota&ccedil;&atilde;o do bloco fazer sentido, &eacute; preciso ter uma palavra bem instalada na cabe&ccedil;a: <strong>torque</strong>. Torque &eacute; a tend&ecirc;ncia que uma for&ccedil;a tem de girar uma articula&ccedil;&atilde;o, e ele n&atilde;o depende s&oacute; do tamanho da for&ccedil;a. Depende de <em class="term">onde</em> essa for&ccedil;a passa em rela&ccedil;&atilde;o ao eixo da articula&ccedil;&atilde;o. A dist&acirc;ncia perpendicular entre a linha de for&ccedil;a e o eixo se chama <strong>bra&ccedil;o de momento</strong>, e o torque &eacute; o produto dos dois: for&ccedil;a &times; bra&ccedil;o de momento.</p>
 <p>A analogia que resolve: abrir uma porta empurrando na ma&ccedil;aneta &eacute; f&aacute;cil; empurrando perto da dobradi&ccedil;a, quase imposs&iacute;vel. A for&ccedil;a da sua m&atilde;o &eacute; a mesma. O que mudou foi o bra&ccedil;o de momento. No corpo, a dobradi&ccedil;a &eacute; a articula&ccedil;&atilde;o e a ma&ccedil;aneta &eacute; a posi&ccedil;&atilde;o do segmento no espa&ccedil;o.</p>
-<p>Isso importa porque o joelho quase nunca &eacute; sobrecarregado por &quot;peso demais&quot; em termos absolutos. Ele &eacute; sobrecarregado por <strong>combina&ccedil;&otilde;es de posi&ccedil;&atilde;o que aumentam o bra&ccedil;o de momento sem que ningu&eacute;m tenha reparado</strong>. Um agachamento com 60 kg e joelho muito &agrave; frente pode exigir mais do mecanismo extensor do que um agachamento com 80 kg em outra configura&ccedil;&atilde;o. Quando voc&ecirc; entende isso, para de pensar em &quot;exerc&iacute;cio que faz mal para o joelho&quot; e passa a pensar em <em>dose de torque</em> &mdash; que &eacute; algo que voc&ecirc; controla.</p>
-<div class="box"><span class="lb">Vocabul&aacute;rio do bloco</span>
-<ul>
+<p>Isso importa porque o joelho quase nunca &eacute; sobrecarregado por &quot;peso demais&quot; em termos absolutos. Ele &eacute; sobrecarregado por <strong>combina&ccedil;&otilde;es de posi&ccedil;&atilde;o que aumentam o bra&ccedil;o de momento sem que ningu&eacute;m tenha reparado</strong>. Um agachamento com 60 kg e joelho muito &agrave; frente pode exigir mais do mecanismo extensor do que um agachamento com 80 kg em outra configura&ccedil;&atilde;o. Quando voc&ecirc; entende isso, para de pensar em &quot;exerc&iacute;cio que faz mal para o joelho&quot; e passa a pensar em <em class="term">dose de torque</em> &mdash; que &eacute; algo que voc&ecirc; controla.</p>
+<div class="callout ok"><span class="tag">Vocabul&aacute;rio do bloco</span>
+<ul class="clean">
 <li><strong>Mecanismo extensor:</strong> qu&aacute;driceps, tend&atilde;o quadricipital, patela e tend&atilde;o patelar funcionando como uma unidade s&oacute;.</li>
 <li><strong>Articula&ccedil;&atilde;o patelofemoral:</strong> o contato entre a patela e o sulco do f&ecirc;mur. &Eacute; a que d&aacute; a dor anterior.</li>
 <li><strong>Articula&ccedil;&atilde;o tibiofemoral:</strong> o contato entre f&ecirc;mur e t&iacute;bia, onde ficam os meniscos. &Eacute; a que d&aacute; a dor lateral e medial.</li>
 </ul>
 </div>
-<p>Repare que a pr&oacute;pria anota&ccedil;&atilde;o do caderno j&aacute; separa o bloco em <em>dor mais anterior</em> e <em>dor mais lateral/medial</em>. Essa divis&atilde;o n&atilde;o &eacute; organizacional: ela corresponde a duas articula&ccedil;&otilde;es diferentes dentro do mesmo joelho, com mec&acirc;nicas diferentes e condutas diferentes.</p>
-</section>
+<p>Repare que a pr&oacute;pria anota&ccedil;&atilde;o do caderno j&aacute; separa o bloco em <em class="term">dor mais anterior</em> e <em class="term">dor mais lateral/medial</em>. Essa divis&atilde;o n&atilde;o &eacute; organizacional: ela corresponde a duas articula&ccedil;&otilde;es diferentes dentro do mesmo joelho, com mec&acirc;nicas diferentes e condutas diferentes.</p></section>
 
-<section id="s02">
-<h3><span class="sec-num">02</span>Condromal&aacute;cia: amolecimento n&atilde;o &eacute; sin&ocirc;nimo de dor</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="condromalacia">
+  <span class="sec-num">02 &mdash; JOELHO &middot; DOR ANTERIOR</span>
+  <h2>Condromal&aacute;cia: amolecimento n&atilde;o &eacute; <span class="accent">sin&ocirc;nimo de dor</span></h2>
+  <p class="sec-sub">Por que a cartilagem, sozinha, n&atilde;o consegue doer.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Dor mais anterior</p>
 <p>Condromal&aacute;cia &rarr; amolecimento da cartilagem &rarr; sinal de desgaste &rarr; nem sempre relacionada &agrave; dor</p>
 </div>
-<p>Condromal&aacute;cia quer dizer literalmente <em>cartilagem mole</em> (<em>chondro</em> = cartilagem, <em>mal&aacute;cia</em> = amolecimento). &Eacute; uma descri&ccedil;&atilde;o do estado do tecido, n&atilde;o de um sintoma. A cartilagem articular normal &eacute; firme e escorregadia, com um coeficiente de atrito mais baixo que gelo sobre gelo. Quando ela se altera, perde parte da matriz de proteoglicanos que segura &aacute;gua, e passa a amolecer, fissurar e, em est&aacute;gios avan&ccedil;ados, expor o osso subcondral.</p>
+<p>Condromal&aacute;cia quer dizer literalmente <em class="term">cartilagem mole</em> (<em class="term">chondro</em> = cartilagem, <em class="term">mal&aacute;cia</em> = amolecimento). &Eacute; uma descri&ccedil;&atilde;o do estado do tecido, n&atilde;o de um sintoma. A cartilagem articular normal &eacute; firme e escorregadia, com um coeficiente de atrito mais baixo que gelo sobre gelo. Quando ela se altera, perde parte da matriz de proteoglicanos que segura &aacute;gua, e passa a amolecer, fissurar e, em est&aacute;gios avan&ccedil;ados, expor o osso subcondral.</p>
 <p>Agora vem a parte que a anota&ccedil;&atilde;o marca e que muda a conduta: <strong>a cartilagem articular n&atilde;o tem inerva&ccedil;&atilde;o</strong>. N&atilde;o existe nervo nela. Isso significa que a cartilagem, sozinha, n&atilde;o consegue doer. O que d&oacute;i s&atilde;o as estruturas ao redor que t&ecirc;m nervo: o osso subcondral, a sinovial, a gordura infrapatelar, a c&aacute;psula, os tend&otilde;es.</p>
 <p>A consequ&ecirc;ncia pr&aacute;tica &eacute; enorme. Estudos de imagem em pessoas <strong>sem nenhuma queixa</strong> encontram altera&ccedil;&otilde;es cartilaginosas com frequ&ecirc;ncia alta &mdash; e, do outro lado, existem pessoas com dor anterior intensa e cartilagem preservada. Ou seja: a imagem descreve o tecido, n&atilde;o descreve a experi&ecirc;ncia da pessoa.</p>
-<div class="box pratica"><span class="lb">Na pr&aacute;tica</span>
+<div class="callout"><span class="tag">Na pr&aacute;tica</span>
 <p>Quando um aluno chega com um laudo dizendo &quot;condromal&aacute;cia grau II&quot;, esse laudo <strong>n&atilde;o &eacute; a explica&ccedil;&atilde;o da dor dele nem o teto do que ele pode treinar</strong>. Ele &eacute; um dado de contexto. O que orienta a conduta &eacute; o comportamento dos sintomas: o que aumenta, o que alivia, quanto tempo dura depois do est&iacute;mulo. Tratar o laudo como senten&ccedil;a produz um aluno com medo do pr&oacute;prio joelho &mdash; e medo de movimento &eacute;, por si s&oacute;, um fator que piora dor.</p>
 </div>
-<p>O termo &quot;desgaste&quot; usado na anota&ccedil;&atilde;o merece cuidado no vocabul&aacute;rio com o aluno. Ele sugere um pneu gastando, algo que s&oacute; piora com uso. A cartilagem funciona quase ao contr&aacute;rio: ela depende de carga c&iacute;clica para trocar nutrientes, porque &eacute; avascular e se alimenta por embebi&ccedil;&atilde;o do l&iacute;quido sinovial. Aus&ecirc;ncia de carga &eacute; um problema para ela, n&atilde;o uma prote&ccedil;&atilde;o.</p>
-</section>
+<p>O termo &quot;desgaste&quot; usado na anota&ccedil;&atilde;o merece cuidado no vocabul&aacute;rio com o aluno. Ele sugere um pneu gastando, algo que s&oacute; piora com uso. A cartilagem funciona quase ao contr&aacute;rio: ela depende de carga c&iacute;clica para trocar nutrientes, porque &eacute; avascular e se alimenta por embebi&ccedil;&atilde;o do l&iacute;quido sinovial. Aus&ecirc;ncia de carga &eacute; um problema para ela, n&atilde;o uma prote&ccedil;&atilde;o.</p></section>
 
-<section id="s03">
-<h3><span class="sec-num">03</span>Mobiliza&ccedil;&atilde;o da patela e a tal &quot;lubrifica&ccedil;&atilde;o&quot;</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="mobilizacao-patela">
+  <span class="sec-num">03 &mdash; JOELHO &middot; MOBILIZA&Ccedil;&Atilde;O</span>
+  <h2>Deslizar a patela e a tal <span class="accent">lubrifica&ccedil;&atilde;o</span></h2>
+  <p class="sec-sub">O que a manobra faz de verdade &mdash; e o que ela n&atilde;o faz.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Movimentar a patela em ambos os lados com o joelho estendido, depois flexionar e estender o joelho na m&aacute;xima amplitude &rarr; lubrifica&ccedil;&atilde;o da articula&ccedil;&atilde;o</p>
 </div>
 <p>Essa sequ&ecirc;ncia tem dois passos com objetivos distintos, e vale separar.</p>
 <p><strong>Passo 1 &mdash; deslizar a patela lateral e medialmente com o joelho estendido.</strong> A patela s&oacute; se move livremente quando o qu&aacute;driceps est&aacute; relaxado; com o joelho estendido e a perna apoiada, ela fica &quot;solta&quot; sobre o sulco. Esse deslizamento mobiliza os retin&aacute;culos (as l&acirc;minas de tecido conjuntivo que seguram a patela dos dois lados) e d&aacute; ao sistema nervoso uma informa&ccedil;&atilde;o nova sobre uma regi&atilde;o que costuma estar defendida.</p>
 <p><strong>Passo 2 &mdash; flexionar e estender na maior amplitude poss&iacute;vel.</strong> Aqui entra a lubrifica&ccedil;&atilde;o de verdade. O l&iacute;quido sinovial n&atilde;o &eacute; bombeado por nenhuma gl&acirc;ndula: ele se distribui pelo movimento. A cartilagem se comporta como uma esponja &mdash; comprime e libera fluido, descomprime e reabsorve. Sem ciclos de flex&atilde;o e extens&atilde;o, o fluido n&atilde;o circula pela superf&iacute;cie e a nutri&ccedil;&atilde;o da cartilagem cai.</p>
-<p>Vale ser honesto sobre o que isso &eacute;: <strong>&eacute; prepara&ccedil;&atilde;o e modula&ccedil;&atilde;o de sintoma, n&atilde;o tratamento estrutural</strong>. Ningu&eacute;m regenera cartilagem deslizando a patela. O que se ganha &eacute; uma janela mais confort&aacute;vel para o aluno treinar &mdash; e o treino, esse sim, muda a capacidade do tecido. Use como aquecimento espec&iacute;fico antes de uma s&eacute;rie de agachamento em quem tem dor anterior, e n&atilde;o como &quot;a&quot; interven&ccedil;&atilde;o da sess&atilde;o.</p>
-</section>
+<p>Vale ser honesto sobre o que isso &eacute;: <strong>&eacute; prepara&ccedil;&atilde;o e modula&ccedil;&atilde;o de sintoma, n&atilde;o tratamento estrutural</strong>. Ningu&eacute;m regenera cartilagem deslizando a patela. O que se ganha &eacute; uma janela mais confort&aacute;vel para o aluno treinar &mdash; e o treino, esse sim, muda a capacidade do tecido. Use como aquecimento espec&iacute;fico antes de uma s&eacute;rie de agachamento em quem tem dor anterior, e n&atilde;o como &quot;a&quot; interven&ccedil;&atilde;o da sess&atilde;o.</p></section>
 
-<section id="s04">
-<h3><span class="sec-num">04</span>Adutores hiperativos e gl&uacute;teo m&eacute;dio fraco</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="adutores">
+  <span class="sec-num">04 &mdash; JOELHO &middot; PLANO FRONTAL</span>
+  <h2>Adutores hiperativos e <span class="accent">gl&uacute;teo m&eacute;dio fraco</span></h2>
+  <p class="sec-sub">Como o controle do quadril chega at&eacute; a patela.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Desconforto pode estar ligado a hiperatividade de adutores (&quot;encurtamento&quot;) e enfraquecimento do gl&uacute;teo m&eacute;dio.</p>
 </div>
 <p>Repare que a pr&oacute;pria anota&ccedil;&atilde;o coloca &quot;encurtamento&quot; entre aspas &mdash; e faz muito bem. Raramente se trata de um m&uacute;sculo que ficou fisicamente mais curto. Trata-se de um m&uacute;sculo com <strong>tono aumentado e limiar de ativa&ccedil;&atilde;o mais baixo</strong>: ele entra antes e sai depois do que deveria, em tarefas onde n&atilde;o era o protagonista.</p>
-<p>O mecanismo que liga isso ao joelho &eacute; o plano frontal. O gl&uacute;teo m&eacute;dio &eacute; o principal estabilizador do quadril nesse plano: em apoio unipodal, ele impede que a pelve caia para o lado oposto e que o f&ecirc;mur desabe em adu&ccedil;&atilde;o e rota&ccedil;&atilde;o interna. Quando ele n&atilde;o d&aacute; conta, o joelho vai para dentro &mdash; o famoso <em>valgo din&acirc;mico</em>. E como a patela &eacute; puxada para cima pelo qu&aacute;driceps mas o joelho migrou medialmente, o <strong>&acirc;ngulo Q efetivo aumenta</strong> e a patela passa a ser tracionada contra a faceta lateral do sulco femoral. Press&atilde;o concentrada em menos &aacute;rea, na mesma carga: dor anterior.</p>
-<div class="box"><span class="lb">Exemplo concreto</span>
+<p>O mecanismo que liga isso ao joelho &eacute; o plano frontal. O gl&uacute;teo m&eacute;dio &eacute; o principal estabilizador do quadril nesse plano: em apoio unipodal, ele impede que a pelve caia para o lado oposto e que o f&ecirc;mur desabe em adu&ccedil;&atilde;o e rota&ccedil;&atilde;o interna. Quando ele n&atilde;o d&aacute; conta, o joelho vai para dentro &mdash; o famoso <em class="term">valgo din&acirc;mico</em>. E como a patela &eacute; puxada para cima pelo qu&aacute;driceps mas o joelho migrou medialmente, o <strong>&acirc;ngulo Q efetivo aumenta</strong> e a patela passa a ser tracionada contra a faceta lateral do sulco femoral. Press&atilde;o concentrada em menos &aacute;rea, na mesma carga: dor anterior.</p>
+<div class="callout ok"><span class="tag">Exemplo concreto</span>
 <p>Aluna que sente dor anterior s&oacute; no agachamento b&uacute;lgaro e na descida de escada, nunca no leg press. O que essas duas tarefas t&ecirc;m em comum e o leg press n&atilde;o tem? <strong>Apoio unipodal com exig&ecirc;ncia de plano frontal.</strong> Isso aponta o dedo para o controle de quadril, n&atilde;o para o joelho em si.</p>
 </div>
-<p>Uma ressalva importante para n&atilde;o virar dogma: valgo din&acirc;mico <strong>n&atilde;o &eacute; automaticamente patol&oacute;gico</strong>. Existem atletas com desvio vis&iacute;vel e nenhum sintoma, e o joelho colapsa levemente para dentro em muitos saltos de alto rendimento. O que interessa &eacute; a combina&ccedil;&atilde;o: desvio + sintoma na mesma tarefa + m&eacute;trica de for&ccedil;a de abdutores abaixo do esperado. Um achado isolado n&atilde;o fecha nada.</p>
-</section>
+<p>Uma ressalva importante para n&atilde;o virar dogma: valgo din&acirc;mico <strong>n&atilde;o &eacute; automaticamente patol&oacute;gico</strong>. Existem atletas com desvio vis&iacute;vel e nenhum sintoma, e o joelho colapsa levemente para dentro em muitos saltos de alto rendimento. O que interessa &eacute; a combina&ccedil;&atilde;o: desvio + sintoma na mesma tarefa + m&eacute;trica de for&ccedil;a de abdutores abaixo do esperado. Um achado isolado n&atilde;o fecha nada.</p></section>
 
-<section id="s05">
-<h3><span class="sec-num">05</span>Por que alongar adutor exige flex&atilde;o de quadril</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="alongamento-adutor">
+  <span class="sec-num">05 &mdash; JOELHO &middot; ALONGAMENTO</span>
+  <h2>Por que alongar adutor exige <span class="accent">flex&atilde;o de quadril</span></h2>
+  <p class="sec-sub">Um m&uacute;sculo s&oacute; alonga quando voc&ecirc; desfaz todas as a&ccedil;&otilde;es dele.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Alongamento de adutores &rarr; al&eacute;m de adutores tamb&eacute;m s&atilde;o extensores do quadril &rarr; alongamentos executando flex&atilde;o de quadril</p>
 </div>
 <p>Esta anota&ccedil;&atilde;o &eacute; um exemplo perfeito de racioc&iacute;nio biomec&acirc;nico aplicado, e vale entender a regra geral por tr&aacute;s dela: <strong>para alongar um m&uacute;sculo, voc&ecirc; precisa executar o movimento oposto a cada uma das a&ccedil;&otilde;es dele, simultaneamente</strong>. Se voc&ecirc; s&oacute; desfaz uma das a&ccedil;&otilde;es, o m&uacute;sculo continua com folga nas outras e voc&ecirc; sente tens&atilde;o em qualquer outro lugar antes de sentir no alvo.</p>
-<p>O grupo adutor n&atilde;o &eacute; um m&uacute;sculo s&oacute;. Os adutores magno, longo e curto, o gr&aacute;cil e o pect&iacute;neo se inserem ao longo da linha &aacute;spera do f&ecirc;mur, e boa parte deles &mdash; especialmente a por&ccedil;&atilde;o posterior do adutor magno, que se insere no tub&eacute;rculo adutor e &eacute; funcionalmente quase um isquiotibial &mdash; passa <em>atr&aacute;s</em> do eixo de flex&atilde;o e extens&atilde;o do quadril. Passar atr&aacute;s do eixo significa gerar torque extensor.</p>
+<p>O grupo adutor n&atilde;o &eacute; um m&uacute;sculo s&oacute;. Os adutores magno, longo e curto, o gr&aacute;cil e o pect&iacute;neo se inserem ao longo da linha &aacute;spera do f&ecirc;mur, e boa parte deles &mdash; especialmente a por&ccedil;&atilde;o posterior do adutor magno, que se insere no tub&eacute;rculo adutor e &eacute; funcionalmente quase um isquiotibial &mdash; passa <em class="term">atr&aacute;s</em> do eixo de flex&atilde;o e extens&atilde;o do quadril. Passar atr&aacute;s do eixo significa gerar torque extensor.</p>
 <p>Ent&atilde;o o adutor magno faz duas coisas: adu&ccedil;&atilde;o e extens&atilde;o de quadril. Para along&aacute;-lo de fato voc&ecirc; precisa de <strong>abdu&ccedil;&atilde;o + flex&atilde;o de quadril ao mesmo tempo</strong>. Uma abdu&ccedil;&atilde;o pura, com quadril neutro ou em extens&atilde;o, deixa a por&ccedil;&atilde;o posterior encurtada e voc&ecirc; sente o alongamento s&oacute; nas fibras anteriores.</p>
-<div class="box pratica"><span class="lb">Na pr&aacute;tica</span>
-<p>Sapo (<em>frog stretch</em>) com quadril bem fletido, ou aben&ccedil;oado sentado com tronco &agrave; frente, atingem a por&ccedil;&atilde;o posterior. Espacate lateral em p&eacute; com quadril neutro atinge principalmente as fibras anteriores. N&atilde;o s&atilde;o exerc&iacute;cios intercambi&aacute;veis, e a diferen&ccedil;a explica por que alguns alunos juram que &quot;alongam adutor todo dia&quot; e nada muda.</p>
-</div>
-</section>
+<div class="callout"><span class="tag">Na pr&aacute;tica</span>
+<p>Sapo (<em class="term">frog stretch</em>) com quadril bem fletido, ou aben&ccedil;oado sentado com tronco &agrave; frente, atingem a por&ccedil;&atilde;o posterior. Espacate lateral em p&eacute; com quadril neutro atinge principalmente as fibras anteriores. N&atilde;o s&atilde;o exerc&iacute;cios intercambi&aacute;veis, e a diferen&ccedil;a explica por que alguns alunos juram que &quot;alongam adutor todo dia&quot; e nada muda.</p>
+</div></section>
 
-<section id="s06">
-<h3><span class="sec-num">06</span>Fortalecer o qu&aacute;driceps &eacute; o ponto-chave</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="quadriceps">
+  <span class="sec-num">06 &mdash; JOELHO &middot; O ALVO</span>
+  <h2>Fortalecer o qu&aacute;driceps &eacute; o <span class="accent">ponto-chave</span></h2>
+  <p class="sec-sub">Reduzir demanda compra tempo; aumentar capacidade resolve.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Fortalecer o qu&aacute;dric &rarr; ponto chave</p>
 </div>
 <p>Depois de toda a discuss&atilde;o sobre adutor, gl&uacute;teo m&eacute;dio e patela, a anota&ccedil;&atilde;o aterrissa na conduta mais bem sustentada por evid&ecirc;ncia em dor femoropatelar: <strong>o qu&aacute;driceps precisa ficar mais forte</strong>. N&atilde;o &eacute; um detalhe da conduta, &eacute; o centro dela.</p>
-<p>A l&oacute;gica &eacute; direta. A dor anterior aparece quando a press&atilde;o de contato entre patela e f&ecirc;mur excede o que aquele tecido tolera. Voc&ecirc; tem duas alavancas: <em>diminuir a demanda</em> (ajustar exerc&iacute;cio, amplitude, volume &mdash; efeito imediato, mas teto baixo) ou <em>aumentar a capacidade</em> (fortalecer &mdash; mais lento, mas &eacute; o que muda o teto). A primeira compra tempo. A segunda resolve.</p>
+<p>A l&oacute;gica &eacute; direta. A dor anterior aparece quando a press&atilde;o de contato entre patela e f&ecirc;mur excede o que aquele tecido tolera. Voc&ecirc; tem duas alavancas: <em class="term">diminuir a demanda</em> (ajustar exerc&iacute;cio, amplitude, volume &mdash; efeito imediato, mas teto baixo) ou <em class="term">aumentar a capacidade</em> (fortalecer &mdash; mais lento, mas &eacute; o que muda o teto). A primeira compra tempo. A segunda resolve.</p>
 <p>H&aacute; ainda um efeito de segunda ordem que raramente se comenta: um qu&aacute;driceps mais forte precisa recrutar uma fra&ccedil;&atilde;o menor da sua capacidade m&aacute;xima para a mesma tarefa. Como a for&ccedil;a de compress&atilde;o patelofemoral &eacute; consequ&ecirc;ncia direta da tens&atilde;o no mecanismo extensor, subir escada com um qu&aacute;driceps forte comprime a patela com <strong>menos</strong> intensidade relativa e por <strong>menos</strong> tempo de exposi&ccedil;&atilde;o. Fortalecer, aqui, tamb&eacute;m &eacute; descarregar.</p>
-<p>A parte dif&iacute;cil &eacute; que fortalecer qu&aacute;driceps em quem tem dor anterior exige encontrar a janela em que ele consegue produzir tens&atilde;o alta sem comprimir demais a patela. &Eacute; exatamente esse o assunto das se&ccedil;&otilde;es 08, 09 e 12.</p>
-</section>
+<p>A parte dif&iacute;cil &eacute; que fortalecer qu&aacute;driceps em quem tem dor anterior exige encontrar a janela em que ele consegue produzir tens&atilde;o alta sem comprimir demais a patela. &Eacute; exatamente esse o assunto das se&ccedil;&otilde;es 08, 09 e 12.</p></section>
 
-<section id="s07">
-<h3><span class="sec-num">07</span>Teste de compress&atilde;o da patela: o que ele n&atilde;o &eacute;</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="teste-patela">
+  <span class="sec-num">07 &mdash; JOELHO &middot; AVALIA&Ccedil;&Atilde;O</span>
+  <h2>Teste de compress&atilde;o da patela: <span class="accent">o que ele n&atilde;o &eacute;</span></h2>
+  <p class="sec-sub">Sensibilidade razo&aacute;vel, especificidade baixa e limite de escopo.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>(com joelho estendido) Teste de compress&atilde;o da patela &rarr; verificar se gera inc&ocirc;modo no aluno &rarr; pode indicar sobrecarga do mecanismo patelofemoral &rarr; irrita&ccedil;&atilde;o da cartilagem, altera&ccedil;&atilde;o do movimento da patela, irrita&ccedil;&atilde;o da articula&ccedil;&atilde;o, entre outros &rarr; n&atilde;o gera diagn&oacute;stico</p>
 </div>
 <p>A execu&ccedil;&atilde;o &eacute; simples: aluno deitado, joelho estendido e qu&aacute;driceps relaxado, o avaliador comprime a patela contra o sulco femoral e pode pedir uma contra&ccedil;&atilde;o isom&eacute;trica do qu&aacute;driceps nessa posi&ccedil;&atilde;o. Se aparece dor conhecida &mdash; aquela que o aluno reconhece como &quot;a minha dor&quot; &mdash; o teste &eacute; considerado positivo.</p>
 <p>O ponto que a anota&ccedil;&atilde;o cravou em caixa alta e que precisa ser levado a s&eacute;rio &eacute; o final: <strong>n&atilde;o gera diagn&oacute;stico</strong>. E vale entender por que, tecnicamente.</p>
-<p>O teste tem <em>sensibilidade razo&aacute;vel e especificidade baixa</em>. Traduzindo sem jarg&atilde;o: ele acende para muita coisa diferente. A compress&atilde;o mec&acirc;nica que voc&ecirc; aplica atinge simultaneamente cartilagem, osso subcondral, sinovial, gordura infrapatelar e retin&aacute;culos. Qualquer uma dessas estruturas sensibilizada produz o mesmo resultado positivo. Al&eacute;m disso, uma parcela de pessoas <strong>sem</strong> queixa alguma tamb&eacute;m sente inc&ocirc;modo no teste, simplesmente porque a manobra n&atilde;o &eacute; agrad&aacute;vel.</p>
-<div class="box"><span class="lb">Como usar bem</span>
-<ul>
+<p>O teste tem <em class="term">sensibilidade razo&aacute;vel e especificidade baixa</em>. Traduzindo sem jarg&atilde;o: ele acende para muita coisa diferente. A compress&atilde;o mec&acirc;nica que voc&ecirc; aplica atinge simultaneamente cartilagem, osso subcondral, sinovial, gordura infrapatelar e retin&aacute;culos. Qualquer uma dessas estruturas sensibilizada produz o mesmo resultado positivo. Al&eacute;m disso, uma parcela de pessoas <strong>sem</strong> queixa alguma tamb&eacute;m sente inc&ocirc;modo no teste, simplesmente porque a manobra n&atilde;o &eacute; agrad&aacute;vel.</p>
+<div class="callout ok"><span class="tag">Como usar bem</span>
+<ul class="clean">
 <li><strong>Como triagem de regi&atilde;o:</strong> ajuda a confirmar que o problema est&aacute; no compartimento anterior e n&atilde;o no medial ou lateral.</li>
 <li><strong>Como refer&ecirc;ncia de acompanhamento:</strong> reaplicar depois de seis semanas de fortalecimento d&aacute; um marcador de evolu&ccedil;&atilde;o &mdash; o mesmo est&iacute;mulo passou a incomodar menos.</li>
 <li><strong>Nunca como r&oacute;tulo:</strong> &quot;seu teste deu positivo, voc&ecirc; tem condromal&aacute;cia&quot; &eacute; um salto que o teste n&atilde;o autoriza, e que instala medo no aluno.</li>
 </ul>
 </div>
-<p>E o limite profissional: como Personal Trainer, sua fun&ccedil;&atilde;o com esses testes &eacute; <strong>triar e decidir se encaminha</strong>, n&atilde;o nomear patologia. Diagn&oacute;stico &eacute; do m&eacute;dico. O que est&aacute; no seu escopo &eacute; ajustar o est&iacute;mulo e monitorar a resposta.</p>
-</section>
+<p>E o limite profissional: como Personal Trainer, sua fun&ccedil;&atilde;o com esses testes &eacute; <strong>triar e decidir se encaminha</strong>, n&atilde;o nomear patologia. Diagn&oacute;stico &eacute; do m&eacute;dico. O que est&aacute; no seu escopo &eacute; ajustar o est&iacute;mulo e monitorar a resposta.</p></section>
 
-<section id="s08">
-<h3><span class="sec-num">08</span>Agachamento: avan&ccedil;o do joelho e torque</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="agachamento-torque">
+  <span class="sec-num">08 &mdash; JOELHO &middot; AGACHAMENTO</span>
+  <h2>Avan&ccedil;o do joelho e <span class="accent">bra&ccedil;o de momento</span></h2>
+  <p class="sec-sub">Por que o mito do joelho que n&atilde;o passa do p&eacute; foi enterrado.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Na pr&aacute;tica: Agachamento &rarr; joelho avan&ccedil;ando muito para frente, maior torque &rarr; gera desconforto (possivelmente)</p>
 </div>
 <p>Volte &agrave; se&ccedil;&atilde;o 01 por um segundo. O torque no joelho &eacute; a for&ccedil;a que desce (peso do corpo + barra) multiplicada pela dist&acirc;ncia horizontal entre a linha dessa for&ccedil;a e o eixo do joelho. Quando o joelho avan&ccedil;a &agrave; frente do p&eacute;, essa dist&acirc;ncia horizontal cresce &mdash; e o torque exigido do qu&aacute;driceps cresce junto.</p>
-<figure>
-<svg viewBox="0 0 800 330" role="img" aria-label="Compara&ccedil;&atilde;o do bra&ccedil;o de momento no joelho com pouco e muito avan&ccedil;o anterior" class="f1">
-<style>
-.f1 .bg{fill:#101010}.f1 .seg{stroke:#e8e6e3;stroke-width:5;stroke-linecap:round;fill:none}
-.f1 .gr{stroke:#3a3a3a;stroke-width:2}.f1 .ld{stroke:#6a6a6a;stroke-width:2;stroke-dasharray:6 6}
-.f1 .arm{stroke:#ff6b1a;stroke-width:4}.f1 .jt{fill:#ff6b1a}
-.f1 .t{fill:#a8a4a0;font:600 13px Inter,Arial,sans-serif}
-.f1 .th{fill:#ff6b1a;font:700 14px Inter,Arial,sans-serif}
-.f1 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
-</style>
-<rect class="bg" width="800" height="330"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 01</span>Bra&ccedil;o de momento no joelho</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-label="Compara&ccedil;&atilde;o do bra&ccedil;o de momento no joelho com pouco e muito avan&ccedil;o anterior" class="wb01">
+<defs><style>
+.wb01 .seg{stroke:#e8e6e3;stroke-width:5;stroke-linecap:round;fill:none}
+.wb01 .gr{stroke:#3a3a3a;stroke-width:2}.wb01 .ld{stroke:#6a6a6a;stroke-width:2;stroke-dasharray:6 6}
+.wb01 .arm{stroke:#ff6b1a;stroke-width:4}.wb01 .jt{fill:#ff6b1a}
+.wb01 .t{fill:#a8a4a0;font:600 13px Inter,Arial,sans-serif}
+.wb01 .th{fill:#ff6b1a;font:700 14px Inter,Arial,sans-serif}
+.wb01 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
+</style></defs>
 <line class="gr" x1="30" y1="284" x2="380" y2="284"/>
 <line class="gr" x1="420" y1="284" x2="770" y2="284"/>
 <text class="tt" x="30" y="30">Joelho pouco &agrave; frente</text>
@@ -324,34 +246,33 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="th" x="558" y="180">D &gt; d</text>
 <text class="t" x="420" y="312">mesma carga, bra&ccedil;o de momento maior</text>
 </svg>
-<figcaption>Figura 1 &mdash; A carga que desce &eacute; a mesma nos dois casos. O que muda &eacute; a dist&acirc;ncia horizontal (laranja) at&eacute; o eixo do joelho. Torque exigido do qu&aacute;driceps = carga &times; essa dist&acirc;ncia.</figcaption>
-</figure>
+<div class="figcap">A carga que desce &eacute; a mesma nos dois casos. O que muda &eacute; a dist&acirc;ncia horizontal (laranja) at&eacute; o eixo do joelho. Torque exigido do qu&aacute;driceps = carga &times; essa dist&acirc;ncia.</div></div>
 <p>Agora a parte que separa o profissional do repetidor de frase pronta: <strong>isso n&atilde;o significa que joelho n&atilde;o pode passar do p&eacute;</strong>. Aquele mito antigo do &quot;joelho nunca ultrapassa a ponta do p&eacute;&quot; foi enterrado justamente porque impedir o avan&ccedil;o do joelho obriga o tronco a inclinar mais &mdash; e o torque que voc&ecirc; tirou do joelho aparece inteiro no quadril e na lombar. A energia n&atilde;o some, ela muda de endere&ccedil;o.</p>
-<p>Repare tamb&eacute;m no cuidado que a anota&ccedil;&atilde;o teve ao escrever <em>possivelmente</em>. Maior torque significa maior demanda, e maior demanda s&oacute; vira desconforto quando ultrapassa a capacidade daquele tecido naquele momento. Em um aluno assintom&aacute;tico e bem treinado, o mesmo avan&ccedil;o de joelho &eacute; um est&iacute;mulo excelente de qu&aacute;driceps.</p>
-<div class="box pratica"><span class="lb">Na pr&aacute;tica</span>
+<p>Repare tamb&eacute;m no cuidado que a anota&ccedil;&atilde;o teve ao escrever <em class="term">possivelmente</em>. Maior torque significa maior demanda, e maior demanda s&oacute; vira desconforto quando ultrapassa a capacidade daquele tecido naquele momento. Em um aluno assintom&aacute;tico e bem treinado, o mesmo avan&ccedil;o de joelho &eacute; um est&iacute;mulo excelente de qu&aacute;driceps.</p>
+<div class="callout"><span class="tag">Na pr&aacute;tica</span>
 <p>Aluno com dor anterior aguda: reduza temporariamente o avan&ccedil;o do joelho (posi&ccedil;&atilde;o de p&eacute;s um pouco mais afastada, agachamento em caixa, mais dobra de quadril). N&atilde;o porque avan&ccedil;ar &eacute; errado, mas porque voc&ecirc; est&aacute; deliberadamente <strong>abaixando a demanda enquanto sobe a capacidade por outra via</strong>. Depois de 6&ndash;10 semanas, reintroduza a amplitude com joelho &agrave; frente &mdash; que &eacute; o que constr&oacute;i toler&acirc;ncia de verdade.</p>
-</div>
-</section>
+</div></section>
 
-<section id="s09">
-<h3><span class="sec-num">09</span>Leg press: a altura do p&eacute; decide quem paga a conta</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="leg-press">
+  <span class="sec-num">09 &mdash; JOELHO &middot; LEG PRESS</span>
+  <h2>A altura do p&eacute; decide <span class="accent">quem paga a conta</span></h2>
+  <p class="sec-sub">A mesma carga, redistribu&iacute;da entre joelho e quadril.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Leg press &rarr; p&eacute;s muito abaixo da plataforma, maior torque para o joelho</p>
 <p>No leg press recomenda-se fazer o exerc&iacute;cio com os p&eacute;s mais altos, favorecendo o fortalecimento do gl&uacute;teo m&aacute;ximo e gerando menos torque para o joelho &rarr; maior amplitude</p>
 </div>
 <p>O leg press &eacute; o exerc&iacute;cio onde essa manipula&ccedil;&atilde;o &eacute; mais limpa, porque a plataforma restringe o p&eacute; e voc&ecirc; controla exatamente a geometria. Colocar o p&eacute; <strong>baixo</strong> na plataforma joga o joelho para a frente na descida: bra&ccedil;o de momento grande no joelho, pequeno no quadril &rarr; exerc&iacute;cio dominante de qu&aacute;driceps. Colocar o p&eacute; <strong>alto</strong> mant&eacute;m a tibia mais vertical e leva o quadril a uma flex&atilde;o mais profunda: bra&ccedil;o de momento menor no joelho, maior no quadril &rarr; mais gl&uacute;teo e isquiotibiais.</p>
-<figure>
-<svg viewBox="0 0 800 330" role="img" aria-label="Leg press com p&eacute;s baixos e p&eacute;s altos na plataforma" class="f2">
-<style>
-.f2 .bg{fill:#101010}.f2 .pl{stroke:#4a4a4a;stroke-width:9;stroke-linecap:round}
-.f2 .seg{stroke:#e8e6e3;stroke-width:5;stroke-linecap:round;fill:none}
-.f2 .ft{stroke:#ff6b1a;stroke-width:7;stroke-linecap:round}
-.f2 .jt{fill:#ff6b1a}.f2 .hip{fill:#7a756f}
-.f2 .t{fill:#a8a4a0;font:600 13px Inter,Arial,sans-serif}
-.f2 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
-.f2 .th{fill:#ff6b1a;font:700 13px Inter,Arial,sans-serif}
-</style>
-<rect class="bg" width="800" height="330"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 02</span>Leg press &mdash; altura do p&eacute; na plataforma</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-label="Leg press com p&eacute;s baixos e p&eacute;s altos na plataforma" class="wb02">
+<defs><style>
+.wb02 .pl{stroke:#4a4a4a;stroke-width:9;stroke-linecap:round}
+.wb02 .seg{stroke:#e8e6e3;stroke-width:5;stroke-linecap:round;fill:none}
+.wb02 .ft{stroke:#ff6b1a;stroke-width:7;stroke-linecap:round}
+.wb02 .jt{fill:#ff6b1a}.wb02 .hip{fill:#7a756f}
+.wb02 .t{fill:#a8a4a0;font:600 13px Inter,Arial,sans-serif}
+.wb02 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
+.wb02 .th{fill:#ff6b1a;font:700 13px Inter,Arial,sans-serif}
+</style></defs>
 <text class="tt" x="30" y="30">P&eacute;s baixos na plataforma</text>
 <text class="tt" x="420" y="30">P&eacute;s altos na plataforma</text>
 <line class="pl" x1="250" y1="60" x2="120" y2="250"/>
@@ -373,54 +294,54 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="t" x="450" y="290">tibia vertical + quadril mais fletido</text>
 <text class="t" x="450" y="310">torque migra para o gl&uacute;teo m&aacute;ximo</text>
 </svg>
-<figcaption>Figura 2 &mdash; A altura do p&eacute; na plataforma redistribui o torque entre joelho e quadril. O peso da m&aacute;quina n&atilde;o mudou; mudou quem foi encarregado de venc&ecirc;-lo.</figcaption>
-</figure>
-<p>A observa&ccedil;&atilde;o final da anota&ccedil;&atilde;o &mdash; <em>maior amplitude</em> &mdash; merece destaque, porque &eacute; o benef&iacute;cio que quase ningu&eacute;m contabiliza. Com o p&eacute; alto, o quadril consegue fletir mais antes que a pelve comece a girar para tr&aacute;s (aquela retrovers&atilde;o que arredonda a lombar contra o encosto). Voc&ecirc; ganha <strong>mais amplitude &uacute;til e mais tempo sob tens&atilde;o em comprimento longo</strong> &mdash; e treinar m&uacute;sculo alongado tem se mostrado consistentemente favor&aacute;vel para hipertrofia, sobretudo em gl&uacute;teo e adutor magno.</p>
-<div class="box"><span class="lb">Cuidado que anda junto</span>
+<div class="figcap">A altura do p&eacute; na plataforma redistribui o torque entre joelho e quadril. O peso da m&aacute;quina n&atilde;o mudou; mudou quem foi encarregado de venc&ecirc;-lo.</div></div>
+<p>A observa&ccedil;&atilde;o final da anota&ccedil;&atilde;o &mdash; <em class="term">maior amplitude</em> &mdash; merece destaque, porque &eacute; o benef&iacute;cio que quase ningu&eacute;m contabiliza. Com o p&eacute; alto, o quadril consegue fletir mais antes que a pelve comece a girar para tr&aacute;s (aquela retrovers&atilde;o que arredonda a lombar contra o encosto). Voc&ecirc; ganha <strong>mais amplitude &uacute;til e mais tempo sob tens&atilde;o em comprimento longo</strong> &mdash; e treinar m&uacute;sculo alongado tem se mostrado consistentemente favor&aacute;vel para hipertrofia, sobretudo em gl&uacute;teo e adutor magno.</p>
+<div class="callout ok"><span class="tag">Cuidado que anda junto</span>
 <p>P&eacute; muito alto em quem tem pouca mobilidade de quadril antecipa a retrovers&atilde;o p&eacute;lvica. Filme de lado uma vez e identifique em qual profundidade a pelve gira: <strong>essa &eacute; a amplitude de trabalho do aluno hoje</strong>, e ela muda com o tempo.</p>
-</div>
-</section>
+</div></section>
 
-<section id="s10">
-<h3><span class="sec-num">10</span>Dor lateral e medial: o &quot;joelho travado&quot;</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="joelho-travado">
+  <span class="sec-num">10 &mdash; JOELHO &middot; DOR LATERAL E MEDIAL</span>
+  <h2>O <span class="accent">joelho travado</span> e o que ele significa</h2>
+  <p class="sec-sub">Bloqueio verdadeiro, pseudobloqueio e crit&eacute;rios de encaminhamento.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Dor mais lateral/medial</p>
 <p>&quot;Joelho travado&quot;, n&atilde;o estende completamente &rarr; muita dificuldade em levantar em posi&ccedil;&otilde;es de flex&atilde;o de joelho</p>
 </div>
 <p>Aqui a anota&ccedil;&atilde;o troca de compartimento. Dor anterior aponta para o mecanismo patelofemoral; dor lateral ou medial aponta para a articula&ccedil;&atilde;o tibiofemoral &mdash; <strong>meniscos, ligamentos colaterais e superf&iacute;cies de contato</strong>.</p>
 <p>O termo &quot;travado&quot; tem um significado t&eacute;cnico espec&iacute;fico que vale conhecer: quando um fragmento de menisco se desloca e se interp&otilde;e entre f&ecirc;mur e t&iacute;bia, ele funciona como uma pedra no mecanismo &mdash; a articula&ccedil;&atilde;o simplesmente n&atilde;o completa a extens&atilde;o, com um bloqueio mec&acirc;nico firme, e n&atilde;o apenas doloroso. Isso se chama bloqueio verdadeiro e <strong>&eacute; um crit&eacute;rio de encaminhamento m&eacute;dico imediato</strong>, n&atilde;o um caso de ajuste de treino.</p>
 <p>Existe um &quot;travado&quot; muito mais comum e mais benigno: o joelho que n&atilde;o estende porque h&aacute; derrame articular (in&ccedil;o) e o qu&aacute;driceps est&aacute; inibido por reflexo. Nesse caso o bloqueio &eacute; el&aacute;stico &mdash; d&aacute; para ganhar amplitude com press&atilde;o suave &mdash; e responde ao controle do edema e &agrave; ativa&ccedil;&atilde;o do qu&aacute;driceps.</p>
-<p>A segunda parte da anota&ccedil;&atilde;o &mdash; <em>dificuldade em levantar em posi&ccedil;&otilde;es de flex&atilde;o</em> &mdash; &eacute; exatamente o que a pr&oacute;xima se&ccedil;&atilde;o explica: em flex&atilde;o profunda, a &aacute;rea de contato &eacute; menor e o menisco est&aacute; mais comprimido. Se ele j&aacute; est&aacute; sensibilizado, sair de uma posi&ccedil;&atilde;o baixa &eacute; a tarefa mais provocativa que existe para essa estrutura.</p>
-<div class="box"><span class="lb">Sinais de encaminhar, n&atilde;o de ajustar</span>
-<ul>
+<p>A segunda parte da anota&ccedil;&atilde;o &mdash; <em class="term">dificuldade em levantar em posi&ccedil;&otilde;es de flex&atilde;o</em> &mdash; &eacute; exatamente o que a pr&oacute;xima se&ccedil;&atilde;o explica: em flex&atilde;o profunda, a &aacute;rea de contato &eacute; menor e o menisco est&aacute; mais comprimido. Se ele j&aacute; est&aacute; sensibilizado, sair de uma posi&ccedil;&atilde;o baixa &eacute; a tarefa mais provocativa que existe para essa estrutura.</p>
+<div class="callout ok"><span class="tag">Sinais de encaminhar, n&atilde;o de ajustar</span>
+<ul class="clean">
 <li>Bloqueio mec&acirc;nico firme, com o joelho travando e destravando com estalo.</li>
 <li>Falseio: o joelho cede sozinho em apoio.</li>
 <li>Incha&ccedil;o que retorna sempre que treina, mesmo com carga baixa.</li>
 </ul>
-</div>
-</section>
+</div></section>
 
-<section id="s11">
-<h3><span class="sec-num">11</span>&Aacute;rea de contato e press&atilde;o no menisco</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="area-contato">
+  <span class="sec-num">11 &mdash; JOELHO &middot; PRESS&Atilde;O ARTICULAR</span>
+  <h2>&Aacute;rea de contato e <span class="accent">press&atilde;o no menisco</span></h2>
+  <p class="sec-sub">Press&atilde;o &eacute; for&ccedil;a dividida por &aacute;rea &mdash; e a &aacute;rea muda com o &acirc;ngulo.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Em p&eacute; &rarr; mais &aacute;rea de contato entre f&ecirc;mur e t&iacute;bia &rarr; menos press&atilde;o</p>
 <p>Joelho flexionado &rarr; inverso &rarr; menisco sendo mais solicitado, mais comprimido</p>
 </div>
 <p>Essa &eacute; a defini&ccedil;&atilde;o de press&atilde;o em estado puro: <strong>press&atilde;o = for&ccedil;a &divide; &aacute;rea</strong>. Com a mesma for&ccedil;a, quanto menor a &aacute;rea que a recebe, maior a press&atilde;o em cada ponto. &Eacute; a diferen&ccedil;a entre pisar na neve de bota e pisar de salto agulha &mdash; mesmo peso, resultado completamente diferente.</p>
 <p>No joelho, os c&ocirc;ndilos femorais s&atilde;o mais largos e mais planos na sua por&ccedil;&atilde;o distal (a que toca a t&iacute;bia com o joelho estendido) e mais estreitos e mais curvos na por&ccedil;&atilde;o posterior (a que toca a t&iacute;bia com o joelho fletido). Em extens&atilde;o, portanto, a carga se espalha por uma superf&iacute;cie maior. Conforme o joelho flete, o f&ecirc;mur rola para tr&aacute;s e passa a apoiar numa regi&atilde;o mais curva &mdash; menos &aacute;rea, mais press&atilde;o por mil&iacute;metro quadrado, e o corno posterior do menisco assumindo um papel maior.</p>
-<figure>
-<svg viewBox="0 0 800 300" role="img" aria-label="&Aacute;rea de contato femorotibial em extens&atilde;o e em flex&atilde;o" class="f3">
-<style>
-.f3 .bg{fill:#101010}.f3 .bone{fill:none;stroke:#e8e6e3;stroke-width:4}
-.f3 .tib{fill:#2a2a2a;stroke:#e8e6e3;stroke-width:4}
-.f3 .men{fill:#ff6b1a;opacity:.85}.f3 .cont{stroke:#ff6b1a;stroke-width:7;stroke-linecap:round}
-.f3 .ar{stroke:#a8a4a0;stroke-width:3;marker-end:url(#f3a)}
-.f3 .t{fill:#a8a4a0;font:600 13px Inter,Arial,sans-serif}
-.f3 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
-.f3 .th{fill:#ff6b1a;font:700 13px Inter,Arial,sans-serif}
-</style>
+<div class="fig"><div class="figt"><span class="fign">FIG 03</span>&Aacute;rea de contato femorotibial</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="&Aacute;rea de contato femorotibial em extens&atilde;o e em flex&atilde;o" class="wb03">
+<defs><style>
+.wb03 .bone{fill:none;stroke:#e8e6e3;stroke-width:4}
+.wb03 .tib{fill:#2a2a2a;stroke:#e8e6e3;stroke-width:4}
+.wb03 .men{fill:#ff6b1a;opacity:.85}.wb03 .cont{stroke:#ff6b1a;stroke-width:7;stroke-linecap:round}
+.wb03 .ar{stroke:#a8a4a0;stroke-width:3;marker-end:url(#f3a)}
+.wb03 .t{fill:#a8a4a0;font:600 13px Inter,Arial,sans-serif}
+.wb03 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
+.wb03 .th{fill:#ff6b1a;font:700 13px Inter,Arial,sans-serif}
+</style></defs>
 <defs><marker id="f3a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#a8a4a0"/></marker></defs>
-<rect class="bg" width="800" height="300"/>
 <text class="tt" x="40" y="32">Joelho estendido (em p&eacute;)</text>
 <text class="tt" x="440" y="32">Joelho fletido</text>
 <path class="bone" d="M120,60 L120,140 Q120,196 190,196 Q260,196 260,140 L260,60"/>
@@ -440,33 +361,32 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="th" x="512" y="276">&aacute;rea de contato reduzida</text>
 <text class="t" x="512" y="294">mesma carga, press&atilde;o concentrada no corno posterior</text>
 </svg>
-<figcaption>Figura 3 &mdash; Esquema da superf&iacute;cie de contato femorotibial. Em laranja claro, os meniscos; em laranja forte, a extens&atilde;o do contato. A mesma for&ccedil;a distribu&iacute;da em menos &aacute;rea significa mais press&atilde;o local.</figcaption>
-</figure>
-<p>Um detalhe que enriquece o quadro: os meniscos existem justamente para <em>aumentar</em> essa &aacute;rea de contato. Eles s&atilde;o cunhas fibrocartilaginosas que preenchem a incongru&ecirc;ncia entre o c&ocirc;ndilo redondo e o plat&ocirc; tibial quase plano, ampliando a superf&iacute;cie e absorvendo carga. Retirar um menisco reduz drasticamente a &aacute;rea de contato &mdash; e &eacute; por isso que meniscectomias amplas s&atilde;o hoje um forte fator de risco para artrose precoce, e n&atilde;o mais a conduta padr&atilde;o que j&aacute; foram.</p>
-<div class="box pratica"><span class="lb">Tradu&ccedil;&atilde;o para a prescri&ccedil;&atilde;o</span>
+<div class="figcap">Esquema da superf&iacute;cie de contato femorotibial. Em laranja claro, os meniscos; em laranja forte, a extens&atilde;o do contato. A mesma for&ccedil;a distribu&iacute;da em menos &aacute;rea significa mais press&atilde;o local.</div></div>
+<p>Um detalhe que enriquece o quadro: os meniscos existem justamente para <em class="term">aumentar</em> essa &aacute;rea de contato. Eles s&atilde;o cunhas fibrocartilaginosas que preenchem a incongru&ecirc;ncia entre o c&ocirc;ndilo redondo e o plat&ocirc; tibial quase plano, ampliando a superf&iacute;cie e absorvendo carga. Retirar um menisco reduz drasticamente a &aacute;rea de contato &mdash; e &eacute; por isso que meniscectomias amplas s&atilde;o hoje um forte fator de risco para artrose precoce, e n&atilde;o mais a conduta padr&atilde;o que j&aacute; foram.</p>
+<div class="callout"><span class="tag">Tradu&ccedil;&atilde;o para a prescri&ccedil;&atilde;o</span>
 <p>Aluno com sintoma medial que aparece s&oacute; no fundo do agachamento: n&atilde;o retire o agachamento. <strong>Retire o fundo</strong>. Trabalhe a faixa em que ele n&atilde;o tem sintoma, carregue bem essa faixa, e expanda a amplitude ao longo das semanas conforme a toler&acirc;ncia sobe. &Eacute; exatamente essa a l&oacute;gica da pr&oacute;xima se&ccedil;&atilde;o.</p>
-</div>
-</section>
+</div></section>
 
-<section id="s12">
-<h3><span class="sec-num">12</span>Amplitude parcial com carga alta como porta de entrada</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="amplitude-parcial">
+  <span class="sec-num">12 &mdash; JOELHO &middot; ESTRAT&Eacute;GIA</span>
+  <h2>Amplitude parcial com carga alta como <span class="accent">porta de entrada</span></h2>
+  <p class="sec-sub">Uma periodiza&ccedil;&atilde;o inteira descrita em uma linha de caderno.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Reduzir amplitudes pode ser ben&eacute;fico, aumentando a carga &rarr; ap&oacute;s alguns meses, reduz-se a carga e aumenta amplitude &rarr; agachamento parcial gera hipertrofia para extensores de joelho, assim como cadeira extensora partindo de uma posi&ccedil;&atilde;o mais parcial</p>
 </div>
 <p>Essa &eacute; a anota&ccedil;&atilde;o mais valiosa do bloco, porque ela descreve uma <strong>estrat&eacute;gia de periodiza&ccedil;&atilde;o completa em uma linha</strong>, e n&atilde;o apenas um ajuste pontual. Vale abrir os dois est&aacute;gios.</p>
-<p><strong>Est&aacute;gio 1 &mdash; amplitude curta, carga alta.</strong> A amplitude curta &eacute; escolhida para ficar <em>fora</em> da faixa provocativa (fora da flex&atilde;o profunda que comprime o menisco, ou fora do &acirc;ngulo em que a patela mais comprime). Dentro dessa janela segura, voc&ecirc; pode usar cargas altas &mdash; e carga alta &eacute; tens&atilde;o mec&acirc;nica, que &eacute; o principal condutor de hipertrofia. O aluno treina forte sem provocar sintoma. Ele n&atilde;o est&aacute; &quot;poupando o joelho&quot;; est&aacute; construindo capacidade num territ&oacute;rio onde consegue.</p>
+<p><strong>Est&aacute;gio 1 &mdash; amplitude curta, carga alta.</strong> A amplitude curta &eacute; escolhida para ficar <em class="term">fora</em> da faixa provocativa (fora da flex&atilde;o profunda que comprime o menisco, ou fora do &acirc;ngulo em que a patela mais comprime). Dentro dessa janela segura, voc&ecirc; pode usar cargas altas &mdash; e carga alta &eacute; tens&atilde;o mec&acirc;nica, que &eacute; o principal condutor de hipertrofia. O aluno treina forte sem provocar sintoma. Ele n&atilde;o est&aacute; &quot;poupando o joelho&quot;; est&aacute; construindo capacidade num territ&oacute;rio onde consegue.</p>
 <p><strong>Est&aacute;gio 2 &mdash; carga desce, amplitude sobe.</strong> Depois de alguns meses, o tecido tolera mais. A&iacute; se inverte a manipula&ccedil;&atilde;o: recua a carga um degrau e usa essa folga para invadir a amplitude que antes doa. O est&iacute;mulo continua alto, mas o alvo mudou de &quot;for&ccedil;a&quot; para <strong>&quot;toler&acirc;ncia em amplitude nova&quot;</strong> &mdash; que &eacute; onde a maioria dos programas fracassa, porque nunca reintroduz o que foi removido.</p>
-<figure>
-<svg viewBox="0 0 800 300" role="img" aria-label="Progress&atilde;o inversa de carga e amplitude ao longo dos meses" class="f4">
-<style>
-.f4 .bg{fill:#101010}.f4 .ax{stroke:#3a3a3a;stroke-width:2}
-.f4 .c{fill:none;stroke:#ff6b1a;stroke-width:4}
-.f4 .a{fill:none;stroke:#7fb3ff;stroke-width:4;stroke-dasharray:8 5}
-.f4 .t{fill:#a8a4a0;font:600 13px Inter,Arial,sans-serif}
-.f4 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
-.f4 .div{stroke:#4a4a4a;stroke-width:2;stroke-dasharray:4 5}
-</style>
-<rect class="bg" width="800" height="300"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 04</span>Progress&atilde;o de carga e amplitude</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Progress&atilde;o inversa de carga e amplitude ao longo dos meses" class="wb04">
+<defs><style>
+.wb04 .ax{stroke:#3a3a3a;stroke-width:2}
+.wb04 .c{fill:none;stroke:#ff6b1a;stroke-width:4}
+.wb04 .a{fill:none;stroke:#7fb3ff;stroke-width:4;stroke-dasharray:8 5}
+.wb04 .t{fill:#a8a4a0;font:600 13px Inter,Arial,sans-serif}
+.wb04 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
+.wb04 .div{stroke:#4a4a4a;stroke-width:2;stroke-dasharray:4 5}
+</style></defs>
 <line class="ax" x1="90" y1="240" x2="740" y2="240"/>
 <line class="ax" x1="90" y1="50" x2="90" y2="240"/>
 <line class="div" x1="415" y1="50" x2="415" y2="240"/>
@@ -482,70 +402,65 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <rect x="600" y="210" width="20" height="4" fill="#7fb3ff"/>
 <text class="t" x="628" y="216">amplitude</text>
 </svg>
-<figcaption>Figura 4 &mdash; As duas vari&aacute;veis n&atilde;o sobem juntas. Primeiro se compra tens&atilde;o dentro de uma janela segura; depois se gasta parte dessa carga para comprar amplitude.</figcaption>
-</figure>
-<p>Sobre a afirma&ccedil;&atilde;o de que <em>agachamento parcial gera hipertrofia para extensores de joelho</em>: ela est&aacute; correta, com uma nuance importante. A literatura recente mostra que treinar em <strong>comprimentos musculares longos</strong> (amplitude que alonga bem o m&uacute;sculo) tende a produzir mais hipertrofia do que treinar em comprimentos curtos, com a mesma carga relativa. Para o reto femoral e para o qu&aacute;driceps de modo geral, isso favorece amplitudes maiores.</p>
-<p>Ent&atilde;o por que a parcial funciona aqui? Porque <strong>o parcial que interessa &eacute; o parcial na parte baixa do movimento</strong>, n&atilde;o na parte alta. Uma cadeira extensora que sai de 90&deg; e vai s&oacute; at&eacute; 45&deg; trabalha o qu&aacute;driceps alongado; uma que sai de 45&deg; e vai at&eacute; a extens&atilde;o total trabalha ele encurtado &mdash; e essa &uacute;ltima faixa &eacute; justamente a de maior compress&atilde;o patelofemoral em cadeia aberta. Escolher <em>qual</em> peda&ccedil;o da amplitude preservar &eacute; a decis&atilde;o t&eacute;cnica que faz a estrat&eacute;gia funcionar ou n&atilde;o.</p>
-</section>
+<div class="figcap">As duas vari&aacute;veis n&atilde;o sobem juntas. Primeiro se compra tens&atilde;o dentro de uma janela segura; depois se gasta parte dessa carga para comprar amplitude.</div></div>
+<p>Sobre a afirma&ccedil;&atilde;o de que <em class="term">agachamento parcial gera hipertrofia para extensores de joelho</em>: ela est&aacute; correta, com uma nuance importante. A literatura recente mostra que treinar em <strong>comprimentos musculares longos</strong> (amplitude que alonga bem o m&uacute;sculo) tende a produzir mais hipertrofia do que treinar em comprimentos curtos, com a mesma carga relativa. Para o reto femoral e para o qu&aacute;driceps de modo geral, isso favorece amplitudes maiores.</p>
+<p>Ent&atilde;o por que a parcial funciona aqui? Porque <strong>o parcial que interessa &eacute; o parcial na parte baixa do movimento</strong>, n&atilde;o na parte alta. Uma cadeira extensora que sai de 90&deg; e vai s&oacute; at&eacute; 45&deg; trabalha o qu&aacute;driceps alongado; uma que sai de 45&deg; e vai at&eacute; a extens&atilde;o total trabalha ele encurtado &mdash; e essa &uacute;ltima faixa &eacute; justamente a de maior compress&atilde;o patelofemoral em cadeia aberta. Escolher <em class="term">qual</em> peda&ccedil;o da amplitude preservar &eacute; a decis&atilde;o t&eacute;cnica que faz a estrat&eacute;gia funcionar ou n&atilde;o.</p></section>
 
-<section id="s13">
-<h3><span class="sec-num">13</span>Cadeira extensora come&ccedil;ando curta: vasto lateral</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="cadeira-extensora">
+  <span class="sec-num">13 &mdash; JOELHO &middot; HIPERTROFIA REGIONAL</span>
+  <h2>Cadeira extensora curta e o <span class="accent">vasto lateral</span></h2>
+  <p class="sec-sub">Hipertrofia n&atilde;o &eacute; uniforme dentro do mesmo m&uacute;sculo.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Curtinho no in&iacute;cio na cadeira extensora &rarr; estudos mostraram maior hipertrofia no vasto lateral</p>
 </div>
 <p>Essa observa&ccedil;&atilde;o conecta-se a uma das descobertas mais interessantes dos &uacute;ltimos anos: <strong>hipertrofia n&atilde;o &eacute; uniforme dentro de um m&uacute;sculo</strong>. O qu&aacute;driceps n&atilde;o cresce como um bloco &uacute;nico; cada por&ccedil;&atilde;o responde de acordo com o quanto foi mecanicamente exigida em cada faixa de amplitude.</p>
 <p>Trabalhos comparando amplitudes na cadeira extensora encontraram que o treino nas <strong>por&ccedil;&otilde;es iniciais do movimento</strong> &mdash; com o joelho mais fletido, ou seja, o qu&aacute;driceps mais alongado &mdash; produz mais crescimento nos vastos, com destaque para o vasto lateral, enquanto a faixa final (joelho quase estendido) tem contribui&ccedil;&atilde;o relativamente maior do reto femoral e menos ganho global.</p>
 <p>Duas explica&ccedil;&otilde;es se somam. Primeira: <strong>comprimento muscular longo</strong> &mdash; tens&atilde;o gerada com o m&uacute;sculo alongado parece ser um sinal an&aacute;bolico mais potente, provavelmente por combinar tens&atilde;o ativa e passiva e por sinalizar adi&ccedil;&atilde;o de sarc&ocirc;meros em s&eacute;rie. Segunda: <strong>o reto femoral &eacute; biarticular</strong>. Como ele cruza quadril e joelho, na cadeira extensora (quadril fletido, sentado) ele j&aacute; est&aacute; encurtado na origem, o que limita sua contribui&ccedil;&atilde;o e sobra trabalho para os vastos, que s&atilde;o monoarticulares.</p>
-<div class="box pratica"><span class="lb">Como aplicar</span>
-<ul>
+<div class="callout"><span class="tag">Como aplicar</span>
+<ul class="clean">
 <li><strong>Para vasto lateral e volume geral de coxa:</strong> priorize a faixa inicial &mdash; joelho bem fletido at&eacute; a metade do curso, mesmo que a carga precise cair.</li>
-<li><strong>Para reto femoral:</strong> ele responde melhor com <em>quadril estendido</em> &mdash; agachamento b&uacute;lgaro, avan&ccedil;o, extens&atilde;o de joelho em decúbito, ou sissy squat.</li>
+<li><strong>Para reto femoral:</strong> ele responde melhor com <em class="term">quadril estendido</em> &mdash; agachamento b&uacute;lgaro, avan&ccedil;o, extens&atilde;o de joelho em decúbito, ou sissy squat.</li>
 <li><strong>Para dor anterior:</strong> a faixa final (0&ndash;30&deg; de flex&atilde;o em cadeia aberta) &eacute; a de maior estresse patelofemoral relativo. &Eacute; a primeira a sair e a &uacute;ltima a voltar.</li>
 </ul>
 </div>
-<p>Repare como o bloco inteiro fecha um ciclo coerente: entendemos o torque (01), descartamos o laudo como senten&ccedil;a (02), lemos a origem do problema no quadril (04&ndash;05), definimos o alvo (06), aprendemos a manipular a demanda em cada exerc&iacute;cio (08&ndash;09), entendemos a press&atilde;o articular (11) e chegamos a uma estrat&eacute;gia de longo prazo (12&ndash;13). N&atilde;o s&atilde;o dicas soltas; &eacute; um m&eacute;todo.</p>
-</section>
+<p>Repare como o bloco inteiro fecha um ciclo coerente: entendemos o torque (01), descartamos o laudo como senten&ccedil;a (02), lemos a origem do problema no quadril (04&ndash;05), definimos o alvo (06), aprendemos a manipular a demanda em cada exerc&iacute;cio (08&ndash;09), entendemos a press&atilde;o articular (11) e chegamos a uma estrat&eacute;gia de longo prazo (12&ndash;13). N&atilde;o s&atilde;o dicas soltas; &eacute; um m&eacute;todo.</p></section>
 
-<div class="block">
-  <div class="bk">Bloco 2</div>
-  <h2>Treinamento de for&ccedil;a em sujeitos com h&eacute;rnia discal</h2>
-  <p class="who">Gustavo Zorzi</p>
-</div>
-
-<section id="s14">
-<h3><span class="sec-num">14</span>Dor lombar n&atilde;o &eacute; h&eacute;rnia de disco</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="dor-lombar">
+  <span class="sec-num">14 &mdash; COLUNA &middot; O DIAGN&Oacute;STICO</span>
+  <h2>Dor lombar <span class="accent">n&atilde;o &eacute; h&eacute;rnia de disco</span></h2>
+  <p class="sec-sub">Um &eacute; sintoma; o outro &eacute; achado de imagem.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Dor lombar &ne; h&eacute;rnia de disco</p>
 </div>
 <p>Esse sinal de diferente vale mais que muito par&aacute;grafo. S&atilde;o duas coisas de natureza distinta: <strong>dor lombar &eacute; um sintoma; h&eacute;rnia de disco &eacute; um achado anat&ocirc;mico em imagem</strong>. A liga&ccedil;&atilde;o entre os dois &eacute; muito mais fraca do que o senso comum sup&otilde;e.</p>
 <p>A evid&ecirc;ncia que sustenta isso &eacute; robusta e vem de estudos de imagem em pessoas <strong>assintom&aacute;ticas</strong>. Quando se faz resson&acirc;ncia em gente que n&atilde;o tem queixa nenhuma, encontram-se altera&ccedil;&otilde;es discais em propor&ccedil;&otilde;es que aumentam progressivamente com a idade &mdash; degenera&ccedil;&atilde;o discal, protrus&otilde;es e abaulamentos aparecem em uma parcela muito grande da popula&ccedil;&atilde;o sem dor. Do outro lado, cerca de <strong>85&ndash;90% dos casos de dor lombar s&atilde;o classificados como inespec&iacute;ficos</strong>: n&atilde;o se identifica uma estrutura respons&aacute;vel.</p>
-<div class="box"><span class="lb">A analogia que funciona com o aluno</span>
+<div class="callout ok"><span class="tag">A analogia que funciona com o aluno</span>
 <p>Cabelo branco e ruga s&atilde;o achados de imagem do envelhecimento da pele. Ningu&eacute;m acha que d&oacute;i. Altera&ccedil;&otilde;es discais s&atilde;o, em grande parte, o equivalente para a coluna: o registro de que aquele tecido viveu. A presen&ccedil;a delas <strong>n&atilde;o prova</strong> que elas s&atilde;o a causa do que a pessoa sente.</p>
 </div>
 <p>Isso n&atilde;o significa que h&eacute;rnia nunca causa dor &mdash; causa, e quando causa costuma ter uma assinatura clara (dor irradiada seguindo um trajeto nervoso, formigamento, perda de for&ccedil;a em um grupo espec&iacute;fico). O erro &eacute; o caminho inverso: encontrar uma protrus&atilde;o na imagem e assumir que ela explica a dor lombar difusa que o aluno tem h&aacute; tr&ecirc;s anos.</p>
-<p>Para a pr&aacute;tica de quem prescreve, a consequ&ecirc;ncia &eacute; direta: <strong>voc&ecirc; trata a pessoa, n&atilde;o o laudo</strong>. O laudo &eacute; um dado; o comportamento do sintoma &eacute; o guia.</p>
-</section>
+<p>Para a pr&aacute;tica de quem prescreve, a consequ&ecirc;ncia &eacute; direta: <strong>voc&ecirc; trata a pessoa, n&atilde;o o laudo</strong>. O laudo &eacute; um dado; o comportamento do sintoma &eacute; o guia.</p></section>
 
-<section id="s15">
-<h3><span class="sec-num">15</span>O disco, a protrus&atilde;o e a raiz nervosa</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="disco">
+  <span class="sec-num">15 &mdash; COLUNA &middot; ANATOMIA</span>
+  <h2>O disco, a protrus&atilde;o e a <span class="accent">raiz nervosa</span></h2>
+  <p class="sec-sub">Por que a parte de tr&aacute;s do &acirc;nulo &eacute; a que cede.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Disco mais protruso para tr&aacute;s, tocando em ra&iacute;zes nervosas &rarr; convencionalmente chamada de h&eacute;rnia</p>
 </div>
 <p>Vale montar a anatomia com calma, porque ela explica tanto o mecanismo quanto a conduta.</p>
 <p>O disco intervertebral tem duas partes. O <strong>n&uacute;cleo pulposo</strong>, no centro, &eacute; um gel altamente hidratado que se comporta como fluido: distribui press&atilde;o em todas as dire&ccedil;&otilde;es. Ao redor dele, o <strong>&acirc;nulo fibroso</strong> &eacute; formado por l&acirc;minas conc&ecirc;ntricas de col&aacute;geno cujas fibras se alternam em diagonal, camada a camada &mdash; uma arquitetura que resiste muito bem &agrave; tra&ccedil;&atilde;o e &agrave; tor&ccedil;&atilde;o.</p>
 <p>A parte posterior do &acirc;nulo &eacute; a mais fina, e essa &eacute; a chave. Quando as l&acirc;minas posteriores fissuram por acúmulo de exposi&ccedil;&atilde;o, o n&uacute;cleo migra por essas fissuras. Como o canal vertebral e as ra&iacute;zes nervosas est&atilde;o exatamente atr&aacute;s, o material deslocado pode contat&aacute;-las. A&iacute; a dor deixa de ser local e passa a irradiar pelo territ&oacute;rio daquele nervo &mdash; a chamada <strong>dor radicular</strong>.</p>
-<figure>
-<svg viewBox="0 0 800 320" role="img" aria-label="Corte transversal do disco intervertebral normal e com protrus&atilde;o posterior" class="f5">
-<style>
-.f5 .bg{fill:#101010}.f5 .vb{fill:#2a2a2a;stroke:#e8e6e3;stroke-width:3}
-.f5 .an{fill:none;stroke:#8a857f;stroke-width:3}
-.f5 .nu{fill:#ff6b1a;opacity:.9}.f5 .cn{fill:#151515;stroke:#8a857f;stroke-width:3}
-.f5 .rt{fill:#7fb3ff}.f5 .rtc{fill:#ff4d4d}
-.f5 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
-.f5 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
-.f5 .th{fill:#ff6b1a;font:700 12.5px Inter,Arial,sans-serif}
-</style>
-<rect class="bg" width="800" height="320"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 05</span>Disco intervertebral &mdash; corte transversal</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-label="Corte transversal do disco intervertebral normal e com protrus&atilde;o posterior" class="wb05">
+<defs><style>
+.wb05 .vb{fill:#2a2a2a;stroke:#e8e6e3;stroke-width:3}
+.wb05 .an{fill:none;stroke:#8a857f;stroke-width:3}
+.wb05 .nu{fill:#ff6b1a;opacity:.9}.wb05 .cn{fill:#151515;stroke:#8a857f;stroke-width:3}
+.wb05 .rt{fill:#7fb3ff}.wb05 .rtc{fill:#ff4d4d}
+.wb05 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
+.wb05 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
+.wb05 .th{fill:#ff6b1a;font:700 12.5px Inter,Arial,sans-serif}
+</style></defs>
 <text class="tt" x="60" y="30">Disco &iacute;ntegro</text>
 <text class="tt" x="460" y="30">Protrus&atilde;o posterior</text>
 <ellipse class="vb" cx="200" cy="150" rx="130" ry="86"/>
@@ -568,89 +483,86 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="th" x="642" y="212">material deslocado</text>
 <text class="t" x="460" y="286">contato com a raiz &rarr; dor irradiada no trajeto do nervo</text>
 </svg>
-<figcaption>Figura 5 &mdash; Corte transversal esquem&aacute;tico. O &acirc;nulo posterior &eacute; a regi&atilde;o mais fina, e o canal com as ra&iacute;zes nervosas fica logo atr&aacute;s. Em vermelho, a raiz em contato com o material deslocado.</figcaption>
-</figure>
-<p>Duas informa&ccedil;&otilde;es que mudam o tom da conversa com o aluno. A primeira: <strong>h&eacute;rnias reabsorvem</strong>. O material extruso &eacute; reconhecido como corpo estranho, sofre resposta inflamat&oacute;ria e &eacute; progressivamente reabsorvido &mdash; e, paradoxalmente, as h&eacute;rnias maiores e mais extrusas s&atilde;o as que mais regridem. A segunda: <strong>a dor radicular n&atilde;o &eacute; s&oacute; compress&atilde;o mec&acirc;nica</strong>. Compress&atilde;o pura de um nervo saud&aacute;vel produz d&ecirc;ficit (dorm&ecirc;ncia, fraqueza), n&atilde;o necessariamente dor. O componente inflamat&oacute;rio qu&iacute;mico &eacute; grande parte do que d&oacute;i &mdash; o que ajuda a explicar por que o sintoma melhora sem que a imagem tenha mudado.</p>
-</section>
+<div class="figcap">Corte transversal esquem&aacute;tico. O &acirc;nulo posterior &eacute; a regi&atilde;o mais fina, e o canal com as ra&iacute;zes nervosas fica logo atr&aacute;s. Em vermelho, a raiz em contato com o material deslocado.</div></div>
+<p>Duas informa&ccedil;&otilde;es que mudam o tom da conversa com o aluno. A primeira: <strong>h&eacute;rnias reabsorvem</strong>. O material extruso &eacute; reconhecido como corpo estranho, sofre resposta inflamat&oacute;ria e &eacute; progressivamente reabsorvido &mdash; e, paradoxalmente, as h&eacute;rnias maiores e mais extrusas s&atilde;o as que mais regridem. A segunda: <strong>a dor radicular n&atilde;o &eacute; s&oacute; compress&atilde;o mec&acirc;nica</strong>. Compress&atilde;o pura de um nervo saud&aacute;vel produz d&ecirc;ficit (dorm&ecirc;ncia, fraqueza), n&atilde;o necessariamente dor. O componente inflamat&oacute;rio qu&iacute;mico &eacute; grande parte do que d&oacute;i &mdash; o que ajuda a explicar por que o sintoma melhora sem que a imagem tenha mudado.</p></section>
 
-<section id="s16">
-<h3><span class="sec-num">16</span>Classificar a dor de 0 a 10 e decidir treinar</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="escala-dor">
+  <span class="sec-num">16 &mdash; COLUNA &middot; DECIS&Atilde;O</span>
+  <h2>Classificar a dor de 0 a 10 e <span class="accent">decidir treinar</span></h2>
+  <p class="sec-sub">O crit&eacute;rio real n&atilde;o &eacute; a nota na hora &mdash; &eacute; a resposta em 24 horas.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Classificar a dor (0 a 10) &rarr; dor n&atilde;o impossibilita o movimento, pode ser ben&eacute;fico executar o movimento para fortalecer a regi&atilde;o, a depender do n&iacute;vel da dor.</p>
 </div>
 <p>Aqui a anota&ccedil;&atilde;o entrega uma ferramenta de decis&atilde;o &mdash; e ferramenta de decis&atilde;o &eacute; o que separa &quot;treinar com dor&quot; (irrespons&aacute;vel) de &quot;treinar apesar da dor, dentro de crit&eacute;rio&quot; (que &eacute; a conduta atual em dor musculoesquel&eacute;tica persistente).</p>
 <p>O modelo mais usado &eacute; o do <strong>sem&aacute;foro de dor</strong>, com uma escala de 0 a 10:</p>
-<table>
-<tr><th>Faixa</th><th>Leitura</th><th>Conduta</th></tr>
-<tr><td><strong>0&ndash;3</strong></td><td>Zona segura</td><td>Progredir normalmente. Pode aumentar carga, volume ou amplitude.</td></tr>
-<tr><td><strong>4&ndash;5</strong></td><td>Zona aceit&aacute;vel</td><td>Manter o est&iacute;mulo sem progredir. Observar a resposta nas 24h seguintes.</td></tr>
-<tr><td><strong>6&ndash;10</strong></td><td>Zona de recuo</td><td>Reduzir carga, amplitude ou trocar a varia&ccedil;&atilde;o. N&atilde;o &eacute; parar de treinar &mdash; &eacute; achar outra dose.</td></tr>
-</table>
+<div class="table-wrap"><table><thead><tr><th>Faixa</th><th>Leitura</th><th>Conduta</th></tr></thead><tbody><tr><td><strong>0&ndash;3</strong></td><td>Zona segura</td><td>Progredir normalmente. Pode aumentar carga, volume ou amplitude.</td></tr><tr><td><strong>4&ndash;5</strong></td><td>Zona aceit&aacute;vel</td><td>Manter o est&iacute;mulo sem progredir. Observar a resposta nas 24h seguintes.</td></tr><tr><td><strong>6&ndash;10</strong></td><td>Zona de recuo</td><td>Reduzir carga, amplitude ou trocar a varia&ccedil;&atilde;o. N&atilde;o &eacute; parar de treinar &mdash; &eacute; achar outra dose.</td></tr></tbody></table></div>
 <p>O crit&eacute;rio mais importante n&atilde;o &eacute; a nota durante o exerc&iacute;cio, e sim <strong>o comportamento nas 24 horas seguintes</strong>. Se a dor sobe durante a s&eacute;rie mas volta ao patamar habitual em at&eacute; um dia, o est&iacute;mulo foi tolerado. Se ela permanece elevada no dia seguinte, ou se o aluno acorda pior, a dose foi excessiva &mdash; independentemente do n&uacute;mero que ele deu na hora.</p>
-<div class="box pratica"><span class="lb">Como perguntar</span>
+<div class="callout"><span class="tag">Como perguntar</span>
 <p>N&atilde;o pergunte &quot;t&aacute; doendo?&quot; &mdash; a resposta bin&aacute;ria n&atilde;o serve para nada. Pergunte: <strong>&quot;de 0 a 10, quanto est&aacute; agora?&quot;</strong> antes da s&eacute;rie, e de novo depois. E na sess&atilde;o seguinte: <strong>&quot;como voc&ecirc; ficou no dia seguinte ao nosso treino?&quot;</strong>. Anote. Em quatro semanas voc&ecirc; tem uma curva, e a curva decide a progress&atilde;o melhor que qualquer palpite.</p>
 </div>
-<p>Existe um fundamento mais profundo para essa conduta. Dor persistente envolve <strong>sensibiliza&ccedil;&atilde;o do sistema nervoso</strong>: o sistema passa a interpretar est&iacute;mulos normais como amea&ccedil;a. Evitar movimento confirma a amea&ccedil;a e mant&eacute;m o sistema em alerta. Exposi&ccedil;&atilde;o gradual e bem-sucedida faz o contr&aacute;rio &mdash; entrega ao sistema a evid&ecirc;ncia de que aquele movimento &eacute; seguro. O ganho, aqui, &eacute; tanto de tecido quanto de recalibra&ccedil;&atilde;o.</p>
-</section>
+<p>Existe um fundamento mais profundo para essa conduta. Dor persistente envolve <strong>sensibiliza&ccedil;&atilde;o do sistema nervoso</strong>: o sistema passa a interpretar est&iacute;mulos normais como amea&ccedil;a. Evitar movimento confirma a amea&ccedil;a e mant&eacute;m o sistema em alerta. Exposi&ccedil;&atilde;o gradual e bem-sucedida faz o contr&aacute;rio &mdash; entrega ao sistema a evid&ecirc;ncia de que aquele movimento &eacute; seguro. O ganho, aqui, &eacute; tanto de tecido quanto de recalibra&ccedil;&atilde;o.</p></section>
 
-<section id="s17">
-<h3><span class="sec-num">17</span>Cisalhamento faz parte do movimento</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="cisalhamento">
+  <span class="sec-num">17 &mdash; COLUNA &middot; MEC&Acirc;NICA</span>
+  <h2>Cisalhamento <span class="accent">faz parte do movimento</span></h2>
+  <p class="sec-sub">A pergunta certa n&atilde;o &eacute; se existe, &eacute; se cabe na capacidade.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>For&ccedil;a de cisalhamento n&atilde;o &eacute; lesiva, faz parte do movimento</p>
 </div>
 <p>Primeiro, o que &eacute;. Uma for&ccedil;a de <strong>compress&atilde;o</strong> empurra duas superf&iacute;cies uma contra a outra, perpendicularmente. Uma for&ccedil;a de <strong>cisalhamento</strong> tende a fazer uma superf&iacute;cie deslizar sobre a outra, paralelamente. Na coluna, compress&atilde;o &eacute; o peso empurrando uma v&eacute;rtebra contra a de baixo; cisalhamento &eacute; a tend&ecirc;ncia de uma v&eacute;rtebra escorregar para frente sobre a outra &mdash; o que acontece sempre que o tronco se inclina.</p>
 <p>O ponto que a anota&ccedil;&atilde;o registra &eacute; que <strong>cisalhamento n&atilde;o &eacute; uma anomalia</strong>. Ele existe em toda flex&atilde;o de tronco, em toda caminhada, ao amarrar o sapato. A coluna tem estruturas dedicadas a resistir a ele: as <strong>facetas articulares</strong>, cuja orienta&ccedil;&atilde;o na regi&atilde;o lombar &eacute; quase sagital justamente para bloquear deslizamento anterior; os ligamentos; e a musculatura, sobretudo os eretores e o multíf&iacute;dio.</p>
 <p>O que se popularizou como &quot;cisalhamento &eacute; perigoso&quot; nasceu de leituras exageradas de trabalhos que mediram picos de cisalhamento em levantamento de peso. Os valores s&atilde;o de fato altos &mdash; mas a compara&ccedil;&atilde;o justa n&atilde;o &eacute; contra zero. &Eacute; contra <strong>a capacidade daquele indiv&iacute;duo</strong>, que &eacute; treinável. Levantadores de peso com d&eacute;cadas de pr&aacute;tica exp&otilde;em a coluna a cisalhamentos que assustariam em uma planilha, e t&ecirc;m prevalência de dor lombar compar&aacute;vel &agrave; popula&ccedil;&atilde;o geral.</p>
-<div class="box"><span class="lb">A reformula&ccedil;&atilde;o correta da pergunta</span>
+<div class="callout ok"><span class="tag">A reformula&ccedil;&atilde;o correta da pergunta</span>
 <p>N&atilde;o &eacute; &quot;esse exerc&iacute;cio gera cisalhamento?&quot; &mdash; todos geram. &Eacute; <strong>&quot;a magnitude e a frequ&ecirc;ncia desse cisalhamento cabem dentro do que este aluno construiu at&eacute; agora?&quot;</strong>. A primeira pergunta leva a proibir exerc&iacute;cios; a segunda leva a dosar e progredir.</p>
-</div>
-</section>
+</div></section>
 
-<section id="s18">
-<h3><span class="sec-num">18</span>Agachamento, terra e stiff como tratamento</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="terra-stiff">
+  <span class="sec-num">18 &mdash; COLUNA &middot; TRATAMENTO</span>
+  <h2>Agachamento, terra e stiff <span class="accent">como rem&eacute;dio</span></h2>
+  <p class="sec-sub">Os tr&ecirc;s exerc&iacute;cios mais temidos s&atilde;o as tr&ecirc;s ferramentas.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Agachamento, terra, stiff &rarr; &oacute;timos para fortalecer a coluna e diminuir a dor progressivamente</p>
 </div>
 <p>Essa &eacute; a invers&atilde;o mais importante do bloco. Os tr&ecirc;s exerc&iacute;cios que a cultura de academia mais associa a &quot;risco para a coluna&quot; s&atilde;o exatamente os que a evid&ecirc;ncia mostra como ferramentas eficazes para dor lombar. Vale entender por qu&ecirc;.</p>
 <p><strong>Especificidade.</strong> Se o problema &eacute; que a lombar n&atilde;o tolera carga, o est&iacute;mulo tem que ser carga na lombar. Nenhum exerc&iacute;cio no solo, com peso corporal e amplitude m&iacute;nima, gera a magnitude de tens&atilde;o que os eretores precisam para hipertrofiar e ganhar for&ccedil;a. O terra e o stiff exigem exatamente a a&ccedil;&atilde;o antigravitacional que falta.</p>
 <p><strong>Densidade &oacute;ssea e tecido conjuntivo.</strong> Carga axial progressiva &eacute; um dos poucos est&iacute;mulos que aumentam densidade mineral &oacute;ssea vertebral e melhoram propriedades mec&acirc;nicas de tend&atilde;o e f&aacute;scia. Isso &eacute; constru&ccedil;&atilde;o de teto, n&atilde;o al&iacute;vio.</p>
 <p><strong>Recalibra&ccedil;&atilde;o do sistema.</strong> Levantar do ch&atilde;o um peso que o aluno achava imposs&iacute;vel, sem piora, &eacute; a interven&ccedil;&atilde;o mais potente que existe contra cinesiofobia. O ganho psicol&oacute;gico frequentemente supera o ganho tecidual em magnitude de efeito sobre a dor.</p>
-<div class="box pratica"><span class="lb">Progress&atilde;o t&iacute;pica em quem tem dor</span>
-<ol class="body">
+<div class="callout"><span class="tag">Progress&atilde;o t&iacute;pica em quem tem dor</span>
+<ol class="key">
 <li><strong>Entrada:</strong> padr&atilde;o de dobradi&ccedil;a de quadril sem carga significativa &mdash; bom dia com bast&atilde;o, stiff com halter leve e amplitude curta.</li>
 <li><strong>Constru&ccedil;&atilde;o:</strong> terra em bloco ou de d&eacute;ficit zero, com barra elevada, reduzindo a amplitude e a flex&atilde;o de tronco necess&aacute;ria.</li>
 <li><strong>Expans&atilde;o:</strong> descer os blocos ao longo das semanas at&eacute; o solo; introduzir agachamento com carga progressiva.</li>
 <li><strong>Manuten&ccedil;&atilde;o:</strong> o exerc&iacute;cio deixa de ser &quot;reabilita&ccedil;&atilde;o&quot; e vira treino. Esse &eacute; o objetivo desde o dia 1.</li>
 </ol>
 </div>
-<p>A palavra <em>progressivamente</em> na anota&ccedil;&atilde;o carrega toda a responsabilidade da frase. Os mesmos tr&ecirc;s exerc&iacute;cios, aplicados com carga inadequada em algu&eacute;m em crise aguda, piorariam o quadro. N&atilde;o &eacute; o exerc&iacute;cio que cura ou machuca &mdash; &eacute; a dose.</p>
-</section>
+<p>A palavra <em class="term">progressivamente</em> na anota&ccedil;&atilde;o carrega toda a responsabilidade da frase. Os mesmos tr&ecirc;s exerc&iacute;cios, aplicados com carga inadequada em algu&eacute;m em crise aguda, piorariam o quadro. N&atilde;o &eacute; o exerc&iacute;cio que cura ou machuca &mdash; &eacute; a dose.</p></section>
 
-<section id="s19">
-<h3><span class="sec-num">19</span>Terra em flex&atilde;o: o &acirc;ngulo das fibras</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="angulo-fibras">
+  <span class="sec-num">19 &mdash; COLUNA &middot; FLEX&Atilde;O SOB CARGA</span>
+  <h2>Terra em flex&atilde;o: o <span class="accent">&acirc;ngulo das fibras</span></h2>
+  <p class="sec-sub">Geometria dos eretores e o fen&ocirc;meno de relaxa&ccedil;&atilde;o flexora.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Terra &rarr; em flex&atilde;o de coluna h&aacute; uma redu&ccedil;&atilde;o do &acirc;ngulo das fibras, reduzindo sua capacidade de suportar for&ccedil;as de cisalhamento</p>
 </div>
 <p>Esta &eacute; a anota&ccedil;&atilde;o mais tecnicamente sofisticada do bloco, e explica o mecanismo real por tr&aacute;s da recomenda&ccedil;&atilde;o de manter a coluna relativamente neutra sob carga alta.</p>
 <p>Os eretores da espinha correm quase paralelos &agrave; coluna. Com a coluna neutra, a linha de tra&ccedil;&atilde;o deles &eacute; predominantemente <strong>vertical em rela&ccedil;&atilde;o &agrave;s v&eacute;rtebras</strong> &mdash; e essa orienta&ccedil;&atilde;o permite gerar uma componente posterior que se op&otilde;e diretamente ao deslizamento anterior. Em outras palavras: nessa posi&ccedil;&atilde;o, os eretores conseguem &quot;segurar para tr&aacute;s&quot;.</p>
 <p>Quando a coluna flete, a geometria muda. As fibras se alinham mais com o eixo do pr&oacute;prio cisalhamento e a componente de resist&ecirc;ncia posterior diminui. Some-se a isso o <strong>fen&ocirc;meno de rel&acirc;xa&ccedil;&atilde;o flexora</strong>: em flex&atilde;o m&aacute;xima de tronco, a atividade eletromiogr&aacute;fica dos eretores praticamente silencia e a carga passa a ser sustentada pelos tecidos passivos &mdash; ligamentos e f&aacute;scia. O sistema muscular, que era o freio ativo, sai de cena bem no momento em que a demanda de cisalhamento &eacute; maior.</p>
-<figure>
-<svg viewBox="0 0 800 320" role="img" aria-label="Orienta&ccedil;&atilde;o das fibras dos eretores em coluna neutra e em flex&atilde;o" class="f6">
-<style>
-.f6 .bg{fill:#101010}.f6 .vt{fill:#2a2a2a;stroke:#e8e6e3;stroke-width:2.5}
-.f6 .fb{stroke:#ff6b1a;stroke-width:5;stroke-linecap:round}
-.f6 .sh{stroke:#7fb3ff;stroke-width:3.5;marker-end:url(#f6a)}
-.f6 .rs{stroke:#ff6b1a;stroke-width:3.5;marker-end:url(#f6b)}
-.f6 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
-.f6 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
-.f6 .th{fill:#ff6b1a;font:700 12.5px Inter,Arial,sans-serif}
-.f6 .tb{fill:#7fb3ff;font:700 12.5px Inter,Arial,sans-serif}
-</style>
+<div class="fig"><div class="figt"><span class="fign">FIG 06</span>Eretores &mdash; orienta&ccedil;&atilde;o das fibras</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-label="Orienta&ccedil;&atilde;o das fibras dos eretores em coluna neutra e em flex&atilde;o" class="wb06">
+<defs><style>
+.wb06 .vt{fill:#2a2a2a;stroke:#e8e6e3;stroke-width:2.5}
+.wb06 .fb{stroke:#ff6b1a;stroke-width:5;stroke-linecap:round}
+.wb06 .sh{stroke:#7fb3ff;stroke-width:3.5;marker-end:url(#f6a)}
+.wb06 .rs{stroke:#ff6b1a;stroke-width:3.5;marker-end:url(#f6b)}
+.wb06 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
+.wb06 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
+.wb06 .th{fill:#ff6b1a;font:700 12.5px Inter,Arial,sans-serif}
+.wb06 .tb{fill:#7fb3ff;font:700 12.5px Inter,Arial,sans-serif}
+</style></defs>
 <defs>
 <marker id="f6a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#7fb3ff"/></marker>
 <marker id="f6b" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#ff6b1a"/></marker>
 </defs>
-<rect class="bg" width="800" height="320"/>
 <text class="tt" x="60" y="30">Coluna neutra</text>
 <text class="tt" x="450" y="30">Coluna em flex&atilde;o</text>
 <rect class="vt" x="150" y="60" width="76" height="30" rx="5"/>
@@ -675,49 +587,49 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="th" x="640" y="292">fibras alinhadas com o cisalhamento &rarr; freio perde efici&ecirc;ncia</text>
 <text class="t" x="450" y="292">   </text>
 </svg>
-<figcaption>Figura 6 &mdash; Esquema da orienta&ccedil;&atilde;o dos eretores. Em neutro, a linha de tra&ccedil;&atilde;o cruza o vetor de cisalhamento e op&otilde;e-se a ele; em flex&atilde;o acentuada, ela se aproxima da dire&ccedil;&atilde;o do pr&oacute;prio deslizamento.</figcaption>
-</figure>
-<p>Uma ressalva honesta, para n&atilde;o transformar isso em dogma: <strong>flex&atilde;o de coluna sob carga n&atilde;o &eacute; proibida nem inevitavelmente lesiva</strong>. Estudos com levantadores mostram que praticamente todos fletem em algum grau nas cargas m&aacute;ximas, e a evid&ecirc;ncia n&atilde;o sustenta que uma coluna neutra perfeita previna dor lombar. O que a biomec&acirc;nica aqui justifica &eacute; mais modesto e mais &uacute;til: em <strong>carga alta</strong> e para quem <strong>ainda est&aacute; construindo capacidade</strong>, manter neutralidade relativa mant&eacute;m o freio ativo em jogo. Para o resto, flex&atilde;o controlada com carga leve &eacute; um est&iacute;mulo leg&iacute;timo &mdash; e treinar a coluna em flex&atilde;o carregada &eacute; justamente como se constr&oacute;i toler&acirc;ncia a ela.</p>
-</section>
+<div class="figcap">Esquema da orienta&ccedil;&atilde;o dos eretores. Em neutro, a linha de tra&ccedil;&atilde;o cruza o vetor de cisalhamento e op&otilde;e-se a ele; em flex&atilde;o acentuada, ela se aproxima da dire&ccedil;&atilde;o do pr&oacute;prio deslizamento.</div></div>
+<p>Uma ressalva honesta, para n&atilde;o transformar isso em dogma: <strong>flex&atilde;o de coluna sob carga n&atilde;o &eacute; proibida nem inevitavelmente lesiva</strong>. Estudos com levantadores mostram que praticamente todos fletem em algum grau nas cargas m&aacute;ximas, e a evid&ecirc;ncia n&atilde;o sustenta que uma coluna neutra perfeita previna dor lombar. O que a biomec&acirc;nica aqui justifica &eacute; mais modesto e mais &uacute;til: em <strong>carga alta</strong> e para quem <strong>ainda est&aacute; construindo capacidade</strong>, manter neutralidade relativa mant&eacute;m o freio ativo em jogo. Para o resto, flex&atilde;o controlada com carga leve &eacute; um est&iacute;mulo leg&iacute;timo &mdash; e treinar a coluna em flex&atilde;o carregada &eacute; justamente como se constr&oacute;i toler&acirc;ncia a ela.</p></section>
 
-<section id="s20">
-<h3><span class="sec-num">20</span>Core, bracing e manobras respirat&oacute;rias</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="core">
+  <span class="sec-num">20 &mdash; COLUNA &middot; CORE</span>
+  <h2>Core, bracing e <span class="accent">manobras respirat&oacute;rias</span></h2>
+  <p class="sec-sub">O cilindro abdominal e a press&atilde;o que sustenta o tronco por dentro.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Manobras respirat&oacute;rias s&atilde;o boas para fortalecer o obl&iacute;quo interno</p>
 <p>Adicionar o bracing pode ser ben&eacute;fico</p>
 <p>Exerc&iacute;cios para o core s&atilde;o extremamente ben&eacute;ficos</p>
 </div>
 <p>Tr&ecirc;s anota&ccedil;&otilde;es que formam um sistema s&oacute;: o <strong>cilindro abdominal</strong>. Ele tem teto (diafragma), assoalho (mus culatura p&eacute;lvica), parede posterior (eretores e multíf&iacute;dio) e parede lateral e anterior (transverso do abdome e obl&iacute;quos). Quando esse cilindro se fecha e a press&atilde;o interna sobe, ele cria a <strong>press&atilde;o intra-abdominal</strong> &mdash; uma coluna de press&atilde;o que ajuda a sustentar o tronco a partir de dentro, reduzindo a demanda sobre os eretores.</p>
 <p><strong>Por que manobras respirat&oacute;rias atingem o obl&iacute;quo interno.</strong> A expira&ccedil;&atilde;o for&ccedil;ada &eacute; ativa, e quem a executa s&atilde;o os abdominais &mdash; obl&iacute;quo interno e transverso em primeiro lugar. Uma expira&ccedil;&atilde;o completa e resistida (soprar contra resist&ecirc;ncia, por exemplo) leva essas fibras a um encurtamento maior do que qualquer abdominal tradicional produz, e o obl&iacute;quo interno &eacute; um dos m&uacute;sculos mais diretamente relacionados &agrave; estabilidade segmentar por sua conex&atilde;o com a f&aacute;scia toracolombar.</p>
-<p><strong>O que &eacute; bracing.</strong> &Eacute; a co-contra&ccedil;&atilde;o de toda a parede abdominal com o ar preso, gerando rigidez em 360&deg;. A instru&ccedil;&atilde;o pr&aacute;tica: pe&ccedil;a ao aluno para imaginar que vai levar um soco na barriga, e n&atilde;o para &quot;puxar o umbigo para dentro&quot;. Essa segunda instru&ccedil;&atilde;o (<em>hollowing</em>) reduz o di&acirc;metro do cilindro e, com ele, a press&atilde;o gerada &mdash; &eacute; o oposto do que se quer sob carga.</p>
-<div class="box"><span class="lb">Prioridade dos exerc&iacute;cios de core</span>
-<ul>
-<li><strong>Anti-extens&atilde;o</strong> (prancha, roda abdominal, <em>dead bug</em>): impedir que a lombar arqueie.</li>
-<li><strong>Anti-flex&atilde;o lateral</strong> (prancha lateral, <em>farmer walk</em> unilateral): impedir que o tronco caia de lado.</li>
-<li><strong>Anti-rota&ccedil;&atilde;o</strong> (<em>pallof press</em>): impedir que o tronco gire.</li>
+<p><strong>O que &eacute; bracing.</strong> &Eacute; a co-contra&ccedil;&atilde;o de toda a parede abdominal com o ar preso, gerando rigidez em 360&deg;. A instru&ccedil;&atilde;o pr&aacute;tica: pe&ccedil;a ao aluno para imaginar que vai levar um soco na barriga, e n&atilde;o para &quot;puxar o umbigo para dentro&quot;. Essa segunda instru&ccedil;&atilde;o (<em class="term">hollowing</em>) reduz o di&acirc;metro do cilindro e, com ele, a press&atilde;o gerada &mdash; &eacute; o oposto do que se quer sob carga.</p>
+<div class="callout ok"><span class="tag">Prioridade dos exerc&iacute;cios de core</span>
+<ul class="clean">
+<li><strong>Anti-extens&atilde;o</strong> (prancha, roda abdominal, <em class="term">dead bug</em>): impedir que a lombar arqueie.</li>
+<li><strong>Anti-flex&atilde;o lateral</strong> (prancha lateral, <em class="term">farmer walk</em> unilateral): impedir que o tronco caia de lado.</li>
+<li><strong>Anti-rota&ccedil;&atilde;o</strong> (<em class="term">pallof press</em>): impedir que o tronco gire.</li>
 </ul>
-<p>Repare que os tr&ecirc;s s&atilde;o <em>anti</em>. A fun&ccedil;&atilde;o principal do core sob carga n&atilde;o &eacute; produzir movimento &mdash; &eacute; <strong>impedir movimento indesejado</strong> enquanto os membros trabalham. Um abdominal com flex&atilde;o de tronco treina algo, mas n&atilde;o treina isso.</p>
-</div>
-</section>
+<p>Repare que os tr&ecirc;s s&atilde;o <em class="term">anti</em>. A fun&ccedil;&atilde;o principal do core sob carga n&atilde;o &eacute; produzir movimento &mdash; &eacute; <strong>impedir movimento indesejado</strong> enquanto os membros trabalham. Um abdominal com flex&atilde;o de tronco treina algo, mas n&atilde;o treina isso.</p>
+</div></section>
 
-<section id="s21">
-<h3><span class="sec-num">21</span>Agachamento com cal&ccedil;o: transferir estresse</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="calco">
+  <span class="sec-num">21 &mdash; COLUNA &middot; CAL&Ccedil;O</span>
+  <h2>Agachamento com cal&ccedil;o: <span class="accent">transferir estresse</span></h2>
+  <p class="sec-sub">N&atilde;o reduz carga &mdash; muda o endere&ccedil;o dela.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Agachamento com cal&ccedil;o &rarr; menor inclina&ccedil;&atilde;o da coluna, menor estresse da lombar e da coluna &rarr; maior estresse do joelho</p>
 </div>
 <p>O cal&ccedil;o (ou sapato com salto de levantamento) eleva o calcanhar, o que permite que a tibia se incline mais &agrave; frente sem que o calcanhar saia do ch&atilde;o. Com a tibia mais inclinada, o joelho avan&ccedil;a mais &mdash; e para o centro de massa continuar sobre o meio do p&eacute;, o tronco precisa ficar <strong>mais vertical</strong>.</p>
-<figure>
-<svg viewBox="0 0 800 320" role="img" aria-label="Agachamento com p&eacute; plano e com cal&ccedil;o no calcanhar" class="f7">
-<style>
-.f7 .bg{fill:#101010}.f7 .gr{stroke:#3a3a3a;stroke-width:2}
-.f7 .seg{stroke:#e8e6e3;stroke-width:5;stroke-linecap:round;fill:none}
-.f7 .tr{stroke:#ff6b1a;stroke-width:6;stroke-linecap:round}
-.f7 .wd{fill:#ff6b1a}.f7 .jt{fill:#a8a4a0}
-.f7 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
-.f7 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
-.f7 .th{fill:#ff6b1a;font:700 12.5px Inter,Arial,sans-serif}
-</style>
-<rect class="bg" width="800" height="320"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 07</span>Agachamento com e sem cal&ccedil;o</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-label="Agachamento com p&eacute; plano e com cal&ccedil;o no calcanhar" class="wb07">
+<defs><style>
+.wb07 .gr{stroke:#3a3a3a;stroke-width:2}
+.wb07 .seg{stroke:#e8e6e3;stroke-width:5;stroke-linecap:round;fill:none}
+.wb07 .tr{stroke:#ff6b1a;stroke-width:6;stroke-linecap:round}
+.wb07 .wd{fill:#ff6b1a}.wb07 .jt{fill:#a8a4a0}
+.wb07 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
+.wb07 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
+.wb07 .th{fill:#ff6b1a;font:700 12.5px Inter,Arial,sans-serif}
+</style></defs>
 <line class="gr" x1="40" y1="272" x2="370" y2="272"/>
 <line class="gr" x1="430" y1="272" x2="760" y2="272"/>
 <text class="tt" x="40" y="30">P&eacute; plano</text>
@@ -740,137 +652,130 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="th" x="560" y="112">tronco mais vertical</text>
 <text class="t" x="430" y="300">mais torque no joelho, menos na lombar</text>
 </svg>
-<figcaption>Figura 7 &mdash; O cal&ccedil;o n&atilde;o elimina carga: ele muda o endere&ccedil;o dela. Tronco mais vertical significa menor bra&ccedil;o de momento na lombar e maior no joelho.</figcaption>
-</figure>
+<div class="figcap">O cal&ccedil;o n&atilde;o elimina carga: ele muda o endere&ccedil;o dela. Tronco mais vertical significa menor bra&ccedil;o de momento na lombar e maior no joelho.</div></div>
 <p>A leitura correta dessa manipula&ccedil;&atilde;o &eacute; a que a pr&oacute;pria anota&ccedil;&atilde;o j&aacute; faz, com a flecha nos dois sentidos: <strong>&eacute; uma transfer&ecirc;ncia, n&atilde;o uma redu&ccedil;&atilde;o</strong>. O trabalho total para levantar o peso &eacute; o mesmo; o que muda &eacute; qual articula&ccedil;&atilde;o assume a maior fatia.</p>
-<div class="box pratica"><span class="lb">Quando usar cada um</span>
-<ul>
+<div class="callout"><span class="tag">Quando usar cada um</span>
+<ul class="clean">
 <li><strong>Cal&ccedil;o SIM:</strong> aluno com dor lombar em fase de constru&ccedil;&atilde;o; aluno com mobilidade de tornozelo limitada que perde profundidade; objetivo de enfatizar qu&aacute;driceps.</li>
 <li><strong>Cal&ccedil;o N&Atilde;O:</strong> aluno com dor anterior de joelho em fase sensível &mdash; voc&ecirc; estaria mandando a conta para a articula&ccedil;&atilde;o justamente sintom&aacute;tica.</li>
 </ul>
 </div>
-<p>E vale dizer o &oacute;bvio que se perde no meio da discuss&atilde;o: a limita&ccedil;&atilde;o de dorsiflex&atilde;o que o cal&ccedil;o compensa continua l&aacute;. Usar o cal&ccedil;o como ferramenta permanente sem nunca trabalhar mobilidade de tornozelo &eacute; escolher conviver com a restri&ccedil;&atilde;o. Usar o cal&ccedil;o <em>e</em> treinar dorsiflex&atilde;o em paralelo &eacute; a conduta completa.</p>
-</section>
+<p>E vale dizer o &oacute;bvio que se perde no meio da discuss&atilde;o: a limita&ccedil;&atilde;o de dorsiflex&atilde;o que o cal&ccedil;o compensa continua l&aacute;. Usar o cal&ccedil;o como ferramenta permanente sem nunca trabalhar mobilidade de tornozelo &eacute; escolher conviver com a restri&ccedil;&atilde;o. Usar o cal&ccedil;o <em class="term">e</em> treinar dorsiflex&atilde;o em paralelo &eacute; a conduta completa.</p></section>
 
-<section id="s22">
-<h3><span class="sec-num">22</span>Cintur&atilde;o: o que entrega e o que n&atilde;o entrega</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="cinturao">
+  <span class="sec-num">22 &mdash; COLUNA &middot; EQUIPAMENTO</span>
+  <h2>Cintur&atilde;o: o que entrega e <span class="accent">o que n&atilde;o entrega</span></h2>
+  <p class="sec-sub">Melhora desempenho; n&atilde;o &eacute; equipamento de preven&ccedil;&atilde;o.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Uso de cintur&atilde;o &rarr; maior seguran&ccedil;a, conforto, melhora do desempenho &rarr; n&atilde;o previne problemas</p>
 </div>
 <p>A anota&ccedil;&atilde;o separa duas coisas que costumam ser confundidas: <strong>o cintur&atilde;o melhora o desempenho, mas n&atilde;o &eacute; um equipamento de preven&ccedil;&atilde;o de les&atilde;o</strong>.</p>
-<p><strong>Como ele funciona.</strong> O cintur&atilde;o oferece uma superf&iacute;cie r&iacute;gida contra a qual a parede abdominal empurra. Isso amplifica a press&atilde;o intra-abdominal gerada no bracing e d&aacute; um <em>feedback</em> t&aacute;til excelente &mdash; o aluno sente para onde precisa expandir. O efeito sobre performance &eacute; consistente: aumenta press&atilde;o intra-abdominal, tende a aumentar velocidade de barra e permite um pouco mais de carga ou repeti&ccedil;&otilde;es.</p>
+<p><strong>Como ele funciona.</strong> O cintur&atilde;o oferece uma superf&iacute;cie r&iacute;gida contra a qual a parede abdominal empurra. Isso amplifica a press&atilde;o intra-abdominal gerada no bracing e d&aacute; um <em class="term">feedback</em> t&aacute;til excelente &mdash; o aluno sente para onde precisa expandir. O efeito sobre performance &eacute; consistente: aumenta press&atilde;o intra-abdominal, tende a aumentar velocidade de barra e permite um pouco mais de carga ou repeti&ccedil;&otilde;es.</p>
 <p><strong>Por que n&atilde;o previne.</strong> Um resultado importante desse campo veio da &aacute;rea ocupacional: programas que distribu&iacute;ram cintur&otilde;es para milhares de trabalhadores de armaz&eacute;m n&atilde;o reduziram a incid&ecirc;ncia de les&atilde;o lombar nem os afastamentos. Cintur&atilde;o n&atilde;o transforma uma dose excessiva em dose segura; ele apenas permite que a pessoa levante mais &mdash; o que, dependendo do caso, pode at&eacute; aumentar a exposi&ccedil;&atilde;o.</p>
-<p>Sobre o mito de que &quot;cintur&atilde;o enfraquece o core&quot;: as medi&ccedil;&otilde;es de eletromiografia mostram atividade abdominal <strong>igual ou maior</strong> com cintur&atilde;o, justamente porque h&aacute; algo contra o que empurrar. O que faz sentido n&atilde;o &eacute; evitar o cintur&atilde;o, e sim <strong>n&atilde;o us&aacute;-lo em tudo</strong>: reserve-o para as s&eacute;ries pesadas e treine as s&eacute;ries de constru&ccedil;&atilde;o sem ele, para que a capacidade sem equipamento tamb&eacute;m suba.</p>
-</section>
+<p>Sobre o mito de que &quot;cintur&atilde;o enfraquece o core&quot;: as medi&ccedil;&otilde;es de eletromiografia mostram atividade abdominal <strong>igual ou maior</strong> com cintur&atilde;o, justamente porque h&aacute; algo contra o que empurrar. O que faz sentido n&atilde;o &eacute; evitar o cintur&atilde;o, e sim <strong>n&atilde;o us&aacute;-lo em tudo</strong>: reserve-o para as s&eacute;ries pesadas e treine as s&eacute;ries de constru&ccedil;&atilde;o sem ele, para que a capacidade sem equipamento tamb&eacute;m suba.</p></section>
 
-<div class="block">
-  <div class="bk">Bloco 3</div>
-  <h2>Corre&ccedil;&atilde;o postural</h2>
-  <p class="who">Andr&eacute; Albuquerque</p>
-</div>
-
-<section id="s23">
-<h3><span class="sec-num">23</span>Hipercifose tor&aacute;cica: o quadro completo</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="hipercifose">
+  <span class="sec-num">23 &mdash; POSTURA &middot; O QUADRO</span>
+  <h2>Hipercifose tor&aacute;cica: <span class="accent">o quadro completo</span></h2>
+  <p class="sec-sub">O crit&eacute;rio &uacute;til n&atilde;o &eacute; o &acirc;ngulo &mdash; &eacute; conseguir desfazer a curva.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Hipercifose tor&aacute;cica &rarr; exerc&iacute;cios que estendem o t&oacute;rax s&atilde;o ben&eacute;ficos. Mobiliza&ccedil;&atilde;o da coluna.</p>
 </div>
-<p>A cifose tor&aacute;cica &eacute; uma curva <strong>normal</strong>. A coluna tor&aacute;cica &eacute; naturalmente conc&ecirc;ncava para frente, e essa curvatura, junto com a lordose cervical e lombar, &eacute; o que d&aacute; &agrave; coluna sua capacidade de absorver carga axial &mdash; uma haste reta suporta muito menos que uma haste curvada em s&eacute;rie. O prefixo <em>hiper</em> &eacute; que marca o excesso: uma curva acentuada al&eacute;m da faixa habitual, geralmente acompanhada de dificuldade em <strong>desfazê-la ativamente</strong>.</p>
+<p>A cifose tor&aacute;cica &eacute; uma curva <strong>normal</strong>. A coluna tor&aacute;cica &eacute; naturalmente conc&ecirc;ncava para frente, e essa curvatura, junto com a lordose cervical e lombar, &eacute; o que d&aacute; &agrave; coluna sua capacidade de absorver carga axial &mdash; uma haste reta suporta muito menos que uma haste curvada em s&eacute;rie. O prefixo <em class="term">hiper</em> &eacute; que marca o excesso: uma curva acentuada al&eacute;m da faixa habitual, geralmente acompanhada de dificuldade em <strong>desfazê-la ativamente</strong>.</p>
 <p>Esse crit&eacute;rio &mdash; conseguir ou n&atilde;o desfazer &mdash; &eacute; muito mais &uacute;til que qualquer medida de &acirc;ngulo. Pe&ccedil;a ao aluno para estender o t&oacute;rax e ver quanto ele consegue. Se ele chega a uma posi&ccedil;&atilde;o neutra sem esfor&ccedil;o hercúleo, voc&ecirc; tem um <strong>problema de h&aacute;bito e de resist&ecirc;ncia postural</strong> &mdash; ele tem a amplitude, s&oacute; n&atilde;o a sustenta. Se ele n&atilde;o chega, voc&ecirc; tem uma <strong>restri&ccedil;&atilde;o de mobilidade</strong> &mdash; e essa &eacute; a que exige mobiliza&ccedil;&atilde;o antes de qualquer coisa.</p>
-<p>A anota&ccedil;&atilde;o menciona <em>exerc&iacute;cios que estendem o t&oacute;rax</em> e <em>mobiliza&ccedil;&atilde;o da coluna</em> como itens separados, e faz bem: mobiliza&ccedil;&atilde;o abre a amplitude, exerc&iacute;cio de for&ccedil;a ensina o corpo a habit&aacute;-la. Fazer s&oacute; a primeira produz um aluno que fica bem por vinte minutos depois da aula e volta ao mesmo lugar.</p>
-<div class="box pratica"><span class="lb">Sequ&ecirc;ncia que funciona</span>
-<ol class="body">
+<p>A anota&ccedil;&atilde;o menciona <em class="term">exerc&iacute;cios que estendem o t&oacute;rax</em> e <em class="term">mobiliza&ccedil;&atilde;o da coluna</em> como itens separados, e faz bem: mobiliza&ccedil;&atilde;o abre a amplitude, exerc&iacute;cio de for&ccedil;a ensina o corpo a habit&aacute;-la. Fazer s&oacute; a primeira produz um aluno que fica bem por vinte minutos depois da aula e volta ao mesmo lugar.</p>
+<div class="callout"><span class="tag">Sequ&ecirc;ncia que funciona</span>
+<ol class="key">
 <li><strong>Mobilizar:</strong> extens&atilde;o tor&aacute;cica sobre rolo, gato-camelo com &ecirc;nfase tor&aacute;cica, rota&ccedil;&atilde;o em quatro apoios.</li>
 <li><strong>Ativar na nova amplitude:</strong> remada, puxada e voador invertido executados com o t&oacute;rax estendido.</li>
 <li><strong>Carregar:</strong> os mesmos padr&otilde;es com carga progressiva ao longo de semanas &mdash; &eacute; a for&ccedil;a dos extensores tor&aacute;cicos que sustenta a mudan&ccedil;a.</li>
 </ol>
 </div>
-<p>Uma nota de honestidade cient&iacute;fica: a rela&ccedil;&atilde;o entre postura e dor &eacute; <strong>bem mais fraca do que a cultura fitness afirma</strong>. Estudos populacionais grandes n&atilde;o encontram associa&ccedil;&atilde;o consistente entre grau de cifose e presen&ccedil;a de dor. Ent&atilde;o o motivo para trabalhar isso n&atilde;o &eacute; &quot;corrigir um defeito que causa dor&quot; &mdash; &eacute; ampliar amplitude dispon&iacute;vel, melhorar a mec&acirc;nica do ombro (que depende da posi&ccedil;&atilde;o da caixa tor&aacute;cica) e atender a uma queixa est&eacute;tica leg&iacute;tima do aluno.</p>
-</section>
+<p>Uma nota de honestidade cient&iacute;fica: a rela&ccedil;&atilde;o entre postura e dor &eacute; <strong>bem mais fraca do que a cultura fitness afirma</strong>. Estudos populacionais grandes n&atilde;o encontram associa&ccedil;&atilde;o consistente entre grau de cifose e presen&ccedil;a de dor. Ent&atilde;o o motivo para trabalhar isso n&atilde;o &eacute; &quot;corrigir um defeito que causa dor&quot; &mdash; &eacute; ampliar amplitude dispon&iacute;vel, melhorar a mec&acirc;nica do ombro (que depende da posi&ccedil;&atilde;o da caixa tor&aacute;cica) e atender a uma queixa est&eacute;tica leg&iacute;tima do aluno.</p></section>
 
-<section id="s24">
-<h3><span class="sec-num">24</span>Remada sem apoiar o peito: por qu&ecirc;</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="remada">
+  <span class="sec-num">24 &mdash; POSTURA &middot; REMADA</span>
+  <h2>Remada sem apoiar o peito: <span class="accent">por qu&ecirc;</span></h2>
+  <p class="sec-sub">Tr&ecirc;s decis&otilde;es t&eacute;cnicas dentro de uma frase s&oacute;.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Remadas, preferencialmente sem apoiar o peito, para que os eretores trabalhem para estabilizar o movimento, fechando as esc&aacute;pulas, sem contrair o trap&eacute;zio superior, que favorece a postura anteriorizada, peitoral estufado.</p>
 </div>
 <p>H&aacute; tr&ecirc;s decis&otilde;es t&eacute;cnicas embutidas nessa &uacute;nica frase. Vale abrir uma a uma.</p>
-<p><strong>1. Sem apoiar o peito.</strong> Quando o t&oacute;rax repousa sobre um apoio, quem sustenta o tronco contra a gravidade &eacute; o banco. Os extensores tor&aacute;cicos ficam de folga. Sem apoio &mdash; remada curvada, remada Pendlay, serrote com tronco livre &mdash; os eretores precisam trabalhar isometricamente durante toda a s&eacute;rie para manter a extens&atilde;o tor&aacute;cica. Voc&ecirc; ganha o est&iacute;mulo de dorsais <em>e</em> o est&iacute;mulo de extensores no mesmo exerc&iacute;cio. Para quem tem hipercifose, esse segundo est&iacute;mulo &eacute; o alvo.</p>
+<p><strong>1. Sem apoiar o peito.</strong> Quando o t&oacute;rax repousa sobre um apoio, quem sustenta o tronco contra a gravidade &eacute; o banco. Os extensores tor&aacute;cicos ficam de folga. Sem apoio &mdash; remada curvada, remada Pendlay, serrote com tronco livre &mdash; os eretores precisam trabalhar isometricamente durante toda a s&eacute;rie para manter a extens&atilde;o tor&aacute;cica. Voc&ecirc; ganha o est&iacute;mulo de dorsais <em class="term">e</em> o est&iacute;mulo de extensores no mesmo exerc&iacute;cio. Para quem tem hipercifose, esse segundo est&iacute;mulo &eacute; o alvo.</p>
 <p><strong>2. Fechando as esc&aacute;pulas.</strong> Retra&ccedil;&atilde;o escapular ativa recruta romboides e trap&eacute;zio m&eacute;dio &mdash; os m&uacute;sculos que puxam a esc&aacute;pula para tr&aacute;s e para a linha m&eacute;dia, exatamente o oposto do padr&atilde;o protra&iacute;do da postura anteriorizada.</p>
 <p><strong>3. Sem contrair o trap&eacute;zio superior.</strong> Este &eacute; o ponto mais fino. O trap&eacute;zio superior eleva a esc&aacute;pula; em muita gente ele est&aacute; hiperativo e entra em qualquer tarefa de membro superior, mesmo sem ter sido convocado. Uma remada executada com os ombros subindo em dire&ccedil;&atilde;o &agrave;s orelhas troca o trabalho de retra&ccedil;&atilde;o por trabalho de eleva&ccedil;&atilde;o &mdash; ou seja, refor&ccedil;a justamente o padr&atilde;o que se queria mudar.</p>
-<div class="box"><span class="lb">Como corrigir na pr&aacute;tica</span>
-<ul>
+<div class="callout ok"><span class="tag">Como corrigir na pr&aacute;tica</span>
+<ul class="clean">
 <li>Instru&ccedil;&atilde;o verbal: <strong>&quot;leve os ombros para tr&aacute;s e para baixo, n&atilde;o para cima&quot;</strong>.</li>
 <li>Reduza a carga. O trap&eacute;zio superior entra como compensa&ccedil;&atilde;o quando o peso excede o que os retratores conseguem vencer.</li>
 <li>Toque t&aacute;til no trap&eacute;zio superior durante a s&eacute;rie: o aluno percebe a contra&ccedil;&atilde;o e desliga sozinho com muito mais rapidez do que com instru&ccedil;&atilde;o verbal isolada.</li>
 </ul>
 </div>
-<p>Sobre o final da anota&ccedil;&atilde;o &mdash; <em>peitoral estufado</em>: &eacute; a express&atilde;o pr&aacute;tica da extens&atilde;o tor&aacute;cica. N&atilde;o &eacute; empinar o peito com hiperextens&atilde;o lombar (erro comum, em que o aluno arqueia a lombar e mant&eacute;m a cifose tor&aacute;cica intacta), e sim <strong>abrir a caixa tor&aacute;cica pela pr&oacute;pria coluna tor&aacute;cica</strong>. A diferen&ccedil;a se v&ecirc; de lado: no primeiro caso o &acirc;ngulo da lombar muda; no segundo, o do t&oacute;rax.</p>
-</section>
+<p>Sobre o final da anota&ccedil;&atilde;o &mdash; <em class="term">peitoral estufado</em>: &eacute; a express&atilde;o pr&aacute;tica da extens&atilde;o tor&aacute;cica. N&atilde;o &eacute; empinar o peito com hiperextens&atilde;o lombar (erro comum, em que o aluno arqueia a lombar e mant&eacute;m a cifose tor&aacute;cica intacta), e sim <strong>abrir a caixa tor&aacute;cica pela pr&oacute;pria coluna tor&aacute;cica</strong>. A diferen&ccedil;a se v&ecirc; de lado: no primeiro caso o &acirc;ngulo da lombar muda; no segundo, o do t&oacute;rax.</p></section>
 
-<section id="s25">
-<h3><span class="sec-num">25</span>Trap&eacute;zio superior e serr&aacute;til: a dupla desregulada</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="binario">
+  <span class="sec-num">25 &mdash; POSTURA &middot; O BIN&Aacute;RIO</span>
+  <h2>Trap&eacute;zio superior e serr&aacute;til: a <span class="accent">dupla desregulada</span></h2>
+  <p class="sec-sub">Rota&ccedil;&atilde;o superior &eacute; um bin&aacute;rio &mdash; e bin&aacute;rio desproporcional n&atilde;o gira.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Trap&eacute;zio superior (aumento de ativa&ccedil;&atilde;o) e serr&aacute;til anterior (redu&ccedil;&atilde;o da ativa&ccedil;&atilde;o) correspondem a altera&ccedil;&otilde;es nos movimentos escapulares</p>
 </div>
 <p>Essa anota&ccedil;&atilde;o descreve um dos achados mais consistentes da literatura de ombro: em pessoas com disfun&ccedil;&atilde;o escapular e dor de ombro, o padr&atilde;o t&iacute;pico &eacute; <strong>trap&eacute;zio superior com ativa&ccedil;&atilde;o aumentada e antecipada, e serr&aacute;til anterior com ativa&ccedil;&atilde;o reduzida e atrasada</strong>.</p>
 <p>Para entender por que isso importa, &eacute; preciso saber que a rota&ccedil;&atilde;o superior da esc&aacute;pula &mdash; o giro que leva a cavidade glenoide a apontar para cima e permite que o bra&ccedil;o se eleve &mdash; &eacute; produzida por um <strong>bin&aacute;rio de for&ccedil;as</strong>: tr&ecirc;s m&uacute;sculos puxando em dire&ccedil;&otilde;es diferentes cujo resultado &eacute; uma rota&ccedil;&atilde;o.</p>
-<table>
-<tr><th>M&uacute;sculo</th><th>Puxa a esc&aacute;pula</th><th>Contribui&ccedil;&atilde;o</th></tr>
-<tr><td>Trap&eacute;zio superior</td><td>Para cima e para dentro</td><td>Eleva&ccedil;&atilde;o da clav&iacute;cula e do &acirc;ngulo superior</td></tr>
-<tr><td>Trap&eacute;zio inferior</td><td>Para baixo e para dentro</td><td>Ancora a raiz da espinha da esc&aacute;pula</td></tr>
-<tr><td>Serr&aacute;til anterior</td><td>Para frente e para fora</td><td>Rota&ccedil;&atilde;o superior, protra&ccedil;&atilde;o e inclina&ccedil;&atilde;o posterior</td></tr>
-</table>
+<div class="table-wrap"><table><thead><tr><th>M&uacute;sculo</th><th>Puxa a esc&aacute;pula</th><th>Contribui&ccedil;&atilde;o</th></tr></thead><tbody><tr><td>Trap&eacute;zio superior</td><td>Para cima e para dentro</td><td>Eleva&ccedil;&atilde;o da clav&iacute;cula e do &acirc;ngulo superior</td></tr><tr><td>Trap&eacute;zio inferior</td><td>Para baixo e para dentro</td><td>Ancora a raiz da espinha da esc&aacute;pula</td></tr><tr><td>Serr&aacute;til anterior</td><td>Para frente e para fora</td><td>Rota&ccedil;&atilde;o superior, protra&ccedil;&atilde;o e inclina&ccedil;&atilde;o posterior</td></tr></tbody></table></div>
 <p>Um bin&aacute;rio s&oacute; produz rota&ccedil;&atilde;o limpa se os componentes estiverem proporcionais. Se o trap&eacute;zio superior domina e o serr&aacute;til n&atilde;o entrega sua parte, o resultado n&atilde;o &eacute; rota&ccedil;&atilde;o superior &mdash; &eacute; <strong>eleva&ccedil;&atilde;o do ombro inteiro</strong>. A esc&aacute;pula sobe em vez de girar, a glenoide n&atilde;o se reorienta, e o espa&ccedil;o por onde os tend&otilde;es do manguito passam n&atilde;o abre como deveria (assunto do bloco 4).</p>
-<div class="box"><span class="lb">O que isso muda na prescri&ccedil;&atilde;o</span>
+<div class="callout ok"><span class="tag">O que isso muda na prescri&ccedil;&atilde;o</span>
 <p>O erro comum &eacute; concluir &quot;ent&atilde;o preciso alongar o trap&eacute;zio superior&quot;. Alongar um m&uacute;sculo hiperativo tem efeito curto e n&atilde;o resolve a causa: ele est&aacute; compensando algu&eacute;m que n&atilde;o est&aacute; trabalhando. A conduta com efeito duradouro &eacute; <strong>ensinar o serr&aacute;til e o trap&eacute;zio inferior a assumir sua fun&ccedil;&atilde;o</strong>. Quando o bin&aacute;rio volta a funcionar, o trap&eacute;zio superior reduz sozinho.</p>
-</div>
-</section>
+</div></section>
 
-<section id="s26">
-<h3><span class="sec-num">26</span>Serr&aacute;til anterior: anatomia e fun&ccedil;&atilde;o</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="serratil">
+  <span class="sec-num">26 &mdash; POSTURA &middot; ANATOMIA</span>
+  <h2>Serr&aacute;til anterior: <span class="accent">anatomia e fun&ccedil;&atilde;o</span></h2>
+  <p class="sec-sub">O trajeto por baixo da esc&aacute;pula explica tudo o que ele faz.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Como ativar corretamente o serr&aacute;til anterior &rarr; fixo na borda medial da esc&aacute;pula e inserido entre a 1&ordf; e 8&ordf; costela &rarr; realiza protra&ccedil;&atilde;o escapular e rota&ccedil;&atilde;o superior.</p>
 </div>
 <p>A anatomia explica tudo o que o serr&aacute;til faz, ent&atilde;o vale visualiz&aacute;-la com cuidado. Ele se origina na face lateral das oito ou nove primeiras costelas &mdash; da&iacute; o nome, aquelas digita&ccedil;&otilde;es em forma de serra que aparecem nas costelas de quem tem pouca gordura &mdash; e corre <strong>por baixo da esc&aacute;pula</strong>, entre ela e a caixa tor&aacute;cica, at&eacute; se fixar na borda medial.</p>
 <p>Esse trajeto &eacute; a chave de tudo. Como ele passa por dentro, contra&iacute;-lo puxa a borda medial da esc&aacute;pula <strong>para frente e contra as costelas</strong>. Da&iacute; saem as tr&ecirc;s fun&ccedil;&otilde;es:</p>
-<ul>
+<ul class="clean">
 <li><strong>Protra&ccedil;&atilde;o:</strong> desliza a esc&aacute;pula para frente ao redor do t&oacute;rax.</li>
 <li><strong>Rota&ccedil;&atilde;o superior:</strong> as fibras inferiores, que se inserem no &acirc;ngulo inferior, puxam-no lateralmente e giram a esc&aacute;pula.</li>
-<li><strong>Inclina&ccedil;&atilde;o posterior e estabiliza&ccedil;&atilde;o:</strong> mant&eacute;m a borda medial colada nas costelas. &Eacute; a fun&ccedil;&atilde;o que falta na <em>esc&aacute;pula alada</em>, em que a borda medial descola visivelmente.</li>
+<li><strong>Inclina&ccedil;&atilde;o posterior e estabiliza&ccedil;&atilde;o:</strong> mant&eacute;m a borda medial colada nas costelas. &Eacute; a fun&ccedil;&atilde;o que falta na <em class="term">esc&aacute;pula alada</em>, em que a borda medial descola visivelmente.</li>
 </ul>
-<p>O apelido cl&aacute;ssico &mdash; <em>m&uacute;sculo do boxeador</em> &mdash; vem da protra&ccedil;&atilde;o: ele &eacute; quem entrega os &uacute;ltimos cent&iacute;metros do soco, depois que o ombro j&aacute; foi at&eacute; onde podia.</p>
-<div class="box pratica"><span class="lb">Exerc&iacute;cios que realmente o recrutam</span>
-<ul>
+<p>O apelido cl&aacute;ssico &mdash; <em class="term">m&uacute;sculo do boxeador</em> &mdash; vem da protra&ccedil;&atilde;o: ele &eacute; quem entrega os &uacute;ltimos cent&iacute;metros do soco, depois que o ombro j&aacute; foi at&eacute; onde podia.</p>
+<div class="callout"><span class="tag">Exerc&iacute;cios que realmente o recrutam</span>
+<ul class="clean">
 <li><strong>Push-up plus:</strong> flex&atilde;o de bra&ccedil;o em que, no topo, se empurra o ch&atilde;o mais um pouco separando as esc&aacute;pulas. O &quot;plus&quot; &eacute; o serr&aacute;til.</li>
 <li><strong>Serratus wall slide:</strong> antebra&ccedil;os na parede, deslizando para cima mantendo press&atilde;o &mdash; combina rota&ccedil;&atilde;o superior com protra&ccedil;&atilde;o.</li>
 <li><strong>Press na argola ou no banco com protra&ccedil;&atilde;o final:</strong> qualquer empurrar horizontal que permita a esc&aacute;pula viajar.</li>
 <li><strong>Landmine press e overhead press:</strong> a eleva&ccedil;&atilde;o acima da cabe&ccedil;a exige rota&ccedil;&atilde;o superior plena, e portanto serr&aacute;til.</li>
 </ul>
-</div>
-</section>
+</div></section>
 
-<section id="s27">
-<h3><span class="sec-num">27</span>Inclina&ccedil;&atilde;o anterior da esc&aacute;pula</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="inclinacao">
+  <span class="sec-num">27 &mdash; POSTURA &middot; O DETALHE DECISIVO</span>
+  <h2>Protra&ccedil;&atilde;o n&atilde;o &eacute; <span class="accent">inclina&ccedil;&atilde;o anterior</span></h2>
+  <p class="sec-sub">A corre&ccedil;&atilde;o alvo &eacute; a inclina&ccedil;&atilde;o, n&atilde;o a protra&ccedil;&atilde;o.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Em postura hipercif&oacute;tica, a esc&aacute;pula est&aacute; em protrus&atilde;o, mas tamb&eacute;m est&aacute; inclinada, gerando anterioriza&ccedil;&atilde;o do trap&eacute;zio superior. Ao ativar corretamente o serr&aacute;til anterior nos exerc&iacute;cios, o peitoral ficar&aacute; estufado, reduzindo essa inclina&ccedil;&atilde;o da esc&aacute;pula, mesmo que ela ainda esteja indo para frente.</p>
 </div>
 <p>Essa anota&ccedil;&atilde;o faz uma distin&ccedil;&atilde;o que a maioria dos profissionais nunca chega a fazer, e ela &eacute; decisiva: <strong>protra&ccedil;&atilde;o e inclina&ccedil;&atilde;o anterior s&atilde;o movimentos diferentes, em eixos diferentes</strong>.</p>
-<ul>
-<li><strong>Protra&ccedil;&atilde;o:</strong> a esc&aacute;pula desliza para frente <em>contornando</em> as costelas, permanecendo plana contra elas. &Eacute; um movimento normal e necess&aacute;rio &mdash; acontece em todo empurrar.</li>
-<li><strong>Inclina&ccedil;&atilde;o anterior (<em>anterior tilt</em>):</strong> a esc&aacute;pula gira no eixo horizontal, jogando a borda superior e o processo coracoide para frente e para baixo, e <em>descolando</em> o &acirc;ngulo inferior das costelas. &Eacute; esse movimento que fecha o espa&ccedil;o subacromial.</li>
+<ul class="clean">
+<li><strong>Protra&ccedil;&atilde;o:</strong> a esc&aacute;pula desliza para frente <em class="term">contornando</em> as costelas, permanecendo plana contra elas. &Eacute; um movimento normal e necess&aacute;rio &mdash; acontece em todo empurrar.</li>
+<li><strong>Inclina&ccedil;&atilde;o anterior (<em class="term">anterior tilt</em>):</strong> a esc&aacute;pula gira no eixo horizontal, jogando a borda superior e o processo coracoide para frente e para baixo, e <em class="term">descolando</em> o &acirc;ngulo inferior das costelas. &Eacute; esse movimento que fecha o espa&ccedil;o subacromial.</li>
 </ul>
-<figure>
-<svg viewBox="0 0 800 340" role="img" aria-label="Esc&aacute;pula em inclina&ccedil;&atilde;o anterior e ap&oacute;s ativa&ccedil;&atilde;o do serr&aacute;til" class="f8">
-<style>
-.f8 .bg{fill:#101010}.f8 .rib{fill:#1c1c1c;stroke:#6a6560;stroke-width:3}
-.f8 .sp{stroke:#8a857f;stroke-width:4;fill:none}
-.f8 .sc{stroke:#ff6b1a;stroke-width:8;stroke-linecap:round}
-.f8 .ser{stroke:#7fb3ff;stroke-width:3.5;stroke-dasharray:7 5}
-.f8 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
-.f8 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
-.f8 .th{fill:#ff6b1a;font:700 12.5px Inter,Arial,sans-serif}
-.f8 .tb{fill:#7fb3ff;font:700 12.5px Inter,Arial,sans-serif}
-</style>
-<rect class="bg" width="800" height="340"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 08</span>Esc&aacute;pula &mdash; inclina&ccedil;&atilde;o e a&ccedil;&atilde;o do serr&aacute;til</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-label="Esc&aacute;pula em inclina&ccedil;&atilde;o anterior e ap&oacute;s ativa&ccedil;&atilde;o do serr&aacute;til" class="wb08">
+<defs><style>
+.wb08 .rib{fill:#1c1c1c;stroke:#6a6560;stroke-width:3}
+.wb08 .sp{stroke:#8a857f;stroke-width:4;fill:none}
+.wb08 .sc{stroke:#ff6b1a;stroke-width:8;stroke-linecap:round}
+.wb08 .ser{stroke:#7fb3ff;stroke-width:3.5;stroke-dasharray:7 5}
+.wb08 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
+.wb08 .tt{fill:#e8e6e3;font:700 13px Inter,Arial,sans-serif}
+.wb08 .th{fill:#ff6b1a;font:700 12.5px Inter,Arial,sans-serif}
+.wb08 .tb{fill:#7fb3ff;font:700 12.5px Inter,Arial,sans-serif}
+</style></defs>
 <text class="tt" x="40" y="30">Postura hipercif&oacute;tica</text>
 <text class="tt" x="440" y="30">Com serr&aacute;til ativo</text>
 <text class="t" x="40" y="52">vista lateral, frente &agrave; esquerda</text>
@@ -891,51 +796,45 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="tb" x="500" y="130">contra as costelas</text>
 <text class="t" x="440" y="316">esc&aacute;pula plana &rarr; espa&ccedil;o preservado, mesmo protra&iacute;da</text>
 </svg>
-<figcaption>Figura 8 &mdash; Vista lateral esquem&aacute;tica. Em laranja, a esc&aacute;pula; em azul tracejado, a linha de tra&ccedil;&atilde;o do serr&aacute;til anterior. A corre&ccedil;&atilde;o alvo &eacute; a inclina&ccedil;&atilde;o, n&atilde;o necessariamente a protra&ccedil;&atilde;o.</figcaption>
-</figure>
-<p>Isso reformula completamente o objetivo do trabalho postural. A meta n&atilde;o &eacute; <em>puxar a esc&aacute;pula para tr&aacute;s at&eacute; ela ficar &quot;no lugar&quot;</em> &mdash; posi&ccedil;&atilde;o que, sustentada o tempo todo, cria a pr&oacute;pria rigidez que impede o ombro de elevar bem. A meta &eacute; <strong>recuperar a inclina&ccedil;&atilde;o posterior</strong>, ou seja, colar a esc&aacute;pula na caixa tor&aacute;cica. Uma esc&aacute;pula protra&iacute;da mas plana funciona bem. Uma esc&aacute;pula retra&iacute;da mas inclinada anteriormente continua fechando o espa&ccedil;o.</p>
-<p>Repare no encadeamento que a anota&ccedil;&atilde;o construiu: hipercifose &rarr; costelas rodadas para baixo e &agrave; frente &rarr; a esc&aacute;pula, que apoia sobre elas, acompanha e inclina &rarr; o acr&ocirc;mio desce sobre a cabe&ccedil;a do &uacute;mero. <strong>A posi&ccedil;&atilde;o da esc&aacute;pula &eacute; consequ&ecirc;ncia da posi&ccedil;&atilde;o do t&oacute;rax.</strong> Por isso trabalhar extens&atilde;o tor&aacute;cica (se&ccedil;&atilde;o 23) &eacute; pr&eacute;-requisito para qualquer corre&ccedil;&atilde;o escapular durar.</p>
-</section>
+<div class="figcap">Vista lateral esquem&aacute;tica. Em laranja, a esc&aacute;pula; em azul tracejado, a linha de tra&ccedil;&atilde;o do serr&aacute;til anterior. A corre&ccedil;&atilde;o alvo &eacute; a inclina&ccedil;&atilde;o, n&atilde;o necessariamente a protra&ccedil;&atilde;o.</div></div>
+<p>Isso reformula completamente o objetivo do trabalho postural. A meta n&atilde;o &eacute; <em class="term">puxar a esc&aacute;pula para tr&aacute;s at&eacute; ela ficar &quot;no lugar&quot;</em> &mdash; posi&ccedil;&atilde;o que, sustentada o tempo todo, cria a pr&oacute;pria rigidez que impede o ombro de elevar bem. A meta &eacute; <strong>recuperar a inclina&ccedil;&atilde;o posterior</strong>, ou seja, colar a esc&aacute;pula na caixa tor&aacute;cica. Uma esc&aacute;pula protra&iacute;da mas plana funciona bem. Uma esc&aacute;pula retra&iacute;da mas inclinada anteriormente continua fechando o espa&ccedil;o.</p>
+<p>Repare no encadeamento que a anota&ccedil;&atilde;o construiu: hipercifose &rarr; costelas rodadas para baixo e &agrave; frente &rarr; a esc&aacute;pula, que apoia sobre elas, acompanha e inclina &rarr; o acr&ocirc;mio desce sobre a cabe&ccedil;a do &uacute;mero. <strong>A posi&ccedil;&atilde;o da esc&aacute;pula &eacute; consequ&ecirc;ncia da posi&ccedil;&atilde;o do t&oacute;rax.</strong> Por isso trabalhar extens&atilde;o tor&aacute;cica (se&ccedil;&atilde;o 23) &eacute; pr&eacute;-requisito para qualquer corre&ccedil;&atilde;o escapular durar.</p></section>
 
-<section id="s28">
-<h3><span class="sec-num">28</span>O serr&aacute;til n&atilde;o aparece na remada, aparece no supino</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="supino-serratil">
+  <span class="sec-num">28 &mdash; POSTURA &middot; PRESCRI&Ccedil;&Atilde;O</span>
+  <h2>O serr&aacute;til n&atilde;o aparece na remada, <span class="accent">aparece no supino</span></h2>
+  <p class="sec-sub">Programa postural s&oacute; de puxadas corrige metade do bin&aacute;rio.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>O serr&aacute;til anterior n&atilde;o &eacute; ativado em remadas, mas &eacute; muito bem utilizado no supino</p>
 </div>
 <p>&Eacute; contraintuitivo &mdash; parece que exerc&iacute;cio de &quot;costas&quot; deveria treinar um m&uacute;sculo que fica nas costas &mdash; mas a l&oacute;gica muscular n&atilde;o segue a regi&atilde;o anat&ocirc;mica, e sim a a&ccedil;&atilde;o.</p>
 <p>O serr&aacute;til <strong>protrai</strong>. A remada <strong>retrai</strong>. S&atilde;o a&ccedil;&otilde;es opostas: durante uma remada bem executada, o serr&aacute;til est&aacute; sendo alongado, n&atilde;o encurtado, e funciona no m&aacute;ximo como estabilizador exc&ecirc;ntrico controlando a velocidade da retra&ccedil;&atilde;o. Ele n&atilde;o &eacute; o agonista de nada ali.</p>
 <p>J&aacute; o supino faz o inverso. Na fase concêntrica, empurrar a barra para cima leva a esc&aacute;pula &agrave; protra&ccedil;&atilde;o &mdash; e mesmo no supino cl&aacute;ssico em que se instrui a manter as esc&aacute;pulas retra&iacute;das e estabilizadas contra o banco, o serr&aacute;til trabalha <strong>isometricamente e com intensidade alta</strong> para manter a esc&aacute;pula fixada contra a caixa tor&aacute;cica enquanto a carga tenta empurr&aacute;-la para tr&aacute;s. Ele &eacute; a base est&aacute;vel sobre a qual o peitoral produz for&ccedil;a.</p>
-<div class="box"><span class="lb">Consequ&ecirc;ncia pr&aacute;tica que quase ningu&eacute;m tira</span>
+<div class="callout ok"><span class="tag">Consequ&ecirc;ncia pr&aacute;tica que quase ningu&eacute;m tira</span>
 <p>Se o aluno tem d&eacute;ficit de serr&aacute;til, <strong>adicionar mais remada n&atilde;o resolve</strong> &mdash; e essa &eacute; a resposta autom&aacute;tica de quase todo mundo para &quot;postura ruim&quot;. O que resolve &eacute; adicionar empurrar bem executado (supino com protra&ccedil;&atilde;o permitida, flex&atilde;o de bra&ccedil;o completa, press acima da cabe&ccedil;a) e trabalho espec&iacute;fico de protra&ccedil;&atilde;o e rota&ccedil;&atilde;o superior. Programa de postura que s&oacute; adiciona puxadas corrige metade do bin&aacute;rio e deixa a outra metade intacta.</p>
-</div>
-</section>
+</div></section>
 
-<div class="block">
-  <div class="bk">Bloco 4</div>
-  <h2>Hipertrofia de delt&oacute;ides e impacto subacromial</h2>
-  <p class="who">Bruno S&aacute;</p>
-</div>
-
-<section id="s29">
-<h3><span class="sec-num">29</span>Espa&ccedil;o subacromial e os tr&ecirc;s tipos de acr&ocirc;mio</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="acromio">
+  <span class="sec-num">29 &mdash; OMBRO &middot; O CORREDOR</span>
+  <h2>Espa&ccedil;o subacromial e os <span class="accent">tr&ecirc;s tipos de acr&ocirc;mio</span></h2>
+  <p class="sec-sub">A &uacute;nica vari&aacute;vel desta hist&oacute;ria que voc&ecirc; n&atilde;o controla.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Impacto subacromial e hipertrofia</p>
 <p>3 tipos de acr&ocirc;mio &rarr; reto (espa&ccedil;o entre o tub&eacute;rculo maior do &uacute;mero e o acr&ocirc;mio maior), curvo (espa&ccedil;o um pouco menor), ganchoso (em forma de gancho)</p>
 </div>
 <p>O <strong>espa&ccedil;o subacromial</strong> &eacute; um corredor. O teto &eacute; formado pelo acr&ocirc;mio (a proje&ccedil;&atilde;o &oacute;ssea da esc&aacute;pula que voc&ecirc; apalpa no alto do ombro) e pelo ligamento coracoacromial. O ch&atilde;o &eacute; a cabe&ccedil;a do &uacute;mero. Entre os dois passam estruturas que precisam de folga para deslizar: o <strong>tend&atilde;o do supraespinal</strong>, a por&ccedil;&atilde;o longa do b&iacute;ceps e a <strong>bursa subacromial</strong>. Em repouso esse corredor tem cerca de 1 cent&iacute;metro de altura.</p>
 <p>A classifica&ccedil;&atilde;o dos tr&ecirc;s tipos de acr&ocirc;mio &eacute; a de Bigliani, e ela descreve a forma da face inferior do osso vista de perfil:</p>
-<figure>
-<svg viewBox="0 0 800 300" role="img" aria-label="Tr&ecirc;s tipos de acr&ocirc;mio segundo Bigliani" class="f9">
-<style>
-.f9 .bg{fill:#101010}.f9 .ac{fill:#3a3632;stroke:#e8e6e3;stroke-width:3}
-.f9 .hh{fill:#2a2a2a;stroke:#e8e6e3;stroke-width:3}
-.f9 .tn{stroke:#ff6b1a;stroke-width:8;stroke-linecap:round}
-.f9 .gap{stroke:#7fb3ff;stroke-width:2.5;stroke-dasharray:4 4}
-.f9 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
-.f9 .tt{fill:#e8e6e3;font:700 14px Inter,Arial,sans-serif}
-.f9 .tb{fill:#7fb3ff;font:700 12.5px Inter,Arial,sans-serif}
-</style>
-<rect class="bg" width="800" height="300"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 09</span>Os tr&ecirc;s tipos de acr&ocirc;mio</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-label="Tr&ecirc;s tipos de acr&ocirc;mio segundo Bigliani" class="wb09">
+<defs><style>
+.wb09 .ac{fill:#3a3632;stroke:#e8e6e3;stroke-width:3}
+.wb09 .hh{fill:#2a2a2a;stroke:#e8e6e3;stroke-width:3}
+.wb09 .tn{stroke:#ff6b1a;stroke-width:8;stroke-linecap:round}
+.wb09 .gap{stroke:#7fb3ff;stroke-width:2.5;stroke-dasharray:4 4}
+.wb09 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
+.wb09 .tt{fill:#e8e6e3;font:700 14px Inter,Arial,sans-serif}
+.wb09 .tb{fill:#7fb3ff;font:700 12.5px Inter,Arial,sans-serif}
+</style></defs>
 <path class="ac" d="M40,90 L230,90 L230,120 L40,120 z"/>
 <circle class="hh" cx="140" cy="216" r="58"/>
 <line class="tn" x1="86" y1="168" x2="200" y2="152"/>
@@ -958,49 +857,49 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="tb" x="670" y="182">espa&ccedil;o estreito</text>
 <text class="t" x="540" y="290">proje&ccedil;&atilde;o anterior em gancho</text>
 </svg>
-<figcaption>Figura 9 &mdash; Os tr&ecirc;s formatos de acr&ocirc;mio e o corredor subacromial. Em laranja, o tend&atilde;o do supraespinal; em azul, a altura dispon&iacute;vel do corredor.</figcaption>
-</figure>
+<div class="figcap">Os tr&ecirc;s formatos de acr&ocirc;mio e o corredor subacromial. Em laranja, o tend&atilde;o do supraespinal; em azul, a altura dispon&iacute;vel do corredor.</div></div>
 <p>Aqui &eacute; preciso uma dose de honestidade cient&iacute;fica, porque essa classifica&ccedil;&atilde;o &eacute; frequentemente usada de forma mais determinista do que a evid&ecirc;ncia permite. A concord&acirc;ncia entre avaliadores ao classificar o acr&ocirc;mio &eacute; apenas moderada &mdash; o mesmo exame recebe classifica&ccedil;&otilde;es diferentes de examinadores diferentes. Al&eacute;m disso, discute-se se o formato ganchoso &eacute; realmente uma varia&ccedil;&atilde;o anat&ocirc;mica de nascen&ccedil;a ou uma <strong>adapta&ccedil;&atilde;o &oacute;ssea adquirida</strong>, formada por tra&ccedil;&atilde;o cr&ocirc;nica do ligamento coracoacromial &mdash; ou seja, poss&iacute;vel consequ&ecirc;ncia do problema, e n&atilde;o sua causa.</p>
-<p>Para quem prescreve treino, a conclus&atilde;o pr&aacute;tica &eacute; libertadora: <strong>o formato do acr&ocirc;mio &eacute; a &uacute;nica vari&aacute;vel dessa hist&oacute;ria sobre a qual voc&ecirc; n&atilde;o tem controle nenhum</strong>. Tudo o mais &mdash; posi&ccedil;&atilde;o da esc&aacute;pula, for&ccedil;a do manguito, controle de rota&ccedil;&atilde;o, plano de movimento, dose de volume acima da cabe&ccedil;a &mdash; est&aacute; sob sua interven&ccedil;&atilde;o. Foque nas vari&aacute;veis modific&aacute;veis.</p>
-</section>
+<p>Para quem prescreve treino, a conclus&atilde;o pr&aacute;tica &eacute; libertadora: <strong>o formato do acr&ocirc;mio &eacute; a &uacute;nica vari&aacute;vel dessa hist&oacute;ria sobre a qual voc&ecirc; n&atilde;o tem controle nenhum</strong>. Tudo o mais &mdash; posi&ccedil;&atilde;o da esc&aacute;pula, for&ccedil;a do manguito, controle de rota&ccedil;&atilde;o, plano de movimento, dose de volume acima da cabe&ccedil;a &mdash; est&aacute; sob sua interven&ccedil;&atilde;o. Foque nas vari&aacute;veis modific&aacute;veis.</p></section>
 
-<section id="s30">
-<h3><span class="sec-num">30</span>S&iacute;ndrome do impacto subacromial</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="impacto">
+  <span class="sec-num">30 &mdash; OMBRO &middot; IMPACTO</span>
+  <h2>S&iacute;ndrome do <span class="accent">impacto subacromial</span></h2>
+  <p class="sec-sub">Arco doloroso, rota&ccedil;&atilde;o umeral e por que o nome mudou.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>S&iacute;ndrome do impacto subacromial &rarr; atrito ou compress&atilde;o dos tend&otilde;es do manguito rotador, da bursa, quando o tub&eacute;rculo maior do &uacute;mero colide com o acr&ocirc;mio, esmagando essas estruturas</p>
 <p>M&uacute;sculos do manguito rotador e c&aacute;psula articular precisam estar desenvolvidos para sustentar o ombro</p>
 </div>
-<p>A descri&ccedil;&atilde;o do mecanismo est&aacute; correta e vale complementar com o momento em que ele acontece. O tub&eacute;rculo maior do &uacute;mero &eacute; a saliência &oacute;ssea onde se inserem supraespinal, infraespinal e redondo menor. Durante a eleva&ccedil;&atilde;o do bra&ccedil;o, ele passa por baixo do acr&ocirc;mio &mdash; e a faixa de maior aproxima&ccedil;&atilde;o costuma ficar entre <strong>60&deg; e 120&deg; de abdu&ccedil;&atilde;o</strong>, o chamado <em>arco doloroso</em>. Abaixo de 60&deg; ainda n&atilde;o chegou l&aacute;; acima de 120&deg;, o tub&eacute;rculo j&aacute; passou.</p>
+<p>A descri&ccedil;&atilde;o do mecanismo est&aacute; correta e vale complementar com o momento em que ele acontece. O tub&eacute;rculo maior do &uacute;mero &eacute; a saliência &oacute;ssea onde se inserem supraespinal, infraespinal e redondo menor. Durante a eleva&ccedil;&atilde;o do bra&ccedil;o, ele passa por baixo do acr&ocirc;mio &mdash; e a faixa de maior aproxima&ccedil;&atilde;o costuma ficar entre <strong>60&deg; e 120&deg; de abdu&ccedil;&atilde;o</strong>, o chamado <em class="term">arco doloroso</em>. Abaixo de 60&deg; ainda n&atilde;o chegou l&aacute;; acima de 120&deg;, o tub&eacute;rculo j&aacute; passou.</p>
 <p>Duas modula&ccedil;&otilde;es mudam radicalmente esse encontro:</p>
-<ul>
+<ul class="clean">
 <li><strong>Rota&ccedil;&atilde;o do &uacute;mero.</strong> Com o bra&ccedil;o em rota&ccedil;&atilde;o interna, o tub&eacute;rculo maior gira para cima e para frente, indo direto contra o acr&ocirc;mio. Com rota&ccedil;&atilde;o externa, ele gira para tr&aacute;s e passa por fora do teto. Mesmo &acirc;ngulo de abdu&ccedil;&atilde;o, corredor completamente diferente.</li>
 <li><strong>Posi&ccedil;&atilde;o da esc&aacute;pula.</strong> Rota&ccedil;&atilde;o superior e inclina&ccedil;&atilde;o posterior levantam o teto. &Eacute; exatamente o que o serr&aacute;til produz (se&ccedil;&otilde;es 26 e 27) &mdash; e a raz&atilde;o pela qual o bloco 3 e o bloco 4 s&atilde;o, na verdade, um assunto s&oacute;.</li>
 </ul>
 <p>O entendimento moderno da condi&ccedil;&atilde;o mudou de nome e de l&oacute;gica. O termo preferido hoje &eacute; <strong>dor subacromial do ombro</strong>, porque a evid&ecirc;ncia mostrou que a compress&atilde;o mec&acirc;nica raramente &eacute; a hist&oacute;ria completa: cirurgias de descompress&atilde;o (raspar o acr&ocirc;mio para abrir espa&ccedil;o) t&ecirc;m resultado semelhante ao de cirurgia placebo e ao de exerc&iacute;cio bem prescrito em ensaios de boa qualidade. Se abrir espa&ccedil;o mecanicamente n&atilde;o &eacute; superior a fortalecer, ent&atilde;o o problema n&atilde;o era s&oacute; de espa&ccedil;o.</p>
-<p>&Eacute; a&iacute; que a segunda anota&ccedil;&atilde;o se encaixa como conclus&atilde;o l&oacute;gica: <strong>o manguito e a c&aacute;psula precisam estar desenvolvidos</strong>. O tratamento com melhor sustenta&ccedil;&atilde;o para dor subacromial &eacute; exerc&iacute;cio progressivo &mdash; e progressivo mesmo, com carga que aumenta ao longo das semanas, e n&atilde;o eternas s&eacute;ries de rota&ccedil;&atilde;o externa com elastiquinho amarelo.</p>
-</section>
+<p>&Eacute; a&iacute; que a segunda anota&ccedil;&atilde;o se encaixa como conclus&atilde;o l&oacute;gica: <strong>o manguito e a c&aacute;psula precisam estar desenvolvidos</strong>. O tratamento com melhor sustenta&ccedil;&atilde;o para dor subacromial &eacute; exerc&iacute;cio progressivo &mdash; e progressivo mesmo, com carga que aumenta ao longo das semanas, e n&atilde;o eternas s&eacute;ries de rota&ccedil;&atilde;o externa com elastiquinho amarelo.</p></section>
 
-<section id="s31">
-<h3><span class="sec-num">31</span>Ritmo escapuloumeral: 120&deg; + 60&deg;</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="ritmo">
+  <span class="sec-num">31 &mdash; OMBRO &middot; RITMO ESCAPULOUMERAL</span>
+  <h2>120&deg; glenoumerais + <span class="accent">60&deg; escapulares</span></h2>
+  <p class="sec-sub">Elevar o bra&ccedil;o &eacute; trabalho compartilhado &mdash; e a divis&atilde;o tem raz&atilde;o de ser.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Ritmo escapuloumeral &rarr; 120&deg; glenoumeral + 60&deg; esc&aacute;pula</p>
 </div>
 <p>Levantar o bra&ccedil;o at&eacute; a vertical n&atilde;o &eacute; tarefa de uma articula&ccedil;&atilde;o s&oacute;. Os 180&deg; de eleva&ccedil;&atilde;o s&atilde;o divididos: aproximadamente <strong>120&deg; acontecem na articula&ccedil;&atilde;o glenoumeral</strong> (o &uacute;mero girando dentro da cavidade glenoide) e <strong>60&deg; na esc&aacute;pula</strong> (que roda superiormente sobre a caixa tor&aacute;cica). A propor&ccedil;&atilde;o cl&aacute;ssica de 2:1 &eacute; uma m&eacute;dia &mdash; nos primeiros 30&deg; a esc&aacute;pula contribui pouco, e sua participa&ccedil;&atilde;o cresce nas faixas mais altas.</p>
-<figure>
-<svg viewBox="0 0 800 330" role="img" aria-label="Divis&atilde;o do ritmo escapuloumeral entre glenoumeral e esc&aacute;pula" class="fa">
-<style>
-.fa .bg{fill:#101010}.fa .tor{fill:#1c1c1c;stroke:#6a6560;stroke-width:3}
-.fa .arm{stroke:#e8e6e3;stroke-width:7;stroke-linecap:round}
-.fa .arc1{fill:none;stroke:#ff6b1a;stroke-width:5}
-.fa .arc2{fill:none;stroke:#7fb3ff;stroke-width:5}
-.fa .sc{stroke:#7fb3ff;stroke-width:7;stroke-linecap:round}
-.fa .gh{fill:#ff6b1a}
-.fa .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
-.fa .th{fill:#ff6b1a;font:700 14px Inter,Arial,sans-serif}
-.fa .tb{fill:#7fb3ff;font:700 14px Inter,Arial,sans-serif}
-.fa .tt{fill:#e8e6e3;font:700 15px Inter,Arial,sans-serif}
-</style>
-<rect class="bg" width="800" height="330"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 10</span>Ritmo escapuloumeral</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-label="Divis&atilde;o do ritmo escapuloumeral entre glenoumeral e esc&aacute;pula" class="wb10">
+<defs><style>
+.wb10 .tor{fill:#1c1c1c;stroke:#6a6560;stroke-width:3}
+.wb10 .arm{stroke:#e8e6e3;stroke-width:7;stroke-linecap:round}
+.wb10 .arc1{fill:none;stroke:#ff6b1a;stroke-width:5}
+.wb10 .arc2{fill:none;stroke:#7fb3ff;stroke-width:5}
+.wb10 .sc{stroke:#7fb3ff;stroke-width:7;stroke-linecap:round}
+.wb10 .gh{fill:#ff6b1a}
+.wb10 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
+.wb10 .th{fill:#ff6b1a;font:700 14px Inter,Arial,sans-serif}
+.wb10 .tb{fill:#7fb3ff;font:700 14px Inter,Arial,sans-serif}
+.wb10 .tt{fill:#e8e6e3;font:700 15px Inter,Arial,sans-serif}
+</style></defs>
 <rect class="tor" x="300" y="96" width="120" height="190" rx="18"/>
 <circle class="gh" cx="300" cy="126" r="11"/>
 <line class="sc" x1="330" y1="112" x2="368" y2="176"/>
@@ -1019,83 +918,85 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="t" x="440" y="250">o &uacute;mero tenta cobrir tudo sozinho</text>
 <text class="t" x="440" y="270">&rarr; encontro precoce com o acr&ocirc;mio.</text>
 </svg>
-<figcaption>Figura 10 &mdash; A eleva&ccedil;&atilde;o completa do bra&ccedil;o &eacute; um trabalho compartilhado. A parcela escapular n&atilde;o &eacute; acess&oacute;ria: &eacute; ela que reposiciona o teto do corredor.</figcaption>
-</figure>
+<div class="figcap">A eleva&ccedil;&atilde;o completa do bra&ccedil;o &eacute; um trabalho compartilhado. A parcela escapular n&atilde;o &eacute; acess&oacute;ria: &eacute; ela que reposiciona o teto do corredor.</div></div>
 <p>A raz&atilde;o de existir dessa divis&atilde;o &eacute; elegante. Se toda a eleva&ccedil;&atilde;o viesse da glenoumeral, duas coisas ruins aconteceriam. Primeiro, a cabe&ccedil;a do &uacute;mero sairia da &aacute;rea de contato da glenoide muito cedo &mdash; a glenoide &eacute; rasa e pequena, cobrindo apenas cerca de um ter&ccedil;o da cabe&ccedil;a umeral. Segundo, o deltoide chegaria a um comprimento t&atilde;o encurtado que perderia capacidade de gerar for&ccedil;a. A rota&ccedil;&atilde;o da esc&aacute;pula resolve os dois: mant&eacute;m a congru&ecirc;ncia articular e preserva a rela&ccedil;&atilde;o comprimento-tens&atilde;o do deltoide ao longo de toda a amplitude.</p>
-<div class="box pratica"><span class="lb">O que observar no aluno</span>
+<div class="callout"><span class="tag">O que observar no aluno</span>
 <p>Pe&ccedil;a uma eleva&ccedil;&atilde;o lenta &agrave; frente, observando por tr&aacute;s. Procure por: <strong>encolher de ombro nos primeiros 30&deg;</strong> (trap&eacute;zio superior antecipando), <strong>esc&aacute;pula que n&atilde;o gira e s&oacute; sobe</strong>, e <strong>borda medial que descola</strong> na descida. Cada um desses achados aponta para uma parte diferente do bin&aacute;rio da se&ccedil;&atilde;o 25.</p>
-</div>
-</section>
+</div></section>
 
-<section id="s32">
-<h3><span class="sec-num">32</span>Flex&atilde;o de ombro inclina a esc&aacute;pula posteriormente</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="flexao-ombro">
+  <span class="sec-num">32 &mdash; OMBRO &middot; ESC&Aacute;PULA</span>
+  <h2>Flex&atilde;o de ombro inclina a esc&aacute;pula <span class="accent">posteriormente</span></h2>
+  <p class="sec-sub">O padr&atilde;o overhead carrega dentro dele o mecanismo que abre o corredor.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Flex&atilde;o de ombro inclina a esc&aacute;pula posteriormente</p>
 </div>
-<p>Uma linha curta com uma consequ&ecirc;ncia grande. A <strong>inclina&ccedil;&atilde;o posterior</strong> &eacute; o movimento em que a borda superior da esc&aacute;pula vai para tr&aacute;s e o &acirc;ngulo inferior se aproxima das costelas &mdash; exatamente o oposto da inclina&ccedil;&atilde;o anterior que fecha o espa&ccedil;o subacromial (se&ccedil;&atilde;o 27). E ela acontece <em>naturalmente</em> durante a flex&atilde;o de ombro, como parte do movimento normal, sem que ningu&eacute;m precise instruir nada.</p>
+<p>Uma linha curta com uma consequ&ecirc;ncia grande. A <strong>inclina&ccedil;&atilde;o posterior</strong> &eacute; o movimento em que a borda superior da esc&aacute;pula vai para tr&aacute;s e o &acirc;ngulo inferior se aproxima das costelas &mdash; exatamente o oposto da inclina&ccedil;&atilde;o anterior que fecha o espa&ccedil;o subacromial (se&ccedil;&atilde;o 27). E ela acontece <em class="term">naturalmente</em> durante a flex&atilde;o de ombro, como parte do movimento normal, sem que ningu&eacute;m precise instruir nada.</p>
 <p>Isso significa que <strong>a flex&atilde;o de ombro carrega, dentro dela mesma, o mecanismo que abre o corredor</strong>. &Eacute; o oposto do que muita gente assume ao evitar todo movimento acima da cabe&ccedil;a em quem tem dor de ombro.</p>
-<div class="box"><span class="lb">A reformula&ccedil;&atilde;o que interessa</span>
+<div class="callout ok"><span class="tag">A reformula&ccedil;&atilde;o que interessa</span>
 <p>N&atilde;o &eacute; &quot;overhead faz mal para o ombro&quot;. &Eacute; <strong>&quot;overhead executado sem rota&ccedil;&atilde;o superior e sem inclina&ccedil;&atilde;o posterior adequadas faz mal para o ombro&quot;</strong> &mdash; e a solu&ccedil;&atilde;o para isso &eacute; construir esses componentes, n&atilde;o remover o padr&atilde;o. Um aluno que nunca mais levanta o bra&ccedil;o acima da cabe&ccedil;a perde justamente a amplitude que precisa recuperar.</p>
 </div>
-<p>Vale acrescentar um detalhe que ajuda a escolher exerc&iacute;cio: a inclina&ccedil;&atilde;o posterior depende diretamente do <strong>trap&eacute;zio inferior e do serr&aacute;til</strong>, e &eacute; limitada por rigidez do peitoral menor, que se insere no processo coracoide e puxa a esc&aacute;pula para inclina&ccedil;&atilde;o anterior. Peitoral menor encurtado &eacute; um dos poucos casos em que um alongamento espec&iacute;fico tem efeito mec&acirc;nico claro sobre a posi&ccedil;&atilde;o escapular. Combine: alongar peitoral menor + fortalecer trap&eacute;zio inferior e serr&aacute;til + praticar o padr&atilde;o overhead com carga progressiva.</p>
-</section>
+<p>Vale acrescentar um detalhe que ajuda a escolher exerc&iacute;cio: a inclina&ccedil;&atilde;o posterior depende diretamente do <strong>trap&eacute;zio inferior e do serr&aacute;til</strong>, e &eacute; limitada por rigidez do peitoral menor, que se insere no processo coracoide e puxa a esc&aacute;pula para inclina&ccedil;&atilde;o anterior. Peitoral menor encurtado &eacute; um dos poucos casos em que um alongamento espec&iacute;fico tem efeito mec&acirc;nico claro sobre a posi&ccedil;&atilde;o escapular. Combine: alongar peitoral menor + fortalecer trap&eacute;zio inferior e serr&aacute;til + praticar o padr&atilde;o overhead com carga progressiva.</p></section>
 
-<section id="s33">
-<h3><span class="sec-num">33</span>Manguito rotador: coaptar, para dentro e para baixo</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="manguito">
+  <span class="sec-num">33 &mdash; OMBRO &middot; MANGUITO ROTADOR</span>
+  <h2>Coaptar: <span class="accent">para dentro e para baixo</span></h2>
+  <p class="sec-sub">A fun&ccedil;&atilde;o principal do manguito n&atilde;o &eacute; rodar o ombro.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Principal fun&ccedil;&atilde;o do manguito &rarr; coaptar a cabe&ccedil;a do &uacute;mero com a cavidade glenoidal. Estabiliza&ccedil;&atilde;o &rarr; dentro e baixo (sentidos)</p>
 </div>
 <p>Essa &eacute; a anota&ccedil;&atilde;o mais importante do bloco, porque corrige o mal-entendido mais difundido sobre o manguito rotador: <strong>a fun&ccedil;&atilde;o principal dele n&atilde;o &eacute; rodar o ombro</strong>. &Eacute; manter a cabe&ccedil;a do &uacute;mero centrada e comprimida contra a glenoide enquanto os m&uacute;sculos grandes produzem movimento. O nome engana; a fun&ccedil;&atilde;o &eacute; de estabiliza&ccedil;&atilde;o din&acirc;mica.</p>
 <p>A geometria explica por que isso &eacute; indispens&aacute;vel. A articula&ccedil;&atilde;o do ombro &eacute; uma bola grande sobre um prato raso: a glenoide cobre cerca de um ter&ccedil;o da cabe&ccedil;a umeral. Ela abre m&atilde;o de estabilidade &oacute;ssea para ganhar a maior amplitude do corpo humano. O pre&ccedil;o dessa troca &eacute; que a estabilidade precisa ser <strong>ativa</strong> &mdash; e quem paga essa conta &eacute; o manguito.</p>
 <p>Os dois sentidos que a anota&ccedil;&atilde;o registrou s&atilde;o exatos:</p>
-<ul>
+<ul class="clean">
 <li><strong>Para dentro (compress&atilde;o):</strong> os quatro tend&otilde;es envolvem a cabe&ccedil;a umeral e a comprimem contra a glenoide, criando estabilidade por congru&ecirc;ncia &mdash; o mesmo princ&iacute;pio de uma bola de futebol pressionada contra a palma da m&atilde;o, que n&atilde;o escorrega enquanto houver press&atilde;o.</li>
 <li><strong>Para baixo (deprim&ecirc;ncia):</strong> infraespinal, redondo menor e subescapular t&ecirc;m linha de a&ccedil;&atilde;o predominantemente inferior. Isso &eacute; essencial porque o <strong>deltoide puxa a cabe&ccedil;a do &uacute;mero para cima</strong>. Sem o contrapeso do manguito, cada eleva&ccedil;&atilde;o de bra&ccedil;o empurraria a cabe&ccedil;a umeral direto contra o acr&ocirc;mio.</li>
 </ul>
-<div class="box"><span class="lb">O bin&aacute;rio deltoide &times; manguito</span>
+<div class="callout ok"><span class="tag">O bin&aacute;rio deltoide &times; manguito</span>
 <p>Deltoide e manguito formam um par de for&ccedil;as: o deltoide puxa para cima e para fora, o manguito puxa para dentro e para baixo. A resultante &eacute; <strong>rota&ccedil;&atilde;o pura da cabe&ccedil;a umeral dentro da glenoide</strong>, sem transla&ccedil;&atilde;o. Quando o manguito est&aacute; fraco ou fatigado, o deltoide vence o cabo de guerra e a cabe&ccedil;a migra superiormente &mdash; migra&ccedil;&atilde;o que aparece em radiografias de rupturas cr&ocirc;nicas do manguito como um espa&ccedil;o subacromial estreitado. Aqui, o estreitamento &eacute; consequ&ecirc;ncia da fraqueza, e n&atilde;o causa dela.</p>
-</div>
-</section>
+</div></section>
 
-<section id="s34">
-<h3><span class="sec-num">34</span>Teste da parede e teste de Jobe</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="testes-ombro">
+  <span class="sec-num">34 &mdash; OMBRO &middot; AVALIA&Ccedil;&Atilde;O</span>
+  <h2>Teste da parede e <span class="accent">teste de Jobe</span></h2>
+  <p class="sec-sub">O que observar, e por que nenhum teste isolado fecha diagn&oacute;stico.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Teste &rarr; aluno encostado na parede com bra&ccedil;o abduzido, pede-se para que ele encoste a palma da m&atilde;o na parede &rarr; observa-se palma da m&atilde;o, cotovelo e afastamento. Tamb&eacute;m compensa&ccedil;&otilde;es com a coluna &rarr; aluno pode n&atilde;o ter uma boa rota&ccedil;&atilde;o externa</p>
 <p>Teste de Jobe &rarr; verificar se h&aacute; dor &rarr; inflama&ccedil;&atilde;o no tend&atilde;o (possivelmente)</p>
 </div>
 <p><strong>O teste da parede</strong> &eacute; uma avalia&ccedil;&atilde;o de rota&ccedil;&atilde;o externa em abdu&ccedil;&atilde;o de 90&deg; &mdash; a posi&ccedil;&atilde;o exigida no supino, no desenvolvimento e em qualquer arremesso. Com as costas na parede (o que impede compensar arqueando a coluna), o aluno abduz o bra&ccedil;o a 90&deg; e tenta levar a palma da m&atilde;o para tr&aacute;s at&eacute; encostar. O que se observa:</p>
-<ul>
+<ul class="clean">
 <li><strong>Palma da m&atilde;o:</strong> encosta? Fica a quantos cent&iacute;metros? &Eacute; a medida bruta da amplitude.</li>
 <li><strong>Cotovelo:</strong> se ele cai para frente, a rota&ccedil;&atilde;o est&aacute; sendo simulada por adu&ccedil;&atilde;o horizontal &mdash; compensa&ccedil;&atilde;o cl&aacute;ssica.</li>
 <li><strong>Afastamento e coluna:</strong> se a lombar arqueia e o t&oacute;rax descola da parede, o aluno est&aacute; comprando amplitude com extens&atilde;o de coluna, e n&atilde;o com o ombro.</li>
 </ul>
-<p>A conclus&atilde;o que a anota&ccedil;&atilde;o tira &mdash; <em>pode n&atilde;o ter uma boa rota&ccedil;&atilde;o externa</em> &mdash; tem impacto direto na se&ccedil;&atilde;o 35: sem rota&ccedil;&atilde;o externa dispon&iacute;vel, o tub&eacute;rculo maior n&atilde;o consegue sair da frente do acr&ocirc;mio durante a eleva&ccedil;&atilde;o.</p>
-<p><strong>O teste de Jobe</strong> (tamb&eacute;m chamado de <em>lata vazia</em>) posiciona o bra&ccedil;o a 90&deg; de abdu&ccedil;&atilde;o no plano escapular, com rota&ccedil;&atilde;o interna m&aacute;xima &mdash; polegar apontando para baixo, como quem esvazia uma lata &mdash; e aplica resist&ecirc;ncia para baixo. Essa posi&ccedil;&atilde;o isola relativamente o supraespinal e, ao mesmo tempo, o coloca na configura&ccedil;&atilde;o de maior aproxima&ccedil;&atilde;o com o acr&ocirc;mio.</p>
-<p>E a mesma advert&ecirc;ncia da se&ccedil;&atilde;o 07 se aplica aqui, com a mesma for&ccedil;a. O teste de Jobe tem <strong>especificidade limitada</strong>: dor nessa posi&ccedil;&atilde;o pode vir do tend&atilde;o do supraespinal, da bursa, do b&iacute;ceps ou do l&aacute;bio glenoidal. Revis&otilde;es de acur&aacute;cia mostram que nenhum teste ortop&eacute;dico isolado de ombro tem desempenho bom o bastante para fechar diagn&oacute;stico. Eles servem para <strong>orientar a conduta e monitorar evolu&ccedil;&atilde;o</strong> &mdash; e o par&ecirc;ntese que a anota&ccedil;&atilde;o colocou, <em>possivelmente</em>, &eacute; a palavra tecnicamente correta.</p>
-</section>
+<p>A conclus&atilde;o que a anota&ccedil;&atilde;o tira &mdash; <em class="term">pode n&atilde;o ter uma boa rota&ccedil;&atilde;o externa</em> &mdash; tem impacto direto na se&ccedil;&atilde;o 35: sem rota&ccedil;&atilde;o externa dispon&iacute;vel, o tub&eacute;rculo maior n&atilde;o consegue sair da frente do acr&ocirc;mio durante a eleva&ccedil;&atilde;o.</p>
+<p><strong>O teste de Jobe</strong> (tamb&eacute;m chamado de <em class="term">lata vazia</em>) posiciona o bra&ccedil;o a 90&deg; de abdu&ccedil;&atilde;o no plano escapular, com rota&ccedil;&atilde;o interna m&aacute;xima &mdash; polegar apontando para baixo, como quem esvazia uma lata &mdash; e aplica resist&ecirc;ncia para baixo. Essa posi&ccedil;&atilde;o isola relativamente o supraespinal e, ao mesmo tempo, o coloca na configura&ccedil;&atilde;o de maior aproxima&ccedil;&atilde;o com o acr&ocirc;mio.</p>
+<p>E a mesma advert&ecirc;ncia da se&ccedil;&atilde;o 07 se aplica aqui, com a mesma for&ccedil;a. O teste de Jobe tem <strong>especificidade limitada</strong>: dor nessa posi&ccedil;&atilde;o pode vir do tend&atilde;o do supraespinal, da bursa, do b&iacute;ceps ou do l&aacute;bio glenoidal. Revis&otilde;es de acur&aacute;cia mostram que nenhum teste ortop&eacute;dico isolado de ombro tem desempenho bom o bastante para fechar diagn&oacute;stico. Eles servem para <strong>orientar a conduta e monitorar evolu&ccedil;&atilde;o</strong> &mdash; e o par&ecirc;ntese que a anota&ccedil;&atilde;o colocou, <em class="term">possivelmente</em>, &eacute; a palavra tecnicamente correta.</p></section>
 
-<section id="s35">
-<h3><span class="sec-num">35</span>Eleva&ccedil;&atilde;o lateral: 50&deg;, plano escapular e rota&ccedil;&atilde;o externa</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="elevacao-lateral">
+  <span class="sec-num">35 &mdash; OMBRO &middot; PRESCRI&Ccedil;&Atilde;O</span>
+  <h2>Eleva&ccedil;&atilde;o lateral: 50&deg;, plano escapular e <span class="accent">rota&ccedil;&atilde;o externa</span></h2>
+  <p class="sec-sub">Tr&ecirc;s ajustes numa prescri&ccedil;&atilde;o s&oacute; &mdash; a s&iacute;ntese aplicada do bloco.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Pode ser interessante iniciar a eleva&ccedil;&atilde;o lateral j&aacute; com 50&deg; de abdu&ccedil;&atilde;o, e n&atilde;o faz&ecirc;-la totalmente no plano frontal &rarr; plano escapular + rota&ccedil;&atilde;o externa</p>
 </div>
 <p>Esta anota&ccedil;&atilde;o &eacute; a s&iacute;ntese aplicada de todo o bloco: tr&ecirc;s ajustes numa &uacute;nica prescri&ccedil;&atilde;o, cada um resolvendo um problema espec&iacute;fico j&aacute; discutido.</p>
 <p><strong>1. Come&ccedil;ar j&aacute; com 50&deg; de abdu&ccedil;&atilde;o.</strong> Na eleva&ccedil;&atilde;o lateral com halteres, o torque exigido do deltoide &eacute; proporcional ao seno do &acirc;ngulo do bra&ccedil;o: praticamente <strong>zero com o bra&ccedil;o pendurado</strong> e m&aacute;ximo na horizontal. Ou seja: os primeiros 40&ndash;50&deg; do movimento quase n&atilde;o oferecem est&iacute;mulo. Come&ccedil;ar j&aacute; elevado (halteres &agrave; frente das coxas, ou usando cabo/m&aacute;quina que carrega desde o in&iacute;cio) faz o m&uacute;sculo trabalhar em toda a repeti&ccedil;&atilde;o e concentra o tempo &uacute;til de tens&atilde;o na faixa que importa.</p>
 <p><strong>2. Plano escapular em vez de plano frontal.</strong> A esc&aacute;pula n&atilde;o est&aacute; alinhada com as costas: ela repousa sobre a caixa tor&aacute;cica com cerca de <strong>30 a 45 graus de &acirc;ngulo em rela&ccedil;&atilde;o ao plano frontal</strong>, apontando para frente e para fora. Mover o bra&ccedil;o nesse plano &mdash; e n&atilde;o rigorosamente para o lado &mdash; mant&eacute;m a cabe&ccedil;a do &uacute;mero congruente com a glenoide, relaxa a c&aacute;psula anterior e oferece o maior espa&ccedil;o subacromial dispon&iacute;vel.</p>
-<figure>
-<svg viewBox="0 0 800 320" role="img" aria-label="Plano frontal e plano escapular vistos de cima" class="fb">
-<style>
-.fb .bg{fill:#101010}.fb .tor{fill:#1c1c1c;stroke:#6a6560;stroke-width:3}
-.fb .scp{stroke:#7fb3ff;stroke-width:7;stroke-linecap:round}
-.fb .a1{stroke:#8a857f;stroke-width:6;stroke-linecap:round;stroke-dasharray:9 6}
-.fb .a2{stroke:#ff6b1a;stroke-width:7;stroke-linecap:round}
-.fb .ang{fill:none;stroke:#ff6b1a;stroke-width:2.5}
-.fb .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
-.fb .th{fill:#ff6b1a;font:700 13px Inter,Arial,sans-serif}
-.fb .tb{fill:#7fb3ff;font:700 13px Inter,Arial,sans-serif}
-.fb .tt{fill:#e8e6e3;font:700 14px Inter,Arial,sans-serif}
-</style>
-<rect class="bg" width="800" height="320"/>
+<div class="fig"><div class="figt"><span class="fign">FIG 11</span>Plano frontal e plano escapular</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img" aria-label="Plano frontal e plano escapular vistos de cima" class="wb11">
+<defs><style>
+.wb11 .tor{fill:#1c1c1c;stroke:#6a6560;stroke-width:3}
+.wb11 .scp{stroke:#7fb3ff;stroke-width:7;stroke-linecap:round}
+.wb11 .a1{stroke:#8a857f;stroke-width:6;stroke-linecap:round;stroke-dasharray:9 6}
+.wb11 .a2{stroke:#ff6b1a;stroke-width:7;stroke-linecap:round}
+.wb11 .ang{fill:none;stroke:#ff6b1a;stroke-width:2.5}
+.wb11 .t{fill:#a8a4a0;font:600 12.5px Inter,Arial,sans-serif}
+.wb11 .th{fill:#ff6b1a;font:700 13px Inter,Arial,sans-serif}
+.wb11 .tb{fill:#7fb3ff;font:700 13px Inter,Arial,sans-serif}
+.wb11 .tt{fill:#e8e6e3;font:700 14px Inter,Arial,sans-serif}
+</style></defs>
 <text class="tt" x="40" y="34">Vista de cima (frente do corpo para baixo)</text>
 <ellipse class="tor" cx="330" cy="170" rx="130" ry="78"/>
 <line class="scp" x1="250" y1="112" x2="380" y2="106"/>
@@ -1108,65 +1009,54 @@ footer.end{margin-top:70px;padding-top:26px;border-top:1px solid var(--li);color
 <text class="t" x="40" y="284">no plano escapular a cabe&ccedil;a umeral fica centrada na glenoide;</text>
 <text class="t" x="40" y="304">no plano frontal puro, o tub&eacute;rculo maior encontra o acr&ocirc;mio mais cedo</text>
 </svg>
-<figcaption>Figura 11 &mdash; A esc&aacute;pula n&atilde;o est&aacute; no plano das costas. Elevar o bra&ccedil;o no plano dela &mdash; ligeiramente &agrave; frente &mdash; alinha o movimento com a orienta&ccedil;&atilde;o real da articula&ccedil;&atilde;o.</figcaption>
-</figure>
+<div class="figcap">A esc&aacute;pula n&atilde;o est&aacute; no plano das costas. Elevar o bra&ccedil;o no plano dela &mdash; ligeiramente &agrave; frente &mdash; alinha o movimento com a orienta&ccedil;&atilde;o real da articula&ccedil;&atilde;o.</div></div>
 <p><strong>3. Rota&ccedil;&atilde;o externa.</strong> Este &eacute; o ajuste mais impactante e o mais ignorado. A instru&ccedil;&atilde;o cl&aacute;ssica de &quot;despejar a jarra&quot; &mdash; inclinar o mindinho para cima na eleva&ccedil;&atilde;o &mdash; coloca o &uacute;mero em rota&ccedil;&atilde;o interna, e a rota&ccedil;&atilde;o interna gira o tub&eacute;rculo maior <strong>diretamente contra o acr&ocirc;mio</strong> (se&ccedil;&atilde;o 30). Manter uma leve rota&ccedil;&atilde;o externa, com o polegar neutro ou levemente para cima, faz o tub&eacute;rculo passar por fora do teto.</p>
-<div class="box pratica"><span class="lb">A prescri&ccedil;&atilde;o completa</span>
+<div class="callout"><span class="tag">A prescri&ccedil;&atilde;o completa</span>
 <p>Eleva&ccedil;&atilde;o lateral com o tronco levemente inclinado &agrave; frente ou com os halteres partindo &agrave; frente do corpo, no plano escapular, com polegar neutro ou levemente para cima, iniciando o movimento j&aacute; com o bra&ccedil;o parcialmente elevado. <strong>N&atilde;o &eacute; uma vers&atilde;o mais leve do exerc&iacute;cio</strong> &mdash; &eacute; a vers&atilde;o em que o deltoide medial trabalha mais e o corredor subacromial sofre menos.</p>
-</div>
-</section>
+</div></section>
 
-<section id="s36">
-<h3><span class="sec-num">36</span>Exerc&iacute;cios funcionais e o manguito</h3>
-<div class="nota"><span class="lb">Anota&ccedil;&atilde;o original</span>
+<section id="manguito-funcional">
+  <span class="sec-num">36 &mdash; OMBRO &middot; FORTALECIMENTO</span>
+  <h2>Exerc&iacute;cios funcionais e <span class="accent">o manguito</span></h2>
+  <p class="sec-sub">Treinar a fun&ccedil;&atilde;o que ele exerce, n&atilde;o a que d&aacute; nome a ele.</p>
+<div class="callout"><span class="tag">Anota&ccedil;&atilde;o do caderno</span>
 <p>Exerc&iacute;cios funcionais s&atilde;o &oacute;timos para fortalecimento do manguito</p>
 </div>
 <p>&quot;Funcional&quot; &eacute; uma palavra desgastada, ent&atilde;o vale definir o que ela significa aqui de forma &uacute;til: <strong>exerc&iacute;cios em que o manguito &eacute; solicitado na fun&ccedil;&atilde;o que ele realmente exerce &mdash; estabilizar sob carga, com o resto do corpo participando &mdash; em vez de ser isolado numa a&ccedil;&atilde;o que ele quase nunca faz sozinho na vida real.</strong></p>
 <p>A se&ccedil;&atilde;o 33 j&aacute; deu o fundamento: a fun&ccedil;&atilde;o principal do manguito &eacute; coaptar e centrar, n&atilde;o rodar. Fortalec&ecirc;-lo exclusivamente com rota&ccedil;&atilde;o externa contra el&aacute;stico treina um movimento que ele produz, mas raramente na demanda em que ele falha. Um manguito que aguenta trinta rota&ccedil;&otilde;es com el&aacute;stico e n&atilde;o consegue manter a cabe&ccedil;a umeral centrada num desenvolvimento com carga n&atilde;o est&aacute; preparado.</p>
-<div class="box pratica"><span class="lb">O que colocar no programa</span>
-<ul>
-<li><strong>Carregamentos overhead:</strong> caminhada com halter acima da cabe&ccedil;a, <em>bottoms-up carry</em> com kettlebell invertido &mdash; exig&ecirc;ncia de estabiliza&ccedil;&atilde;o cont&iacute;nua e alt&iacute;ssimo recrutamento de manguito.</li>
+<div class="callout"><span class="tag">O que colocar no programa</span>
+<ul class="clean">
+<li><strong>Carregamentos overhead:</strong> caminhada com halter acima da cabe&ccedil;a, <em class="term">bottoms-up carry</em> com kettlebell invertido &mdash; exig&ecirc;ncia de estabiliza&ccedil;&atilde;o cont&iacute;nua e alt&iacute;ssimo recrutamento de manguito.</li>
 <li><strong>Press unilateral:</strong> obriga o manguito a controlar transla&ccedil;&atilde;o sob carga real.</li>
 <li><strong>Apoios com instabilidade:</strong> prancha alta com toque no ombro, empurrar em suspens&atilde;o &mdash; cadeia fechada com demanda de centragem.</li>
 <li><strong>Rota&ccedil;&atilde;o externa com carga progressiva:</strong> continua valendo, mas como acess&oacute;rio e com carga que aumenta ao longo das semanas &mdash; n&atilde;o como o programa inteiro.</li>
 </ul>
 </div>
-<p>Vale fechar com a mesma ideia que abriu o material: o tecido n&atilde;o adoece pela carga, adoece pela desproporc&atilde;o entre carga e capacidade. Vale para a cartilagem da patela, para o disco lombar e para o tend&atilde;o do supraespinal. E, nos tr&ecirc;s casos, o caminho tamb&eacute;m foi o mesmo: <strong>ajustar temporariamente a demanda enquanto se constr&oacute;i a capacidade &mdash; e depois devolver a demanda</strong>. A &uacute;ltima parte &eacute; a que a maioria dos programas esquece, e &eacute; a que define se o aluno vai voltar a treinar sem restri&ccedil;&atilde;o ou vai passar a vida evitando.</p>
-</section>
+<p>Vale fechar com a mesma ideia que abriu o material: o tecido n&atilde;o adoece pela carga, adoece pela desproporc&atilde;o entre carga e capacidade. Vale para a cartilagem da patela, para o disco lombar e para o tend&atilde;o do supraespinal. E, nos tr&ecirc;s casos, o caminho tamb&eacute;m foi o mesmo: <strong>ajustar temporariamente a demanda enquanto se constr&oacute;i a capacidade &mdash; e depois devolver a demanda</strong>. A &uacute;ltima parte &eacute; a que a maioria dos programas esquece, e &eacute; a que define se o aluno vai voltar a treinar sem restri&ccedil;&atilde;o ou vai passar a vida evitando.</p></section>
 
-<div class="block">
-  <div class="bk">S&iacute;ntese</div>
-  <h2>O fio comum dos quatro blocos</h2>
-</div>
-
-<section id="fechamento">
-<h3>Quatro temas, tr&ecirc;s princ&iacute;pios</h3>
+<section id="sintese">
+  <span class="sec-num">37 &mdash; S&Iacute;NTESE</span>
+  <h2>Quatro temas, <span class="accent">tr&ecirc;s princ&iacute;pios</span></h2>
+  <p class="sec-sub">O fio comum que atravessa os quatro blocos do workshop.</p>
 <p><strong>1. Achado de imagem n&atilde;o &eacute; diagn&oacute;stico, e teste ortop&eacute;dico n&atilde;o &eacute; laudo.</strong> Condromal&aacute;cia sem dor, protrus&atilde;o discal em assintom&aacute;ticos, acr&ocirc;mio ganchoso que talvez seja adquirido, testes com especificidade baixa. Em todos os quatro blocos, a estrutura descrita na imagem tem correla&ccedil;&atilde;o mais fraca com o sintoma do que se imagina. O que orienta a conduta &eacute; o comportamento da dor ao longo do tempo.</p>
-<p><strong>2. Torque n&atilde;o desaparece &mdash; ele muda de endere&ccedil;o.</strong> P&eacute; alto ou baixo no leg press, cal&ccedil;o no agachamento, plano frontal ou escapular na eleva&ccedil;&atilde;o lateral: nenhuma dessas manipula&ccedil;&otilde;es reduz o trabalho total. Todas escolhem <em>qual articula&ccedil;&atilde;o</em> vai receber a maior fatia. Saber isso transforma o profissional de &quot;quem proíbe exerc&iacute;cios&quot; em &quot;quem redistribui carga com inten&ccedil;&atilde;o&quot;.</p>
+<p><strong>2. Torque n&atilde;o desaparece &mdash; ele muda de endere&ccedil;o.</strong> P&eacute; alto ou baixo no leg press, cal&ccedil;o no agachamento, plano frontal ou escapular na eleva&ccedil;&atilde;o lateral: nenhuma dessas manipula&ccedil;&otilde;es reduz o trabalho total. Todas escolhem <em class="term">qual articula&ccedil;&atilde;o</em> vai receber a maior fatia. Saber isso transforma o profissional de &quot;quem proíbe exerc&iacute;cios&quot; em &quot;quem redistribui carga com inten&ccedil;&atilde;o&quot;.</p>
 <p><strong>3. Reduzir demanda compra tempo; aumentar capacidade resolve.</strong> Amplitude parcial no joelho, terra em bloco na lombar, eleva&ccedil;&atilde;o no plano escapular no ombro &mdash; todas s&atilde;o portas de entrada, n&atilde;o destinos. O plano s&oacute; est&aacute; completo quando inclui o retorno ao que foi retirado.</p>
-<div class="box"><span class="lb">Como este material foi constru&iacute;do</span>
+<div class="callout ok"><span class="tag">Como este material foi constru&iacute;do</span>
 <p>Todo bloco laranja reproduz uma anota&ccedil;&atilde;o do caderno como ela foi escrita durante o workshop. O texto ao redor foi desenvolvido a partir dela, e os 11 diagramas s&atilde;o originais, criados para este material. Quando a literatura diverge da afirma&ccedil;&atilde;o anotada ou n&atilde;o a sustenta com firmeza, isso est&aacute; dito explicitamente no corpo da se&ccedil;&atilde;o &mdash; especialmente nas se&ccedil;&otilde;es 19, 23, 29 e 30.</p>
-</div>
-</section>
+</div></section>
 
-<footer class="end">
-<p>MG COACH &middot; Biblioteca de Estudos &mdash; material produzido a partir de anota&ccedil;&otilde;es pr&oacute;prias do Workshop de Biomec&acirc;nica. Uso educacional; n&atilde;o substitui avalia&ccedil;&atilde;o individualizada nem conduta m&eacute;dica.</p>
+  <div class="nav-next">
+    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&larr; Biblioteca</span></a>
+  </div>
+
+</main>
+
+<footer>
+  <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
+  <p>Workshop de Biomec&acirc;nica &mdash; Joelho, Coluna e Ombro</p>
+  <div class="tag-row">MG COACH</div>
+  <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material produzido a partir de anota&ccedil;&otilde;es pr&oacute;prias do evento. Diagramas originais e esquem&aacute;ticos &mdash; n&atilde;o substituem o atlas. Uso educacional; n&atilde;o substitui avalia&ccedil;&atilde;o individualizada nem conduta m&eacute;dica.</p>
 </footer>
-
-</div>
-<script>
-(function(){
-  var K='mg-theme', h=document.documentElement, b=document.getElementById('tgtheme');
-  function set(t){ h.setAttribute('data-theme',t); if(b){ b.innerHTML = (t==='light') ? 'Tema escuro' : 'Tema claro'; } }
-  var s=null;
-  try{ s=localStorage.getItem(K); }catch(e){}
-  set(s==='light'?'light':'dark');
-  if(b){ b.onclick=function(){
-    var n = (h.getAttribute('data-theme')==='light') ? 'dark' : 'light';
-    set(n);
-    try{ localStorage.setItem(K,n); }catch(e){}
-  }; }
-})();
-</script>
+<script src="mgcoach.js"></script>
 </body>
 </html>
