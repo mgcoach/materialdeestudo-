@@ -1,5 +1,13 @@
 [
   {
+    "titulo": "Tutorias 07 e 08: Sistema Respiratório, Mecânica e Controle",
+    "categoria": "fisiologia",
+    "serie": "Tutoria (Graduação)",
+    "data": "Out · 2026",
+    "resumo": "Material integrado das Tutorias 07 e 08 (Biomorfofuncional I, problemas 03 e 04 — Respiração sob Pressão e A Jornada de Lucas), em 33 seções e com 35 diagramas originais, cobrindo os 13 objetivos dos dois casos a partir do desconforto do Lucas na esteira e da espirometria que ele faz na semana seguinte. Parte I (anatomia, músculos, tecidos e células): porções condutora e respiratória com as 23 gerações e a “trombeta” da área total; nariz, conchas, seios paranasais e faringe, com a troca para respiração oronasal no exercício; laringe com as nove cartilagens, glote e Valsalva; traqueia, brônquios, lobos, segmentos e as duas circulações; pleuras, recessos e pressão negativa; diafragma com origens, frênico e os três hiatos, intercostais com direção das fibras, braço de bomba e alça de balde; transição dos epitélios região por região e a ordem em que somem glândulas, cartilagem, caliciformes e cílios; cartilagem, músculo liso e autônomo, fibras elásticas e tecido linfoide; células ciliadas, caliciformes, basais, em escova, neuroendócrinas, club, pneumócitos I e II e macrófagos; escada mucociliar, defesa química e broncoespasmo induzido pelo exercício. Parte II (funcionamento): espaço morto anatômico, alveolar e fisiológico, ventilação alveolar e equação de Bohr; lei de Boyle e pressões intrapulmonar, intrapleural e transpulmonar no repouso e no esforço; espirometria com volumes, capacidades, variação entre pessoas, VEF₁/CVF, padrões obstrutivo e restritivo e a curva fluxo-volume com a compressão dinâmica que explica a expiração do Lucas; volumes no exercício e o que de fato ajuda a respirar melhor; músculos acessórios, por que inclinar o tronco alivia, custo de O₂ e metaborreflexo; impedância respiratória com componentes elástico, resistivo e inercial, oscilometria, Poiseuille e trabalho respiratório; complacências pulmonar e da parede, CRF, histerese e surfactante; hematose com Dalton, Fick, barreira alveolocapilar e tempo de trânsito; transporte de O₂ e CO₂; V/Q, zonas de West, shunt e espaço morto; controle neural e químico e a ventilação no exercício com fases e limiares. Inclui o caso resolvido, um roteiro para apresentar as duas tutorias, pegadinhas, 109 flashcards e 53 questões comentadas.",
+    "arquivo": "tutoria-07-08-sistema-respiratorio.html"
+  },
+  {
     "titulo": "Tutoria 06: Vasos, Linfa e Pressões",
     "categoria": "fisiologia",
     "serie": "Tutoria (Graduação)",
