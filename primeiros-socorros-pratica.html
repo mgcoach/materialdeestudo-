@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primeiros Socorros · Prova prática</title>
+<meta name="description" content="Revisão para a prova prática de Primeiros Socorros: o que fazer primeiro, o que falar e como executar cada atendimento (RCP, DEA, engasgo, desmaio, convulsão, pressão, hemorragia, fratura, TCE, TRM, queimadura, parto), com animações, vídeos e simulado de cenas.">
+<meta property="og:title" content="Primeiros Socorros · Prova prática">
+<meta property="og:description" content="Passo a passo, falas da encenação, animações, vídeos e simulado de cenas.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#f6f7f9;--ink:#15181d;--mut:#5f6672;--line:#e6e8ec;--or:#ff6b1a;--or2:#c2410c;--orbg:#fff3eb;--red:#d92d20;--redbg:#fef1f0;--gr:#16a34a;--grbg:#ecfdf3;--bl:#1d4ed8;--blbg:#eef4ff;--r:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Poppins,Inter,sans-serif;line-height:1.15;margin:0;letter-spacing:-.01em}
+a{color:var(--or2)}button{font:inherit;color:inherit}
+.bar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:.5rem;padding:.5rem .9rem}
+.mgb{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex:none;border-radius:999px;border:1px solid var(--line)}
+.mgb svg{width:16px;height:16px}
+.bar .t{flex:1;font-weight:600;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;font-size:.85rem;cursor:pointer;white-space:nowrap}
+.btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+main{max-width:880px;margin:0 auto;padding:0 1rem 5rem}
+.hero{padding:2.2rem 0 1rem}
+.kicker{color:var(--or2);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+.hero h1{font-size:clamp(2.1rem,8vw,3.3rem);font-weight:800;margin:.3rem 0 .6rem}
+.hero h1 span{color:var(--or)}
+.lede{color:var(--mut);font-size:1.05rem;margin:0}
+.plan{margin:1.2rem 0;border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;background:var(--soft)}
+.plan h3{font-size:1.05rem;margin-bottom:.4rem}.plan ol{margin:.2rem 0;padding-left:1.2rem}.plan li{margin:.25rem 0}
+.sec-h{margin:2.4rem 0 .8rem}.sec-h h2{font-size:1.6rem;font-weight:800}.sec-h p{color:var(--mut);margin:.3rem 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.55rem}
+.grid a{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:.6rem .7rem;background:#fff;transition:border-color .15s,transform .15s}
+.grid a:hover{border-color:var(--or);transform:translateY(-1px)}
+.grid .n{font-size:.75rem;color:var(--or2);font-weight:700}.grid .tt{font-weight:600;font-size:.92rem;line-height:1.25;display:block}
+.grp{margin:1rem 0 .4rem;font-size:.8rem;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.st{border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.1rem 1.1rem;margin:1.6rem 0;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.st-top{display:flex;gap:.8rem;align-items:flex-start}
+.st-num{flex:none;width:44px;height:44px;border-radius:12px;background:var(--or);color:#fff;font:800 1.2rem Poppins,sans-serif;display:flex;align-items:center;justify-content:center}
+.st h2{font-size:1.45rem;font-weight:700}.st .sub{color:var(--mut);margin:.2rem 0 0}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;border-radius:999px;padding:.1rem .55rem;background:var(--soft);color:var(--mut);margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.05em}
+.cena{margin:1rem 0;padding:.7rem .9rem;border-radius:12px;background:var(--blbg);color:#1e3a8a;font-size:.95rem}
+.cena b{color:#1e3a8a}
+.tools{display:flex;gap:.4rem;flex-wrap:wrap;margin:.2rem 0 .6rem}
+ol.steps{list-style:none;margin:.4rem 0;padding:0;counter-reset:s}
+ol.steps>li{counter-increment:s;position:relative;padding:.6rem 0 .7rem 2.6rem;border-bottom:1px dashed var(--line)}
+ol.steps>li:last-child{border-bottom:0}
+ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:1.9rem;height:1.9rem;border-radius:999px;border:2px solid var(--or);color:var(--or2);font:700 .9rem Poppins,sans-serif;display:flex;align-items:center;justify-content:center;background:#fff}
+.act{font-weight:600}
+.say{display:block;margin:.35rem 0 .1rem;background:var(--orbg);border-left:4px solid var(--or);padding:.4rem .6rem;border-radius:0 10px 10px 0;font-size:.95rem}
+.say::before{content:"🗣 Fale: ";font-weight:700;color:var(--or2)}
+.det{display:block;color:var(--mut);font-size:.9rem;margin-top:.25rem}
+.quiz ol.steps>li .say,.quiz ol.steps>li .det,.quiz ol.steps>li .act{filter:blur(6px);user-select:none;cursor:pointer}
+.quiz ol.steps>li.rev .say,.quiz ol.steps>li.rev .det,.quiz ol.steps>li.rev .act{filter:none}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:.9rem}
+@media(max-width:640px){.cols{grid-template-columns:1fr}}
+.box{border-radius:12px;padding:.7rem .85rem;font-size:.93rem}
+.box h4{margin:0 0 .35rem;font:700 .9rem Poppins,sans-serif}
+.box ul{margin:0;padding-left:1.1rem}.box li{margin:.15rem 0}
+.no{background:var(--redbg)}.no h4{color:var(--red)}
+.ev{background:var(--grbg)}.ev h4{color:var(--gr)}
+.ev label{display:flex;gap:.45rem;align-items:flex-start;margin:.2rem 0;cursor:pointer}.ev input{margin-top:.3rem;accent-color:var(--gr)}
+.wbox{margin-top:1rem;border:1px solid var(--line);border-radius:14px;padding:.9rem;background:var(--soft)}
+.wbox>.wt{font:700 .95rem Poppins,sans-serif;margin-bottom:.4rem}
+.sim-svg{width:100%;height:auto;display:block;background:#fff;border-radius:12px;border:1px solid var(--line);margin:.5rem 0}
+.sim-svg.small{max-width:170px}.sim-svg.small2{max-width:260px;margin:.5rem auto}
+.rcp-row{display:grid;grid-template-columns:1.6fr 1fr;gap:.6rem;align-items:start}
+@media(max-width:560px){.rcp-row{grid-template-columns:1fr}.rcp-side{display:grid;grid-template-columns:120px 1fr;gap:.5rem;align-items:center}}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem;margin:.3rem 0}
+.seg button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .75rem;font-size:.85rem;cursor:pointer;min-height:38px}
+.seg button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ctl{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.5rem 0}
+.ctl button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:.45rem .8rem;cursor:pointer;min-height:40px}
+.ctl .play{background:var(--or);border-color:var(--or);color:#fff;font-weight:700}
+.chk{font-size:.85rem;display:flex;gap:.3rem;align-items:center}
+.lev-txt{font-size:.85rem;display:flex;gap:.4rem;align-items:center}.lev-txt input{width:110px}
+.readout{font-size:.92rem;background:#fff;border:1px solid var(--line);border-radius:10px;padding:.5rem .7rem;margin:.4rem 0}
+.readout.big{font-size:1rem}
+.t-big{font:700 15px Poppins,sans-serif;fill:#15181d}.t-s{font:500 11px Inter,sans-serif;fill:#5f6672}
+.tap{margin-top:.6rem;border-top:1px dashed var(--line);padding-top:.5rem}
+.tapbtn{width:100%;min-height:64px;border-radius:14px;border:0;background:var(--ink);color:#fff;font:800 1.2rem Poppins,sans-serif;cursor:pointer;touch-action:manipulation}
+.tapbtn:active{transform:scale(.98);background:#000}
+.small{font-size:.88rem;color:var(--mut)}
+.mini{font-size:.88rem;margin:.5rem 0;padding-left:1.2rem}
+.gl{margin:.4rem 0}.gl-t{font-weight:600;font-size:.9rem}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.6rem;margin-top:1rem}
+.yt{position:relative;border-radius:12px;overflow:hidden;background:#000;aspect-ratio:16/9;cursor:pointer}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.85;display:block}
+.yt .pl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.yt .pl span{width:58px;height:40px;border-radius:12px;background:#e11d1d;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vcap{font-size:.82rem;color:var(--mut);margin:.3rem 0 0;line-height:1.35}.vcap a{font-weight:600}
+.fx{border:1px solid var(--line);border-radius:14px;padding:.9rem;background:#fff}
+.fx-q,.cs-q{font:600 1.02rem Poppins,sans-serif;margin:.4rem 0 .6rem}
+.fx-o{display:flex;flex-direction:column;gap:.4rem}
+.fx-o button{text-align:left;border:1px solid var(--line);background:#fff;border-radius:12px;padding:.6rem .8rem;cursor:pointer;min-height:44px}
+.fx-o button:hover{border-color:var(--or)}
+.fx-o button.ok{background:var(--grbg);border-color:var(--gr)}.fx-o button.bad{background:var(--redbg);border-color:var(--red)}
+.fx-end{margin:.6rem 0;padding:.7rem .9rem;border-radius:12px;background:var(--orbg)}
+.lnk{border:0;background:none;color:var(--or2);font-weight:600;cursor:pointer;padding:.2rem 0}
+.cs-h .seg{margin-bottom:.6rem}
+.cs-cena{background:var(--blbg);color:#1e3a8a;border-radius:12px;padding:.6rem .8rem}
+.cs-fb{font-size:.9rem;margin:.5rem 0 .2rem;padding:.45rem .7rem;border-radius:10px}.cs-fb.ok{background:var(--grbg)}.cs-fb.bad{background:var(--redbg)}
+.st-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.8rem;min-height:70px}
+.st-btns{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;margin:.5rem 0}.st-btns button{border-radius:10px;padding:.55rem .2rem;font-weight:700;cursor:pointer;border:1px solid}
+.callout{border-radius:12px;padding:.7rem .9rem;background:var(--orbg);margin:.8rem 0;font-size:.95rem}
+.true-list{columns:2;column-gap:1.5rem;font-size:.93rem}@media(max-width:560px){.true-list{columns:1}}
+.foot{margin-top:3rem;color:var(--mut);font-size:.85rem;border-top:1px solid var(--line);padding-top:1rem}
+@media print{.bar,.wbox,.vids,.tools{display:none}.st{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="bar-in"><a class="mgb" href="index.html" aria-label="Voltar à biblioteca"><svg viewBox="0 0 24 24"><path fill="#ff6b1a" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg></a><span class="t">Primeiros Socorros · Prova prática</span><a class="btn" href="#simulado">Simulado</a></div></div>
+<main>
+<header class="hero">
+<div class="kicker">Revisão para a prova prática · NUC002</div>
+<h1>Primeiros Socorros <span>na prática</span></h1>
+<p class="lede">Cada estação traz a ordem do atendimento, o que <b>falar em voz alta</b> na encenação, o que <b>não fazer</b> e o que o avaliador confere. A teoria completa está na <a href="primeiros-socorros-revisao.html">Revisão completa</a>.</p>
+<div class="plan"><h3>Plano para hoje à noite</h3><ol>
+<li>Decore a <a href="#abertura">abertura de toda cena</a>: fale em voz alta 3 vezes, de pé, como se estivesse na prova.</li>
+<li>Faça 2 minutos de RCP numa almofada com o <a href="#rcp">metrônomo</a> e teste seu ritmo no botão.</li>
+<li>Em cada estação, use <b>🧠 Treinar de cabeça</b>: os passos ficam borrados e você diz o próximo antes de tocar.</li>
+<li>Feche com o <a href="#simulado">simulado de cenas</a> e o <a href="#fluxo">fluxograma</a>.</li>
+<li>Amanhã: unhas curtas, cabelo preso, sem anéis, relógio com segundos (para pulso, FR e convulsão).</li>
+</ol></div>
+</header>
+
+<div class="sec-h" id="fluxo"><h2>O que eu faço primeiro?</h2><p>Toque nas respostas: o fluxograma leva até a estação certa.</p></div>
+<div data-w="fluxo"></div>
+
+<div class="sec-h"><h2>Estações</h2><p>22 atendimentos, na ordem em que aparecem na prova.</p></div>
+<div class="grp">Base</div><div class="grid"><a href="#abertura"><span class="n">01</span><span class="tt">Abertura de toda cena</span></a><a href="#vitais"><span class="n">02</span><span class="tt">Sinais vitais na mão</span></a></div><div class="grp">Parada</div><div class="grid"><a href="#rcp"><span class="n">04</span><span class="tt">Parada cardíaca no adulto: RCP + DEA</span></a><a href="#rcpkid"><span class="n">05</span><span class="tt">RCP em criança e bebê</span></a><a href="#engasgo"><span class="n">06</span><span class="tt">Engasgo (OVACE)</span></a></div><div class="grp">Clínico</div><div class="grid"><a href="#desmaio"><span class="n">07</span><span class="tt">Desmaio e posição lateral de segurança</span></a><a href="#convulsao"><span class="n">08</span><span class="tt">Convulsão</span></a><a href="#hipo"><span class="n">09</span><span class="tt">Hipoglicemia</span></a><a href="#pressao"><span class="n">10</span><span class="tt">Pressão alta e pressão baixa</span></a><a href="#clinicas"><span class="n">11</span><span class="tt">Infarto, AVC, asma, alergia grave e hiperventilação</span></a><a href="#intox"><span class="n">19</span><span class="tt">Intoxicação e animais peçonhentos</span></a></div><div class="grp">Trauma</div><div class="grid"><a href="#xabcde"><span class="n">03</span><span class="tt">Avaliação primária XABCDE</span></a><a href="#hemorragia"><span class="n">12</span><span class="tt">Hemorragias e choque</span></a><a href="#feridas"><span class="n">13</span><span class="tt">Ferimentos especiais</span></a><a href="#fratura"><span class="n">14</span><span class="tt">Fratura, luxação e entorse</span></a><a href="#tce"><span class="n">15</span><span class="tt">Trauma de crânio (TCE)</span></a><a href="#trm"><span class="n">16</span><span class="tt">Trauma de coluna (TRM): estabilização, colar e rolamento</span></a><a href="#queimadura"><span class="n">17</span><span class="tt">Queimadura e choque elétrico</span></a><a href="#afogamento"><span class="n">18</span><span class="tt">Afogamento</span></a><a href="#start"><span class="n">21</span><span class="tt">Múltiplas vítimas: START</span></a><a href="#transporte"><span class="n">22</span><span class="tt">Remoção e transporte improvisado</span></a></div><div class="grp">Parto</div><div class="grid"><a href="#parto"><span class="n">20</span><span class="tt">Parto de emergência</span></a></div>
+
+<section class="st" id="abertura">
+<div class="st-top"><div class="st-num">1</div><div><span class="tag">Base</span><h2>Abertura de toda cena</h2><p class="sub">Os primeiros 60 segundos valem ponto em qualquer estação.</p></div></div>
+<div class="cena"><b>Na prova:</b> O avaliador descreve a cena ou um colega já está caído. Antes de tocar em qualquer pessoa, você faz SEMPRE esta abertura.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Pare e avalie a cena de longe.</span><span class="say">"Cena segura!" (ou: "Cena insegura, não vou entrar, acionando o 193.")</span><span class="det">Procure trânsito, fogo, fio elétrico, gás, água, agressor, vidro. Socorrista ferido vira mais uma vítima (1º eu, 2º equipe, 3º vítima).</span></li>
+<li><span class="act">Biossegurança: calce as luvas (simule se não tiver).</span><span class="say">"Colocando EPI: luvas."</span><span class="det">Todo fluido corporal é potencialmente infeccioso.</span></li>
+<li><span class="act">Conte as vítimas e olhe o mecanismo do trauma.</span><span class="say">"Uma vítima. Queda de altura, suspeita de lesão de coluna."</span><span class="det">Queda, batida de carro/moto, mergulho em água rasa ou pancada na cabeça = trate como lesão de coluna até provar o contrário.</span></li>
+<li><span class="act">Aproxime-se pela frente (para a vítima não virar a cabeça), identifique-se e peça permissão.</span><span class="say">"Olá, meu nome é Matheus, sou socorrista. Posso te ajudar?"</span><span class="det">Vítima inconsciente = consentimento implícito. Criança: peça ao responsável se ele estiver presente.</span></li>
+<li><span class="act">Trauma? Estabilize a cabeça com as mãos antes de qualquer coisa (ou peça a alguém).</span><span class="say">"Não mexa a cabeça, eu vou segurar para você."</span><span class="det">Nas vítimas clínicas (sem trauma) isso não é necessário.</span></li>
+<li><span class="act">Cheque a responsividade: toque firme nos ombros e chame alto.</span><span class="say">"Senhor! Senhor! Está me ouvindo?"</span><span class="det">No trauma, não sacuda. Toque nos ombros e fale alto.</span></li>
+<li><span class="act">Peça ajuda apontando para uma pessoa específica.</span><span class="say">"Você, de camisa azul! Ligue para o 192, diga que tem uma vítima inconsciente, traga um DEA e volte para me avisar."</span><span class="det">Pedido vago ("alguém liga!") ninguém cumpre. Aponte e dê a tarefa completa.</span></li>
+<li><span class="act">Roteiro da ligação (se você mesmo ligar).</span><span class="say">"Meu nome é..., estou em (endereço + ponto de referência). Um homem de uns 40 anos desmaiou e não respira. Uma vítima. Estou começando a massagem."</span><span class="det">Quem fala → Onde → O que houve → Quantas vítimas → Riscos → Como estão. Não desligue antes do atendente; deixe no viva-voz.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Correr direto para a vítima sem olhar a cena</li><li>Esquecer as luvas (é ponto que o avaliador anota)</li><li>Mexer o pescoço de quem caiu</li><li>Dizer "alguém chama a ambulância" sem apontar para ninguém</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="abertura-0"><span>Falou "cena segura" e EPI</span></label><label><input type="checkbox" data-k="abertura-1"><span>Se apresentou e pediu consentimento</span></label><label><input type="checkbox" data-k="abertura-2"><span>Checou responsividade</span></label><label><input type="checkbox" data-k="abertura-3"><span>Acionou 192/193 de forma direcionada</span></label><label><input type="checkbox" data-k="abertura-4"><span>Pediu o DEA quando a vítima não respondeu</span></label></div>
+</div>
+</section>
+<section class="st" id="vitais">
+<div class="st-top"><div class="st-num">2</div><div><span class="tag">Base</span><h2>Sinais vitais na mão</h2><p class="sub">Pulso, respiração, pressão, enchimento capilar e pupilas: como medir na prática.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Avalie os sinais vitais desta vítima consciente." Pode cair junto com pressão alta, desmaio ou hipoglicemia.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Pulso radial: 2 dedos (indicador + médio) no punho, do lado do polegar.</span><span class="say">"Pulso radial presente, cheio e regular, 76 por minuto."</span><span class="det">Nunca use o polegar (ele tem pulso próprio). Conte 30 s × 2 (ou 60 s se irregular). Sem pulso radial na vítima grave → carotídeo (lateral da traqueia). Bebê → braquial (face interna do braço).</span></li>
+<li><span class="act">Frequência respiratória: olhe o tórax subir sem avisar a vítima.</span><span class="say">"FR 16 incursões por minuto, respiração regular e sem esforço."</span><span class="det">Se ela souber que está sendo contada, muda o ritmo. Disfarce: mantenha os dedos no pulso enquanto olha o peito. Adulto 12–20 (aula: 12–22).</span></li>
+<li><span class="act">Enchimento capilar: aperte a unha por ~5 s e solte.</span><span class="say">"Enchimento capilar menor que 2 segundos."</span><span class="det">Mais de 2 s = má perfusão (choque, frio). Usado no START.</span></li>
+<li><span class="act">Pele: cor, temperatura e umidade (dorso da mão na testa/pescoço).</span><span class="say">"Pele corada, quente e seca."</span><span class="det">Pálida, fria e úmida (suor frio) = choque ou hipoglicemia.</span></li>
+<li><span class="act">Pupilas: abra as pálpebras e veja tamanho, igualdade e reação à luz.</span><span class="say">"Pupilas isocóricas e fotorreagentes."</span><span class="det">Anisocoria (diferentes) → TCE/AVC. Miose/midríase → intoxicação. Use lanterna do celular.</span></li>
+<li><span class="act">Pressão arterial (esfigmomanômetro manual): use o treino de pressão logo abaixo.</span><span class="say">"PA 120 por 80 mmHg."</span><span class="det">Repouso 3–5 min, sentado, pernas descruzadas, costas apoiadas, braço na altura do coração, palma para cima. Manguito 2–3 cm acima da dobra do cotovelo, estetoscópio sobre a artéria braquial.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Contar pulso com o polegar</li><li>Avisar "vou contar sua respiração"</li><li>Medir PA com a pessoa de pernas cruzadas, falando ou logo após o esforço</li><li>Esquecer de anotar a hora</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="vitais-0"><span>Técnica de pulso correta (local e dedos)</span></label><label><input type="checkbox" data-k="vitais-1"><span>FR contada sem a vítima perceber</span></label><label><input type="checkbox" data-k="vitais-2"><span>Falou os valores e a interpretação</span></label><label><input type="checkbox" data-k="vitais-3"><span>PA: palpou antes, inflou 20–30 acima, desinflou devagar</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Simulador de pressão arterial</div><div data-w="pa"></div></div>
+</section>
+<section class="st" id="xabcde">
+<div class="st-top"><div class="st-num">3</div><div><span class="tag">Trauma</span><h2>Avaliação primária XABCDE</h2><p class="sub">A espinha de toda estação de trauma. Fale cada letra em voz alta.</p></div></div>
+<div class="cena"><b>Na prova:</b> Atropelamento, queda, briga, acidente de moto. O avaliador quer ver você procurar o que mata primeiro, na ordem.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">X · Exsanguinação: procure sangramento grande e jorrando.</span><span class="say">"X: sem hemorragia exsanguinante." (ou: "Hemorragia grave na coxa, compressão direta!")</span><span class="det">Corra os olhos e as mãos pelo corpo. Sangramento grave se resolve ANTES de qualquer coisa.</span></li>
+<li><span class="act">A · Via aérea + coluna cervical: mantenha a cabeça estabilizada e veja se fala.</span><span class="say">"A: vítima fala, via aérea pérvia. Cervical estabilizada, aplicando colar."</span><span class="det">Se não fala: abra a via aérea com a anteriorização da mandíbula (dedos no ângulo da mandíbula, empurre para a frente) sem estender o pescoço. Olhe a boca e retire só o que estiver visível.</span></li>
+<li><span class="act">B · Respiração: ver, ouvir e sentir por até 10 s; exponha o tórax.</span><span class="say">"B: respira, FR 20, expansão simétrica."</span><span class="det">Procure ferida aberta no tórax, assimetria, esforço. Estase de jugular + desvio de traqueia = pneumotórax hipertensivo.</span></li>
+<li><span class="act">C · Circulação: pulso, pele e sangramentos.</span><span class="say">"C: pulso radial presente e rápido, pele fria e pálida, enchimento capilar 3 s: sinais de choque."</span><span class="det">Choque: deite, aqueça, nada pela boca, 192.</span></li>
+<li><span class="act">D · Neurológico: nível de consciência e pupilas.</span><span class="say">"D: AVDI: responde ao verbal. Glasgow 13. Pupilas isocóricas."</span><span class="det">AVDI = Alerta, Verbal (responde à voz), Dor (só à dor), Inconsciente. Glasgow na calculadora abaixo.</span></li>
+<li><span class="act">E · Exposição: procure lesões e previna hipotermia.</span><span class="say">"E: expondo para procurar lesões... cobrindo a vítima para evitar hipotermia."</span><span class="det">Corte/abra a roupa só onde precisa, respeite a privacidade e cubra de novo.</span></li>
+<li><span class="act">Reavalie e informe a equipe que chegar.</span><span class="say">"Passando o caso: vítima de queda de 3 m, consciente, Glasgow 13, dor na nuca, cervical estabilizada."</span><span class="det">Na dúvida em qualquer letra, volte ao X-A.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Inverter a ordem (ir para a fratura da perna antes do A e do B)</li><li>Usar inclinação da cabeça (chin lift) no trauma</li><li>Soltar a cabeça da vítima para fazer outra coisa</li><li>Deixar a vítima exposta no frio</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="xabcde-0"><span>Ordem X-A-B-C-D-E falada</span></label><label><input type="checkbox" data-k="xabcde-1"><span>Coluna cervical protegida o tempo todo</span></label><label><input type="checkbox" data-k="xabcde-2"><span>Interpretou o que achou (ex.: "sinais de choque")</span></label><label><input type="checkbox" data-k="xabcde-3"><span>Preveniu hipotermia</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Escala de Coma de Glasgow</div><div data-w="glasgow"></div></div>
+</section>
+<section class="st" id="rcp">
+<div class="st-top"><div class="st-num">4</div><div><span class="tag">Parada</span><h2>Parada cardíaca no adulto: RCP + DEA</h2><p class="sub">Não responde e não respira normalmente: comprima já.</p></div></div>
+<div class="cena"><b>Na prova:</b> Manequim no chão. "Este homem caiu na academia." É a estação mais cobrada: ritmo, profundidade, mãos, contagem e DEA.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Abertura: cena segura, EPI, toque nos ombros e chame alto.</span><span class="say">"Senhor, está me ouvindo?"</span></li>
+<li><span class="act">Não respondeu: peça ajuda + 192 + DEA, apontando.</span><span class="say">"Você! Ligue 192 e traga o DEA!"</span><span class="det">Sozinho com celular: ligue no viva-voz e já comece.</span></li>
+<li><span class="act">Cheque a respiração olhando o tórax por 5 a 10 s.</span><span class="say">"Não respira." (conte em voz alta: "mil e um, mil e dois...")</span><span class="det">Gasping (suspiro agônico, "puxando o ar de vez em quando") NÃO é respiração. Leigo não precisa checar pulso; profissional checa carotídeo junto, até 10 s.</span></li>
+<li><span class="act">Exponha o tórax e posicione as mãos no centro do peito (metade inferior do esterno).</span><span class="say">"Iniciando compressões."</span><span class="det">Base de uma mão, a outra por cima, dedos entrelaçados e levantados. Ajoelhado ao lado, ombros em cima das mãos, braços esticados, empurra com o peso do corpo (quadril como dobradiça).</span></li>
+<li><span class="act">30 compressões: 100–120/min, 5–6 cm, deixando o tórax voltar todo.</span><span class="say">"Um, dois, três... vinte e nove, trinta."</span><span class="det">Conte em voz alta: o avaliador ouve seu ritmo. Use o metrônomo abaixo para gravar o ritmo no corpo.</span></li>
+<li><span class="act">2 ventilações (se treinado e com barreira): incline a cabeça, eleve o queixo, feche o nariz, 1 s cada, veja o peito subir.</span><span class="say">"Duas ventilações."</span><span class="det">Sem barreira ou sem treino: só compressões contínuas. Não demore mais de 10 s nas ventilações.</span></li>
+<li><span class="act">Repita 30:2 até chegar o DEA ou a equipe.</span><span class="det">Troque quem comprime a cada 2 min (5 ciclos), em menos de 5 s.</span></li>
+<li><span class="act">DEA chegou: ligue e siga a voz. Pás no peito nu e seco.</span><span class="say">"DEA chegou, ligando."</span><span class="det">Pá 1: abaixo da clavícula direita. Pá 2: lateral esquerda, abaixo da axila. Seque se molhado, tire adesivos de remédio, afaste de marca-passo (volume sob a pele). Não pare as compressões enquanto o colega cola as pás.</span></li>
+<li><span class="act">Análise e choque: ninguém toca.</span><span class="say">"Afastem-se! Eu estou afastado, você está afastado, todos afastados!" → aperta o botão.</span><span class="det">Olhe de verdade para a vítima antes de apertar.</span></li>
+<li><span class="act">Logo após o choque (ou "choque não indicado"), volte às compressões por 2 min.</span><span class="say">"Reiniciando compressões."</span><span class="det">Não cheque pulso depois do choque. O DEA reanalisa sozinho a cada 2 min.</span></li>
+<li><span class="act">Só pare se: a vítima se mexer, respirar normalmente ou falar; a equipe assumir; você exaurir; ou a cena ficar insegura.</span><span class="say">"Vítima retomou respiração: colocando em posição lateral e monitorando."</span><span class="det">Voltou a respirar sem trauma → posição lateral de segurança.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Mãos sobre o abdome ou sobre o processo xifoide</li><li>Dobrar os cotovelos</li><li>Apoiar-se no peito entre as compressões (impede o retorno)</li><li>Parar mais de 10 s</li><li>Tocar na vítima durante a análise ou o choque</li><li>Checar pulso logo depois do choque</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="rcp-0"><span>Pediu DEA e 192</span></label><label><input type="checkbox" data-k="rcp-1"><span>Checou respiração em até 10 s</span></label><label><input type="checkbox" data-k="rcp-2"><span>Mãos, braços e postura corretos</span></label><label><input type="checkbox" data-k="rcp-3"><span>Ritmo 100–120 e profundidade 5–6 cm</span></label><label><input type="checkbox" data-k="rcp-4"><span>Retorno total do tórax</span></label><label><input type="checkbox" data-k="rcp-5"><span>Relação 30:2</span></label><label><input type="checkbox" data-k="rcp-6"><span>DEA: pás certas e "afastem-se"</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Metrônomo da RCP: comprima junto</div><div data-w="rcp"></div></div>
+<div class="vids"><div><div class="yt" data-id="jtEDnhcR23w" role="button" aria-label="Assistir: RCP de alta qualidade no adulto (aula prática)"><img loading="lazy" src="https://i.ytimg.com/vi/jtEDnhcR23w/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">RCP de alta qualidade no adulto (aula prática) · <a href="https://www.youtube.com/watch?v=jtEDnhcR23w" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="gGE18Z2IaBk" role="button" aria-label="Assistir: RCP em adultos: o que fazer"><img loading="lazy" src="https://i.ytimg.com/vi/gGE18Z2IaBk/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">RCP em adultos: o que fazer · <a href="https://www.youtube.com/watch?v=gGE18Z2IaBk" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="oElJmrUlEB8" role="button" aria-label="Assistir: SAMU 192: como usar o desfibrilador (DEA)"><img loading="lazy" src="https://i.ytimg.com/vi/oElJmrUlEB8/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">SAMU 192: como usar o desfibrilador (DEA) · <a href="https://www.youtube.com/watch?v=oElJmrUlEB8" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="rcpkid">
+<div class="st-top"><div class="st-num">5</div><div><span class="tag">Parada</span><h2>RCP em criança e bebê</h2><p class="sub">Mesma lógica, mão e profundidade diferentes. Em criança, a parada quase sempre começa pela respiração.</p></div></div>
+<div class="cena"><b>Na prova:</b> Manequim pequeno. "Criança de 4 anos tirada da piscina" ou "bebê de 6 meses que não reage".</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Faixas: bebê = menos de 1 ano · criança = 1 ano até a puberdade.</span><span class="det">Depois da puberdade (seios, pelos axilares) = protocolo do adulto.</span></li>
+<li><span class="act">Responsividade no bebê: toque/estímulo na planta do pé e chame.</span><span class="say">"Bebê não reage."</span><span class="det">Nunca sacuda o bebê.</span></li>
+<li><span class="act">Sozinho e sem celular? Faça 2 min de RCP antes de sair para ligar.</span><span class="say">"Sozinho: 2 minutos de RCP e depois ligo 192."</span><span class="det">Com celular, ligue no viva-voz e comece. Colapso súbito presenciado: busque o DEA logo.</span></li>
+<li><span class="act">Criança: base de 1 ou 2 mãos no centro do peito, ~5 cm (1/3 do tórax).</span><span class="say">"Compressões com uma mão."</span><span class="det">100–120/min, 30:2 com 1 socorrista. Com 2 socorristas profissionais: 15:2.</span></li>
+<li><span class="act">Bebê: dois polegares envolvendo o tórax (ou base de uma mão), logo abaixo da linha dos mamilos, ~4 cm.</span><span class="say">"Compressões com dois polegares."</span><span class="det">AHA 2025: a técnica de dois dedos saiu. Pulso do bebê = braquial.</span></li>
+<li><span class="act">Ventilação no bebê: cabeça em posição neutra (coxim sob os ombros), sua boca cobre boca e nariz.</span><span class="say">"Duas ventilações."</span><span class="det">Sopro curto, só o necessário para o peito subir. Criança e bebê: ventilação importa mais que no adulto.</span></li>
+<li><span class="act">DEA: pás pediátricas se houver; bebê/criança pequena = uma pá na frente do peito e outra nas costas.</span><span class="say">"Pás pediátricas, anteroposterior."</span><span class="det">Sem pás pediátricas, use as de adulto sem encostar uma na outra.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Usar a força do adulto no bebê</li><li>Estender demais o pescoço do bebê (fecha a via aérea)</li><li>Esquecer que pode ser 15:2 com dois socorristas profissionais</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="rcpkid-0"><span>Identificou a faixa etária</span></label><label><input type="checkbox" data-k="rcpkid-1"><span>Mão/dedos e profundidade adequados</span></label><label><input type="checkbox" data-k="rcpkid-2"><span>Relação e ritmo</span></label><label><input type="checkbox" data-k="rcpkid-3"><span>Ventilação boca-boca-nariz no bebê</span></label></div>
+</div>
+<div class="vids"><div><div class="yt" data-id="_lvi5LO7vrg" role="button" aria-label="Assistir: Parada cardíaca em adulto, criança e lactente (aulão prático)"><img loading="lazy" src="https://i.ytimg.com/vi/_lvi5LO7vrg/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Parada cardíaca em adulto, criança e lactente (aulão prático) · <a href="https://www.youtube.com/watch?v=_lvi5LO7vrg" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="zSncdp4fhKg" role="button" aria-label="Assistir: RCP em bebês (Hospital Moinhos de Vento)"><img loading="lazy" src="https://i.ytimg.com/vi/zSncdp4fhKg/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">RCP em bebês (Hospital Moinhos de Vento) · <a href="https://www.youtube.com/watch?v=zSncdp4fhKg" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="engasgo">
+<div class="st-top"><div class="st-num">6</div><div><span class="tag">Parada</span><h2>Engasgo (OVACE)</h2><p class="sub">Pergunte "você está engasgado?". Se não tosse nem fala: 5 tapas + 5 compressões, alternando.</p></div></div>
+<div class="cena"><b>Na prova:</b> Um colega encena com as mãos no pescoço. Pode evoluir para inconsciência no meio da estação.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Pergunte e observe.</span><span class="say">"Você está engasgado? Consegue falar?"</span><span class="det">Tosse forte e fala = obstrução leve: incentive a tossir e fique junto. NÃO bata nas costas.</span></li>
+<li><span class="act">Não tosse, não fala, faz o sinal universal (mão no pescoço): avise e peça ajuda.</span><span class="say">"Vou te ajudar! Alguém liga 192!"</span></li>
+<li><span class="act">5 golpes nas costas: fique atrás e de lado, apoie o peito dela com uma mão e incline o tronco para a frente.</span><span class="say">"Um, dois, três, quatro, cinco."</span><span class="det">Golpes firmes com a base da mão entre as escápulas, de baixo para cima. AHA 2025: começa pelas costas.</span></li>
+<li><span class="act">5 compressões abdominais: abrace por trás, punho fechado (polegar para dentro) entre o umbigo e o esterno, a outra mão por cima.</span><span class="say">"Um, dois, três, quatro, cinco."</span><span class="det">Puxe para dentro e para cima, em "J". Pernas afastadas, uma entre as da vítima (base firme).</span></li>
+<li><span class="act">Alterne 5 + 5 até o objeto sair ou a vítima desmaiar.</span><span class="det">Saiu? Mesmo assim, avaliação médica (pode haver lesão interna).</span></li>
+<li><span class="act">Gestante (barriga visível) ou obeso: troque as abdominais por compressões no meio do peito.</span><span class="say">"Gestante: compressões torácicas."</span><span class="det">Mesmo ponto da RCP, puxando para trás.</span></li>
+<li><span class="act">Ficou inconsciente: apoie e deite no chão com cuidado. 192 e RCP, começando pelas compressões.</span><span class="say">"Vítima inconsciente: iniciando RCP."</span><span class="det">Antes de cada ventilação, olhe a boca: retire só o objeto visível. Nunca varredura às cegas com o dedo.</span></li>
+<li><span class="act">Bebê (&lt;1 ano): de bruços no seu antebraço, cabeça mais baixa que o corpo, segure a mandíbula (sem tapar a boca).</span><span class="say">"Cinco golpes nas costas."</span><span class="det">Apoie o antebraço na sua coxa. Golpes com a base da mão entre as escápulas.</span></li>
+<li><span class="act">Vire o bebê "em sanduíche" (barriga para cima, cabeça baixa) e faça 5 compressões no peito.</span><span class="say">"Cinco compressões torácicas."</span><span class="det">No centro do peito, logo abaixo da linha dos mamilos. Nunca compressões abdominais no bebê. Alterne 5 + 5.</span></li>
+<li><span class="act">Sozinho e engasgado: punho no abdome ou jogue o abdome contra o encosto de uma cadeira.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Bater nas costas de quem está tossindo forte</li><li>Dar água</li><li>Varredura com o dedo às cegas</li><li>Compressão abdominal em bebê ou gestante</li><li>Segurar o bebê pela perna de cabeça para baixo</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="engasgo-0"><span>Perguntou e diferenciou leve × grave</span></label><label><input type="checkbox" data-k="engasgo-1"><span>Posição do socorrista e das mãos</span></label><label><input type="checkbox" data-k="engasgo-2"><span>Alternou 5 + 5</span></label><label><input type="checkbox" data-k="engasgo-3"><span>Reconheceu a inconsciência e foi para RCP</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Animação: sequência do desengasgo</div><div data-w="engasgo"></div></div>
+<div class="vids"><div><div class="yt" data-id="vO6-yGuYVcM" role="button" aria-label="Assistir: Novo protocolo de desengasgo: adultos e crianças (AHA 2025)"><img loading="lazy" src="https://i.ytimg.com/vi/vO6-yGuYVcM/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Novo protocolo de desengasgo: adultos e crianças (AHA 2025) · <a href="https://www.youtube.com/watch?v=vO6-yGuYVcM" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="hKnnSF-_cos" role="button" aria-label="Assistir: Desengasgo em bebês: técnica atualizada"><img loading="lazy" src="https://i.ytimg.com/vi/hKnnSF-_cos/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Desengasgo em bebês: técnica atualizada · <a href="https://www.youtube.com/watch?v=hKnnSF-_cos" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="desmaio">
+<div class="st-top"><div class="st-num">7</div><div><span class="tag">Clínico</span><h2>Desmaio e posição lateral de segurança</h2><p class="sub">Síncope (apagou) × lipotímia (quase apagou). Respira e não acorda = posição lateral.</p></div></div>
+<div class="cena"><b>Na prova:</b> Aluno pálido diz que vai desmaiar, ou já está caído. Muitas vezes a estação termina pedindo a PLS.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Lipotímia (tontura, visão escura, suor frio): deite a pessoa antes que caia.</span><span class="say">"Deita aqui comigo, devagar."</span><span class="det">Se não der para deitar, sente com a cabeça baixa entre os joelhos.</span></li>
+<li><span class="act">Desmaiou: abertura completa e cheque a respiração.</span><span class="say">"Respira normalmente."</span><span class="det">Não respira → RCP.</span></li>
+<li><span class="act">Respira e sem trauma: barriga para cima, eleve as pernas ~30 cm (em cadeira, mochila).</span><span class="say">"Elevando membros inferiores."</span><span class="det">Leva sangue de volta ao cérebro. NÃO eleve se houve trauma.</span></li>
+<li><span class="act">Afrouxe cintos, gravata e golas; afaste curiosos e areje o ambiente; tire do sol.</span></li>
+<li><span class="act">Acordou: fique ao lado, levante em etapas (deitado → sentado → em pé).</span><span class="say">"Fica sentado um pouco antes de levantar."</span><span class="det">Pergunte: comeu? diabético? remédio? dor no peito? Se houver dor no peito, falta de ar, palpitação ou foi durante esforço → 192.</span></li>
+<li><span class="act">Não acordou em ~1 min: 192 e posição lateral de segurança (sem suspeita de trauma).</span><span class="say">"Inconsciente, respirando: colocando em PLS."</span><span class="det">Siga os 6 passos da animação abaixo e reavalie a respiração até o SAMU chegar.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Jogar água no rosto</li><li>Dar álcool ou amônia para cheirar</li><li>Dar líquido ou comida a quem não está bem acordado</li><li>Sentar a pessoa de uma vez</li><li>PLS em suspeita de trauma de coluna</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="desmaio-0"><span>Checou respiração</span></label><label><input type="checkbox" data-k="desmaio-1"><span>Elevou as pernas (sem trauma)</span></label><label><input type="checkbox" data-k="desmaio-2"><span>PLS com a técnica correta</span></label><label><input type="checkbox" data-k="desmaio-3"><span>Reavaliou e acionou 192 quando indicado</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Passo a passo animado da posição lateral</div><div data-w="pls"></div></div>
+<div class="vids"><div><div class="yt" data-id="hdSdW4ICXiI" role="button" aria-label="Assistir: Desmaio: posição lateral de segurança"><img loading="lazy" src="https://i.ytimg.com/vi/hdSdW4ICXiI/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Desmaio: posição lateral de segurança · <a href="https://www.youtube.com/watch?v=hdSdW4ICXiI" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="convulsao">
+<div class="st-top"><div class="st-num">8</div><div><span class="tag">Clínico</span><h2>Convulsão</h2><p class="sub">Proteja, cronometre, não segure e não coloque nada na boca.</p></div></div>
+<div class="cena"><b>Na prova:</b> Colega se debatendo no chão perto de cadeiras. O avaliador observa o que você NÃO faz.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Olhe o relógio e marque o início da crise.</span><span class="say">"Início da crise às 10h05."</span><span class="det">Mais de 5 min = emergência.</span></li>
+<li><span class="act">Afaste objetos e curiosos; proteja a cabeça com algo macio (casaco, mochila, suas mãos).</span><span class="say">"Protegendo a cabeça."</span></li>
+<li><span class="act">Afrouxe roupas apertadas e tire os óculos.</span></li>
+<li><span class="act">Não segure os movimentos e não ponha nada na boca.</span><span class="say">"Não vou segurar nem colocar nada na boca."</span><span class="det">Falar isso em voz alta mostra ao avaliador que você sabe.</span></li>
+<li><span class="act">Assim que der, vire de lado (saliva e vômito escorrem).</span><span class="say">"Lateralizando."</span></li>
+<li><span class="act">Ligue 192 se: &gt;5 min, crises seguidas sem acordar, 1ª crise, gestante, se machucou, foi na água, não volta a respirar bem ou demora a recobrar a consciência.</span><span class="say">"Mais de 5 minutos: aciono o 192."</span></li>
+<li><span class="act">Depois da crise: cheque a respiração, posição lateral de segurança, fique ao lado e acalme.</span><span class="say">"Pós-crise: sonolento e confuso, respirando. Estou com você."</span><span class="det">É normal ficar confuso e sonolento (pós-ictal). Pode ter urinado: preserve a privacidade.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Colocar colher, pano ou dedo na boca</li><li>Puxar a língua</li><li>Segurar braços e pernas</li><li>Jogar água ou dar remédio na boca</li><li>Deixar a pessoa sozinha depois</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="convulsao-0"><span>Marcou o tempo</span></label><label><input type="checkbox" data-k="convulsao-1"><span>Protegeu a cabeça e afastou objetos</span></label><label><input type="checkbox" data-k="convulsao-2"><span>Não segurou nem pôs nada na boca</span></label><label><input type="checkbox" data-k="convulsao-3"><span>Lateralizou e acionou 192 com o critério certo</span></label></div>
+</div>
+<div class="vids"><div><div class="yt" data-id="8fk2-liGO0A" role="button" aria-label="Assistir: Atendendo uma convulsão: o que fazer"><img loading="lazy" src="https://i.ytimg.com/vi/8fk2-liGO0A/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Atendendo uma convulsão: o que fazer · <a href="https://www.youtube.com/watch?v=8fk2-liGO0A" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="hipo">
+<div class="st-top"><div class="st-num">9</div><div><span class="tag">Clínico</span><h2>Hipoglicemia</h2><p class="sub">Diabético confuso, suado e tremendo: se engole, dê açúcar.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Aluno diabético treinando em jejum começa a suar frio e ficar confuso."</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Pergunte (ou a quem estiver junto): é diabético? comeu? usou insulina?</span><span class="say">"Você é diabético? Comeu hoje?"</span><span class="det">Sinais: suor frio, tremor, palidez, fome, fraqueza, confusão, irritabilidade.</span></li>
+<li><span class="act">Consciente e engole bem: dê açúcar rápido.</span><span class="say">"Toma este suco (ou refrigerante comum, ou 1 colher de açúcar na água)."</span><span class="det">Não use diet/zero. Se tiver glicosímetro: abaixo de 70 mg/dL = hipoglicemia.</span></li>
+<li><span class="act">Sente, interrompa o exercício e reavalie em ~15 min. Melhorou → um lanche.</span><span class="say">"Vamos reavaliar em 15 minutos."</span><span class="det">Não melhorou → repita o açúcar e ligue 192.</span></li>
+<li><span class="act">Inconsciente ou sem conseguir engolir: NADA pela boca. 192, posição lateral, cheque a respiração.</span><span class="say">"Inconsciente: nada pela boca, PLS, 192."</span></li>
+<li><span class="act">Na dúvida entre hipo e hiper: dê açúcar.</span><span class="say">"Na dúvida, açúcar."</span><span class="det">Na hipo salva; na hiper, um pouco mais de açúcar não piora de forma relevante.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Dar comida ou líquido a quem está inconsciente</li><li>Dar insulina</li><li>Deixar continuar treinando</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="hipo-0"><span>Investigou a história</span></label><label><input type="checkbox" data-k="hipo-1"><span>Checou se consegue engolir antes de dar açúcar</span></label><label><input type="checkbox" data-k="hipo-2"><span>Reavaliou em 15 min</span></label></div>
+</div>
+</section>
+<section class="st" id="pressao">
+<div class="st-top"><div class="st-num">10</div><div><span class="tag">Clínico</span><h2>Pressão alta e pressão baixa</h2><p class="sub">Medir certo, acalmar, não dar remédio de ninguém e saber quando chamar o 192.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Aluno com dor de cabeça forte e a PA em 190/120" ou "aluna tonta, pálida, PA 80/50 após treino no calor".</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Pare a atividade, sente a pessoa com as costas apoiadas e confirme a PA após 3–5 min de repouso.</span><span class="say">"Vamos parar e medir de novo em repouso."</span><span class="det">Normal &lt; 130/85 (aula). Hipertensão ≥ 140/90. Crise hipertensiva: ≥ 180/120.</span></li>
+<li><span class="act">Pergunte: é hipertenso? toma remédio? tomou hoje? tem dor no peito, falta de ar, fraqueza ou dormência de um lado, fala enrolada, visão turva, dor de cabeça muito forte?</span><span class="say">"Sente dor no peito? Formigamento em algum lado?"</span><span class="det">Qualquer um desses sinais = emergência hipertensiva → 192 já.</span></li>
+<li><span class="act">Sem sinais de alarme: acalme, ambiente tranquilo, respire devagar junto, oriente procurar atendimento no mesmo dia.</span><span class="say">"Sem sinais de alarme: repouso e orientação para avaliação médica."</span><span class="det">Pode ser só dor/ansiedade elevando a PA. Não libere para treinar.</span></li>
+<li><span class="act">Com sinais de alarme: 192, posição semissentada, observe consciência e respiração.</span><span class="say">"Sinais de alarme: aciono 192."</span><span class="det">Se parar de respirar → RCP.</span></li>
+<li><span class="act">Pressão baixa (tontura, palidez, suor frio, visão escura): deite e eleve as pernas.</span><span class="say">"PA 80/50: deitando e elevando as pernas."</span><span class="det">Afrouxe roupas, tire do calor. Consciente e sem náusea → água. Sangramento, dor no peito, desmaio repetido ou não melhora → 192.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Dar o remédio de outra pessoa ou "captopril embaixo da língua"</li><li>Mandar a pessoa voltar a treinar</li><li>Deixar sozinha</li><li>Medir logo depois do esforço e já concluir</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="pressao-0"><span>Mediu corretamente e repetiu em repouso</span></label><label><input type="checkbox" data-k="pressao-1"><span>Procurou sinais de alarme</span></label><label><input type="checkbox" data-k="pressao-2"><span>Conduta certa para alta e para baixa</span></label><label><input type="checkbox" data-k="pressao-3"><span>Acionou 192 quando indicado</span></label></div>
+</div>
+</section>
+<section class="st" id="clinicas">
+<div class="st-top"><div class="st-num">11</div><div><span class="tag">Clínico</span><h2>Infarto, AVC, asma, alergia grave e hiperventilação</h2><p class="sub">Reconhecer rápido e acionar. Quase tudo é: repouso, posição certa, 192 e observar.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Aluno com aperto no peito", "senhora com a boca torta", "criança com chiado", "inchaço no rosto após picada".</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Dor no peito: pare tudo, posição semissentada, afrouxe roupas, 192.</span><span class="say">"Dor torácica em aperto irradiando para o braço: 192, repouso semissentado."</span><span class="det">Aperto/peso, irradia para braço esquerdo, mandíbula ou costas, com suor, náusea, falta de ar. Remédio só com orientação do SAMU (pode orientar AAS mastigado). Parou → RCP + DEA.</span></li>
+<li><span class="act">AVC: teste SAMU e anote a hora do início.</span><span class="say">"Sorria... abrace (erga os braços)... repita esta frase... Urgente: 192, início às 9h40."</span><span class="det">Boca torta, um braço cai, fala enrolada. Nada pela boca (nem água). Inconsciente e respirando → lateral. "Tempo é cérebro."</span></li>
+<li><span class="act">Asma: sente inclinada para a frente apoiada nos braços, ajude a usar a bombinha DELA.</span><span class="say">"Use sua bombinha, eu te ajudo. Respira devagar comigo."</span><span class="det">192 se não fala frases inteiras, lábios roxos, sonolência ou não melhora.</span></li>
+<li><span class="act">Alergia grave (anafilaxia): inchaço de lábios/rosto, chiado, urticária, falta de ar, tontura.</span><span class="say">"Suspeita de anafilaxia: 192."</span><span class="det">Ajude a usar a caneta de adrenalina se ela tiver. Deitada com pernas elevadas; se falta de ar, sentada.</span></li>
+<li><span class="act">Hiperventilação (ansiedade): local calmo, fale devagar e respire junto contando.</span><span class="say">"Inspira em 4... solta em 6..."</span><span class="det">Formigamento e mãos "em garra" são do CO₂ baixo. Sem saco de papel. Na dúvida (asma? infarto?) → 192.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Deixar o aluno com dor no peito continuar treinando</li><li>Água ou remédio para quem tem sinais de AVC</li><li>Saco de papel na hiperventilação</li><li>Usar a bombinha de outra pessoa</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="clinicas-0"><span>Reconheceu o quadro pelos sinais</span></label><label><input type="checkbox" data-k="clinicas-1"><span>Posicionou corretamente</span></label><label><input type="checkbox" data-k="clinicas-2"><span>Anotou a hora (AVC)</span></label><label><input type="checkbox" data-k="clinicas-3"><span>Acionou 192</span></label></div>
+</div>
+</section>
+<section class="st" id="hemorragia">
+<div class="st-top"><div class="st-num">12</div><div><span class="tag">Trauma</span><h2>Hemorragias e choque</h2><p class="sub">Pressão direta forte e contínua. Torniquete se a do membro não parar.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Corte profundo no antebraço com vidro" (sangue em jato) ou "nariz sangrando após bolada".</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">EPI e exponha a ferida para ver de onde sai o sangue.</span><span class="say">"Hemorragia arterial no antebraço: vermelho vivo, em jato."</span><span class="det">Arterial: vermelho vivo, em jatos (a mais grave). Venosa: escuro, contínuo. Capilar: pontos, leve.</span></li>
+<li><span class="act">Compressão direta: pano/gaze sobre a ferida e pressão firme com a mão espalmada (use o peso do corpo).</span><span class="say">"Compressão direta."</span><span class="det">Mantenha sem espiar por pelo menos 5–10 min.</span></li>
+<li><span class="act">Encharcou? Coloque outro pano POR CIMA, sem tirar o primeiro.</span><span class="say">"Encharcou: sobrepondo outra compressa."</span><span class="det">Tirar o primeiro arranca o coágulo.</span></li>
+<li><span class="act">Eleve o membro acima do coração junto com a pressão (se não houver fratura).</span><span class="say">"Elevando o membro."</span><span class="det">É o que a aula ensina. As diretrizes atuais (AHA/Cruz Vermelha 2024) dão menos peso à elevação: o essencial é a pressão direta.</span></li>
+<li><span class="act">Parou: curativo compressivo (enfaixe firme) e cheque a mão/pé: cor, temperatura, pulso.</span><span class="say">"Curativo compressivo, perfusão distal preservada."</span></li>
+<li><span class="act">Não parou e é membro: torniquete 5–7 cm acima da ferida (nunca sobre articulação).</span><span class="say">"Torniquete aplicado às 10h12."</span><span class="det">Faixa larga (≥ 4 cm) + bastão: dê uma volta, nó, bastão sobre o nó, gire até o sangramento parar, prenda o bastão. Anote a hora. Não afrouxe.</span></li>
+<li><span class="act">Sinais de choque (pálido, frio, suado, pulso rápido e fraco, confuso, sede): deite, aqueça, nada pela boca, 192.</span><span class="say">"Sinais de choque hipovolêmico: aquecendo, 192."</span><span class="det">Sangramento interno: abdome rígido/inchado, hematomas, vômito com sangue.</span></li>
+<li><span class="act">Sangramento nasal: sentado, cabeça inclinada para a FRENTE, aperte a parte mole do nariz por 10–15 min.</span><span class="say">"Inclina para frente e aperta aqui."</span><span class="det">Respire pela boca. Não incline para trás (engole sangue). Não para em 20 min ou foi por pancada forte → atendimento.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Tirar a primeira compressa encharcada</li><li>Torniquete fino (fio, barbante) ou sobre articulação</li><li>Afrouxar o torniquete para "ver se parou"</li><li>Cabeça para trás no sangramento nasal</li><li>Dar água para quem está em choque</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="hemorragia-0"><span>Usou EPI</span></label><label><input type="checkbox" data-k="hemorragia-1"><span>Identificou o tipo de hemorragia</span></label><label><input type="checkbox" data-k="hemorragia-2"><span>Compressão direta efetiva e mantida</span></label><label><input type="checkbox" data-k="hemorragia-3"><span>Checou a perfusão depois do curativo</span></label><label><input type="checkbox" data-k="hemorragia-4"><span>Torniquete no lugar certo com hora anotada</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Torniquete: onde aplicar</div><div data-w="hemo"></div></div>
+<div class="vids"><div><div class="yt" data-id="gqgguKRpbQQ" role="button" aria-label="Assistir: Controle de hemorragias externas (aula prática)"><img loading="lazy" src="https://i.ytimg.com/vi/gqgguKRpbQQ/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Controle de hemorragias externas (aula prática) · <a href="https://www.youtube.com/watch?v=gqgguKRpbQQ" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="feridas">
+<div class="st-top"><div class="st-num">13</div><div><span class="tag">Trauma</span><h2>Ferimentos especiais</h2><p class="sub">Objeto encravado, evisceração, amputação, tórax aberto, olho e dente.</p></div></div>
+<div class="cena"><b>Na prova:</b> O avaliador mostra um "objeto" preso na perna ou uma "amputação de dedo" de mentira.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Objeto encravado: NÃO retire. Estabilize com rolos de pano dos dois lados e enfaixe por cima dos rolos.</span><span class="say">"Objeto encravado: estabilizando no lugar."</span><span class="det">Retirar pode causar hemorragia. Exceção: objeto na bochecha que obstrui a via aérea.</span></li>
+<li><span class="act">Evisceração (órgão para fora do abdome): não empurre de volta. Cubra com pano limpo umedecido (soro ou água limpa).</span><span class="say">"Cobrindo vísceras com compressa úmida."</span><span class="det">Joelhos dobrados (relaxa o abdome), nada pela boca, 192.</span></li>
+<li><span class="act">Amputação: comprima o coto (torniquete se não parar). A parte: envolva em pano limpo, coloque num saco plástico fechado e o saco dentro de um recipiente com gelo e água.</span><span class="say">"Parte amputada protegida, sem contato direto com o gelo."</span><span class="det">Gelo direto queima o tecido. Leve junto com a vítima.</span></li>
+<li><span class="act">Ferida aberta no tórax (som de ar "chupando"): curativo de 3 pontas.</span><span class="say">"Curativo de três pontas."</span><span class="det">Plástico sobre a ferida, fita em 3 lados: o lado solto deixa o ar sair. (A AHA 2024 aceita também deixar exposta ou com curativo não oclusivo; responda o que a aula ensinou.)</span></li>
+<li><span class="act">Objeto ou corpo estranho no olho: não esfregue, não tire objeto cravado. Cubra os DOIS olhos levemente.</span><span class="say">"Cobrindo os dois olhos."</span><span class="det">Os olhos se movem juntos. Produto químico: lave com água corrente por 15–20 min do canto interno para o externo.</span></li>
+<li><span class="act">Dente arrancado: segure pela coroa (não pela raiz), não esfregue; coloque no leite ou soro e vá ao dentista em até 1 h.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Arrancar objeto encravado</li><li>Recolocar vísceras</li><li>Parte amputada direto no gelo</li><li>Esfregar o olho</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="feridas-0"><span>Estabilizou sem remover</span></label><label><input type="checkbox" data-k="feridas-1"><span>Protegeu órgão/parte com a técnica certa</span></label><label><input type="checkbox" data-k="feridas-2"><span>Acionou 192</span></label></div>
+</div>
+</section>
+<section class="st" id="fratura">
+<div class="st-top"><div class="st-num">14</div><div><span class="tag">Trauma</span><h2>Fratura, luxação e entorse</h2><p class="sub">Imobilize como encontrou, pegando as articulações acima e abaixo. PMS antes e depois.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Queda de bicicleta com deformidade no antebraço." Você recebe talas (papelão, revista, madeira) e ataduras.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Abertura + XABCDE. Fratura de membro raramente mata: não pule o A, B e C por causa dela.</span></li>
+<li><span class="act">Exponha a região (corte a roupa) e retire anéis, relógio, pulseiras.</span><span class="say">"Retirando adornos antes do inchaço."</span></li>
+<li><span class="act">Cheque o PMS abaixo da lesão: Pulso, Motricidade (mexe os dedos?) e Sensibilidade (sente meu toque?).</span><span class="say">"PMS presente: pulso radial, mexe e sente os dedos."</span><span class="det">Sem pulso, dedo roxo ou frio → urgência vascular: avise o 192.</span></li>
+<li><span class="act">Fratura exposta: cubra a ferida com pano limpo, controle o sangramento ao redor do osso (sem comprimir em cima dele).</span><span class="say">"Fratura exposta: cobrindo com compressa limpa."</span><span class="det">Nunca empurre o osso para dentro.</span></li>
+<li><span class="act">Imobilize na posição em que encontrou. Não tente alinhar nem "colocar no lugar".</span><span class="say">"Imobilizando na posição encontrada."</span><span class="det">Um ajudante segura o membro acima e abaixo da lesão enquanto você posiciona a tala.</span></li>
+<li><span class="act">Tala acolchoada que pegue a articulação acima e a abaixo da fratura.</span><span class="say">"Tala do cotovelo até o punho e a mão."</span><span class="det">Luxação (osso fora da articulação): imobilize a articulação + os ossos acima e abaixo. Amarre fora do local da lesão, nós do lado da tala.</span></li>
+<li><span class="act">Membro superior: tipoia (braço junto ao corpo, mão um pouco acima do cotovelo) + faixa prendendo o braço ao tronco.</span><span class="say">"Tipoia e fixação ao tronco."</span></li>
+<li><span class="act">Reavalie o PMS depois de imobilizar. Piorou? Afrouxe.</span><span class="say">"PMS após imobilização: preservado."</span></li>
+<li><span class="act">Gelo envolto em pano 15–20 min (fratura fechada, entorse, contusão) e eleve se não doer.</span><span class="det">Entorse: saiu e voltou (dor, inchaço). Luxação: saiu e ficou fora (deformidade). Fratura: quebra do osso.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Puxar ou recolocar o osso no lugar</li><li>Tala curta que não pega as duas articulações</li><li>Amarrar em cima da fratura</li><li>Esquecer de checar o PMS depois</li><li>Gelo direto na pele ou em fratura exposta</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="fratura-0"><span>Checou PMS antes e depois</span></label><label><input type="checkbox" data-k="fratura-1"><span>Imobilizou na posição encontrada</span></label><label><input type="checkbox" data-k="fratura-2"><span>Tala pegando articulação acima e abaixo</span></label><label><input type="checkbox" data-k="fratura-3"><span>Acolchoou e amarrou fora da lesão</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Onde vai a tala</div><div data-w="tala"></div></div>
+<div class="vids"><div><div class="yt" data-id="kagsXHq-7mY" role="button" aria-label="Assistir: Imobilização de membros: fratura, entorse ou luxação"><img loading="lazy" src="https://i.ytimg.com/vi/kagsXHq-7mY/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Imobilização de membros: fratura, entorse ou luxação · <a href="https://www.youtube.com/watch?v=kagsXHq-7mY" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="AgXeR6uJmMU" role="button" aria-label="Assistir: Imobilizar fratura de antebraço (com material improvisado)"><img loading="lazy" src="https://i.ytimg.com/vi/AgXeR6uJmMU/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Imobilizar fratura de antebraço (com material improvisado) · <a href="https://www.youtube.com/watch?v=AgXeR6uJmMU" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="tce">
+<div class="st-top"><div class="st-num">15</div><div><span class="tag">Trauma</span><h2>Trauma de crânio (TCE)</h2><p class="sub">Todo TCE é também suspeita de lesão de coluna. Monitore a consciência.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Ciclista bateu a cabeça, está confuso e com sangue saindo do ouvido."</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Abertura e estabilização manual da cabeça desde o início.</span><span class="say">"TCE: tratando também como trauma de coluna."</span></li>
+<li><span class="act">XABCDE, com atenção à via aérea: vômito é comum.</span><span class="det">Se vomitar: vire em bloco (com ajuda), mantendo cabeça-pescoço-tronco alinhados.</span></li>
+<li><span class="act">Nível de consciência (AVDI/Glasgow) e pupilas; repita a cada poucos minutos.</span><span class="say">"Glasgow 13, pupilas isocóricas. Reavaliando."</span><span class="det">Piorar = grave: avise o 192. Anisocoria = lesão cerebral grave.</span></li>
+<li><span class="act">Pergunte (à vítima ou testemunhas): desmaiou? por quanto tempo? lembra do que aconteceu?</span><span class="say">"Perdeu a consciência por quanto tempo?"</span></li>
+<li><span class="act">Sangramento no couro cabeludo: compressão leve. Se houver afundamento, comprima só ao redor.</span><span class="det">Couro cabeludo sangra muito, mas a pressão sobre fratura pode empurrar fragmentos.</span></li>
+<li><span class="act">Sangue ou líquido claro saindo do ouvido/nariz: NÃO tampe. Gaze frouxa só para absorver.</span><span class="say">"Otorragia: não vou tamponar."</span><span class="det">Pode ser liquor (fratura de base de crânio). Sinais tardios: olhos roxos (guaxinim) e roxo atrás da orelha (Battle).</span></li>
+<li><span class="act">Capacete: deixe na cabeça, a não ser que impeça abrir a via aérea ou fazer RCP.</span><span class="det">A retirada é técnica de 2 socorristas (ver estação TRM).</span></li>
+<li><span class="act">Nada pela boca, aqueça, 192.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Soltar a cabeça</li><li>Tampar o ouvido que sangra</li><li>Deixar a vítima dormir sem monitorar</li><li>Dar água ou analgésico</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="tce-0"><span>Estabilizou a cervical</span></label><label><input type="checkbox" data-k="tce-1"><span>Avaliou e REAVALIOU consciência e pupilas</span></label><label><input type="checkbox" data-k="tce-2"><span>Não tamponou otorragia</span></label><label><input type="checkbox" data-k="tce-3"><span>Acionou 192</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Pupilas e Glasgow</div><div data-w="glasgow2"></div></div>
+</section>
+<section class="st" id="trm">
+<div class="st-top"><div class="st-num">16</div><div><span class="tag">Trauma</span><h2>Trauma de coluna (TRM): estabilização, colar e rolamento</h2><p class="sub">Não mexer é a regra. Se precisar mexer, mexe em bloco.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Mergulhou em água rasa", "caiu do telhado", "motociclista no chão com capacete". Estação com 2 a 4 socorristas.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Fale com a vítima antes de tocar: pela frente, para ela não virar a cabeça.</span><span class="say">"Não mexa a cabeça. Vou segurar para você."</span></li>
+<li><span class="act">Estabilização manual: ajoelhe atrás da cabeça, mãos espalmadas dos dois lados (dedos abertos sobre as orelhas, polegares perto da mandíbula), cabeça em posição neutra.</span><span class="say">"Cervical estabilizada em posição neutra."</span><span class="det">Se ao alinhar houver dor, resistência ou formigamento, pare e imobilize como está. Essa mão só sai quando a prancha e os blocos estiverem prontos.</span></li>
+<li><span class="act">Sinais de lesão: dor na nuca/costas, formigamento, fraqueza ou paralisia, perda de urina, priapismo, respiração só abdominal.</span><span class="say">"Refere formigamento nas mãos: suspeita de TRM cervical."</span><span class="det">Cheque PMS nos 4 membros e informe.</span></li>
+<li><span class="act">Colar cervical: meça com os dedos a distância do ombro (trapézio) ao ângulo da mandíbula e escolha/ajuste o tamanho.</span><span class="say">"Medindo e ajustando o colar."</span><span class="det">Passe a parte de trás sob o pescoço sem levantar a cabeça, encaixe a frente no queixo e feche. Um socorrista mantém a cabeça o tempo todo.</span></li>
+<li><span class="act">Rolamento em bloco 90°: o da cabeça é o líder e comanda.</span><span class="say">"No três, rolamos para o meu lado: um, dois, TRÊS."</span><span class="det">Socorrista 2: mãos no ombro e no quadril. Socorrista 3: no quadril e nas pernas (braços cruzados com os do 2). Braços da vítima junto ao corpo.</span></li>
+<li><span class="act">Com a vítima de lado: inspecione as costas, posicione a prancha e, no comando, desça em bloco.</span><span class="say">"Dorso sem lesões, prancha posicionada, descendo no três."</span><span class="det">Depois: centralize na prancha em bloco (movimentos em "Z"), tirantes (tronco antes da cabeça) e blocos laterais.</span></li>
+<li><span class="act">Capacete (só se precisar da via aérea ou RCP): 2 socorristas.</span><span class="say">"Eu estabilizo, você solta a jugular."</span><span class="det">1: segura o capacete pelos lados, estabilizando. 2: solta a jugular, põe uma mão na mandíbula e outra na nuca (occipital) e assume. 1: abre o capacete para os lados e tira com báscula (inclina para passar o nariz, depois a nuca). 1 reassume a cabeça.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Pedir para a vítima mexer o pescoço "para ver se dói"</li><li>Soltar a cabeça para ajudar no rolamento</li><li>Rolar sem comando ("cada um no seu tempo")</li><li>Tirar o capacete sozinho</li><li>Posição lateral de segurança em suspeita de TRM</li><li>Elevar as pernas</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="trm-0"><span>Estabilização manual mantida o tempo todo</span></label><label><input type="checkbox" data-k="trm-1"><span>Colar medido e colocado sem mover a cabeça</span></label><label><input type="checkbox" data-k="trm-2"><span>Líder na cabeça comandando</span></label><label><input type="checkbox" data-k="trm-3"><span>Rolamento sincronizado e inspeção do dorso</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Rolamento em bloco (vista de cima)</div><div data-w="rolamento"></div></div>
+<div class="vids"><div><div class="yt" data-id="jvUysMg_-PE" role="button" aria-label="Assistir: Estabilização manual da cervical"><img loading="lazy" src="https://i.ytimg.com/vi/jvUysMg_-PE/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Estabilização manual da cervical · <a href="https://www.youtube.com/watch?v=jvUysMg_-PE" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="u01Nlr4ZtP8" role="button" aria-label="Assistir: Como colocar o colar cervical"><img loading="lazy" src="https://i.ytimg.com/vi/u01Nlr4ZtP8/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Como colocar o colar cervical · <a href="https://www.youtube.com/watch?v=u01Nlr4ZtP8" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="WCPslIguCk8" role="button" aria-label="Assistir: Rolamento 90° com 2 a 4 socorristas"><img loading="lazy" src="https://i.ytimg.com/vi/WCPslIguCk8/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Rolamento 90° com 2 a 4 socorristas · <a href="https://www.youtube.com/watch?v=WCPslIguCk8" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="6yzjqA1Moxo" role="button" aria-label="Assistir: Retirada de capacete com a vítima deitada"><img loading="lazy" src="https://i.ytimg.com/vi/6yzjqA1Moxo/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Retirada de capacete com a vítima deitada · <a href="https://www.youtube.com/watch?v=6yzjqA1Moxo" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="queimadura">
+<div class="st-top"><div class="st-num">17</div><div><span class="tag">Trauma</span><h2>Queimadura e choque elétrico</h2><p class="sub">Água corrente fria por 10–20 min. No elétrico, desligue antes de tocar.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Derramou água fervente no braço" ou "levou choque mexendo na tomada e está caído".</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Interrompa a queimadura: afaste da fonte. Roupa em chamas: PARE, DEITE e ROLE (ou abafe com cobertor).</span><span class="say">"Pare, deite e role!"</span></li>
+<li><span class="act">Água corrente fria (não gelada) por 10–20 min.</span><span class="say">"Resfriando com água corrente por 20 minutos."</span><span class="det">Sem gelo, pasta de dente, manteiga, pó de café.</span></li>
+<li><span class="act">Retire anéis, relógio e roupas soltas da área. Roupa grudada: não puxe, corte ao redor.</span></li>
+<li><span class="act">Não estoure bolhas. Cubra com pano limpo, úmido, ou filme plástico, sem apertar.</span><span class="say">"Cobrindo com compressa limpa."</span></li>
+<li><span class="act">Calcule a extensão (regra dos nove; palma da vítima ≈ 1%) e identifique áreas graves.</span><span class="say">"2º grau, cerca de 9% (um braço): 192."</span><span class="det">Graves em qualquer tamanho: face, mãos, pés, genitais, períneo, grandes articulações, circunferenciais, elétricas, químicas, crianças e idosos. Rosto com fuligem/rouquidão = via aérea queimada.</span></li>
+<li><span class="act">Química: pó → escove a seco primeiro; líquido → água corrente por ≥ 20 min, tirando a roupa contaminada (com luvas).</span><span class="say">"Pó químico: retirando a seco antes de lavar."</span></li>
+<li><span class="act">Choque elétrico: desligue o disjuntor ANTES de tocar. Fio de alta tensão: longe, 193.</span><span class="say">"Desligando a energia antes de tocar."</span><span class="det">Sem desligar: afaste o fio com material seco e não condutor (cabo de vassoura de madeira), em cima de algo seco.</span></li>
+<li><span class="act">Depois: avalie e trate como trauma (pode ter caído). Não respira → RCP + DEA. Toda vítima de choque elétrico vai para avaliação.</span><span class="det">Marca pequena por fora, lesão grande por dentro; risco de arritmia.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Gelo</li><li>Estourar bolhas</li><li>Pasta de dente, manteiga, borra de café</li><li>Arrancar roupa grudada</li><li>Tocar na vítima ainda em contato com a energia</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="queimadura-0"><span>Interrompeu o processo</span></label><label><input type="checkbox" data-k="queimadura-1"><span>Resfriou com água pelo tempo certo</span></label><label><input type="checkbox" data-k="queimadura-2"><span>Retirou adornos</span></label><label><input type="checkbox" data-k="queimadura-3"><span>Garantiu a segurança no elétrico</span></label></div>
+</div>
+</section>
+<section class="st" id="afogamento">
+<div class="st-top"><div class="st-num">18</div><div><span class="tag">Trauma</span><h2>Afogamento</h2><p class="sub">Não vire a segunda vítima. Fora da água, a falta de oxigênio é o problema: ventile.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Banhista puxado da piscina, não respira."</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Na água: jogue algo que flutue ou estenda algo (vara, toalha). Não entre se não for treinado.</span><span class="say">"Pega a boia!"</span><span class="det">"Jogue, não vá."</span></li>
+<li><span class="act">Fora da água: deite de barriga para cima em lugar seco, longe da borda.</span><span class="det">Mergulho em água rasa = trate como TRM.</span></li>
+<li><span class="act">Não respira: 192, abra a via aérea e faça 5 ventilações iniciais, depois RCP 30:2.</span><span class="say">"Cinco ventilações de resgate, depois 30 por 2."</span><span class="det">Recomendação de afogamento (SOBRASA e Conselho Europeu). Aqui não se faz só compressão: o problema é o oxigênio.</span></li>
+<li><span class="act">Não tente tirar água dos pulmões (nada de compressão abdominal).</span><span class="det">Ineficaz e provoca vômito com aspiração.</span></li>
+<li><span class="act">Vomitou: vire de lado, limpe a boca e continue.</span></li>
+<li><span class="act">Respira e está inconsciente: posição lateral (lado direito), aqueça, 192.</span><span class="det">Todo afogado que precisou de ajuda vai para avaliação médica (piora horas depois).</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Entrar na água sem treino</li><li>Heimlich para "tirar a água"</li><li>Só compressões sem ventilar</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="afogamento-0"><span>Segurança do socorrista</span></label><label><input type="checkbox" data-k="afogamento-1"><span>5 ventilações iniciais</span></label><label><input type="checkbox" data-k="afogamento-2"><span>RCP correta</span></label><label><input type="checkbox" data-k="afogamento-3"><span>Aquecimento e 192</span></label></div>
+</div>
+</section>
+<section class="st" id="intox">
+<div class="st-top"><div class="st-num">19</div><div><span class="tag">Clínico</span><h2>Intoxicação e animais peçonhentos</h2><p class="sub">Afaste da fonte, nada de receita caseira e ligue para o CIATox ou 192.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Criança bebeu produto de limpeza" ou "picada de cobra no pé durante a trilha".</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Segurança primeiro: gás, fumaça, produto químico ou animal ainda por perto.</span><span class="say">"Afastando a vítima do ambiente contaminado."</span><span class="det">Produto desconhecido / caminhão tombado: fique longe, com o vento nas costas, 193.</span></li>
+<li><span class="act">Ingestão: não provoque vômito, não dê leite. Guarde a embalagem e ligue para o CIATox (0800 722 6001) ou 192.</span><span class="say">"Não vou provocar vômito. Guardando a embalagem."</span><span class="det">Inconsciente: lateral e cheque a respiração.</span></li>
+<li><span class="act">Pele/olhos: pó → retire a seco; líquido → água corrente abundante; tire a roupa contaminada com luvas.</span></li>
+<li><span class="act">Cobra: lave com água e sabão, vítima deitada e quieta, membro elevado (como a aula ensina), hospital.</span><span class="say">"Sem torniquete, sem cortar, sem chupar."</span><span class="det">Tente lembrar como era a cobra (não precisa capturar). Soro só no hospital.</span></li>
+<li><span class="act">Escorpião: lave e use compressa MORNA (alivia a dor); hospital, principalmente criança.</span><span class="say">"Escorpião: compressa morna."</span></li>
+<li><span class="act">Abelha: raspe o ferrão com cartão ou unha (não pince). Falta de ar ou inchaço no rosto = anafilaxia → 192.</span></li>
+<li><span class="act">Água-viva: tire da água, lave com vinagre (ou água do mar), retire tentáculos com pinça ou luva.</span><span class="det">Nada de água doce, álcool ou urina.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Provocar vômito ou dar leite</li><li>Torniquete, corte ou sucção na picada</li><li>Gelo no escorpião</li><li>Pinçar o ferrão da abelha</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="intox-0"><span>Segurança da cena</span></label><label><input type="checkbox" data-k="intox-1"><span>Guardou a embalagem / identificou o animal</span></label><label><input type="checkbox" data-k="intox-2"><span>Evitou as condutas proibidas</span></label><label><input type="checkbox" data-k="intox-3"><span>Acionou CIATox/192</span></label></div>
+</div>
+</section>
+<section class="st" id="parto">
+<div class="st-top"><div class="st-num">20</div><div><span class="tag">Parto</span><h2>Parto de emergência</h2><p class="sub">O socorrista auxilia; quem faz o parto é a mãe. Calma, higiene e aquecimento.</p></div></div>
+<div class="cena"><b>Na prova:</b> Manequim de parto ou colega encenando. "Gestante com contrações fortes diz que o bebê está saindo."</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Abertura: cena, EPI (luvas e, se tiver, avental e óculos), identifique-se e peça permissão.</span><span class="say">"Sou socorrista, posso ajudar? Vou acionar o 192."</span><span class="det">Líquido amniótico também é fluido infeccioso.</span></li>
+<li><span class="act">Entrevista rápida: nome e idade, quantas gestações (1º filho?), pré-natal, semanas, intervalo e duração das contrações, bolsa rompeu? cor do líquido? vontade de evacuar ou de fazer força?</span><span class="say">"Contrações a cada 2 minutos, bolsa rota com líquido claro, sente vontade de fazer força."</span><span class="det">Líquido esverdeado ou com cheiro forte = avise o 192.</span></li>
+<li><span class="act">Parto iminente? Vontade forte de evacuar, sensação do bebê saindo e COROAMENTO (cabeça aparece e não volta).</span><span class="say">"Coroamento visível: parto iminente, não dá tempo de transportar."</span><span class="det">Sem isso, prefira o transporte para a maternidade.</span></li>
+<li><span class="act">Prepare: local limpo, panos limpos sob o quadril, posição ginecológica (de costas, joelhos dobrados e afastados), cubra para preservar a privacidade.</span><span class="say">"Preparando o campo com panos limpos."</span><span class="det">Separe: panos, cobertor, barbante/fio dental, tesoura limpa, saco para a placenta.</span></li>
+<li><span class="act">Na contração, oriente fazer força como se fosse evacuar; entre as contrações, descansar e respirar.</span><span class="say">"Na contração, força! Agora descansa."</span></li>
+<li><span class="act">Saindo a cabeça: apoie com a mão espalmada, sem puxar e sem empurrar de volta.</span><span class="say">"Apoiando o polo cefálico."</span><span class="det">Cuidado com a moleira (fontanela).</span></li>
+<li><span class="act">Cordão enrolado no pescoço e frouxo: passe por cima da cabeça.</span><span class="say">"Circular de cordão frouxa: desfazendo."</span></li>
+<li><span class="act">Ombros saem um de cada vez; segure firme (o bebê é escorregadio) e anote a hora do nascimento.</span><span class="say">"Nascimento às 14h32."</span><span class="det">Nunca puxe pelo braço ou pela cabeça. Saiu braço, perna ou nádegas primeiro: não puxe, transporte urgente.</span></li>
+<li><span class="act">Recém-nascido: seque, estimule (esfregue as costas e a planta dos pés), aqueça, veja se chora/respira. Mantenha no nível da mãe até amarrar o cordão; depois, pele a pele sobre o abdome dela.</span><span class="say">"RN chorando, ativo, secando e aquecendo."</span><span class="det">Não chora, não respira nem se mexe: clampeie logo e comece a reanimação do RN (ventilação).</span></li>
+<li><span class="act">Cordão: espere 1–3 min, amarre a 10–15 cm do bebê, 2ª amarra 3–4 cm depois e corte entre as duas.</span><span class="say">"Clampeamento após um a três minutos."</span><span class="det">Sem material limpo para cortar? Só amarre e deixe sem cortar.</span></li>
+<li><span class="act">Placenta (dequitação): sai sozinha em até ~30 min. Não puxe o cordão. Guarde num saco e leve junto.</span><span class="say">"Dequitação: placenta íntegra, acondicionada para o hospital."</span><span class="det">O parto só termina com a saída da placenta.</span></li>
+<li><span class="act">Massagem uterina acima do púbis, em círculos, até o útero ficar firme; bebê no peito ajuda.</span><span class="say">"Massagem uterina."</span><span class="det">Absorvente/pano entre as pernas. Leve mãe, bebê e placenta ao hospital.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Puxar o bebê, o cordão ou a placenta</li><li>Mandar a mãe "segurar" o parto ou fechar as pernas</li><li>Cortar o cordão com instrumento sujo</li><li>Deixar o bebê molhado e descoberto</li><li>Fazer parto pélvico ou com o bebê atravessado (transporte)</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="parto-0"><span>EPI e privacidade</span></label><label><input type="checkbox" data-k="parto-1"><span>Entrevista com as perguntas-chave</span></label><label><input type="checkbox" data-k="parto-2"><span>Reconheceu parto iminente</span></label><label><input type="checkbox" data-k="parto-3"><span>Apoiou a cabeça sem puxar</span></label><label><input type="checkbox" data-k="parto-4"><span>Cuidados com o RN: secar, aquecer, avaliar</span></label><label><input type="checkbox" data-k="parto-5"><span>Clampeamento e placenta corretos</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Fases do parto e cordão</div><div data-w="parto"></div></div>
+<div class="vids"><div><div class="yt" data-id="b1KlVpdZMJs" role="button" aria-label="Assistir: O que fazer se o bebê nascer em casa"><img loading="lazy" src="https://i.ytimg.com/vi/b1KlVpdZMJs/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">O que fazer se o bebê nascer em casa · <a href="https://www.youtube.com/watch?v=b1KlVpdZMJs" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="ULe80He2JVM" role="button" aria-label="Assistir: Bombeiros demonstram parto de emergência"><img loading="lazy" src="https://i.ytimg.com/vi/ULe80He2JVM/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Bombeiros demonstram parto de emergência · <a href="https://www.youtube.com/watch?v=ULe80He2JVM" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
+</section>
+<section class="st" id="start">
+<div class="st-top"><div class="st-num">21</div><div><span class="tag">Trauma</span><h2>Múltiplas vítimas: START</h2><p class="sub">Triagem em menos de 60 s por vítima. Anda? Respira? Perfunde? Obedece?</p></div></div>
+<div class="cena"><b>Na prova:</b> Várias vítimas com cartões. O avaliador pede a cor de cada uma.</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Quem consegue andar, sai andando para um ponto.</span><span class="say">"Quem conseguir andar, vá até a árvore!"</span><span class="det">Todas as que andam = VERDE.</span></li>
+<li><span class="act">Não anda: respira? Não → abra a via aérea. Continua sem respirar = PRETA. Voltou = VERMELHA.</span><span class="say">"Não respira... abrindo via aérea... voltou: vermelha."</span></li>
+<li><span class="act">Respira: FR acima de 30 = VERMELHA.</span></li>
+<li><span class="act">Enchimento capilar acima de 2 s (ou sem pulso radial) = VERMELHA.</span><span class="det">Hemorragia grave: só compressão rápida ou peça para alguém segurar, e siga.</span></li>
+<li><span class="act">Não obedece a comandos simples = VERMELHA. Obedece = AMARELA.</span><span class="say">"Aperte minha mão." → "Amarela."</span><span class="det">Macete "30 · 2 · pode fazer".</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Parar para fazer RCP numa vítima de múltiplas vítimas (preta)</li><li>Gastar mais de 1 minuto por vítima</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="start-0"><span>Sequência certa</span></label><label><input type="checkbox" data-k="start-1"><span>Cores corretas</span></label><label><input type="checkbox" data-k="start-2"><span>Rapidez</span></label></div>
+</div>
+<div class="wbox"><div class="wt">Treino de START: qual a cor?</div><div data-w="start"></div></div>
+</section>
+<section class="st" id="transporte">
+<div class="st-top"><div class="st-num">22</div><div><span class="tag">Trauma</span><h2>Remoção e transporte improvisado</h2><p class="sub">Só remova se houver perigo. Se remover, proteja a cabeça.</p></div></div>
+<div class="cena"><b>Na prova:</b> "Fogo se aproximando: retire a vítima daqui" ou "ajude o colega torcido a chegar ao carro".</div>
+<div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
+<ol class="steps">
+<li><span class="act">Só mova a vítima se houver perigo imediato (fogo, desabamento, trânsito) ou para fazer RCP.</span><span class="say">"Risco de incêndio: remoção de emergência."</span></li>
+<li><span class="act">Arrasto de emergência: segure pelas roupas dos ombros ou pelas axilas, apoiando a cabeça nos antebraços, puxe no eixo do corpo.</span><span class="det">Nunca puxe para os lados. Cobertor sob a vítima facilita.</span></li>
+<li><span class="act">Vítima consciente que anda: apoio lateral (braço dela sobre seus ombros, você segura na cintura).</span></li>
+<li><span class="act">Cadeirinha de 2 socorristas (mãos entrelaçadas) para quem não apoia o pé, sem suspeita de coluna.</span><span class="say">"Cadeirinha: no três, levantamos."</span><span class="det">Levante com as pernas, costas retas.</span></li>
+<li><span class="act">Suspeita de coluna e sem perigo: não remova. Espere a equipe com prancha.</span></li>
+</ol>
+<div class="cols">
+<div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Remover sem necessidade</li><li>Dobrar ou torcer o tronco da vítima</li><li>Levantar peso com as costas</li></ul></div>
+<div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="transporte-0"><span>Justificou a remoção</span></label><label><input type="checkbox" data-k="transporte-1"><span>Técnica adequada ao caso</span></label><label><input type="checkbox" data-k="transporte-2"><span>Protegeu cabeça e coluna</span></label></div>
+</div>
+</section>
+
+<div class="sec-h" id="simulado"><h2>Simulado de cenas</h2><p>Escolha uma cena e decida o próximo passo. Cada escolha vem comentada.</p></div>
+<div data-w="casos"></div>
+
+<div class="sec-h"><h2>Números e valores para ter na ponta da língua</h2></div>
+<ul class="true-list">
+<li><b>SAMU 192</b> · Bombeiros 193 · PM 190 · CIATox 0800 722 6001</li>
+<li>RCP: <b>100–120/min</b>, <b>5–6 cm</b> (adulto), 30:2, troca a cada 2 min</li>
+<li>Criança ~5 cm · bebê ~4 cm · 15:2 com 2 profissionais</li>
+<li>Checar respiração: até <b>10 s</b></li>
+<li>Engasgo: <b>5 costas + 5 abdominais</b> (bebê: 5 costas + 5 peito)</li>
+<li>Convulsão: 192 se <b>&gt; 5 min</b></li>
+<li>Hipoglicemia: &lt; 70 mg/dL, reavaliar em <b>15 min</b></li>
+<li>PA normal &lt; 130/85 · HAS ≥ 140/90 · crise ≥ 180/120</li>
+<li>FR adulto 12–20 (aula 12–22) · FC 60–100 (aula 60–80)</li>
+<li>Enchimento capilar normal &lt; <b>2 s</b></li>
+<li>Glasgow 3–15 · grave ≤ 8</li>
+<li>Queimadura: água <b>10–20 min</b> · química ≥ 20 min</li>
+<li>Torniquete: <b>5–7 cm</b> acima, anotar a hora</li>
+<li>Cordão: esperar <b>1–3 min</b>, amarras a 10–15 cm e +3–4 cm</li>
+<li>Placenta: até ~<b>30 min</b></li>
+<li>START: FR &gt; 30, enchimento &gt; 2 s, não obedece = vermelha</li>
+</ul>
+
+<p class="foot">Baseado no conteúdo da disciplina (slides e caderno) e nas diretrizes AHA 2025 (RCP e engasgo) e AHA/Cruz Vermelha 2024 (primeiros socorros). Onde a aula e a diretriz divergem, a estação avisa; na prova, siga o que o professor ensinou. Vídeos de canais do YouTube, abertos aqui só para consulta.</p>
+</main>
+<script>// ---------- Simulado de cenas (ramificado) ----------
+window.CASOS = [
+ {t:'Caiu na academia', cena:'Homem de 50 anos cai ao lado da esteira. Você chega primeiro. Ele está de barriga para cima, olhos fechados.', passos:[
+  ['O que você faz primeiro?', [['Começo as compressões imediatamente',0,'Antes de tudo: cena segura e EPI. Sem isso, perde ponto e pode virar vítima.'],['Avalio a cena e coloco luvas',1,'Isso. "Cena segura, EPI."'],['Ligo para o 192',0,'Ainda não sabe o que ligar para dizer. Primeiro cena/EPI, depois responsividade.']]],
+  ['Ele não responde ao toque nos ombros. Agora?', [['Grito por ajuda, aponto alguém para ligar 192 e trazer o DEA',1,'Exato. Pedido direcionado.'],['Checo o pulso por 30 s',0,'Muito tempo. Leigo nem checa pulso; profissional, até 10 s junto com a respiração.'],['Faço duas ventilações',0,'Ainda não checou a respiração.']]],
+  ['O tórax não se mexe; a cada 10 s ele dá um "suspiro" forte. Isso é:', [['Respiração: coloco em posição lateral',0,'É gasping (respiração agônica). Não é respiração eficaz.'],['Gasping: inicio RCP',1,'Correto. Gasping = parada. Comprima.']]],
+  ['O DEA chegou durante as compressões. Qual a sequência?', [['Paro tudo, colo as pás e espero',0,'O colega deve continuar comprimindo enquanto você cola as pás. Pare só na análise.'],['Ligo, colo as pás com as compressões seguindo, "afastem-se" na análise e no choque, e volto a comprimir logo depois',1,'Perfeito. Depois do choque, nada de checar pulso: compressões por 2 min.'],['Checo o pulso antes de ligar o DEA',0,'Não. Ligue o DEA assim que chegar.']]]
+ ]},
+ {t:'Engasgo no restaurante', cena:'Senhora de 60 anos leva as mãos ao pescoço, não fala e não tosse.', passos:[
+  ['Primeira atitude?', [['Pergunto "está engasgada?" e começo 5 golpes nas costas',1,'AHA 2025: costas primeiro, depois 5 compressões abdominais, alternando.'],['Dou água para ajudar a descer',0,'Nunca. Pode piorar a obstrução.'],['Peço para ela tossir',0,'Ela já não consegue tossir: obstrução grave. Aja.']]],
+  ['Após 5 golpes nas costas, nada saiu. E agora?', [['Mais 5 golpes nas costas',0,'Alterne: agora 5 compressões abdominais.'],['5 compressões abdominais (punho entre umbigo e esterno, para dentro e para cima)',1,'Isso, e siga alternando 5 + 5.'],['Varredura com o dedo na boca',0,'Às cegas, nunca: empurra o objeto.']]],
+  ['Ela fica mole e perde a consciência.', [['Seguro de pé e continuo as compressões abdominais',0,'Inconsciente: deite no chão com cuidado e vá para a RCP.'],['Deito no chão, 192 e começo RCP pelas compressões; antes de ventilar olho a boca',1,'Correto.'],['Coloco em posição lateral e espero',0,'Ela não respira: precisa de RCP.']]]
+ ]},
+ {t:'Motociclista caído', cena:'Moto derrapou. Piloto de capacete, deitado de costas, fala com você e reclama de dor na nuca e formigamento nas mãos.', passos:[
+  ['Após cena e EPI, o que vem primeiro?', [['Tiro o capacete para ver melhor',0,'Ele fala (via aérea ok). Capacete só sai se impedir via aérea/RCP, e com 2 socorristas.'],['Falo pela frente para ele não mexer a cabeça e estabilizo a cervical com as mãos',1,'Isso. Coluna protegida desde o início.'],['Peço para ele mexer o pescoço para ver se dói',0,'Nunca. Pode lesar a medula.']]],
+  ['Ele está consciente, respirando. Como sigo?', [['XABCDE mantendo a cabeça, 192 e não movo',1,'Exato. Sem perigo, não remova.'],['Coloco em posição lateral de segurança',0,'PLS é proibida na suspeita de TRM.'],['Levanto as pernas dele para prevenir choque',0,'No TRM não se elevam as pernas.']]],
+  ['Começa a vazar gasolina e há fumaça. E agora?', [['Espero a equipe sem mexer',0,'Perigo imediato justifica remoção de emergência.'],['Remoção de emergência, puxando pelo eixo do corpo e protegendo a cabeça',1,'Correto: o risco de morte agora é maior que o risco da coluna.']]]
+ ]},
+ {t:'Aluno diabético confuso', cena:'Aluno diabético treinou em jejum, está suando frio, tremendo e falando enrolado, mas engole bem.', passos:[
+  ['Conduta?', [['Dou suco ou refrigerante comum e paro o treino',1,'Consciente e engole: açúcar rápido. Reavalie em 15 min.'],['Dou água e mando descansar',0,'Falta o açúcar.'],['Nada pela boca e 192',0,'Isso é para o inconsciente ou que não engole.']]],
+  ['15 min depois não melhorou e está ficando sonolento.', [['Mais açúcar à força',0,'Sonolento pode aspirar. Nada pela boca.'],['192, nada pela boca, posição lateral e monitoro a respiração',1,'Correto.']]]
+ ]},
+ {t:'Criança convulsionando', cena:'Criança de 6 anos se debatendo no chão perto de uma mesa de vidro.', passos:[
+  ['O que fazer?', [['Seguro os braços para ela não se machucar',0,'Nunca segure.'],['Ponho um pano na boca para não morder a língua',0,'Nada na boca.'],['Olho o relógio, afasto a mesa e protejo a cabeça',1,'Isso.']]],
+  ['A crise passa de 5 minutos.', [['Espero mais um pouco',0,'Mais de 5 min = 192.'],['Aciono 192 e lateralizo quando possível',1,'Correto.']]],
+  ['A crise parou. Ela respira e está sonolenta.', [['Dou água com açúcar',0,'Nada pela boca no pós-crise.'],['Posição lateral, fico ao lado e reavalio a respiração',1,'Correto. Sonolência é esperada (pós-ictal).']]]
+ ]},
+ {t:'Corte com vidro', cena:'Sangue vermelho vivo saindo em jato do antebraço.', passos:[
+  ['Tipo e primeira conduta?', [['Venosa; lavo com água',0,'Jato vermelho vivo = arterial. Pressão já.'],['Arterial; EPI e compressão direta firme',1,'Correto.'],['Arterial; torniquete já no ombro',0,'Primeiro a pressão direta (a não ser que seja maciça e você não consiga comprimir).']]],
+  ['O pano encharcou.', [['Troco por um limpo',0,'Tirar o primeiro arranca o coágulo.'],['Coloco outro por cima e mantenho a pressão',1,'Isso.']]],
+  ['Mesmo assim não para e ele fica pálido e frio.', [['Torniquete 5–7 cm acima da ferida, aperto até parar e anoto a hora',1,'Correto, e trate o choque: deite, aqueça, 192.'],['Afrouxo de 10 em 10 min',0,'Não afrouxe o torniquete.']]]
+ ]},
+ {t:'Bebê nascendo', cena:'Gestante no 2º filho, contrações a cada 2 min, diz que vai evacuar. Você vê a cabeça aparecendo e ela não volta.', passos:[
+  ['Isso indica:', [['Dá tempo de ir ao hospital',0,'Coroamento + vontade de evacuar = parto iminente.'],['Parto iminente: preparo o local e acompanho',1,'Correto. 192 enquanto prepara.']]],
+  ['A cabeça saiu.', [['Puxo com cuidado para ajudar',0,'Nunca puxe. Só apoie.'],['Apoio a cabeça e verifico se há cordão no pescoço',1,'Isso. Cordão frouxo: passe por cima da cabeça.']]],
+  ['O bebê nasceu chorando.', [['Corto o cordão na hora',0,'Espere 1–3 min (exceto se o bebê não respirar).'],['Seco, aqueço, mantenho no nível da mãe e clampeio após 1–3 min',1,'Correto.']]],
+  ['20 min depois a placenta ainda não saiu.', [['Puxo o cordão devagar',0,'Nunca puxe: pode romper ou inverter o útero.'],['Aguardo (até ~30 min), massagem uterina depois, e levo tudo ao hospital',1,'Correto.']]]
+ ]},
+ {t:'Fratura exposta', cena:'Ciclista caiu: osso aparecendo na perna, sangrando ao redor.', passos:[
+  ['Conduta com o osso?', [['Empurro de volta e imobilizo',0,'Nunca empurre o osso.'],['Cubro com pano limpo e controlo o sangramento ao redor',1,'Correto.']]],
+  ['Como imobilizar?', [['Alinho a perna antes da tala',0,'Imobilize na posição encontrada.'],['Na posição encontrada, tala pegando joelho e tornozelo, PMS antes e depois',1,'Correto.']]]
+ ]},
+ {t:'Boca torta', cena:'Senhor de 70 anos, há 20 min com a boca torta e o braço direito fraco, fala enrolada.', passos:[
+  ['O que é e o que fazer?', [['AVC: 192 e anoto a hora do início',1,'"Tempo é cérebro."'],['Pressão baixa: dou água com sal',0,'Sinais de AVC. Nada pela boca.'],['Hipoglicemia: dou açúcar',0,'Pode até checar a glicemia, mas boca torta + fraqueza de um lado + fala enrolada = AVC.']]],
+  ['Ele pede água.', [['Dou só um pouco',0,'A deglutição pode estar afetada: nada pela boca.'],['Explico que não pode beber agora',1,'Correto.']]]
+ ]},
+ {t:'Pressão 190/120', cena:'Aluna hipertensa com dor de cabeça; você mede 190/120 logo após o treino.', passos:[
+  ['Primeiro passo?', [['Dou o captopril de outro aluno',0,'Nunca dê remédio de outra pessoa.'],['Paro o treino, sento, repouso 5 min e meço de novo',1,'Isso.']]],
+  ['Segue 185/120, e ela diz que está formigando o braço esquerdo e a visão turvou.', [['Oriento procurar médico amanhã',0,'Sinais de alarme = emergência.'],['192, posição semissentada, monitoro',1,'Correto.']]]
+ ]},
+ {t:'Água fervente', cena:'Derrubou a panela: braço vermelho com bolhas, muita dor.', passos:[
+  ['Conduta?', [['Gelo direto',0,'Gelo piora a lesão.'],['Água corrente fria por 10–20 min, tiro anéis/relógio',1,'Correto.'],['Pasta de dente',0,'Nada caseiro.']]],
+  ['E as bolhas?', [['Estouro para aliviar',0,'Não estoure.'],['Mantenho e cubro com pano limpo e úmido',1,'Correto. 2º grau (bolhas).']]]
+ ]},
+ {t:'Desmaio na fila', cena:'Jovem desmaia na fila sob sol forte. Respira, sem trauma.', passos:[
+  ['Conduta?', [['Sento e dou água',0,'Inconsciente: nada pela boca, e deitado.'],['Deito, elevo as pernas, afrouxo roupas, tiro do sol',1,'Correto.']]],
+  ['Acordou em 30 s.', [['Levanto logo para ir embora',0,'Levante em etapas: deitado → sentado → em pé.'],['Fica deitada mais um pouco, depois senta, e investigo (comeu? doença?)',1,'Correto.']]]
+ ]}
+];
+
+// ---------- Fluxograma "o que faço primeiro" ----------
+window.FLUXO = {
+ ini:{q:'Chegou na cena. Ela é segura?', o:[['Sim, coloquei EPI','resp'],['Não (fogo, fio, trânsito, violência)','fim:insegura']]},
+ resp:{q:'A vítima responde ao chamado/toque?', o:[['Não responde','respira'],['Responde','fala']]},
+ respira:{q:'Peça ajuda + 192 + DEA. Ela respira normalmente (olhe o tórax até 10 s)?', o:[['Não respira ou só gasping','fim:rcp'],['Respira','trauma']]},
+ trauma:{q:'Houve trauma (queda, batida, mergulho)?', o:[['Sim','fim:xabcde'],['Não','fim:pls']]},
+ fala:{q:'O que está acontecendo?', o:[['Mãos no pescoço, não fala nem tosse','fim:engasgo'],['Sangramento forte','fim:hemorragia'],['Trauma com dor na nuca/costas','fim:trm'],['Dor no peito / boca torta / falta de ar','fim:clinicas'],['Suor frio, tremor, diabético','fim:hipo'],['Tonta, vai desmaiar','fim:desmaio'],['Deformidade num membro','fim:fratura'],['Queimadura','fim:queimadura'],['Trabalho de parto','fim:parto']]},
+};
+window.FIM = {
+ insegura:['Não entre. Acione 193/190 e sinalize.','abertura'],
+ rcp:['RCP 30:2 já + DEA assim que chegar.','rcp'],
+ xabcde:['Estabilize a cabeça e faça XABCDE. Não use PLS.','xabcde'],
+ pls:['Posição lateral de segurança e reavaliação contínua.','desmaio'],
+ engasgo:['5 golpes nas costas + 5 compressões abdominais.','engasgo'],
+ hemorragia:['Compressão direta firme (torniquete se não parar).','hemorragia'],
+ trm:['Não mexer: estabilização manual e colar.','trm'],
+ clinicas:['Repouso, posição certa, 192. Teste SAMU se suspeitar de AVC.','clinicas'],
+ hipo:['Engole? Açúcar. Não engole? Nada pela boca, 192.','hipo'],
+ desmaio:['Deite e eleve as pernas.','desmaio'],
+ fratura:['PMS, imobilize como encontrou, articulações acima e abaixo.','fratura'],
+ queimadura:['Água corrente fria 10–20 min, sem gelo.','queimadura'],
+ parto:['Entrevista, sinais de parto iminente, preparar o local.','parto']
+};
+
+// ---------- START ----------
+window.START = [
+ {d:'Homem andando com corte no braço, sangra pouco.', a:{anda:1}, c:'verde', w:'Anda = verde, não importa a lesão.'},
+ {d:'Mulher no chão, não respira. Você abre a via aérea e continua sem respirar.', a:{}, c:'preta', w:'Não respira mesmo após abrir a via aérea = preta.'},
+ {d:'Jovem no chão, não respirava; após abrir a via aérea, volta a respirar.', a:{}, c:'vermelha', w:'Voltou a respirar com a manobra = vermelha.'},
+ {d:'Não anda, respira com FR 36.', a:{}, c:'vermelha', w:'FR > 30 = vermelha.'},
+ {d:'Não anda, FR 22, enchimento capilar 4 s.', a:{}, c:'vermelha', w:'Enchimento > 2 s = vermelha.'},
+ {d:'Não anda (perna quebrada), FR 20, enchimento 1 s, aperta sua mão quando pedido.', a:{}, c:'amarela', w:'Passou em tudo, mas não anda = amarela.'},
+ {d:'Não anda, FR 18, enchimento 1 s, não obedece comandos.', a:{}, c:'vermelha', w:'Não obedece = vermelha.'},
+ {d:'Criança chorando, andando com a mãe.', a:{anda:1}, c:'verde', w:'Anda = verde.'}
+];
+</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg';
+function E(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function H(t,a,p,html){var e=document.createElement(t);if(a)for(var k in a){if(k==='cls')e.className=a[k];else e.setAttribute(k,a[k])}if(html!=null)e.innerHTML=html;if(p)p.appendChild(e);return e}
+function T(x,y,s,a,p){var t=E('text',Object.assign({x:x,y:y},a||{}),p);t.textContent=s;return t}
+var OR='#ff6b1a',RED='#d92d20',INK='#1f2328',MUT='#6b7280',SK='#f3c9a8',SK2='#e2ad87',BL='#2563eb',GR='#16a34a';
+var AC=null;function beep(f,d,v){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();var o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f||880;g.gain.value=v||.15;o.connect(g);g.connect(AC.destination);var t=AC.currentTime;g.gain.setValueAtTime(v||.15,t);g.gain.exponentialRampToValueAtTime(.0001,t+(d||.06));o.start(t);o.stop(t+(d||.06)+.02)}catch(e){}}
+function vib(ms){try{navigator.vibrate&&navigator.vibrate(ms)}catch(e){}}
+function seg(box,opts,cb,on){var s=H('div',{cls:'seg'},box);opts.forEach(function(o,i){var b=H('button',{type:'button'},s,o[1]);if(i===(on||0))b.classList.add('on');b.onclick=function(){[].forEach.call(s.children,function(c){c.classList.remove('on')});b.classList.add('on');cb(o[0])}});return s}
+var W={};
+
+// ===== RCP: metrônomo + animação + teste de ritmo =====
+W.rcp=function(box){
+ var M={adulto:{d:'5–6 cm',mao:'2 mãos entrelaçadas',dep:1,r:'30:2'},crianca:{d:'~5 cm (1/3 do tórax)',mao:'1 ou 2 mãos',dep:.85,r:'30:2 (15:2 com 2 profissionais)'},bebe:{d:'~4 cm (1/3 do tórax)',mao:'2 polegares envolvendo o tórax',dep:.65,r:'30:2 (15:2 com 2 profissionais)'}};
+ var mode='adulto',bpm=110,run=false,n=0,cycle=0,t0=0,tm=null,vent=false,only=false,start=0,timer=null;
+ seg(box,[['adulto','Adulto'],['crianca','Criança'],['bebe','Bebê']],function(m){mode=m;draw();info()});
+ var row=H('div',{cls:'rcp-row'},box);
+ var svg=E('svg',{viewBox:'0 0 300 230',class:'sim-svg'},row);
+ var side=H('div',{cls:'rcp-side'},row);
+ var fr=E('svg',{viewBox:'0 0 140 216',class:'sim-svg small'},side);
+ var inf=H('div',{cls:'readout'},side);
+ var g=E('g',{},svg);
+ function draw(){
+  while(g.firstChild)g.removeChild(g.firstChild);
+  E('rect',{x:0,y:200,width:300,height:30,fill:'#eef0f3'},g);
+  var s=mode==='adulto'?1:mode==='crianca'?.8:.6;
+  // tórax (vista lateral)
+  g.chest=E('path',{d:'',fill:SK,stroke:SK2,'stroke-width':2},g);
+  g.sterno=E('circle',{r:4,fill:RED},g);
+  // braços/mãos
+  g.arm=E('path',{d:'',stroke:'#334155','stroke-width':mode==='bebe'?7:12,'stroke-linecap':'round',fill:'none'},g);
+  g.hand=E('rect',{width:mode==='bebe'?16:34,height:mode==='bebe'?10:14,rx:6,fill:OR},g);
+  g.lbl=T(150,24,'',{class:'t-big','text-anchor':'middle'},g);
+  T(12,222,'vista lateral · vítima em superfície rígida',{class:'t-s'},g);
+  g.gauge=E('rect',{x:270,y:60,width:12,height:0,fill:OR,rx:3},g);
+  E('rect',{x:270,y:60,width:12,height:90,fill:'none',stroke:'#cbd5e1',rx:3},g);
+  T(276,52,'prof.',{class:'t-s','text-anchor':'middle'},g);
+  g.s=s;pose(0);
+  // vista de frente: posição das mãos
+  while(fr.firstChild)fr.removeChild(fr.firstChild);
+  E('path',{d:'M30 30 Q70 12 110 30 L116 150 Q70 166 24 150 Z',fill:SK,stroke:SK2,'stroke-width':2},fr);
+  E('line',{x1:70,y1:34,x2:70,y2:118,stroke:'#c08a6a','stroke-width':6,'stroke-linecap':'round'},fr);
+  T(70,22,'esterno',{class:'t-s','text-anchor':'middle'},fr);
+  E('circle',{cx:48,cy:70,r:3,fill:'#c08a6a'},fr);E('circle',{cx:92,cy:70,r:3,fill:'#c08a6a'},fr);
+  E('path',{d:'M62 124 L70 132 L78 124',fill:'none',stroke:RED,'stroke-width':2},fr);
+  if(mode==='bebe'){E('ellipse',{cx:70,cy:82,rx:16,ry:8,fill:OR,opacity:.9},fr);T(70,178,'logo abaixo da linha',{class:'t-s','text-anchor':'middle'},fr);T(70,192,'dos mamilos',{class:'t-s','text-anchor':'middle'},fr)}
+  else{E('ellipse',{cx:70,cy:98,rx:20,ry:13,fill:OR,opacity:.9},fr);T(70,178,'metade inferior',{class:'t-s','text-anchor':'middle'},fr);T(70,192,'do esterno',{class:'t-s','text-anchor':'middle'},fr)}
+  T(70,208,'✕ não no xifoide',{class:'t-s','text-anchor':'middle',fill:RED},fr);
+ }
+ function pose(k){ // k: 0 = solto, 1 = compressão máxima
+  var s=g.s,dep=M[mode].dep*28*k,cx=150,top=118*1+(1-s)*30;
+  var w=150*s,h=(70*s)-dep;
+  var y0=200;
+  g.chest.setAttribute('d','M'+(cx-w/2)+' '+y0+' Q'+(cx-w/2)+' '+(y0-h)+' '+cx+' '+(y0-h-6*s)+' Q'+(cx+w/2)+' '+(y0-h)+' '+(cx+w/2)+' '+y0+' Z');
+  var hy=y0-h-6*s-(mode==='bebe'?10:14);
+  g.hand.setAttribute('x',cx-(mode==='bebe'?8:17));g.hand.setAttribute('y',hy);
+  g.sterno.setAttribute('cx',cx);g.sterno.setAttribute('cy',y0-h-2*s);
+  g.arm.setAttribute('d','M'+cx+' '+hy+' L'+cx+' '+(hy-70));
+  g.gauge.setAttribute('height',90*k*M[mode].dep);
+ }
+ var bar=H('div',{cls:'ctl'},box);
+ var play=H('button',{type:'button',cls:'play'},bar,'▶ Iniciar metrônomo');
+ var lab=H('label',{cls:'chk'},bar,'<input type="checkbox"> só compressões');
+ lab.querySelector('input').onchange=function(e){only=e.target.checked};
+ var sp=H('label',{cls:'lev-txt'},bar,'Ritmo: <b>110</b>/min <input type="range" min="90" max="130" value="110">');
+ sp.querySelector('input').oninput=function(e){bpm=+e.target.value;sp.querySelector('b').textContent=bpm;sp.querySelector('b').style.color=(bpm<100||bpm>120)?RED:INK};
+ var clock=H('div',{cls:'readout'},box);
+ function info(){inf.innerHTML='<b>'+(mode==='adulto'?'Adulto':mode==='crianca'?'Criança (1 ano à puberdade)':'Bebê (< 1 ano)')+'</b><br>Mãos: '+M[mode].mao+'<br>Profundidade: '+M[mode].d+'<br>Ritmo: 100–120/min<br>Relação: '+M[mode].r}
+ function tick(){
+  if(!run)return;
+  var now=performance.now(),per=60000/bpm;
+  if(vent){if(now-t0>4000){vent=false;n=0;t0=now}else{g.lbl.textContent='2 ventilações';pose(0);timer=requestAnimationFrame(tick);return}}
+  var ph=((now-t0)%per)/per; var k=ph<.5?Math.sin(ph*Math.PI*2*.5*2)*1:0; k=ph<.5?Math.sin(ph/.5*Math.PI):0;
+  pose(Math.max(0,k));
+  var cnt=Math.floor((now-t0)/per);
+  if(cnt!==tm){tm=cnt;n++;beep(n===30?660:1000,.05,.18);vib(15);
+   if(!only&&n>=30){vent=true;t0=now;tm=null;cycle++;}
+   if(!only&&n===1)t0=now-0;
+  }
+  g.lbl.textContent=vent?'2 ventilações':(only?'compressão '+n:n+' de 30');
+  var el=Math.floor((now-start)/1000);
+  clock.innerHTML='Tempo: <b>'+Math.floor(el/60)+':'+('0'+el%60).slice(-2)+'</b> · '+(el>=120&&el%120<6?'<b style="color:'+RED+'">TROCA DE SOCORRISTA!</b>':'troque a cada 2 min')+(only?'':' · ciclos: '+cycle);
+  if(el>0&&el%120===0&&!tick.sw){tick.sw=1;beep(440,.4,.25)}if(el%120!==0)tick.sw=0;
+  timer=requestAnimationFrame(tick);
+ }
+ play.onclick=function(){run=!run;play.textContent=run?'■ Parar':'▶ Iniciar metrônomo';if(run){n=0;cycle=0;vent=false;t0=performance.now();tm=null;start=t0;beep(1,.01,.001);tick()}else{cancelAnimationFrame(timer);pose(0);g.lbl.textContent=''}};
+ // teste do ritmo do usuário
+ var tst=H('div',{cls:'tap'},box);
+ H('p',{cls:'small'},tst,'<b>Teste seu ritmo:</b> toque no botão 12 vezes no ritmo em que você comprimiria (sem olhar o metrônomo).');
+ var tb=H('button',{type:'button',cls:'tapbtn'},tst,'TOQUE');var tr=H('div',{cls:'readout'},tst);var taps=[];
+ tb.onclick=function(){var t=performance.now();if(taps.length&&t-taps[taps.length-1]>2500)taps=[];taps.push(t);beep(900,.03,.1);
+  if(taps.length>=3){var iv=[];for(var i=1;i<taps.length;i++)iv.push(taps[i]-taps[i-1]);var m=iv.reduce(function(a,b){return a+b})/iv.length;var r=Math.round(60000/m);
+   tr.innerHTML='Seu ritmo: <b style="color:'+(r>=100&&r<=120?GR:RED)+'">'+r+'/min</b> '+(r<100?'· devagar demais':r>120?'· rápido demais (não dá tempo de o tórax voltar)':'· no alvo! 👍')+(taps.length>=12?' · (12 toques feitos: toque de novo após 3 s para recomeçar)':'')}
+  else tr.textContent='Continue tocando...'};
+ draw();info();clock.innerHTML='Aperte iniciar e comprima junto (almofada, colchão ou manequim). Música no ritmo: "Stayin\' Alive" (~104/min).';
+};
+
+// ===== Engasgo =====
+W.engasgo=function(box){
+ var mode='adulto',run=false,raf=null,t0=0;
+ seg(box,[['adulto','Adulto/criança'],['gest','Gestante/obeso'],['bebe','Bebê']],function(m){mode=m;draw()});
+ var svg=E('svg',{viewBox:'0 0 320 230',class:'sim-svg'},box);
+ var cap=H('div',{cls:'readout'},box);
+ var bar=H('div',{cls:'ctl'},box);var pb=H('button',{type:'button',cls:'play'},bar,'▶ Animar sequência');
+ var g;
+ function person(x,y,lean,col,arms){ // corpo de lado; lean em graus
+  E('line',{x1:x-2,y1:y,x2:x-10,y2:203,stroke:col,'stroke-width':12,'stroke-linecap':'round'},g);
+  E('line',{x1:x+2,y1:y,x2:x+12,y2:203,stroke:col,'stroke-width':12,'stroke-linecap':'round'},g);
+  var gg=E('g',{transform:'translate('+x+','+y+') rotate('+lean+')'},g);
+  E('line',{x1:0,y1:0,x2:0,y2:-70,stroke:col,'stroke-width':20,'stroke-linecap':'round'},gg);
+  E('circle',{cx:0,cy:-92,r:15,fill:SK,stroke:SK2},gg);E('circle',{cx:8,cy:-95,r:2,fill:INK},gg);
+  return gg}
+ function draw(){
+  while(svg.firstChild)svg.removeChild(svg.firstChild);g=E('g',{},svg);
+  E('rect',{x:0,y:203,width:320,height:27,fill:'#eef0f3'},g);
+  if(mode==='bebe'){
+   // antebraço + bebê
+   g.arm=E('line',{x1:70,y1:150,x2:230,y2:130,stroke:'#334155','stroke-width':16,'stroke-linecap':'round'},g);
+   g.baby=E('g',{},g);
+   g.hand=E('circle',{r:11,fill:OR},g);
+   g.lbl=T(160,30,'',{class:'t-big','text-anchor':'middle'},g);
+   T(160,195,'cabeça mais baixa que o corpo · segure a mandíbula',{class:'t-s','text-anchor':'middle'},g);
+  }else{
+   // vítima inclinada para frente + socorrista atrás
+   g.vic=person(170,150,18,'#64748b');
+   g.res=person(110,150,4,'#0f172a');
+   g.rarm=E('line',{x1:116,y1:92,x2:150,y2:140,stroke:'#0f172a','stroke-width':9,'stroke-linecap':'round'},g);
+   if(mode==='gest')E('ellipse',{cx:0,cy:-24,rx:16,ry:20,fill:'#94a3b8',transform:'translate(170,150) rotate(18) translate(12,0)'},g);
+   g.hand=E('circle',{r:10,fill:OR},g);
+   g.arrow=E('path',{d:'',stroke:RED,'stroke-width':3,fill:'none','marker-end':'url(#ah)'},g);
+   var df=E('defs',{},svg);var mk=E('marker',{id:'ah',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:6,markerHeight:6,orient:'auto'},df);E('path',{d:'M0 0L10 5L0 10z',fill:RED},mk);
+   g.lbl=T(160,30,'',{class:'t-big','text-anchor':'middle'},g);
+  }
+  frame(0);
+ }
+ function babyPose(flip){var b=g.baby;while(b.firstChild)b.removeChild(b.firstChild);
+  var gg=E('g',{transform:'translate(150,118) rotate(-8)'},b);
+  E('rect',{x:-50,y:-12,width:90,height:24,rx:12,fill:flip?'#93c5fd':'#bfdbfe'},gg);
+  E('circle',{cx:-60,cy:6,r:14,fill:SK,stroke:SK2},gg);
+  if(flip)E('circle',{cx:-15,cy:-6,r:3,fill:RED},gg);
+ }
+ function frame(t){ // t em s desde o início, ciclo 0-10 golpes
+  var per=.9,i=Math.floor(t/per)%10,ph=(t%per)/per,k=ph<.35?Math.sin(ph/.35*Math.PI):0;
+  var back=i<5,c=(i%5)+1;
+  if(mode==='bebe'){babyPose(!back);
+   g.lbl.textContent=back?'Golpe nas costas '+c+'/5':'Compressão no peito '+c+'/5';
+   if(back){g.hand.setAttribute('cx',140);g.hand.setAttribute('cy',88-18*(1-k))}else{g.hand.setAttribute('cx',135);g.hand.setAttribute('cy',95+8*k)}
+   cap.innerHTML=back?'De bruços no antebraço, cabeça baixa: <b>5 golpes</b> entre as escápulas com a base da mão.':'Vire em "sanduíche" (barriga para cima, cabeça baixa): <b>5 compressões</b> no centro do peito, logo abaixo da linha dos mamilos. Nunca abdominal.';
+   return}
+  g.lbl.textContent=back?'Golpe nas costas '+c+'/5':(mode==='gest'?'Compressão torácica ':'Compressão abdominal ')+c+'/5';
+  var hx,hy;
+  if(back){hx=160+14*k;hy=102;g.arrow.setAttribute('d','M138 114 L162 102')}
+  else if(mode==='gest'){hx=208-8*k;hy=102;g.arrow.setAttribute('d','M228 108 L210 102')}
+  else{hx=198-8*k;hy=130-6*k;g.arrow.setAttribute('d','M216 146 Q202 144 198 122')}
+  g.hand.setAttribute('cx',hx);g.hand.setAttribute('cy',hy);
+  g.rarm.setAttribute('x2',hx);g.rarm.setAttribute('y2',hy);
+  cap.innerHTML=back?'Incline a vítima para a frente apoiando o peito dela: <b>5 golpes</b> com a base da mão entre as escápulas.':(mode==='gest'?'Gestante/obeso: punho no <b>meio do peito</b> (mesmo ponto da RCP), puxando para trás.':'Punho fechado (polegar para dentro) <b>entre o umbigo e o esterno</b>; puxe para dentro e para cima, em "J".');
+ }
+ function loop(){if(!run)return;frame((performance.now()-t0)/1000);var c=Math.floor((performance.now()-t0)/900);if(c!==loop.c){loop.c=c;beep(c%10<5?520:760,.05,.12)}raf=requestAnimationFrame(loop)}
+ pb.onclick=function(){run=!run;pb.textContent=run?'■ Parar':'▶ Animar sequência';if(run){t0=performance.now();loop()}else cancelAnimationFrame(raf)};
+ draw();
+};
+
+// ===== PLS: 6 passos interpolados =====
+W.pls=function(box){
+ var J=['head','ls','le','lh','rs','re','rh','lhp','lk','lf','rhp','rk','rf'];
+ var F=[
+  {head:[200,40],ls:[172,78],le:[162,122],lh:[156,166],rs:[228,78],re:[238,122],rh:[244,166],lhp:[186,172],lk:[183,240],lf:[181,305],rhp:[214,172],rk:[217,240],rf:[219,305]},
+  {re:[280,80],rh:[282,34]},
+  {le:[206,112],lh:[220,50]},
+  {lk:[196,214],lf:[190,252]},
+  {head:[214,40],ls:[204,78],le:[228,98],lh:[228,52],rs:[216,80],re:[280,82],rh:[282,36],lhp:[206,172],lk:[264,190],lf:[264,252],rhp:[214,174],rk:[213,240],rf:[213,305]},
+  {head:[214,38]}
+ ];
+ for(var i=1;i<F.length;i++){F[i]=Object.assign({},F[i-1],F[i])}
+ var TX=['Ajoelhe ao lado. Tire óculos e objetos dos bolsos. Pernas esticadas.','Braço do seu lado em <b>ângulo reto</b>: cotovelo dobrado, palma para cima.','Braço distante <b>cruzado sobre o peito</b>: dorso da mão encostado na bochecha do seu lado. Segure a mão ali.','Com a outra mão, <b>dobre o joelho distante</b>, pé apoiado no chão.','Puxe pelo joelho e <b>role a vítima na sua direção</b>. A perna de cima fica em ângulo reto (quadril e joelho).','<b>Incline a cabeça para trás</b> (via aérea aberta), mão sob a bochecha. Reavalie a respiração até o SAMU chegar.'];
+ var HAND=[null,[282,58],[230,52],[198,214],[256,202],[220,30]];
+ var svg=E('svg',{viewBox:'0 0 400 330',class:'sim-svg'},box);
+ E('rect',{x:0,y:0,width:400,height:330,fill:'#f8fafc'},svg);
+ E('rect',{x:320,y:120,width:46,height:90,rx:20,fill:'#cbd5e1'},svg);T(343,232,'você',{class:'t-s','text-anchor':'middle'},svg);
+ var body=E('g',{},svg),hand=E('circle',{r:9,fill:OR,opacity:0},svg),stepT=T(16,24,'',{class:'t-big'},svg);
+ var cap=H('div',{cls:'readout'},box);
+ var bar=H('div',{cls:'ctl'},box);var prev=H('button',{type:'button'},bar,'◀');var nx=H('button',{type:'button',cls:'play'},bar,'Próximo passo ▶');var auto=H('button',{type:'button'},bar,'Animar tudo');
+ var cur=0,P=JSON.parse(JSON.stringify(F[0]));
+ function render(){while(body.firstChild)body.removeChild(body.firstChild);
+  function L(a,b,w,c){E('line',{x1:P[a][0],y1:P[a][1],x2:P[b][0],y2:P[b][1],stroke:c||'#475569','stroke-width':w||13,'stroke-linecap':'round'},body)}
+  E('path',{d:'M'+P.ls+' L'+P.rs+' L'+P.rhp+' L'+P.lhp+' Z',fill:'#64748b',stroke:'#64748b','stroke-width':18,'stroke-linejoin':'round'},body);
+  L('lhp','lk',15,'#334155');L('lk','lf',13,'#334155');L('rhp','rk',15,'#334155');L('rk','rf',13,'#334155');
+  L('ls','le');L('le','lh',11);L('rs','re');L('re','rh',11);
+  E('circle',{cx:P.head[0],cy:P.head[1],r:20,fill:SK,stroke:SK2,'stroke-width':2},body);
+ }
+ function go(k,anim){var A=JSON.parse(JSON.stringify(P)),B=F[k],t0=performance.now(),d=anim?700:0;cur=k;
+  stepT.textContent='Passo '+(k+1)+' de 6';cap.innerHTML=TX[k];
+  function f(){var u=d?Math.min(1,(performance.now()-t0)/d):1;u=u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2;
+   J.forEach(function(j){P[j]=[A[j][0]+(B[j][0]-A[j][0])*u,A[j][1]+(B[j][1]-A[j][1])*u]});render();
+   if(HAND[k]){hand.setAttribute('cx',HAND[k][0]);hand.setAttribute('cy',HAND[k][1]);hand.setAttribute('opacity',.9)}else hand.setAttribute('opacity',0);
+   if(u<1)requestAnimationFrame(f)}f()}
+ nx.onclick=function(){go(Math.min(5,cur+1),true)};prev.onclick=function(){go(Math.max(0,cur-1),true)};
+ auto.onclick=function(){go(0,false);var k=0;var iv=setInterval(function(){k++;if(k>5){clearInterval(iv);return}go(k,true)},1600)};
+ go(0,false);
+};
+
+// ===== Glasgow =====
+W.glasgow=function(box,title){
+ var O=[['Abertura ocular',[[4,'Espontânea'],[3,'Ao som (chamado)'],[2,'À pressão (dor)'],[1,'Nenhuma']]],['Resposta verbal',[[5,'Orientada'],[4,'Confusa'],[3,'Palavras inapropriadas'],[2,'Sons'],[1,'Nenhuma']]],['Resposta motora',[[6,'Obedece comandos'],[5,'Localiza a dor'],[4,'Retirada (flexão normal)'],[3,'Flexão anormal (decorticação)'],[2,'Extensão (descerebração)'],[1,'Nenhuma']]]];
+ var sel=[4,5,6];H('p',{cls:'small'},box,title||'<b>Calculadora de Glasgow</b>: toque na resposta da vítima em cada linha. Estímulo de pressão: leito da unha, trapézio ou supraorbital.');
+ O.forEach(function(o,i){var d=H('div',{cls:'gl'},box);H('div',{cls:'gl-t'},d,o[0]);seg(d,o[1].map(function(x){return[x[0],x[0]+' · '+x[1]]}),function(v){sel[i]=v;up()},0)});
+ var r=H('div',{cls:'readout big'},box);
+ function up(){var s=sel[0]+sel[1]+sel[2],c=s<=8?['grave',RED]:s<=12?['moderado','#b45309']:['leve',GR];r.innerHTML='Glasgow <b style="font-size:1.6em">'+s+'</b> = O'+sel[0]+' V'+sel[1]+' M'+sel[2]+' · TCE <b style="color:'+c[1]+'">'+c[0]+'</b>'+(s<=8?' · via aérea em risco':'')}up();
+};
+W.glasgow2=function(box){ // pupilas
+ H('p',{cls:'small'},box,'<b>Pupilas</b>: toque para ver cada achado e o que dizer.');
+ var svg=E('svg',{viewBox:'0 0 300 110',class:'sim-svg'},box);var cap=H('div',{cls:'readout'},box);
+ var D={iso:[9,9,'Isocóricas: iguais. "Pupilas isocóricas e fotorreagentes." Normal.'],mio:[4,4,'Miose: contraídas (pontinho). Intoxicação (opioide, organofosforado) ou luz forte.'],mid:[16,16,'Midríase: dilatadas. Intoxicação (estimulantes), hipóxia; bilateral e sem reação sugere morte encefálica.'],ani:[7,15,'Anisocoria: diferentes. Lesão cerebral grave (TCE, AVC): avise o 192 já.']};
+ function eye(x,r){E('ellipse',{cx:x,cy:55,rx:52,ry:30,fill:'#fff',stroke:'#94a3b8','stroke-width':2},svg);E('circle',{cx:x,cy:55,r:24,fill:'#7c5a3a'},svg);E('circle',{cx:x,cy:55,r:r,fill:'#111'},svg);E('circle',{cx:x+6,cy:48,r:3,fill:'#fff',opacity:.8},svg)}
+ function show(k){while(svg.firstChild)svg.removeChild(svg.firstChild);eye(85,D[k][0]);eye(215,D[k][1]);cap.innerHTML=D[k][2]}
+ seg(box,[['iso','Isocóricas'],['mio','Miose'],['mid','Midríase'],['ani','Anisocoria']],show,0);box.appendChild(svg);box.appendChild(cap);show('iso');
+ var g=H('div',{},box);W.glasgow(g);
+};
+
+// ===== Pressão arterial: treino auscultatório =====
+W.pa=function(box){
+ H('p',{cls:'small'},box,'<b>Treino de pressão</b>: o ponteiro desce sozinho. Quando aparecer o <b>1º batimento</b> (som de Korotkoff), toque em "Ouvi o 1º som" (= sistólica). Quando os sons <b>sumirem</b>, toque em "Sumiu" (= diastólica). Use fone ou o som alto.');
+ var svg=E('svg',{viewBox:'0 0 240 240',class:'sim-svg small2'},box);
+ E('circle',{cx:120,cy:120,r:105,fill:'#fff',stroke:'#334155','stroke-width':6},svg);
+ for(var v=0;v<=300;v+=10){var a=(-225+v/300*270)*Math.PI/180,l=v%50?8:16;E('line',{x1:120+92*Math.cos(a),y1:120+92*Math.sin(a),x2:120+(92-l)*Math.cos(a),y2:120+(92-l)*Math.sin(a),stroke:'#334155','stroke-width':v%50?1.5:3},svg);if(v%50===0)T(120+64*Math.cos(a),124+64*Math.sin(a),v,{class:'t-s','text-anchor':'middle'},svg)}
+ T(120,168,'mmHg',{class:'t-s','text-anchor':'middle'},svg);
+ var nd=E('line',{x1:120,y1:120,x2:120,y2:30,stroke:RED,'stroke-width':4,'stroke-linecap':'round'},svg);E('circle',{cx:120,cy:120,r:8,fill:'#334155'},svg);
+ var heart=E('circle',{cx:120,cy:195,r:9,fill:RED,opacity:.15},svg);
+ var bar=H('div',{cls:'ctl'},box);
+ var b0=H('button',{type:'button',cls:'play'},bar,'Inflar e começar');var b1=H('button',{type:'button'},bar,'Ouvi o 1º som');var b2=H('button',{type:'button'},bar,'Sumiu');
+ var sp=H('label',{cls:'chk'},bar,'<input type="checkbox"> modo rápido');
+ var out=H('div',{cls:'readout'},box);
+ var P=0,S=0,Dd=0,run=false,lt=0,lb=0,us=null,ud=null,raf;
+ function setN(p){var a=(-225+p/300*270)*Math.PI/180;nd.setAttribute('x2',120+84*Math.cos(a));nd.setAttribute('y2',120+84*Math.sin(a))}
+ function loop(t){if(!run)return;var dt=(t-lt)/1000;lt=t;var rate=sp.querySelector('input').checked?6:3;P-=rate*dt;setN(P);
+  if(t-lb>850){lb=t;if(P<=S&&P>=Dd){beep(140,.09,.5);heart.setAttribute('opacity',1);setTimeout(function(){heart.setAttribute('opacity',.15)},120)}}
+  if(P<Dd-25){run=false;fim();return}raf=requestAnimationFrame(loop)}
+ function fim(){var r='Real: <b>'+S+'/'+Dd+'</b> mmHg. ';if(us==null||ud==null){out.innerHTML=r+'Você não marcou os dois sons. Tente de novo.';return}
+  var e1=Math.round(us-S),e2=Math.round(ud-Dd);out.innerHTML=r+'Você marcou <b>'+Math.round(us)+'/'+Math.round(ud)+'</b> (erro '+(e1>0?'+':'')+e1+' / '+(e2>0?'+':'')+e2+'). '+(Math.abs(e1)<=4&&Math.abs(e2)<=4?'<b style="color:'+GR+'">Ótimo!</b>':'Diferença acima de 4 mmHg: treine de novo.')+'<br>Fale assim: "PA '+S+' por '+Dd+' mmHg".'}
+ b0.onclick=function(){S=10*Math.round((100+Math.random()*90)/2)/5;S=Math.round(100+Math.random()*90);Dd=Math.round(Math.max(55,Math.min(S-30,60+Math.random()*55)));P=Math.min(260,S+30+Math.round(Math.random()*10));us=ud=null;out.innerHTML='Inflado a '+Math.round(P)+' mmHg (20–30 acima de onde o pulso radial sumiu). Desinflando 2–3 mmHg por segundo...';run=true;lt=performance.now();lb=0;beep(1,.01,.001);raf=requestAnimationFrame(loop)};
+ b1.onclick=function(){if(run){us=P;out.innerHTML='1º som marcado em '+Math.round(P)+'. Agora espere os sons sumirem...'}};
+ b2.onclick=function(){if(run){ud=P;run=false;cancelAnimationFrame(raf);fim()}};
+ setN(0);
+ H('ol',{cls:'mini'},box,'<li>Paciente sentado, 3–5 min de repouso, bexiga vazia, sem falar.</li><li>Manguito no braço nu, 2–3 cm acima da dobra do cotovelo, centro sobre a artéria braquial.</li><li>Palpe o pulso radial e infle até ele sumir: essa é a estimativa da sistólica.</li><li>Desinfle, ponha o estetoscópio sobre a braquial e infle 20–30 mmHg acima da estimativa.</li><li>Desinfle 2–3 mmHg/s. 1º som = sistólica; desaparecimento = diastólica.</li><li>Desinfle tudo, anote com o braço usado e a hora.</li>');
+};
+
+// ===== Hemorragia: onde vai o torniquete =====
+W.hemo=function(box){
+ H('p',{cls:'small'},box,'<b>Onde vai o torniquete?</b> A ferida (vermelho) está no meio do antebraço. Toque no ponto certo.');
+ var svg=E('svg',{viewBox:'0 0 340 130',class:'sim-svg'},box);
+ E('path',{d:'M10 60 L120 58 L130 64 L250 64 Q300 62 320 70 Q300 82 250 80 L130 80 L120 86 L10 88 Z',fill:SK,stroke:SK2,'stroke-width':2},svg);
+ T(30,110,'ombro',{class:'t-s'},svg);T(112,110,'cotovelo',{class:'t-s'},svg);T(270,110,'mão',{class:'t-s'},svg);
+ E('ellipse',{cx:200,cy:72,rx:12,ry:6,fill:RED},svg);
+ var opts=[[230,'Abaixo da ferida',0,'Errado: o torniquete fica entre a ferida e o coração.'],[200,'Em cima da ferida',0,'Errado: não aperta o vaso acima do ponto que sangra e machuca a ferida.'],[165,'5–7 cm acima da ferida',1,'Certo: 5–7 cm acima, sem pegar articulação. Não tem espaço? Vá para o braço, o mais alto possível ("alto e apertado").'],[125,'Sobre o cotovelo',0,'Errado: nunca sobre articulação (não comprime o vaso).']];
+ var cap=H('div',{cls:'readout'},box);
+ opts.forEach(function(o){var r=E('rect',{x:o[0]-6,y:50,width:12,height:46,rx:4,fill:'#94a3b8',opacity:.55,style:'cursor:pointer'},svg);T(o[0],44,'?',{class:'t-s','text-anchor':'middle'},svg);
+  r.addEventListener('click',function(){[].forEach.call(svg.querySelectorAll('rect'),function(x){x.setAttribute('fill','#94a3b8')});r.setAttribute('fill',o[2]?GR:RED);r.setAttribute('opacity',1);cap.innerHTML='<b>'+o[1]+'</b>: '+o[3]})});
+ H('ol',{cls:'mini'},box,'<li>Faixa larga (≥ 4 cm: gravata, camiseta, cinto de tecido).</li><li>Uma volta 5–7 cm acima da ferida e nó simples.</li><li>Bastão (caneta grossa, galho) sobre o nó e mais um nó por cima.</li><li>Gire o bastão até o sangramento <b>parar</b>.</li><li>Prenda o bastão e <b>anote a hora</b> (na testa da vítima ou na faixa).</li><li>Não afrouxe. Dói mesmo: avise a vítima.</li>');
+};
+
+// ===== Tala: articulação acima e abaixo =====
+W.tala=function(box){
+ var C={
+  ante:['Fratura do antebraço',0,[1,2],'Tala do <b>cotovelo até a mão</b> (pega cotovelo e punho) + tipoia.'],
+  braco:['Fratura do braço (úmero)',0,[0,1],'Tala do <b>ombro até o cotovelo</b>, braço junto ao tronco + tipoia.'],
+  luxc:['Luxação do cotovelo',0,['j',1],'Articulação: imobilize <b>braço + antebraço</b> (osso acima e abaixo), na posição encontrada.'],
+  perna:['Fratura da perna (tíbia)',1,[1,2],'Tala do <b>joelho até o pé</b> (pega joelho e tornozelo), por dentro e por fora.'],
+  coxa:['Fratura da coxa (fêmur)',1,[0,1],'Tala do <b>quadril até o joelho</b> (na prática, da axila ao pé por fora e da virilha ao pé por dentro). Grave: pode sangrar muito.'],
+  torn:['Entorse do tornozelo',1,['j',2],'Imobilize o <b>tornozelo com a perna e o pé</b>; gelo envolto em pano e elevação.']};
+ var svg=E('svg',{viewBox:'0 0 340 120',class:'sim-svg'},box);var cap=H('div',{cls:'readout'},box);
+ function show(k){var c=C[k];while(svg.firstChild)svg.removeChild(svg.firstChild);
+  var nm=c[1]?['quadril','joelho','tornozelo','pé']:['ombro','cotovelo','punho','mão'];var X=[30,140,250,310];
+  var lesion=c[2][0]==='j'?'j':'b';var seg_=c[2][0]==='j'?[c[2][1]-1,c[2][1]+1]:[c[2][0],c[2][1]];
+  if(c[2][0]==='j')seg_=[c[2][1]-1,c[2][1]+1];
+  var x0=X[Math.max(0,seg_[0])]-14,x1=X[Math.min(3,seg_[1])]+14;
+  E('rect',{x:x0,y:38,width:x1-x0,height:44,rx:8,fill:OR,opacity:.25,stroke:OR,'stroke-width':2},svg);
+  E('line',{x1:30,y1:60,x2:250,y2:60,stroke:'#e7d3c2','stroke-width':16,'stroke-linecap':'round'},svg);
+  E('ellipse',{cx:300,cy:60,rx:22,ry:12,fill:'#e7d3c2'},svg);
+  X.slice(0,3).forEach(function(x,i){E('circle',{cx:x,cy:60,r:11,fill:'#fff',stroke:'#94a3b8','stroke-width':3},svg);T(x,104,nm[i],{class:'t-s','text-anchor':'middle'},svg)});T(300,104,nm[3],{class:'t-s','text-anchor':'middle'},svg);
+  if(lesion==='j'){E('circle',{cx:X[c[2][1]],cy:60,r:12,fill:RED},svg)}else{var mx=(X[c[2][0]]+X[c[2][1]])/2;E('path',{d:'M'+(mx-8)+' 48 L'+(mx+4)+' 58 L'+(mx-4)+' 62 L'+(mx+8)+' 72',stroke:RED,'stroke-width':4,fill:'none'},svg)}
+  T(170,26,'tala (laranja)',{class:'t-s','text-anchor':'middle',fill:'#c2410c'},svg);
+  cap.innerHTML='<b>'+c[0]+'</b>: '+c[3];}
+ var keys=Object.keys(C);seg(box,keys.map(function(k){return[k,C[k][0]]}),show,0);box.appendChild(svg);box.appendChild(cap);show(keys[0]);
+};
+
+// ===== Rolamento em bloco (vista de cima) =====
+W.rolamento=function(box){
+ var svg=E('svg',{viewBox:'0 0 360 250',class:'sim-svg'},box);var cap=H('div',{cls:'readout'},box);
+ var bar=H('div',{cls:'ctl'},box);var pb=H('button',{type:'button',cls:'play'},bar,'▶ Executar no comando');
+ E('rect',{x:0,y:0,width:360,height:250,fill:'#f8fafc'},svg);
+ var board=E('rect',{x:24,y:-80,width:310,height:62,rx:12,fill:'#fde68a',stroke:'#d97706','stroke-width':2},svg);board.style.transition='y .8s';
+ var V=E('g',{},svg);V.style.transition='transform .8s';
+ E('rect',{x:70,y:98,width:170,height:54,rx:24,fill:'#64748b'},V);E('circle',{cx:52,cy:125,r:22,fill:SK,stroke:SK2,'stroke-width':2},V);
+ E('rect',{x:84,y:150,width:110,height:12,rx:6,fill:'#475569'},V);E('rect',{x:84,y:88,width:110,height:12,rx:6,fill:'#475569'},V);
+ E('rect',{x:230,y:106,width:90,height:16,rx:8,fill:'#334155'},V);E('rect',{x:230,y:128,width:90,height:16,rx:8,fill:'#334155'},V);
+ function resc(x,y,n,txt){E('circle',{cx:x,cy:y,r:n==='1'?12:16,fill:'#0f172a'},svg);T(x,y+5,n,{fill:'#fff','text-anchor':'middle','font-weight':700,'font-size':14},svg);T(x,y+32,txt,{class:'t-s','text-anchor':'middle'},svg)}
+ resc(14,125,'1','');resc(130,192,'2','ombro + quadril');resc(230,192,'3','quadril + pernas');T(18,160,'cabeça',{class:'t-s','text-anchor':'middle'},svg);
+ var say=T(190,24,'',{class:'t-big','text-anchor':'middle'},svg);
+ var steps=[['','Líder (1) na cabeça. 2 e 3 ajoelhados do mesmo lado; braços da vítima junto ao corpo.',1,-80],['"No três, rolamos para o meu lado"','O líder anuncia o comando antes de qualquer movimento.',1,-80],['"Um... dois... TRÊS!"','Todos giram juntos: cabeça, tronco e pernas no mesmo eixo, 90° na direção dos socorristas.',.35,-80],['Inspeção do dorso + prancha','Vítima de lado: o 3º olha e palpa as costas; um ajudante encosta a prancha nas costas dela.',.35,52],['"No três, descemos"','Descem em bloco sobre a prancha. Depois: centralizar em "Z", tirantes (tronco antes da cabeça) e blocos laterais.',1,94]];
+ var k=0,timer;
+ function show(i){var s=steps[i];say.textContent=s[0];cap.innerHTML='<b>'+(i+1)+'/5</b> · '+s[1];V.setAttribute('transform','translate(0,'+(125-125*s[2])+') scale(1,'+s[2]+')');board.setAttribute('y',s[3])}
+ pb.onclick=function(){clearInterval(timer);k=0;show(0);timer=setInterval(function(){k++;if(k>4){clearInterval(timer);return}show(k)},2300)};
+ show(0);
+};
+
+// ===== Parto: fases + cordão =====
+W.parto=function(box){
+ var F=[['1 · Dilatação','Das primeiras contrações até o colo dilatar e o bebê entrar no canal. 2–3 contrações em 10 min. É a fase mais longa (mais ainda no 1º filho). Conduta: entrevista, acalmar, preparar o material, 192.'],['2 · Expulsão','Do bebê no canal até nascer. Até 5 contrações em 10 min, mais fortes. Coroamento = parto iminente. Conduta: posição, força na contração, apoiar a cabeça, cordão, ombros um de cada vez.'],['3 · Dequitação','Do nascimento até a placenta sair (até ~30 min). Não puxar o cordão. Guardar a placenta. Massagem uterina. O parto termina aqui.']];
+ var cap=H('div',{cls:'readout'},box);
+ seg(box,F.map(function(f,i){return[i,f[0]]}),function(i){cap.innerHTML=F[i][1]},0);box.appendChild(cap);cap.innerHTML=F[0][1];
+ var svg=E('svg',{viewBox:'0 0 340 120',class:'sim-svg'},box);
+ E('path',{d:'M40 60 C90 30 130 90 180 60 S270 40 310 60',stroke:'#a78bfa','stroke-width':8,fill:'none'},svg);
+ E('circle',{cx:30,cy:60,r:20,fill:SK,stroke:SK2},svg);T(30,98,'bebê',{class:'t-s','text-anchor':'middle'},svg);
+ E('rect',{x:300,y:40,width:34,height:40,rx:10,fill:'#f9a8d4'},svg);T(317,98,'mãe/placenta',{class:'t-s','text-anchor':'middle'},svg);
+ E('rect',{x:110,y:50,width:6,height:22,fill:INK},svg);E('rect',{x:150,y:50,width:6,height:22,fill:INK},svg);
+ T(80,30,'10–15 cm',{class:'t-s','text-anchor':'middle'},svg);T(133,30,'3–4 cm',{class:'t-s','text-anchor':'middle'},svg);
+ E('path',{d:'M128 82 l6 14 l6 -14',stroke:RED,'stroke-width':3,fill:'none'},svg);T(134,114,'corta aqui',{class:'t-s','text-anchor':'middle',fill:RED},svg);
+ H('p',{cls:'small'},box,'Espere 1–3 min para amarrar (exceto se o bebê não respira: clampeie logo para reanimar).');
+};
+
+// ===== START (jogo) =====
+W.start=function(box){
+ var L=window.START,i=0,ok=0;var card=H('div',{cls:'st-card'},box);var btns=H('div',{cls:'st-btns'},box);var fb=H('div',{cls:'readout'},box);
+ var cores=[['verde','#16a34a'],['amarela','#ca8a04'],['vermelha','#dc2626'],['preta','#111827']];
+ cores.forEach(function(c){var b=H('button',{type:'button',style:'background:'+c[1]+';color:#fff;border-color:'+c[1]},btns,c[0]);b.onclick=function(){if(i>=L.length)return;var v=L[i];var r=c[0]===v.c;if(r)ok++;fb.innerHTML=(r?'<b style="color:'+GR+'">Certo.</b> ':'<b style="color:'+RED+'">Era '+v.c+'.</b> ')+v.w;i++;setTimeout(nx,1400)}});
+ function nx(){if(i>=L.length){card.innerHTML='<b>'+ok+' de '+L.length+'</b> certas. <button type="button" class="lnk">refazer</button>';card.querySelector('button').onclick=function(){i=0;ok=0;fb.innerHTML='';nx()};return}card.innerHTML='<span class="small">Vítima '+(i+1)+'/'+L.length+'</span><br>'+L[i].d}
+ nx();
+};
+
+// ===== Fluxograma =====
+W.fluxo=function(box){
+ var Fx=window.FLUXO,Fm=window.FIM;var trail=[];var out=H('div',{cls:'fx'},box);
+ function show(k){out.innerHTML='';
+  if(trail.length){var b=H('button',{type:'button',cls:'lnk'},out,'← voltar');b.onclick=function(){show(trail.pop())}}
+  if(k.indexOf('fim:')===0){var f=Fm[k.slice(4)];H('div',{cls:'fx-end'},out,'<b>'+f[0]+'</b><br><a href="#'+f[1]+'">Abrir a estação →</a>');var r=H('button',{type:'button',cls:'lnk'},out,'recomeçar');r.onclick=function(){trail=[];show('ini')};return}
+  var n=Fx[k];H('div',{cls:'fx-q'},out,n.q);var w=H('div',{cls:'fx-o'},out);n.o.forEach(function(o){var b=H('button',{type:'button'},w,o[0]);b.onclick=function(){trail.push(k);show(o[1])}});}
+ show('ini');
+};
+
+// ===== Simulado de cenas =====
+W.casos=function(box){
+ var C=window.CASOS,ci=0,si=0,pts=0,tot=0;var head=H('div',{cls:'cs-h'},box);var body=H('div',{},box);
+ var pick=H('div',{cls:'seg wrap'},head);C.forEach(function(c,i){var b=H('button',{type:'button'},pick,(i+1)+'. '+c.t);b.onclick=function(){[].forEach.call(pick.children,function(x){x.classList.remove('on')});b.classList.add('on');ci=i;si=0;run()}});
+ function run(){var c=C[ci];body.innerHTML='';H('div',{cls:'cs-cena'},body,'<b>Cena:</b> '+c.cena);step()}
+ function step(){var c=C[ci];if(si>=c.passos.length){H('div',{cls:'fx-end'},body,'Fim da cena. '+(ci<C.length-1?'<button type="button" class="lnk">Próxima cena →</button>':'Você fez todas! Placar geral: '+pts+'/'+tot));var nb=body.querySelector('.fx-end button');if(nb)nb.onclick=function(){pick.children[ci+1].click()};return}
+  var p=c.passos[si];var q=H('div',{cls:'cs-q'},body,'<b>'+(si+1)+'.</b> '+p[0]);var w=H('div',{cls:'fx-o'},body);var done=false;
+  p[1].forEach(function(o){var b=H('button',{type:'button'},w,o[0]);b.onclick=function(){if(done)return;done=true;tot++;if(o[1])pts++;b.classList.add(o[1]?'ok':'bad');if(!o[1])[].forEach.call(w.children,function(x,j){if(p[1][j][1])x.classList.add('ok')});H('div',{cls:'cs-fb '+(o[1]?'ok':'bad')},body,o[2]);si++;setTimeout(step,500)}})}
+ pick.children[0].click();
+};
+
+// ===== montar =====
+document.querySelectorAll('[data-w]').forEach(function(b){var f=W[b.getAttribute('data-w')];if(f)try{f(b)}catch(e){b.textContent='Erro: '+e.message;console.error(e)}});
+})();
+</script>
+<script>
+(function(){
+ // vídeos leves
+ document.querySelectorAll('.yt').forEach(function(y){y.addEventListener('click',function(){if(y.querySelector('iframe'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+y.dataset.id+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;y.appendChild(f)})});
+ // checklists persistentes
+ var K='ps-pratica-v1',S={};try{S=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+ document.querySelectorAll('.ev input').forEach(function(c){c.checked=!!S[c.dataset.k];c.onchange=function(){S[c.dataset.k]=c.checked;try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}});
+ // treinar de cabeça
+ document.querySelectorAll('.st').forEach(function(st){
+  var q=st.querySelector('.qz'),sp=st.querySelector('.sp');
+  q.onclick=function(){var on=st.classList.toggle('quiz');q.classList.toggle('on',on);q.textContent=on?'👁 Mostrar tudo':'🧠 Treinar de cabeça';st.querySelectorAll('ol.steps>li').forEach(function(li){li.classList.remove('rev')})};
+  st.querySelectorAll('ol.steps>li').forEach(function(li){li.addEventListener('click',function(){if(st.classList.contains('quiz'))li.classList.add('rev')})});
+  sp.onclick=function(){if(!('speechSynthesis' in window)){sp.textContent='Sem voz neste aparelho';return}
+   if(speechSynthesis.speaking){speechSynthesis.cancel();sp.textContent='🔊 Ouvir as falas';return}
+   var txt=[].map.call(st.querySelectorAll('ol.steps>li'),function(li,i){var s=li.querySelector('.say');return (i+1)+'. '+li.querySelector('.act').textContent+(s?' Fale: '+s.textContent:'')}).join(' ');
+   var u=new SpeechSynthesisUtterance(txt);u.lang='pt-BR';u.rate=1.02;u.onend=function(){sp.textContent='🔊 Ouvir as falas'};speechSynthesis.speak(u);sp.textContent='■ Parar voz'};
+ });
+})();
+</script>
+</body>
+</html>
