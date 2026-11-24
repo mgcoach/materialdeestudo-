@@ -595,8 +595,8 @@
   {
     "titulo": "Biomecânica 1: Torque, Vetores e Alavancas",
     "categoria": "biomecanica",
-    "data": "Jun · 2026",
-    "resumo": "Parte 2: o que é torque e por que o meio do movimento é o mais difícil, vetores e decomposição, as três classes de alavanca e o momento de inércia.",
+    "data": "Nov · 2026",
+    "resumo": "Parte 2: o que é torque e braço de momento, por que o meio do movimento é o mais difícil, por que o músculo faz forças muito maiores que a carga, decomposição de forças (componente rotatória e axial), as três classes de alavanca e momento de inércia. Com simuladores de elevação lateral (halter × cabo), rosca direta, decomposição de forças e alavancas, e teste rápido.",
     "arquivo": "biomecanica1-2-torque-alavancas.html",
     "serie": "Biomecânica 1 (CBMF)"
   },

@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Biomecânica 1: Torque, Vetores e Alavancas | MG COACH">
-    <meta property="og:description" content="Parte 1 da série de Fisiologia Endócrina (CBMF): o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e tipos de receptor, e a síntese dos hormônios peptídicos e esteroides.">
+    <meta property="og:description" content="Torque, ângulo, braço de momento, vetores, as três alavancas e momento de inércia, com simuladores interativos de elevação lateral, rosca direta e decomposição de forças.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/biomecanica1-2-torque-alavancas.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,39 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+</style>
 </head>
 <body>
 
@@ -40,10 +73,12 @@
   <nav class="toc" id="tocNav">
     <a href="#torque">O que é torque</a>
     <a href="#angulo">O ângulo muda tudo</a>
+    <a href="#dois-torques">Dois torques brigando</a>
     <a href="#vetores">Vetores e decomposição</a>
     <a href="#alavancas">As 3 alavancas</a>
     <a href="#inercia">Momento de inércia</a>
     <a href="#aplicacao">Aplicação prática</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -57,7 +92,7 @@
     <a href="biomecanica1-4-cargas-flexibilidade.html">4 &middot; Cargas e Flexibilidade</a>
   </div>
   <h1>Torque, vetores e <span class="em">alavancas</span></h1>
-  <p class="lede">A regra de ouro da biomecânica: o que faz um exercício pesar não é o peso, é o <b>torque</b>. Como o <b>ângulo</b> muda a dificuldade, como <b>vetores</b> descrevem as forças, as três <b>alavancas</b> do corpo e o <b>momento de inércia</b> — por que distância pesa mais que massa.</p>
+  <p class="lede">A regra de ouro da biomecânica: o que faz um exercício pesar não é o peso, é o <b>torque</b>. Como o <b>ângulo</b> muda a dificuldade, como <b>vetores</b> descrevem as forças, as três <b>alavancas</b> do corpo e o <b>momento de inércia</b> — por que distância pesa mais que massa. Agora com <b>4 simuladores</b> para você mexer e ver o torque mudar.</p>
 </div>
 
 <main>
@@ -65,119 +100,180 @@
 <section id="torque">
   <span class="sec-num">01 &mdash; O QUE É TORQUE</span>
   <h2>O que deixa o exercício <span class="accent">pesado</span></h2>
-  <p class="sec-sub">Não é o peso — é o torque. A regra de ouro da biomecânica.</p>
-  <p>Pense em abrir uma porta: empurrar na ponta é fácil, empurrar perto da dobradiça é muito difícil. O peso é o mesmo — o que mudou foi o <strong>torque</strong>. Na musculação, quando você segura um halter, a gravidade tenta <strong>girar sua articulação</strong>. Seu músculo não luta contra o peso; luta contra o <strong>torque do peso</strong>.</p>
+  <p class="sec-sub">Não é o peso: é o torque. A regra de ouro da biomecânica.</p>
+  <p>Pense em abrir uma porta. Empurrar na ponta é fácil; empurrar perto da dobradiça é muito difícil. A força que você faz é a mesma, mas o efeito de <strong>girar</strong> muda. Esse efeito de giro é o <strong>torque</strong> (também chamado de <strong>momento</strong>).</p>
+  <p>No corpo, toda articulação é uma dobradiça. Quando você segura um halter, a gravidade puxa o halter para baixo, e esse puxão tenta <strong>girar</strong> a articulação. O músculo não luta contra o peso em si: luta contra o <strong>torque</strong> que o peso cria.</p>
   <div class="def">
-    <div class="word">Torque = Força × braço de momento</div>
-    <p>O torque é a tendência de uma força girar um corpo em torno de um eixo. Depende da força aplicada <strong>e</strong> da distância perpendicular dela até o eixo (braço de momento). Quanto mais longe o peso da articulação, maior o torque, mais "pesado" fica.</p>
+    <div class="word">Torque (τ) = Força × braço de momento</div>
+    <p>O <b>braço de momento</b> é a menor distância entre o eixo da articulação e a <b>linha de ação</b> da força, medida na perpendicular. Não é o comprimento do braço: é a distância “de lado” entre o eixo e a linha da força. Unidade: newton-metro (N·m).</p>
   </div>
   <div class="callout ok">
     <span class="tag">A regra de ouro</span>
-    <p>O que torna um exercício difícil <strong>não é o peso, é o torque</strong>. Você pode usar 4 kg na elevação lateral e sofrer; 20 kg no desenvolvimento e achar tranquilo. Braço longo + peso longe + perpendicular = muito torque. O peso é constante; o torque muda o tempo todo.</p>
+    <p>O que torna um exercício difícil <strong>não é o peso, é o torque</strong>. 4 kg na elevação lateral podem pesar mais para o deltoide do que 20 kg no desenvolvimento, porque o halter fica longe do ombro e “de lado” para a gravidade. O peso é constante; o torque muda a cada grau do movimento.</p>
   </div>
 </section>
 
 <section id="angulo">
   <span class="sec-num">02 &mdash; O ÂNGULO MUDA TUDO</span>
   <h2>Por que o <span class="accent">meio</span> é o mais difícil</h2>
-  <p class="sec-sub">A elevação lateral explica tudo.</p>
-  <p>Numa elevação lateral com o mesmo halter: no começo (braço junto ao corpo) é <strong>leve</strong>; no meio (~45°) começa a pesar; a 90° (braço na horizontal) é o ponto mais difícil. Mesmo peso, mesmo halter. O que mudou foi o ângulo — a 90° a força da gravidade está <strong>perpendicular</strong> ao braço, gerando torque máximo.</p>
+  <p class="sec-sub">Mexa no simulador: mesmo halter, torque diferente a cada ângulo.</p>
+  <div class="sim" id="simLat">
+    <div class="sim-head"><b>Simulador · elevação lateral</b><div class="seg" role="group" aria-label="Tipo de resistência"><button type="button" class="on" data-mode="h">Halter</button><button type="button" data-mode="c">Cabo (polia baixa)</button></div></div>
+    <svg viewBox="0 0 560 330" class="sim-svg" role="img" aria-label="Braço fazendo elevação lateral com o vetor da carga e o braço de momento">
+      <g id="latScene"></g>
+    </svg>
+    <div class="ctl"><label>Ângulo do ombro <output id="oAng">60°</output><input type="range" id="rAng" min="0" max="120" value="60"></label>
+    <label>Carga <output id="oKg">6 kg</output><input type="range" id="rKg" min="2" max="20" value="6"></label>
+    <label>Cotovelo <output id="oElb">estendido</output><input type="range" id="rElb" min="0" max="90" value="0"></label></div>
+    <div class="readout"><div><span>Braço de momento</span><b id="vD">–</b></div><div><span>Torque no ombro</span><b id="vT">–</b></div><div><span>% do máximo</span><b id="vP">–</b></div></div>
+    <svg viewBox="0 0 560 170" class="sim-svg" role="img" aria-label="Curva de torque ao longo do movimento"><g id="latCurve"></g></svg>
+    <div class="sim-foot"><button type="button" class="play" id="pLat">▶ Animar o movimento</button><span>Laranja = linha da carga · tracejado = braço de momento</span></div>
+  </div>
+  <p>Com o halter, a carga sempre puxa <b>para baixo</b>. Com o braço junto ao corpo, a linha da carga passa quase pelo ombro: braço de momento perto de zero, exercício leve. A 90°, o braço está na horizontal e a linha da carga fica no ponto mais distante do ombro: <b>torque máximo</b>. Passando de 90°, o braço de momento volta a diminuir.</p>
   <div class="callout">
     <span class="tag">A fórmula do ângulo</span>
-    <p>τ = F · d · sen(θ). Quando θ = 90°, sen(90°) = 1 → <strong>torque máximo</strong>. Quando θ é pequeno, sen(θ) fica pequeno → torque diminui. Tradução: quanto mais perpendicular o peso estiver ao seu segmento, mais pesado o exercício fica.</p>
+    <p>τ = F · d · sen(θ), em que <b>d</b> é a distância do eixo até onde a força atua e <b>θ</b> é o ângulo entre a força e o segmento. A 90°, sen(θ) = 1 e o torque é máximo. Perto de 0°, sen(θ) ≈ 0 e o torque some. O produto d · sen(θ) é exatamente o braço de momento.</p>
   </div>
-  <p>Isso se repete em todo lugar: no supino (mais pesado no meio), no agachamento (ponto mais duro quando a coxa fica quase paralela), na rosca direta (difícil a ~90°, leve no início e no fim). Existem dois torques brigando: o <strong>torque da resistência</strong> (peso puxando a articulação) e o <strong>torque muscular</strong> (músculo segurando). O que você sente como "peso" é essa batalha.</p>
+  <div class="callout warn">
+    <span class="tag">Pegadinha</span>
+    <p>“O ângulo de 90°” é o ângulo entre a <b>força</b> e o <b>segmento</b>, não necessariamente o ângulo da articulação. Na elevação lateral os dois coincidem porque a força é vertical e o tronco está em pé. Deite de lado e faça a mesma elevação: o ponto mais difícil muda de lugar, porque a gravidade continua vertical e o corpo girou.</p>
+  </div>
+  <p>Mude para <b>Cabo</b> no simulador: a força passa a apontar para a polia, e a curva muda de forma. O cabo deixa o começo do movimento mais pesado e o fim mais leve. É por isso que halter e cabo “trabalham” trechos diferentes do mesmo exercício.</p>
+</section>
+
+<section id="dois-torques">
+  <span class="sec-num">03 &mdash; DOIS TORQUES BRIGANDO</span>
+  <h2>Por que o músculo faz uma força <span class="accent">enorme</span></h2>
+  <p class="sec-sub">O músculo puxa muito perto da articulação; a carga fica longe.</p>
+  <p>Em cada articulação existem dois torques: o <b>torque da resistência</b> (a carga tentando girar para um lado) e o <b>torque muscular</b> (o músculo girando para o outro). Para segurar parado, os dois são iguais. Para subir, o muscular é maior; para descer controlando, é menor.</p>
+  <p>O detalhe que surpreende: o tendão do bíceps se prende a poucos centímetros do cotovelo, enquanto o halter fica a mais de 30 cm. Como os torques precisam se igualar, a <b>força</b> do músculo precisa ser muitas vezes maior que o peso.</p>
+  <div class="sim" id="simCurl">
+    <div class="sim-head"><b>Simulador · rosca direta</b><span class="muted">braço parado na vertical</span></div>
+    <svg viewBox="0 0 560 300" class="sim-svg" role="img" aria-label="Cotovelo com bíceps e halter"><g id="curlScene"></g></svg>
+    <div class="ctl"><label>Flexão do cotovelo <output id="oFl">90°</output><input type="range" id="rFl" min="5" max="150" value="90"></label>
+    <label>Halter <output id="oCk">10 kg</output><input type="range" id="rCk" min="2" max="30" value="10"></label></div>
+    <div class="readout"><div><span>Torque da carga</span><b id="cT">–</b></div><div><span>Braço do bíceps</span><b id="cD">–</b></div><div><span>Força no bíceps</span><b id="cF">–</b></div></div>
+    <div class="sim-foot"><button type="button" class="play" id="pCurl">▶ Animar</button><span>Modelo simplificado: inserção a 4 cm do cotovelo</span></div>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Na prática</span>
+    <p>Com 10 kg a 90° de flexão, o bíceps precisa de algo perto de <b>800 a 900 N</b>, ou seja, “levantar” uns 85 kg. É o preço da alavanca de 3ª classe: o corpo troca força por velocidade e amplitude. Por isso tendões aguentam cargas enormes e por isso uma pequena mudança de posição muda tanto o esforço.</p>
+  </div>
 </section>
 
 <section id="vetores">
-  <span class="sec-num">03 &mdash; VETORES E DECOMPOSIÇÃO</span>
+  <span class="sec-num">04 &mdash; VETORES E DECOMPOSIÇÃO</span>
   <h2>A direção da <span class="accent">força</span></h2>
-  <p class="sec-sub">Toda força tem direção — e isso define onde o efeito é maior.</p>
+  <p class="sec-sub">Só a parte da força perpendicular ao osso faz girar.</p>
   <div class="def">
     <div class="word">Vetor</div>
-    <p>Descreve uma força (ou velocidade/aceleração) com intensidade, direção, sentido, ponto de aplicação e linha de ação. Força muscular é um vetor (origem → inserção); resistência (peso/cabo) é um vetor. Movimento e estabilidade são o resultado da <strong>soma</strong> desses vetores — se a soma dá zero, há equilíbrio.</p>
+    <p>Grandeza com <b>intensidade</b>, <b>direção</b>, <b>sentido</b> e <b>ponto de aplicação</b>. Força muscular, peso e tensão de um cabo são vetores. O movimento resulta da <b>soma</b> desses vetores; se a soma das forças e dos torques dá zero, há equilíbrio.</p>
   </div>
-  <p>Quando uma força é oblíqua, decompomos em componentes horizontal e vertical com seno e cosseno:</p>
+  <p>Toda força que puxa um osso pode ser dividida em duas partes, como sombras em dois eixos:</p>
   <ul class="clean">
-    <li><b>Componente horizontal:</b> Fx = F · cos(θ)</li>
-    <li><b>Componente vertical:</b> Fy = F · sen(θ)</li>
+    <li><b>Componente rotatória</b> (perpendicular ao osso): a única que gera torque e faz a articulação girar. Vale F · sen(α).</li>
+    <li><b>Componente axial</b> (ao longo do osso): não gira nada. Se aponta para a articulação, <b>comprime</b> e estabiliza; se aponta para fora, <b>traciona</b> (efeito luxante). Vale F · cos(α).</li>
   </ul>
-  <p>Ex.: uma força de 100 N a 30° da horizontal tem Fx = 100 × 0,866 ≈ 86,6 N e Fy = 100 × 0,5 = 50 N. (Se o ângulo for medido a partir da vertical, inverte-se o uso de sen/cos.)</p>
+  <div class="sim" id="simVec">
+    <div class="sim-head"><b>Simulador · decomposição da força</b><span class="muted">α = ângulo entre a força e o osso</span></div>
+    <svg viewBox="0 0 560 260" class="sim-svg" role="img" aria-label="Força decomposta em componente rotatória e axial"><g id="vecScene"></g></svg>
+    <div class="ctl"><label>Ângulo α <output id="oVa">30°</output><input type="range" id="rVa" min="0" max="180" value="30"></label></div>
+    <div class="readout"><div><span>Rotatória (gira)</span><b id="vR">–</b></div><div><span>Axial</span><b id="vA">–</b></div><div><span>Efeito axial</span><b id="vE">–</b></div></div>
+  </div>
   <div class="callout">
     <span class="tag">Aplicação por equipamento</span>
-    <ul class="clean" style="margin-top:10px">
-      <li><b>Peso livre:</b> a resistência é sempre vertical (gravidade) para baixo.</li>
-      <li><b>Cabos/polias:</b> a resistência segue a direção do cabo — mudar o ângulo da polia muda a linha de ação e quais fibras trabalham mais.</li>
-      <li><b>Máquinas:</b> a linha de ação é pré-definida; o torque é maior onde o braço da máquina fica perpendicular à parte móvel.</li>
-    </ul>
+    <p><b>Peso livre:</b> a força é sempre vertical, para baixo. <b>Cabo:</b> a força segue a direção do cabo; mudar a altura da polia muda a linha de ação e o trecho mais pesado. <b>Máquina:</b> o fabricante define a linha de ação com cames e alavancas; o torque é maior onde o braço da máquina fica perpendicular à parte que você move.</p>
   </div>
+  <p>Conta rápida: uma força de 100 N a 30° do osso tem componente rotatória 100 × sen 30° = <b>50 N</b> e axial 100 × cos 30° ≈ <b>87 N</b>. Só metade da força está girando; o resto aperta a articulação.</p>
 </section>
 
 <section id="alavancas">
-  <span class="sec-num">04 &mdash; AS TRÊS ALAVANCAS</span>
+  <span class="sec-num">05 &mdash; AS TRÊS ALAVANCAS</span>
   <h2>Como o corpo usa <span class="accent">alavancas</span></h2>
-  <p class="sec-sub">Osso (haste), articulação (apoio), músculo (força) e carga (resistência).</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Classe</th><th>Ordem</th><th>Exemplo</th><th>Característica</th></tr></thead>
-      <tbody>
-        <tr><td>1ª — Interfixa</td><td>Força — Apoio — Resistência</td><td>Tríceps na polia; pescoço/cabeça</td><td>Eixo no meio; equilíbrio</td></tr>
-        <tr><td>2ª — Inter-resistente</td><td>Apoio — Resistência — Força</td><td>Panturrilha em pé (na ponta dos pés)</td><td>Resistência no meio; favorece força (rara no corpo)</td></tr>
-        <tr><td>3ª — Interpotente</td><td>Apoio — Força — Resistência</td><td>Rosca direta, cadeira extensora, elevação pélvica</td><td>Força no meio; <b>a mais comum</b>; favorece velocidade/amplitude</td></tr>
-      </tbody>
-    </table>
+  <p class="sec-sub">Osso = barra, articulação = apoio, músculo = força, carga = resistência.</p>
+  <div class="sim" id="simLev">
+    <div class="sim-head"><b>As três classes</b><div class="seg" role="group" aria-label="Classe de alavanca"><button type="button" class="on" data-c="1">1ª interfixa</button><button type="button" data-c="2">2ª inter-resistente</button><button type="button" data-c="3">3ª interpotente</button></div></div>
+    <svg viewBox="0 0 560 210" class="sim-svg" role="img" aria-label="Diagrama da alavanca"><g id="levScene"></g></svg>
+    <p class="lev-txt" id="levTxt"></p>
   </div>
-  <p>A 3ª classe (interpotente) é mecanicamente "ruim" — o músculo precisa fazer muito torque —, mas permite movimentos rápidos e amplos, e é o padrão dominante no corpo humano.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Classe</th><th>Quem fica no meio</th><th>Exemplo no corpo</th><th>Vantagem</th></tr></thead>
+    <tbody>
+    <tr><td><b>1ª · interfixa</b></td><td>O apoio (eixo)</td><td>Extensão do cotovelo pelo tríceps (olécrano atrás do eixo); cabeça sobre a coluna</td><td>Equilíbrio; pode favorecer força ou velocidade</td></tr>
+    <tr><td><b>2ª · inter-resistente</b></td><td>A resistência</td><td>Ficar na ponta dos pés (modelo clássico)</td><td>Força (braço de força maior)</td></tr>
+    <tr><td><b>3ª · interpotente</b></td><td>A força (músculo)</td><td>Rosca (bíceps), extensão do joelho, flexão e extensão do quadril</td><td>Velocidade e amplitude (a mais comum)</td></tr>
+    </tbody></table></div>
   <div class="def">
-    <div class="word">Os "braços" da alavanca</div>
-    <p><strong>Braço de momento:</strong> distância entre a linha de ação da força e o eixo (quanto maior, mais torque). <strong>Braço de força:</strong> da inserção muscular ao eixo. <strong>Braço de resistência:</strong> da força resistente ao eixo. Aumentar o braço de força facilita; aumentar o braço de resistência dificulta.</p>
+    <div class="word">Vantagem mecânica = braço de força ÷ braço de resistência</div>
+    <p>Maior que 1: o músculo levanta mais do que faz de força (favorece força). Menor que 1: precisa de mais força que a carga, mas ganha velocidade e amplitude na ponta. Quase todo o corpo trabalha com vantagem mecânica menor que 1.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Pegadinha</span>
+    <p>A panturrilha na ponta dos pés é o exemplo clássico de 2ª classe nos livros, mas muitos biomecânicos a analisam como <b>1ª classe</b>, colocando o eixo no tornozelo. Na prova, siga o modelo que o professor usou. O que não muda: a 3ª classe é a mais comum no corpo.</p>
   </div>
 </section>
 
 <section id="inercia">
-  <span class="sec-num">05 &mdash; MOMENTO DE INÉRCIA</span>
-  <h2>Distância pesa mais que <span class="accent">massa</span></h2>
-  <p class="sec-sub">Por que segurar um martelo pelo cabo é mais difícil.</p>
-  <p>Segurar um martelo perto da cabeça é leve; segurá-lo pelo cabo é muito mais pesado — mesmo peso. Isso é o <strong>momento de inércia</strong>: quanto mais longe a massa está do eixo, maior a dificuldade de girá-la. <strong>I = m · r²</strong> — o raio (distância) é elevado ao quadrado, então a distância importa mais que a própria massa.</p>
-  <div class="callout">
-    <span class="tag">Na prática</span>
-    <p>Na elevação lateral, dobrar um pouco o cotovelo reduz o momento de inércia e o braço de resistência → facilita o exercício sem mudar o peso. É por isso que pequenos ajustes de posição mudam completamente a dificuldade.</p>
+  <span class="sec-num">06 &mdash; MOMENTO DE INÉRCIA</span>
+  <h2>Difícil de <span class="accent">girar</span>, não só de segurar</h2>
+  <p class="sec-sub">Torque é a força de giro; inércia rotacional é a resistência a mudar o giro.</p>
+  <p>Segurar um martelo parado pelo fim do cabo é mais difícil que segurar perto da cabeça: isso é <b>torque</b> (o braço de momento aumentou). Agora tente <b>girar</b> o martelo rápido, para frente e para trás: segurando pelo cabo, ele “resiste” muito mais a acelerar e a frear. Isso é o <b>momento de inércia</b>.</p>
+  <div class="def">
+    <div class="word">I = Σ m · r²</div>
+    <p>O momento de inércia soma cada pedacinho de massa multiplicado pelo <b>quadrado</b> da distância até o eixo. Dobrar a distância quadruplica a inércia. Por isso, para girar, a distância pesa mais do que a massa. A relação com o torque é τ = I · α (α = aceleração angular).</p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Onde aparece</span>
+    <p>Na corrida, o joelho dobra muito na fase aérea: a perna “encurta”, a inércia cai e ela volta à frente mais rápido. Na elevação lateral, dobrar o cotovelo reduz o braço de momento (menos torque parado) e a inércia (mais fácil acelerar). Em movimentos balísticos, como swing com kettlebell ou arremesso, a inércia domina a dificuldade.</p>
   </div>
 </section>
 
 <section id="aplicacao">
-  <span class="sec-num">06 &mdash; APLICAÇÃO PRÁTICA</span>
-  <h2>Exemplo <span class="accent">numérico</span></h2>
-  <p class="sec-sub">Elevação lateral com 6 kg — vendo o torque mudar.</p>
-  <p>Massa 6 kg → força ≈ 60 N. Braço ≈ 0,7 m.</p>
+  <span class="sec-num">07 &mdash; APLICAÇÃO PRÁTICA</span>
+  <h2>A conta da <span class="accent">elevação lateral</span></h2>
+  <p class="sec-sub">6 kg, braço estendido, halter a ≈ 0,6 m do ombro.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Ângulo do ombro</th><th>sen(θ)</th><th>Torque (≈ 60 N × 0,6 m × sen θ)</th><th>Sensação</th></tr></thead>
+    <tbody>
+    <tr><td>0° (braço junto ao corpo)</td><td>0</td><td>0 N·m</td><td>Nada</td></tr>
+    <tr><td>30°</td><td>0,50</td><td>18 N·m</td><td>Metade</td></tr>
+    <tr><td>60°</td><td>0,87</td><td>31 N·m</td><td>Quase tudo</td></tr>
+    <tr><td>90° (horizontal)</td><td>1,00</td><td>36 N·m</td><td>Máximo</td></tr>
+    </tbody></table></div>
   <ul class="clean">
-    <li><b>No meio do movimento (90°):</b> T = 60 × 0,7 × sen(90°) = <b>42 N·m</b> (torque máximo).</li>
-    <li><b>Nos primeiros 30°:</b> T = 60 × 0,7 × sen(30°) = 60 × 0,7 × 0,5 = <b>21 N·m</b> (metade do torque, metade da dificuldade).</li>
+    <li><b>Quer mais estímulo no início do movimento?</b> Use cabo com a polia baixa do lado oposto.</li>
+    <li><b>Quer reduzir a carga no ombro sem trocar o halter?</b> Flexione um pouco o cotovelo.</li>
+    <li><b>Quer descobrir o ponto mais difícil de qualquer exercício?</b> Procure onde a linha da carga fica mais longe da articulação.</li>
   </ul>
-  <p>Mesmo peso na mão, o dobro de dificuldade no meio. É exatamente isso que cabos, máquinas, ângulos, altura do banco e braço de movimento manipulam.</p>
+</section>
+
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
 </section>
 
 <section id="resumo">
-  <span class="sec-num">07 &mdash; PARA FIXAR</span>
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
-  <p class="sec-sub">O essencial da Parte 2.</p>
-  <ol class="key">
-    <li><b>Torque = Força × braço de momento</b> — é o que deixa o exercício pesado, não o peso.</li>
-    <li><b>τ = F · d · sen(θ):</b> a 90° (perpendicular) o torque é máximo; por isso o meio é o mais difícil.</li>
-    <li><b>Dois torques brigam:</b> o da resistência (peso) e o muscular.</li>
-    <li><b>Vetores:</b> força tem direção; decompõe-se em Fx = F·cos(θ) e Fy = F·sen(θ).</li>
-    <li><b>Peso livre</b> = força vertical; <b>cabo</b> = direção do cabo; <b>máquina</b> = linha pré-definida.</li>
-    <li><b>3 alavancas:</b> interfixa (1ª), inter-resistente (2ª) e interpotente (3ª, a mais comum).</li>
-    <li><b>Momento de inércia</b> (I = m·r²): distância pesa mais que massa.</li>
-    <li><b>Pequenos ajustes</b> de ângulo e posição mudam totalmente a dificuldade.</li>
-  </ol>
+  <ul class="clean">
+    <li><b>Torque = força × braço de momento</b>, e braço de momento é a distância perpendicular do eixo até a linha da força.</li>
+    <li>τ = F · d · sen(θ): máximo quando a força é perpendicular ao segmento; por isso existe um “ponto mais difícil”.</li>
+    <li>Halter puxa sempre para baixo; cabo puxa para a polia. Equipamentos diferentes, curvas diferentes.</li>
+    <li>O músculo tem braço de momento pequeno, então faz <b>forças muitas vezes maiores</b> que a carga.</li>
+    <li>Só a componente <b>rotatória</b> (perpendicular ao osso) gira; a <b>axial</b> comprime ou traciona a articulação.</li>
+    <li>Três alavancas; a <b>3ª (interpotente)</b> é a mais comum e troca força por velocidade e amplitude.</li>
+    <li>Momento de inércia (I = Σ m·r²) é resistência a mudar o giro; distância conta ao quadrado.</li>
+  </ul>
   <div class="nav-next">
-    <a href="biomecanica1-1-planos-cinematica.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 1 &middot; Planos e Cinemática</span></a>
-    <a href="biomecanica1-3-cadeia-contracao.html"><span class="lbl">Próximo da série</span><span class="ttl">3 &middot; Cadeia Cinética e Contração &rarr;</span></a>
+    <a href="biomecanica1-1-planos-cinematica.html"><span class="lbl">Anterior</span><span class="ttl">&#8592; 1 · Planos e Cinemática</span></a>
+    <a href="biomecanica1-3-cadeia-contracao.html"><span class="lbl">Próximo da série</span><span class="ttl">3 · Cadeia e Contração &#8594;</span></a>
   </div>
 </section>
 
 </main>
+
 
 <footer>
   <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
@@ -186,5 +282,157 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF, organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'O que define o braço de momento de uma força?',a:['O comprimento do osso','A distância perpendicular do eixo até a linha de ação da força','A distância entre origem e inserção do músculo','O ângulo da articulação'],c:1,e:'É a menor distância (na perpendicular) entre o eixo e a linha da força. Por isso muda a cada grau do movimento.'},
+{q:'Na elevação lateral com halter, em que ponto o torque no ombro é máximo?',a:['Braço junto ao corpo','Por volta de 45°','Com o braço na horizontal (≈ 90°)','No topo, acima de 120°'],c:2,e:'A 90° a gravidade fica perpendicular ao braço: sen(90°) = 1 e o braço de momento é máximo.'},
+{q:'Trocar o halter por um cabo vindo de uma polia baixa do lado oposto faz o quê?',a:['Não muda nada, o peso é o mesmo','Deixa o início do movimento mais pesado e muda a curva de torque','Zera o torque no meio','Só aumenta a carga no topo'],c:1,e:'O cabo puxa na direção da polia, não para baixo. A linha de ação muda e, com ela, o trecho mais pesado.'},
+{q:'Por que o bíceps faz uma força muito maior que o peso do halter?',a:['Porque o músculo é fraco','Porque a inserção fica muito perto do cotovelo (braço de momento pequeno)','Porque o halter acelera','Porque a gravidade é maior no antebraço'],c:1,e:'Torque muscular = torque da carga. Com braço de momento de ≈ 4 cm contra ≈ 35 cm do halter, a força precisa ser muitas vezes maior.'},
+{q:'A componente da força paralela ao osso, apontando para a articulação:',a:['Gira a articulação','Comprime e estabiliza a articulação','Traciona (afasta) a articulação','Não existe'],c:1,e:'Só a componente perpendicular gira. A axial comprime (se aponta para a articulação) ou traciona (se aponta para fora).'},
+{q:'Qual é a classe de alavanca mais comum no corpo humano?',a:['1ª (interfixa)','2ª (inter-resistente)','3ª (interpotente)','Todas aparecem igualmente'],c:2,e:'Na 3ª classe o músculo fica entre o eixo e a carga: perde em força, ganha em velocidade e amplitude.'},
+{q:'Dobrar a distância de uma massa ao eixo multiplica o momento de inércia por:',a:['2','3','4','Não muda'],c:2,e:'I = m · r². Com r dobrado, r² fica 4 vezes maior.'},
+{q:'Uma força de 100 N age a 30° do osso. Quanto dela gira a articulação?',a:['100 N','87 N','50 N','30 N'],c:2,e:'Rotatória = F · sen(30°) = 100 × 0,5 = 50 N. A outra parte (≈ 87 N) é axial.'}
+];
+</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+/* ---------- 1. elevação lateral ---------- */
+(function(){
+ var root=document.getElementById('simLat');if(!root)return;
+ var sc=document.getElementById('latScene'),cv=document.getElementById('latCurve');
+ var rA=document.getElementById('rAng'),rK=document.getElementById('rKg'),rE=document.getElementById('rElb');
+ var mode='h',S={x:300,y:110},PX=170/0.6,P={x:150,y:322};
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){mode=b.dataset.mode;root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});draw()})});
+ function geom(a,e,m,md){var Le=0.3+0.3*Math.cos(e*Math.PI/180),r=a*Math.PI/180;var H={x:S.x+Le*PX*Math.sin(r),y:S.y+Le*PX*Math.cos(r)};var F=m*G,u;
+  if(md==='h')u={x:0,y:1};else{var dx=P.x-H.x,dy=P.y-H.y,n=Math.hypot(dx,dy);u={x:dx/n,y:dy/n}}
+  var rx=(H.x-S.x)/PX,ry=(H.y-S.y)/PX;var d=Math.abs(rx*u.y-ry*u.x);return{H:H,u:u,d:d,T:F*d,Le:Le}}
+ function curve(md,e,m){var a=[];for(var i=0;i<=120;i+=2)a.push(geom(i,e,m,md).T);return a}
+ function draw(){
+  var a=+rA.value,m=+rK.value,e=+rE.value;
+  document.getElementById('oAng').textContent=a+'°';document.getElementById('oKg').textContent=m+' kg';document.getElementById('oElb').textContent=e<5?'estendido':e+'° flexionado';
+  clear(sc);var g=geom(a,e,m,mode);
+  // corpo
+  el('circle',{cx:250,cy:52,r:24,fill:'none',stroke:INK,'stroke-width':3},sc);
+  el('path',{d:'M206 96 Q250 84 294 96 L286 230 L214 230 Z',fill:'rgba(127,127,127,.12)',stroke:INK,'stroke-width':3,'stroke-linejoin':'round'},sc);
+  el('line',{x1:206,y1:100,x2:196,y2:220,stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.5},sc);
+  el('line',{x1:230,y1:230,x2:226,y2:320,stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.5},sc);
+  el('line',{x1:270,y1:230,x2:274,y2:320,stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.5},sc);
+  if(mode==='c'){el('circle',{cx:P.x,cy:P.y,r:9,fill:'none',stroke:MUT,'stroke-width':3},sc);el('line',{x1:g.H.x,y1:g.H.y,x2:P.x,y2:P.y,stroke:MUT,'stroke-width':2},sc);txt(sc,P.x,P.y-16,'polia','sm')}
+  // linha de ação estendida
+  var L=420;el('line',{x1:g.H.x-g.u.x*L,y1:g.H.y-g.u.y*L,x2:g.H.x+g.u.x*L,y2:g.H.y+g.u.y*L,stroke:OR,'stroke-width':1.5,'stroke-dasharray':'2 6',opacity:.7},sc);
+  // braço
+  el('line',{x1:S.x,y1:S.y,x2:g.H.x,y2:g.H.y,stroke:INK,'stroke-width':14,'stroke-linecap':'round'},sc);
+  el('circle',{cx:S.x,cy:S.y,r:9,fill:OR},sc);
+  // halter
+  var r=a*Math.PI/180;el('line',{x1:g.H.x-14*Math.cos(r),y1:g.H.y+14*Math.sin(r),x2:g.H.x+14*Math.cos(r),y2:g.H.y-14*Math.sin(r),stroke:INK,'stroke-width':16,'stroke-linecap':'round',opacity:.85},sc);
+  // força
+  var fl=40+m*2.4;arrow(sc,g.H.x,g.H.y,g.H.x+g.u.x*fl,g.H.y+g.u.y*fl,OR,4);
+  // braço de momento: pé da perpendicular do ombro na linha de ação
+  var t=(S.x-g.H.x)*g.u.x+(S.y-g.H.y)*g.u.y,Q={x:g.H.x+g.u.x*t,y:g.H.y+g.u.y*t};
+  if(g.d>0.005){el('line',{x1:S.x,y1:S.y,x2:Q.x,y2:Q.y,stroke:BL,'stroke-width':3,'stroke-dasharray':'6 5'},sc);txt(sc,(S.x+Q.x)/2,(S.y+Q.y)/2-8,'d = '+fmt(g.d*100,0)+' cm','sm')}
+  // arco do ângulo
+  if(a>3){var ar=40,x2=S.x+ar*Math.sin(r),y2=S.y+ar*Math.cos(r);el('path',{d:'M'+S.x+' '+(S.y+ar)+' A'+ar+' '+ar+' 0 0 0 '+x2+' '+y2,fill:'none',stroke:MUT,'stroke-width':2},sc);txt(sc,S.x+26,S.y+60,a+'°','sm','start')}
+  // leituras
+  var maxT=Math.max.apply(null,curve(mode,e,m));
+  document.getElementById('vD').textContent=fmt(g.d*100,0)+' cm';document.getElementById('vT').textContent=fmt(g.T,0)+' N·m';document.getElementById('vP').textContent=(maxT?Math.round(100*g.T/maxT):0)+'%';
+  // curva
+  clear(cv);var x0=50,x1=540,y0=140,y1=18;el('line',{x1:x0,y1:y0,x2:x1,y2:y0,stroke:MUT,'stroke-width':1.5},cv);el('line',{x1:x0,y1:y0,x2:x0,y2:y1,stroke:MUT,'stroke-width':1.5},cv);
+  var ch=curve('h',e,m),cc=curve('c',e,m),mx=Math.max(Math.max.apply(null,ch),Math.max.apply(null,cc))||1;
+  [['h',ch,OR],['c',cc,BL]].forEach(function(z){var d='';z[1].forEach(function(v,i){var X=x0+(x1-x0)*(i*2/120),Y=y0-(y0-y1)*v/mx;d+=(i?'L':'M')+X.toFixed(1)+' '+Y.toFixed(1)});el('path',{d:d,fill:'none',stroke:z[2],'stroke-width':z[0]===mode?3.5:1.5,opacity:z[0]===mode?1:.45},cv)});
+  var X=x0+(x1-x0)*a/120,Y=y0-(y0-y1)*g.T/mx;el('circle',{cx:X,cy:Y,r:7,fill:mode==='h'?OR:BL,stroke:'#fff','stroke-width':2},cv);
+  [0,30,60,90,120].forEach(function(v){txt(cv,x0+(x1-x0)*v/120,y0+18,v+'°','sm')});txt(cv,x0+4,y1-4,'torque','sm','start');
+  txt(cv,x1,y1+2,'— halter','sm','end').setAttribute('fill',OR);txt(cv,x1,y1+18,'— cabo','sm','end').setAttribute('fill',BL);
+ }
+ [rA,rK,rE].forEach(function(r){r.addEventListener('input',draw)});anim(document.getElementById('pLat'),rA,0,120,draw);draw();
+})();
+
+/* ---------- 2. rosca direta ---------- */
+(function(){
+ var sc=document.getElementById('curlScene');if(!sc)return;var rF=document.getElementById('rFl'),rK=document.getElementById('rCk');
+ var E={x:210,y:190},LF=190,PX=LF/0.35;
+ function draw(){
+  var f=+rF.value,m=+rK.value,r=f*Math.PI/180;document.getElementById('oFl').textContent=f+'°';document.getElementById('oCk').textContent=m+' kg';
+  clear(sc);var dir={x:Math.sin(r),y:Math.cos(r)};var H={x:E.x+LF*dir.x,y:E.y+LF*dir.y};
+  var O={x:E.x-12,y:E.y-0.30*PX},I={x:E.x+0.04*PX*dir.x,y:E.y+0.04*PX*dir.y};
+  // ombro e úmero
+  el('circle',{cx:E.x,cy:E.y-0.31*PX,r:12,fill:'none',stroke:INK,'stroke-width':3},sc);
+  el('line',{x1:E.x,y1:E.y-0.31*PX,x2:E.x,y2:E.y,stroke:INK,'stroke-width':14,'stroke-linecap':'round',opacity:.8},sc);
+  // antebraço
+  el('line',{x1:E.x,y1:E.y,x2:H.x,y2:H.y,stroke:INK,'stroke-width':12,'stroke-linecap':'round'},sc);
+  // bíceps
+  el('line',{x1:O.x,y1:O.y,x2:I.x,y2:I.y,stroke:RD,'stroke-width':8,'stroke-linecap':'round',opacity:.85},sc);txt(sc,O.x-14,O.y+40,'bíceps','sm','end');
+  el('circle',{cx:E.x,cy:E.y,r:8,fill:OR},sc);
+  // halter e peso
+  el('rect',{x:H.x-8,y:H.y-20,width:16,height:40,rx:4,fill:INK,opacity:.85},sc);
+  arrow(sc,H.x,H.y,H.x,H.y+40+m*1.6,OR,4);
+  // braço de momento da carga (horizontal)
+  if(f>3){el('line',{x1:E.x,y1:H.y,x2:H.x,y2:H.y,stroke:BL,'stroke-width':2.5,'stroke-dasharray':'6 5'},sc);el('line',{x1:E.x,y1:E.y,x2:E.x,y2:H.y,stroke:MUT,'stroke-width':1,'stroke-dasharray':'2 4'},sc)}
+  // braço de momento do músculo
+  var ox=(O.x-E.x)/PX,oy=(O.y-E.y)/PX,ix=(I.x-E.x)/PX,iy=(I.y-E.y)/PX;var dm=Math.abs(ox*iy-oy*ix)/Math.hypot(ix-ox,iy-oy);
+  var ux=(I.x-O.x),uy=(I.y-O.y),n=Math.hypot(ux,uy);ux/=n;uy/=n;var t=(E.x-O.x)*ux+(E.y-O.y)*uy,Q={x:O.x+ux*t,y:O.y+uy*t};el('line',{x1:E.x,y1:E.y,x2:Q.x,y2:Q.y,stroke:RD,'stroke-width':2,'stroke-dasharray':'3 3'},sc);
+  var T=m*G*0.35*Math.sin(r),Fm=T/dm;
+  document.getElementById('cT').textContent=fmt(T,0)+' N·m';document.getElementById('cD').textContent=fmt(dm*100,1)+' cm';document.getElementById('cF').textContent=fmt(Fm,0)+' N ≈ '+fmt(Fm/G,0)+' kg';
+  txt(sc,545,40,'carga: '+m+' kg','sm','end');txt(sc,545,62,'a '+fmt(0.35*Math.sin(r)*100,0)+' cm do cotovelo','sm','end');txt(sc,545,92,'bíceps ≈ '+fmt(Fm/G,0)+' kg','','end').setAttribute('fill',RD);
+ }
+ [rF,rK].forEach(function(x){x.addEventListener('input',draw)});anim(document.getElementById('pCurl'),rF,5,150,draw);draw();
+})();
+
+/* ---------- 3. decomposição ---------- */
+(function(){
+ var sc=document.getElementById('vecScene');if(!sc)return;var rV=document.getElementById('rVa');
+ function draw(){
+  var a=+rV.value,r=a*Math.PI/180;document.getElementById('oVa').textContent=a+'°';clear(sc);
+  var J={x:110,y:190},A={x:350,y:190},F=150;
+  el('circle',{cx:J.x,cy:J.y,r:16,fill:'none',stroke:INK,'stroke-width':3},sc);txt(sc,J.x,J.y+40,'articulação','sm');
+  el('line',{x1:J.x+16,y1:J.y,x2:500,y2:J.y,stroke:INK,'stroke-width':14,'stroke-linecap':'round',opacity:.75},sc);txt(sc,470,J.y+36,'osso','sm');
+  var fx=F*Math.cos(r),fy=-F*Math.sin(r);
+  if(Math.abs(fx)>4)arrow(sc,A.x,A.y,A.x+fx,A.y,BL,3,'7 5');
+  if(Math.abs(fy)>4)arrow(sc,A.x,A.y,A.x,A.y+fy,GR,3,'7 5');
+  arrow(sc,A.x,A.y,A.x+fx,A.y+fy,OR,5);
+  el('circle',{cx:A.x,cy:A.y,r:6,fill:OR},sc);
+  txt(sc,A.x+fx+(fx>=0?8:-8),A.y+fy-8,'força',null,fx>=0?'start':'end').setAttribute('fill',OR);
+  if(Math.abs(fy)>4)txt(sc,A.x-8,A.y+fy/2,'rotatória','sm','end');
+  if(Math.abs(fx)>4)txt(sc,A.x+fx/2,A.y+24,'axial','sm');
+  var R=Math.sin(r),Ax=Math.cos(r);document.getElementById('vR').textContent=Math.round(R*100)+'% da força';document.getElementById('vA').textContent=Math.round(Math.abs(Ax)*100)+'% da força';
+  document.getElementById('vE').textContent=Math.abs(Ax)<0.05?'nenhum':(Ax>0?'tração (afasta)':'compressão (aperta)');
+ }
+ rV.addEventListener('input',draw);draw();
+})();
+
+/* ---------- 4. alavancas ---------- */
+(function(){
+ var root=document.getElementById('simLev');if(!root)return;var sc=document.getElementById('levScene'),tx=document.getElementById('levTxt');
+ var C={1:{A:280,F:200,R:470,fd:1,t:'<b>1ª classe · interfixa:</b> o apoio fica entre a força e a resistência, como numa gangorra. No corpo: o tríceps puxando o olécrano, atrás do cotovelo, para estender o antebraço. Aqui o braço de força (≈ 2 cm) é bem menor que o de resistência: vantagem mecânica menor que 1.'},
+          2:{A:90,F:470,R:250,fd:-1,t:'<b>2ª classe · inter-resistente:</b> a resistência fica no meio, como num carrinho de mão. O braço de força é sempre maior que o de resistência: vantagem mecânica maior que 1, favorece força. Exemplo clássico: subir na ponta dos pés.'},
+          3:{A:90,F:200,R:470,fd:-1,t:'<b>3ª classe · interpotente:</b> a força (músculo) fica no meio, como uma pinça. O braço de força é sempre menor: vantagem mecânica menor que 1, mas pequeno encurtamento do músculo vira grande movimento na ponta. É a mais comum: bíceps na rosca, quadríceps na extensora.'}};
+ function draw(c){var k=C[c];clear(sc);var y=100;
+  el('line',{x1:70,y1:y,x2:490,y2:y,stroke:INK,'stroke-width':12,'stroke-linecap':'round',opacity:.8},sc);
+  el('path',{d:'M'+(k.A-20)+' '+(y+38)+' L'+k.A+' '+(y+7)+' L'+(k.A+20)+' '+(y+38)+'Z',fill:MUT},sc);txt(sc,k.A,y+56,'apoio (eixo)','sm');
+  arrow(sc,k.F,k.fd>0?y-70:y-6,k.F,k.fd>0?y-8:y-70,OR,5);txt(sc,k.F,y-80,'força (músculo)','sm');
+  el('rect',{x:k.R-20,y:y+8,width:40,height:34,rx:6,fill:BL,opacity:.85},sc);arrow(sc,k.R,y+42,k.R,y+80,BL,3);txt(sc,k.R,y+98,'resistência','sm');
+  var bf=Math.abs(k.F-k.A),br=Math.abs(k.R-k.A);
+  el('line',{x1:k.A,y1:y-22,x2:k.F,y2:y-22,stroke:OR,'stroke-width':2,'stroke-dasharray':'4 4'},sc);
+  el('line',{x1:k.A,y1:y+118,x2:k.R,y2:y+118,stroke:BL,'stroke-width':2,'stroke-dasharray':'4 4'},sc);
+  txt(sc,(k.A+k.R)/2,y+108,'braço de resistência','sm');txt(sc,(k.A+k.F)/2,y-28,'braço de força','sm');
+  tx.innerHTML=k.t+' <span class="muted">No desenho: vantagem mecânica ≈ '+fmt(bf/br,2)+'.</span>'}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});draw(b.dataset.c)})});draw('1');
+})();
+
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
