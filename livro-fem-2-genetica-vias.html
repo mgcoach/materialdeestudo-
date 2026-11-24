@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -45,6 +80,7 @@
     <a href="#fibras">Fibras tipo II</a>
     <a href="#sintese">Síntese proteica diária</a>
     <a href="#dose">Adaptação dose-dependente</a>
+    <a href="#pratique">Pratique</a>
     <a href="#glossario">Glossário</a>
     <a href="#resumo">Resumo</a>
   </nav>
@@ -53,7 +89,7 @@
 <div class="hero">
   <div class="eyebrow">Livro Biomecânica e Dieta Feminina &middot; Estudo</div>
   <h1>Genética, vias moleculares e <span class="em">adaptação</span></h1>
-  <p class="lede">A genética manda mesmo no ganho de massa? A resposta: ela <b>gerencia, mas não é soberana</b>. O que é <b>expressão gênica</b>, as vias que constroem (mTOR, PI3K, p70S6K) e as que freiam (miostatina, FoxO), por que as <b>fibras tipo II</b> crescem mais, e por que a recuperação precisa ser do tamanho do estímulo.</p>
+  <p class="lede">A genética manda mesmo no ganho de massa? A resposta: ela <b>gerencia, mas não é soberana</b>. O que é <b>expressão gênica</b>, as vias que constroem (mTOR, PI3K, p70S6K) e as que freiam (miostatina, FoxO), por que as <b>fibras tipo II</b> crescem mais, e por que a recuperação precisa ser do tamanho do estímulo. Agora com <b>balança anabólica interativa</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -164,6 +200,23 @@
   </div>
 </section>
 
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>A balança do músculo</h2>
+  <p class="sec-sub">Mexa nos hábitos e veja o saldo entre construir e degradar.</p>
+  <div class="sim" id="simBl">
+    <svg viewBox="0 0 560 200" class="sim-svg" role="img" aria-label="Balança anabolismo e catabolismo"><g id="blScene"></g></svg>
+    <div class="ctl">
+      <label>Treino com tensão e proximidade da falha <output id="oB1">bom</output><input type="range" id="rB1" min="0" max="2" value="1"></label>
+      <label>Proteína no dia <output id="oB2">adequada</output><input type="range" id="rB2" min="0" max="2" value="1"></label>
+      <label>Sono <output id="oB3">7 h ou mais</output><input type="range" id="rB3" min="0" max="2" value="2"></label>
+    </div>
+    <p class="lev-txt" id="blTxt"></p>
+  </div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
+</section>
+
 <section id="glossario">
   <span class="sec-num">08 &mdash; GLOSSÁRIO RÁPIDO</span>
   <h2>Os termos em <span class="accent">português claro</span></h2>
@@ -221,5 +274,36 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Anotações de estudo MG COACH, com base na leitura do livro "Biomecânica da Musculação e Dieta para Mulheres". Conteúdo reorganizado e explicado com palavras próprias para fins de estudo pessoal.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "Segundo o livro, a genética é:", "a": ["Soberana", "Gerente, mas não decide sozinha", "Irrelevante", "Imutável em efeito"], "c": 1, "e": "Ambiente e consistência pesam mais."},{"q": "Expressão gênica é:", "a": ["Ter o gene", "O quanto um gene é ativado para produzir proteína", "Uma mutação", "Um suplemento"], "c": 1, "e": "É influenciada por treino, dieta e sono."},{"q": "A sequência anabólica citada é:", "a": ["FoxO → miostatina", "PI3K → mTOR → p70S6K", "AMPK → cortisol", "Insulina → glucagon"], "c": 1, "e": "A linha de montagem da proteína."},{"q": "A miostatina:", "a": ["Acelera o crescimento", "Freia o crescimento muscular", "É uma vitamina", "É uma fibra"], "c": 1, "e": "O “freio de mão” natural."},{"q": "Adaptação dose-dependente significa que:", "a": ["Mais é sempre melhor", "A recuperação precisa ser proporcional ao estímulo", "Dose de suplemento", "Não existe recuperação"], "c": 1, "e": "Débito de recuperação se acumula."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+(function(){var sc=document.getElementById('blScene');if(!sc)return;var R=[1,2,3].map(function(i){return document.getElementById('rB'+i)}),tx=document.getElementById('blTxt');
+ var L=[['fraco','bom','ótimo'],['baixa','adequada','alta'],['menos de 6 h','6–7 h','7 h ou mais']];
+ function draw(){var v=R.map(function(r){return +r.value});v.forEach(function(x,i){document.getElementById('oB'+(i+1)).textContent=L[i][x]});
+  var ana=0.3+0.35*v[0]+0.2*v[1]+0.1*v[2],cat=0.9-0.15*v[1]-0.25*v[2]+0.05*v[0],net=ana-cat,ang=Math.max(-18,Math.min(18,-net*22));clear(sc);
+  var C={x:280,y:70};el('path',{d:'M260 190 L280 80 L300 190Z',fill:'rgba(127,127,127,.25)'},sc);var g=el('g',{transform:'rotate('+ang+' 280 80)'},sc);
+  el('line',{x1:120,y1:80,x2:440,y2:80,stroke:INK,'stroke-width':6,'stroke-linecap':'round'},g);
+  el('rect',{x:90,y:80,width:90,height:30+ana*40,rx:8,fill:GR,opacity:.75},g);el('rect',{x:380,y:80,width:90,height:30+cat*40,rx:8,fill:RD,opacity:.75},g);
+  txt(sc,135,40,'construir','sm').setAttribute('fill',GR);txt(sc,425,40,'degradar','sm').setAttribute('fill',RD);txt(sc,135,24,'mTOR · PI3K · p70S6K','sm');txt(sc,425,24,'miostatina · FoxO','sm');
+  tx.innerHTML=net>0.15?'Saldo <b>positivo</b>: a construção supera a degradação. Ao longo de semanas, isso vira massa muscular.':net<-0.1?'Saldo <b>negativo</b>: com pouco estímulo, proteína ou sono, a degradação ganha. A genética não compensa isso.':'Saldo perto de zero: manutenção.'}
+ R.forEach(function(r){r.addEventListener('input',draw)});draw()})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

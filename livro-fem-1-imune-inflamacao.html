@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -46,6 +81,7 @@
     <a href="#redox">O balanço redox</a>
     <a href="#mulheres">A mulher e a recuperação</a>
     <a href="#volume">Recuperação e volume</a>
+    <a href="#pratique">Pratique</a>
     <a href="#glossario">Glossário</a>
     <a href="#resumo">Resumo</a>
   </nav>
@@ -54,7 +90,7 @@
 <div class="hero">
   <div class="eyebrow">Livro Biomecânica e Dieta Feminina &middot; Estudo</div>
   <h1>Sistema imune, inflamação e <span class="em">hipertrofia</span></h1>
-  <p class="lede">Por que o treino "inflama" o músculo — e por que isso é <b>bom</b>. A sequência da hipóxia até a acidose, como o corpo neutraliza a inflamação, a conversa entre <b>miocinas</b> (músculo) e <b>adipocinas</b> (gordura), o <b>balanço redox</b> e por que a mulher tende a recuperar melhor. Com glossário dos termos técnicos.</p>
+  <p class="lede">Por que o treino "inflama" o músculo — e por que isso é <b>bom</b>. A sequência da hipóxia até a acidose, como o corpo neutraliza a inflamação, a conversa entre <b>miocinas</b> (músculo) e <b>adipocinas</b> (gordura), o <b>balanço redox</b> e por que a mulher tende a recuperar melhor. Com glossário dos termos técnicos. Agora com <b>simulador da resposta inflamatória</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -95,7 +131,7 @@
     <li><b>Lactato:</b> subproduto da quebra de glicose sem oxigênio suficiente.</li>
     <li><b>Espécies reativas de oxigênio (EROs):</b> moléculas instáveis e "agressivas" que sobram do metabolismo — também chamadas de radicais livres. Em excesso causam o chamado estresse oxidativo.</li>
     <li><b>Íons H+ (hidrogênio):</b> quanto mais H+ se acumula, mais <strong>ácido</strong> fica o ambiente dentro do músculo.</li>
-    <li><b>AMPK:</b> um sensor de energia da célula (que vimos nas séries de Bioquímica e Endurance) — ele "acende" quando a energia está baixa.</li>
+    <li><b>AMP e fosfato:</b> sobram quando o ATP é gasto rápido. O AMP alto liga a <b>AMPK</b>, o sensor de energia da célula (visto em Bioquímica e Endurance). A AMPK não é um metabólito, é uma enzima que “lê” essa falta de energia.</li>
   </ul>
   <div class="def">
     <div class="word">Acidose metabólica</div>
@@ -154,7 +190,7 @@
   <p>Durante o treino, o lado oxidante pesa mais (produzimos muitas EROs). O corpo responde ativando <strong>enzimas antioxidantes</strong> que neutralizam esses produtos e restauram o equilíbrio. Quanto mais treinada a pessoa, mais afiado fica esse sistema de defesa.</p>
   <div class="callout">
     <span class="tag">Enzimas de reparo citadas</span>
-    <p>O corpo também aumenta enzimas ligadas à recuperação rápida, como a <b>creatinaquinase (CK)</b>, a <b>lactato desidrogenase (LDH)</b> e a <b>glicogênio sintase</b> (que remonta os estoques de glicogênio). Pense nelas como equipes especializadas de manutenção que ficam mais numerosas e mais rápidas conforme você treina.</p>
+    <p>O treino também aumenta enzimas do metabolismo energético e da recuperação, como a <b>creatinaquinase (CK)</b>, que recarrega a fosfocreatina, a <b>lactato desidrogenase (LDH)</b>, que converte piruvato e lactato, e a <b>glicogênio sintase</b>, que remonta os estoques de glicogênio. (Atenção: a CK que aparece <b>alta no exame de sangue</b> é outra história: é um marcador de dano muscular recente.)</p>
   </div>
 </section>
 
@@ -184,6 +220,19 @@
     <span class="tag">A conclusão que importa</span>
     <p>Mais massa muscular e mais experiência de treino → maior capacidade anti-inflamatória → melhor recuperação → suporta mais volume → mais resultado. É um ciclo que se retroalimenta. Métodos como <strong>cluster sets</strong> (séries com mini-pausas), HIIT e SIT, além de melhorarem o condicionamento, treinam essa capacidade de tamponamento. Por isso, construir músculo e base de treino melhora literalmente a sua "máquina" de recuperar.</p>
   </div>
+</section>
+
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>Inflamar e resolver</h2>
+  <p class="sec-sub">Compare a resposta inflamatória de quem começa e de quem já treina.</p>
+  <div class="sim" id="simIn">
+    <div class="seg" role="group" aria-label="Perfil"><button type="button" class="on" data-k="i">Iniciante</button><button type="button" data-k="t">Treinada</button></div>
+    <svg viewBox="0 0 560 230" class="sim-svg" role="img" aria-label="Curva de inflamação após o treino"><g id="inScene"></g></svg>
+    <p class="lev-txt" id="inTxt"></p>
+  </div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
 </section>
 
 <section id="glossario">
@@ -218,7 +267,7 @@
   <ol class="key">
     <li><b>A inflamação é o gatilho da recuperação</b>, não a vilã — o corpo treinado fica melhor em resolvê-la.</li>
     <li>A contração <b>comprime os vasos</b> → hipóxia (falta de O₂) no músculo durante o esforço.</li>
-    <li>A hipóxia acumula <b>metabólitos</b> (lactato, EROs, H+, AMPK) → <b>acidose</b> → sinal inflamatório.</li>
+    <li>A hipóxia acumula <b>metabólitos</b> (lactato, EROs, H+, AMP) → <b>acidose</b> → sinal inflamatório.</li>
     <li>O músculo precisa <b>neutralizar</b> os mediadores pró-inflamatórios; feito de forma crônica, acelera a recuperação.</li>
     <li><b>Miocinas</b> (músculo, ex.: IL-6, irisina) são anti-inflamatórias; <b>adipocinas</b> (gordura, ex.: TNF-α) são pró-inflamatórias.</li>
     <li><b>Mais músculo = mais defesa anti-inflamatória.</b> Músculo é um órgão que conversa com o corpo todo.</li>
@@ -242,5 +291,34 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Anotações de estudo MG COACH, com base na leitura do livro "Biomecânica da Musculação e Dieta para Mulheres". Conteúdo reorganizado e explicado com palavras próprias para fins de estudo pessoal.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "No treino, a inflamação é:", "a": ["Sempre ruim", "O gatilho da recuperação e da adaptação", "Sinal de lesão grave", "Evitável com remédio"], "c": 1, "e": "O objetivo é ficar eficiente em resolvê-la."},{"q": "Por que o músculo entra em hipóxia durante a série?", "a": ["Falta de ar nos pulmões", "A contração comprime os vasos e reduz o fluxo", "O coração para", "Falta de ferro"], "c": 1, "e": "Como pisar numa mangueira."},{"q": "Miocinas como a IL-6 do exercício tendem a ser:", "a": ["Pró-inflamatórias", "Anti-inflamatórias", "Hormônios sexuais", "Enzimas digestivas"], "c": 1, "e": "Adipocinas como o TNF-α tendem ao lado pró-inflamatório."},{"q": "A AMPK é:", "a": ["Um metabólito que sobra", "Uma enzima sensora de energia, ativada pelo AMP alto", "Um tipo de gordura", "Uma miocina"], "c": 1, "e": "O AMP é o metabólito."},{"q": "Ter mais massa muscular ajuda a recuperação porque:", "a": ["Aumenta a gordura", "Libera mais miocinas anti-inflamatórias", "Diminui o sono", "Não ajuda"], "c": 1, "e": "Músculo é um órgão que conversa com o corpo inteiro."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+(function(){var root=document.getElementById('simIn');if(!root)return;var sc=document.getElementById('inScene'),tx=document.getElementById('inTxt'),K='i';
+ function f(t,k){var A=k==='i'?1:0.7,tau=k==='i'?26:12;return A*(t/8)*Math.exp(1-t/8)*Math.exp(-Math.max(0,t-8)/tau)}
+ function g(t,k){var A=k==='i'?0.35:0.75,tau=k==='i'?20:10;return A*(1-Math.exp(-t/tau))*Math.exp(-Math.max(0,t-24)/40)}
+ function draw(){clear(sc);var X0=40,X1=530,Y0=190,H=150,sx=function(h){return X0+(X1-X0)*h/72};el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);[0,24,48,72].forEach(function(h){txt(sc,sx(h),Y0+18,h+' h','sm')});
+  ['i','t'].forEach(function(k){var d='',e='';for(var t=0;t<=72;t+=1){d+=(t?'L':'M')+sx(t)+' '+(Y0-H*f(t,k));e+=(t?'L':'M')+sx(t)+' '+(Y0-H*g(t,k))}var on=k===K;el('path',{d:d,fill:'none',stroke:RD,'stroke-width':on?4:2,opacity:on?1:.25},sc);el('path',{d:e,fill:'none',stroke:GR,'stroke-width':on?4:2,'stroke-dasharray':'6 5',opacity:on?1:.25},sc)});
+  txt(sc,X0+6,30,'— sinal inflamatório','sm','start').setAttribute('fill',RD);txt(sc,X0+180,30,'- - - defesa antioxidante e anti-inflamatória','sm','start').setAttribute('fill',GR);
+  tx.innerHTML=K==='i'?'<b>Iniciante</b>: pico inflamatório alto e demorado; as defesas ainda são lentas. Por isso a dor e a fadiga duram mais nas primeiras semanas.':'<b>Treinada</b>: o estímulo ainda inflama, mas as defesas sobem rápido e a inflamação é resolvida em menos tempo. Recupera mais rápido e tolera mais volume.'}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});K=b.dataset.k;draw()})});draw()})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

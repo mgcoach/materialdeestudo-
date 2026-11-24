@@ -14,10 +14,45 @@
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gasto Energético: MET, VO₂máx, TMR e NEAT | MG COACH">
-    <meta name="twitter:description" content="MET, VO₂máx, TMR, fator atividade, NEAT e os números do emagrecimento — para o profissional alinhar treino e expectativa.">
+    <meta name="twitter:description" content="MET, VO₂máx, TMR, fator atividade, NEAT e os números do emagrecimento — para o personal alinhar treino e expectativa.">
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -48,6 +83,7 @@
     <a href="#emagrecimento">Os números do emagrecimento</a>
     <a href="#evidencia">Além do livro: honestidade científica</a>
     <a href="#aplicacao">Resumo para a prática</a>
+    <a href="#pratique">Pratique</a>
     <a href="#refs">Referências</a>
   </nav>
 </header>
@@ -62,7 +98,7 @@
     <span class="atual">05 · Gasto Energético</span>
   </div>
   <h1>Gasto energético: <span class="em">MET, VO₂máx, TMR e NEAT</span></h1>
-  <p class="lede">Como se estima quanta energia uma pessoa gasta por dia — e por que isso muda o seu treino. O <b>MET</b> como moeda universal, o <b>VO₂máx</b> como termômetro de saúde, por que a <b>musculação foge da conta</b>, a espinha dorsal do cálculo (<b>TMR × fator atividade</b>), o <b>NEAT</b> que às vezes supera o próprio treino e os <b>números reais do emagrecimento</b>. Fechar kcal é do nutricionista — mas entender o gasto é o que te faz programar volume e intensidade com inteligência e alinhar expectativa com o aluno.</p>
+  <p class="lede">Como se estima quanta energia uma pessoa gasta por dia — e por que isso muda o seu treino. O <b>MET</b> como moeda universal, o <b>VO₂máx</b> como termômetro de saúde, por que a <b>musculação foge da conta</b>, a espinha dorsal do cálculo (<b>TMR × fator atividade</b>), o <b>NEAT</b> que às vezes supera o próprio treino e os <b>números reais do emagrecimento</b>. Fechar kcal é do nutricionista — mas entender o gasto é o que te faz programar volume e intensidade com inteligência e alinhar expectativa com o aluno. Agora com <b>calculadoras de gasto (MET) e de TMR</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -75,7 +111,7 @@
   <p>Este material destrincha como a energia é gasta e estimada. Você vai sair sabendo ler um gasto energético, entender de onde vêm os números que o nutricionista usa, e — o mais importante para nós — <strong>usar isso para dosar volume/intensidade</strong> e <strong>calibrar a expectativa</strong> do aluno (que é metade do sucesso de qualquer processo).</p>
   <div class="callout warn">
     <span class="tag">Escopo: onde é a nossa vez e onde é a do nutri</span>
-    <p>Escolher fórmula de TMR, fechar calorias e montar macros é competência do <strong>nutricionista</strong> (CRN) — não do profissional (CREF). O valor deste conteúdo pra gente é <strong>entender o gasto energético</strong> para alinhar o treino ao objetivo e <strong>conversar de igual pra igual</strong> com o nutri. Quando eu falar em "calcular", leia como <strong>compreender a lógica</strong>, não como prescrever dieta.</p>
+    <p>Escolher fórmula de TMR, fechar calorias e montar macros é competência do <strong>nutricionista</strong> (CRN) — não do personal (CREF). O valor deste conteúdo pra gente é <strong>entender o gasto energético</strong> para alinhar o treino ao objetivo e <strong>conversar de igual pra igual</strong> com o nutri. Quando eu falar em "calcular", leia como <strong>compreender a lógica</strong>, não como prescrever dieta.</p>
   </div>
 </section>
 
@@ -126,6 +162,7 @@
       <li><b>O₂ total em 40 min:</b> 441 × 40 ≈ <b>17.640 ml ≈ 17,6 litros</b></li>
       <li><b>De O₂ para kcal:</b> 17,6 L × 5 kcal/L ≈ <b>90 kcal</b></li>
     </ol>
+    <p style="margin-bottom:0;color:var(--text-dim)">Observação: o Compêndio de Atividades Físicas atribui de ~2,0 a 2,8 MET para caminhadas entre 3 e 3,5 km/h, o que daria algo entre 100 e 135 kcal. A ordem de grandeza é a mesma: bem menos do que se imagina.</p>
     <p style="margin-bottom:0;color:var(--text-dim)">Resultado: ~90 kcal numa caminhada leve de 40 minutos. Numa escala de esforço de 0 a 10, ela responderia algo como <b>1–2</b>. Guarde esse número: 40 min de caminhada leve ≈ 90 kcal é uma âncora útil de realidade.</p>
   </div>
   <div class="callout">
@@ -273,7 +310,7 @@
   </div>
   <div class="def">
     <div class="word">5. O recado de escopo (CREF × CRN)</div>
-    <p>Todo este capítulo é ouro para <b>entender</b> o gasto e programar treino com intenção — mas fechar kcal e macros é do <b>nutricionista</b>. O profissional de elite domina a lógica para <b>somar</b> à equipe (alinhar treino ao objetivo, ajustar densidade, calibrar expectativa), não para invadir a prescrição alimentar.</p>
+    <p>Todo este capítulo é ouro para <b>entender</b> o gasto e programar treino com intenção — mas fechar kcal e macros é do <b>nutricionista</b>. O personal de elite domina a lógica para <b>somar</b> à equipe (alinhar treino ao objetivo, ajustar densidade, calibrar expectativa), não para invadir a prescrição alimentar.</p>
   </div>
 </section>
 
@@ -298,6 +335,36 @@
   </div>
 </section>
 
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>Calculadoras de gasto</h2>
+  <p class="sec-sub">Estime o gasto de uma atividade e a necessidade diária.</p>
+  <div class="sim" id="simMet">
+    <div class="sim-head"><b>Gasto de uma atividade</b><span class="muted">kcal ≈ MET × 3,5 × peso × min ÷ 1000 × 5</span></div>
+    <div class="seg" role="group" aria-label="Atividade"><button type="button" data-m="2.5">Caminhada lenta</button><button type="button" class="on" data-m="3.5">Caminhada 5 km/h</button><button type="button" data-m="5">Musculação</button><button type="button" data-m="8">Corrida leve</button><button type="button" data-m="10">Corrida moderada</button></div>
+    <div class="ctl">
+      <label>Peso <output id="oMw">70 kg</output><input type="range" id="rMw" min="40" max="130" value="70"></label>
+      <label>Duração <output id="oMt">40 min</output><input type="range" id="rMt" min="10" max="120" step="5" value="40"></label>
+    </div>
+    <div class="readout"><div><span>MET</span><b id="mMet">–</b></div><div><span>Gasto estimado</span><b id="mK">–</b></div></div>
+  </div>
+  <div class="sim" id="simTmr">
+    <div class="sim-head"><b>TMR × fator atividade</b><span class="muted">para entender a lógica do nutricionista</span></div>
+    <div class="seg" role="group" aria-label="Fórmula"><button type="button" class="on" data-f="mf">Mifflin-St Jeor</button><button type="button" data-f="hb">Harris-Benedict</button><button type="button" data-f="cu">Cunningham</button><button type="button" data-f="ti">Tinsley (massa magra)</button></div>
+    <div class="ctl">
+      <label>Peso <output id="oTw">65 kg</output><input type="range" id="rTw" min="40" max="130" value="65"></label>
+      <label>Altura <output id="oTh">165 cm</output><input type="range" id="rTh" min="140" max="195" value="165"></label>
+      <label>Idade <output id="oTa">28 anos</output><input type="range" id="rTa" min="16" max="75" value="28"></label>
+      <label>Gordura corporal <output id="oTf">25%</output><input type="range" id="rTf" min="10" max="45" value="25"></label>
+      <label>Fator atividade <output id="oTx">1,55</output><input type="range" id="rTx" min="120" max="240" step="5" value="155"></label>
+    </div>
+    <div class="readout"><div><span>TMR</span><b id="tR">–</b></div><div><span>Manutenção</span><b id="tM">–</b></div></div>
+    <p class="lev-txt muted">Fórmulas para mulheres, como no livro. Fechar calorias e macros é competência do nutricionista.</p>
+  </div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
+</section>
+
 <section id="refs">
   <span class="sec-num">11 &mdash; REFERÊNCIAS E BASE</span>
   <h2>De onde vem o <span class="accent">conteúdo</span></h2>
@@ -311,7 +378,7 @@
   </ul>
   <div class="callout">
     <span class="tag">Nota de honestidade científica</span>
-    <p>Material <strong>escrito na voz MG COACH</strong>, parafraseando e reorganizando os conceitos do capítulo — não reproduz o texto do livro. Onde acrescento (não-linearidade da perda, crítica ao "10.000 passos", limites das fórmulas, escopo CREF×CRN), trago a leitura mais atual e prática. Nada aqui é prescrição alimentar: o cálculo de calorias e macros é competência do <strong>nutricionista</strong>; o papel do profissional é entender o gasto para programar treino e alinhar expectativa.</p>
+    <p>Material <strong>escrito na voz MG COACH</strong>, parafraseando e reorganizando os conceitos do capítulo — não reproduz o texto do livro. Onde acrescento (não-linearidade da perda, crítica ao "10.000 passos", limites das fórmulas, escopo CREF×CRN), trago a leitura mais atual e prática. Nada aqui é prescrição alimentar: o cálculo de calorias e macros é competência do <strong>nutricionista</strong>; o papel do personal é entender o gasto para programar treino e alinhar expectativa.</p>
   </div>
   <div class="nav-next">
     <a href="livro-fem-4-comportamento-alimentar.html"><span class="lbl">Anterior · Parte 4</span><span class="ttl">&larr; Comportamento Alimentar</span></a>
@@ -328,5 +395,35 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Anotações de estudo MG COACH, reescritas com base no livro e ampliadas com evidência atual. Escopo profissional respeitado. Referências ao final.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "A maior fatia do gasto energético diário é:", "a": ["O treino", "A taxa metabólica de repouso", "O NEAT sempre", "O efeito térmico"], "c": 1, "e": "Cerca de 60–70%."},{"q": "1 MET equivale a:", "a": ["1 kcal/min", "3,5 mL de O₂ por kg por minuto", "1 litro de O₂", "100 kcal"], "c": 1, "e": "Consumo de repouso."},{"q": "Por que é difícil estimar o gasto da musculação pelo oxigênio?", "a": ["Porque não gasta energia", "Porque é intermitente e muito anaeróbia; a troca gasosa subestima", "Porque usa só gordura", "Porque é aeróbia"], "c": 1, "e": "80–90% da sessão é descanso."},{"q": "Fórmulas baseadas em massa magra (Cunningham, Tinsley) são mais indicadas para:", "a": ["Sedentárias com obesidade", "Pessoas treinadas com boa massa muscular", "Crianças", "Idosos acamados"], "c": 1, "e": "A TMR depende muito da massa magra."},{"q": "Quem fecha calorias e macros da dieta?", "a": ["O profissional de Educação Física", "O nutricionista", "O próprio aluno sempre", "O médico apenas"], "c": 1, "e": "Nosso papel é entender a lógica e alinhar o treino."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+(function(){var root=document.getElementById('simMet');if(!root)return;var M=3.5,rw=document.getElementById('rMw'),rt=document.getElementById('rMt');
+ function d(){var w=+rw.value,t=+rt.value,k=M*3.5*w*t/1000*5;document.getElementById('oMw').textContent=w+' kg';document.getElementById('oMt').textContent=t+' min';document.getElementById('mMet').textContent=fmt(M,1);document.getElementById('mK').textContent='≈ '+Math.round(k)+' kcal'}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});M=+b.dataset.m;d()})});[rw,rt].forEach(function(x){x.addEventListener('input',d)});d()})();
+(function(){var root=document.getElementById('simTmr');if(!root)return;var F='mf',I={};['w','h','a','f','x'].forEach(function(k){I[k]=document.getElementById('rT'+k)});
+ function d(){var w=+I.w.value,h=+I.h.value,a=+I.a.value,bf=+I.f.value,fa=+I.x.value/100,mm=w*(1-bf/100),t;
+  document.getElementById('oTw').textContent=w+' kg';document.getElementById('oTh').textContent=h+' cm';document.getElementById('oTa').textContent=a+' anos';document.getElementById('oTf').textContent=bf+'%';document.getElementById('oTx').textContent=fmt(fa,2);
+  t=F==='mf'?9.99*w+6.25*h-4.92*a-161:F==='hb'?655+9.56*w+1.85*h-4.68*a:F==='cu'?500+22*mm:25.9*mm+284;
+  document.getElementById('tR').textContent=Math.round(t)+' kcal';document.getElementById('tM').textContent=Math.round(t*fa)+' kcal/dia'}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});F=b.dataset.f;d()})});Object.keys(I).forEach(function(k){I[k].addEventListener('input',d)});d()})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
