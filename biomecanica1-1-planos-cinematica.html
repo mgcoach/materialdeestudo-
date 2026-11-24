@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Biomecânica 1: Planos e Cinemática | MG COACH">
-    <meta property="og:description" content="Parte 1 da série de Fisiologia Endócrina (CBMF): o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e tipos de receptor, e a síntese dos hormônios peptídicos e esteroides.">
+    <meta property="og:description" content="Planos e eixos com explorador animado, o jogo do qual é o plano, cinemática linear e angular, artrocinemática e a regra côncavo-convexo interativa, cinética, forças do treino e as leis de Newton aplicadas.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/biomecanica1-1-planos-cinematica.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -43,6 +78,7 @@
     <a href="#artro">Artrocinemática</a>
     <a href="#cinetica">Cinética e forças</a>
     <a href="#newton">Leis de Newton</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -56,7 +92,7 @@
     <a href="biomecanica1-4-cargas-flexibilidade.html">4 &middot; Cargas e Flexibilidade</a>
   </div>
   <h1>Planos, eixos e <span class="em">cinemática</span></h1>
-  <p class="lede">A base da biomecânica: os <b>planos e eixos</b> do movimento, a diferença entre <b>cinemática</b> (descrever) e <b>cinética</b> (as forças), a artrocinemática dentro das articulações, as <b>leis de Newton</b> e a primeira definição de <b>torque</b> — o conceito que guia toda a série.</p>
+  <p class="lede">A base da biomecânica: os <b>planos e eixos</b> do movimento, a diferença entre <b>cinemática</b> (descrever) e <b>cinética</b> (as forças), a artrocinemática dentro das articulações, as <b>leis de Newton</b> e a primeira definição de <b>torque</b> — o conceito que guia toda a série. Agora com <b>explorador de planos animado</b>, simuladores e teste rápido.</p>
 </div>
 
 <main>
@@ -64,108 +100,155 @@
 <section id="planos">
   <span class="sec-num">01 &mdash; PLANOS E EIXOS</span>
   <h2>Os três planos do <span class="accent">movimento</span></h2>
-  <p class="sec-sub">Projeções imaginárias que descrevem em que direção o movimento acontece.</p>
-  <p>Planos e eixos são projeções imaginárias usadas para descrever e analisar os movimentos do corpo. Cada plano tem um eixo associado e movimentos típicos:</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Plano</th><th>Divide o corpo em</th><th>Eixo</th><th>Movimentos</th></tr></thead>
-      <tbody>
-        <tr><td>Sagital (vista lateral)</td><td>Direita / esquerda</td><td>Látero-lateral</td><td>Flexão / extensão</td></tr>
-        <tr><td>Frontal (coronal)</td><td>Anterior / posterior</td><td>Ântero-posterior</td><td>Abdução / adução</td></tr>
-        <tr><td>Transverso (horizontal)</td><td>Superior / inferior</td><td>Longitudinal</td><td>Rotações</td></tr>
-      </tbody>
-    </table>
+  <p class="sec-sub">Um mapa imaginário que descreve em que direção o corpo se move.</p>
+  <p>Tudo parte da <b>posição anatômica</b>: em pé, olhando para frente, braços ao lado do corpo e palmas viradas para frente. A partir dela, imaginamos três “placas de vidro” cortando o corpo. Cada movimento acontece <b>dentro</b> de uma dessas placas e <b>gira em torno</b> de um eixo que atravessa a placa como um espeto.</p>
+  <div class="sim" id="simPl">
+    <div class="sim-head"><b>Explorador de planos</b><div class="seg" role="group" aria-label="Plano"><button type="button" class="on" data-p="s">Sagital</button><button type="button" data-p="f">Frontal</button><button type="button" data-p="t">Transverso</button></div></div>
+    <svg viewBox="0 0 560 320" class="sim-svg" role="img" aria-label="Figura mostrando o plano escolhido, o eixo e um movimento"><g id="plScene"></g></svg>
+    <p class="lev-txt" id="plTxt"></p>
   </div>
-  <div class="grid2">
-    <div class="mini"><h4>Sagital</h4><p>Agachamento, rosca bíceps, desenvolvimento militar.</p></div>
-    <div class="mini"><h4>Frontal</h4><p>Elevação lateral, puxada na barra (adução de ombro), jumping jack.</p></div>
+  <div class="callout ok">
+    <span class="tag">Macete</span>
+    <p>O eixo é sempre <b>perpendicular</b> ao plano. Por isso, quando você olha um movimento “de frente para o plano”, o eixo aparece como um <b>ponto</b>, e o segmento gira em volta dele como o ponteiro de um relógio.</p>
   </div>
-  <div class="callout">
-    <span class="tag">Por que importa</span>
-    <p>Saber em que plano um exercício acontece ajuda a entender quais músculos são recrutados, corrigir execução, prevenir lesões e otimizar resultados. É a base de toda a análise biomecânica que vem nas próximas partes.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Plano</th><th>Divide o corpo em</th><th>Eixo</th><th>Movimentos</th></tr></thead>
+    <tbody>
+    <tr><td><b>Sagital</b> (visto de lado)</td><td>Direita e esquerda</td><td>Látero-lateral (médio-lateral)</td><td>Flexão e extensão; dorsiflexão e flexão plantar</td></tr>
+    <tr><td><b>Frontal</b> (coronal)</td><td>Frente e trás</td><td>Ântero-posterior</td><td>Abdução e adução; flexão lateral do tronco; inversão e eversão; desvio radial e ulnar</td></tr>
+    <tr><td><b>Transverso</b> (horizontal)</td><td>Cima e baixo</td><td>Longitudinal (vertical)</td><td>Rotação interna e externa; pronação e supinação; abdução e adução horizontal; rotação do tronco</td></tr>
+    </tbody></table></div>
+  <h3>Qual é o plano?</h3>
+  <p>Toque no plano principal de cada exercício.</p>
+  <div id="plQuiz"></div>
+  <div class="callout warn">
+    <span class="tag">Pegadinha</span>
+    <p>O <b>crucifixo</b> e o <b>supino</b> acontecem no plano <b>transverso</b> (adução horizontal do ombro), mesmo que o braço pareça “subir”. E quase nenhum gesto esportivo é de um plano só: o arremesso, a corrida e o golpe de lenhador combinam os três.</p>
   </div>
 </section>
 
 <section id="cinematica">
   <span class="sec-num">02 &mdash; CINEMÁTICA</span>
   <h2>Descrever o movimento <span class="accent">sem as forças</span></h2>
-  <p class="sec-sub">O "como" do movimento — espaço e tempo, sem investigar as causas.</p>
+  <p class="sec-sub">O “como”: posição, velocidade e aceleração no espaço e no tempo.</p>
   <div class="def">
     <div class="word">Cinemática</div>
-    <p>O estudo da <strong>descrição</strong> do movimento, considerando espaço e tempo, sem analisar as forças que o causam. Analisa trajetória, velocidade e aceleração.</p>
+    <p>Descreve o movimento (trajetória, deslocamento, velocidade e aceleração) sem perguntar o que o causou. É o que um vídeo em câmera lenta mostra.</p>
   </div>
   <ul class="clean">
-    <li><b>Movimento linear:</b> posição, velocidade e aceleração em linha reta (ex.: deslizar um trenó).</li>
-    <li><b>Movimento angular:</b> posição, velocidade e aceleração em torno de um eixo (ex.: o cotovelo flexionando).</li>
+    <li><b>Movimento linear (translação):</b> todos os pontos andam a mesma distância, na mesma direção. Ex.: o trenó deslizando, a barra subindo reta no supino.</li>
+    <li><b>Movimento angular (rotação):</b> o segmento gira em torno de um eixo; pontos mais longe do eixo percorrem arcos maiores. Ex.: o antebraço na rosca.</li>
+    <li><b>Movimento geral:</b> a combinação dos dois. No agachamento, coxa e perna giram (angular) e, juntas, fazem a barra subir quase reta (linear).</li>
   </ul>
-  <p>Na prática, quase todo exercício combina os dois: a força no halter é linear, mas o movimento do braço é angular.</p>
+  <div class="sim" id="simCin">
+    <div class="sim-head"><b>Angular × linear</b><span class="muted">mesmo giro, velocidades diferentes</span></div>
+    <svg viewBox="0 0 560 280" class="sim-svg" role="img" aria-label="Antebraço girando com dois pontos marcados"><g id="cinScene"></g></svg>
+    <div class="ctl"><label>Ângulo do cotovelo <output id="oCi">60°</output><input type="range" id="rCi" min="0" max="140" value="60"></label></div>
+    <div class="readout"><div><span>Deslocamento angular</span><b id="cA">–</b></div><div><span>Arco no meio do antebraço</span><b id="cM">–</b></div><div><span>Arco na mão</span><b id="cH">–</b></div></div>
+    <div class="sim-foot"><button type="button" class="play" id="pCin">▶ Animar</button><span>s = r · θ (θ em radianos)</span></div>
+  </div>
+  <div class="callout">
+    <span class="tag">Por que importa</span>
+    <p>Todos os pontos do antebraço giram o <b>mesmo ângulo</b>, mas a mão percorre o dobro do arco do meio do antebraço, no mesmo tempo. Velocidade linear = velocidade angular × raio (v = ω · r). É por isso que alavancas longas (taco, raquete, braço estendido) deixam a ponta muito rápida.</p>
+  </div>
 </section>
 
 <section id="artro">
   <span class="sec-num">03 &mdash; ARTROCINEMÁTICA</span>
   <h2>O movimento <span class="accent">dentro</span> da articulação</h2>
-  <p class="sec-sub">O que as superfícies articulares fazem entre si.</p>
-  <p>A <em class="term">artrocinemática</em> descreve os movimentos entre as superfícies articulares. Há três movimentos fundamentais: <strong>giro (spin)</strong>, <strong>rolamento (roll)</strong> e <strong>deslizamento (glide)</strong>. A <em class="term">osteocinemática</em>, por sua vez, é o movimento global que observamos de fora (flexão, extensão, abdução, etc.).</p>
-  <div class="callout">
-    <span class="tag">Regra côncavo-convexo</span>
-    <p>Se o segmento <strong>côncavo</strong> move sobre o convexo → rolamento e deslizamento ocorrem na <strong>mesma direção</strong> (mais mobilidade). Se o segmento <strong>convexo</strong> move sobre o côncavo → rolamento e deslizamento ocorrem em <strong>direções opostas</strong> (mais estabilidade). Conceito essencial para fisioterapia, ajuste de amplitude e prevenção de lesões.</p>
+  <p class="sec-sub">O que as superfícies fazem entre si enquanto o osso se move.</p>
+  <p>A <b>osteocinemática</b> é o movimento que vemos de fora: flexão, abdução, rotação. A <b>artrocinemática</b> é o que acontece entre as superfícies articulares, que quase sempre são uma <b>convexa</b> (a “bola”) e uma <b>côncava</b> (a “concha”). Elas fazem três movimentos combinados:</p>
+  <ul class="clean">
+    <li><b>Rolamento (roll):</b> pontos novos de uma superfície encostam em pontos novos da outra, como um pneu rodando.</li>
+    <li><b>Deslizamento (glide):</b> o mesmo ponto de uma superfície escorrega sobre pontos novos da outra, como um pneu derrapando.</li>
+    <li><b>Giro (spin):</b> a superfície gira no mesmo lugar, como um pião. Ex.: a cabeça do rádio na pronação.</li>
+  </ul>
+  <div class="sim" id="simArt">
+    <div class="sim-head"><b>Regra côncavo-convexo</b><div class="seg" role="group" aria-label="Qual superfície se move"><button type="button" class="on" data-k="cx">Convexo se move</button><button type="button" data-k="cc">Côncavo se move</button></div></div>
+    <svg viewBox="0 0 560 280" class="sim-svg" role="img" aria-label="Superfícies articulares com setas de rolamento e deslizamento"><g id="artScene"></g></svg>
+    <div class="ctl"><label>Movimento do osso <output id="oAr">0°</output><input type="range" id="rAr" min="-40" max="40" value="20"></label></div>
+    <p class="lev-txt" id="artTxt"></p>
+  </div>
+  <div class="callout ok">
+    <span class="tag">Na prática</span>
+    <p>Na elevação do braço, a cabeça do úmero (convexa) <b>rola para cima</b> e precisa <b>deslizar para baixo</b> na glenoide. Se o deslizamento falha, a cabeça sobe demais e pode comprimir estruturas embaixo do acrômio. Por isso o manguito rotador, que “puxa a cabeça para baixo”, é tão importante na elevação.</p>
   </div>
 </section>
 
 <section id="cinetica">
   <span class="sec-num">04 &mdash; CINÉTICA E FORÇAS</span>
   <h2>As forças que <span class="accent">causam</span> o movimento</h2>
-  <p class="sec-sub">Agora sim entram as causas — a cinética (ou cinesiologia).</p>
+  <p class="sec-sub">Agora entram as causas: por que o corpo se move do jeito que se move.</p>
   <div class="def">
-    <div class="word">Cinética / Cinesiologia</div>
-    <p>O estudo das <strong>forças</strong> que produzem e modificam o movimento. Linear → <strong>força</strong> (empurra ou puxa). Angular → <strong>torque</strong> (gera rotação em torno de uma articulação).</p>
+    <div class="word">Cinética</div>
+    <p>Estuda as forças que produzem, param ou modificam o movimento. Forças lineares empurram ou puxam; o efeito de giro de uma força em torno de um eixo é o <b>torque</b>.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Pegadinha</span>
+    <p><b>Cinesiologia</b> não é sinônimo de cinética. Cinesiologia é o estudo do movimento humano como um todo (anatomia funcional, cinemática e cinética juntas). Cinética é só a parte das forças.</p>
   </div>
   <div class="def">
     <div class="word">Força (vetor)</div>
-    <p>Grandeza vetorial capaz de alterar o estado de movimento de um corpo. Tem intensidade, direção, sentido, ponto de aplicação e linha de ação. (A Parte 2 aprofunda vetores e torque.)</p>
+    <p>Empurrão ou puxão capaz de mudar o estado de movimento de um corpo. Tem intensidade, direção, sentido e ponto de aplicação. Unidade: newton (N); 1 kg de massa pesa ≈ 9,8 N.</p>
   </div>
-  <div class="callout ok">
-    <span class="tag">Insight importante</span>
-    <p>Movimentos parecidos <strong>não</strong> implicam forças iguais. Agachamento com barra alta (mais quadríceps) e com barra baixa (mais glúteo e cadeia posterior) têm o mesmo movimento geral, mas forças bem diferentes atuando. É por isso que detalhe técnico muda o estímulo.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Força</th><th>De onde vem</th><th>Exemplo no treino</th></tr></thead>
+    <tbody>
+    <tr><td><b>Peso</b></td><td>Gravidade, sempre vertical para baixo</td><td>Halter, barra, o próprio corpo</td></tr>
+    <tr><td><b>Força muscular</b></td><td>Tensão do músculo puxando o osso pelo tendão</td><td>Quadríceps estendendo o joelho</td></tr>
+    <tr><td><b>Reação do solo</b></td><td>O chão empurrando de volta</td><td>Salto, corrida, agachamento</td></tr>
+    <tr><td><b>Tensão</b></td><td>Cabos, elásticos, correntes</td><td>Crossover, puxada, banda elástica</td></tr>
+    <tr><td><b>Atrito</b></td><td>Contato entre superfícies</td><td>Trenó, tênis no chão, a mão na barra</td></tr>
+    </tbody></table></div>
+  <div class="callout">
+    <span class="tag">Insight</span>
+    <p>Movimentos parecidos não têm as mesmas forças. No agachamento com <b>barra alta</b>, o tronco fica mais em pé e o joelho vai mais à frente: o braço de momento no joelho cresce (mais quadríceps). Com <b>barra baixa</b>, o tronco inclina e o quadril vai para trás: cresce o braço de momento no quadril (mais glúteo e posteriores). Mesmo “desenho” de movimento, distribuição de esforço diferente.</p>
   </div>
 </section>
 
 <section id="newton">
-  <span class="sec-num">05 &mdash; LEIS DE NEWTON E TORQUE</span>
-  <h2>A física por trás do <span class="accent">treino</span></h2>
-  <p class="sec-sub">As três leis e a definição inicial de torque.</p>
-  <ol class="key">
-    <li><b>Lei da inércia:</b> um corpo permanece em repouso ou movimento uniforme até que uma força externa atue sobre ele.</li>
-    <li><b>Lei fundamental da dinâmica:</b> F = m · a (força = massa × aceleração).</li>
-    <li><b>Ação e reação:</b> para toda força exercida existe uma força de mesma intensidade e direção, em sentido oposto.</li>
-  </ol>
+  <span class="sec-num">05 &mdash; AS LEIS DE NEWTON NO TREINO</span>
+  <h2>A física por trás de <span class="accent">cada repetição</span></h2>
+  <p class="sec-sub">Três leis que explicam saída do chão, explosão e salto.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Lei</th><th>O que diz</th><th>Onde você vê</th></tr></thead>
+    <tbody>
+    <tr><td><b>1ª · Inércia</b></td><td>Um corpo parado continua parado, e em movimento continua em movimento, até uma força mudar isso.</td><td>Tirar a barra parada do chão no levantamento terra exige mais força do que mantê-la subindo.</td></tr>
+    <tr><td><b>2ª · F = m · a</b></td><td>A força resultante é igual à massa vezes a aceleração.</td><td>Acelerar a barra rápido (treino explosivo) exige força bem maior que o peso. Numa subida a 2 m/s², 100 kg pedem ≈ 1.180 N, não 980 N.</td></tr>
+    <tr><td><b>3ª · Ação e reação</b></td><td>Toda força tem uma reação de mesma intensidade e direção, em sentido oposto, aplicada no outro corpo.</td><td>No salto você empurra o chão para baixo; o chão empurra você para cima (força de reação do solo).</td></tr>
+    </tbody></table></div>
   <div class="def">
-    <div class="word">Torque (momento)</div>
-    <p>A tendência que uma força tem de rotacionar um corpo em torno de um eixo. <strong>T = F · d</strong> (força × distância do ponto de aplicação ao eixo). Considerando o ângulo: <strong>T = F · d · sen(θ)</strong>. Também pode ser expresso como T = I · α (inércia rotacional × aceleração angular), com I = m · r². O torque é o conceito central da Parte 2.</p>
+    <div class="word">Torque (prévia da Parte 2)</div>
+    <p>A versão “de giro” da força: τ = F · d · sen(θ). Também vale a 2ª lei para rotação: τ = I · α (momento de inércia × aceleração angular). É o conceito central da <a href="biomecanica1-2-torque-alavancas.html">Parte 2</a>, que tem simuladores para você mexer.</p>
   </div>
 </section>
 
+<section id="quiz">
+  <span class="sec-num">06 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">06 &mdash; PARA FIXAR</span>
+  <span class="sec-num">07 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
-  <p class="sec-sub">O essencial da Parte 1.</p>
-  <ol class="key">
-    <li><b>Sagital</b> (flexão/extensão), <b>frontal</b> (abdução/adução), <b>transverso</b> (rotações).</li>
-    <li>Cada plano tem seu eixo: látero-lateral, ântero-posterior e longitudinal.</li>
-    <li><b>Cinemática</b> descreve o movimento (espaço/tempo); pode ser linear ou angular.</li>
-    <li><b>Artrocinemática:</b> giro, rolamento e deslizamento; regra côncavo-convexo.</li>
-    <li><b>Cinética/cinesiologia</b> estuda as forças: força (linear) e torque (angular).</li>
-    <li><b>Movimentos parecidos não têm forças iguais</b> (barra alta vs baixa no agachamento).</li>
-    <li><b>Leis de Newton:</b> inércia, F = m·a, ação e reação.</li>
-    <li><b>Torque</b> = F · d · sen(θ); é o que realmente "pesa" no exercício (Parte 2).</li>
-  </ol>
+  <ul class="clean">
+    <li><b>Sagital</b> (flexão/extensão) · <b>frontal</b> (abdução/adução) · <b>transverso</b> (rotações e movimentos horizontais).</li>
+    <li>Eixos: látero-lateral, ântero-posterior e longitudinal; o eixo é sempre perpendicular ao plano.</li>
+    <li>Cinemática descreve (linear, angular ou geral); a ponta do segmento anda mais rápido: v = ω · r.</li>
+    <li>Artrocinemática: rolamento, deslizamento e giro. Convexo se move: rola e desliza em sentidos <b>opostos</b>. Côncavo se move: no <b>mesmo</b> sentido.</li>
+    <li>Cinética estuda as forças; cinesiologia é o estudo do movimento como um todo.</li>
+    <li>Newton: inércia, F = m · a (acelerar custa força extra) e ação e reação (reação do solo).</li>
+  </ul>
   <div class="nav-next">
-    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&larr; Biblioteca</span></a>
-    <a href="biomecanica1-2-torque-alavancas.html"><span class="lbl">Próximo da série</span><span class="ttl">2 &middot; Torque, Vetores e Alavancas &rarr;</span></a>
+    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&#8592; Biblioteca</span></a>
+    <a href="biomecanica1-2-torque-alavancas.html"><span class="lbl">Próximo da série</span><span class="ttl">2 · Torque, Vetores e Alavancas &#8594;</span></a>
   </div>
 </section>
 
 </main>
+
 
 <footer>
   <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
@@ -174,5 +257,106 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF, organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Em que plano acontece a elevação lateral?',a:['Sagital','Frontal','Transverso','Nenhum'],c:1,e:'É abdução do ombro, no plano frontal, em torno do eixo ântero-posterior.'},
+{q:'O eixo do plano transverso é o:',a:['Látero-lateral','Ântero-posterior','Longitudinal','Oblíquo'],c:2,e:'As rotações acontecem em torno do eixo longitudinal (vertical).'},
+{q:'Na rosca, a mão percorre um arco maior que o meio do antebraço no mesmo tempo porque:',a:['Gira um ângulo maior','Está mais longe do eixo (v = ω · r)','Pesa mais','Tem mais torque'],c:1,e:'Todos os pontos giram o mesmo ângulo; quanto maior o raio, maior o arco e a velocidade linear.'},
+{q:'Quando a superfície convexa se move sobre a côncava, rolamento e deslizamento são:',a:['No mesmo sentido','Em sentidos opostos','Sempre ausentes','Só giro'],c:1,e:'Convexo se move: sentidos opostos. Côncavo se move: mesmo sentido.'},
+{q:'Cinesiologia é:',a:['Sinônimo de cinética','O estudo do movimento humano como um todo','Só a parte das forças','Só a anatomia dos músculos'],c:1,e:'Cinesiologia engloba anatomia funcional, cinemática e cinética.'},
+{q:'Subir uma barra de 100 kg acelerando a 2 m/s² exige uma força de cerca de:',a:['980 N','1.000 N','1.180 N','200 N'],c:2,e:'F = m · (g + a) = 100 × (9,8 + 2) ≈ 1.180 N. Acelerar custa força extra (2ª lei).'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- planos ---------- */
+(function(){
+ var root=document.getElementById('simPl');if(!root)return;var sc=document.getElementById('plScene'),tx=document.getElementById('plTxt');var P='s',t0=performance.now();
+ var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var TX={s:'<b>Plano sagital</b> (visto de lado): divide o corpo em direita e esquerda. O eixo <b>látero-lateral</b> atravessa o ombro de um lado ao outro, entrando na tela. Movimento: <b>flexão e extensão</b> do ombro, como na elevação frontal.',
+         f:'<b>Plano frontal</b> (visto de frente): divide o corpo em frente e trás. O eixo <b>ântero-posterior</b> atravessa o ombro de frente para trás. Movimento: <b>abdução e adução</b>, como na elevação lateral.',
+         t:'<b>Plano transverso</b> (visto de cima): divide o corpo em cima e embaixo. O eixo <b>longitudinal</b> é vertical. Movimento: <b>abdução e adução horizontal</b> do ombro, como no crucifixo, e as rotações.'};
+ function frame(now){var ph=RM?0.5:(Math.sin((now-t0)/900)+1)/2;clear(sc);
+  if(P==='s'){el('rect',{x:120,y:20,width:320,height:290,rx:16,fill:'rgba(255,107,26,.08)',stroke:'rgba(255,107,26,.4)'},sc);txt(sc,130,42,'plano sagital','sm','start');
+   el('circle',{cx:280,cy:66,r:24,fill:'none',stroke:INK,'stroke-width':3},sc);el('path',{d:'M262 96 Q290 100 296 120 L292 210 L262 210 Z',fill:'rgba(127,127,127,.12)',stroke:INK,'stroke-width':3},sc);
+   el('line',{x1:272,y1:210,x2:270,y2:300,stroke:INK,'stroke-width':12,'stroke-linecap':'round',opacity:.5},sc);
+   var a=(-30+170*ph)*Math.PI/180,S={x:278,y:110},H={x:S.x+120*Math.sin(a),y:S.y+120*Math.cos(a)};el('line',{x1:S.x,y1:S.y,x2:H.x,y2:H.y,stroke:INK,'stroke-width':13,'stroke-linecap':'round'},sc);
+  }
+  if(P==='f'){el('rect',{x:110,y:20,width:340,height:290,rx:16,fill:'rgba(37,99,235,.07)',stroke:'rgba(37,99,235,.35)'},sc);txt(sc,120,42,'plano frontal','sm','start');
+   el('circle',{cx:280,cy:62,r:24,fill:'none',stroke:INK,'stroke-width':3},sc);el('path',{d:'M236 96 Q280 86 324 96 L316 220 L244 220 Z',fill:'rgba(127,127,127,.12)',stroke:INK,'stroke-width':3},sc);
+   el('line',{x1:236,y1:100,x2:226,y2:210,stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.5},sc);
+   el('line',{x1:262,y1:220,x2:258,y2:305,stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.5},sc);el('line',{x1:298,y1:220,x2:302,y2:305,stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.5},sc);
+   var a=(5+155*ph)*Math.PI/180,S={x:326,y:104},H={x:S.x+120*Math.sin(a),y:S.y+120*Math.cos(a)};el('line',{x1:S.x,y1:S.y,x2:H.x,y2:H.y,stroke:INK,'stroke-width':12,'stroke-linecap':'round'},sc);
+  }
+  if(P==='t'){el('ellipse',{cx:280,cy:165,rx:230,ry:140,fill:'rgba(22,163,74,.07)',stroke:'rgba(22,163,74,.35)'},sc);txt(sc,280,42,'plano transverso · visto de cima','sm');
+   el('ellipse',{cx:280,cy:165,rx:95,ry:34,fill:'rgba(127,127,127,.12)',stroke:INK,'stroke-width':3},sc);el('circle',{cx:280,cy:160,r:24,fill:'none',stroke:INK,'stroke-width':3},sc);txt(sc,280,230,'frente ↓','sm');
+   var a=(-10+100*ph)*Math.PI/180,S={x:362,y:165},H={x:S.x+130*Math.sin(a),y:S.y+130*Math.cos(a)};el('line',{x1:S.x,y1:S.y,x2:H.x,y2:H.y,stroke:INK,'stroke-width':12,'stroke-linecap':'round'},sc);
+  }
+  var S2=P==='s'?{x:278,y:110}:P==='f'?{x:326,y:104}:{x:362,y:165};el('circle',{cx:S2.x,cy:S2.y,r:9,fill:OR,stroke:'#fff','stroke-width':2},sc);
+  txt(sc,S2.x+16,S2.y-14,'eixo (um ponto)','sm','start').setAttribute('fill',OR);
+  if(!RM)raf=requestAnimationFrame(frame)}
+ var raf;function go(p){P=p;tx.innerHTML=TX[p];cancelAnimationFrame(raf);raf=requestAnimationFrame(frame)}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});go(b.dataset.p)})});go('s');
+})();
+/* ---------- qual o plano ---------- */
+(function(){
+ var box=document.getElementById('plQuiz');if(!box)return;
+ var L=[['Agachamento','s','Flexão e extensão de quadril, joelho e tornozelo.'],['Elevação lateral','f','Abdução do ombro.'],['Crucifixo com halteres','t','Adução horizontal do ombro.'],['Rosca direta','s','Flexão do cotovelo.'],['Puxada aberta na frente','f','Adução do ombro com a pegada aberta.'],['Rotação externa no cabo','t','Rotação do ombro em torno do eixo longitudinal.'],['Flexão lateral do tronco','f','Inclinação para o lado.'],['Afundo','s','Flexão e extensão das pernas, para frente.']];
+ var N={s:'Sagital',f:'Frontal',t:'Transverso'};
+ L.forEach(function(x){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+x[0]+'</p><div class="seg">'+['s','f','t'].map(function(k){return '<button type="button" data-k="'+k+'">'+N[k]+'</button>'}).join('')+'</div><p class="ex">'+x[2]+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');d.querySelector('[data-k="'+x[1]+'"]').classList.add('on');if(b.dataset.k!==x[1])b.style.outline='2px solid #e11d48';d.querySelector('.ex').innerHTML=(b.dataset.k===x[1]?'✔ ':'✘ Plano '+N[x[1]].toLowerCase()+'. ')+x[2]})})});
+})();
+/* ---------- angular x linear ---------- */
+(function(){
+ var sc=document.getElementById('cinScene');if(!sc)return;var r=document.getElementById('rCi');var E={x:140,y:230},R=300;
+ function draw(){var a=+r.value,ra=a*Math.PI/180;document.getElementById('oCi').textContent=a+'°';clear(sc);
+  [[R/2,BL],[R,OR]].forEach(function(z){var rr=z[0];if(a>0)el('path',{d:'M'+(E.x+rr)+' '+E.y+' A'+rr+' '+rr+' 0 0 0 '+(E.x+rr*Math.cos(ra))+' '+(E.y-rr*Math.sin(ra)),fill:'none',stroke:z[1],'stroke-width':4,'stroke-dasharray':'2 7','stroke-linecap':'round'},sc)});
+  el('line',{x1:E.x,y1:E.y,x2:E.x+R,y2:E.y,stroke:MUT,'stroke-width':2,'stroke-dasharray':'4 6'},sc);
+  el('line',{x1:E.x,y1:E.y,x2:E.x+R*Math.cos(ra),y2:E.y-R*Math.sin(ra),stroke:INK,'stroke-width':14,'stroke-linecap':'round'},sc);
+  el('line',{x1:E.x,y1:E.y,x2:E.x-110,y2:E.y-40,stroke:INK,'stroke-width':14,'stroke-linecap':'round',opacity:.5},sc);
+  el('circle',{cx:E.x,cy:E.y,r:9,fill:MUT},sc);txt(sc,E.x,E.y+32,'cotovelo (eixo)','sm');
+  el('circle',{cx:E.x+R/2*Math.cos(ra),cy:E.y-R/2*Math.sin(ra),r:9,fill:BL,stroke:'#fff','stroke-width':2},sc);
+  el('circle',{cx:E.x+R*Math.cos(ra),cy:E.y-R*Math.sin(ra),r:11,fill:OR,stroke:'#fff','stroke-width':2},sc);
+  document.getElementById('cA').textContent=a+'° = '+fmt(ra,2)+' rad';document.getElementById('cM').textContent=fmt(17.5*ra,1)+' cm';document.getElementById('cH').textContent=fmt(35*ra,1)+' cm'}
+ r.addEventListener('input',draw);anim(document.getElementById('pCin'),r,0,140,draw);draw();
+})();
+/* ---------- côncavo-convexo ---------- */
+(function(){
+ var root=document.getElementById('simArt');if(!root)return;var sc=document.getElementById('artScene'),r=document.getElementById('rAr'),tx=document.getElementById('artTxt');var K='cx';
+ function legend(sg,same){if(!sg)return;var X=440;txt(sc,X,96,'rolamento','sm','start').setAttribute('fill',OR);arrow(sc,sg>0?X:X+90,110,sg>0?X+90:X,110,OR,4);
+  txt(sc,X,150,'deslizamento','sm','start').setAttribute('fill',BL);var d=same?sg:-sg;arrow(sc,d>0?X:X+90,164,d>0?X+90:X,164,BL,4,'7 5');txt(sc,X,196,same?'mesmo sentido':'sentidos opostos','sm','start')}
+ function draw(){var a=+r.value,ra=a*Math.PI/180,sg=a>0?1:a<0?-1:0;document.getElementById('oAr').textContent=(a>0?'+':'')+a+'°';clear(sc);
+  if(K==='cx'){var O={x:220,y:160};
+   el('path',{d:'M'+(O.x-84)+' '+(O.y+30)+' A88 88 0 0 0 '+(O.x+84)+' '+(O.y+30),fill:'none',stroke:MUT,'stroke-width':14,'stroke-linecap':'round'},sc);txt(sc,O.x,272,'côncava (fixa)','sm');
+   var shx=-sg*8;el('circle',{cx:O.x+shx,cy:O.y,r:62,fill:'rgba(127,127,127,.15)',stroke:INK,'stroke-width':3},sc);
+   el('line',{x1:O.x+shx,y1:O.y,x2:O.x+shx+130*Math.sin(ra),y2:O.y-130*Math.cos(ra),stroke:INK,'stroke-width':16,'stroke-linecap':'round'},sc);txt(sc,O.x+shx,O.y+6,'convexa','sm');
+   legend(sg,false);
+   tx.innerHTML='<b>Convexo sobre côncavo:</b> a “bola” rola para o lado em que o osso vai, mas <b>desliza no sentido oposto</b> para não sair da concha. Ex.: cabeça do úmero na glenoide, cabeça do fêmur no acetábulo.'}
+  else{var B={x:220,y:200};
+   el('circle',{cx:B.x,cy:B.y,r:60,fill:'rgba(127,127,127,.15)',stroke:MUT,'stroke-width':3},sc);txt(sc,B.x,B.y+6,'convexa (fixa)','sm');
+   var p=function(ang,rr){return {x:B.x+rr*Math.sin(ang),y:B.y-rr*Math.cos(ang)}};var a1=ra-0.6,a2=ra+0.6,P1=p(a1,72),P2=p(a2,72),C=p(ra,72),T=p(ra,190);
+   el('path',{d:'M'+P1.x+' '+P1.y+' A72 72 0 0 1 '+P2.x+' '+P2.y,fill:'none',stroke:INK,'stroke-width':14,'stroke-linecap':'round'},sc);
+   el('line',{x1:C.x,y1:C.y,x2:T.x,y2:T.y,stroke:INK,'stroke-width':16,'stroke-linecap':'round'},sc);txt(sc,T.x+12,T.y+4,'côncava','sm','start');
+   legend(sg,true);
+   tx.innerHTML='<b>Côncavo sobre convexo:</b> a “concha” rola e desliza <b>no mesmo sentido</b> do movimento do osso. Ex.: a tíbia sobre o fêmur na cadeira extensora (cadeia aberta).'}
+ }
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){K=b.dataset.k;root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});draw()})});r.addEventListener('input',draw);draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

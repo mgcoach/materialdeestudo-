@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Biomecânica 1: Cadeia Cinética e Contração | MG COACH">
-    <meta property="og:description" content="Parte 1 da série de Fisiologia Endócrina (CBMF): o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e tipos de receptor, e a síntese dos hormônios peptídicos e esteroides.">
+    <meta property="og:description" content="Cadeia cinética aberta e fechada animadas, papéis dos músculos, simulador de contração concêntrica, isométrica e excêntrica, acoplamento excitação-contração passo a passo e a curva força-velocidade.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/biomecanica1-3-cadeia-contracao.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -39,11 +74,13 @@
   </div>
   <nav class="toc" id="tocNav">
     <a href="#cadeia">Cadeia cinética</a>
-    <a href="#abertafechada">Aberta vs fechada</a>
-    <a href="#agon">Agonistas e sinergistas</a>
-    <a href="#tipos">Tipos de contração</a>
-    <a href="#fisiologia">Fisiologia da contração</a>
+    <a href="#aberta-fechada">Aberta × fechada</a>
+    <a href="#papeis">Papéis dos músculos</a>
+    <a href="#contracoes">Tipos de contração</a>
+    <a href="#fisiologia">Do nervo ao filamento</a>
+    <a href="#forca-velocidade">Força × velocidade</a>
     <a href="#excentrica">A força da excêntrica</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -57,7 +94,7 @@
     <a href="biomecanica1-4-cargas-flexibilidade.html">4 &middot; Cargas e Flexibilidade</a>
   </div>
   <h1>Cadeia cinética e <span class="em">contração</span></h1>
-  <p class="lede">Como o corpo funciona como uma corrente de elos, a diferença entre cadeia <b>aberta e fechada</b> (e por que fixação distal é o que importa), os tipos de <b>contração</b>, a fisiologia do nervo ao filamento, e por que a fase <b>excêntrica</b> é a mais forte.</p>
+  <p class="lede">Como o corpo funciona como uma corrente de elos, a diferença entre cadeia <b>aberta e fechada</b> (e por que fixação distal é o que importa), os tipos de <b>contração</b>, a fisiologia do nervo ao filamento, e por que a fase <b>excêntrica</b> é a mais forte. Agora com <b>animações e simuladores</b> de cadeia, contração e força-velocidade.</p>
 </div>
 
 <main>
@@ -65,105 +102,144 @@
 <section id="cadeia">
   <span class="sec-num">01 &mdash; CADEIA CINÉTICA</span>
   <h2>O corpo como uma <span class="accent">corrente</span></h2>
-  <p class="sec-sub">Elos interconectados que se adaptam quando um se move.</p>
+  <p class="sec-sub">Elos ligados: quando um se move, os outros se ajustam.</p>
   <div class="def">
     <div class="word">Cadeia cinética</div>
-    <p>Uma montagem de elos (ossos + articulações) interconectados de modo que um movimento gere um movimento controlado nos demais. Quando um elo se move, os outros se adaptam.</p>
+    <p>Conjunto de segmentos (ossos) ligados por articulações, em que o movimento de um elo influencia os vizinhos. No agachamento, tornozelo, joelho e quadril dobram juntos: se um deles trava, os outros compensam.</p>
   </div>
   <div class="callout">
-    <span class="tag">O SNC pensa em movimento, não em músculo</span>
-    <p>O sistema nervoso está mais preocupado com a <strong>sinergia</strong> do que com o controle individual dos músculos — ele coordena o movimento como um conjunto. Por isso treinos multiarticulares geram maior funcionalidade, e as compensações musculares (ajustes automáticos) são naturais e saudáveis. A <strong>variabilidade motora</strong> contribui para a sinergia e reduz o risco de lesão por sobrecarga repetitiva.</p>
+    <span class="tag">O sistema nervoso pensa em movimentos</span>
+    <p>O cérebro organiza <b>padrões</b> (agachar, empurrar, puxar), não músculos isolados. Por isso exercícios multiarticulares treinam coordenação entre os elos. Pequenas variações de execução são normais e ajudam a distribuir a carga; uma compensação só é problema quando é grande, repetida e sobrecarrega sempre o mesmo ponto.</p>
   </div>
 </section>
 
-<section id="abertafechada">
-  <span class="sec-num">02 &mdash; ABERTA VS FECHADA</span>
-  <h2>O que define é a <span class="accent">fixação distal</span></h2>
-  <p class="sec-sub">Não é se o movimento é uni ou bilateral — é se o segmento distal está preso.</p>
-  <div class="grid2">
-    <div class="mini"><h4>Cadeia aberta (CCA)</h4><p>Segmento distal (mãos/pés) <b>livre</b>. Contrações mais concêntricas, menos sinergistas, menor estabilidade, mais isolamento. Ex.: cadeira extensora.</p></div>
-    <div class="mini"><h4>Cadeia fechada (CCF)</h4><p>Segmento distal <b>fixo</b>. Mais sinergistas e coativação, maior estabilidade e coordenação. Ex.: agachamento, barra fixa.</p></div>
+<section id="aberta-fechada">
+  <span class="sec-num">02 &mdash; ABERTA × FECHADA</span>
+  <h2>O que define é o segmento <span class="accent">da ponta</span></h2>
+  <p class="sec-sub">Mão ou pé livres = cadeia aberta. Presos numa superfície = cadeia fechada.</p>
+  <div class="sim" id="simCad">
+    <div class="sim-head"><b>Quem se move?</b><div class="seg" role="group" aria-label="Tipo de cadeia"><button type="button" class="on" data-k="a">Aberta · extensora</button><button type="button" data-k="f">Fechada · agachamento</button></div></div>
+    <svg viewBox="0 0 560 300" class="sim-svg" role="img" aria-label="Perna em cadeia aberta ou fechada"><g id="cadScene"></g></svg>
+    <p class="lev-txt" id="cadTxt"></p>
   </div>
-  <div class="callout">
-    <span class="tag">Corrige uma confusão comum</span>
-    <p>Movimento unilateral <strong>não</strong> é sinônimo de cadeia aberta. Numa elevação pélvica unilateral, mesmo com uma perna "solta", o movimento continua sendo de <strong>cadeia fechada</strong>, porque o pé de apoio está fixo no solo. O que define é a <strong>fixação distal</strong>. Outro exemplo: barra fixa é CCF (o corpo sobe em direção às mãos fixas); puxada na polia é CCA (a barra se move em direção ao corpo).</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th></th><th>Cadeia aberta (CCA)</th><th>Cadeia fechada (CCF)</th></tr></thead>
+    <tbody>
+    <tr><td><b>Ponta</b></td><td>Livre</td><td>Fixa (chão, banco, barra)</td></tr>
+    <tr><td><b>Quem se move</b></td><td>O segmento da ponta</td><td>O segmento de cima move-se sobre a ponta fixa</td></tr>
+    <tr><td><b>Articulações</b></td><td>Geralmente uma, isolada</td><td>Várias ao mesmo tempo</td></tr>
+    <tr><td><b>Coativação</b></td><td>Menor</td><td>Maior (mais estabilidade)</td></tr>
+    <tr><td><b>Exemplos</b></td><td>Extensora, flexora, rosca, puxada na polia</td><td>Agachamento, leg press, barra fixa, flexão de braço</td></tr>
+    </tbody></table></div>
+  <div class="callout warn">
+    <span class="tag">Pegadinha</span>
+    <p><b>Unilateral não é sinônimo de cadeia aberta.</b> Na elevação pélvica unilateral o pé de apoio está preso no chão: é cadeia fechada. Na <b>barra fixa</b> o corpo sobe até as mãos (fechada); na <b>puxada</b> a barra desce até o corpo (aberta). O leg press é fechado, apesar de você estar sentado: o pé empurra uma plataforma que não te deixa “sair”.</p>
   </div>
 </section>
 
-<section id="agon">
-  <span class="sec-num">03 &mdash; AGONISTAS E SINERGISTAS</span>
-  <h2>Quem faz e quem <span class="accent">ajuda</span></h2>
-  <p class="sec-sub">Toda contração envolve uma dupla de músculos opostos.</p>
-  <ul class="clean">
-    <li><b>Agonista:</b> o músculo que realiza o movimento (ex.: bíceps na flexão do cotovelo).</li>
-    <li><b>Antagonista:</b> alonga enquanto o agonista contrai, mantendo fluidez e proteção (ex.: tríceps na mesma flexão).</li>
-    <li><b>Sinergista:</b> auxilia o agonista, estabilizando ou complementando (ex.: braquial e braquiorradial ajudando na flexão do cotovelo).</li>
-  </ul>
+<section id="papeis">
+  <span class="sec-num">03 &mdash; PAPÉIS DOS MÚSCULOS</span>
+  <h2>Quem faz, quem freia e quem <span class="accent">ajuda</span></h2>
+  <p class="sec-sub">Um mesmo músculo muda de papel conforme o movimento.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Papel</th><th>O que faz</th><th>Na rosca direta</th></tr></thead>
+    <tbody>
+    <tr><td><b>Agonista</b></td><td>Principal responsável pelo movimento</td><td>Bíceps braquial e braquial</td></tr>
+    <tr><td><b>Antagonista</b></td><td>Faz o movimento oposto; relaxa e alonga de forma controlada</td><td>Tríceps</td></tr>
+    <tr><td><b>Sinergista</b></td><td>Ajuda o agonista ou neutraliza movimentos indesejados</td><td>Braquiorradial</td></tr>
+    <tr><td><b>Estabilizador</b></td><td>Segura uma articulação parada para outra se mover</td><td>Manguito e deltoide fixando o ombro</td></tr>
+    </tbody></table></div>
 </section>
 
-<section id="tipos">
+<section id="contracoes">
   <span class="sec-num">04 &mdash; TIPOS DE CONTRAÇÃO</span>
-  <h2>Isométrica e <span class="accent">dinâmica</span></h2>
-  <p class="sec-sub">Com ou sem movimento da articulação.</p>
-  <div class="grid2">
-    <div class="mini"><h4>Isométrica</h4><p>O músculo gera força mas <b>não muda de comprimento</b> — a articulação não se move ("travar" na posição). Ex.: pausar no fundo do agachamento. Gera adaptações reais (≥70% 1RM aumenta espessura muscular, força e estabilidade no ângulo treinado).</p></div>
-    <div class="mini"><h4>Dinâmica</h4><p>O músculo muda de comprimento e a articulação se move. Pode ser <b>concêntrica</b> (encurta) ou <b>excêntrica</b> (alonga sob carga).</p></div>
+  <h2>Vencer, segurar ou <span class="accent">ceder</span></h2>
+  <p class="sec-sub">O que decide é a briga entre a força do músculo e o torque da carga.</p>
+  <div class="sim" id="simCon">
+    <div class="sim-head"><b>Simulador · tipos de contração</b><span class="muted">rosca com 12 kg</span></div>
+    <svg viewBox="0 0 560 230" class="sim-svg" role="img" aria-label="Cabo de guerra entre músculo e carga"><g id="conScene"></g></svg>
+    <div class="ctl"><label>Esforço do músculo <output id="oCo">100%</output><input type="range" id="rCo" min="40" max="160" value="100"></label></div>
+    <p class="lev-txt" id="conTxt"></p>
   </div>
   <ul class="clean">
-    <li><b>Concêntrica</b> ("fase positiva"): o músculo vence a resistência e encurta. Ex.: subir no leg press, fechar o pec deck.</li>
-    <li><b>Excêntrica</b> ("fase negativa"): a resistência vence a força muscular e o músculo alonga sob tensão. Ex.: descer no supino. <b>40–60% mais forte que a concêntrica.</b></li>
+    <li><b>Concêntrica</b> (fase positiva): o torque muscular vence o da carga e o músculo <b>encurta</b>. Subir no leg press, fechar o crucifixo.</li>
+    <li><b>Isométrica</b>: os torques se igualam; o músculo faz força sem mudar de comprimento. A pausa no fundo do agachamento. Isometria com esforço alto também gera força e hipertrofia, principalmente perto do ângulo treinado.</li>
+    <li><b>Excêntrica</b> (fase negativa): a carga vence e o músculo <b>alonga freando</b> o movimento. Descer no supino.</li>
   </ul>
 </section>
 
 <section id="fisiologia">
-  <span class="sec-num">05 &mdash; FISIOLOGIA DA CONTRAÇÃO</span>
-  <h2>Do <span class="accent">nervo</span> ao filamento</h2>
-  <p class="sec-sub">O passo a passo de como o músculo se move.</p>
-  <div class="stepwrap">
-    <div class="step"><h4>Sinal do SNC</h4><p>O potencial de ação sai do sistema nervoso central e desce pelo motoneurônio até a fibra. O corpo sempre prioriza: neurônio → músculo → movimento.</p></div>
-    <div class="step"><h4>Acetilcolina</h4><p>Na junção neuromuscular, o nervo libera acetilcolina (ACh), o sinal químico que "liga" o músculo.</p></div>
-    <div class="step"><h4>Despolarização</h4><p>A ACh abre canais: entra sódio (Na⁺), sai potássio (K⁺) → muda a carga elétrica da fibra (despolarização).</p></div>
-    <div class="step"><h4>Liberação de cálcio</h4><p>O retículo sarcoplasmático libera Ca²⁺. Sem cálcio, não há contração.</p></div>
-    <div class="step"><h4>Pontes cruzadas</h4><p>O Ca²⁺ liga-se à troponina, que desloca a tropomiosina e expõe os sítios da actina. A miosina se conecta, e os filamentos deslizam → contração (cross-bridge cycle).</p></div>
+  <span class="sec-num">05 &mdash; DO NERVO AO FILAMENTO</span>
+  <h2>Como o músculo <span class="accent">contrai</span></h2>
+  <p class="sec-sub">Toque em “Próximo” para seguir o sinal.</p>
+  <div class="sim" id="simEC">
+    <div class="sim-head"><b>Acoplamento excitação-contração</b><span class="muted" id="ecN">1 / 5</span></div>
+    <svg viewBox="0 0 560 220" class="sim-svg" role="img" aria-label="Etapas da contração muscular"><g id="ecScene"></g></svg>
+    <p class="lev-txt" id="ecTxt"></p>
+    <div class="sim-foot"><button type="button" class="play" id="ecPrev">◀</button><button type="button" class="play" id="ecNext">Próximo ▶</button></div>
   </div>
-  <div class="callout">
-    <span class="tag">Relação força-velocidade</span>
-    <p>Quanto mais rápido um músculo se encurta, <strong>menor</strong> a força que consegue gerar (menos tempo para os filamentos formarem pontes). Por isso: excêntricas lentas aumentam força e tempo sob tensão; concêntricas explosivas recrutam fibras rápidas. (A fisiologia completa está no estudo <em>Contração Muscular</em>.)</p>
+  <p>Para aprofundar cada etapa, veja o material <a href="contracao-muscular.html">Contração Muscular</a>.</p>
+</section>
+
+<section id="forca-velocidade">
+  <span class="sec-num">06 &mdash; FORÇA × VELOCIDADE</span>
+  <h2>Rápido e forte ao mesmo tempo <span class="accent">não dá</span></h2>
+  <p class="sec-sub">A curva que explica cadência, explosão e a força da negativa.</p>
+  <div class="sim" id="simFV">
+    <div class="sim-head"><b>Curva força-velocidade</b><span class="muted">← alongando · encurtando →</span></div>
+    <svg viewBox="0 0 560 260" class="sim-svg" role="img" aria-label="Curva força-velocidade do músculo"><g id="fvScene"></g></svg>
+    <div class="ctl"><label>Velocidade <output id="oFv">0</output><input type="range" id="rFv" min="-100" max="100" value="40"></label></div>
+    <div class="readout"><div><span>Tipo</span><b id="fvT">–</b></div><div><span>Força possível</span><b id="fvF">–</b></div><div><span>Potência</span><b id="fvP">–</b></div></div>
   </div>
+  <ul class="clean">
+    <li><b>Concêntrica:</b> quanto mais rápido o encurtamento, menos força, porque sobram menos pontes cruzadas ligadas a cada instante.</li>
+    <li><b>Isométrica (velocidade zero):</b> a referência, 100% da força.</li>
+    <li><b>Excêntrica:</b> a força <b>passa</b> da isométrica, cerca de 20 a 60% a mais, e quase não cai com a velocidade.</li>
+    <li><b>Potência</b> = força × velocidade: é máxima numa velocidade intermediária, por volta de um terço da velocidade máxima.</li>
+  </ul>
 </section>
 
 <section id="excentrica">
-  <span class="sec-num">06 &mdash; A FORÇA DA EXCÊNTRICA</span>
-  <h2>Por que a <span class="accent">negativa</span> é mais forte</h2>
-  <p class="sec-sub">A titina entra em cena.</p>
-  <p>Na fase excêntrica, a proteína <strong>titina</strong> (que funciona como uma mola) liga-se à actina, reduzindo o comprimento de sua "mola livre". Com menos estrutura sendo tensionada, gera-se uma <strong>força residual maior</strong>. Some-se a isso a tensão passiva do tecido conjuntivo quando o músculo é alongado: mesmo que a força ativa caia no alongamento, a força passiva aumenta — e a força total fica elevada.</p>
+  <span class="sec-num">07 &mdash; A FORÇA DA EXCÊNTRICA</span>
+  <h2>Por que a negativa é <span class="accent">mais forte</span></h2>
+  <p class="sec-sub">Pontes cruzadas, titina e tecido conjuntivo somando forças.</p>
+  <ul class="clean">
+    <li><b>Pontes cruzadas</b> sendo puxadas para trás aguentam mais tensão antes de soltar do que geram ao puxar.</li>
+    <li><b>Titina</b>, a “mola” gigante do sarcômero: uma das explicações é que ela fica mais rígida quando o músculo está ativado e é alongado, somando força passiva.</li>
+    <li><b>Tecido conjuntivo</b> alongado também resiste e soma tensão.</li>
+  </ul>
   <div class="callout ok">
     <span class="tag">Aplicação</span>
-    <p>A excêntrica produz mais tensão, causa mais microlesão e recruta mais fibras tipo II — por isso é potente para força e hipertrofia (embora o ganho não seja <strong>tão</strong> maior que a concêntrica). É o que explica por que o corpo desce com 200 kg no agachamento mas não sobe com a mesma facilidade. Treinos com pausas, cadência lenta e negativas longas exploram isso.</p>
+    <p>Por isso você desce com cargas que não consegue subir, e por isso a negativa causa mais dor muscular tardia em quem não está acostumado. Para hipertrofia, controlar a descida ajuda, mas a vantagem sobre treinar as duas fases normalmente é pequena. O mais importante é chegar perto da falha com boa amplitude.</p>
   </div>
 </section>
 
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">07 &mdash; PARA FIXAR</span>
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
-  <p class="sec-sub">O essencial da Parte 3.</p>
-  <ol class="key">
-    <li><b>Cadeia cinética:</b> elos interconectados; o SNC coordena sinergia, não músculos isolados.</li>
-    <li><b>Aberta (CCA)</b> = distal livre, isola; <b>fechada (CCF)</b> = distal fixo, mais estabilidade.</li>
-    <li><b>O que define é a fixação distal</b>, não se o movimento é uni ou bilateral.</li>
-    <li><b>Agonista</b> faz, <b>antagonista</b> alonga, <b>sinergista</b> ajuda.</li>
-    <li><b>Isométrica</b> (sem movimento) também gera hipertrofia (≥70% 1RM).</li>
-    <li><b>Concêntrica</b> encurta; <b>excêntrica</b> alonga e é 40–60% mais forte.</li>
-    <li><b>Fisiologia:</b> SNC → ACh → despolarização → cálcio → pontes cruzadas.</li>
-    <li><b>Excêntrica</b> mais forte pela titina + tensão passiva; potente para hipertrofia.</li>
-  </ol>
+  <ul class="clean">
+    <li>Cadeia cinética: elos ligados; o sistema nervoso organiza padrões de movimento.</li>
+    <li>Aberta = ponta livre; fechada = ponta fixa. Unilateral não define o tipo de cadeia.</li>
+    <li>Agonista, antagonista, sinergista e estabilizador são papéis, não músculos fixos.</li>
+    <li>Concêntrica vence, isométrica empata, excêntrica cede freando.</li>
+    <li>Nervo → acetilcolina → potencial de ação → cálcio → pontes cruzadas.</li>
+    <li>Mais velocidade de encurtamento = menos força; a excêntrica supera a isométrica.</li>
+  </ul>
   <div class="nav-next">
-    <a href="biomecanica1-2-torque-alavancas.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 2 &middot; Torque e Alavancas</span></a>
-    <a href="biomecanica1-4-cargas-flexibilidade.html"><span class="lbl">Próximo da série</span><span class="ttl">4 &middot; Cargas e Flexibilidade &rarr;</span></a>
+    <a href="biomecanica1-2-torque-alavancas.html"><span class="lbl">Anterior</span><span class="ttl">&#8592; 2 · Torque e Alavancas</span></a>
+    <a href="biomecanica1-4-cargas-flexibilidade.html"><span class="lbl">Próximo da série</span><span class="ttl">4 · Cargas e Flexibilidade &#8594;</span></a>
   </div>
 </section>
 
 </main>
+
 
 <footer>
   <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
@@ -172,5 +248,117 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF, organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'O que define se o exercício é de cadeia aberta ou fechada?',a:['Ser unilateral ou bilateral','Se o segmento da ponta (mão ou pé) está livre ou fixo','O número de músculos','A carga usada'],c:1,e:'Ponta livre = aberta; ponta presa numa superfície = fechada.'},
+{q:'A barra fixa e a puxada na polia são, respectivamente:',a:['Aberta e aberta','Fechada e aberta','Aberta e fechada','Fechada e fechada'],c:1,e:'Na barra o corpo sobe até as mãos fixas; na puxada a barra vem até o corpo.'},
+{q:'Na descida do supino, o peitoral faz contração:',a:['Concêntrica','Isométrica','Excêntrica','Nenhuma'],c:2,e:'A carga vence e o músculo alonga freando: excêntrica.'},
+{q:'Na rosca direta, o tríceps é o:',a:['Agonista','Antagonista','Sinergista','Estabilizador do punho'],c:1,e:'Faz o movimento oposto (extensão) e relaxa de forma controlada.'},
+{q:'Qual íon, liberado pelo retículo sarcoplasmático, permite a ligação actina-miosina?',a:['Sódio','Potássio','Cálcio','Cloreto'],c:2,e:'O Ca²⁺ se liga à troponina, que desloca a tropomiosina.'},
+{q:'Quanto mais rápido o músculo encurta:',a:['Mais força produz','Menos força produz','A força não muda','Mais força excêntrica'],c:1,e:'Relação força-velocidade: menos pontes ligadas a cada instante.'},
+{q:'Por que você desce com uma carga que não consegue subir?',a:['A gravidade some','Na excêntrica o músculo produz mais força que na concêntrica','O músculo descansa','Só os ossos seguram'],c:1,e:'Pontes cruzadas puxadas para trás, titina e tecido conjuntivo somam força.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* ---------- cadeia aberta x fechada ---------- */
+(function(){
+ var root=document.getElementById('simCad');if(!root)return;var sc=document.getElementById('cadScene'),tx=document.getElementById('cadTxt');var K='a',t0=performance.now(),raf;
+ var TX={a:'<b>Cadeia aberta</b>: o pé está livre. Só o joelho se move e a perna (o segmento da ponta) desenha o arco. O quadríceps trabalha mais isolado.',
+         f:'<b>Cadeia fechada</b>: o pé está preso no chão. Para descer, tornozelo, joelho e quadril dobram juntos, e é a coxa que se move sobre a perna. Mais músculos coativados, mais estabilidade.'};
+ function seg(a,b,w,op){el('line',{x1:a.x,y1:a.y,x2:b.x,y2:b.y,stroke:INK,'stroke-width':w,'stroke-linecap':'round',opacity:op||1},sc)}
+ function jt(p,c){el('circle',{cx:p.x,cy:p.y,r:8,fill:c||OR,stroke:'#fff','stroke-width':2},sc)}
+ function frame(now){var ph=RM?0.6:(1-Math.cos((now-t0)/1100))/2;clear(sc);
+  if(K==='a'){el('rect',{x:150,y:110,width:150,height:22,rx:6,fill:'rgba(127,127,127,.2)'},sc);el('rect',{x:140,y:30,width:20,height:102,rx:6,fill:'rgba(127,127,127,.2)'},sc);
+   var H={x:170,y:100},Kn={x:300,y:110},a=(0+75*(1-ph))*Math.PI/180,F={x:Kn.x+120*Math.sin(a+0.0)*1,y:Kn.y+120*Math.cos(a)};
+   seg(H,Kn,16);seg(Kn,F,14);var T={x:F.x+30*Math.cos(a),y:F.y-30*Math.sin(a)};seg(F,T,10);jt(H,MUT);jt(Kn);
+   el('path',{d:'M'+(Kn.x)+' '+(Kn.y+120)+' A120 120 0 0 0 '+(Kn.x+120*Math.sin(75*Math.PI/180))+' '+(Kn.y+120*Math.cos(75*Math.PI/180)),fill:'none',stroke:OR,'stroke-width':3,'stroke-dasharray':'2 7'},sc);
+   txt(sc,F.x+44,F.y+6,'pé livre','sm','start').setAttribute('fill',OR);txt(sc,300,290,'extensora · só o joelho se move','sm')}
+  else{el('line',{x1:60,y1:292,x2:500,y2:292,stroke:MUT,'stroke-width':4},sc);
+   var A={x:300,y:282},k=ph,sh=(10+25*k)*Math.PI/180,th=(10+70*k)*Math.PI/180,Kn={x:A.x+80*Math.sin(sh),y:A.y-80*Math.cos(sh)},H={x:Kn.x-80*Math.sin(th),y:Kn.y-80*Math.cos(th)},Tr={x:H.x+60*Math.sin(0.15+0.5*k),y:H.y-60*Math.cos(0.15+0.5*k)};
+   seg({x:A.x-15,y:A.y+4},{x:A.x+35,y:A.y+4},10);seg(A,Kn,14);seg(Kn,H,16);seg(H,Tr,20,.55);el('circle',{cx:Tr.x+4,cy:Tr.y-20,r:16,fill:'none',stroke:INK,'stroke-width':3,opacity:.55},sc);
+   jt(A);jt(Kn);jt(H);txt(sc,A.x+50,A.y-4,'pé fixo','sm','start').setAttribute('fill',OR);txt(sc,280,30,'agachamento · 3 articulações juntas','sm')}
+  if(!RM)raf=requestAnimationFrame(frame)}
+ function go(k){K=k;tx.innerHTML=TX[k];cancelAnimationFrame(raf);raf=requestAnimationFrame(frame)}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});go(b.dataset.k)})});go('a');
+})();
+/* ---------- tipos de contração ---------- */
+(function(){
+ var sc=document.getElementById('conScene');if(!sc)return;var r=document.getElementById('rCo'),tx=document.getElementById('conTxt'),pos=0.4,last=performance.now(),lastMode='';
+ function draw(now){var e=+r.value;document.getElementById('oCo').textContent=e+'%';var d=(e-100)/100,dt=Math.min(.05,(now-last)/1000);last=now;
+  var v=Math.abs(d)<0.06?0:d;pos=Math.max(0,Math.min(1,pos+v*dt*0.8));clear(sc);
+  var E={x:200,y:100},S={x:196,y:6},phi=(15+130*pos)*Math.PI/180,W={x:E.x+110*Math.sin(phi),y:E.y+110*Math.cos(phi)},I={x:E.x+28*Math.sin(phi),y:E.y+28*Math.cos(phi)};
+  var col=v>0?GR:v<0?RD:OR;
+  el('line',{x1:S.x,y1:S.y,x2:E.x,y2:E.y,stroke:INK,'stroke-width':16,'stroke-linecap':'round',opacity:.5},sc);
+  var bul=14+26*pos;el('path',{d:'M'+(S.x+8)+' '+(S.y+12)+' Q'+(E.x+bul+10)+' '+((S.y+I.y)/2)+' '+I.x+' '+I.y,fill:'none',stroke:col,'stroke-width':11,'stroke-linecap':'round'},sc);
+  el('line',{x1:E.x,y1:E.y,x2:W.x,y2:W.y,stroke:INK,'stroke-width':14,'stroke-linecap':'round'},sc);el('circle',{cx:E.x,cy:E.y,r:8,fill:MUT},sc);
+  el('rect',{x:W.x-15,y:W.y-9,width:30,height:18,rx:5,fill:INK},sc);arrow(sc,W.x-26,W.y,W.x-26,W.y+30,BL,4);txt(sc,W.x-34,W.y+26,'12 kg','sm','end').setAttribute('fill',BL);
+  var bw=150;txt(sc,370,34,'torque do músculo','sm','start');el('rect',{x:370,y:42,width:bw,height:14,rx:7,fill:'rgba(127,127,127,.18)'},sc);el('rect',{x:370,y:42,width:bw*Math.min(1,e/160),height:14,rx:7,fill:col},sc);
+  txt(sc,370,80,'torque da carga','sm','start');el('rect',{x:370,y:88,width:bw,height:14,rx:7,fill:'rgba(127,127,127,.18)'},sc);el('rect',{x:370,y:88,width:bw*100/160,height:14,rx:7,fill:BL},sc);
+  var lab=v>0?'CONCÊNTRICA':v<0?'EXCÊNTRICA':'ISOMÉTRICA';var sub=v>0?'encurta e vence':v<0?'alonga freando':'força sem movimento';
+  var tt=txt(sc,445,150,lab,'');tt.setAttribute('fill',col);tt.setAttribute('font-weight','700');txt(sc,445,174,sub,'sm');
+  if(pos>=1&&v>0)txt(sc,445,198,'(chegou ao topo)','sm');if(pos<=0&&v<0)txt(sc,445,198,'(braço estendido)','sm');
+  var m=v>0?'c':v<0?'e':'i';if(m!==lastMode){lastMode=m;tx.innerHTML=v>0?'O torque do músculo <b>vence</b> o da carga: o antebraço sobe e o bíceps encurta.':v<0?'A carga <b>vence</b>: o antebraço desce, mas o bíceps continua ativo, freando. É a fase negativa.':'Os torques <b>empatam</b>: força alta, comprimento constante, nenhum movimento.'}
+  requestAnimationFrame(draw)}
+ requestAnimationFrame(draw);
+})();
+/* ---------- excitação-contração ---------- */
+(function(){
+ var sc=document.getElementById('ecScene');if(!sc)return;var tx=document.getElementById('ecTxt'),n=document.getElementById('ecN'),i=0,t0=performance.now();
+ var S=[['1 · Sinal do neurônio motor','O potencial de ação desce pelo axônio do neurônio motor até a junção neuromuscular.'],
+  ['2 · Acetilcolina','Na junção, o nervo libera <b>acetilcolina</b>. Ela se liga aos receptores da fibra e abre canais: entra Na⁺ e a membrana despolariza.'],
+  ['3 · Potencial de ação na fibra','A despolarização vira um potencial de ação que corre pela membrana e entra pelos <b>túbulos T</b>, chegando ao interior da fibra.'],
+  ['4 · Liberação de cálcio','O sinal nos túbulos T faz o <b>retículo sarcoplasmático</b> liberar Ca²⁺ no citoplasma.'],
+  ['5 · Pontes cruzadas','O Ca²⁺ se liga à <b>troponina</b>, que tira a <b>tropomiosina</b> da frente. A miosina agarra a actina e puxa (com gasto de ATP): os filamentos deslizam e o sarcômero encurta.']];
+ function frame(now){var t=((now-t0)/1600)%1;clear(sc);
+  // neurônio
+  el('path',{d:'M20 60 C120 60 160 60 230 80',fill:'none',stroke:i===0?OR:MUT,'stroke-width':6,'stroke-linecap':'round'},sc);txt(sc,40,44,'neurônio motor','sm','start');
+  el('path',{d:'M220 70 q20 -6 30 14 q-14 16 -34 4z',fill:i<=1?OR:MUT},sc);
+  // fibra
+  el('rect',{x:60,y:110,width:440,height:90,rx:40,fill:'rgba(127,127,127,.10)',stroke:i===2?OR:MUT,'stroke-width':3},sc);txt(sc,470,100,'fibra muscular','sm','end');
+  if(i===0){var x=20+210*t;el('circle',{cx:x,cy:60+20*Math.max(0,(x-160)/70),r:7,fill:OR},sc)}
+  if(i===1){for(var k=0;k<5;k++){var yy=88+22*((t+k/5)%1);el('circle',{cx:226+k*7-14,cy:yy,r:3.5,fill:BL},sc)}txt(sc,300,92,'ACh','sm','start').setAttribute('fill',BL)}
+  if(i>=2){[180,280,380].forEach(function(xx){el('line',{x1:xx,y1:110,x2:xx,y2:200,stroke:i===2?OR:MUT,'stroke-width':3,'stroke-dasharray':'4 4'},sc)});if(i===2){var px=80+400*t;el('circle',{cx:px,cy:112,r:6,fill:OR},sc)}txt(sc,180,216,'túbulos T','sm')}
+  if(i>=3){el('rect',{x:200,y:122,width:60,height:16,rx:8,fill:'rgba(37,99,235,.25)'},sc);el('rect',{x:300,y:122,width:60,height:16,rx:8,fill:'rgba(37,99,235,.25)'},sc);txt(sc,330,155,i===3?'retículo':'','sm');
+   for(var q=0;q<8;q++){var u=(t+q/8)%1;el('circle',{cx:215+q*18,cy:140+40*(i===3?u:1)-(i===3?0:8*((q%3))),r:4,fill:'#ca8a04'},sc)}if(i===3)txt(sc,420,135,'Ca²⁺','sm').setAttribute('fill','#ca8a04')}
+  if(i===4){var sl=10*Math.sin(t*Math.PI);el('line',{x1:90+sl,y1:170,x2:250+sl,y2:170,stroke:RD,'stroke-width':5},sc);el('line',{x1:310-sl,y1:170,x2:470-sl,y2:170,stroke:RD,'stroke-width':5},sc);
+   el('line',{x1:200,y1:184,x2:360,y2:184,stroke:INK,'stroke-width':9,'stroke-linecap':'round'},sc);for(var h=0;h<6;h++){el('line',{x1:212+h*26,y1:180,x2:206+h*26-6*Math.sin(t*6.28),y2:173,stroke:INK,'stroke-width':2.5},sc)}
+   txt(sc,120,160,'actina','sm').setAttribute('fill',RD);txt(sc,280,206,'miosina','sm')}
+  if(!RM)requestAnimationFrame(frame)}
+ function go(k){i=Math.max(0,Math.min(4,k));n.textContent=(i+1)+' / 5';tx.innerHTML='<b>'+S[i][0]+'</b><br>'+S[i][1];document.getElementById('ecNext').textContent=i===4?'Recomeçar ↺':'Próximo ▶';if(RM)frame(performance.now())}
+ document.getElementById('ecNext').addEventListener('click',function(){go(i===4?0:i+1)});document.getElementById('ecPrev').addEventListener('click',function(){go(i-1)});go(0);if(!RM)requestAnimationFrame(frame);
+})();
+/* ---------- força-velocidade ---------- */
+(function(){
+ var sc=document.getElementById('fvScene');if(!sc)return;var r=document.getElementById('rFv');var X0=280,Y0=220,SX=2.4,SY=100,PM=0;
+ function F(v){if(v>=0){return (1-v/100)/(1+3*v/100)}var u=-v/100;return 1.5-0.5*Math.exp(-6*u)}
+ for(var q=0;q<=100;q++)PM=Math.max(PM,F(q)*q/100);
+ function draw(){var v=+r.value;document.getElementById('oFv').textContent=v>0?v+'% (encurta)':v<0?(-v)+'% (alonga)':'0';clear(sc);
+  el('line',{x1:40,y1:Y0,x2:530,y2:Y0,stroke:MUT,'stroke-width':2},sc);el('line',{x1:X0,y1:20,x2:X0,y2:Y0,stroke:MUT,'stroke-width':2},sc);
+  txt(sc,528,Y0+40,'velocidade →','sm','end');txt(sc,X0+6,30,'força','sm','start');txt(sc,150,Y0+20,'excêntrica','sm').setAttribute('fill',BL);txt(sc,400,Y0+20,'concêntrica','sm').setAttribute('fill',GR);
+  el('line',{x1:40,y1:Y0-SY,x2:530,y2:Y0-SY,stroke:MUT,'stroke-width':1,'stroke-dasharray':'4 5'},sc);txt(sc,44,Y0-SY-6,'isométrica = 100%','sm','start');
+  var d='',dp='';for(var x=-100;x<=100;x+=2){var px=X0+x*SX,py=Y0-F(x)*SY;d+=(x===-100?'M':'L')+px+' '+py;if(x>=0){var pw=F(x)*x/100;dp+=(x===0?'M':'L')+px+' '+(Y0-pw*SY*4.2)}}
+  el('path',{d:d,fill:'none',stroke:INK,'stroke-width':4},sc);el('path',{d:dp,fill:'none',stroke:OR,'stroke-width':3,'stroke-dasharray':'6 5'},sc);txt(sc,470,Y0-40,'potência','sm').setAttribute('fill',OR);
+  var px=X0+v*SX,py=Y0-F(v)*SY;el('line',{x1:px,y1:Y0,x2:px,y2:py,stroke:v<0?BL:v>0?GR:OR,'stroke-width':2,'stroke-dasharray':'3 4'},sc);el('circle',{cx:px,cy:py,r:9,fill:v<0?BL:v>0?GR:OR,stroke:'#fff','stroke-width':2},sc);
+  document.getElementById('fvT').textContent=v>0?'Concêntrica':v<0?'Excêntrica':'Isométrica';document.getElementById('fvF').textContent=Math.round(F(v)*100)+'%';document.getElementById('fvP').textContent=v>0?Math.round(F(v)*v/100/PM*100)+'% do pico':'–'}
+ r.addEventListener('input',draw);draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

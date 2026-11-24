@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Biomecânica 1: Cargas e Flexibilidade | MG COACH">
-    <meta property="og:description" content="Parte 1 da série de Fisiologia Endócrina (CBMF): o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e tipos de receptor, e a síntese dos hormônios peptídicos e esteroides.">
+    <meta property="og:description" content="Curvas de resistência de peso livre, elástico, corrente e máquina, cargas mecânicas animadas, curva tensão-deformação interativa, carga × capacidade e as diferenças entre flexibilidade, mobilidade e tipos de alongamento.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/biomecanica1-4-cargas-flexibilidade.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -40,10 +75,11 @@
   <nav class="toc" id="tocNav">
     <a href="#resistencias">Tipos de resistência</a>
     <a href="#cargas">Cargas mecânicas</a>
-    <a href="#curva">Curva tensão-deformação</a>
+    <a href="#tensao-deformacao">Tensão-deformação</a>
     <a href="#lesao">Carga e lesão</a>
-    <a href="#flex">Flexibilidade e mobilidade</a>
-    <a href="#along">Tipos de alongamento</a>
+    <a href="#flexibilidade">Flexibilidade e mobilidade</a>
+    <a href="#alongamento">Tipos de alongamento</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -57,129 +93,133 @@
     <span class="atual">4 &middot; Cargas e Flexibilidade</span>
   </div>
   <h1>Cargas mecânicas e <span class="em">flexibilidade</span></h1>
-  <p class="lede">O fecho dos fundamentos: os <b>tipos de resistência</b> (constante, acomodável, variável), as <b>cargas mecânicas</b> sobre os tecidos, a <b>curva tensão-deformação</b>, por que carga alta não é sinônimo de lesão, e a diferença entre <b>flexibilidade, mobilidade</b> e os tipos de alongamento.</p>
+  <p class="lede">O fecho dos fundamentos: os <b>tipos de resistência</b> (constante, acomodável, variável), as <b>cargas mecânicas</b> sobre os tecidos, a <b>curva tensão-deformação</b>, por que carga alta não é sinônimo de lesão, e a diferença entre <b>flexibilidade, mobilidade</b> e os tipos de alongamento. Agora com <b>curvas de resistência, cargas animadas</b> e o simulador carga × capacidade.</p>
 </div>
 
 <main>
 
 <section id="resistencias">
   <span class="sec-num">01 &mdash; TIPOS DE RESISTÊNCIA</span>
-  <h2>De onde vem a <span class="accent">resistência</span></h2>
-  <p class="sec-sub">Constante, acomodável ou variável — cada uma muda onde o exercício pesa.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Tipo</th><th>Como funciona</th><th>Mais difícil</th><th>Exemplos</th></tr></thead>
-      <tbody>
-        <tr><td>Constante</td><td>Peso puxado pela gravidade (sempre vertical)</td><td>Perto dos 90° de alavanca</td><td>Barras, halteres, peso corporal</td></tr>
-        <tr><td>Acomodável</td><td>Resistência proporcional ao esforço</td><td>Tensão mais constante</td><td>Isocinéticos, extensora, flexora</td></tr>
-        <tr><td>Variável — polias</td><td>Direção vem do cabo</td><td>Depende da linha de tração</td><td>Crossover, tríceps na polia</td></tr>
-        <tr><td>Variável — elásticos</td><td>Tensão sobe com o alongamento</td><td>Final do movimento</td><td>Agachamento com elástico, crucifixo</td></tr>
-        <tr><td>Variável — correntes</td><td>Peso aumenta conforme sobe do chão</td><td>Final do movimento</td><td>Agachamento/supino com corrente</td></tr>
-      </tbody>
-    </table>
+  <h2>Onde o exercício <span class="accent">pesa</span></h2>
+  <p class="sec-sub">Cada tipo de resistência desenha uma curva diferente ao longo da amplitude.</p>
+  <div class="sim" id="simRes">
+    <div class="sim-head"><b>Curva de resistência · agachamento</b><span class="muted">embaixo → em cima</span></div>
+    <div class="seg" role="group" aria-label="Tipo de resistência"><button type="button" class="on" data-k="p">Peso livre</button><button type="button" data-k="e">Elástico</button><button type="button" data-k="c">Corrente</button><button type="button" data-k="m">Máquina com came</button></div>
+    <svg viewBox="0 0 560 260" class="sim-svg" role="img" aria-label="Gráfico da resistência ao longo da amplitude"><g id="resScene"></g></svg>
+    <p class="lev-txt" id="resTxt"></p>
   </div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Tipo</th><th>Como funciona</th><th>Exemplos</th></tr></thead>
+    <tbody>
+    <tr><td><b>Constante</b></td><td>Peso puxado pela gravidade, sempre na vertical. O peso não muda, mas o <b>torque</b> muda com o braço de momento.</td><td>Barras, halteres, peso corporal</td></tr>
+    <tr><td><b>Acomodável</b></td><td>A máquina ajusta a resistência para manter a velocidade constante.</td><td>Dinamômetros isocinéticos</td></tr>
+    <tr><td><b>Variável</b></td><td>A resistência muda durante o movimento por causa do equipamento.</td><td>Elásticos, correntes, máquinas com came (polia excêntrica)</td></tr>
+    <tr><td><b>Polias e cabos</b></td><td>A direção da força segue o cabo, não a gravidade. Mudar a altura da polia muda onde o exercício pesa.</td><td>Crossover, tríceps na polia</td></tr>
+    </tbody></table></div>
   <div class="callout">
-    <span class="tag">Por que isso importa</span>
-    <p>Entender de onde vem a resistência e como ela se comporta permite saber onde o exercício é difícil, onde gera mais estímulo (tensão mecânica), e prescrever com precisão. A resistência constante tem torque máximo perto dos 90°; elásticos e correntes têm <strong>perfil ascendente</strong> (mais difícil no encurtamento); polias permitem manipular a curva mudando o ângulo. (Conecta com os perfis de resistência da Biomecânica 2.)</p>
+    <span class="tag">Liga com a Parte 2</span>
+    <p>Com peso livre, o exercício é mais difícil onde o braço de momento é maior, normalmente com o segmento perto da horizontal. Elásticos e correntes ficam mais pesados no fim da subida, justamente onde a gente costuma ser mais forte.</p>
   </div>
 </section>
 
 <section id="cargas">
   <span class="sec-num">02 &mdash; CARGAS MECÂNICAS</span>
   <h2>As forças sobre os <span class="accent">tecidos</span></h2>
-  <p class="sec-sub">Como a carga é aplicada determina adaptação e risco de lesão.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Carga</th><th>O que faz</th><th>Exemplo</th></tr></thead>
-      <tbody>
-        <tr><td>Compressão</td><td>"Aperta" o tecido (forças para o centro)</td><td>Agachamento, leg press (compressão axial)</td></tr>
-        <tr><td>Tração (tensão)</td><td>Estica o tecido (forças para fora)</td><td>Barra fixa, puxadas</td></tr>
-        <tr><td>Flexão</td><td>Compressão de um lado + tração do outro</td><td>Flexão da coluna sob carga (risco)</td></tr>
-        <tr><td>Cisalhamento</td><td>Deslizamento entre superfícies</td><td>Hack, extensora (cisalhamento no joelho)</td></tr>
-        <tr><td>Torção</td><td>Rotação no próprio eixo</td><td>Russian twist (a coluna tolera pouco)</td></tr>
-      </tbody>
-    </table>
+  <p class="sec-sub">Toque em cada tipo para ver o que acontece com o tecido.</p>
+  <div class="sim" id="simCar">
+    <div class="seg" role="group" aria-label="Tipo de carga"><button type="button" class="on" data-k="comp">Compressão</button><button type="button" data-k="trac">Tração</button><button type="button" data-k="flex">Flexão</button><button type="button" data-k="cis">Cisalhamento</button><button type="button" data-k="tor">Torção</button></div>
+    <svg viewBox="0 0 560 220" class="sim-svg" role="img" aria-label="Bloco de tecido sob carga"><g id="carScene"></g></svg>
+    <p class="lev-txt" id="carTxt"></p>
   </div>
   <ul class="clean">
-    <li>A maioria dos exercícios reais envolve <b>combinação de cargas</b>: agachamento = compressão + cisalhamento + flexão; terra = compressão + cisalhamento + tração.</li>
-    <li><b>Pressão = Força / Área:</b> menor área de contato → mais pressão (barra fina nos trapézios vs barra acolchoada).</li>
-    <li>A compressão não é vilã — é necessária para o estímulo ósseo. O problema é excesso + técnica inadequada. Tecidos moles toleram melhor tração que compressão excessiva.</li>
+    <li>Na prática as cargas aparecem <b>combinadas</b>: o agachamento junta compressão, cisalhamento e flexão; o terra junta compressão, cisalhamento e tração.</li>
+    <li><b>Pressão = força ÷ área.</b> A mesma barra apoiada numa área menor aperta mais. Por isso a posição da barra nos trapézios muda o conforto.</li>
+    <li>Compressão não é vilã: o osso <b>precisa</b> dela para se fortalecer. O problema é carga maior do que o tecido está preparado para receber.</li>
   </ul>
 </section>
 
-<section id="curva">
+<section id="tensao-deformacao">
   <span class="sec-num">03 &mdash; CURVA TENSÃO-DEFORMAÇÃO</span>
-  <h2>Como o tecido <span class="accent">responde</span> à carga</h2>
-  <p class="sec-sub">Da zona segura à ruptura.</p>
-  <div class="stepwrap">
-    <div class="step"><h4>Região elástica</h4><p>Cargas pequenas → deformações pequenas; o tecido <strong>volta</strong> à forma original. É a zona segura do treino.</p></div>
-    <div class="step"><h4>Limite elástico</h4><p>Ponto máximo em que ainda volta ao normal. A partir daqui surgem microdanos — ainda adaptativos se bem controlados. Grande parte das adaptações positivas acontece perto desse limite.</p></div>
-    <div class="step"><h4>Região plástica</h4><p>Ultrapassou o limite: deformação permanente, microlesões, inflamação. Com recuperação adequada, gera adaptação; em excesso ou muito frequente, vira lesão.</p></div>
-    <div class="step"><h4>Ponto de falência</h4><p>Sobrecarga muito elevada ou prolongada: ruptura muscular, tendínea ou fratura. Aqui é lesão estabelecida.</p></div>
+  <h2>Do treino seguro à <span class="accent">ruptura</span></h2>
+  <p class="sec-sub">Arraste para aumentar a carga sobre o tecido.</p>
+  <div class="sim" id="simTD">
+    <svg viewBox="0 0 560 250" class="sim-svg" role="img" aria-label="Curva tensão-deformação"><g id="tdScene"></g></svg>
+    <div class="ctl"><label>Deformação <output id="oTd">0%</output><input type="range" id="rTd" min="0" max="100" value="25"></label></div>
+    <p class="lev-txt" id="tdTxt"></p>
   </div>
 </section>
 
 <section id="lesao">
   <span class="sec-num">04 &mdash; CARGA E LESÃO</span>
-  <h2>Carga alta <span class="accent">não</span> é sinônimo de lesão</h2>
-  <p class="sec-sub">A sobrecarga bem aplicada é justamente o que previne.</p>
-  <p>Dois fatores são os mais determinantes para lesão: a <strong>magnitude da carga</strong> (200 kg podem ser seguros para um avançado e lesivos para um iniciante) e a <strong>frequência do carregamento</strong> (mesmo cargas moderadas lesionam se aplicadas com alta frequência e sem recuperação).</p>
-  <div class="callout ok">
-    <span class="tag">A sobrecarga é ferramenta de prevenção</span>
-    <p>A sobrecarga progressiva e controlada <strong>fortalece</strong> os tecidos: hipertrofia e força no músculo; aumento de espessura e rigidez no tendão (que se adapta mais lentamente — atenção ao controle de carga); e aumento do conteúdo mineral ósseo (<em>Lei de Wolff</em> — o osso se fortalece conforme as cargas que recebe). Lesão é fruto de carga mal distribuída, frequência inadequada, falta de progressão e recuperação insuficiente — não da carga alta em si. A <strong>variabilidade motora</strong> (treino frequente e variado) aumenta a capacidade adaptativa e reduz o risco.</p>
+  <h2>Carga alta não é sinônimo de <span class="accent">lesão</span></h2>
+  <p class="sec-sub">O que importa é a carga em relação ao que o tecido aguenta hoje.</p>
+  <div class="sim" id="simCap">
+    <div class="sim-head"><b>Carga × capacidade</b><span class="muted">simulação de 12 semanas</span></div>
+    <div class="seg" role="group" aria-label="Estratégia"><button type="button" class="on" data-k="p">Progressão gradual</button><button type="button" data-k="s">Salto brusco</button><button type="button" data-k="z">Sem estímulo</button></div>
+    <svg viewBox="0 0 560 240" class="sim-svg" role="img" aria-label="Carga e capacidade do tecido ao longo das semanas"><g id="capScene"></g></svg>
+    <p class="lev-txt" id="capTxt"></p>
   </div>
+  <ul class="clean">
+    <li>Dois fatores pesam mais: a <b>magnitude</b> da carga (200 kg podem ser tranquilos para um atleta avançado e demais para um iniciante) e a <b>frequência</b> (cargas moderadas repetidas sem recuperação também lesionam).</li>
+    <li>A sobrecarga progressiva <b>aumenta a capacidade</b>: músculo fica mais forte, tendão mais espesso e rígido, osso mais denso (<b>Lei de Wolff</b>: o osso se adapta às cargas que recebe).</li>
+    <li>O tendão se adapta mais devagar que o músculo. Por isso subir a carga rápido demais é arriscado mesmo quando o músculo “aguenta”.</li>
+  </ul>
 </section>
 
-<section id="flex">
+<section id="flexibilidade">
   <span class="sec-num">05 &mdash; FLEXIBILIDADE E MOBILIDADE</span>
   <h2>Não são a <span class="accent">mesma coisa</span></h2>
-  <p class="sec-sub">E hiperflexibilidade nem sempre é vantagem.</p>
-  <div class="grid2">
-    <div class="mini"><h4>Flexibilidade</h4><p>Capacidade dos tecidos de permitir amplitude máxima (ADM) sem lesão. Componente da aptidão física, depende de elasticidade, estrutura articular, temperatura, controle neuromuscular e histórico.</p></div>
-    <div class="mini"><h4>Mobilidade</h4><p>Habilidade de se locomover de forma autônoma. Mais ampla: depende de flexibilidade + força + controle motor + coordenação + capacidades psicossociais.</p></div>
-  </div>
-  <div class="callout warn">
-    <span class="tag">Hiperflexibilidade</span>
-    <p>Laxidão articular excessiva (genética ou adquirida) <strong>não</strong> é vantagem funcional: pode aumentar a instabilidade articular e predispor a luxações, subluxações e dores. Em musculação, exige mais foco em estabilidade e força.</p>
+  <p class="sec-sub">Ter amplitude é diferente de controlar a amplitude.</p>
+  <div class="stepwrap">
+    <div class="step"><h4>Flexibilidade</h4><p>Amplitude máxima que uma articulação alcança, mesmo de forma passiva (alguém empurrando). Depende dos tecidos, da estrutura da articulação, da temperatura e da tolerância ao alongamento.</p></div>
+    <div class="step"><h4>Mobilidade</h4><p>Amplitude que você consegue <b>usar ativamente, com controle</b>. Depende de flexibilidade mais força e controle motor naquela posição.</p></div>
+    <div class="step"><h4>Hiperflexibilidade</h4><p>Frouxidão articular excessiva, genética ou adquirida, não é vantagem por si só. Pode trazer instabilidade, e a prioridade passa a ser força e controle nas amplitudes extremas.</p></div>
   </div>
 </section>
 
-<section id="along">
+<section id="alongamento">
   <span class="sec-num">06 &mdash; TIPOS DE ALONGAMENTO</span>
   <h2>Estático, dinâmico e <span class="accent">FNP</span></h2>
   <p class="sec-sub">Cada um tem seu momento.</p>
-  <ul class="clean">
-    <li><b>Estático:</b> manter a posição 15–60s. Eficaz para ganhos crônicos de flexibilidade. Em excesso <b>antes</b> do treino de força pode reduzir temporariamente a força/potência → melhor após o treino ou em sessões específicas.</li>
-    <li><b>Dinâmico:</b> movimentos ativos e controlados levando à amplitude. Mantém ativação neuromuscular, melhora coordenação e é <b>superior como preparação pré-treino</b>.</li>
-    <li><b>FNP</b> (facilitação neuromuscular proprioceptiva): combina alongamento passivo + contração isométrica. Estimula os órgãos tendinosos de Golgi → o SNC reduz a tensão → maior amplitude. Técnica avançada, gera mais fadiga, não indicada imediatamente antes de treino pesado.</li>
-  </ul>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Tipo</th><th>Como é</th><th>Quando usar</th></tr></thead>
+    <tbody>
+    <tr><td><b>Estático</b></td><td>Manter a posição alongada, normalmente de 15 a 60 s</td><td>Ganho de flexibilidade a longo prazo. Antes da força, séries longas (mais de 60 s por músculo) podem reduzir um pouco a força e a potência; séries curtas têm efeito pequeno.</td></tr>
+    <tr><td><b>Dinâmico</b></td><td>Movimentos ativos e controlados até a amplitude</td><td>Aquecimento: mantém o sistema nervoso ativo e prepara o movimento do treino.</td></tr>
+    <tr><td><b>FNP</b></td><td>Alongar, contrair o músculo alongado e alongar de novo</td><td>Ganhos rápidos de amplitude. Grande parte do efeito vem do aumento da tolerância ao alongamento. Mais cansativo, melhor fora do pré-treino pesado.</td></tr>
+    </tbody></table></div>
   <div class="callout ok">
     <span class="tag">Regra prática</span>
-    <p>O próprio treino de força em <strong>amplitude completa</strong> pode promover ganhos de flexibilidade — o alongamento não é obrigatório para todos. Antes do treino: dinâmico/mobilidade; depois: estático leve; em sessões específicas: estático prolongado ou FNP. <strong>Mobilidade adequada + força em amplitude completa = melhor desempenho e menor risco de lesão.</strong></p>
+    <p>Musculação em <b>amplitude completa</b> também melhora a flexibilidade, de forma parecida com o alongamento. Antes do treino: aquecimento e mobilidade dinâmica. Alongamento estático fica para depois ou para sessões próprias, se o objetivo pedir.</p>
   </div>
 </section>
 
+<section id="quiz">
+  <span class="sec-num">07 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">07 &mdash; PARA FIXAR</span>
+  <span class="sec-num">08 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
-  <p class="sec-sub">O essencial da Parte 4 e fecho da Biomecânica 1.</p>
-  <ol class="key">
-    <li><b>Resistências:</b> constante (90°), acomodável (constante), variável (polia/elástico/corrente).</li>
-    <li><b>Cargas:</b> compressão, tração, flexão, cisalhamento, torção — geralmente combinadas.</li>
-    <li><b>Pressão = Força/Área;</b> compressão é necessária para estímulo ósseo.</li>
-    <li><b>Curva tensão-deformação:</b> elástica → limite → plástica → falência.</li>
-    <li><b>Lesão</b> depende de magnitude e frequência da carga, não de "carga alta" isolada.</li>
-    <li><b>Sobrecarga progressiva</b> fortalece músculo, tendão e osso (Lei de Wolff).</li>
-    <li><b>Flexibilidade ≠ mobilidade</b>; hiperflexibilidade não é necessariamente boa.</li>
-    <li><b>Alongamento:</b> dinâmico antes, estático depois, FNP em sessões específicas.</li>
-  </ol>
+  <ul class="clean">
+    <li>Peso livre: mais difícil onde o braço de momento é maior. Elástico e corrente: mais pesados no fim da subida.</li>
+    <li>Cargas: compressão, tração, flexão, cisalhamento e torção, quase sempre combinadas.</li>
+    <li>Curva tensão-deformação: elástica → plástica → falha.</li>
+    <li>Lesão aparece quando a carga passa da capacidade; sobrecarga progressiva aumenta a capacidade.</li>
+    <li>Flexibilidade é amplitude; mobilidade é amplitude com controle.</li>
+    <li>Dinâmico antes, estático depois ou em sessões próprias; força em amplitude completa também alonga.</li>
+  </ul>
   <div class="nav-next">
-    <a href="biomecanica1-3-cadeia-contracao.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 3 &middot; Cadeia e Contração</span></a>
-    <a href="index.html"><span class="lbl">Fim da série</span><span class="ttl">Voltar à Biblioteca &rarr;</span></a>
+    <a href="biomecanica1-3-cadeia-contracao.html"><span class="lbl">Anterior</span><span class="ttl">&#8592; 3 · Cadeia e Contração</span></a>
+    <a href="index.html"><span class="lbl">Fim da série</span><span class="ttl">Voltar à Biblioteca &#8594;</span></a>
   </div>
 </section>
 
 </main>
+
 
 <footer>
   <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
@@ -188,5 +228,107 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF, organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'No agachamento com peso livre, onde a resistência (torque) é maior?',a:['Em pé','Embaixo, com quadril e joelho mais longe da linha da barra','É igual em toda a amplitude','Na metade da subida sempre'],c:1,e:'O peso não muda, mas o braço de momento é maior embaixo.'},
+{q:'Elásticos e correntes deixam o exercício mais pesado:',a:['No começo da subida','No fim da subida','Só na descida','Em nenhum momento'],c:1,e:'O elástico estica mais e mais elos da corrente saem do chão conforme você sobe.'},
+{q:'Uma camada deslizando sobre a outra é a carga de:',a:['Compressão','Torção','Cisalhamento','Tração'],c:2,e:'Forças paralelas em sentidos opostos.'},
+{q:'Na região elástica da curva tensão-deformação, o tecido:',a:['Rompe','Fica deformado para sempre','Volta ao normal quando a carga sai','Não sofre nenhuma força'],c:2,e:'Deformação reversível: é onde acontece quase todo o treino.'},
+{q:'Qual situação tem mais risco de lesão por sobrecarga?',a:['Subir a carga aos poucos','Um salto brusco de carga sem adaptação','Treinar perto da falha com técnica boa','Usar cargas altas com anos de progressão'],c:1,e:'O risco aparece quando a carga passa da capacidade atual do tecido.'},
+{q:'Mobilidade é:',a:['Sinônimo de flexibilidade','A amplitude que você usa com controle ativo','Só alongamento passivo','Frouxidão articular'],c:1,e:'Mobilidade = flexibilidade + força e controle na posição.'},
+{q:'Antes de um treino de força, o mais indicado é:',a:['Alongamento estático longo','Aquecimento e mobilidade dinâmica','FNP intenso','Nada'],c:1,e:'Estático longo pode reduzir um pouco a força; o dinâmico prepara o movimento.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function segs(root,cb){root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});cb(b.dataset.k)})})}
+/* ---------- curvas de resistência ---------- */
+(function(){
+ var root=document.getElementById('simRes');if(!root)return;var sc=document.getElementById('resScene'),tx=document.getElementById('resTxt'),K='p',t0=performance.now();
+ // x: 0 = fundo do agachamento, 1 = em pé. Retorna resistência relativa (torque externo) 0..1
+ var C={p:function(x){return 0.35+0.6*Math.cos(x*Math.PI/2)},e:function(x){return 0.25+0.7*x},c:function(x){return 0.3+0.6*x*x*0.7+0.18*x},m:function(x){return 0.62+0.18*Math.sin(x*Math.PI)}};
+ var T={p:'<b>Peso livre</b>: o peso é o mesmo, mas o torque é maior embaixo, onde quadril e joelho ficam mais longe da linha da barra. Fica mais leve conforme você sobe.',
+        e:'<b>Elástico</b>: quanto mais esticado, mais ele puxa. A resistência sobe junto com você e é máxima em pé.',
+        c:'<b>Corrente</b>: embaixo, boa parte dos elos está apoiada no chão. Conforme a barra sobe, mais elos saem do chão e o peso aumenta.',
+        m:'<b>Máquina com came</b>: a polia em formato irregular muda o braço de momento do cabo para deixar a resistência mais parecida com a força que o músculo consegue fazer em cada ângulo.'};
+ var X0=60,X1=520,Y0=220,H=170;
+ function frame(now){clear(sc);el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);el('line',{x1:X0,y1:Y0,x2:X0,y2:30,stroke:MUT,'stroke-width':2},sc);
+  txt(sc,X0,Y0+22,'agachado','sm','start');txt(sc,X1,Y0+22,'em pé','sm','end');var yl=txt(sc,X0-10,40,'resistência','sm','start');yl.setAttribute('x',X0+8);
+  ['p','e','c','m'].forEach(function(k){if(k===K)return;var d='';for(var i=0;i<=50;i++){var x=i/50;d+=(i?'L':'M')+(X0+(X1-X0)*x)+' '+(Y0-H*C[k](x))}el('path',{d:d,fill:'none',stroke:MUT,'stroke-width':2,opacity:.35},sc)});
+  var d='';for(var i=0;i<=50;i++){var x=i/50;d+=(i?'L':'M')+(X0+(X1-X0)*x)+' '+(Y0-H*C[K](x))}el('path',{d:d+'L'+X1+' '+Y0+'L'+X0+' '+Y0+'Z',fill:'rgba(255,107,26,.10)'},sc);el('path',{d:d,fill:'none',stroke:OR,'stroke-width':4},sc);
+  var ph=RM?0.5:(1-Math.cos((now-t0)/1300))/2,px=X0+(X1-X0)*ph,py=Y0-H*C[K](ph);el('line',{x1:px,y1:Y0,x2:px,y2:py,stroke:OR,'stroke-width':2,'stroke-dasharray':'3 4'},sc);el('circle',{cx:px,cy:py,r:9,fill:OR,stroke:'#fff','stroke-width':2},sc);
+  if(!RM)requestAnimationFrame(frame)}
+ function go(k){K=k;tx.innerHTML=T[k]}segs(root,go);go('p');requestAnimationFrame(frame);
+})();
+/* ---------- cargas mecânicas ---------- */
+(function(){
+ var root=document.getElementById('simCar');if(!root)return;var sc=document.getElementById('carScene'),tx=document.getElementById('carTxt'),K='comp',t0=performance.now();
+ var T={comp:'<b>Compressão</b>: forças empurrando o tecido para dentro, achatando. Ex.: coluna e joelhos no agachamento e no leg press.',
+  trac:'<b>Tração</b>: forças puxando para fora, alongando o tecido. Ex.: tendões e ligamentos, o corpo pendurado na barra fixa.',
+  flex:'<b>Flexão</b>: um lado é comprimido e o outro tracionado ao mesmo tempo. Ex.: coluna arredondando sob carga.',
+  cis:'<b>Cisalhamento</b>: forças paralelas em sentidos opostos fazem uma camada deslizar sobre a outra. Ex.: tíbia tendendo a deslizar para frente na cadeira extensora.',
+  tor:'<b>Torção</b>: as extremidades giram em sentidos opostos em torno do eixo longo. Ex.: rotação do tronco sob carga.'};
+ function frame(now){var p=RM?0.7:(1-Math.cos((now-t0)/700))/2,cx=280,cy=110,w=200,h=80;clear(sc);
+  var pts;
+  if(K==='comp'){var s=1-0.25*p,ww=w*(1+0.18*p);el('rect',{x:cx-ww/2,y:cy-h*s/2,width:ww,height:h*s,rx:10,fill:'rgba(255,107,26,.18)',stroke:OR,'stroke-width':3},sc);arrow(sc,cx,cy-h*s/2-60,cx,cy-h*s/2-6,INK,4);arrow(sc,cx,cy+h*s/2+60,cx,cy+h*s/2+6,INK,4)}
+  if(K==='trac'){var s=1+0.3*p,ww=w*(1-0.12*p);el('rect',{x:cx-ww/2,y:cy-h*s/2,width:ww,height:h*s,rx:10,fill:'rgba(37,99,235,.15)',stroke:BL,'stroke-width':3},sc);arrow(sc,cx,cy-h*s/2-4,cx,cy-h*s/2-54,INK,4);arrow(sc,cx,cy+h*s/2+4,cx,cy+h*s/2+54,INK,4)}
+  if(K==='flex'){var b=28*p,L=cx-w/2,R=cx+w/2,Tp=cy-h/2,Bt=cy+h/2;
+   el('path',{d:'M'+L+' '+Tp+' Q'+cx+' '+(Tp+2*b)+' '+R+' '+Tp+' L'+R+' '+Bt+' Q'+cx+' '+(Bt+2*b)+' '+L+' '+Bt+'Z',fill:'rgba(127,127,127,.12)',stroke:INK,'stroke-width':3},sc);
+   el('path',{d:'M'+(L+10)+' '+(Tp+7)+' Q'+cx+' '+(Tp+2*b+7)+' '+(R-10)+' '+(Tp+7),fill:'none',stroke:OR,'stroke-width':6,opacity:.8},sc);
+   el('path',{d:'M'+(L+10)+' '+(Bt-7)+' Q'+cx+' '+(Bt+2*b-7)+' '+(R-10)+' '+(Bt-7),fill:'none',stroke:BL,'stroke-width':6,opacity:.8},sc);
+   arrow(sc,cx,Tp+b-50,cx,Tp+b-4,INK,4);txt(sc,L+4,Tp-10,'compressão','sm','start').setAttribute('fill',OR);txt(sc,cx,Bt+b+30,'tração','sm').setAttribute('fill',BL);
+   arrow(sc,L+8,Bt+44,L+8,Bt+6,INK,3);arrow(sc,R-8,Bt+44,R-8,Bt+6,INK,3)}
+  if(K==='cis'){var d=40*p;el('path',{d:'M'+(cx-w/2+d)+' '+(cy-h/2)+' L'+(cx+w/2+d)+' '+(cy-h/2)+' L'+(cx+w/2)+' '+(cy+h/2)+' L'+(cx-w/2)+' '+(cy+h/2)+'Z',fill:'rgba(22,163,74,.15)',stroke:GR,'stroke-width':3},sc);arrow(sc,cx-60+d,cy-h/2-16,cx+60+d,cy-h/2-16,INK,4);arrow(sc,cx+60,cy+h/2+16,cx-60,cy+h/2+16,INK,4)}
+  if(K==='tor'){var tw=p*1.1;for(var i=0;i<7;i++){var x=cx-w/2+i*w/6,ph=tw*(i/6-0.5);el('ellipse',{cx:x,cy:cy,rx:10,ry:h/2,fill:'none',stroke:MUT,'stroke-width':2},sc);el('circle',{cx:x+8*Math.sin(ph*3),cy:cy-(h/2)*Math.cos(ph*3),r:5,fill:OR},sc)}
+   el('line',{x1:cx-w/2,y1:cy-h/2,x2:cx+w/2,y2:cy-h/2,stroke:INK,'stroke-width':3},sc);el('line',{x1:cx-w/2,y1:cy+h/2,x2:cx+w/2,y2:cy+h/2,stroke:INK,'stroke-width':3},sc);
+   el('path',{d:'M'+(cx-w/2-30)+' '+(cy-30)+' a20 30 0 1 0 0 60',fill:'none',stroke:INK,'stroke-width':3},sc);el('path',{d:'M'+(cx+w/2+30)+' '+(cy+30)+' a20 30 0 1 0 0 -60',fill:'none',stroke:INK,'stroke-width':3},sc)}
+  if(!RM)requestAnimationFrame(frame)}
+ function go(k){K=k;tx.innerHTML=T[k]}segs(root,go);go('comp');requestAnimationFrame(frame);
+})();
+/* ---------- tensão-deformação ---------- */
+(function(){
+ var sc=document.getElementById('tdScene');if(!sc)return;var r=document.getElementById('rTd'),tx=document.getElementById('tdTxt');var X0=50,X1=470,Y0=220,H=180;
+ function S(x){if(x<=0.12)return x/0.12*0.15;if(x<=0.4)return 0.15+(x-0.12)/0.28*0.55;if(x<=0.85)return 0.7+0.3*Math.sin((x-0.4)/0.45*Math.PI/2);if(x<=0.9)return 1-(x-0.85)/0.05*0.6;return 0.4-(x-0.9)*4}
+ var Z=[[0,0.12,'Região do pé','Fibras de colágeno onduladas se esticando. Pouca força já deforma.','rgba(22,163,74,.12)'],[0.12,0.4,'Região elástica','Deformação proporcional à carga. Ao tirar a carga, o tecido <b>volta</b> ao normal. É onde acontece quase todo o treino.','rgba(22,163,74,.20)'],[0.4,0.85,'Região plástica','Passou do <b>limite elástico</b>: surgem microrrupturas e parte da deformação fica permanente. Pontual e com recuperação, pode estimular adaptação; repetido sem descanso, vira lesão.','rgba(234,179,8,.20)'],[0.85,1,'Falha','O tecido rompe: estiramento grave, ruptura de tendão ou fratura.','rgba(225,29,72,.18)']];
+ function draw(){var x=+r.value/100;document.getElementById('oTd').textContent=Math.round(x*100)+'%';clear(sc);
+  Z.forEach(function(z){el('rect',{x:X0+(X1-X0)*z[0],y:20,width:(X1-X0)*(z[1]-z[0]),height:Y0-20,fill:z[4]},sc)});
+  el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);el('line',{x1:X0,y1:Y0,x2:X0,y2:20,stroke:MUT,'stroke-width':2},sc);txt(sc,X1,Y0+22,'deformação →','sm','end');txt(sc,X0+6,34,'tensão','sm','start');
+  var d='';for(var i=0;i<=100;i++){var u=i/100;if(u>0.93)break;d+=(i?'L':'M')+(X0+(X1-X0)*u)+' '+(Y0-H*Math.max(0,S(u)))}el('path',{d:d,fill:'none',stroke:INK,'stroke-width':4},sc);
+  var ux=Math.min(x,0.93),px=X0+(X1-X0)*ux,py=Y0-H*Math.max(0,S(ux)),z=Z.filter(function(z){return x>=z[0]&&x<=z[1]})[0]||Z[3];
+  var col=x<0.4?GR:x<0.85?'#ca8a04':RD;el('circle',{cx:px,cy:py,r:10,fill:col,stroke:'#fff','stroke-width':2},sc);
+  // fibra
+  var fx=500,fh=150-40*(x>0.88?0:0),gap=x>0.88?24:0;el('rect',{x:fx,y:40,width:24,height:70+50*Math.min(x,0.88),rx:10,fill:col,opacity:.7},sc);if(gap)el('rect',{x:fx,y:40+70+44+gap,width:24,height:40,rx:10,fill:col,opacity:.7},sc);txt(sc,fx+12,32,'tecido','sm');
+  tx.innerHTML='<b>'+z[2]+'</b>: '+z[3]}
+ r.addEventListener('input',draw);draw();
+})();
+/* ---------- carga x capacidade ---------- */
+(function(){
+ var root=document.getElementById('simCap');if(!root)return;var sc=document.getElementById('capScene'),tx=document.getElementById('capTxt');
+ var X0=50,X1=530,Y0=210,H=170,N=12;
+ var D={p:{L:function(w){return 0.35+0.035*w},C:function(w){return 0.5+0.04*w},t:'<b>Progressão gradual</b>: a carga sobe um pouco por semana e fica sempre abaixo da capacidade, que cresce junto. Tecido mais forte, risco baixo.'},
+        s:{L:function(w){return w<5?0.35+0.035*w:0.95},C:function(w){return 0.5+0.02*w},t:'<b>Salto brusco</b>: na semana 5 a carga dispara e passa da capacidade, que não teve tempo de se adaptar. É aqui que mora a lesão por sobrecarga.'},
+        z:{L:function(w){return 0.2},C:function(w){return 0.55-0.015*w},t:'<b>Sem estímulo</b>: pouca carga também é ruim. Sem estímulo, a capacidade cai, e qualquer esforço maior no dia a dia já passa do limite.'}};
+ function draw(k){var c=D[k];clear(sc);el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);el('line',{x1:X0,y1:Y0,x2:X0,y2:20,stroke:MUT,'stroke-width':2},sc);txt(sc,X1,Y0+22,'semanas →','sm','end');
+  var dc='',bw=(X1-X0)/N;for(var w=0;w<N;w++){var xl=X0+w*bw+6,l=c.L(w),cap=c.C(w),over=l>cap;el('rect',{x:xl,y:Y0-H*l,width:bw-12,height:H*l,rx:4,fill:over?RD:BL,opacity:over?.85:.55},sc);dc+=(w?'L':'M')+(xl+(bw-12)/2)+' '+(Y0-H*cap)}
+  el('path',{d:dc,fill:'none',stroke:GR,'stroke-width':4},sc);txt(sc,X0+8,30,'— capacidade do tecido','sm','start').setAttribute('fill',GR);txt(sc,X0+8,50,'■ carga da semana','sm','start').setAttribute('fill',BL);tx.innerHTML=c.t}
+ segs(root,draw);draw('p');
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
