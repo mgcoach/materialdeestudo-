@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Biomecânica 2: Mecânica Aplicada | MG COACH">
-    <meta property="og:description" content="Parte 1 da série de Fisiologia Endócrina (CBMF): o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e tipos de receptor, e a síntese dos hormônios peptídicos e esteroides.">
+    <meta property="og:description" content="Força resultante com simulador de aceleração, curvas de resistência e rosca no cabo interativa, diagrama de corpo livre passo a passo, vantagem mecânica e sistema de polias animado.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/biomecanica2-1-mecanica-aplicada.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -43,6 +78,7 @@
     <a href="#curvas">Curvas de resistência</a>
     <a href="#dcl">Diagrama de corpo livre</a>
     <a href="#vantagem">Vantagem mecânica e polias</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -57,110 +93,143 @@
     <a href="biomecanica2-5-dorsais.html">5 &middot; Dorsais</a>
   </div>
   <h1>Mecânica <span class="em">aplicada</span> ao treino</h1>
-  <p class="lede">A física do treino: a <b>força resultante</b>, o <b>torque</b> e o braço de momento, as <b>curvas de resistência</b> (ascendente, descendente, U invertido), o <b>diagrama de corpo livre</b> e como <b>vantagem mecânica</b> e <b>polias</b> explicam por que a dificuldade não depende só do peso.</p>
+  <p class="lede">A física do treino: a <b>força resultante</b>, o <b>torque</b> e o braço de momento, as <b>curvas de resistência</b> (ascendente, descendente, U invertido), o <b>diagrama de corpo livre</b> e como <b>vantagem mecânica</b> e <b>polias</b> explicam por que a dificuldade não depende só do peso. Agora com <b>4 simuladores</b>: aceleração, rosca no cabo, corpo livre e polias.</p>
 </div>
 
 <main>
 
 <section id="resultante">
   <span class="sec-num">01 &mdash; FORÇA RESULTANTE</span>
-  <h2>A soma de <span class="accent">todas as forças</span></h2>
-  <p class="sec-sub">Massa, gravidade e a inércia de acelerar a carga.</p>
+  <h2>Peso é só o <span class="accent">começo</span></h2>
+  <p class="sec-sub">Para mover uma carga você vence o peso e, se acelerar, também a inércia.</p>
   <div class="def">
-    <div class="word">Força resultante</div>
-    <p>A soma de todas as forças que atuam sobre um corpo. De forma simplificada: <strong>F resultante = (massa × gravidade) + (massa × aceleração)</strong>. A gravidade gera o peso (Peso = massa × 9,81 m/s²; ex.: 10 kg ≈ 98 N). A <strong>aceleração inercial</strong> aparece quando você acelera ou desacelera a carga.</p>
+    <div class="word">Força necessária</div>
+    <p>A força que você aplica numa barra é <b>F = m · (g + a)</b>. A parte <b>m · g</b> é o peso (10 kg ≈ 98 N). A parte <b>m · a</b> aparece quando a velocidade muda: acelerar para cima pede força extra; desacelerar a subida (ou deixar a barra cair) pede menos.</p>
+  </div>
+  <div class="sim" id="simRes">
+    <div class="sim-head"><b>Simulador · supino</b><span class="muted">F = m · (g + a)</span></div>
+    <svg viewBox="0 0 560 240" class="sim-svg" role="img" aria-label="Barra sendo empurrada com aceleração variável"><g id="resScene"></g></svg>
+    <div class="ctl">
+      <label>Carga <output id="oMa">100 kg</output><input type="range" id="rMa" min="20" max="200" step="5" value="100"></label>
+      <label>Aceleração <output id="oAc">0 m/s²</output><input type="range" id="rAc" min="-4" max="6" step="0.5" value="0"></label>
+    </div>
+    <div class="readout"><div><span>Peso</span><b id="rP">–</b></div><div><span>Força aplicada</span><b id="rF">–</b></div><div><span>“Parece”</span><b id="rK">–</b></div></div>
   </div>
   <div class="callout">
     <span class="tag">Na prática</span>
-    <p>No supino com 100 kg controlado, a força aplicada é próxima ao peso. Se você tenta <strong>acelerar</strong> muito a barra, a força necessária aumenta por causa da inércia. É por isso que levantar rápido um peso pesado é mais difícil e exercícios explosivos exigem mais força.</p>
+    <p>Com cadência controlada, a força fica perto do peso. Tentar acelerar ao máximo uma carga pesada exige bem mais força, e é por isso que a intenção de subir rápido aumenta o recrutamento. No fim da subida a barra desacelera e a força cai, mesmo com o peso igual.</p>
   </div>
 </section>
 
 <section id="torque">
   <span class="sec-num">02 &mdash; TORQUE E BRAÇO DE MOMENTO</span>
-  <h2>O conceito que <span class="accent">domina</span> o treino</h2>
-  <p class="sec-sub">Revisão aplicada — agora com foco nas curvas.</p>
-  <p>Torque é a tendência de uma força gerar rotação em torno de um eixo (a articulação). Na prática: <strong>Torque = Força × braço de momento</strong> (a distância perpendicular da força ao eixo). Na física rotacional usa-se Torque = momento de inércia × aceleração angular, mas no treino o que importa é distância da carga ao eixo, ângulo e gravidade.</p>
+  <h2>O que manda é a <span class="accent">distância</span></h2>
+  <p class="sec-sub">Revisão rápida antes das curvas.</p>
+  <p><b>Torque = força × braço de momento</b>, a distância <b>perpendicular</b> entre a linha da força e a articulação. Com peso livre, a força é sempre vertical, então o torque é máximo quando o segmento fica na horizontal e quase zero quando ele aponta para cima ou para baixo.</p>
   <div class="callout">
-    <span class="tag">Ângulo e torque</span>
-    <p>0° (força paralela ao segmento) → torque ≈ zero. 90° (perpendicular) → torque máximo. &gt;90° → o torque começa a cair. Por isso, na rosca direta, o início (braço estendido) é fácil, o meio (~90°) é o mais difícil, e o final alivia.</p>
+    <span class="tag">Quer mexer nisso?</span>
+    <p>Os simuladores de elevação lateral e rosca direta estão na <a href="biomecanica1-2-torque-alavancas.html">Biomecânica 1 · Parte 2</a>.</p>
   </div>
 </section>
 
 <section id="curvas">
   <span class="sec-num">03 &mdash; CURVAS DE RESISTÊNCIA</span>
   <h2>Onde cada exercício <span class="accent">pesa</span></h2>
-  <p class="sec-sub">Ascendente, descendente ou em U invertido — o coração da aula.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Curva</th><th>Comportamento</th><th>Mais difícil</th><th>Exemplos</th></tr></thead>
-      <tbody>
-        <tr><td>Ascendente</td><td>Torque aumenta ao longo do movimento</td><td>No final (encurtamento)</td><td>Cadeira extensora, glúteo no cabo</td></tr>
-        <tr><td>Descendente</td><td>Torque diminui ao longo do movimento</td><td>No início (alongamento)</td><td>Desenvolvimento, supino</td></tr>
-        <tr><td>U invertido</td><td>Sobe → pico → desce</td><td>No meio (~90°)</td><td>Rosca direta, mesa flexora</td></tr>
-      </tbody>
-    </table>
+  <p class="sec-sub">A curva mostra o torque da carga do começo ao fim da repetição.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Curva</th><th>Comportamento</th><th>Mais difícil</th><th>Exemplos</th></tr></thead>
+    <tbody>
+    <tr><td><b>Ascendente</b></td><td>O torque aumenta ao longo da fase concêntrica</td><td>No fim (músculo encurtado)</td><td>Cadeira extensora, glúteo no cabo</td></tr>
+    <tr><td><b>Descendente</b></td><td>O torque diminui ao longo da fase concêntrica</td><td>No começo (músculo alongado)</td><td>Supino, desenvolvimento, agachamento</td></tr>
+    <tr><td><b>U invertido</b></td><td>Sobe, faz um pico e desce</td><td>No meio</td><td>Rosca direta com halter, mesa flexora</td></tr>
+    </tbody></table></div>
+  <div class="callout warn">
+    <span class="tag">Convenção da série</span>
+    <p>Aqui seguimos a convenção do CBMF: o nome da curva descreve o torque na <b>fase concêntrica</b>, do músculo alongado para o encurtado. Ascendente = mais difícil no encurtamento; descendente = mais difícil no alongamento.</p>
   </div>
-  <div class="callout ok">
-    <span class="tag">Convenção da série (importante)</span>
-    <p>Aqui usamos a convenção do CBMF: perfil <strong>ascendente</strong> = mais difícil no <strong>encurtamento</strong> (topo); perfil <strong>descendente</strong> = mais difícil no <strong>alongamento</strong> (fundo). Os cabos permitem manipular a curva: cabo vindo de baixo → mais difícil no início; na altura do cotovelo → mais difícil no meio; vindo de cima → mais difícil no final. Casar a curva do exercício com o perfil de força do músculo é o que separa o treino "ok" do treino eficiente. (Veja também o estudo <em>Perfil de Resistência</em>.)</p>
+  <div class="sim" id="simCab">
+    <div class="sim-head"><b>Simulador · rosca no cabo</b><span class="muted">mude a altura da polia</span></div>
+    <div class="seg" role="group" aria-label="Fonte de resistência"><button type="button" class="on" data-k="h">Halter</button><button type="button" data-k="b">Polia baixa</button><button type="button" data-k="m">Polia na altura do cotovelo</button><button type="button" data-k="a">Polia alta</button></div>
+    <svg viewBox="0 0 560 280" class="sim-svg" role="img" aria-label="Braço, cabo e curva de torque da rosca"><g id="cabScene"></g></svg>
+    <div class="ctl"><label>Flexão do cotovelo <output id="oCb">60°</output><input type="range" id="rCb" min="0" max="140" value="60"></label></div>
+    <div class="sim-foot"><button type="button" class="play" id="pCb">▶ Animar o movimento</button></div>
+    <p class="lev-txt" id="cabTxt"></p>
   </div>
+  <p>Casar a curva do exercício com o momento em que o músculo é mais forte, ou escolher de propósito onde quer o maior estímulo, é o que separa um treino “ok” de um treino bem pensado. Veja também o material <a href="perfil-de-resistencia.html">Perfil de Resistência</a>.</p>
 </section>
 
 <section id="dcl">
   <span class="sec-num">04 &mdash; DIAGRAMA DE CORPO LIVRE</span>
   <h2>Enxergar as forças <span class="accent">invisíveis</span></h2>
-  <p class="sec-sub">Isolar um segmento e desenhar tudo que age nele.</p>
+  <p class="sec-sub">Isole um segmento e desenhe tudo que age nele.</p>
   <div class="def">
     <div class="word">Diagrama de corpo livre (DCL)</div>
-    <p>Uma representação gráfica que "isola" um corpo (halter, antebraço, perna, corpo inteiro) e desenha todas as forças que agem nele, cada uma como um vetor (direção, sentido, intensidade). Serve para prever movimento, analisar sobrecarga e identificar onde há maior tensão.</p>
+    <p>Desenho que “recorta” um corpo (o halter, o antebraço, a perna, o corpo inteiro) e mostra cada força que age nele como uma seta, com direção, sentido e tamanho. Serve para prever o movimento e descobrir onde está a maior tensão.</p>
   </div>
-  <p>As principais forças na musculação: <strong>força peso</strong> (sempre para baixo), <strong>força muscular</strong> (direção depende do músculo), <strong>força de reação</strong> (3ª lei de Newton — o chão te empurra de volta) e <strong>força de resistência</strong> (o que o músculo precisa vencer).</p>
-  <div class="callout">
-    <span class="tag">Exemplo: rosca direta</span>
-    <p>Corpo isolado = antebraço. Forças: peso do halter (↓), força do bíceps (↑), estabilização no cotovelo. Se bíceps &gt; peso → sobe; se igual → isometria; se &lt; peso → desce. Simples, mas é a base para entender qualquer exercício.</p>
+  <div class="sim" id="simDcl">
+    <div class="sim-head"><b>DCL do antebraço na rosca</b><span class="muted" id="dclN">1 / 4</span></div>
+    <svg viewBox="0 0 560 260" class="sim-svg" role="img" aria-label="Diagrama de corpo livre do antebraço"><g id="dclScene"></g></svg>
+    <p class="lev-txt" id="dclTxt"></p>
+    <div class="sim-foot"><button type="button" class="play" id="dclPrev">◀</button><button type="button" class="play" id="dclNext">Próxima força ▶</button></div>
+  </div>
+  <div class="callout ok">
+    <span class="tag">A grande lição</span>
+    <p>Como o bíceps se insere a poucos centímetros do cotovelo e o halter fica a mais de 30 cm, o músculo precisa fazer uma força <b>cerca de 8 vezes maior</b> que o peso do halter, e a articulação recebe quase isso em compressão. Músculos trocam força por velocidade e amplitude.</p>
   </div>
 </section>
 
 <section id="vantagem">
   <span class="sec-num">05 &mdash; VANTAGEM MECÂNICA E POLIAS</span>
-  <h2>Por que máquinas parecem <span class="accent">mais leves</span></h2>
-  <p class="sec-sub">Eficiência mecânica e o efeito das polias.</p>
+  <h2>Por que a máquina parece mais <span class="accent">leve</span></h2>
+  <p class="sec-sub">Alavancas e polias mudam quanto de força você precisa para mover a mesma carga.</p>
   <div class="def">
-    <div class="word">Vantagem mecânica = Força / Resistência</div>
-    <p>Mede quão eficiente é a aplicação de força para mover a carga. Próximo de 1, o sistema é eficiente. Vantagem: barra próxima ao corpo no terra, cotovelos alinhados no supino, máquina com alavancas favoráveis. Desvantagem: carga longe do centro de massa, ângulos desfavoráveis.</p>
+    <div class="word">Vantagem mecânica (VM)</div>
+    <p><b>VM = braço da força ÷ braço da resistência</b>, que é o mesmo que <b>resistência ÷ força necessária</b>. VM maior que 1: você move a carga com menos força (ganha força, perde velocidade e deslocamento). VM menor que 1: precisa de mais força, mas ganha velocidade e amplitude. A maioria dos músculos do corpo trabalha com VM bem menor que 1, como o bíceps acima.</p>
   </div>
+  <div class="sim" id="simPol">
+    <div class="sim-head"><b>Simulador · polias</b><span class="muted">100 kg na pilha</span></div>
+    <div class="seg" role="group" aria-label="Sistema de polias"><button type="button" class="on" data-k="1">Polia fixa</button><button type="button" data-k="2">1 polia móvel</button><button type="button" data-k="4">2 polias móveis</button></div>
+    <svg viewBox="0 0 560 280" class="sim-svg" role="img" aria-label="Sistema de polias levantando uma carga"><g id="polScene"></g></svg>
+    <div class="readout"><div><span>Segmentos de cabo</span><b id="pS">–</b></div><div><span>Força na mão</span><b id="pF">–</b></div><div><span>Cabo puxado p/ subir 10 cm</span><b id="pD">–</b></div></div>
+  </div>
+  <ul class="clean">
+    <li><b>Polia fixa</b>: só muda a direção da força. 100 kg na pilha = 100 kg na mão.</li>
+    <li><b>Polia móvel</b>: a carga fica pendurada em mais segmentos de cabo. Com 2 segmentos, a força cai pela metade, mas você puxa o dobro de cabo.</li>
+    <li>Por isso o número da pilha não se compara entre máquinas, nem com peso livre. Atrito e o peso do próprio braço da máquina também mudam a conta.</li>
+  </ul>
   <div class="callout">
-    <span class="tag">Sistema de polias</span>
-    <p>Quanto mais polias (segmentos de cabo sustentando a carga), menor a força necessária: <strong>Força = Peso / nº de segmentos</strong>. Numa polia dupla, 100 kg na pilha podem significar apenas 50 kg reais sendo puxados. É um dos motivos pelos quais máquinas parecem mais leves que pesos livres.</p>
-  </div>
-  <div class="callout ok">
     <span class="tag">A mensagem central</span>
-    <p>A dificuldade de um exercício depende de <strong>torque, alavancas, momento de inércia, tipo de resistência e sistema de polias</strong> — não apenas do peso na anilha.</p>
+    <p>A dificuldade de um exercício depende de torque, braço de momento, aceleração, tipo de resistência e sistema de polias. Não só do número na anilha.</p>
   </div>
 </section>
 
+<section id="quiz">
+  <span class="sec-num">06 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">06 &mdash; PARA FIXAR</span>
+  <span class="sec-num">07 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
-  <p class="sec-sub">O essencial da Parte 1.</p>
-  <ol class="key">
-    <li><b>Força resultante</b> = (massa × gravidade) + (massa × aceleração); acelerar a carga aumenta a força necessária.</li>
-    <li><b>Torque = Força × braço de momento;</b> máximo a 90°.</li>
-    <li><b>Curvas:</b> ascendente (difícil no encurtamento), descendente (difícil no alongamento), U invertido (difícil no meio).</li>
-    <li><b>Cabos</b> permitem manipular a curva de resistência mudando o ângulo.</li>
-    <li><b>DCL:</b> isola o segmento e desenha peso, força muscular, reação e resistência.</li>
-    <li><b>Vantagem mecânica = Força/Resistência;</b> perto de 1 é mais eficiente.</li>
-    <li><b>Polias:</b> Força = Peso / nº de segmentos do cabo.</li>
-    <li><b>Dificuldade</b> = torque + alavanca + inércia + resistência + polias, não só o peso.</li>
-  </ol>
+  <ul class="clean">
+    <li>Força necessária = m · (g + a). Acelerar a carga pede força além do peso.</li>
+    <li>Torque = força × braço de momento perpendicular.</li>
+    <li>Curvas: ascendente (difícil no encurtamento), descendente (difícil no alongamento), U invertido (difícil no meio).</li>
+    <li>A altura da polia muda onde fica o pico da curva.</li>
+    <li>DCL: isole o segmento e desenhe peso, força muscular e reação articular.</li>
+    <li>VM = braço da força ÷ braço da resistência; músculos costumam ter VM menor que 1.</li>
+    <li>Polia móvel divide a força pelo número de segmentos e multiplica o cabo puxado.</li>
+  </ul>
   <div class="nav-next">
-    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&larr; Biblioteca</span></a>
-    <a href="biomecanica2-2-forca-comprimento.html"><span class="lbl">Próximo da série</span><span class="ttl">2 &middot; Força-Comprimento e Arquitetura &rarr;</span></a>
+    <a href="index.html"><span class="lbl">Voltar</span><span class="ttl">&#8592; Biblioteca</span></a>
+    <a href="biomecanica2-2-forca-comprimento.html"><span class="lbl">Próximo da série</span><span class="ttl">2 · Força-Comprimento e Arquitetura &#8594;</span></a>
   </div>
 </section>
 
 </main>
+
 
 <footer>
   <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
@@ -169,5 +238,118 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF, organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Para subir uma barra de 80 kg acelerando a 3 m/s², a força necessária é cerca de:',a:['785 N','240 N','1.025 N','80 N'],c:2,e:'F = 80 × (9,8 + 3) ≈ 1.025 N. Acelerar pede força além do peso.'},
+{q:'No fim da subida, quando a barra desacelera, a força aplicada:',a:['Fica maior que o peso','Fica menor que o peso','É igual ao peso','Vira zero sempre'],c:1,e:'Com aceleração negativa, m·(g + a) fica abaixo de m·g.'},
+{q:'Uma curva descendente (convenção da série) é mais difícil:',a:['No começo, com o músculo alongado','No fim, com o músculo encurtado','No meio','Igual em tudo'],c:0,e:'Descendente = o torque cai ao longo da concêntrica. Ex.: supino, agachamento.'},
+{q:'Na rosca com cabo, o torque é máximo quando:',a:['O cabo aponta para o cotovelo','O cabo fica perpendicular ao antebraço','O cabo fica paralelo ao antebraço','O cabo está na vertical, sempre'],c:1,e:'O braço de momento é máximo quando a força é perpendicular ao segmento.'},
+{q:'Por que o bíceps faz muito mais força do que o peso do halter?',a:['Porque o halter é mais pesado que parece','Porque ele se insere muito perto do cotovelo (braço de momento pequeno)','Por causa da gravidade do braço','Não faz'],c:1,e:'4 cm contra 33 cm: precisa de ~8× a força para gerar o mesmo torque.'},
+{q:'Com 2 segmentos de cabo sustentando 100 kg (polia móvel), você puxa cerca de:',a:['200 kg','100 kg','50 kg','25 kg'],c:2,e:'Força ≈ carga ÷ nº de segmentos. Em troca, puxa o dobro de cabo.'},
+{q:'Vantagem mecânica maior que 1 significa:',a:['Precisa de mais força que a resistência','Move a carga com menos força que ela, mas com menos velocidade e deslocamento','O sistema não funciona','Mais velocidade e amplitude'],c:1,e:'VM = braço da força ÷ braço da resistência. Ganha força, perde velocidade.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function segs(root,cb){root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});cb(b.dataset.k)})})}
+/* ---------- força resultante ---------- */
+(function(){
+ var sc=document.getElementById('resScene');if(!sc)return;var rm=document.getElementById('rMa'),ra=document.getElementById('rAc'),t0=performance.now();
+ function frame(now){var m=+rm.value,a=+ra.value,P=m*G,F=m*(G+a);document.getElementById('oMa').textContent=m+' kg';document.getElementById('oAc').textContent=(a>0?'+':'')+fmt(a,1)+' m/s²';
+  document.getElementById('rP').textContent=Math.round(P)+' N';document.getElementById('rF').textContent=Math.round(F)+' N';document.getElementById('rK').textContent=Math.round(F/G)+' kg';
+  clear(sc);var bob=RM?0:6*Math.sin((now-t0)/500),y=110+bob,cx=160;
+  el('line',{x1:cx-135,y1:y,x2:cx+135,y2:y,stroke:INK,'stroke-width':8,'stroke-linecap':'round'},sc);var pl=Math.min(5,Math.max(1,Math.round(m/40)));
+  for(var i=0;i<pl;i++){[-1,1].forEach(function(s){el('rect',{x:cx+s*(95+i*9)-(s<0?9:0),y:y-34+i*0,width:8,height:68,rx:3,fill:i%2?OR:INK,opacity:.85},sc)})}
+  var k=0.09;arrow(sc,cx-40,y+10,cx-40,y+10+P*k*0.6,BL,5);txt(sc,cx-48,y+30+P*k*0.3,'peso','sm','end').setAttribute('fill',BL);
+  var Lf=F*k*0.6;arrow(sc,cx+40,y-6,cx+40,y-6-Math.max(4,Lf),a>=0?GR:OR,5);txt(sc,cx+48,y-60,'força','sm','start').setAttribute('fill',a>=0?GR:OR);
+  var st=a>0.2?'acelerando para cima':a<-0.2?'desacelerando a subida':'velocidade constante';var t=txt(sc,445,90,st,'sm');t.setAttribute('font-weight','700');t.setAttribute('fill',a>0.2?GR:a<-0.2?OR:INK);
+  txt(sc,445,118,'F = '+m+' × ('+fmt(G,1)+(a<0?' − ':' + ')+fmt(Math.abs(a),1)+')','sm');txt(sc,445,142,'= '+Math.round(F)+' N','sm');
+  if(!RM)requestAnimationFrame(frame)}
+ rm.addEventListener('input',function(){if(RM)frame(0)});ra.addEventListener('input',function(){if(RM)frame(0)});requestAnimationFrame(frame);
+})();
+/* ---------- rosca no cabo ---------- */
+(function(){
+ var root=document.getElementById('simCab');if(!root)return;var sc=document.getElementById('cabScene'),r=document.getElementById('rCb'),tx=document.getElementById('cabTxt'),K='h',L=0.33;
+ var A={b:{x:0.3,y:-1.0},m:{x:-0.6,y:-0.9},a:{x:-0.6,y:0.35}};
+ var NM={h:'Halter',b:'Polia baixa à frente',m:'Polia baixa atrás',a:'Polia alta atrás'};
+ // botões: b = polia baixa à frente, m = polia atrás (Bayesian), a = polia alta atrás
+ var T={h:'<b>Halter</b>: a força é sempre vertical. O torque é máximo com o antebraço na horizontal (90°) e cai nas pontas: curva em U invertido.',
+  b:'<b>Polia baixa à frente</b>: no começo o cabo quase não resiste (chega a ajudar). Conforme o antebraço sobe, o cabo fica mais perpendicular e o pico vai para o fim: curva mais ascendente.',
+  m:'<b>Polia baixa atrás do corpo</b> (rosca Bayesian): o cabo já resiste com o braço estendido e o pico vem cedo, por volta de 60°. O fim alivia: a ênfase vai para o bíceps mais alongado.',
+  a:'<b>Polia alta atrás</b>: o máximo fica logo no começo, com o braço estendido e o bíceps alongado, e o fim quase não tem carga: curva descendente.'};
+ function tq(k,th){var t=th*Math.PI/180,H={x:L*Math.sin(t),y:-L*Math.cos(t)},tg={x:Math.cos(t),y:Math.sin(t)};if(k==='h')return Math.max(0,Math.sin(t));
+  var a=A[k],dx=a.x-H.x,dy=a.y-H.y,n=Math.hypot(dx,dy),u={x:dx/n,y:dy/n};return Math.max(0,-(u.x*tg.x+u.y*tg.y))}
+ function draw(){var th=+r.value;document.getElementById('oCb').textContent=th+'°';clear(sc);
+  var E={x:130,y:120},S=210,t=th*Math.PI/180,H={x:E.x+S*L*Math.sin(t),y:E.y+S*L*Math.cos(t)};
+  el('line',{x1:E.x-4,y1:E.y-100,x2:E.x,y2:E.y,stroke:INK,'stroke-width':15,'stroke-linecap':'round',opacity:.45},sc);el('circle',{cx:E.x-4,cy:E.y-104,r:6,fill:MUT},sc);
+  if(K==='h'){el('rect',{x:H.x-14,y:H.y-8,width:28,height:16,rx:4,fill:INK},sc);arrow(sc,H.x,H.y+10,H.x,H.y+56,BL,4)}
+  else{var a=A[K],dx=a.x*S+E.x-H.x,dy=-a.y*S+E.y-H.y,n=Math.hypot(dx,dy),len=Math.min(n,130),P={x:H.x+dx/n*len,y:H.y+dy/n*len};
+   el('line',{x1:H.x,y1:H.y,x2:P.x,y2:P.y,stroke:BL,'stroke-width':3},sc);el('circle',{cx:P.x,cy:P.y,r:11,fill:'none',stroke:BL,'stroke-width':4},sc);el('circle',{cx:P.x,cy:P.y,r:3,fill:BL},sc)}
+  el('line',{x1:E.x,y1:E.y,x2:H.x,y2:H.y,stroke:INK,'stroke-width':13,'stroke-linecap':'round'},sc);el('circle',{cx:E.x,cy:E.y,r:8,fill:OR,stroke:'#fff','stroke-width':2},sc);
+  var X0=300,X1=540,Y0=230,Hh=170;el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);el('line',{x1:X0,y1:Y0,x2:X0,y2:40,stroke:MUT,'stroke-width':2},sc);
+  txt(sc,X0,Y0+22,'0° estendido','sm','start');txt(sc,X1,Y0+22,'140°','sm','end');txt(sc,X0+6,52,'torque da resistência','sm','start');
+  ['h','b','m','a'].forEach(function(k){var d='';for(var i=0;i<=70;i++){var q=i*2;d+=(i?'L':'M')+(X0+(X1-X0)*q/140)+' '+(Y0-Hh*tq(k,q))}el('path',{d:d,fill:'none',stroke:k===K?OR:MUT,'stroke-width':k===K?4:2,opacity:k===K?1:.35},sc)});
+  var px=X0+(X1-X0)*th/140,py=Y0-Hh*tq(K,th);el('circle',{cx:px,cy:py,r:9,fill:OR,stroke:'#fff','stroke-width':2},sc);
+  tx.innerHTML=T[K]+' <span class="muted">Regra: o torque é máximo quando a linha do cabo fica perpendicular ao antebraço.</span>'}
+ segs(root,function(k){K=k;draw()});r.addEventListener('input',draw);anim(document.getElementById('pCb'),r,0,140,draw);draw();
+})();
+/* ---------- DCL ---------- */
+(function(){
+ var sc=document.getElementById('dclScene');if(!sc)return;var tx=document.getElementById('dclTxt'),n=document.getElementById('dclN'),i=0;
+ var W=12*G,Wf=1.5*G,Fb=(W*0.33+Wf*0.15)/0.04,Rj=Fb-W-Wf;
+ var S=['<b>1 · Peso do halter</b>: 12 kg ≈ '+Math.round(W)+' N, para baixo, a 33 cm do cotovelo. Torque = '+Math.round(W*0.33)+' N·m.',
+  '<b>2 · Peso do antebraço</b>: cerca de 1,5 kg ≈ '+Math.round(Wf)+' N, no meio do segmento (15 cm). Torque = '+fmt(Wf*0.15,1)+' N·m.',
+  '<b>3 · Força do bíceps</b>: insere a só 4 cm do cotovelo. Para segurar parado a 90°: F × 0,04 = '+fmt(W*0.33+Wf*0.15,1)+' → F ≈ <b>'+Math.round(Fb)+' N</b>, umas 8 vezes o peso do halter.',
+  '<b>4 · Reação no cotovelo</b>: para o antebraço não “subir”, o úmero empurra para baixo com ≈ <b>'+Math.round(Rj)+' N</b>. As forças verticais se anulam e os torques também: isometria.'];
+ function draw(){clear(sc);var E={x:120,y:150},Lp=360;
+  el('line',{x1:E.x,y1:E.y,x2:E.x+Lp,y2:E.y,stroke:INK,'stroke-width':16,'stroke-linecap':'round'},sc);el('circle',{cx:E.x,cy:E.y,r:9,fill:MUT},sc);txt(sc,E.x,E.y+34,'cotovelo','sm');
+  el('rect',{x:E.x+Lp-16,y:E.y-12,width:32,height:24,rx:5,fill:INK},sc);
+  var sc2=function(f){return 18+Math.sqrt(f)*3.2};
+  if(i>=0){arrow(sc,E.x+Lp,E.y+14,E.x+Lp,E.y+14+sc2(W),BL,5);txt(sc,E.x+Lp-10,E.y+30+sc2(W)*0.7,Math.round(W)+' N','sm','end').setAttribute('fill',BL)}
+  if(i>=1){arrow(sc,E.x+Lp*0.45,E.y+10,E.x+Lp*0.45,E.y+10+sc2(Wf),BL,4);txt(sc,E.x+Lp*0.45+8,E.y+40,Math.round(Wf)+' N','sm','start').setAttribute('fill',BL)}
+  if(i>=2){var bx=E.x+40;arrow(sc,bx,E.y-10,bx,E.y-10-Math.min(130,sc2(Fb)),GR,6);txt(sc,bx+10,E.y-110,'bíceps '+Math.round(Fb)+' N','sm','start').setAttribute('fill',GR)}
+  if(i>=3){arrow(sc,E.x,E.y-120,E.x,E.y-12,RD,6);txt(sc,E.x-8,E.y-104,'reação '+Math.round(Rj)+' N','sm','end').setAttribute('fill',RD)}
+  n.textContent=(i+1)+' / 4';tx.innerHTML=S[i];document.getElementById('dclNext').textContent=i===3?'Recomeçar ↺':'Próxima força ▶'}
+ document.getElementById('dclNext').addEventListener('click',function(){i=i===3?0:i+1;draw()});document.getElementById('dclPrev').addEventListener('click',function(){i=Math.max(0,i-1);draw()});draw();
+})();
+/* ---------- polias ---------- */
+(function(){
+ var root=document.getElementById('simPol');if(!root)return;var sc=document.getElementById('polScene'),K=1,t0=performance.now();
+ function wheel(x,y){el('circle',{cx:x,cy:y,r:18,fill:'rgba(127,127,127,.08)',stroke:INK,'stroke-width':4},sc);el('circle',{cx:x,cy:y,r:4,fill:INK},sc)}
+ function ln(x1,y1,x2,y2){el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:BL,'stroke-width':3},sc)}
+ function under(x,y){el('path',{d:'M'+(x-18)+' '+y+' A18 18 0 0 0 '+(x+18)+' '+y,fill:'none',stroke:BL,'stroke-width':3},sc)}
+ function over(x,y){el('path',{d:'M'+(x-18)+' '+y+' A18 18 0 0 1 '+(x+18)+' '+y,fill:'none',stroke:BL,'stroke-width':3},sc)}
+ function frame(now){var ph=RM?0.5:(1-Math.cos((now-t0)/1200))/2,lift=20*ph,pull=lift*K;clear(sc);
+  el('rect',{x:40,y:14,width:480,height:10,fill:MUT},sc);var cx=200,stackY=180-lift,mw=stackY-30,hx=430,hy=130+pull;
+  if(K===1){wheel(cx+18,50);ln(cx,50,cx,stackY);over(cx+18,50);ln(cx+18,32,hx,32);el('line',{x1:cx+18,y1:24,x2:cx+18,y2:32,stroke:INK,'stroke-width':3},sc)}
+  if(K===2){ln(cx-18,24,cx-18,mw);under(cx,mw);ln(cx+18,mw,cx+18,50);wheel(cx+36,50);el('path',{d:'M'+(cx+18)+' 50 A18 18 0 0 1 '+(cx+36)+' 32',fill:'none',stroke:BL,'stroke-width':3},sc);ln(cx+36,32,hx,32);wheel(cx,mw);el('line',{x1:cx,y1:mw,x2:cx,y2:stackY,stroke:INK,'stroke-width':3},sc)}
+  if(K===4){ln(cx-54,24,cx-54,mw);under(cx-36,mw);ln(cx-18,mw,cx-18,50);over(cx,50);ln(cx+18,50,cx+18,mw);under(cx+36,mw);ln(cx+54,mw,cx+54,50);wheel(cx,50);wheel(cx+72,50);
+   el('path',{d:'M'+(cx+54)+' 50 A18 18 0 0 1 '+(cx+72)+' 32',fill:'none',stroke:BL,'stroke-width':3},sc);ln(cx+72,32,hx,32);wheel(cx-36,mw);wheel(cx+36,mw);
+   el('line',{x1:cx-36,y1:mw,x2:cx-20,y2:stackY,stroke:INK,'stroke-width':3},sc);el('line',{x1:cx+36,y1:mw,x2:cx+20,y2:stackY,stroke:INK,'stroke-width':3},sc);el('line',{x1:cx,y1:24,x2:cx,y2:32,stroke:INK,'stroke-width':3},sc);el('line',{x1:cx+72,y1:24,x2:cx+72,y2:32,stroke:INK,'stroke-width':3},sc)}
+  if(K!==1)el('line',{x1:cx+36*(K===2?1:2),y1:24,x2:cx+36*(K===2?1:2),y2:32,stroke:INK,'stroke-width':3},sc);
+  wheel(hx,50);over(hx,50);ln(hx+18,50,hx+18,hy);el('line',{x1:hx,y1:24,x2:hx,y2:32,stroke:INK,'stroke-width':3},sc);
+  var sx=K===1?cx:K===2?cx:cx;el('rect',{x:sx-45,y:stackY,width:90,height:70,rx:6,fill:'rgba(127,127,127,.25)',stroke:INK,'stroke-width':2},sc);for(var q=1;q<5;q++)el('line',{x1:sx-45,y1:stackY+q*14,x2:sx+45,y2:stackY+q*14,stroke:INK,'stroke-width':1,opacity:.4},sc);txt(sc,sx,stackY+40,'100 kg','');
+  el('circle',{cx:hx+18,cy:hy+10,r:12,fill:OR},sc);arrow(sc,hx+42,hy-8,hx+42,hy+40,OR,4);txt(sc,hx+52,hy+20,Math.round(100/K)+' kg','sm','start').setAttribute('fill',OR);
+  document.getElementById('pS').textContent=K;document.getElementById('pF').textContent=Math.round(100/K)+' kg';document.getElementById('pD').textContent=(10*K)+' cm';
+  if(!RM)requestAnimationFrame(frame)}
+ segs(root,function(k){K=+k;if(RM)frame(0)});requestAnimationFrame(frame);
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
