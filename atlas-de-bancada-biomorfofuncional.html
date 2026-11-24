@@ -107,6 +107,8 @@ details.grp{border-top:1px solid var(--line);padding:8px 0}details.grp summary{c
 footer{color:var(--muted);font-size:.85rem;margin-top:50px;border-top:1px solid var(--line);padding-top:14px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
+<link rel="stylesheet" href="tutoria-skin.css">
+<script>try{if(!document.documentElement.dataset.theme)document.documentElement.dataset.theme="light"}catch(e){}</script>
 </head>
 <body>
 <div class="bar"><div class="bar-in">
@@ -478,5 +480,6 @@ function nova(){respondido=false;const pool=D.filter(d=>filtro==='Tudo'||d.bl===
   document.getElementById('qs').textContent=`${score[0]} / ${score[1]}`;document.getElementById('qfb').textContent=(certo?'Certo. ':'Era: '+d.p[i][2]+'. ')+d.p[i][3]}))}
 document.getElementById('qn').addEventListener('click',nova);drawChips();nova();
 </script>
+<script>(function(){var b=document.querySelector('.bar-in')||document.querySelector('.bar');if(!b||b.querySelector('.mgb'))return;var a=document.createElement('a');a.className='mgb';a.href='index.html';a.title='Voltar à Biblioteca';a.setAttribute('aria-label','Voltar à Biblioteca MG COACH');a.innerHTML='<svg viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>';b.insertBefore(a,b.firstChild)})();</script>
 </body>
 </html>

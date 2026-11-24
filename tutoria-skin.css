@@ -1,0 +1,17 @@
+/* Camada visual da biblioteca MG COACH para as tutorias com estilo próprio */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+html:not([data-theme="dark"]){
+  --bg:#ffffff;--paper:#ffffff;--surface:#ffffff;--card:#ffffff;--surface2:#f6f6f7;--plate:#fafafa;
+  --ink:#111111;--muted:#5f6368;--line:#e7e7ea;
+}
+html:not([data-theme="dark"]) body{background:#fff!important}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif!important}
+h1,h2,h3,.hero h1,.shead h2{font-family:Poppins,Inter,system-ui,sans-serif!important;letter-spacing:-.01em}
+h1{font-weight:800!important}
+h2,h3{font-weight:700!important}
+.bar,.bar-in,.bar .t,.bar-t,.bar .nm,.btn,.tg{font-family:Inter,system-ui,sans-serif!important}
+html:not([data-theme="dark"]) .kicker,html:not([data-theme="dark"]) .eyebrow{color:#c2410c!important;font-family:Inter,system-ui,sans-serif!important;font-weight:600}
+.mgb{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;flex:none;border-radius:999px;border:1px solid var(--line,#e7e7ea);text-decoration:none;margin-right:2px}
+.mgb svg{width:16px;height:16px}
+.mgb:hover{border-color:#ff6b1a}
+body :where(p,li,td,th,summary,small,label,dd,dt,figcaption,blockquote){font-family:inherit!important}
