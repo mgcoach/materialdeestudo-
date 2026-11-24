@@ -1,0 +1,733 @@
+<section class="phead" data-n="05"><div class="wrap">
+  <span class="tag">Parte 05 de 13</span>
+  <h1>Gasto energético e cálculo de dieta</h1>
+  <p>Quanto o corpo gasta, onde gasta, como estimar esse número e como transformá-lo em uma dieta, passo a passo. A Parte 4 mostrou como a célula fabrica ATP. Esta mostra a conta do corpo inteiro: de onde vêm as calorias que você mede, por que as equações erram e como o Haluch monta os números de uma dieta de hipertrofia e de definição.</p>
+  <div class="src">Fontes fundidas: Nutrição e Hipertrofia Muscular (cap. 6) · Estratégias Nutricionais para Definição Muscular (gasto energético e cálculo da dieta) · Ciclo de Carboidratos (caps. 5 e 6) · Bioquímica do Emagrecimento (balanço energético) · slides de Nutrição no Fisiculturismo</div>
+</div></section>
+
+<div class="wrap">
+
+<!-- 1 -->
+<section class="sec" id="p5-s1" data-n="5.1" style="--c:var(--ins)">
+  <div class="shead"><span class="n">5.1</span><h2>Balanço energético: a conta que rege o peso</h2></div>
+  <p class="ask">Se emagrecer é só comer menos do que se gasta, por que a previsão da conta quase nunca se confirma na balança?</p>
+  <p class="t">Uma caloria é uma unidade de energia. A que usamos em nutrição é a quilocaloria (kcal): a energia necessária para aquecer 1 kg de água em 1 °C. O corpo obtém essa energia oxidando os macronutrientes, pelas vias da Parte 4, e a usa para fabricar ATP. O que não vira trabalho vira calor.</p>
+  <div class="nums">
+    <div class="num" style="--nc:var(--glc)"><b>4 <small>kcal/g</small></b><span>Carboidrato.</span></div>
+    <div class="num" style="--nc:var(--pro)"><b>4 <small>kcal/g</small></b><span>Proteína.</span></div>
+    <div class="num" style="--nc:var(--fat)"><b>9 <small>kcal/g</small></b><span>Gordura.</span></div>
+    <div class="num" style="--nc:var(--cor)"><b>7 <small>kcal/g</small></b><span>Álcool.</span></div>
+  </div>
+  <p class="t">O <b>balanço energético</b> compara duas grandezas: a ingestão energética (IE), que é tudo o que entra pela comida, e o gasto energético total (GET), que é tudo o que o corpo consome em um dia.</p>
+  <div class="tw"><table>
+    <tr><th>Situação</th><th>Relação</th><th>O que acontece</th></tr>
+    <tr><td><b>Balanço neutro</b></td><td class="v">IE = GET</td><td>Peso estável. É onde um adulto passa a maior parte da vida</td></tr>
+    <tr><td><b>Balanço positivo</b></td><td class="v">IE &gt; GET</td><td>O excesso é guardado, principalmente como gordura. A massa magra também sobe um pouco</td></tr>
+    <tr><td><b>Balanço negativo</b></td><td class="v">IE &lt; GET</td><td>O corpo cobre a diferença com suas reservas. A maior parte costuma ser gordura. Em algumas situações, muita massa magra</td></tr>
+  </table></div>
+  <figure class="fit">
+    <svg viewBox="0 0 360 210" role="img" aria-label="Balança do balanço energético: ingestão de um lado, gasto do outro">
+      <path d="M180 60 L160 190 H200 Z" fill="var(--night)"/>
+      <line x1="40" y1="70" x2="320" y2="70" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+      <rect x="20" y="76" width="130" height="78" rx="12" fill="var(--glc)"/><text x="85" y="104" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--night)">INGESTÃO</text><text x="85" y="124" text-anchor="middle" font-size="11" style="fill:var(--night)">carboidrato, proteína,</text><text x="85" y="139" text-anchor="middle" font-size="11" style="fill:var(--night)">gordura, álcool</text>
+      <rect x="210" y="76" width="130" height="78" rx="12" fill="var(--ins)"/><text x="275" y="104" text-anchor="middle" font-size="14" font-weight="700" class="w">GASTO</text><text x="275" y="124" text-anchor="middle" font-size="11" class="w">repouso + digestão</text><text x="275" y="139" text-anchor="middle" font-size="11" class="w">+ atividade física</text>
+      <text x="180" y="16" text-anchor="middle" font-size="12" class="mu">os dois pratos reagem um ao outro</text>
+      <path d="M130 50 C160 28 200 28 230 50" fill="none" stroke="var(--glu)" stroke-width="2" stroke-dasharray="4 4"/><path d="M234 53l-10-2 5-8z M126 53l10-2-5-8z" fill="var(--glu)"/>
+    </svg>
+    <figcaption>A balança clássica. O que ela não mostra, e que explica a pergunta de abertura, é a seta tracejada: mexer em um prato faz o outro se mover.</figcaption>
+  </figure>
+  <h3>Por que a conta simples falha</h3>
+  <p class="t">O corpo tem um sistema de homeostase que tende a igualar ingestão e gasto ao longo de vários dias. Ele age pelos dois lados.</p>
+  <ol class="steps">
+    <li><b>Pelo lado da ingestão</b>Um sistema neuroendócrino regula fome e saciedade. Em déficit, a fome sobe. É o assunto da Parte 6.</li>
+    <li><b>Pelo lado do gasto</b>Os componentes do gasto se ajustam quando o peso muda. Em déficit, o corpo gasta menos. Em superávit, gasta mais.</li>
+    <li><b>O resultado</b>O gasto energético não é um número fixo. É um alvo móvel. A conta "déficit × dias = quilos perdidos" assume que ele fica parado.</li>
+  </ol>
+  <div class="note why"><span class="tag">Quanta energia tem 1 kg de gordura corporal</span>O livro usa a referência clássica: déficit de 500 kcal por dia, 3.500 por semana, cerca de 0,5 kg perdido por semana. Isso equivale a 7.000 kcal por kg. O número vem do tecido adiposo, que não é gordura pura: tem água e proteína. Com cerca de 85% de gordura a 9 kcal/g, 1 kg de tecido guarda entre 7.000 e 7.700 kcal. A parte do cálculo com 85% é complemento meu.</div>
+  <div class="note lit"><span class="tag">Literatura · PubMed · por que a regra é só o começo</span>Segundo artigo recuperado no PubMed, Hall e colaboradores (2011) construíram um modelo matemático do metabolismo humano que inclui as adaptações do gasto durante a perda de peso. Três resultados: a resposta do peso a uma mudança de ingestão é <b>lenta, com meia-vida de cerca de 1 ano</b>, ou seja, metade do efeito total de uma mudança permanente leva em torno de um ano para aparecer. Pessoas com mais gordura corporal perdem mais peso para a mesma mudança de ingestão, e demoram mais a estabilizar. E a perda não é linear: ela desacelera até um novo equilíbrio, sem continuar indefinidamente. <a href="https://doi.org/10.1016/S0140-6736(11)60812-X">doi.org/10.1016/S0140-6736(11)60812-X</a></div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Quantas kcal por grama têm carboidrato, proteína, gordura e álcool?</summary><p>4, 4, 9 e 7.</p></details>
+    <details><summary>Defina balanço energético positivo e negativo.</summary><p>Positivo: ingestão maior que o gasto, com armazenamento. Negativo: ingestão menor que o gasto, com uso das reservas.</p></details>
+    <details><summary>Por que a previsão linear de perda de peso falha?</summary><p>O gasto energético cai com a perda de peso e a fome aumenta. O gasto é um alvo móvel.</p></details>
+    <details><summary>O que o modelo de Hall (2011) mostrou sobre o tempo de resposta do peso?</summary><p>É lento: meia-vida de cerca de 1 ano para uma mudança permanente de ingestão.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="sec" id="p5-s2" data-n="5.2" style="--c:var(--ins)">
+  <div class="shead"><span class="n">5.2</span><h2>Os componentes do gasto energético</h2></div>
+  <p class="ask">Qual parte do gasto diário mais varia entre duas pessoas do mesmo tamanho?</p>
+  <p class="t">O gasto energético total (GET) é a soma de três parcelas.</p>
+  <div class="anchor" style="grid-template-columns:1fr">
+    <div><span class="tag">A equação central</span><h4>GET = GER + ETA + GAF</h4><p>Gasto energético de repouso + efeito térmico dos alimentos + gasto energético da atividade física. E o último se divide em dois: <b>GAF = GEF + NEAT</b>, o exercício físico e todo o movimento que não é exercício.</p></div>
+  </div>
+  <figure class="fit">
+    <svg viewBox="0 0 360 250" role="img" aria-label="Componentes do gasto energético total em três perfis">
+      <g font-size="11" font-weight="700"><text x="10" y="24">Sedentário</text><text x="10" y="88">Ativo, treina</text><text x="10" y="152">Atleta, horas por dia</text></g>
+      <g>
+        <rect x="10" y="32" width="231" height="26" fill="var(--ins)"/><rect x="241" y="32" width="33" height="26" fill="var(--glc)"/><rect x="274" y="32" width="56" height="26" fill="var(--fib)"/><rect x="330" y="32" width="10" height="26" fill="var(--adr)"/>
+        <rect x="10" y="96" width="198" height="26" fill="var(--ins)"/><rect x="208" y="96" width="33" height="26" fill="var(--glc)"/><rect x="241" y="96" width="56" height="26" fill="var(--fib)"/><rect x="297" y="96" width="43" height="26" fill="var(--adr)"/>
+        <rect x="10" y="160" width="149" height="26" fill="var(--ins)"/><rect x="159" y="160" width="33" height="26" fill="var(--glc)"/><rect x="192" y="160" width="49" height="26" fill="var(--fib)"/><rect x="241" y="160" width="99" height="26" fill="var(--adr)"/>
+      </g>
+      <g font-size="10" font-weight="700" text-anchor="middle"><text x="125" y="49" class="w">GER ~70%</text><text x="109" y="113" class="w">GER ~60%</text><text x="84" y="177" class="w">GER ~45%</text></g>
+      <g font-size="11"><rect x="10" y="208" width="12" height="12" rx="3" fill="var(--ins)"/><text x="28" y="218">Repouso</text><rect x="92" y="208" width="12" height="12" rx="3" fill="var(--glc)"/><text x="110" y="218">ETA</text><rect x="150" y="208" width="12" height="12" rx="3" fill="var(--fib)"/><text x="168" y="218">NEAT</text><rect x="218" y="208" width="12" height="12" rx="3" fill="var(--adr)"/><text x="236" y="218">Exercício</text></g>
+      <text x="10" y="240" font-size="10" class="mu">Proporções ilustrativas dentro das faixas do livro.</text>
+    </svg>
+    <figcaption>O repouso domina em quase todo mundo. A fatia da atividade física é a que mais muda de uma pessoa para outra, e em atletas pode passar de metade do total.</figcaption>
+  </figure>
+  <div class="tw"><table>
+    <tr><th>Componente</th><th>O que é</th><th>Fatia do GET</th></tr>
+    <tr><td><b>GER</b> · gasto energético de repouso</td><td>Energia para manter temperatura e funções vitais: coração, respiração, cérebro, rins</td><td class="v">50–70%</td></tr>
+    <tr><td><b>ETA</b> · efeito térmico dos alimentos</td><td>Custo de digerir, absorver, metabolizar e armazenar o que foi comido. Também chamado termogênese induzida pela dieta</td><td class="v">~10%</td></tr>
+    <tr><td><b>GAF</b> · gasto da atividade física</td><td>Exercício (GEF) mais as atividades do dia a dia (NEAT)</td><td class="v">de 15% a mais de 50%</td></tr>
+  </table></div>
+  <div class="note why"><span class="tag">TMB e GER não são a mesma coisa</span>A <b>taxa metabólica basal</b> (TMB) é a energia mínima para manter o organismo vivo. Só pode ser medida em condições rígidas de laboratório: jejum, repouso físico e mental, temperatura controlada. O que se mede na prática é o <b>GER</b>, um pouco maior: de 3 a 5% acima da TMB segundo os livros (os slides do curso falam em cerca de 10%). Para cálculo de dieta, o Haluch trata os dois como equivalentes.</div>
+  <div class="note hal"><span class="tag">A resposta da abertura</span>A atividade física é a principal variável que diferencia o gasto diário entre pessoas de peso corporal semelhante. E dentro dela, para a maioria da população, o NEAT pesa mais que o exercício formal. As seções 5.3 a 5.6 abrem cada componente.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Escreva a equação do GET e a do GAF.</summary><p>GET = GER + ETA + GAF. GAF = GEF + NEAT.</p></details>
+    <details><summary>Que fatia do GET cabe ao GER e ao ETA?</summary><p>GER: de 50 a 70%. ETA: cerca de 10%.</p></details>
+    <details><summary>Qual a diferença entre TMB e GER?</summary><p>A TMB é o mínimo, medido em condições rígidas de laboratório. O GER é medido em repouso comum e fica de 3 a 5% acima.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="sec" id="p5-s3" data-n="5.3" style="--c:var(--fat)">
+  <div class="shead"><span class="n">5.3</span><h2>O gasto de repouso por dentro: quem consome a energia</h2></div>
+  <p class="ask">Se o músculo gasta só 13 kcal por kg, quem responde pela maior parte do gasto de repouso?</p>
+  <p class="t">O GER de uma pessoa de 70 kg fica em média entre 65 e 70 kcal por hora, algo como 1.560 a 1.680 kcal por dia. Essa energia não é distribuída por igual. Cada tecido tem um custo próprio.</p>
+  <div class="tw"><table>
+    <tr><th>Tecido</th><th>Taxa metabólica</th><th>Peso</th></tr>
+    <tr><td>Coração + rins</td><td class="v">440 kcal/kg/dia</td><td>300 g + 150 g</td></tr>
+    <tr><td>Cérebro</td><td class="v">240 kcal/kg/dia</td><td>1,5 kg</td></tr>
+    <tr><td>Fígado</td><td class="v">200 kcal/kg/dia</td><td>1,5 kg</td></tr>
+    <tr><td>Músculo esquelético</td><td class="v">13 kcal/kg/dia</td><td>40 a 50% do peso</td></tr>
+    <tr><td>Outros tecidos</td><td class="v">12 kcal/kg/dia</td><td>o restante</td></tr>
+    <tr><td>Tecido adiposo</td><td class="v">4,5 kcal/kg/dia</td><td>muito variável</td></tr>
+    <caption>Wang (2010), reproduzido no livro Nutrição e Hipertrofia Muscular.</caption>
+  </table></div>
+  <figure class="dark fit">
+    <svg viewBox="0 0 360 250" role="img" aria-label="Contribuição de cada tecido para o gasto de repouso de um homem de 70 kg">
+      <text x="10" y="20" font-size="12" font-weight="700">Homem de 70 kg: de onde vêm ~1.600 kcal</text>
+      <g font-size="11">
+        <text x="10" y="50">Cérebro</text><rect x="110" y="38" width="162" height="16" rx="4" fill="var(--adr)"/><text x="278" y="50" font-weight="700">360</text>
+        <text x="10" y="78">Músculo</text><rect x="110" y="66" width="164" height="16" rx="4" fill="var(--pro)"/><text x="280" y="78" font-weight="700">364</text>
+        <text x="10" y="106">Outros</text><rect x="110" y="94" width="152" height="16" rx="4" fill="var(--cor)"/><text x="268" y="106" font-weight="700">337</text>
+        <text x="10" y="134">Fígado</text><rect x="110" y="122" width="135" height="16" rx="4" fill="var(--glc)"/><text x="251" y="134" font-weight="700">300</text>
+        <text x="10" y="162">Coração + rins</text><rect x="110" y="150" width="89" height="16" rx="4" fill="var(--glu)"/><text x="205" y="162" font-weight="700">198</text>
+        <text x="10" y="190">Gordura</text><rect x="110" y="178" width="21" height="16" rx="4" fill="var(--fat)"/><text x="137" y="190" font-weight="700">47</text>
+      </g>
+      <text x="10" y="220" font-size="11" class="mu">Cérebro, fígado, coração e rins: 3,45 kg, 5% do peso,</text>
+      <text x="10" y="236" font-size="11" class="mu">e cerca de 53% do gasto de repouso.</text>
+    </svg>
+    <figcaption>Conta minha com as taxas da tabela, supondo 28 kg de músculo (40%) e 10,5 kg de gordura (15%). O total, cerca de 1.600 kcal, bate com a faixa de 65 a 70 kcal por hora do livro.</figcaption>
+  </figure>
+  <div class="anchor">
+    <svg class="ic" viewBox="0 0 74 74" aria-hidden="true"><rect x="8" y="12" width="14" height="50" fill="var(--adr)"/><rect x="30" y="34" width="36" height="28" fill="var(--pro)"/><text x="15" y="72" text-anchor="middle" font-size="8" style="fill:#fff">5%</text><text x="48" y="72" text-anchor="middle" font-size="8" style="fill:#fff">40%</text></svg>
+    <div><span class="tag">Âncora de memória</span><h4>5% do peso, metade do gasto</h4><p>A resposta da abertura: os órgãos. Um quilo de coração ou rim gasta mais de 30 vezes o que gasta um quilo de músculo em repouso. O músculo entra na conta pela quantidade, e não pela intensidade.</p></div>
+  </div>
+  <h3>O que a célula faz com essa energia em repouso</h3>
+  <ol class="steps">
+    <li><b>Manter gradientes de íons</b>A bomba de sódio e potássio trabalha sem parar em todas as células, e a SERCA no músculo (seção 4.2). Só o cérebro consome cerca de um quinto do gasto de repouso em grande parte por isso.</li>
+    <li><b>Renovar proteínas</b>O turnover de 300 a 400 g por dia (Parte 3) custa ATP a cada ligação peptídica refeita.</li>
+    <li><b>Sustentar ciclos metabólicos</b>Gliconeogênese, ciclo da ureia, ciclo de Cori, quebrar e refazer triglicerídeos.</li>
+    <li><b>Produzir calor</b>Parte dos prótons volta à matriz da mitocôndria sem passar pela ATP sintase (seção 4.7). Essa energia sai como calor e mantém a temperatura do corpo.</li>
+    <li><b>Trabalho mecânico contínuo</b>Coração batendo, músculos da respiração, filtração dos rins.</li>
+  </ol>
+  <p class="t" style="font-size:14px;color:var(--mute)">Esta lista de destinos celulares é complemento meu, montado com o que as Partes 3 e 4 já explicaram. Os livros dão os valores por tecido.</p>
+  <h3>O que faz o GER variar</h3>
+  <div class="tw"><table>
+    <tr><th>Fator</th><th>Efeito</th></tr>
+    <tr><td><b>Massa livre de gordura</b></td><td>O principal determinante. É por isso que as equações usam peso, altura e, as melhores, a própria massa magra</td></tr>
+    <tr><td><b>Sexo</b></td><td>Homens têm GER um pouco maior, pelo maior volume muscular e menor percentual de gordura</td></tr>
+    <tr><td><b>Idade</b></td><td>O GER cai com a idade</td></tr>
+    <tr><td><b>Genética</b></td><td>Pessoas de mesma composição corporal diferem entre si</td></tr>
+    <tr><td><b>Hormônios</b></td><td>Hormônios da tireoide elevam o gasto. Segundo os slides, esteroides, GH e termogênicos também aumentam o metabolismo</td></tr>
+    <tr><td><b>Dieta prolongada</b></td><td>Em restrição, o GER cai além do esperado pela perda de peso: é a adaptação metabólica (Parte 6)</td></tr>
+  </table></div>
+  <h3>Como o gasto é medido de verdade</h3>
+  <div class="tabs">
+    <div class="panel" data-label="Calorimetria indireta"><h5>Mede o oxigênio</h5>Como todo ATP aeróbio depende do oxigênio (seção 4.7), medir o oxigênio consumido é medir a energia gasta. A pessoa respira em uma máscara ou canópia, e o aparelho mede o O2 que entra e o CO2 que sai. Cada litro de oxigênio corresponde a cerca de 5 kcal. É o método de referência para o GER, e é caro.</div>
+    <div class="panel" data-label="Quociente respiratório"><h5>Mostra o combustível</h5>A razão entre CO2 produzido e O2 consumido revela o que está sendo queimado. Glicose: 6 CO2 para 6 O2, razão 1,0. Palmitato: 16 CO2 para 23 O2, razão 0,70. São os mesmos números da conta de oxigênio da seção 4.9. Em repouso e jejum, o valor fica perto de 0,8: mistura com predomínio de gordura.</div>
+    <div class="panel" data-label="Água duplamente marcada"><h5>Mede o dia inteiro</h5>A pessoa bebe água com isótopos estáveis de hidrogênio e oxigênio. A diferença na velocidade com que os dois são eliminados, ao longo de 1 a 2 semanas, dá a produção de CO2 e, com ela, o gasto total em vida livre. É o método de referência para o GET em pesquisa.</div>
+  </div>
+  <p class="t" style="font-size:14px;color:var(--mute)">O livro cita a calorimetria indireta como forma de medir o GER. O detalhamento dos três métodos é complemento meu.</p>
+  
+  <h3>Dentro da célula: três contas que nunca param</h3>
+  <p class="t">A tabela acima mostra quais órgãos gastam. Resta a pergunta mais básica: gastam <b>com o quê</b>? Praticamente todo o gasto de repouso se resume a três processos que funcionam 24 horas por dia.</p>
+  <ol class="steps">
+    <li><b>Bombear íons contra o gradiente</b>A <b>bomba de sódio e potássio</b> (Na<sup>+</sup>/K<sup>+</sup>-ATPase) mantém a diferença de carga entre o interior e o exterior de toda célula, gastando um ATP a cada ciclo. Sem ela não há potencial de membrana, e sem potencial de membrana não há contração nem impulso nervoso. Estimativas atribuem a ela algo em torno de 20 a 30% do gasto de repouso. A bomba de cálcio do retículo (SERCA) faz uma conta semelhante no músculo.</li>
+    <li><b>Renovar proteínas</b>O corpo desmonta e remonta proteínas continuamente (seção 3.5). Montar cada ligação peptídica custa o equivalente a cerca de quatro ligações de alta energia, e desmontar pelo proteassoma também consome ATP. A renovação proteica responde por aproximadamente 20% do gasto de repouso.</li>
+    <li><b>Vazamento de prótons na mitocôndria</b>Parte dos prótons bombeados pela cadeia respiratória retorna à matriz <b>sem</b> passar pela ATP sintase, por vazamento natural da membrana. Essa energia vira calor, não ATP. É um desacoplamento de base, presente em todas as mitocôndrias, e pode responder por 20 a 25% do gasto de repouso.</li>
+  </ol>
+  <div class="note why"><span class="tag">Por que esses três itens explicam a variação entre pessoas</span>Porque todos os três podem variar sem que o peso mude. Mais massa de órgãos significa mais bombas funcionando. Mais renovação proteica, por treino ou por mais massa magra, significa mais gasto. E o grau de vazamento de prótons varia entre indivíduos e com o estado nutricional: na restrição calórica, as mitocôndrias ficam <b>mais eficientes</b>, vazam menos e produzem o mesmo ATP gastando menos combustível. É um dos componentes concretos da termogênese adaptativa da seção 6.8. Esta integração é complemento meu ao texto do livro.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Qual o GER médio por hora de uma pessoa de 70 kg?</summary><p>De 65 a 70 kcal por hora.</p></details>
+    <details><summary>Quais as taxas metabólicas de músculo e tecido adiposo?</summary><p>13 e 4,5 kcal por kg por dia.</p></details>
+    <details><summary>Que tecidos têm as maiores taxas por quilo?</summary><p>Coração e rins (440), cérebro (240) e fígado (200).</p></details>
+    <details><summary>Qual o principal determinante do GER?</summary><p>A massa livre de gordura.</p></details>
+    <details><summary>Por que medir oxigênio serve para medir energia?</summary><p>O ATP aeróbio depende do oxigênio como receptor final de elétrons. Cada litro consumido equivale a cerca de 5 kcal.</p></details>
+    <details><summary>Qual o quociente respiratório da glicose e da gordura?</summary><p>1,0 e 0,70.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="sec" id="p5-s4" data-n="5.4" style="--c:var(--pro)">
+  <div class="shead"><span class="n">5.4</span><h2>Massa muscular e metabolismo: o que é verdade</h2></div>
+  <p class="ask">Ganhar músculo "acelera o metabolismo"? Quanto?</p>
+  <p class="t">A crença é que cada quilo de músculo queima muitas calorias paradas. O número real é modesto, e mesmo assim o efeito de longo prazo é grande. As duas coisas são verdade, e a diferença está na escala.</p>
+  <div class="nums">
+    <div class="num" style="--nc:var(--pro)"><b>+130 <small>kcal</small></b><span>por dia para <b>10 kg de músculo</b> a mais (13 × 10).</span></div>
+    <div class="num" style="--nc:var(--fat)"><b>+45 <small>kcal</small></b><span>por dia para <b>10 kg de gordura</b> a mais (4,5 × 10).</span></div>
+  </div>
+  <p class="t">A diferença direta, 85 kcal por dia, parece pequena. Mas quando se compara o gasto de repouso de pessoas reais com o mesmo peso e composições opostas, a distância cresce. O livro faz a conta para um homem de 26 anos, 84 kg e 1,63 m.</p>
+  <div class="tw"><table>
+    <tr><th>Mesma pessoa, dois corpos</th><th>Equação indicada</th><th>GER estimado</th></tr>
+    <tr><td>Com obesidade</td><td>Mifflin-St Jeor</td><td class="v">1.734 kcal</td></tr>
+    <tr><td>Composição de fisiculturista</td><td>Tinsley</td><td class="v">2.093 kcal</td></tr>
+    <tr><td><b>Diferença</b></td><td></td><td class="v"><b>359 kcal/dia</b></td></tr>
+  </table></div>
+  <p class="t">Segundo o livro, medições por calorimetria indireta sugerem que a diferença real pode ser até maior. E o ganho não é só de gasto de repouso: pessoas com composição atlética são mais sensíveis à insulina e têm maior flexibilidade metabólica, ou seja, mais capacidade de oxidar gordura.</p>
+  <h3>E a musculação emagrece?</h3>
+  <div class="tabs">
+    <div class="panel" data-label="Curto prazo"><h5>Pouco, sozinha</h5>Em semanas ou meses, os estudos mostram pouco ou nenhum efeito da musculação isolada na perda de gordura. O gasto da sessão é baixo e, sem controle de dieta, as pessoas compensam comendo mais. O aeróbio contribui mais para a perda de gordura nesse prazo.</div>
+    <div class="panel" data-label="Longo prazo"><h5>Muito, pela composição</h5>Em anos, mudar a composição corporal eleva o gasto de repouso, a sensibilidade à insulina e a capacidade de oxidar gordura. Fisiculturistas chegam a 4 a 7% de gordura tendo a musculação como exercício-base.</div>
+    <div class="panel" data-label="Posição do ACSM"><h5>Donnelly, 2009</h5>O treino resistido não é eficaz para reduzir cerca de 3% do peso e não aumenta a perda de peso quando somado à restrição alimentar. Ele aumenta a massa livre de gordura, sozinho ou junto com a dieta, e pode aumentar a perda de gordura quando combinado ao aeróbio. Também melhora HDL, LDL, triglicerídeos, pressão arterial e sensibilidade à insulina.</div>
+  </div>
+  <div class="note prat"><span class="tag">Na prática</span>Não venda musculação como "queimadora de calorias". O papel dela no emagrecimento é outro: garantir que o peso perdido seja gordura, e não músculo, e construir ao longo dos anos um corpo que gasta mais e lida melhor com carboidrato. O déficit vem da dieta e do gasto total.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Quanto 10 kg de músculo acrescentam ao gasto de repouso?</summary><p>Cerca de 130 kcal por dia.</p></details>
+    <details><summary>Qual a diferença de GER estimada entre o homem com obesidade e o fisiculturista de 84 kg?</summary><p>359 kcal por dia (1.734 contra 2.093).</p></details>
+    <details><summary>Por que a musculação isolada pouco reduz gordura no curto prazo?</summary><p>O gasto da sessão é baixo e, sem controle da dieta, há compensação na ingestão.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="sec" id="p5-s5" data-n="5.5" style="--c:var(--glc)">
+  <div class="shead"><span class="n">5.5</span><h2>Efeito térmico dos alimentos: o custo de processar a comida</h2></div>
+  <p class="ask">Por que a proteína custa até dez vezes mais para ser processada do que a gordura?</p>
+  <p class="t">Depois de uma refeição, o gasto energético sobe por algumas horas. É o <b>efeito térmico dos alimentos</b> (ETA): a energia gasta para digerir, absorver, transportar, metabolizar, armazenar e excretar o que foi comido. Em uma dieta mista em manutenção, soma cerca de 10% do gasto total.</p>
+  <div class="tw"><table>
+    <tr><th>Macronutriente</th><th>ETA (% das calorias ingeridas)</th><th>Por que custa isso</th></tr>
+    <tr><td><span class="m fat">Gordura</span></td><td class="v">0–3%</td><td>Já chega quase na forma de estoque. Basta religar os ácidos graxos ao glicerol e guardar</td></tr>
+    <tr><td><span class="m glc">Carboidrato</span></td><td class="v">5–10%</td><td>Absorção com transporte ativo, fosforilação da glicose e montagem do glicogênio, que gasta ATP a cada unidade acrescentada</td></tr>
+    <tr><td><span class="m pro">Proteína</span></td><td class="v">20–30%</td><td>Não há estoque: tudo precisa ser processado. Refazer ligações peptídicas, retirar o grupo amino e fabricar ureia (3 ATP por nitrogênio), e fazer gliconeogênese</td></tr>
+  </table></div>
+  <p class="t" style="font-size:14px;color:var(--mute)">As faixas são do livro Ciclo de Carboidratos. O livro de definição resume como "até 5% para carboidratos e gorduras, 20 a 30% para proteínas". A coluna de mecanismos junta o que os livros dizem na Parte 3 com complemento meu.</p>
+  <div class="nums">
+    <div class="num" style="--nc:var(--glc)"><b>~10%</b><span>do GET em dieta mista equilibrada.</span></div>
+    <div class="num" style="--nc:var(--cor)"><b>Tamanho</b><span>Refeição maior, ETA maior. O efeito acompanha as calorias ingeridas.</span></div>
+  </div>
+  <div class="note why"><span class="tag">Três consequências</span><b>1. Em déficit, o ETA cai sozinho.</b> Comer menos significa processar menos. É uma das razões de o gasto total diminuir na dieta. <b>2. Dividir em mais refeições não aumenta o ETA do dia.</b> Seis refeições pequenas geram seis picos pequenos. Três grandes, três picos grandes. A soma depende do total e da composição. Este segundo ponto é complemento meu. <b>3. Proteína alta ajuda pouco pelo calor.</b> Como visto na seção 3.9, trocar 15% por 30% de proteína em 2.000 kcal acrescenta cerca de 23 kcal por dia. O valor da proteína na dieta está na saciedade e na massa magra.</div>
+  
+  <h3>De onde vem o custo, nutriente por nutriente</h3>
+  <p class="t">O efeito térmico não é um número arbitrário: ele é a soma das reações que o corpo precisa realizar para processar cada macronutriente. Comparar os três explica a diferença.</p>
+  <div class="tw"><table>
+    <tr><th>Nutriente</th><th>Efeito térmico</th><th>O que custa</th></tr>
+    <tr><td><span class="m pro">Proteína</span></td><td class="v">20–30%</td><td>Digestão até aminoácidos; transporte ativo no intestino; remoção do nitrogênio por transaminação e desaminação; <b>ciclo da ureia</b>, que gasta 4 ligações de alta energia por ureia formada; gliconeogênese a partir do esqueleto de carbono; e a síntese proteica, que custa cerca de 4 ATP por ligação peptídica</td></tr>
+    <tr><td><span class="m glc">Carboidrato</span></td><td class="v">5–10%</td><td>Digestão até monossacarídeos; transporte; fosforilação da glicose (1 ATP); e, para estocar, a montagem do glicogênio, que custa 1 ATP e 1 UTP por unidade (seção 1.6)</td></tr>
+    <tr><td><span class="m fat">Gordura</span></td><td class="v">0–3%</td><td>Quase nada: a gordura absorvida já está na forma em que será estocada. Basta reesterificar. É o caminho mais curto entre o prato e o estoque</td></tr>
+  </table></div>
+  <div class="note why"><span class="tag">O caso extremo: transformar carboidrato em gordura</span>Se o excesso de carboidrato precisar virar gordura pela lipogênese <i>de novo</i> (seção 2.5), o custo sobe para cerca de <b>20 a 25%</b> da energia convertida. É por isso que, em pessoas saudáveis, essa conversão é metabolicamente cara e pouco frequente: o corpo prefere queimar o carboidrato em excesso e poupar a gordura ingerida, que não custa quase nada para estocar. O resultado prático é o mesmo ganho de gordura, mas por um caminho diferente do que a intuição sugere (seção 1.11).</div>
+  <div class="note prat"><span class="tag">A conta que importa na prática</span>Em uma dieta de 2.500 kcal, trocar uma distribuição de 15% de proteína por uma de 30% aumenta o efeito térmico em algo próximo de <b>60 a 90 kcal por dia</b>. É pequeno diante do total, e é real. Somado à saciedade e à preservação de massa magra (seção 3.9), é parte do motivo pelo qual dietas com mais proteína rendem na prática um pouco mais do que a conta de calorias previa.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Qual o ETA de gordura, carboidrato e proteína?</summary><p>0 a 3%, 5 a 10% e 20 a 30% das calorias ingeridas.</p></details>
+    <details><summary>Quanto o ETA representa do gasto total?</summary><p>Cerca de 10% em dieta mista em manutenção.</p></details>
+    <details><summary>Por que a proteína tem o maior ETA?</summary><p>Não há estoque de aminoácidos. Tudo é processado: síntese proteica, retirada do nitrogênio, ciclo da ureia e gliconeogênese, todos com gasto de ATP.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="sec" id="p5-s6" data-n="5.6" style="--c:var(--fib)">
+  <div class="shead"><span class="n">5.6</span><h2>Atividade física: exercício, NEAT e os limites do gasto</h2></div>
+  <p class="ask">Por que duas pessoas iguais, comendo o mesmo excesso, engordam quantidades tão diferentes?</p>
+  <p class="t">O exercício intenso é o fator que mais eleva o metabolismo: pode multiplicar a produção de calor por 50 a 100 em poucos segundos. Mas ele ocupa pouco tempo do dia. O gasto da atividade física tem dois componentes muito diferentes.</p>
+  <div class="tw"><table>
+    <tr><th></th><th>GEF · exercício físico</th><th>NEAT · atividade que não é exercício</th></tr>
+    <tr><td>O que é</td><td>Treino planejado: musculação, corrida, esporte</td><td>Todo o resto: caminhar, trabalhar, subir escada, ficar em pé, gesticular, mexer os pés</td></tr>
+    <tr><td>Quem controla</td><td>Decisão consciente</td><td>Em grande parte inconsciente</td></tr>
+    <tr><td>Peso no GET</td><td>Grande em atletas que treinam horas por dia</td><td>Maior que o do exercício para a maior parte da população</td></tr>
+    <tr><td>Variação</td><td>Depende de volume e intensidade</td><td class="v">até 2.000 kcal/dia</td></tr>
+  </table></div>
+  <h3>NEAT: o regulador escondido</h3>
+  <ol class="steps">
+    <li><b>Varia enormemente</b>Entre pessoas do mesmo porte, o NEAT pode diferir em até 2.000 kcal por dia. Isso explica boa parte do "metabolismo rápido" e do "metabolismo lento".</li>
+    <li><b>Sobe no superávit</b>Com excesso de calorias, algumas pessoas se movem mais sem perceber e dissipam a energia. São as que têm dificuldade de ganhar peso.</li>
+    <li><b>Cai no déficit</b>Em restrição, o corpo economiza movimento. É uma das razões da dificuldade de perder peso, e parte da adaptação metabólica.</li>
+    <li><b>Tem componente inato</b>Em Levine (2004), pessoas com obesidade ficavam sentadas cerca de 2,5 horas por dia a mais que pessoas magras sedentárias.</li>
+  </ol>
+  <div class="note lit"><span class="tag">Literatura · PubMed · o experimento que deu nome ao NEAT</span>Com base em artigo recuperado no PubMed: Levine e colaboradores (1999) superalimentaram 16 voluntários sem obesidade com <b>1.000 kcal por dia acima da manutenção, durante 8 semanas</b>. O ganho de gordura variou <b>10 vezes</b> entre eles. Dois terços do aumento do gasto diário vieram do NEAT, e a mudança no NEAT previu diretamente quem resistiu ao ganho de gordura (correlação de 0,77). Quem ativou o NEAT dissipou o excesso. Quem não ativou, engordou. <a href="https://doi.org/10.1126/science.283.5399.212">doi.org/10.1126/science.283.5399.212</a></div>
+  <p class="t">O livro cita ainda o estudo com pares de gêmeos de Bouchard (1990): com o mesmo superávit de 1.000 kcal, o ganho de peso foi parecido dentro de cada par e muito diferente entre os pares. A genética pesa, e parte dela se expressa pelo NEAT. É a resposta da abertura.</p>
+  <h3>Estimando o gasto de um exercício</h3>
+  <div class="anchor" style="grid-template-columns:1fr">
+    <div><span class="tag">Regra de bolso · complemento meu</span><h4>kcal ≈ MET × peso (kg) × horas</h4><p>MET é o múltiplo do gasto de repouso. 1 MET equivale a cerca de 1 kcal por kg por hora, o mesmo valor da fórmula simplificada de repouso que aparece nos slides do curso (1 kcal/kg/h para homens, 0,9 para mulheres). Caminhada moderada fica perto de 3 a 4 MET. Musculação, de 3 a 6. Corrida a 10 km/h, perto de 10. Uma hora de musculação para 80 kg: cerca de 4 × 80 × 1 = 320 kcal, das quais 80 seriam gastas de qualquer forma em repouso.</p></div>
+  </div>
+  <div class="note why"><span class="tag">Por que o treino gasta menos do que parece</span>A conta acima mostra dois pontos. O gasto de uma sessão de musculação é modesto. E parte dele não é extra: você gastaria o repouso de qualquer maneira. Relógios e aparelhos costumam mostrar o total, e não o acréscimo.</div>
+  <h3>Tabela de METs: quanto gasta cada atividade</h3>
+  <p class="t">A regra de bolso vale para qualquer atividade, desde que você saiba o MET dela. A referência mundial é o <b>Compêndio de Atividades Físicas</b>, que reúne medições de consumo de oxigênio de centenas de atividades e foi atualizado em 2024. Por definição, <mark>1 MET corresponde a 3,5 ml de oxigênio por kg por minuto</mark>, o que dá cerca de 1 kcal por kg por hora. Uma atividade de 8 MET gasta, portanto, oito vezes o repouso.</p>
+  <p class="t">Abaixo estão 224 atividades do compêndio, em onze grupos. Coloque o peso e a duração para ver o gasto total e o <b>acréscimo real</b>, que é o total menos o que você gastaria parado no mesmo tempo.</p>
+  <div class="calc" data-w="met" style="box-shadow:5px 5px 0 var(--gly)">
+    <h4>Calcule o gasto de uma atividade</h4>
+    <p>kcal = MET × peso (kg) × horas. Ferramenta de estudo: o resultado é uma estimativa de grupo, e o gasto real de cada pessoa pode ficar bem acima ou abaixo.</p>
+    <div class="fgrid">
+      <label class="fld" for="mtP">Peso (kg)<input id="mtP" type="number" inputmode="decimal" value="80" min="35" max="200"></label>
+      <label class="fld" for="mtM">Duração (minutos)<input id="mtM" type="number" inputmode="numeric" value="60" min="1" max="600"></label>
+      <label class="fld" for="mtA" style="grid-column:1/-1">Atividade<select id="mtA"></select></label>
+    </div>
+    <div class="res"></div>
+  </div>
+  <div data-met="lista"></div>
+  <div class="nums three">
+    <div class="num" style="--nc:var(--pro)"><b>&lt; 3 <small>MET</small></b><span><b>Leve.</b> Caminhada lenta, alongamento, ioga, tarefas leves de casa.</span></div>
+    <div class="num" style="--nc:var(--glc)"><b>3 a 5,9 <small>MET</small></b><span><b>Moderada.</b> Caminhada rápida, musculação, dança de salão, vôlei.</span></div>
+    <div class="num" style="--nc:var(--glu)"><b>≥ 6 <small>MET</small></b><span><b>Vigorosa.</b> Corrida, lutas, futebol, natação de treino, pular corda.</span></div>
+  </div>
+  <div class="note prat"><span class="tag">Na prática · como usar sem se enganar</span><b>Conte só o tempo em movimento.</b> O MET vale para a atividade contínua. Uma aula de jiu-jitsu de 60 minutos com explicação, espera e descanso pode ter 30 a 40 minutos no ritmo da tabela. <b>Use o acréscimo, não o total.</b> Para somar ao gasto diário já calculado pelo fator atividade, entra só o que passa do repouso. <b>Ajuste pelo ritmo real.</b> A mesma modalidade muda muito: boxe no saco fica em 5,8 MET e no ringue chega a 12,3. Na dúvida, escolha a linha mais conservadora.</div>
+  <div class="note myth"><span class="tag">Limites do método</span>O valor de 1 kcal/kg/h para o repouso é uma média de adultos de peso normal. Em quem tem muita gordura corporal, é mais velho ou tem pouca massa magra, o repouso real por kg é menor, e a conta <b>superestima</b> o gasto. O compêndio também mede pessoas adultas saudáveis fazendo a atividade com técnica razoável: iniciantes gastam diferente, e o condicionamento muda o esforço para o mesmo ritmo. Trate o resultado como ordem de grandeza. Algumas modalidades comuns no Brasil não foram medidas e não estão na lista, como capoeira, beach tennis, forró e funcional com nome próprio. Para elas, use a linha mais parecida em ritmo e pausas.</div>
+  <div class="note lit"><span class="tag">Literatura · PubMed · a fonte dos valores</span>Herrmann e colaboradores (2024) publicaram a terceira atualização do Compêndio de Atividades Físicas para Adultos, no Journal of Sport and Health Science. A versão de 2024 revisou os códigos antigos, trocou vários valores estimados por valores medidos e acrescentou atividades novas, como HIIT, zumba, futsal e stand up paddle. Os valores marcados com asterisco na tabela ainda são estimativas dos autores. <a href="https://pubmed.ncbi.nlm.nih.gov/38242596/">pubmed.ncbi.nlm.nih.gov/38242596</a> · <a href="https://pacompendium.com/">pacompendium.com</a></div>
+  <div class="note lit"><span class="tag">Literatura · PubMed · o gasto não cresce sem limite</span>De acordo com artigo recuperado no PubMed, Pontzer e colaboradores (2016) mediram o gasto total de <b>332 adultos de cinco populações</b> com água duplamente marcada e a atividade com acelerômetros. O gasto subiu com a atividade nos níveis baixos, mas <b>estabilizou em um platô</b> nos níveis mais altos. Eles chamam isso de modelo restrito: o corpo se adapta para manter o gasto total dentro de uma faixa estreita, em vez de somar cada caloria de atividade. O percentual de gordura e a intensidade da atividade parecem modular a resposta. <a href="https://doi.org/10.1016/j.cub.2015.12.046">doi.org/10.1016/j.cub.2015.12.046</a></div>
+  <div class="note prat"><span class="tag">Na prática</span>Três orientações saem daqui. Para quem é sedentário, sair do zero rende muito, porque é a faixa em que o gasto mais responde. Empilhar horas de aeróbio rende cada vez menos, porque o corpo compensa em outros componentes, inclusive no NEAT. E vale acompanhar passos diários durante a dieta: se eles caem, o déficit planejado encolhe sem ninguém notar. O estudo é transversal, e não acompanhou pessoas aumentando o treino. A ligação com a queda de NEAT é leitura minha.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Quanto gasta uma pessoa de 80 kg em 40 minutos contínuos de jiu-jitsu (10,3 MET), e quanto disso é acréscimo?</summary><p>10,3 × 80 × 0,67 h ≈ 549 kcal no total. O repouso no mesmo tempo seria 80 × 0,67 ≈ 53 kcal. O acréscimo real fica perto de 496 kcal.</p></details>
+    <details><summary>O que é NEAT e quanto pode variar entre pessoas?</summary><p>O gasto de todas as atividades que não são exercício. Pode variar até 2.000 kcal por dia entre pessoas do mesmo porte.</p></details>
+    <details><summary>Como o NEAT responde ao superávit e ao déficit?</summary><p>Sobe no superávit e cai no déficit. Tende a defender o peso.</p></details>
+    <details><summary>O que Levine (1999) encontrou?</summary><p>Com 1.000 kcal a mais por 8 semanas, o ganho de gordura variou 10 vezes, e a mudança no NEAT explicou quem resistiu.</p></details>
+    <details><summary>O que é o modelo restrito de Pontzer?</summary><p>O gasto total sobe com a atividade até certo ponto e depois estabiliza, porque o corpo compensa em outros componentes.</p></details>
+    <details><summary>Como estimar o gasto de um exercício por MET?</summary><p>kcal ≈ MET × peso em kg × horas.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="sec" id="p5-s7" data-n="5.7" style="--c:var(--ins)">
+  <div class="shead"><span class="n">5.7</span><h2>Estimando o gasto de repouso: as equações e quando usar cada uma</h2></div>
+  <p class="ask">Para a mesma pessoa, as equações podem diferir em mais de 500 kcal. Qual delas usar?</p>
+  <p class="t">Como a calorimetria indireta é cara e pouco acessível, o GER costuma ser estimado por equações. Todas partem da mesma ideia: o tamanho do corpo, e principalmente a massa livre de gordura, determina o gasto de repouso. O que muda é a população em que cada uma foi criada. Por isso cada uma serve melhor a um perfil.</p>
+  <p class="t">Nas fórmulas: <b>P</b> é o peso em kg, <b>A</b> a altura em centímetros, <b>I</b> a idade em anos e <b>MLG</b> a massa livre de gordura em kg.</p>
+  <div class="tw"><table>
+    <tr><th>Harris-Benedict</th><th>Fórmula</th></tr>
+    <tr><td>Homens</td><td>66 + (13,8 × P) + (5,0 × A) − (6,8 × I)</td></tr>
+    <tr><td>Mulheres</td><td>655 + (9,6 × P) + (1,9 × A) − (4,7 × I)</td></tr>
+  </table></div>
+  <div class="tw"><table>
+    <tr><th>FAO/OMS · idade</th><th>Homens</th><th>Mulheres</th></tr>
+    <tr><td>10 a 18</td><td>(17,686 × P) + 658,2</td><td>(13,384 × P) + 692,6</td></tr>
+    <tr><td>18 a 30</td><td>(15,057 × P) + 692,2</td><td>(14,818 × P) + 486,6</td></tr>
+    <tr><td>30 a 60</td><td>(11,472 × P) + 873,1</td><td>(8,126 × P) + 845,6</td></tr>
+    <tr><td>Mais de 60</td><td>(11,711 × P) + 587,7</td><td>(9,082 × P) + 658,5</td></tr>
+  </table></div>
+  <div class="tw"><table>
+    <tr><th>Mifflin-St Jeor</th><th>Fórmula</th></tr>
+    <tr><td>Homens</td><td>(10 × P) + (6,25 × A) − (5,0 × I) + 5</td></tr>
+    <tr><td>Mulheres</td><td>(10 × P) + (6,25 × A) − (5,0 × I) − 161</td></tr>
+  </table></div>
+  <div class="tw"><table>
+    <tr><th>Para físicos atléticos</th><th>Fórmula</th></tr>
+    <tr><td>Cunningham (MLG)</td><td>(22 × MLG) + 500</td></tr>
+    <tr><td>Tinsley (peso)</td><td>(24,8 × P) + 10</td></tr>
+    <tr><td>Tinsley (MLG)</td><td>(25,9 × MLG) + 284</td></tr>
+  </table></div>
+  <h3>Qual equação para qual pessoa</h3>
+  <div class="tabs">
+    <div class="panel" data-label="Jovem eutrófico"><h5>FAO/OMS, Harris-Benedict ou Mifflin</h5>As três servem para adultos jovens com peso normal. O livro usa FAO/OMS e Harris-Benedict no exemplo de uma mulher iniciante com pouca gordura.</div>
+    <div class="panel" data-label="Obesidade"><h5>Mifflin-St Jeor</h5>É a mais indicada: segundo o livro, foi a única que mostrou boa concordância com o GER medido por calorimetria em pessoas com obesidade (Frankenfield, 2005). Também é a escolha para quem tem "metabolismo lento", porque costuma dar valores menores.</div>
+    <div class="panel" data-label="Físico atlético"><h5>Cunningham ou Tinsley</h5>Para quem tem muito músculo e pouca gordura. As equações comuns subestimam o gasto dessas pessoas, porque tratam o peso como se tivesse a composição média. Sem o percentual de gordura, use a de Tinsley por peso.</div>
+  </div>
+  <div class="note why"><span class="tag">O exemplo do livro</span>Homem de 25 anos, 100 kg, 1,70 m e 12% de gordura (88 kg de massa magra). Harris-Benedict: 2.126. FAO/OMS: 2.198. Mifflin: 1.943. Cunningham: 2.436. Tinsley: 2.490. A distância entre a menor e a maior é de <b>547 kcal</b>. Como o físico é atlético, valem as duas últimas. Usar Mifflin aqui cortaria mais de 500 kcal do ponto de partida.</div>
+  <div class="calc" data-w="ger" style="box-shadow:5px 5px 0 var(--ins)">
+    <h4>Compare as equações</h4>
+    <p>Preencha e veja o que cada equação estima. O percentual de gordura é opcional: sem ele, as equações por massa magra não aparecem.</p>
+    <div class="fgrid">
+      <label class="fld" for="grS">Sexo<select id="grS"><option value="m">Homem</option><option value="f">Mulher</option></select></label>
+      <label class="fld" for="grI">Idade<input id="grI" type="number" inputmode="numeric" value="25" min="10" max="90"></label>
+      <label class="fld" for="grP">Peso (kg)<input id="grP" type="number" inputmode="decimal" value="80" min="35" max="200"></label>
+      <label class="fld" for="grA">Altura (cm)<input id="grA" type="number" inputmode="numeric" value="175" min="130" max="220"></label>
+      <label class="fld" for="grG">% de gordura (opcional)<input id="grG" type="number" inputmode="decimal" value="" min="3" max="60" placeholder="ex.: 12"></label>
+    </div>
+    <div class="res"></div>
+  </div>
+  <div class="note lit"><span class="tag">Literatura · PubMed · de onde vem a equação de Tinsley</span>Segundo o artigo original recuperado no PubMed, Tinsley e colaboradores (2019) mediram o gasto de repouso por calorimetria indireta em <b>27 atletas de físico</b>: 17 homens com 12,5% de gordura em média e 10 mulheres com 19,2%. Quase todas as equações existentes <b>subestimaram</b> o gasto real desse grupo. A de Cunningham ficou entre as aceitáveis. Os autores então criaram as duas equações que o Haluch adota. Eles próprios avisam que elas precisam de validação em outros grupos. Lembre disto ao aplicá-las: são 27 pessoas, e todas com físico atlético. <a href="https://doi.org/10.1139/apnm-2018-0412">doi.org/10.1139/apnm-2018-0412</a></div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Que equação usar em pessoas com obesidade e por quê?</summary><p>Mifflin-St Jeor. Foi a que melhor concordou com a calorimetria nesse grupo, e dá valores menores.</p></details>
+    <details><summary>Que equações usar em fisiculturistas?</summary><p>Cunningham e Tinsley.</p></details>
+    <details><summary>Escreva a equação de Cunningham e a de Tinsley por peso.</summary><p>Cunningham: (22 × MLG) + 500. Tinsley: (24,8 × P) + 10.</p></details>
+    <details><summary>Como se calcula a massa livre de gordura?</summary><p>Peso menos o peso de gordura. Peso de gordura = peso × percentual de gordura.</p></details>
+    <details><summary>Por que as equações comuns erram em pessoas musculosas?</summary><p>Usam o peso total como se tivesse composição média, e subestimam o gasto de quem tem mais massa magra.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="sec" id="p5-s8" data-n="5.8" style="--c:var(--fib)">
+  <div class="shead"><span class="n">5.8</span><h2>Do repouso ao gasto total: fator atividade e os limites da estimativa</h2></div>
+  <p class="ask">Se as equações são só estimativa, e o relato do aluno também falha, em que confiar?</p>
+  <p class="t">Com o GER em mãos, falta somar a atividade física e o efeito térmico. O método mais simples faz isso de uma vez, multiplicando o GER por um número: o <b>fator atividade</b> (FA).</p>
+  <div class="anchor" style="grid-template-columns:1fr">
+    <div><span class="tag">Segundo passo de todo cálculo</span><h4>GET = GER × FA</h4><p>A maior parte da população tem FA em torno de 1,5 a 1,6.</p></div>
+  </div>
+  <div class="tw"><table>
+    <tr><th>Nível de atividade diária</th><th>Fator atividade</th></tr>
+    <tr><td>Muito sedentário</td><td class="v">1,3 – 1,4</td></tr>
+    <tr><td>Sedentário pouco ativo</td><td class="v">1,5</td></tr>
+    <tr><td>Sedentário mais ativo (o mais comum)</td><td class="v">1,6</td></tr>
+    <tr><td>Moderadamente ativo (treina)</td><td class="v">1,7</td></tr>
+    <tr><td>Muito ativo</td><td class="v">1,8 – 1,9</td></tr>
+    <tr><td>Atividade intensa</td><td class="v">2,0 ou mais</td></tr>
+  </table></div>
+  <div class="note why"><span class="tag">O fator atividade é o elo fraco</span>Um erro de 0,1 no FA, em um GER de 2.000 kcal, muda o resultado em 200 kcal. E a escolha é subjetiva: o livro mesmo, ao usar 1,7 em um exemplo, avisa que pode estar superestimando ou subestimando. Para decidir, pese a rotina inteira: trabalho sentado ou em pé, deslocamentos, e não só a hora de treino. Quem treina 1 hora e passa as outras 15 sentado raramente passa de 1,6.</div>
+  <h3>Uma alternativa: equações que já dão o GET</h3>
+  <p class="t">As equações do IOM calculam o gasto total direto, com o nível de atividade física (NAF) embutido. Aqui a altura entra em <b>metros</b>.</p>
+  <div class="tw"><table>
+    <tr><th>IOM · 19 anos ou mais</th><th>Equação</th><th>NAF: sedentário / leve / moderada / intensa</th></tr>
+    <tr><td>Homens</td><td>662 − (9,53 × I) + NAF × [(15,91 × P) + (539,6 × A)]</td><td>1,0 / 1,11 / 1,25 / 1,48</td></tr>
+    <tr><td>Mulheres</td><td>354 − (6,91 × I) + NAF × [(9,36 × P) + (726 × A)]</td><td>1,0 / 1,12 / 1,27 / 1,45</td></tr>
+  </table></div>
+  <h3>O método dos livros para reduzir o erro</h3>
+  <ol class="steps">
+    <li><b>Calcule por 2 ou 3 equações</b>Compare os valores.</li>
+    <li><b>Escolha pelo perfil</b>O Haluch costuma recomendar o menor valor, para não superestimar. Para quem tem gasto alto e dificuldade de ganhar peso, o maior.</li>
+    <li><b>Compare com o que a pessoa come</b>Recordatório alimentar de 24 horas e questionários de ingestão de outros dias da semana. Se a pessoa mantém o peso comendo certa quantidade, essa quantidade é o gasto dela.</li>
+    <li><b>Trate o número como ponto de partida</b>O valor final vem do acompanhamento: peso e composição corporal ao longo das semanas.</li>
+  </ol>
+  <div class="note hal"><span class="tag">Posição do Haluch</span>Ele diz que não tem o hábito de usar equações, mas que elas são úteis para entender o processo e, principalmente, para quem está estagnado no emagrecimento. E alerta para o outro lado: basear-se só no recordatório também falha, porque a maioria das pessoas subestima o que come, muitas vezes em até 50% das calorias. Para quem não pesa os alimentos, a equação é uma boa âncora. Os slides acrescentam dois casos em que as equações erram mais: uso de hormônios, que aumenta o metabolismo, e atletas experientes em dieta, que sofrem adaptação metabólica.</div>
+  <div class="note lit"><span class="tag">Literatura · PubMed · o estudo por trás dos "50%"</span>Com base em artigo recuperado no PubMed: Lichtman e colaboradores (1992) estudaram pessoas com obesidade que diziam não emagrecer comendo menos de 1.200 kcal por dia. O gasto total e o de repouso estavam <b>dentro de 5% do previsto</b> para a composição corporal delas: não havia metabolismo lento. O que havia era relato impreciso: elas <b>subestimavam a ingestão em 47%</b>, em média, e <b>superestimavam a atividade física em 51%</b>. Os autores observam que não se tratava de má-fé nem de transtorno psicológico: as pessoas descreviam seu comportamento alimentar como normal. <a href="https://doi.org/10.1056/NEJM199212313272701">doi.org/10.1056/NEJM199212313272701</a></div>
+  <div class="note prat"><span class="tag">A resposta da abertura</span>Em nenhum dos dois isoladamente. A equação erra por não conhecer a pessoa. O relato erra por percepção. Os dois juntos se corrigem, e a balança ao longo de 2 a 3 semanas arbitra. Quando um aluno diz que "come pouco e não emagrece", a hipótese mais provável, pelos dados, é erro de registro, e a abordagem é ajudar a medir melhor, sem acusar.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Como se passa do GER ao GET?</summary><p>Multiplicando pelo fator atividade: GET = GER × FA.</p></details>
+    <details><summary>Qual o fator atividade mais comum na população?</summary><p>Em torno de 1,5 a 1,6.</p></details>
+    <details><summary>Por que o FA é a maior fonte de erro?</summary><p>É escolhido de forma subjetiva e multiplica todo o resultado: 0,1 de diferença muda cerca de 200 kcal.</p></details>
+    <details><summary>Qual o método dos livros para escolher o valor?</summary><p>Calcular por 2 ou 3 equações, escolher conforme o perfil, comparar com o recordatório alimentar e ajustar pelo acompanhamento.</p></details>
+    <details><summary>O que Lichtman (1992) encontrou?</summary><p>Metabolismo normal, ingestão subestimada em 47% e atividade superestimada em 51%.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="sec" id="p5-s9" data-n="5.9" style="--c:var(--adr)">
+  <div class="shead"><span class="n">5.9</span><h2>O cálculo da dieta, passo a passo</h2></div>
+  <p class="ask">Por que a proteína é definida em gramas por quilo e os outros dois macronutrientes, em porcentagem?</p>
+  <p class="t">Todos os exemplos dos livros seguem a mesma sequência de cinco passos. Entender a lógica de cada um vale mais do que decorar um exemplo.</p>
+  <ol class="steps">
+    <li><b>GER</b>Escolha a equação pelo perfil (seção 5.7). Se usar massa magra: peso de gordura = peso × % de gordura. MLG = peso − peso de gordura.</li>
+    <li><b>GET = GER × FA</b>Escolha o fator atividade pela rotina completa (seção 5.8).</li>
+    <li><b>VET = GET + superávit, ou GET − déficit</b>O valor energético total é o que a pessoa vai comer. O tamanho do ajuste depende do objetivo e do perfil (seções 5.10 e 5.11).</li>
+    <li><b>Proteína em g/kg</b>Gramas = peso × g/kg. Calorias = gramas × 4. Percentual = calorias da proteína ÷ VET × 100.</li>
+    <li><b>Carboidrato e gordura dividem o restante</b>Escolha o percentual de carboidrato. O que sobrar é gordura. Carboidrato: (VET × %) ÷ 4. Gordura: (VET × %) ÷ 9. Para conferir em g/kg, divida os gramas pelo peso.</li>
+  </ol>
+  <div class="note why"><span class="tag">A resposta da abertura</span>A necessidade de proteína acompanha o tamanho do corpo, e não o tamanho da dieta. Uma pessoa de 80 kg precisa das mesmas 160 g em uma dieta de 2.000 ou de 3.500 kcal. Se a proteína fosse fixada em porcentagem, ela cairia justamente no déficit, quando é mais necessária. Carboidrato e gordura são os combustíveis: eles preenchem a energia que falta, e por isso sobem e descem com as calorias.</div>
+  <div class="calc" data-w="dieta" style="box-shadow:5px 5px 0 var(--adr)">
+    <h4>Monte o cálculo</h4>
+    <p>Ferramenta de estudo para praticar a sequência. A prescrição de dieta é atribuição do nutricionista.</p>
+    <div class="fgrid">
+      <label class="fld" for="dtS">Sexo<select id="dtS"><option value="m">Homem</option><option value="f">Mulher</option></select></label>
+      <label class="fld" for="dtI">Idade<input id="dtI" type="number" inputmode="numeric" value="37" min="10" max="90"></label>
+      <label class="fld" for="dtP">Peso (kg)<input id="dtP" type="number" inputmode="decimal" value="81" min="35" max="200"></label>
+      <label class="fld" for="dtA">Altura (cm)<input id="dtA" type="number" inputmode="numeric" value="174" min="130" max="220"></label>
+      <label class="fld" for="dtG">% de gordura<input id="dtG" type="number" inputmode="decimal" value="10" min="3" max="60"></label>
+      <label class="fld" for="dtE">Equação do GER<select id="dtE"><option value="tp" selected>Tinsley (peso)</option><option value="cu">Cunningham (MLG)</option><option value="tm">Tinsley (MLG)</option><option value="mi">Mifflin-St Jeor</option><option value="fa">FAO/OMS</option><option value="hb">Harris-Benedict</option></select></label>
+      <label class="fld" for="dtF">Fator atividade<select id="dtF"><option>1.3</option><option>1.4</option><option>1.5</option><option selected>1.6</option><option>1.7</option><option>1.8</option><option>1.9</option><option>2.0</option></select></label>
+      <label class="fld" for="dtJ">Ajuste (kcal): + superávit, − déficit<input id="dtJ" type="number" inputmode="numeric" value="400" min="-2000" max="1500" step="50"></label>
+      <label class="fld" for="dtR">Proteína (g/kg)<input id="dtR" type="number" inputmode="decimal" value="2.0" min="0.8" max="3.5" step="0.1"></label>
+      <label class="fld" for="dtC">Carboidrato (% das kcal)<input id="dtC" type="number" inputmode="numeric" value="50" min="10" max="70"></label>
+    </div>
+    <div class="res"></div>
+  </div>
+  <p class="t">Os valores iniciais da calculadora reproduzem o Exemplo 1 do livro, da seção seguinte. Confira se o resultado bate com a tabela (pode haver 1 g de diferença por arredondamento). Depois mude um campo por vez para ver o efeito.</p>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Quais os cinco passos do cálculo?</summary><p>GER, GET (× fator atividade), VET (± déficit ou superávit), proteína em g/kg, e divisão do restante entre carboidrato e gordura.</p></details>
+    <details><summary>Como converter 162 g de proteína em percentual de uma dieta de 3.630 kcal?</summary><p>162 × 4 = 648 kcal. 648 ÷ 3.630 = 18%.</p></details>
+    <details><summary>Quantos gramas são 30% de gordura em 2.763 kcal?</summary><p>2.763 × 0,30 = 829 kcal. 829 ÷ 9 = 92 g.</p></details>
+    <details><summary>Por que a proteína é fixada em g/kg?</summary><p>A necessidade depende do tamanho do corpo. Em porcentagem, ela cairia justamente quando as calorias caem.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="sec" id="p5-s10" data-n="5.10" style="--c:var(--pro)">
+  <div class="shead"><span class="n">5.10</span><h2>Dieta para hipertrofia: quanto de superávit</h2></div>
+  <p class="ask">Se superávit constrói músculo, por que comer ainda mais não constrói mais rápido?</p>
+  <p class="t">A hipertrofia depende de síntese proteica acima da degradação por vários dias seguidos. O treino dá o sinal, a proteína dá a matéria-prima e o superávit dá a energia e o ambiente hormonal. A hipertrofia pode ocorrer em dieta de manutenção e até em déficit (seção 5.12), mas o superávit a otimiza.</p>
+  <div class="tw"><table>
+    <tr><th>Perfil</th><th>Superávit</th><th>Ganho de peso por mês</th></tr>
+    <tr><td>Iniciante, intermediário</td><td class="v">400 – 800 kcal</td><td>~1,0 a 2,0 kg</td></tr>
+    <tr><td>Avançado</td><td class="v">200 – 400 kcal</td><td>~0,5 a 1,0 kg</td></tr>
+    <tr><td>Usuário de esteroides</td><td class="v">500 – 1.000 kcal</td><td>~1,0 a 5,0 kg</td></tr>
+    <caption>Tabela do livro Nutrição e Hipertrofia Muscular. Quanto mais treinada a pessoa, menor o ganho possível e menor o superávit que faz sentido.</caption>
+  </table></div>
+  <div class="nums">
+    <div class="num" style="--nc:var(--pro)"><b>10–20%</b><span>acima da manutenção: recomendação de Iraki (2019) para fisiculturistas no off season. Avançados, no limite inferior.</span></div>
+    <div class="num" style="--nc:var(--pro)"><b>0,25–0,5 <small>kg</small></b><span>por semana: ritmo de ganho recomendado na literatura. Menos para mulheres.</span></div>
+    <div class="num" style="--nc:var(--glc)"><b>4–8 <small>g/kg</small></b><span>de carboidrato, de 45 a 60% das calorias. Mulheres, mais perto do limite inferior.</span></div>
+    <div class="num" style="--nc:var(--fat)"><b>20–35%</b><span>das calorias em gordura. Mais para quem não responde bem a dietas ricas em carboidrato.</span></div>
+  </div>
+  <p class="t">A proteína fica em 1,6 a 2,2 g/kg, com 2,0 como referência prática, e acima de cerca de 2,5 g/kg não há ganho adicional (Parte 3). O aumento de calorias no off season deve vir principalmente do carboidrato.</p>
+  <h3>Quem pode usar superávit maior, e quem deve usar menor</h3>
+  <div class="tw"><table>
+    <tr><th>Superávit maior</th><th>Superávit menor, com cautela</th></tr>
+    <tr><td>Percentual de gordura baixo<br>Boa sensibilidade à insulina<br>Iniciante<br>Dificuldade de ganhar peso</td><td>Gordura acima de 12 a 15% em homens, ou 18 a 20% em mulheres<br>Menor sensibilidade à insulina<br>Avançado<br>Mulheres, que ganham músculo mais devagar por terem menos testosterona<br>Histórico de ganhar gordura com facilidade em dietas ricas em carboidrato</td></tr>
+  </table></div>
+  <h3>Por que o bulking perde eficiência com o tempo</h3>
+  <ol class="steps">
+    <li><b>Primeiras 6 a 8 semanas: fase boa</b>A sensibilidade à insulina está alta, principalmente em quem sai de uma dieta com pouco carboidrato. A sinalização IGF-1 → PI3K → Akt → mTOR responde bem. Ganha-se mais músculo e menos gordura.</li>
+    <li><b>Os ganhos começam a estagnar</b>A síntese proteica tem um teto fisiológico. Não dá para forçá-la com mais comida.</li>
+    <li><b>O excesso prolongado gera resistência à insulina</b>Que piora com o ganho de gordura e prejudica a própria via que estimula a síntese proteica.</li>
+    <li><b>O destino das calorias muda</b>A mesma caloria extra, que antes ia em boa parte para o músculo, passa a ir para o tecido adiposo.</li>
+    <li><b>Círculo vicioso</b>Mais gordura, mais resistência à insulina, menos músculo por caloria. Subir as calorias nesse ponto piora o quadro.</li>
+  </ol>
+  <figure class="fit">
+    <svg viewBox="0 0 360 220" role="img" aria-label="Ao longo do bulking, o ganho de músculo desacelera e o de gordura acelera">
+      <line x1="40" y1="180" x2="345" y2="180" stroke="var(--ink)" stroke-width="2"/><line x1="40" y1="20" x2="40" y2="180" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M40 176 C90 100 150 74 340 62" fill="none" stroke="var(--pro)" stroke-width="4"/>
+      <path d="M40 178 C160 174 250 150 340 86" fill="none" stroke="var(--fat)" stroke-width="4"/>
+      <line x1="150" y1="24" x2="150" y2="180" stroke="var(--rule)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="48" y="34" font-size="11" font-weight="700" style="fill:var(--pro)">massa muscular</text>
+      <text x="286" y="112" font-size="11" font-weight="700" style="fill:var(--fat)">gordura</text>
+      <text x="95" y="198" text-anchor="middle" font-size="10" class="mu">primeiras 6 a 8 semanas</text><text x="250" y="198" text-anchor="middle" font-size="10" class="mu">depois</text>
+      <text x="192" y="214" text-anchor="middle" font-size="10" class="mu">tempo em dieta hipercalórica</text>
+    </svg>
+    <figcaption>Esquema baseado na figura do livro (Haluch, 2018). No começo, o músculo sobe depressa. Depois ele achata e a gordura dispara. É a resposta da abertura.</figcaption>
+  </figure>
+
+  <h3>Exemplo 1 do livro: homem, 81 kg</h3>
+  <p class="t">Fisiculturista de 37 anos, 81 kg, 10% de gordura, 1,74 m, atividade moderada (FA 1,6). Superávit escolhido: 400 kcal.</p>
+  <ol class="steps">
+    <li><b>GER</b>Massa magra: 81 − (81 × 0,10) = 72,9 kg. Cunningham: (22 × 72,9) + 500 = 2.104. Tinsley: (24,8 × 81) + 10 = 2.019. Escolhido o menor: 2.019 kcal.</li>
+    <li><b>GET</b>2.019 × 1,6 = 3.230 kcal.</li>
+    <li><b>VET</b>3.230 + 400 = 3.630 kcal.</li>
+    <li><b>Proteína</b>81 × 2,0 = 162 g → 648 kcal → 18%.</li>
+    <li><b>Carboidrato e gordura</b>50% de carboidrato: 1.815 kcal → 454 g. Restam 32% para gordura: 1.162 kcal → 129 g.</li>
+  </ol>
+  <div class="tw"><table>
+    <tr><th>Exemplo 1 · 3.630 kcal</th><th>Gramas</th><th>kcal</th><th>%</th><th>g/kg</th></tr>
+    <tr><td>Proteínas</td><td class="v">162</td><td>648</td><td>18</td><td>2,0</td></tr>
+    <tr><td>Carboidratos</td><td class="v">454</td><td>1.815</td><td>50</td><td>5,6</td></tr>
+    <tr><td>Gorduras</td><td class="v">129</td><td>1.162</td><td>32</td><td>1,6</td></tr>
+  </table></div>
+  <h3>Exemplo 2 do livro: mulher, 57 kg</h3>
+  <p class="t">26 anos, 57 kg, 1,66 m, muito ativa: trabalha em pé e treina cerca de 1 hora por dia (FA 1,7). Iniciante, com pouca gordura. Superávit: 500 kcal.</p>
+  <ol class="steps">
+    <li><b>GER</b>FAO/OMS: (14,818 × 57) + 486,6 = 1.331. Harris-Benedict: 1.395. Escolhido o menor: 1.331 kcal.</li>
+    <li><b>GET</b>1.331 × 1,7 = 2.263 kcal.</li>
+    <li><b>VET</b>2.263 + 500 = 2.763 kcal.</li>
+    <li><b>Proteína</b>57 × 2,2 = 125,4 g → 502 kcal → 18%.</li>
+    <li><b>Carboidrato e gordura</b>52% de carboidrato: 1.437 kcal → 359 g. 30% de gordura: 829 kcal → 92 g.</li>
+  </ol>
+  <div class="tw"><table>
+    <tr><th>Exemplo 2 · 2.763 kcal</th><th>Gramas</th><th>kcal</th><th>%</th><th>g/kg</th></tr>
+    <tr><td>Proteínas</td><td class="v">125</td><td>502</td><td>18</td><td>2,2</td></tr>
+    <tr><td>Carboidratos</td><td class="v">359</td><td>1.437</td><td>52</td><td>6,3</td></tr>
+    <tr><td>Gorduras</td><td class="v">92</td><td>829</td><td>30</td><td>1,6</td></tr>
+  </table></div>
+  <div class="note why"><span class="tag">Repare nos dois exemplos</span>A proteína cai em 18% das calorias nos dois, mesmo com 2,0 e 2,2 g/kg. Em dieta hipercalórica, proteína alta em gramas vira percentual baixo. E o carboidrato fica entre 5,6 e 6,3 g/kg, dentro da faixa de 4 a 8.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Qual o superávit para iniciante, avançado e o ganho mensal esperado?</summary><p>Iniciante: 400 a 800 kcal, 1 a 2 kg por mês. Avançado: 200 a 400 kcal, 0,5 a 1 kg por mês.</p></details>
+    <details><summary>Quais as faixas de carboidrato e gordura para hipertrofia?</summary><p>Carboidrato: 4 a 8 g/kg, ou 45 a 60% das calorias. Gordura: 20 a 35%.</p></details>
+    <details><summary>Por que os ganhos são melhores nas primeiras 6 a 8 semanas?</summary><p>A sensibilidade à insulina e a resposta da via da mTOR estão altas. Depois, a síntese atinge um teto e a resistência à insulina aumenta.</p></details>
+    <details><summary>A partir de que percentual de gordura o bulking é desfavorável?</summary><p>Acima de 12 a 15% em homens e 18 a 20% em mulheres.</p></details>
+    <details><summary>De onde deve vir o aumento de calorias?</summary><p>Principalmente dos carboidratos, com a proteína já em cerca de 2,0 g/kg.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="sec" id="p5-s11" data-n="5.11" style="--c:var(--glu)">
+  <div class="shead"><span class="n">5.11</span><h2>Dieta para definição: quanto de déficit</h2></div>
+  <p class="ask">Por que uma pessoa com obesidade tolera um déficit três vezes maior que o de um atleta magro?</p>
+  <p class="t">O ponto de partida clássico é um déficit de cerca de 500 kcal por dia, 3.500 por semana, que costuma dar perto de 0,5 kg por semana nas primeiras semanas. Depois a perda desacelera, porque o metabolismo é dinâmico: a restrição induz adaptações (termogênese adaptativa, maior eficiência das mitocôndrias) que tentam restabelecer o peso. Elas são inevitáveis e crescem conforme o percentual de gordura cai. A Parte 6 trata delas em detalhe.</p>
+  <div class="tw"><table>
+    <tr><th>Perfil</th><th>Déficit calórico</th></tr>
+    <tr><td>Homens eutróficos</td><td class="v">500 – 800 kcal</td></tr>
+    <tr><td>Mulheres eutróficas</td><td class="v">400 – 600 kcal</td></tr>
+    <tr><td>Pessoas com obesidade</td><td class="v">800 – 1.500 kcal</td></tr>
+    <tr><td>Usuários de esteroides</td><td class="v">700 – 1.500 kcal</td></tr>
+    <caption>Tabela do livro Estratégias Nutricionais para Definição Muscular.</caption>
+  </table></div>
+  <div class="note why"><span class="tag">A resposta da abertura</span>O critério é o risco de perder músculo. Quem tem muita gordura tem uma reserva grande de energia e cataboliza menos proteína: a gordura protege o músculo. Quem está magro tem pouca reserva, e o corpo recorre mais às proteínas musculares para a gliconeogênese (Parte 3). Por isso o déficit que é seguro para um é agressivo para o outro. Quanto maior o déficit, maior o catabolismo muscular.</div>
+  <h3>Composição da dieta de definição</h3>
+  <div class="nums three">
+    <div class="num" style="--nc:var(--glc)"><b>30–45%</b><span>Carboidratos.</span></div>
+    <div class="num" style="--nc:var(--pro)"><b>20–40%</b><span>Proteínas: 2,0 a 3,5 g/kg, contando fontes animais e vegetais.</span></div>
+    <div class="num" style="--nc:var(--fat)"><b>20–35%</b><span>Gorduras.</span></div>
+  </div>
+  <p class="t">O padrão do pré-contest é pouco carboidrato e muita proteína. A proteína sobe ao topo da faixa quando o déficit é muito grande ou quando a gordura corporal está muito baixa, abaixo de 7 a 8%. A redução de calorias e de carboidratos costuma ser gradual, assim como o aumento do aeróbio.</p>
+  <div class="note prat"><span class="tag">Ritmo de perda</span>Alguns atletas perdem de 1 a 2 kg por semana no início da preparação. Segundo o livro, isso é aceitável para atletas muito pesados, com muita retenção e gordura alta, perto de 20%. Para atletas mais leves, uma perda agressiva tende a custar massa muscular, principalmente em quem não usa hormônios.</div>
+  <h3>Exemplo do livro: mulher, 63 kg, categoria wellness</h3>
+  <p class="t">21 anos, 1,60 m, 63 kg, 20% de gordura no off season. Compete com cerca de 57 kg. Treina 1 hora por dia.</p>
+  <ol class="steps">
+    <li><b>GER por Cunningham</b>Gordura: 63 × 0,20 = 12,6 kg. Massa magra: 50,4 kg. (22 × 50,4) + 500 = 1.609 kcal.</li>
+    <li><b>GET</b>1.609 × 1,70 = 2.735 kcal.</li>
+    <li><b>VET</b>Déficit de 735 kcal: 2.735 − 735 = 2.000 kcal.</li>
+    <li><b>Proteína</b>63 × 2,5 = 157,5 g → 630 kcal → 32%.</li>
+    <li><b>Carboidrato e gordura</b>42% de carboidrato: 840 kcal → 210 g (3,3 g/kg). 26% de gordura: 520 kcal → 58 g (0,92 g/kg).</li>
+  </ol>
+  <h3>Exemplo do livro: homem, 87 kg, gordura alta</h3>
+  <p class="t">35 anos, 1,73 m, 87 kg, 20 a 25% de gordura. Objetivo: 75 a 77 kg.</p>
+  <ol class="steps">
+    <li><b>GER por FAO/OMS</b>(11,472 × 87) + 873,1 = 1.871 kcal.</li>
+    <li><b>GET</b>1.871 × 1,6 = 2.994 kcal.</li>
+    <li><b>VET</b>Déficit de 700 kcal: 2.294 kcal.</li>
+    <li><b>Proteína</b>87 × 2,5 = 217,5 g → 870 kcal → 38%.</li>
+    <li><b>Carboidrato</b>40%: 918 kcal → 230 g (2,64 g/kg). Os 22% restantes ficam para a gordura: cerca de 505 kcal, ou 56 g. Este último número é conta minha a partir dos percentuais.</li>
+  </ol>
+  <div class="tw"><table>
+    <tr><th>Comparando os quatro exemplos</th><th>kcal</th><th>Proteína</th><th>Carboidrato</th><th>Gordura</th></tr>
+    <tr><td>Hipertrofia, homem 81 kg</td><td class="v">3.630</td><td>18%</td><td>50%</td><td>32%</td></tr>
+    <tr><td>Hipertrofia, mulher 57 kg</td><td class="v">2.763</td><td>18%</td><td>52%</td><td>30%</td></tr>
+    <tr><td>Definição, mulher 63 kg</td><td class="v">2.000</td><td>32%</td><td>42%</td><td>26%</td></tr>
+    <tr><td>Definição, homem 87 kg</td><td class="v">2.294</td><td>38%</td><td>40%</td><td>22%</td></tr>
+  </table></div>
+  <div class="note why"><span class="tag">O que a comparação ensina</span>Em gramas por quilo, a proteína muda pouco entre hipertrofia e definição (2,0 a 2,5). Em percentual, quase dobra, porque as calorias caíram. Quem monta dieta por percentual fixo erra nos dois sentidos. É a seção 5.9 demonstrada em números.</div>
+  <div class="note hal"><span class="tag">Ressalva do livro Ciclo de Carboidratos</span>Proteína de 2,5 g/kg é para praticantes de musculação com pouca gordura. Não se aplica a qualquer pessoa: quem tem obesidade precisa de muito menos por quilo, porque a gordura protege a massa muscular. Para esses casos, calcula-se sobre o peso-alvo ou a massa magra.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Qual o déficit recomendado para homens e mulheres eutróficos?</summary><p>Homens: 500 a 800 kcal. Mulheres: 400 a 600 kcal.</p></details>
+    <details><summary>Por que pessoas com obesidade toleram déficit maior?</summary><p>A reserva de gordura é grande e o catabolismo de proteína muscular é menor.</p></details>
+    <details><summary>Qual a composição típica de uma dieta pré-contest?</summary><p>Carboidratos 30 a 45%, proteínas 20 a 40% (2,0 a 3,5 g/kg) e gorduras 20 a 35%.</p></details>
+    <details><summary>Quando a proteína deve ir ao topo da faixa?</summary><p>Com déficit muito grande ou gordura corporal muito baixa, abaixo de 7 a 8%.</p></details>
+    <details><summary>Por que a perda de peso desacelera com as semanas?</summary><p>A restrição induz adaptações metabólicas que reduzem o gasto energético.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="sec" id="p5-s12" data-n="5.12" style="--c:var(--gly)">
+  <div class="shead"><span class="n">5.12</span><h2>Platô no ganho de massa e hipertrofia em déficit</h2></div>
+  <p class="ask">É possível ganhar músculo comendo menos do que se gasta, sem violar a conservação de energia?</p>
+  <h3>O que fazer quando o ganho de massa estaciona</h3>
+  <p class="t">O platô não é o limite genético. É um teto momentâneo da síntese proteica, que depende do número de mionúcleos da fibra, e esse número cresce devagar com o treino. O livro avalia sete saídas.</p>
+  <div class="tw"><table>
+    <tr><th>Estratégia</th><th>Avaliação do Haluch</th></tr>
+    <tr><td>Aumentar as calorias</td><td>Só com gordura baixa: abaixo de 12 a 15% em homens, 18 a 20% em mulheres. Caso contrário, acumula gordura</td></tr>
+    <tr><td>Aumentar a proteína</td><td>Só se estiver abaixo de cerca de 2 g/kg, o que é raro</td></tr>
+    <tr><td>Aumentar o volume de treino</td><td>Só se estiver baixo, como 2 a 3 treinos por semana</td></tr>
+    <tr><td>Aumentar hormônios</td><td>Ele aponta que iniciantes superestimam o potencial anabólico dos esteroides</td></tr>
+    <tr><td>Ciclar carboidratos</td><td>Pouco efeito em superávit, se as calorias não mudam</td></tr>
+    <tr><td>Manter treino e dieta e esperar</td><td>Boa estratégia: hipertrofia é lenta e exige adaptação das fibras</td></tr>
+    <tr><td><b>Reduzir as calorias (cutting)</b></td><td><b>Para ele, a melhor no longo prazo:</b> perder gordura, recuperar a sensibilidade à insulina e manter a massa muscular, para depois retomar o superávit em condição melhor</td></tr>
+  </table></div>
+  <h3>Hipertrofia em déficit calórico</h3>
+  <p class="t">É possível, e mais difícil. A conservação de energia não é violada, porque a energia para construir músculo vem de dentro: da oxidação da gordura do tecido adiposo.</p>
+  <ol class="steps">
+    <li><b>O déficit faz o corpo priorizar</b>Ele sintetiza primeiro as proteínas essenciais: enzimas, albumina, hemoglobina, anticorpos, hormônios. Músculo não é prioridade, e em parte é desmontado para a gliconeogênese.</li>
+    <li><b>O treino de força muda a prioridade</b>O estímulo da musculação eleva a síntese proteica muscular e pode levar o balanço nitrogenado do músculo para o positivo.</li>
+    <li><b>A proteína alta fornece a matéria-prima</b>E compensa o aumento da degradação.</li>
+    <li><b>A gordura corporal paga a conta de energia</b>Os ácidos graxos do tecido adiposo fornecem o ATP da síntese.</li>
+  </ol>
+  <div class="tw"><table>
+    <tr><th>Mais fácil</th><th>Mais difícil</th></tr>
+    <tr><td>Pouco treinado<br>Percentual de gordura alto<br>Déficit moderado<br>Proteína alta e musculação</td><td>Muito treinado, perto do potencial genético<br>Percentual de gordura baixo<br>Déficit grande<br>Muita massa muscular para manter</td></tr>
+  </table></div>
+  <div class="note lit"><span class="tag">Estudo citado no livro</span>Longland (2016): homens com sobrepeso fizeram 4 semanas de dieta com redução de 40% da energia, musculação e 2,4 g/kg de proteína. Perderam 4,8 kg de gordura e <b>ganharam 1,2 kg de massa magra</b>. Tudo isso com a testosterona caindo de 507 para 126 ng/dl durante o período. O estímulo do treino com proteína alta superou um ambiente hormonal desfavorável.</div>
+  <div class="note prat"><span class="tag">Na prática</span>O aluno iniciante com sobrepeso é exatamente o perfil em que a recomposição funciona: déficit moderado, proteína alta e musculação progressiva. Não é preciso escolher entre emagrecer e ganhar músculo nesse caso. Para o avançado e magro, a escolha volta a existir.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Qual a estratégia que o Haluch considera melhor para sair de um platô de bulking?</summary><p>Reduzir as calorias de forma cautelosa, para perder gordura e recuperar a sensibilidade à insulina, mantendo a massa muscular.</p></details>
+    <details><summary>De onde vem a energia para a hipertrofia em déficit?</summary><p>Da oxidação dos ácidos graxos do tecido adiposo.</p></details>
+    <details><summary>Em quem a hipertrofia em déficit é mais fácil?</summary><p>Em pessoas pouco treinadas e com percentual de gordura alto, com musculação e dieta hiperproteica.</p></details>
+    <details><summary>O que mostrou Longland (2016)?</summary><p>Em déficit de 40%, com 2,4 g/kg de proteína e musculação: menos 4,8 kg de gordura e mais 1,2 kg de massa magra em 4 semanas.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="sec" id="p5-s13" data-n="5.13" style="--c:var(--fib)">
+  <div class="shead"><span class="n">5.13</span><h2>Dos números ao prato: distribuir, acompanhar e ajustar</h2></div>
+  <p class="ask">A dieta foi calculada. O que decide se ela está certa?</p>
+  <h3>Distribuindo os macronutrientes nas refeições</h3>
+  <div class="tw"><table>
+    <tr><th>Macronutriente</th><th>Regra de distribuição</th></tr>
+    <tr><td><span class="m pro">Proteína</span></td><td>Em pelo menos 3 a 4 refeições. Não é preciso fazer 6 ou 7</td></tr>
+    <tr><td><span class="m glc">Carboidrato</span></td><td>Flexível, com uma condição: presente nas refeições antes do treino, para abastecer o glicogênio</td></tr>
+    <tr><td><span class="m fat">Gordura</span></td><td>Flexível. No modelo do livro, fica menor na refeição logo depois do treino</td></tr>
+  </table></div>
+  <p class="t">O livro mostra a mesma dieta dividida de dois jeitos. O total do dia é idêntico: 185 g de proteína, 456 g de carboidrato e 122 g de gordura, para um atleta de 74 kg.</p>
+  <div class="tabs">
+    <div class="panel" data-label="4 refeições"><h5>Refeições maiores</h5><b>1:</b> 40 P · 90 C · 30 G<br><b>2:</b> 55 P · 140 C · 40 G<br><b>Treino</b><br><b>3:</b> 60 P · 150 C · 32 G<br><b>4:</b> 30 P · 76 C · 20 G</div>
+    <div class="panel" data-label="6 refeições"><h5>Refeições menores</h5><b>1:</b> 30 P · 80 C · 25 G<br><b>2:</b> 40 P · 100 C · 35 G<br><b>3:</b> 25 P · 60 C · 10 G<br><b>Treino</b><br><b>4:</b> 35 P · 70 C · 2 G<br><b>5:</b> 55 P · 100 C · 35 G<br><b>6:</b> 46 C · 15 G</div>
+  </div>
+  <p class="t" style="font-size:14px;color:var(--mute)">Valores em gramas. P: proteína. C: carboidrato. G: gordura. Repare que o maior bloco de carboidrato fica em volta do treino nos dois modelos.</p>
+  <h3>Acompanhar e ajustar</h3>
+  <ol class="steps">
+    <li><b>Avalie com frequência</b>O livro recomenda monitorar a composição corporal toda semana, ou a cada 2 a 3 semanas.</li>
+    <li><b>Compare com o ritmo esperado</b>Hipertrofia: 0,25 a 0,5 kg por semana, ou as faixas mensais da seção 5.10. Definição: cerca de 0,5 kg por semana no início.</li>
+    <li><b>Ganhando gordura demais no bulking</b>Ajuste as calorias para baixo.</li>
+    <li><b>Parou de perder na definição</b>Antes de cortar mais, confira o registro alimentar e a atividade do dia a dia (seções 5.6 e 5.8). Depois ajuste calorias ou gasto.</li>
+    <li><b>Lembre que o alvo se move</b>O gasto calculado no início deixa de valer conforme o peso e a adaptação mudam. A dieta precisa ser recalculada ao longo do processo.</li>
+  </ol>
+  <div class="note why"><span class="tag">Peso não é composição</span>O livro insiste: aumentar peso não significa ganhar músculo, e perder peso não significa perder músculo. Glicogênio e água mudam o peso em quilos de um dia para o outro (Parte 1: cada grama de glicogênio carrega cerca de 3 g de água). Por isso a decisão deve olhar a tendência de várias pesagens, medidas e fotos, e não um dia isolado. A sugestão de usar a média de várias pesagens é complemento meu.</div>
+  <div class="note prat"><span class="tag">Seu papel e o do nutricionista</span>Entender este cálculo permite conversar de igual para igual com o nutricionista da equipe, ajustar o treino ao momento da dieta e reconhecer quando algo não fecha. Prescrever a dieta é atribuição do nutricionista.</div>
+  <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
+    <details><summary>Em quantas refeições distribuir a proteína?</summary><p>Em pelo menos 3 a 4.</p></details>
+    <details><summary>Onde o carboidrato não pode faltar?</summary><p>Nas refeições que antecedem o treino.</p></details>
+    <details><summary>Com que frequência reavaliar?</summary><p>Toda semana ou a cada 2 a 3 semanas.</p></details>
+    <details><summary>O que conferir antes de cortar mais calorias em um platô de emagrecimento?</summary><p>O registro alimentar e a atividade física do dia a dia, que tendem a ser mal estimados ou a cair durante a dieta.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="sec" id="p5-s14" data-n="5.14" style="--c:var(--ins)">
+  <div class="shead"><span class="n">5.14</span><h2>Síntese da Parte 5</h2></div>
+  <p class="ask">Como tudo se encaixa em um único raciocínio?</p>
+  <figure class="dark fit">
+    <svg viewBox="0 0 360 400" role="img" aria-label="Fluxo do cálculo de dieta em cinco passos">
+      <g font-size="12" font-weight="700" text-anchor="middle">
+        <rect x="60" y="10" width="240" height="48" rx="12" fill="var(--ins)"/><text x="180" y="30">1 · GER</text><text x="180" y="47" font-size="10" font-weight="400">equação escolhida pelo perfil</text>
+        <rect x="60" y="86" width="240" height="48" rx="12" fill="var(--fib)"/><text x="180" y="106">2 · GET = GER × FA</text><text x="180" y="123" font-size="10" font-weight="400">fator atividade: 1,3 a 2,0</text>
+        <rect x="60" y="162" width="240" height="48" rx="12" fill="var(--adr)"/><text x="180" y="182">3 · VET = GET ± ajuste</text><text x="180" y="199" font-size="10" font-weight="400">superávit ou déficit pelo perfil</text>
+        <rect x="60" y="238" width="240" height="48" rx="12" fill="var(--pro)"/><text x="180" y="258">4 · Proteína em g/kg</text><text x="180" y="275" font-size="10" font-weight="400">× 4 kcal · achar o percentual</text>
+        <rect x="60" y="314" width="240" height="48" rx="12" fill="var(--glc)"/><text x="180" y="334" style="fill:var(--night)">5 · Carboidrato e gordura</text><text x="180" y="351" font-size="10" font-weight="400" style="fill:var(--night)">dividem o restante · ÷ 4 e ÷ 9</text>
+      </g>
+      <g stroke="#fff" stroke-width="2"><line x1="180" y1="58" x2="180" y2="80"/><line x1="180" y1="134" x2="180" y2="156"/><line x1="180" y1="210" x2="180" y2="232"/><line x1="180" y1="286" x2="180" y2="308"/></g>
+      <path d="M180 86l-6-10h12z M180 162l-6-10h12z M180 238l-6-10h12z M180 314l-6-10h12z" fill="#fff"/>
+      <path d="M300 338 C340 338 346 60 304 34" fill="none" stroke="var(--glu)" stroke-width="2" stroke-dasharray="5 4"/><path d="M300 32l11 0-5 9z" fill="var(--glu)"/>
+      <text x="180" y="388" text-anchor="middle" font-size="11" class="mu">Seta tracejada: acompanhar e recalcular.</text>
+    </svg>
+    <figcaption>Cinco passos e uma volta. O cálculo dá o ponto de partida. O acompanhamento dá o valor certo.</figcaption>
+  </figure>
+  <h3>Por perfil</h3>
+  <div class="tabs">
+    <div class="panel" data-label="Iniciante magro"><h5>Hipertrofia</h5>FAO/OMS ou Harris-Benedict. Superávit de 400 a 800 kcal. Proteína perto de 2,0 g/kg, carboidrato de 45 a 55%. Meta: 1 a 2 kg por mês.</div>
+    <div class="panel" data-label="Avançado"><h5>Hipertrofia lenta</h5>Cunningham ou Tinsley. Superávit de 200 a 400 kcal, ou 10% acima da manutenção. Meta: 0,5 a 1 kg por mês. Se a gordura passar de 12 a 15%, mini-cutting antes de continuar.</div>
+    <div class="panel" data-label="Sobrepeso"><h5>Recomposição</h5>Mifflin-St Jeor. Déficit moderado, proteína alta calculada pelo peso-alvo, musculação. É o perfil em que dá para perder gordura e ganhar músculo ao mesmo tempo.</div>
+    <div class="panel" data-label="Obesidade"><h5>Emagrecimento</h5>Mifflin-St Jeor. Déficit de 800 a 1.500 kcal é tolerado. Atenção ao sub-relato e ao NEAT. Acompanhamento de médico e nutricionista.</div>
+    <div class="panel" data-label="Atleta em definição"><h5>Pré-contest</h5>Cunningham ou Tinsley. Déficit de 500 a 800 kcal (400 a 600 em mulheres). Proteína de 2,0 a 3,5 g/kg, subindo com a magreza. Recalcular com frequência: a adaptação metabólica reduz o gasto.</div>
+  </div>
+  <h3>Doze ideias para levar</h3>
+  <ol class="steps">
+    <li><b>O balanço energético manda no peso</b>Mas o gasto reage à ingestão: é um alvo móvel.</li>
+    <li><b>GET = GER + ETA + GAF</b>Repouso de 50 a 70%, alimentos cerca de 10%, atividade o resto.</li>
+    <li><b>Órgãos gastam metade do repouso</b>Com 5% do peso.</li>
+    <li><b>Músculo: 13 kcal por kg. Gordura: 4,5</b>O ganho de gasto é modesto por quilo e relevante em anos.</li>
+    <li><b>Proteína tem ETA de 20 a 30%</b>E isso muda pouco o total do dia.</li>
+    <li><b>O NEAT pode variar 2.000 kcal</b>Sobe no superávit e cai no déficit.</li>
+    <li><b>Cada equação tem seu público</b>Mifflin para obesidade, Cunningham e Tinsley para físicos atléticos.</li>
+    <li><b>O fator atividade é o elo fraco</b>A maioria das pessoas está em 1,5 a 1,6.</li>
+    <li><b>Relato alimentar erra em até 50%</b>Equação e recordatório se corrigem. A balança arbitra.</li>
+    <li><b>Proteína em g/kg, o resto em percentual</b>A mesma proteína vira 18% no bulking e 35% no cutting.</li>
+    <li><b>Superávit pequeno e por tempo limitado</b>As primeiras 6 a 8 semanas rendem mais. Depois, o excesso vira gordura.</li>
+    <li><b>Déficit proporcional à gordura corporal</b>Quanto mais magro, menor o déficit e maior a proteína.</li>
+  </ol>
+  <div class="recall"><h4>Revisão final</h4><p>Se responder a estas sem abrir, você domina a parte.</p>
+    <details><summary>Calcule de cabeça o caminho: homem de 80 kg, 15% de gordura, FA 1,6, déficit de 500 kcal, por Cunningham.</summary><p>Massa magra: 68 kg. GER: (22 × 68) + 500 = 1.996. GET: 1.996 × 1,6 = 3.194. VET: 2.694 kcal.</p></details>
+    <details><summary>Nesse mesmo caso, com 2,2 g/kg de proteína e 40% de carboidrato, quais os gramas de cada macronutriente?</summary><p>Proteína: 176 g (704 kcal, 26%). Carboidrato: 40% = 1.078 kcal = 269 g. Gordura: 34% = 916 kcal = 102 g.</p></details>
+    <details><summary>Um aluno diz que come 1.200 kcal e não emagrece. Qual a hipótese mais provável e a conduta?</summary><p>Sub-relato da ingestão e superestimativa da atividade, e não metabolismo lento. Conduta: ajudar a registrar e pesar os alimentos por alguns dias, sem acusar, e acompanhar os passos diários.</p></details>
+    <details><summary>Por que duas pessoas iguais engordam quantidades diferentes com o mesmo excesso?</summary><p>Diferenças no NEAT e na genética: algumas dissipam o excesso movendo-se mais sem perceber.</p></details>
+    <details><summary>Por que adicionar muitas horas de aeróbio rende menos que a conta prevê?</summary><p>O corpo compensa em outros componentes do gasto, inclusive no NEAT. O gasto total tende a um platô.</p></details>
+    <details><summary>Quando interromper um bulking?</summary><p>Quando os ganhos estagnam e a gordura passa de 12 a 15% em homens ou 18 a 20% em mulheres. A melhor saída é reduzir calorias para recuperar a sensibilidade à insulina.</p></details>
+    <button class="donebtn" aria-pressed="false">Marcar seção como estudada</button>
+  </div>
+  <h3>Artigos consultados no PubMed para esta parte</h3>
+  <ul class="refs">
+    <li>Hall KD, et al. Quantificação do efeito do desequilíbrio energético sobre o peso. Lancet, 2011. <a href="https://doi.org/10.1016/S0140-6736(11)60812-X">doi.org/10.1016/S0140-6736(11)60812-X</a></li>
+    <li>Levine JA, et al. Papel do NEAT na resistência ao ganho de gordura. Science, 1999. <a href="https://doi.org/10.1126/science.283.5399.212">doi.org/10.1126/science.283.5399.212</a></li>
+    <li>Pontzer H, et al. Gasto energético total restrito e adaptação à atividade física. Curr Biol, 2016. <a href="https://doi.org/10.1016/j.cub.2015.12.046">doi.org/10.1016/j.cub.2015.12.046</a></li>
+    <li>Tinsley GM, et al. Taxa metabólica de repouso em atletas de físico. Appl Physiol Nutr Metab, 2019. <a href="https://doi.org/10.1139/apnm-2018-0412">doi.org/10.1139/apnm-2018-0412</a></li>
+    <li>Lichtman SW, et al. Discrepância entre ingestão relatada e real em pessoas com obesidade. N Engl J Med, 1992. <a href="https://doi.org/10.1056/NEJM199212313272701">doi.org/10.1056/NEJM199212313272701</a></li>
+  </ul>
+  <p class="t" style="font-size:14px;color:var(--mute)">Os demais estudos aparecem como são citados nos livros (autor e ano) e não foram conferidos na fonte original. As faixas para usuários de esteroides são as calorias que os livros indicam para esse perfil. Este material não trata de doses nem de uso de hormônios.</p>
+</section>
+
+</div>

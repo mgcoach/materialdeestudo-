@@ -1,0 +1,461 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Guia do Fut 7</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&display=swap">
+<style>
+/* Layout: uma coluna de leitura sobre "giz"; o gramado verde aparece só em painéis-chave (abertura, campo tático, público da várzea). */
+:root {
+  --bg: #F3F6EE;
+  --surface: #FBFCF8;
+  --fg: #10241A;
+  --muted: #4A5C50;
+  --line: #CFD8C8;
+  --green-ink: #14653A;
+  --bib: #BF400B;
+  --pitch: #1A7342;
+  --pitch-line: #EEF5EA;
+  --on-pitch: #F3F8EF;
+  --on-pitch-soft: #CFE6D5;
+  --contrast-bg: #10241A;
+  --contrast-fg: #F3F6EE;
+  --contrast-accent: #B9E86A;
+  --goal: #FFB07A;
+  --player: #F4D35E;
+  --player-gk: #FF9A5C;
+  --player-edge: #10241A;
+  --display: "Barlow Condensed", "Arial Narrow", "Trebuchet MS", sans-serif;
+  --body: "Barlow", "Segoe UI", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1A13; --surface: #14251C; --fg: #E7EEE5; --muted: #A2B5A7; --line: #2A4234;
+    --green-ink: #74D69A; --bib: #FF8F52; --pitch: #17613A; --pitch-line: #E4F0E0;
+    --on-pitch: #F0F6EC; --on-pitch-soft: #C3DFCB;
+    --contrast-bg: #1C3226; --contrast-fg: #E7EEE5; --contrast-accent: #B9E86A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D1A13; --surface: #14251C; --fg: #E7EEE5; --muted: #A2B5A7; --line: #2A4234;
+  --green-ink: #74D69A; --bib: #FF8F52; --pitch: #17613A; --pitch-line: #E4F0E0;
+  --on-pitch: #F0F6EC; --on-pitch-soft: #C3DFCB;
+  --contrast-bg: #1C3226; --contrast-fg: #E7EEE5; --contrast-accent: #B9E86A;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 1.0625rem; line-height: 1.55; }
+.wrap { max-width: 1040px; margin-inline: auto; padding-inline: 20px; padding-block: 20px 72px; display: flex; flex-direction: column; gap: 72px; }
+h1, h2, h3, p, ul, ol, figure, blockquote, table { margin: 0; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.02; }
+a { color: var(--green-ink); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--bib); outline-offset: 3px; }
+.eyebrow { font-family: var(--display); font-weight: 700; font-size: 1rem; letter-spacing: .14em; text-transform: uppercase; color: var(--green-ink); }
+.lead { font-size: 1.2rem; max-width: 62ch; color: var(--muted); }
+.prose { max-width: 66ch; }
+.note { font-size: .9rem; color: var(--muted); max-width: 70ch; }
+
+/* Abertura */
+.hero { background: var(--pitch); color: var(--on-pitch); border-radius: 6px; padding: clamp(24px, 5vw, 56px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(24px, 4vw, 48px); align-items: center; }
+.hero .eyebrow { color: var(--on-pitch-soft); }
+.hero h1 { font-style: italic; font-weight: 800; font-size: clamp(4.5rem, 13vw, 9rem); text-transform: uppercase; line-height: .86; letter-spacing: -.01em; }
+.hero .tag { font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 5vw, 2.4rem); text-transform: uppercase; line-height: 1.05; }
+.hero p.sub { color: var(--on-pitch-soft); font-size: 1.1rem; max-width: 46ch; }
+.hero-text { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.hero svg { width: 100%; height: auto; display: block; }
+.hero svg .ln { stroke: var(--pitch-line); fill: none; stroke-width: 3; }
+.hero svg .dim { stroke: var(--on-pitch-soft); stroke-width: 1.5; fill: none; }
+.hero svg text { fill: var(--on-pitch); font-family: var(--display); font-weight: 700; font-size: 26px; letter-spacing: .04em; }
+.hero svg .goal { stroke: var(--goal); stroke-width: 7; }
+.hero svg .dot { fill: var(--pitch-line); }
+
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--display); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .06em; margin-top: -40px; }
+nav.toc a { text-decoration: none; padding-block: 6px; border-bottom: 2px solid var(--line); color: var(--fg); }
+nav.toc a:hover { border-bottom-color: var(--bib); }
+
+section { display: flex; flex-direction: column; gap: 28px; }
+.head { display: flex; flex-direction: column; gap: 10px; border-top: 3px solid var(--fg); padding-top: 18px; }
+.head h2 { font-weight: 700; font-size: clamp(2.1rem, 7vw, 3.4rem); text-transform: uppercase; }
+h3 { font-weight: 700; font-size: 1.5rem; }
+.sub-h { font-family: var(--display); font-weight: 700; font-size: 1.25rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+
+/* Números */
+.figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 24px 32px; }
+.fig { display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--line); padding-top: 14px; min-width: 0; }
+.fig b { font-family: var(--display); font-style: italic; font-weight: 800; font-size: clamp(2.6rem, 8vw, 3.5rem); line-height: 1; color: var(--green-ink); font-variant-numeric: tabular-nums; }
+.fig span { font-weight: 600; }
+.fig small { font-size: .95rem; color: var(--muted); }
+
+/* Tabela */
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 440px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { font-family: var(--display); font-size: 1.15rem; text-transform: uppercase; letter-spacing: .06em; border-bottom: 3px solid var(--fg); }
+tbody th { font-weight: 500; color: var(--muted); }
+td.f7 { font-weight: 600; }
+td.campo { color: var(--muted); }
+
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 24px 36px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 24px 36px; }
+.item { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.item h3 { color: var(--green-ink); }
+.item p { color: var(--muted); }
+
+/* Campo tático */
+.tactic { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: clamp(24px, 5vw, 56px); align-items: start; }
+.board { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.seg { display: flex; gap: 8px; flex-wrap: wrap; }
+.seg button { font-family: var(--display); font-weight: 700; font-size: 1.2rem; letter-spacing: .06em; padding: 8px 18px; border: 2px solid var(--fg); background: transparent; color: var(--fg); border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.board svg { width: 100%; height: auto; display: block; border-radius: 6px; }
+.board .turf { fill: var(--pitch); }
+.board .ln { stroke: var(--pitch-line); fill: none; stroke-width: 3; opacity: .75; }
+.board .goal { stroke: var(--goal); stroke-width: 7; }
+.pl { transition: transform .55s cubic-bezier(.2, .7, .2, 1); }
+.pl circle { fill: var(--player); stroke: var(--player-edge); stroke-width: 2; }
+.pl.gk circle { fill: var(--player-gk); }
+.pl text { fill: var(--on-pitch); font-family: var(--body); font-weight: 600; font-size: 14px; text-anchor: middle; }
+@media (prefers-reduced-motion: reduce) { .pl { transition: none; } }
+dl.roles { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px 20px; margin: 0; }
+dl.roles dt { font-family: var(--display); font-weight: 700; font-size: 1.45rem; color: var(--green-ink); }
+dl.roles dd { margin: 0; color: var(--muted); align-self: center; }
+
+/* Destaque em gramado */
+.band { background: var(--pitch); color: var(--on-pitch); border-radius: 6px; padding: clamp(24px, 5vw, 48px); display: flex; flex-direction: column; gap: 10px; }
+.band b { font-family: var(--display); font-style: italic; font-weight: 800; font-size: clamp(3.2rem, 16.5vw, 9rem); line-height: .9; text-transform: uppercase; min-width: 0; overflow-wrap: anywhere; }
+.band p { font-size: 1.25rem; max-width: 46ch; }
+.band small { color: var(--on-pitch-soft); font-size: .95rem; max-width: 60ch; }
+
+/* Kings */
+.versus { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+.col { padding: 24px; border-radius: 6px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.col.keep { background: var(--surface); border: 1px solid var(--line); }
+.col.new { background: var(--contrast-bg); color: var(--contrast-fg); }
+.col.new h3 { color: var(--contrast-accent); }
+.col.keep h3 { color: var(--green-ink); }
+.col ul { padding-left: 1.1em; display: flex; flex-direction: column; gap: 8px; }
+ol.time { list-style: none; padding: 0; display: flex; flex-direction: column; }
+ol.time li { display: grid; grid-template-columns: 7.2rem minmax(0, 1fr); gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+ol.time time { font-family: var(--display); font-weight: 700; font-size: 1.3rem; color: var(--bib); text-transform: uppercase; }
+blockquote { font-family: var(--display); font-style: italic; font-weight: 700; font-size: clamp(1.6rem, 5.5vw, 2.3rem); line-height: 1.12; max-width: 26ch; }
+.quote { display: flex; flex-direction: column; gap: 10px; }
+.quote cite { font-style: normal; font-size: .95rem; color: var(--muted); }
+
+.flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; counter-reset: st; padding: 0; list-style: none; }
+.flow li { display: flex; flex-direction: column; gap: 6px; border-top: 3px solid var(--green-ink); padding-top: 14px; min-width: 0; }
+.flow li p { color: var(--muted); }
+ul.plain, ul.src { padding-left: 1.1em; display: flex; flex-direction: column; gap: 8px; max-width: 72ch; }
+ul.src { font-size: .95rem; }
+.cta { font-family: var(--display); font-style: italic; font-weight: 800; font-size: clamp(3.4rem, 15vw, 7rem); text-transform: uppercase; line-height: .9; }
+
+@media (max-width: 760px) {
+  .hero, .tactic { grid-template-columns: minmax(0, 1fr); }
+  .hero h1 { font-size: clamp(4.5rem, 26vw, 9rem); }
+  .board { max-width: 360px; }
+  ol.time li { grid-template-columns: 5.6rem minmax(0, 1fr); gap: 12px; }
+}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Futebol 7 society</p>
+    <h1>Fut 7</h1>
+    <p class="tag">Menos campo, mais jogo</p>
+    <p class="sub">Sete contra sete, campo curto e bola rolando. Do society do bairro à final com 40 mil pessoas no estádio.</p>
+  </div>
+  <svg viewBox="0 0 640 410" role="img" aria-label="Campo de fut 7 com as medidas oficiais: 45 a 55 metros de comprimento por 25 a 35 metros de largura">
+    <line class="dim" x1="60" y1="30" x2="620" y2="30"/><line class="dim" x1="60" y1="22" x2="60" y2="38"/><line class="dim" x1="620" y1="22" x2="620" y2="38"/>
+    <text x="340" y="22" text-anchor="middle">45 A 55 M</text>
+    <line class="dim" x1="30" y1="60" x2="30" y2="390"/><line class="dim" x1="22" y1="60" x2="38" y2="60"/><line class="dim" x1="22" y1="390" x2="38" y2="390"/>
+    <text x="22" y="225" text-anchor="middle" transform="rotate(-90 22 225)">25 A 35 M</text>
+    <rect class="ln" x="60" y="60" width="560" height="330"/>
+    <line class="ln" x1="340" y1="60" x2="340" y2="390"/>
+    <circle class="ln" cx="340" cy="225" r="46"/>
+    <rect class="ln" x="60" y="150" width="78" height="150"/>
+    <rect class="ln" x="542" y="150" width="78" height="150"/>
+    <circle class="dot" cx="150" cy="225" r="4"/><circle class="dot" cx="530" cy="225" r="4"/><circle class="dot" cx="340" cy="225" r="4"/>
+    <line class="goal" x1="60" y1="198" x2="60" y2="252"/><line class="goal" x1="620" y1="198" x2="620" y2="252"/>
+  </svg>
+</header>
+
+<nav class="toc" aria-label="Seções">
+  <a href="#conceitos">Conceitos</a>
+  <a href="#motivos">Por que jogar</a>
+  <a href="#kings">Kings League</a>
+  <a href="#varzea">Várzea</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<section id="conceitos">
+  <div class="head">
+    <p class="eyebrow">Conceitos básicos</p>
+    <h2>O futebol que cabe em qualquer lugar</h2>
+    <p class="lead">O fut 7, ou society, é o futebol em campo reduzido, quase sempre de grama sintética. Quem conhece o futebol de campo aprende as diferenças em uma partida.</p>
+  </div>
+
+  <div class="figs">
+    <div class="fig"><b>7</b><span>jogadores por time</span><small>Seis de linha e um goleiro.</small></div>
+    <div class="fig"><b>2 × 25</b><span>minutos de jogo</span><small>No oficial adulto. Torneios amadores encurtam.</small></div>
+    <div class="fig"><b>1/4</b><span>do campo oficial</span><small>Área aproximada do maior campo de fut 7.</small></div>
+  </div>
+
+  <p class="sub-h">Lado a lado com o futebol de campo</p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th scope="col"></th><th scope="col">Fut 7</th><th scope="col">Campo</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Jogadores</th><td class="f7">7</td><td class="campo">11</td></tr>
+        <tr><th scope="row">Campo</th><td class="f7">45–55 × 25–35 m</td><td class="campo">90–120 × 45–90 m</td></tr>
+        <tr><th scope="row">Gol</th><td class="f7">5 × 2,2 m</td><td class="campo">7,32 × 2,44 m</td></tr>
+        <tr><th scope="row">Tempo</th><td class="f7">2 × 25 min</td><td class="campo">2 × 45 min</td></tr>
+        <tr><th scope="row">Substituições</th><td class="f7">Ilimitadas, com retorno</td><td class="campo">Limitadas (5 por jogo)</td></tr>
+        <tr><th scope="row">Pênalti</th><td class="f7">8 m</td><td class="campo">11 m</td></tr>
+        <tr><th scope="row">Impedimento</th><td class="f7">Não existe</td><td class="campo">Existe</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="sub-h">As regras que dão a cara do jogo</p>
+  <div class="grid2">
+    <div class="item"><h3>Shoot-out</h3><p>Cobrança em movimento: o batedor parte com a bola e tem 5 segundos para finalizar contra o goleiro. Decide empates e pune o excesso de faltas.</p></div>
+    <div class="item"><h3>Faltas acumuladas</h3><p>Quando o time estoura o limite de faltas no tempo, cada nova falta vira um shoot-out para o adversário.</p></div>
+    <div class="item"><h3>Trocas livres</h3><p>Substituições ilimitadas, e o jogador pode voltar. O ritmo fica alto e o elenco inteiro entra em campo.</p></div>
+    <div class="item"><h3>Sem impedimento</h3><p>O ataque pode se posicionar atrás da defesa. O jogo ganha profundidade e as finalizações aparecem mais cedo.</p></div>
+  </div>
+  <p class="note">Lateral, cartões, limite de faltas e duração mudam entre entidades e torneios. Vale sempre o regulamento da competição.</p>
+
+  <p class="sub-h">Quem joga onde</p>
+  <div class="tactic">
+    <div class="board">
+      <div class="seg" role="group" aria-label="Sistema de jogo">
+        <button type="button" id="f-231" data-f="231" aria-pressed="true">2-3-1</button>
+        <button type="button" id="f-321" data-f="321" aria-pressed="false">3-2-1</button>
+        <button type="button" id="f-312" data-f="312" aria-pressed="false">3-1-2</button>
+      </div>
+      <svg viewBox="0 0 360 520" role="img" aria-label="Campo com os sete jogadores posicionados no sistema escolhido">
+        <rect class="turf" x="0" y="0" width="360" height="520"/>
+        <rect class="ln" x="8" y="8" width="344" height="504"/>
+        <line class="ln" x1="8" y1="260" x2="352" y2="260"/>
+        <circle class="ln" cx="180" cy="260" r="42"/>
+        <rect class="ln" x="110" y="8" width="140" height="58"/>
+        <rect class="ln" x="110" y="454" width="140" height="58"/>
+        <line class="goal" x1="152" y1="8" x2="208" y2="8"/><line class="goal" x1="152" y1="512" x2="208" y2="512"/>
+        <g class="pl gk" id="p0" style="transform:translate(180px,466px)"><circle r="13"/><text y="31">Goleiro</text></g>
+        <g class="pl" id="p1" style="transform:translate(118px,384px)"><circle r="13"/><text y="31">Fixo</text></g>
+        <g class="pl" id="p2" style="transform:translate(242px,384px)"><circle r="13"/><text y="31">Fixo</text></g>
+        <g class="pl" id="p3" style="transform:translate(60px,268px)"><circle r="13"/><text y="31">Ala</text></g>
+        <g class="pl" id="p4" style="transform:translate(180px,300px)"><circle r="13"/><text y="31">Meia</text></g>
+        <g class="pl" id="p5" style="transform:translate(300px,268px)"><circle r="13"/><text y="31">Ala</text></g>
+        <g class="pl" id="p6" style="transform:translate(180px,150px)"><circle r="13"/><text y="31">Pivô</text></g>
+      </svg>
+      <p class="note">Toque em um sistema para ver o time se reposicionar. O goleiro não entra na conta.</p>
+    </div>
+    <dl class="roles">
+      <dt>Goleiro</dt><dd>Defende e começa as jogadas. Costuma ser o primeiro passador.</dd>
+      <dt>Fixo</dt><dd>Protege a área, marca o pivô rival e organiza a saída de bola.</dd>
+      <dt>Ala</dt><dd>Dá amplitude pelos lados e faz o vai e vem entre defesa e ataque.</dd>
+      <dt>Meia</dt><dd>Liga os setores pelo centro e dita o ritmo.</dd>
+      <dt>Pivô</dt><dd>É a referência na frente: segura a bola, gira e finaliza.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="motivos">
+  <div class="head">
+    <p class="eyebrow">Por que jogar</p>
+    <h2>Pouca gente, pouco tempo, muito jogo</h2>
+    <p class="lead">A facilidade é o melhor argumento do fut 7. Dá para montar, jogar e voltar para a rotina em menos de uma hora.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="item"><h3>Mais bola</h3><p>Com menos gente e menos espaço, cada jogador participa mais e decide mais vezes.</p></div>
+    <div class="item"><h3>Cabe na agenda</h3><p>O jogo oficial dura 50 minutos. No torneio amador, 30 ou 40.</p></div>
+    <div class="item"><h3>Fácil de montar</h3><p>Catorze pessoas fazem uma partida. No campo, são 22 só para começar.</p></div>
+    <div class="item"><h3>Todo mundo joga</h3><p>Com trocas livres, quem cansou sai, descansa e volta para o jogo.</p></div>
+  </div>
+
+  <div class="band">
+    <b>12 milhões</b>
+    <p>de praticantes no Brasil, segundo a confederação da modalidade.</p>
+    <small>Estimativa da CBF7, citada pela imprensa. É um número da própria entidade, sem auditoria independente.</small>
+  </div>
+
+  <p class="sub-h">O que a ciência mediu no futebol recreativo</p>
+  <div class="figs">
+    <div class="fig"><b>+8 a 13%</b><span>de VO2máx</span><small>Em 12 semanas, em homens saudáveis e destreinados.</small></div>
+    <div class="fig"><b>−4,2</b><span>mmHg na pressão sistólica</span><small>Queda média contra grupos sem exercício.</small></div>
+    <div class="fig"><b>−6</b><span>bpm na frequência de repouso</span><small>Queda média contra grupos sem exercício.</small></div>
+  </div>
+  <p class="note">Dados de duas meta-análises de Milanović e colegas (2015 e 2019) sobre futebol recreativo, que inclui os jogos reduzidos. Nenhuma isola o fut 7, então a aplicação à modalidade é uma inferência razoável, não um resultado medido.</p>
+</section>
+
+<section id="kings">
+  <div class="head">
+    <p class="eyebrow">Kings League</p>
+    <h2>O fut 7 que virou espetáculo</h2>
+    <p class="lead">A liga criada por Gerard Piqué não inventou um esporte. Pegou o fut 7 e colocou por cima regras de videogame e transmissão por streaming.</p>
+  </div>
+
+  <div class="versus">
+    <div class="col keep">
+      <h3>Herança do fut 7</h3>
+      <ul>
+        <li>Sete contra sete em campo reduzido</li>
+        <li>Shoot-out para decidir: não existe empate</li>
+        <li>Jogo curto, em dois tempos de 20 minutos</li>
+        <li>Ritmo alto e placar cheio</li>
+      </ul>
+    </div>
+    <div class="col new">
+      <h3>Invenções da Kings</h3>
+      <ul>
+        <li>Início escalonado: 1 contra 1, e entra um jogador por minuto</li>
+        <li>Dado gigante define quantos ficam em campo por alguns minutos</li>
+        <li>Cartas secretas: gol em dobro, pênalti, suspensão do rival</li>
+        <li>Pênalti do presidente: o dono do time bate</li>
+        <li>Matchball: no fim, quem lidera precisa de mais um gol para fechar</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">As regras mudam a cada temporada. Esta é a versão descrita pela imprensa em 2025 e 2026.</p>
+
+  <p class="sub-h">Linha do tempo</p>
+  <ol class="time">
+    <li><time>Nov. 2022</time><span>Piqué anuncia a liga, logo depois de se aposentar.</span></li>
+    <li><time>2023</time><span>A bola rola na Espanha, com streamers na presidência dos times.</span></li>
+    <li><time>Jan. 2025</time><span>Brasil vence o primeiro Mundial de seleções: 6 a 2 na Colômbia, em Turim, com prêmio de US$ 1 milhão.</span></li>
+    <li><time>Maio 2025</time><span>A final da primeira Kings League Brasil leva mais de 40 mil pessoas ao Allianz Parque.</span></li>
+    <li><time>Jan. 2026</time><span>Brasil é bicampeão em casa: 6 a 2 no Chile, com o Allianz Parque esgotado.</span></li>
+    <li><time>Ago. 2026</time><span>A G3X, time brasileiro, vence o Mundial de clubes em Milão.</span></li>
+  </ol>
+
+  <p class="sub-h">A ponte são os jogadores</p>
+  <div class="grid3">
+    <div class="item"><h3>Kelvin Oliveira, o K9</h3><p>Passou pela base do Cruzeiro e do Milan e não se firmou no campo. No fut 7, foi eleito o melhor do mundo em 2021. Fez cinco gols na final do Mundial de 2025 e recusou um convite de Neymar para jogar no Santos.</p></div>
+    <div class="item"><h3>Gabriel Mendes</h3><p>Conhecido como “01 da Várzea” em São Paulo, foi anunciado pelo Dendele para a Kings League Brasil em 2025.</p></div>
+    <div class="item"><h3>Gabriel Braga</h3><p>Goleiro que pensava em parar, voltou a jogar em um time de várzea e foi campeão mundial de clubes pela G3X em 2026.</p></div>
+  </div>
+  <div class="quote">
+    <blockquote>“A Kings League mudou muito a minha vida.”</blockquote>
+    <cite>Kelvin Oliveira, em entrevista publicada pela Placar (2025)</cite>
+  </div>
+</section>
+
+<section id="varzea">
+  <div class="head">
+    <p class="eyebrow">A força da várzea</p>
+    <h2>Onde o time é do bairro</h2>
+    <p class="lead">A várzea é o futebol amador organizado por clubes de comunidade. Ela enche estádio, paga jogador e tem torcida própria.</p>
+  </div>
+
+  <div class="band">
+    <b>30 mil</b>
+    <p>pessoas no Allianz Parque para ver uma final de várzea: a Copa Pioneer de 2023, em São Paulo.</p>
+    <small>Em 2012, a final da Copa Kaiser levou 20.260 pessoas ao Pacaembu. Na semana anterior, Corinthians e Coritiba tinham jogado ali para 22.006 pagantes.</small>
+  </div>
+
+  <p class="sub-h">Quando o amador paga mais que o profissional</p>
+  <div class="figs">
+    <div class="fig"><b>R$ 500 a 5 mil</b><span>por partida</span><small>Conforme o jogador, o time e a competição. Sai em dinheiro ou PIX, muitas vezes antes do jogo.</small></div>
+    <div class="fig"><b>4 jogos</b><span>por fim de semana</span><small>É o que muitos chegam a disputar, rodando por times e bairros.</small></div>
+    <div class="fig"><b>R$ 200 mil</b><span>em prêmios</span><small>Super Copa Pioneer 2024, com 80 equipes. O campeão levou R$ 150 mil.</small></div>
+  </div>
+  <p class="prose">Para comparar: um levantamento da CBF de meados da década passada mostrava 82% dos profissionais registrados ganhando até R$ 1 mil por mês. Segundo o antropólogo Enrico Spaggiari, os ganhos da várzea superam, por vezes, os de clubes profissionais de divisões inferiores.</p>
+  <p class="note">Esses valores e públicos são da várzea de campo paulistana, com 11 jogadores, e representam o topo do mercado. No Ceará, reportagem do Diário do Nordeste registra cachês de R$ 150 a R$ 600 por jogo.</p>
+
+  <p class="sub-h">O fut 7 veste a camisa do bairro</p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th scope="col">Torneio</th><th scope="col">Onde e quando</th><th scope="col">Tamanho</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Taça das Comunidades</th><td>São Luís, 2022</td><td>24 equipes, cerca de 360 atletas</td></tr>
+        <tr><th scope="row">Supercopa dos Condomínios</th><td>Rio de Janeiro, 2026</td><td>Moradores do Minha Casa, Minha Vida; masculino, feminino, veteranos e júnior</td></tr>
+        <tr><th scope="row">Brasileiro de Fut7</th><td>São Paulo, 2025</td><td>50 equipes, mais de mil atletas</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="quote">
+    <blockquote>“Você vê uma comunidade que larga o fim de semana dela só para ver aquilo.”</blockquote>
+    <cite>Gabriel Braga, goleiro da G3X, sobre a várzea (Diário do Grande ABC, 2026)</cite>
+  </div>
+</section>
+
+<section id="sintese">
+  <div class="head">
+    <p class="eyebrow">Síntese</p>
+    <h2>Três palcos, o mesmo jogo</h2>
+    <p class="lead">Os jogadores circulam entre os três. O que sustenta todos é o mesmo: sete contra sete, campo curto e bola rolando.</p>
+  </div>
+  <ol class="flow">
+    <li><h3>Várzea e comunidade</h3><p>O time do bairro, a torcida própria e o jogador pago por partida.</p></li>
+    <li><h3>Fut 7 organizado</h3><p>Federações, estaduais, Campeonato Brasileiro e Mundial de clubes.</p></li>
+    <li><h3>Kings League</h3><p>Streaming, estádio cheio e prêmio de US$ 1 milhão no Mundial de 2025.</p></li>
+  </ol>
+  <p class="note">A ordem mostra o caminho de visibilidade percorrido por jogadores como Kelvin Oliveira e Gabriel Braga. Não é uma hierarquia oficial entre entidades.</p>
+  <p class="cta">Faltam só seis</p>
+  <p class="lead">Você e mais seis já formam um time. Um campo de society, uma bola e menos de uma hora resolvem o resto.</p>
+</section>
+
+<section id="fontes">
+  <div class="head">
+    <p class="eyebrow">Fontes</p>
+    <h2>De onde vêm os dados</h2>
+  </div>
+  <p class="sub-h">Artigos científicos</p>
+  <ul class="src">
+    <li>Milanović et al. <a href="https://nutrition-evidence.com/article/237887/is-recreational-soccer-effective-for-improving-vo2max-a-systematic-review-and-meta-analysis">Is recreational soccer effective for improving VO2max?</a> Sports Medicine, 2015.</li>
+    <li>Milanović et al. <a href="https://bjsm.bmj.com/content/53/15/926">Broad-spectrum physical fitness benefits of recreational football.</a> British Journal of Sports Medicine, 2019.</li>
+    <li>Spaggiari, E. <a href="https://doi.org/10.5007/1807-1384.2024.e101285">“Profissionalização” da várzea?</a> INTERthesis (UFSC), v. 21, 2024.</li>
+  </ul>
+  <p class="sub-h">Regras</p>
+  <ul class="src">
+    <li><a href="https://oimparcial.com.br/noticias/2015/07/modalidade-chega-ao-maranhao-para-revelar-novos-profissionais-para-o-futebol/">O Imparcial (2015)</a>: resumo das regras da CBF7 e dados da confederação.</li>
+    <li>Regulamentos que adotam as regras da modalidade: <a href="https://web.arapiraca.al.gov.br/wp-content/uploads/2024/06/FUT7.pdf">Arapiraca</a>, <a href="https://juicet.ufam.edu.br/assets/files/regulamentos/fut7.pdf">UFAM</a> e <a href="https://www.pjf.mg.gov.br/secretarias/sel/eventos/jogos_intercolegiais/2018/arquivos/regulamento/fut7.pdf">Juiz de Fora</a>.</li>
+    <li><a href="https://www.guiadasemana.com.br/esportes/noticia/onde-jogar-society-em-sao-paulo">Guia da Semana</a>: regras principais e estimativa de praticantes.</li>
+  </ul>
+  <p class="sub-h">Kings League</p>
+  <ul class="src">
+    <li><a href="https://placar.com.br/?p=295738">Placar</a>: origem e proposta da liga.</li>
+    <li><a href="https://www.lance.com.br/fora-de-campo/historico-k9-marca-cinco-e-brasil-e-campeao-da-primeira-kings-league-world-cup.html">Lance!</a>: final do Mundial de 2025 e Kelvin Oliveira. <a href="https://www.lance.com.br/fora-de-campo/brasil-x-colombia-qual-a-premiacao-ao-campeao-da-kings-league-world-cup.html">Premiação e regras</a>.</li>
+    <li><a href="https://placar.com.br/placar/kelvin-oliveira-recusa-convite-de-neymar-e-fica-na-kings-league">Placar</a>: Kelvin recusa o Santos.</li>
+    <li><a href="https://maquinadoesporte.com.br/?p=210378">Máquina do Esporte</a>: público da final da Kings League Brasil.</li>
+    <li><a href="https://www.goal.com/es/listados/brasil-se-corona-campeon-domina-kings-world-cup-nations-2026/blt40edc7a3125de8a9">Goal</a>: final do Mundial de 2026.</li>
+    <li><a href="https://www.nsctotal.com.br/?p=7693030">NSC Total</a> e <a href="https://www.portaltela.com/esporte/futebol/2026/03/09/guia-da-kings-league-explica-o-futebol-de-videogame-criado-por-pique/">Portal Tela</a>: regras. <a href="https://www.nsctotal.com.br/?p=7656925">NSC Total</a>: Gabriel Mendes.</li>
+  </ul>
+  <p class="sub-h">Várzea e torneios de fut 7</p>
+  <ul class="src">
+    <li><a href="https://www.dgabc.com.br/Noticia/4350977/campeao-do-mundona-kings-league-tem-raizes-em-sao-bernardo">Diário do Grande ABC (2026)</a>: Gabriel Braga, da várzea ao Mundial.</li>
+    <li><a href="https://diariodonordeste.verdesmares.com.br/jogada/do-campo-ao-negocio-a-realidade-financeira-dos-jogadores-de-futebol-fora-das-quatro-linhas-no-ce-1.3657041">Diário do Nordeste</a>: cachês no Ceará.</li>
+    <li><a href="https://www.tribunapr.com.br/esportes/desigualdade-salarial-marca-futebol-do-brasil-e-maioria-ganha-ate-r-1000-por-mes/">Tribuna do Paraná</a>: salários no futebol profissional, dados da CBF.</li>
+    <li><a href="https://oimparcial.com.br/noticias/2022/10/fut-7-taca-das-comunidades-comeca-nesta-quinta-feira-6/">O Imparcial (2022)</a>, <a href="https://diariodorio.com/supercopa-dos-condominios-abre-espaco-para-o-futebol-feminino-e-impulsiona-sonhos-nas-favelas-do-rio/">Diário do Rio (2026)</a> e <a href="https://www.portaltela.com/esporte/futebol/2025/11/20/campeonato-brasileiro-de-fut7-2025-reune-mais-de-mil-atletas-em-sao-paulo/">Portal Tela (2025)</a>: torneios de fut 7.</li>
+  </ul>
+  <p class="note">Posições e sistemas de jogo são conhecimento corrente da modalidade e não estão amarrados a uma fonte desta lista.</p>
+</section>
+
+</div>
+
+<script>
+(function () {
+  var F = {
+    "231": { pos: [[180,466],[118,384],[242,384],[60,268],[180,300],[300,268],[180,150]], lab: ["Goleiro","Fixo","Fixo","Ala","Meia","Ala","Pivô"] },
+    "321": { pos: [[180,466],[66,376],[180,398],[294,376],[118,270],[242,270],[180,150]], lab: ["Goleiro","Ala","Fixo","Ala","Meia","Meia","Pivô"] },
+    "312": { pos: [[180,466],[66,376],[180,398],[294,376],[180,280],[118,158],[242,158]], lab: ["Goleiro","Ala","Fixo","Ala","Meia","Pivô","Pivô"] }
+  };
+  var buttons = document.querySelectorAll(".seg button");
+  function show(key) {
+    var f = F[key];
+    if (!f) return;
+    for (var i = 0; i < 7; i++) {
+      var g = document.getElementById("p" + i);
+      if (!g) continue;
+      g.style.transform = "translate(" + f.pos[i][0] + "px," + f.pos[i][1] + "px)";
+      var t = g.querySelector("text");
+      if (t) t.textContent = f.lab[i];
+    }
+    buttons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-f") === key ? "true" : "false"); });
+  }
+  buttons.forEach(function (b) { b.addEventListener("click", function () { show(b.getAttribute("data-f")); }); });
+})();
+</script>
+
+</body></html>

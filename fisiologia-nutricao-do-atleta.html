@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fisiologia e Nutrição do Atleta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<style>
+/* Plano: caderno claro de página única, lido no celular. Papel branco, tinta azul-escura e uma cor viva
+   por módulo (faixa de abertura cheia, números dos passos, bordas). Amarelo marca-texto para o que fixar.
+   Tema único, claro, por escolha. */
+:root{
+  color-scheme:light;
+  --bg:#f7f8fc; --surface:#ffffff; --soft:#eef1f8; --ink:#141a33; --muted:#566080; --line:#dfe3ef;
+  --hl:#ffe45c; --brand:#2457f5;
+  --c1:#f26a00; --c2:#e11d48; --c3:#2457f5; --c4:#7b2ff7; --c5:#0891b2; --c6:#0a9d62; --c7:#0a9d62; --c8:#f26a00;
+  --c9:#0891b2; --c10:#d6157f; --c11:#7b2ff7; --c12:#e11d48; --c13:#3f8f00; --c14:#2457f5;
+  --ok:#0a9d62; --bad:#e11d48; --warn:#c66a00;
+  --display:"Outfit",system-ui,sans-serif; --body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:66px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.62;-webkit-text-size-adjust:100%}
+h1,h2,h3,h4,h5{font-family:var(--display);line-height:1.18;text-wrap:balance;margin:0}
+p{margin:0}
+button{font-family:inherit;font-size:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:10px;height:56px}
+.logo{font-family:var(--display);font-weight:800;font-size:15px;white-space:nowrap;display:flex;gap:6px;align-items:center}
+.logo i{width:12px;height:12px;border-radius:4px;background:var(--c1);box-shadow:8px 0 0 var(--c3),16px 0 0 var(--c6);margin-right:18px}
+.prog{flex:1;height:10px;background:var(--soft);border-radius:99px;overflow:hidden;min-width:36px}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--c1),var(--c10),var(--c3));border-radius:99px;transition:width .4s}
+.progtxt{font-size:12.5px;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.btn{border:2px solid var(--ink);background:var(--surface);border-radius:99px;padding:6px 14px;font-weight:800;font-size:13px}
+.btn.primary{background:var(--ink);color:#fff}
+
+.drawer{position:fixed;inset:0;z-index:30;display:none}
+.drawer.open{display:block}
+.drawer .shade{position:absolute;inset:0;background:rgba(20,26,51,.5)}
+.drawer nav{position:absolute;right:0;top:0;bottom:0;width:min(340px,88vw);background:var(--surface);padding:18px 14px;overflow:auto;display:flex;flex-direction:column;gap:4px}
+.drawer nav h3{font-size:14px;color:var(--muted);margin:0 0 8px 6px}
+.drawer nav a{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--ink);padding:9px 8px;border-radius:12px;font-weight:700;font-size:14.5px}
+.drawer nav a:hover{background:var(--soft)}
+.drawer nav a .n{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-size:12px;font-weight:800;color:#fff;background:var(--c);flex:none;font-family:var(--display)}
+.drawer nav a.done::after{content:"✓";margin-left:auto;color:var(--ok);font-weight:800}
+
+.hero{padding:30px 0 6px}
+.eyebrow{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c10)}
+.hero h1{font-size:clamp(31px,8.4vw,48px);font-weight:800;margin:8px 0 12px;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--hl) 62%)}
+.hero p.lead{font-size:17.5px;color:var(--muted);max-width:60ch}
+.how{background:var(--surface);border:2px solid var(--ink);border-radius:var(--r);padding:16px;margin:20px 0;box-shadow:5px 5px 0 var(--hl)}
+.how h3{font-size:17px;margin-bottom:10px}
+.how ol{margin:0;padding:0;display:grid;gap:9px}
+.how li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.how .k{flex:none;width:26px;height:26px;border-radius:50%;color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center;font-family:var(--display)}
+.map{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0 8px}
+@media(min-width:620px){.map{grid-template-columns:repeat(3,1fr)}}
+.map a{--c:var(--brand);text-decoration:none;color:#fff;background:var(--c);border-radius:14px;padding:11px 13px;display:flex;flex-direction:column;gap:2px;min-height:76px}
+.map a small{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.1em;opacity:.9}
+.map a b{font-family:var(--display);font-size:15px;font-weight:700;line-height:1.2}
+
+.mod{--c:var(--brand);padding:8px 0;margin-top:44px}
+.mhead{background:var(--c);color:#fff;border-radius:22px;padding:20px 18px;margin-bottom:16px;position:relative;overflow:hidden}
+.mhead::after{content:attr(data-n);position:absolute;right:-6px;bottom:-34px;font-family:var(--display);font-weight:800;font-size:130px;line-height:1;opacity:.18}
+.mhead .kick{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.92}
+.mhead h2{font-size:clamp(24px,6.2vw,32px);font-weight:800;margin:4px 0 8px;position:relative;z-index:1;max-width:18ch}
+.mhead .src{font-size:12.5px;opacity:.92;position:relative;z-index:1;max-width:52ch;line-height:1.4}
+.tldr{background:var(--surface);border:2px solid var(--c);border-radius:var(--r);padding:14px 16px;margin:0 0 18px}
+.tldr h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);margin-bottom:6px}
+.tldr ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15.5px}
+h3.sub{font-size:20px;font-weight:700;margin:30px 0 10px;padding-left:12px;border-left:6px solid var(--c)}
+.txt{font-size:16px;max-width:66ch}
+.txt + .txt,.txt + .steps,.steps + .txt,.tw + .txt,.grid2 + .txt,.fig + .txt{margin-top:12px}
+b,strong{font-weight:800}
+mark{background:var(--hl);color:inherit;padding:0 4px;border-radius:4px;font-weight:700}
+.g{border:0;background:none;padding:0;font:inherit;color:inherit;border-bottom:2px dotted var(--c);cursor:help;font-weight:inherit}
+.g:hover{background:var(--hl)}
+
+/* passo a passo */
+.steps{list-style:none;margin:12px 0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:0 0 14px 44px;font-size:15.5px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--c);color:#fff;font-family:var(--display);font-weight:800;font-size:14px;display:grid;place-items:center}
+.steps li::after{content:"";position:absolute;left:14px;top:32px;bottom:2px;width:2px;background:var(--line)}
+.steps li:last-child{padding-bottom:0}.steps li:last-child::after{display:none}
+.steps li b:first-child{display:block;font-family:var(--display);font-weight:700;font-size:16px}
+/* por quê / quando / quem */
+.wwq{display:grid;gap:8px;margin:12px 0}
+@media(min-width:600px){.wwq{grid-template-columns:repeat(3,1fr)}}
+.wwq div{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:12px;padding:10px 12px;font-size:14.5px}
+.wwq h5{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);margin-bottom:3px}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin:12px 0}
+.grid2{display:grid;gap:10px;grid-template-columns:1fr;margin:12px 0}
+@media(min-width:560px){.grid2{grid-template-columns:1fr 1fr}}
+.grid3{display:grid;gap:10px;grid-template-columns:1fr;margin:12px 0}
+@media(min-width:560px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:13px;border-top:5px solid var(--c)}
+.tile b.big{display:block;font-family:var(--display);font-size:23px;font-weight:800;color:var(--c);line-height:1.15;font-variant-numeric:tabular-nums}
+.tile h4{font-size:15.5px;font-weight:700;margin-bottom:4px}
+.tile p{font-size:14.5px;color:#39425f;line-height:1.5}
+.note{border-radius:14px;padding:12px 14px;margin:12px 0;font-size:15px;border:2px solid var(--line);background:var(--surface)}
+.note b.tag{display:inline-block;font-family:var(--display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px;font-weight:700;color:#fff;padding:2px 8px;border-radius:99px;vertical-align:1px}
+.note.myth{border-color:var(--bad)} .note.myth b.tag{background:var(--bad)}
+.note.do{border-color:var(--ok)} .note.do b.tag{background:var(--ok)}
+.note.warn{border-color:var(--warn)} .note.warn b.tag{background:var(--warn)}
+.note.ex{border-color:var(--c);background:var(--soft)} .note.ex b.tag{background:var(--c)}
+.tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:470px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--display);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#fff;font-weight:700;background:var(--c)}
+tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;font-weight:800;color:var(--c);white-space:nowrap}
+figure{margin:0}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px;margin:14px 0}
+.fig{overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:540px;height:auto}
+.fig figcaption,.cap{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+svg text{font-family:var(--body);fill:var(--ink)}
+svg .mut{fill:var(--muted)} svg .w{fill:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{border:2px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 13px;font-size:13.5px;font-weight:800}
+.chip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#fff}
+.donebar{margin:20px 0 0}
+.donebar button{border:2px solid var(--c);color:var(--c);background:var(--surface);border-radius:99px;padding:9px 18px;font-weight:800;font-size:14px}
+.donebar button[aria-pressed="true"]{background:var(--c);color:#fff}
+
+.widget{background:var(--surface);border:2px solid var(--ink);border-radius:var(--r);padding:16px;margin:16px 0;box-shadow:5px 5px 0 var(--c)}
+.widget h4{font-size:16.5px;font-weight:700;margin-bottom:4px}
+.widget .hint{font-size:13.5px;color:var(--muted);margin-bottom:12px}
+input[type=range]{width:100%;accent-color:var(--c)}
+.bars{display:grid;gap:10px;margin-top:12px}
+.bar{display:grid;grid-template-columns:100px 1fr 46px;gap:8px;align-items:center;font-size:13.5px;font-weight:800}
+.bar .track{height:20px;background:var(--soft);border-radius:7px;overflow:hidden}
+.bar .track i{display:block;height:100%;border-radius:7px;transition:width .25s}
+.bar .v{text-align:right;font-variant-numeric:tabular-nums}
+.readout{font-family:var(--display);font-size:28px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--c)}
+.fld{display:grid;gap:4px;font-size:13.5px;font-weight:800}
+.fld input,.fld select{font:inherit;font-weight:600;padding:9px 10px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.out{display:grid;gap:8px;margin-top:14px}
+.out .row{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:10px 12px;border-radius:12px;background:var(--soft);font-size:14.5px;font-weight:700}
+.out .row b{font-variant-numeric:tabular-nums;font-size:16.5px;white-space:nowrap;color:var(--c)}
+.out .row small{display:block;color:var(--muted);font-size:12.5px;font-weight:400}
+.detail{background:var(--soft);border-radius:14px;padding:12px 14px;margin-top:10px;font-size:15px}
+.detail h5{margin:0 0 6px;font-size:16.5px}
+.detail dl{margin:0;display:grid;gap:7px}
+.detail dt{font-family:var(--display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);font-weight:700}
+.detail dd{margin:0}
+
+@keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.14)}24%{transform:scale(1)}}
+.heart{transform-origin:center;transform-box:fill-box;animation:beat var(--d,1s) infinite}
+@keyframes slide{0%,100%{transform:translateX(0)}50%{transform:translateX(var(--dx,14px))}}
+.actL{animation:slide 2.4s ease-in-out infinite;--dx:16px}
+.actR{animation:slide 2.4s ease-in-out infinite;--dx:-16px}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.pulse{animation:pulse 1.6s infinite}
+@media (prefers-reduced-motion: reduce){.heart,.actL,.actR,.pulse{animation:none}.prog i,.bar .track i{transition:none}html{scroll-behavior:auto}}
+
+.fc button.cardface{width:100%;min-height:170px;border-radius:14px;border:2px solid var(--c);background:var(--soft);padding:18px;text-align:left;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.fc .side{font-family:var(--display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--c)}
+.fc .q{font-family:var(--display);font-size:18px;font-weight:700;line-height:1.3}
+.fc .a{font-size:16px}
+.fcnav{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.qz .qtext{font-family:var(--display);font-size:18px;font-weight:700;margin:6px 0 12px;line-height:1.3}
+.qz .opts{display:grid;gap:8px}
+.qz .opts button{text-align:left;border:2px solid var(--line);background:var(--bg);border-radius:12px;padding:11px 13px;font-size:15px;font-weight:600}
+.qz .opts button.right{border-color:var(--ok);background:#dff5ea}
+.qz .opts button.wrong{border-color:var(--bad);background:#fde3e9}
+.qz .fb{margin-top:10px;font-size:15px;min-height:1.5em}
+
+/* glossário */
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:40;transform:translateY(110%);transition:transform .22s;padding:0 10px 10px}
+.sheet.open{transform:none}
+.sheet .in{max-width:740px;margin:0 auto;background:var(--ink);color:#fff;border-radius:18px;padding:16px 18px;box-shadow:0 -6px 30px rgba(20,26,51,.3)}
+.sheet h5{font-size:18px;color:var(--hl);margin-bottom:4px}
+.sheet p{font-size:15.5px;line-height:1.5}
+.sheet button{float:right;border:0;background:rgba(255,255,255,.16);color:#fff;border-radius:99px;width:32px;height:32px;font-weight:800;margin-left:10px}
+#glos .fld{margin:10px 0 14px}
+.gl{display:grid;gap:8px}
+.gl div{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:12px;padding:10px 12px;font-size:15px}
+.gl b{font-family:var(--display);font-weight:700;display:block;font-size:16px}
+footer{margin:44px 0 90px;padding-top:20px;border-top:2px solid var(--line);font-size:13.5px;color:var(--muted)}
+footer ul{padding-left:18px;margin:8px 0;display:grid;gap:3px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="logo"><i></i>Fisio &amp; Nutri</div>
+  <div class="prog" aria-hidden="true"><i id="progbar"></i></div>
+  <div class="progtxt" id="progtxt">0/14</div>
+  <button class="btn" id="openNav" aria-haspopup="dialog">Módulos</button>
+</div></header>
+
+<div class="drawer" id="drawer" role="dialog" aria-label="Módulos">
+  <div class="shade" id="shade"></div>
+  <nav id="navlist"><h3>Módulos do material</h3></nav>
+</div>
+
+<main class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Caderno de estudo · versão aprofundada</div>
+  <h1>Fisiologia do Exercício e <em>Nutrição do Atleta</em></h1>
+  <p class="lead">Cada assunto explicado do começo: o que é, como acontece passo a passo, por que acontece, quando aparece e quem participa. Baseado em 11 livros (McArdle e 10 do Haluch).</p>
+  <div class="how">
+    <h3>Como estudar por aqui</h3>
+    <ol>
+      <li><span class="k" style="background:var(--c1)">1</span><span>Comece pelo quadro <b>Em 30 segundos</b>. Depois leia os <b>passo a passo</b> numerados: eles contam o mecanismo na ordem em que acontece no corpo.</span></li>
+      <li><span class="k" style="background:var(--c10)">2</span><span>Palavra com <span style="border-bottom:2px dotted var(--c10)">pontilhado embaixo</span> é termo técnico. <b>Toque nela</b> para ver a explicação sem sair do lugar.</span></li>
+      <li><span class="k" style="background:var(--c3)">3</span><span>Os quadros com sombra colorida são simuladores e calculadoras. Mexa neles.</span></li>
+      <li><span class="k" style="background:var(--c6)">4</span><span>Marque o módulo como estudado e feche com flashcards e simulado no módulo 14. O glossário completo fica no final.</span></li>
+    </ol>
+  </div>
+  <h3 class="sub" style="--c:var(--ink)">Mapa do material</h3>
+  <div class="map" id="map"></div>
+</section>
+
+<!-- ============ 1 ============ -->
+<section class="mod" id="m1" style="--c:var(--c1)" data-title="Bioenergética">
+  <div class="mhead" data-n="01"><div class="kick">Módulo 01</div><h2>Bioenergética: de onde vem a energia</h2><div class="src">McArdle caps. 5 a 7 e 11 · Nutrição Esportiva cap. 2 · Bioquímica do Emagrecimento caps. 5 e 6</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>A única energia que o músculo usa diretamente é a do <b>ATP</b>. O estoque dura poucos segundos, então o corpo vive de <b>refazer ATP</b>.</li>
+    <li>Existem três formas de refazer: <mark>ATP-PCr</mark>, <mark>glicólise</mark> e <mark>sistema aeróbio</mark>. As três funcionam ao mesmo tempo. Intensidade e duração mudam a proporção.</li>
+    <li>Regra de ouro: quanto <b>mais rápido</b> um sistema entrega ATP, <b>menos tempo</b> ele aguenta.</li>
+    <li><b>Lactato não causa fadiga.</b> Ele é consequência da glicólise acelerada e ainda ajuda.</li>
+  </ul></div>
+
+  <h3 class="sub">O que é o ATP e por que tudo gira em torno dele</h3>
+  <p class="txt">ATP significa adenosina trifosfato: uma molécula de adenosina ligada a três fosfatos em fila. A ligação do último fosfato guarda bastante energia. Quando uma enzima chamada ATPase corta esse fosfato, sobra ADP (adenosina com dois fosfatos), um fosfato solto (Pi), um íon H+ e a energia liberada, que a célula usa na hora.</p>
+  <p class="txt">No músculo, três "máquinas" gastam esse ATP durante o exercício: a <b>miosina</b>, que puxa a actina e gera força; a <b>bomba de cálcio</b> (SERCA), que recolhe o cálcio para o músculo relaxar; e a <b>bomba de sódio e potássio</b>, que mantém a fibra capaz de receber o próximo impulso nervoso. Sem ATP nenhuma das três trabalha.</p>
+  <div class="note ex"><b class="tag">Analogia</b>ATP é dinheiro vivo no bolso: resolve tudo na hora, mas você carrega pouco. Fosfocreatina é o caixa eletrônico ao lado: saque instantâneo, limite baixo. Glicogênio é a conta corrente: muito mais saldo, saque um pouco mais lento. Gordura é a poupança: saldo enorme, saque demorado.</div>
+
+  <h3 class="sub">Sistema 1: ATP-PCr (imediato)</h3>
+  <ol class="steps">
+    <li><b>O esforço começa e o ATP cai um pouco</b>O aumento de ADP dentro da fibra é o sinal de que falta energia.</li>
+    <li><b>A creatina quinase entra em ação</b>Essa enzima pega o fosfato da fosfocreatina (PCr) e entrega ao ADP. Resultado: ATP novo e creatina livre.</li>
+    <li><b>É uma única reação, no citosol, sem oxigênio</b>Por isso é o sistema mais rápido que existe.</li>
+    <li><b>O estoque acaba rápido</b>Em esforço máximo, a PCr cai muito em 15 a 20 segundos.</li>
+    <li><b>Na pausa, a reação inverte</b>O ATP feito nas mitocôndrias devolve o fosfato para a creatina. Repor 100% leva de 3 a 8 minutos.</li>
+  </ol>
+  <figure class="fig">
+    <svg viewBox="0 0 640 210" role="img" aria-label="Fosfocreatina ressintetiza ATP no esforço e é reposta na pausa">
+      <rect x="20" y="30" width="180" height="70" rx="14" fill="none" stroke="var(--c1)" stroke-width="3"/>
+      <text x="110" y="60" text-anchor="middle" font-weight="800" font-size="17">Fosfocreatina</text>
+      <text x="110" y="82" text-anchor="middle" font-size="13" class="mut">PCr + ADP</text>
+      <rect x="440" y="30" width="180" height="70" rx="14" fill="var(--c1)"/>
+      <text x="530" y="60" text-anchor="middle" font-weight="800" font-size="17" class="w">ATP</text>
+      <text x="530" y="82" text-anchor="middle" font-size="13" class="w">+ creatina</text>
+      <line x1="208" y1="52" x2="430" y2="52" stroke="var(--c1)" stroke-width="3"/><path d="M430 52l-12-7v14z" fill="var(--c1)"/>
+      <text x="320" y="42" text-anchor="middle" font-size="13" font-weight="700">ESFORÇO: creatina quinase</text>
+      <circle r="6" fill="var(--c1)" class="pulse"><animateMotion dur="1.2s" repeatCount="indefinite" path="M210 52 L428 52"/></circle>
+      <line x1="432" y1="84" x2="210" y2="84" stroke="var(--c3)" stroke-width="3"/><path d="M210 84l12-7v14z" fill="var(--c3)"/>
+      <text x="320" y="104" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--c3)">PAUSA: ATP da mitocôndria repõe a PCr</text>
+      <circle r="6" fill="var(--c3)"><animateMotion dur="3.2s" repeatCount="indefinite" path="M430 84 L212 84"/></circle>
+      <rect x="20" y="136" width="600" height="60" rx="14" fill="var(--soft)"/>
+      <text x="36" y="161" font-size="14" font-weight="800">Reposição total da PCr: 3 a 8 minutos</text>
+      <text x="36" y="182" font-size="13" class="mut">Pausa menor que 2 a 3 min: PCr incompleta, o corpo recorre mais à glicólise.</text>
+    </svg>
+    <figcaption>A ida é rápida (bolinha laranja). A volta é lenta (bolinha azul) e depende do sistema aeróbio. Por isso quem tem boa base aeróbia se recupera melhor entre sprints.</figcaption>
+  </figure>
+
+  <h3 class="sub">Sistema 2: glicólise (curto prazo)</h3>
+  <p class="txt">Glicólise quer dizer "quebra da glicose". É uma sequência de 10 reações no citosol que parte uma glicose (6 carbonos) em duas moléculas de piruvato (3 carbonos cada). Não usa oxigênio.</p>
+  <ol class="steps">
+    <li><b>De onde vem a glicose</b>Do sangue ou, principalmente no esforço intenso, do glicogênio guardado no próprio músculo. A enzima glicogênio fosforilase solta as glicoses do glicogênio, estimulada por adrenalina e pelo cálcio da contração.</li>
+    <li><b>Investimento e retorno</b>A via gasta ATP no começo e devolve mais no fim. Saldo: 2 ATP por glicose do sangue, 3 por glicose vinda do glicogênio.</li>
+    <li><b>Quem controla a velocidade</b>A enzima fosfofrutoquinase (PFK). ADP e AMP altos aceleram a PFK. ATP sobrando e H+ acumulado freiam.</li>
+    <li><b>Sobra NADH</b>A glicólise retira hidrogênios da glicose e os entrega ao NAD+, que vira NADH. Só que a célula tem pouco NAD+. Se ele não for devolvido, a glicólise para.</li>
+    <li><b>O destino do piruvato decide tudo</b>Com mitocôndria dando conta, piruvato e hidrogênios entram nela (caminho aeróbio). Quando a glicólise corre mais rápido que a mitocôndria absorve, a enzima LDH passa o hidrogênio do NADH para o piruvato e forma <b>lactato</b>. Isso regenera o NAD+ e a glicólise continua.</li>
+  </ol>
+  <div class="wwq">
+    <div><h5>Por que existe</h5>Entrega ATP muito mais rápido que o sistema aeróbio, quando a PCr já caiu.</div>
+    <div><h5>Quando domina</h5>Esforços intensos de 30 s a 2 ou 3 min, e treinos com pausa curta.</div>
+    <div><h5>O que limita</h5>O acúmulo de H+ (acidose), que freia a própria PFK e a contração.</div>
+  </div>
+  <div class="note myth"><b class="tag">Erro comum</b>"Queimou de ácido lático." No corpo circula lactato, e não ácido lático. O H+ da acidose vem principalmente da quebra acelerada de ATP. Formar lactato <b>consome</b> um H+, e o transportador MCT, que tira o lactato da fibra, leva outro H+ junto. O lactato sobe porque a glicólise está acelerada: ele é o termômetro do esforço, e não o culpado.</div>
+  <p class="txt"><b>Para onde vai o lactato:</b> ele sai pelo MCT, e vai para fibras vizinhas tipo I e para o coração, que o reconvertem em piruvato e queimam como combustível. Outra parte vai ao fígado e vira glicose de novo (ciclo de Cori), ajudando a manter a glicemia no exercício intenso.</p>
+
+  <h3 class="sub">Sistema 3: aeróbio (longo prazo)</h3>
+  <p class="txt">Acontece dentro da mitocôndria, a "usina" da célula. É lento porque tem muitas etapas e depende de oxigênio chegando pelo sangue, mas rende muito: cerca de <mark>32 ATP por glicose</mark> contra 2 da glicólise sozinha.</p>
+  <ol class="steps">
+    <li><b>Preparação do combustível</b>Piruvato (vindo do carboidrato) e ácidos graxos (vindos da gordura) são convertidos em uma mesma molécula de 2 carbonos: acetil-CoA.</li>
+    <li><b>Ciclo de Krebs</b>Na matriz da mitocôndria, o acetil-CoA é desmontado. Os carbonos saem como CO2 (que você expira). Os hidrogênios são carregados por NADH e FADH2.</li>
+    <li><b>Cadeia de transporte de elétrons</b>Na membrana interna da mitocôndria, NADH e FADH2 entregam seus elétrons a uma fila de proteínas. A energia dessa passagem bombeia H+ para um lado da membrana, como encher uma represa.</li>
+    <li><b>ATP sintase</b>Os H+ voltam pela ATP sintase, uma turbina molecular que junta ADP + Pi e forma ATP. Esse conjunto se chama fosforilação oxidativa.</li>
+    <li><b>O papel do oxigênio</b>No fim da fila, o oxigênio recebe os elétrons e os H+ e forma água. Sem oxigênio a fila trava. É por isso que você respira.</li>
+  </ol>
+
+  <h3 class="sub">Como a gordura vira energia</h3>
+  <ol class="steps">
+    <li><b>Lipólise</b>No tecido adiposo, a lipase hormônio-sensível quebra o triacilglicerol em 3 ácidos graxos e 1 glicerol. Adrenalina, glucagon, cortisol e GH ligam essa enzima. Insulina desliga.</li>
+    <li><b>Transporte</b>Os ácidos graxos viajam no sangue grudados na albumina até o músculo.</li>
+    <li><b>Entrada na mitocôndria</b>Ácidos graxos longos só entram com ajuda da carnitina (enzima CPT-1). É um ponto de controle importante.</li>
+    <li><b>Beta-oxidação</b>Lá dentro, a cadeia de carbonos é cortada de 2 em 2, gerando vários acetil-CoA, que seguem para o ciclo de Krebs.</li>
+  </ol>
+  <p class="txt">A gordura rende muito ATP por molécula, mas gasta mais oxigênio por ATP e tem mais etapas. Em alta intensidade, a adrenalina acelera a quebra de glicogênio, a glicólise produz muito acetil-CoA e a entrada de ácido graxo na mitocôndria é freada. Resultado: <b>quanto mais intenso, mais carboidrato</b>. Acima de ~65% do VO2máx o glicogênio muscular já pesa bastante.</p>
+
+  <div class="widget">
+    <h4>Simulador: quem paga a conta do esforço máximo?</h4>
+    <div class="hint">Arraste para mudar a duração de um esforço feito no máximo possível para aquele tempo.</div>
+    <div class="readout" id="eTime">10 s</div>
+    <input type="range" id="eRange" min="0" max="100" value="26" aria-label="Duração do esforço">
+    <div class="bars">
+      <div class="bar"><span>ATP-PCr</span><div class="track"><i id="b1" style="background:var(--c1)"></i></div><span class="v" id="v1"></span></div>
+      <div class="bar"><span>Glicolítico</span><div class="track"><i id="b2" style="background:var(--c2)"></i></div><span class="v" id="v2"></span></div>
+      <div class="bar"><span>Aeróbio</span><div class="track"><i id="b3" style="background:var(--c3)"></i></div><span class="v" id="v3"></span></div>
+    </div>
+    <div class="detail" id="eEx"></div>
+    <p class="cap">Curvas aproximadas, feitas para visualizar a ideia. Os valores reais mudam com o atleta e o protocolo.</p>
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>Sistema</th><th>Onde</th><th>Combustível</th><th>Rendimento</th><th>Limite</th></tr>
+    <tr><td><b>ATP-PCr</b></td><td>Citosol</td><td>Fosfocreatina</td><td class="num">1 ATP por PCr</td><td>Estoque: 15 a 20 s</td></tr>
+    <tr><td><b>Glicólise</b></td><td>Citosol</td><td>Glicogênio, glicose</td><td class="num">2 a 3 ATP</td><td>Acidose</td></tr>
+    <tr><td><b>Aeróbio</b></td><td>Mitocôndria</td><td>Carboidrato, gordura, pouco aminoácido</td><td class="num">~32 ATP por glicose</td><td>Oxigênio e glicogênio</td></tr>
+  </table></div>
+
+  <h3 class="sub">Depois do esforço: EPOC</h3>
+  <p class="txt">Terminado o exercício, o consumo de oxigênio fica acima do repouso por um tempo. Esse excesso (EPOC) paga várias contas: repor a fosfocreatina, reoxidar lactato, devolver oxigênio à mioglobina e ao sangue, e sustentar temperatura, frequência cardíaca, ventilação e hormônios ainda elevados. Quanto mais intenso o treino, maior e mais longo o EPOC.</p>
+  <div class="note do"><b class="tag">Na prática</b>Medindo o ar expirado dá para saber o combustível em uso: o quociente respiratório (CO2 produzido ÷ O2 consumido) fica perto de 0,7 quando se queima só gordura e chega a 1,0 quando é só carboidrato. É assim que os laboratórios calculam gasto calórico e mistura de combustíveis.</div>
+  <div class="donebar"><button data-done="m1" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="mod" id="m2" style="--c:var(--c2)" data-title="Contração, fadiga e recuperação">
+  <div class="mhead" data-n="02"><div class="kick">Módulo 02</div><h2>Contração, fadiga e recuperação</h2><div class="src">Nutrição Esportiva cap. 1 · McArdle caps. 18, 19 e 22</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Para contrair, a fibra precisa de <b>ATP</b> e de <b>cálcio</b> solto dentro dela. Fadiga periférica é qualquer coisa que atrapalhe um dos dois.</li>
+    <li>Seis mecanismos: queda de <mark>PCr</mark>, <mark>acidose</mark>, <mark>estresse oxidativo</mark>, <mark>glicogênio baixo</mark>, <mark>hipóxia</mark> e <mark>fadiga central</mark>.</li>
+    <li>Cada mecanismo tem uma contramedida. É daí que saem a pausa, o carboidrato e os suplementos que funcionam.</li>
+    <li>Depois de um treino com muito dano, a força pode levar <b>até 7 dias</b> para voltar.</li>
+  </ul></div>
+
+  <h3 class="sub">Como um pensamento vira força: passo a passo</h3>
+  <ol class="steps">
+    <li><b>O comando sai do cérebro</b>O córtex motor dispara um impulso elétrico (potencial de ação) que desce pela medula até o motoneurônio.</li>
+    <li><b>Junção neuromuscular</b>Na ponta do nervo, o impulso libera acetilcolina, um mensageiro químico que atravessa o espaço até a fibra muscular.</li>
+    <li><b>A fibra "acende"</b>A acetilcolina abre canais na membrana da fibra (sarcolema). Entra sódio e nasce um novo potencial de ação, que corre pela superfície e mergulha pelos túbulos T até o interior.</li>
+    <li><b>O cálcio é liberado</b>O impulso nos túbulos T abre os canais do retículo sarcoplasmático, o "depósito" de cálcio da fibra. O cálcio inunda o interior.</li>
+    <li><b>O cálcio destrava a actina</b>Em repouso, a tropomiosina cobre os pontos de encaixe da actina. O cálcio se liga à troponina, que puxa a tropomiosina para o lado e libera os encaixes.</li>
+    <li><b>Ponte cruzada</b>A cabeça da miosina encaixa na actina, dobra e puxa o filamento (golpe de força). Os filamentos deslizam e o sarcômero encurta.</li>
+    <li><b>Um ATP para soltar</b>Um ATP novo se liga à miosina e a desencaixa. A quebra desse ATP "rearma" a cabeça para o próximo golpe. O ciclo se repete enquanto houver cálcio e ATP.</li>
+    <li><b>Relaxamento</b>Cessado o impulso, a bomba SERCA devolve o cálcio ao retículo, gastando ATP. A tropomiosina volta a cobrir a actina.</li>
+  </ol>
+  <figure class="fig">
+    <svg viewBox="0 0 640 170" role="img" aria-label="Sarcômero: actina desliza sobre a miosina">
+      <line x1="60" y1="20" x2="60" y2="130" stroke="var(--ink)" stroke-width="5"/><line x1="580" y1="20" x2="580" y2="130" stroke="var(--ink)" stroke-width="5"/>
+      <text x="60" y="150" text-anchor="middle" font-size="12" class="mut">linha Z</text><text x="580" y="150" text-anchor="middle" font-size="12" class="mut">linha Z</text>
+      <g class="actL"><rect x="60" y="38" width="200" height="8" rx="4" fill="var(--c3)"/><rect x="60" y="104" width="200" height="8" rx="4" fill="var(--c3)"/></g>
+      <g class="actR"><rect x="380" y="38" width="200" height="8" rx="4" fill="var(--c3)"/><rect x="380" y="104" width="200" height="8" rx="4" fill="var(--c3)"/></g>
+      <rect x="190" y="66" width="260" height="18" rx="9" fill="var(--c2)"/>
+      <g stroke="var(--c2)" stroke-width="4" stroke-linecap="round"><line x1="215" y1="66" x2="225" y2="50"/><line x1="255" y1="66" x2="265" y2="50"/><line x1="385" y1="66" x2="375" y2="50"/><line x1="425" y1="66" x2="415" y2="50"/><line x1="215" y1="84" x2="225" y2="100"/><line x1="255" y1="84" x2="265" y2="100"/><line x1="385" y1="84" x2="375" y2="100"/><line x1="425" y1="84" x2="415" y2="100"/></g>
+      <text x="320" y="80" text-anchor="middle" font-size="12" font-weight="800" class="w">MIOSINA</text>
+      <text x="130" y="30" text-anchor="middle" font-size="12" font-weight="800" style="fill:var(--c3)">ACTINA</text>
+      <text x="320" y="24" text-anchor="middle" font-size="12" class="mut">Ca2+ libera o encaixe · ATP move e solta a ponte</text>
+    </svg>
+    <figcaption>O sarcômero é a menor unidade que contrai, entre duas linhas Z. Os filamentos não encolhem: a actina desliza sobre a miosina. Milhares de sarcômeros em fila formam a miofibrila.</figcaption>
+  </figure>
+  <p class="txt">Guarde os dois pontos frágeis dessa cadeia: <b>a liberação de cálcio pelo retículo</b> e <b>a oferta de ATP</b>. Quase todo mecanismo de fadiga acaba batendo em um deles.</p>
+
+  <div class="widget">
+    <h4>Mapa da fadiga: toque em um mecanismo</h4>
+    <div class="hint">Veja o que acontece, por que derruba a força, quando domina e como atrasar.</div>
+    <div class="chips" id="fatChips"></div>
+    <div class="detail" id="fatDetail"></div>
+  </div>
+
+  <h3 class="sub">Fadiga periférica × fadiga central</h3>
+  <div class="grid2">
+    <div class="tile"><h4>Periférica</h4><p>O problema está <b>dentro do músculo</b>: falta ATP na velocidade necessária ou o cálcio não é liberado direito. O comando chega, mas a fibra não responde com a mesma força.</p></div>
+    <div class="tile"><h4>Central</h4><p>O problema está <b>no comando</b>. Metabólitos acumulados no músculo ativam nervos sensitivos (aferentes III e IV), que avisam o sistema nervoso central. Ele reduz os disparos do córtex motor para proteger o corpo.</p></div>
+  </div>
+  <p class="txt">As duas conversam: quanto mais intensa a fadiga periférica, mais forte o sinal para o cérebro "tirar o pé". Em experimento em que esses nervos foram bloqueados com fármaco, a força caiu menos durante o esforço.</p>
+
+  <h3 class="sub">Dano muscular: o que acontece nos dias seguintes</h3>
+  <ol class="steps">
+    <li><b>Microlesões</b>Tensão alta, principalmente na fase excêntrica (músculo alongando sob carga) e em estímulos novos, desorganiza sarcômeros e membranas.</li>
+    <li><b>Fase degenerativa</b>Cálcio vaza para dentro da fibra, enzimas degradam as estruturas lesadas, começa inflamação local, dor tardia e queda de força.</li>
+    <li><b>Chegam os neutrófilos (~24 h)</b>Células de defesa que iniciam a limpeza. Elas também liberam espécies reativas de oxigênio, o que mantém o estresse oxidativo depois do treino.</li>
+    <li><b>Chegam os macrófagos (~48 h)</b>Engolem os restos (fagocitose) e liberam sinais que ativam a síntese de proteínas. Podem ficar no músculo por até 7 dias.</li>
+    <li><b>Fase regenerativa</b>Células satélite (células-tronco do músculo) se multiplicam e doam núcleos à fibra. A síntese proteica reconstrói a estrutura, um pouco mais forte.</li>
+  </ol>
+  <div class="grid3">
+    <div class="tile"><b class="big">Pouco dano</b><p>Dá para treinar o mesmo grupo de novo em 2 a 3 dias.</p></div>
+    <div class="tile"><b class="big">Muito dano</b><p>A força pode levar de 5 a 7 dias para voltar. O intervalo habitual não basta.</p></div>
+    <div class="tile"><b class="big">Efeito protetor</b><p>Repetir o estímulo gera menos dano nas vezes seguintes. Dor não é medida de treino bom.</p></div>
+  </div>
+  <div class="note do"><b class="tag">Na prática</b>A inflamação pós-treino faz parte da adaptação: eliminar neutrófilos e macrófagos em animais atrasou a regeneração. O que acelera a recuperação é proteína e carboidrato suficientes, sono e dose de treino compatível com o dano. Repor glicogênio também recupera a liberação de cálcio: sem carboidrato depois do treino, ela seguia deprimida 4 horas depois.</div>
+  <div class="donebar"><button data-done="m2" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="mod" id="m3" style="--c:var(--c3)" data-title="Coração, pulmão e VO2máx">
+  <div class="mhead" data-n="03"><div class="kick">Módulo 03</div><h2>Coração, pulmão e VO2máx</h2><div class="src">McArdle caps. 12 a 17 e 21 · Nutrição Esportiva cap. 2</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>O sistema aeróbio depende de uma cadeia: <b>pulmão capta</b> o oxigênio, <b>sangue carrega</b>, <b>coração bombeia</b>, <b>músculo extrai e usa</b>.</li>
+    <li><mark>VO2 = débito cardíaco × diferença arteriovenosa de O2</mark> (equação de Fick).</li>
+    <li><mark>Débito cardíaco = frequência cardíaca × volume sistólico</mark>. O treino aumenta o volume sistólico.</li>
+    <li>Desempenho de endurance depende de três coisas: <b>VO2máx</b>, <b>limiar de lactato</b> e <b>economia de movimento</b>.</li>
+  </ul></div>
+
+  <h3 class="sub">O caminho do oxigênio, etapa por etapa</h3>
+  <ol class="steps">
+    <li><b>Ventilação</b>O diafragma contrai, o tórax expande e o ar entra. No exercício, a ventilação sobe de uns 6 L/min para mais de 100 L/min, primeiro aumentando a profundidade e depois a frequência.</li>
+    <li><b>Difusão nos alvéolos</b>Os alvéolos são bolsas microscópicas cercadas de capilares. O oxigênio passa do ar para o sangue porque sua pressão é maior no alvéolo que no sangue. O CO2 faz o caminho inverso pela mesma lógica.</li>
+    <li><b>Transporte pela hemoglobina</b>Quase todo o oxigênio viaja ligado à hemoglobina dentro das hemácias. Cada hemoglobina leva até 4 moléculas de O2 e sai do pulmão praticamente saturada. Por isso ferro e número de hemácias importam tanto.</li>
+    <li><b>Bombeamento</b>O ventrículo esquerdo lança o sangue na aorta. Quanto sai por minuto é o débito cardíaco.</li>
+    <li><b>Entrega seletiva</b>No exercício, os vasos do músculo ativo dilatam e os das vísceras contraem. O sangue é redirecionado para onde está o trabalho.</li>
+    <li><b>Descarga no músculo</b>No músculo ativo há mais calor, mais CO2 e mais H+. Essas três coisas fazem a hemoglobina soltar o oxigênio com mais facilidade (efeito Bohr). A mioglobina leva o oxigênio até a mitocôndria.</li>
+    <li><b>Uso</b>A mitocôndria consome o oxigênio na cadeia de elétrons (módulo 1). O sangue volta com menos O2: a diferença entre o que foi e o que voltou é a diferença arteriovenosa.</li>
+  </ol>
+  <figure class="fig">
+    <svg viewBox="0 0 640 150" role="img" aria-label="Cadeia do oxigênio do ar até a mitocôndria">
+      <g font-size="13" font-weight="800" text-anchor="middle">
+        <rect x="8" y="30" width="112" height="64" rx="12" fill="none" stroke="var(--c5)" stroke-width="3"/><text x="64" y="58">Pulmão</text><text x="64" y="78" font-size="11" font-weight="400" class="mut">ventila, difunde</text>
+        <rect x="138" y="30" width="112" height="64" rx="12" fill="none" stroke="var(--c2)" stroke-width="3"/><text x="194" y="58">Sangue</text><text x="194" y="78" font-size="11" font-weight="400" class="mut">hemoglobina</text>
+        <rect x="268" y="30" width="112" height="64" rx="12" fill="none" stroke="var(--c3)" stroke-width="3"/><text x="324" y="58">Coração</text><text x="324" y="78" font-size="11" font-weight="400" class="mut">FC × VS</text>
+        <rect x="398" y="30" width="112" height="64" rx="12" fill="none" stroke="var(--c4)" stroke-width="3"/><text x="454" y="58">Capilares</text><text x="454" y="78" font-size="11" font-weight="400" class="mut">entrega</text>
+        <rect x="528" y="30" width="104" height="64" rx="12" fill="var(--c1)"/><text x="580" y="58" class="w">Mitocôndria</text><text x="580" y="78" font-size="11" font-weight="400" class="w">usa o O2</text>
+      </g>
+      <circle r="5" fill="var(--c3)"><animateMotion dur="4s" repeatCount="indefinite" path="M20 112 L620 112"/></circle>
+      <circle r="5" fill="var(--c3)"><animateMotion dur="4s" begin="1.3s" repeatCount="indefinite" path="M20 112 L620 112"/></circle>
+      <circle r="5" fill="var(--c3)"><animateMotion dur="4s" begin="2.6s" repeatCount="indefinite" path="M20 112 L620 112"/></circle>
+      <text x="320" y="138" text-anchor="middle" font-size="12" class="mut">Entrega central (débito cardíaco) → extração periférica (diferença a-v de O2)</text>
+    </svg>
+    <figcaption>O VO2máx é o teto dessa cadeia. Vai de cerca de 10 mL/kg/min em cardiopatas a 80 ou 90 em corredores e esquiadores de elite.</figcaption>
+  </figure>
+
+  <h3 class="sub">Como o coração aumenta o débito</h3>
+  <p class="txt"><b>Frequência cardíaca:</b> o coração tem um marca-passo próprio (nó sinoatrial). O sistema nervoso parassimpático (nervo vago, acetilcolina) freia. O simpático (noradrenalina) e a adrenalina aceleram. No início do exercício, o freio é solto. Depois o acelerador é pisado.</p>
+  <p class="txt"><b>Volume sistólico:</b> é o sangue ejetado a cada batida. No exercício, os músculos espremem as veias e mais sangue volta ao coração. O ventrículo enche mais, suas fibras são mais esticadas e respondem contraindo com mais força. Esse é o mecanismo de Frank-Starling. O simpático ainda aumenta a força de contração.</p>
+  <div class="widget">
+    <h4>Mesmo débito, corações diferentes</h4>
+    <div class="hint">Em repouso os dois bombeiam 5 L/min. O coração treinado faz isso com menos batidas e mais sangue por batida.</div>
+    <div class="grid2">
+      <div style="text-align:center">
+        <svg viewBox="0 0 120 110" width="120" aria-hidden="true"><path class="heart" style="--d:.857s" d="M60 98C20 68 8 48 8 32 8 16 20 6 34 6c11 0 20 6 26 16C66 12 75 6 86 6c14 0 26 10 26 26 0 16-12 36-52 66z" fill="var(--c2)"/></svg>
+        <div style="font-weight:800">Não treinado</div>
+        <div class="readout" style="font-size:20px">70 bpm × 71 mL</div>
+      </div>
+      <div style="text-align:center">
+        <svg viewBox="0 0 120 110" width="150" aria-hidden="true"><path class="heart" style="--d:1.2s" d="M60 98C20 68 8 48 8 32 8 16 20 6 34 6c11 0 20 6 26 16C66 12 75 6 86 6c14 0 26 10 26 26 0 16-12 36-52 66z" fill="var(--c3)"/></svg>
+        <div style="font-weight:800">Treinado em endurance</div>
+        <div class="readout" style="font-size:20px">50 bpm × 100 mL</div>
+      </div>
+    </div>
+    <p class="cap">Valores médios de repouso do McArdle. A bradicardia do atleta vem de mais tônus vagal, mais volume de sangue e um ventrículo esquerdo maior e mais complacente.</p>
+  </div>
+  <p class="txt"><b>Pressão arterial no exercício:</b> a sistólica sobe junto com a intensidade porque o débito aumenta. A diastólica muda pouco no exercício dinâmico, pois os vasos do músculo dilatam. Em esforço de força com apneia (manobra de Valsalva) as duas sobem muito.</p>
+
+  <h3 class="sub">Limiar de lactato: o que é e por que decide provas</h3>
+  <p class="txt">Em intensidade baixa, o lactato produzido é removido na mesma velocidade e o nível no sangue fica estável. A partir de certa intensidade, a produção passa a superar a remoção e o lactato sobe de forma contínua. Esse ponto é o limiar de lactato. Acima dele o H+ se acumula, o bicarbonato do sangue tampona parte desse ácido gerando CO2 extra, e a respiração dispara de forma desproporcional (limiar ventilatório). O esforço fica insustentável em minutos.</p>
+  <div class="wwq">
+    <div><h5>Por que importa</h5>Dois atletas com o mesmo VO2máx: ganha quem sustenta uma fração maior dele sem acumular lactato.</div>
+    <div><h5>Quando aparece</h5>Em destreinados, perto de 50 a 60% do VO2máx. Em atletas de endurance, bem mais alto.</div>
+    <div><h5>O que desloca</h5>Mais mitocôndrias, mais capilares e mais MCT: o músculo produz menos lactato e remove mais.</div>
+  </div>
+
+  <h3 class="sub">O que o treino aeróbio muda, e como</h3>
+  <ol class="steps">
+    <li><b>O sinal</b>Cada sessão baixa a energia da fibra (sobe AMP) e eleva o cálcio. Isso ativa a AMPK, um sensor de "combustível baixo", e outras enzimas.</li>
+    <li><b>O interruptor</b>Elas ativam o PGC-1α, uma proteína que liga os genes de construção de mitocôndrias. Esse processo é a biogênese mitocondrial.</li>
+    <li><b>No músculo</b>Mais mitocôndrias e enzimas oxidativas: mais gordura queimada na mesma carga, glicogênio poupado, menos lactato.</li>
+    <li><b>Nos vasos</b>O músculo libera VEGF, que faz brotar novos capilares (angiogênese). Mais superfície para entregar O2 e retirar metabólitos.</li>
+    <li><b>No sangue e no coração</b>O volume de plasma sobe em poucos dias. Com o tempo o ventrículo esquerdo aumenta. O volume sistólico e o débito máximo crescem.</li>
+  </ol>
+  <div class="note warn"><b class="tag">Atenção</b>Essas adaptações são reversíveis. Com 1 ou 2 semanas de destreinamento já existe perda mensurável de capacidade metabólica e de desempenho. O volume de plasma é o primeiro a cair.</div>
+  <div class="note ex"><b class="tag">Pulmão limita?</b>Em pessoas saudáveis ao nível do mar, raramente. O sangue sai do pulmão quase saturado mesmo no esforço máximo. O gargalo costuma estar em bombear (débito cardíaco) e em usar (mitocôndrias). Por isso o treino não muda quase nada os volumes pulmonares, e muda muito coração e músculo.</div>
+  <div class="donebar"><button data-done="m3" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="mod" id="m4" style="--c:var(--c4)" data-title="Músculo e hipertrofia">
+  <div class="mhead" data-n="04"><div class="kick">Módulo 04</div><h2>Músculo, fibras e hipertrofia</h2><div class="src">McArdle caps. 18, 19 e 22 · Nutrição e Hipertrofia caps. 5 e 6 · Hormônios no Fisiculturismo</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>O músculo está sempre construindo e destruindo proteína. Hipertrofia é o saldo: <b>síntese maior que degradação</b>, por semanas e meses.</li>
+    <li>O treino dá o <b>sinal</b> (tensão mecânica). Proteína e energia dão o <b>material</b>.</li>
+    <li>A via central de construção é a <mark>mTOR</mark>. A <mark>AMPK</mark>, ligada quando falta energia, freia a mTOR.</li>
+    <li>O teto é genético e os ganhos <b>diminuem a cada ano</b> de treino bem feito.</li>
+  </ul></div>
+
+  <h3 class="sub">Do músculo ao sarcômero</h3>
+  <p class="txt">Um músculo é um feixe de feixes: músculo → fascículos → fibras musculares (cada fibra é uma célula longa, com vários núcleos) → miofibrilas → sarcômeros em fila. Hipertrofiar é, principalmente, acrescentar miofibrilas dentro de cada fibra, engrossando-a.</p>
+  <p class="txt">As fibras são comandadas em grupos. Uma <b>unidade motora</b> é um motoneurônio mais todas as fibras que ele inerva. Quando ele dispara, todas contraem juntas. Para graduar a força, o sistema nervoso recruta mais unidades e aumenta a frequência de disparo.</p>
+
+  <h3 class="sub">Tipos de fibra e ordem de recrutamento</h3>
+  <div class="tw"><table>
+    <tr><th>Fibra</th><th>Contração</th><th>Metabolismo</th><th>Fadiga</th><th>Onde brilha</th></tr>
+    <tr><td><b>Tipo I</b></td><td>Lenta</td><td>Oxidativo: muitas mitocôndrias, capilares e mioglobina</td><td>Resistente</td><td>Endurance, postura</td></tr>
+    <tr><td><b>Tipo IIa</b></td><td>Rápida</td><td>Misto: oxidativo e glicolítico</td><td>Intermediária</td><td>Esforços intensos repetidos</td></tr>
+    <tr><td><b>Tipo IIx</b></td><td>Muito rápida</td><td>Glicolítico: muita PCr e glicogênio, poucas mitocôndrias</td><td>Rápida</td><td>Força máxima, potência, sprint</td></tr>
+  </table></div>
+  <p class="txt"><b>Princípio do tamanho:</b> as unidades motoras pequenas (fibras tipo I) têm limiar baixo e entram primeiro. Conforme a força exigida sobe, entram as maiores (tipo II). Para alcançar as fibras rápidas, que têm o maior potencial de crescimento, há dois caminhos: carga alta, ou carga moderada levada para perto da falha, quando as primeiras fibras cansam e as demais são convocadas.</p>
+  <div class="note ex"><b class="tag">Primeiras semanas</b>O iniciante fica mais forte antes de o músculo crescer. O ganho inicial é neural: recruta mais unidades motoras, dispara mais rápido, coordena melhor os músculos e reduz a coativação dos antagonistas. A hipertrofia mensurável vem depois.</div>
+
+  <h3 class="sub">Como o treino faz o músculo crescer</h3>
+  <ol class="steps">
+    <li><b>Tensão mecânica</b>A fibra é tracionada sob carga. Sensores na membrana e no esqueleto interno da célula percebem a deformação.</li>
+    <li><b>Ativação da mTOR</b>Esses sensores ativam a mTORC1, o "mestre de obras" da célula. Aminoácidos (principalmente leucina) e insulina/IGF-1 reforçam o mesmo sinal por outros caminhos.</li>
+    <li><b>Tradução acelerada</b>A mTOR libera os ribossomos, as fábricas que leem o RNA mensageiro e montam proteínas. A síntese proteica muscular fica elevada por 24 a 48 horas após o treino.</li>
+    <li><b>Mais fábricas e mais núcleos</b>Com a repetição, a fibra produz mais ribossomos. Células satélite se fundem à fibra e doam núcleos, ampliando a capacidade de produção.</li>
+    <li><b>Freio na degradação</b>Insulina e IGF-1 inibem o sistema que marca proteínas para destruição (ubiquitina-proteassoma). Cortisol alto, jejum e déficit fazem o oposto.</li>
+    <li><b>Saldo positivo acumulado</b>Sessão após sessão, com proteína e energia suficientes, a fibra acrescenta miofibrilas.</li>
+  </ol>
+  <div class="grid2">
+    <div class="tile"><h4>Aceleradores</h4><p>Tensão mecânica progressiva, proteína suficiente, energia disponível, sono, testosterona e IGF-1, receptores androgênicos em bom número.</p></div>
+    <div class="tile"><h4>Freios</h4><p>AMPK ativada por déficit de energia ou muito volume aeróbio, miostatina (proteína que limita o tamanho do músculo), cortisol cronicamente alto, pouca proteína.</p></div>
+  </div>
+
+  <h3 class="sub">Potencial genético</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 640 200" role="img" aria-label="Potencial de ganho de massa magra por ano de treino">
+      <g font-size="13">
+        <text x="14" y="38" font-weight="700">Ano 1</text><rect x="80" y="22" width="460" height="24" rx="6" fill="var(--c4)"/><text x="548" y="39" font-weight="800">9 a 11,5 kg</text>
+        <text x="14" y="82" font-weight="700">Ano 2</text><rect x="80" y="66" width="220" height="24" rx="6" fill="var(--c4)" opacity=".8"/><text x="308" y="83" font-weight="800">4,5 a 5,5 kg</text>
+        <text x="14" y="126" font-weight="700">Ano 3</text><rect x="80" y="110" width="108" height="24" rx="6" fill="var(--c4)" opacity=".6"/><text x="196" y="127" font-weight="800">2,2 a 2,7 kg</text>
+        <text x="14" y="170" font-weight="700">Ano 4+</text><rect x="80" y="154" width="52" height="24" rx="6" fill="var(--c4)" opacity=".45"/><text x="140" y="171" font-weight="800">0,9 a 1,3 kg</text>
+      </g>
+    </svg>
+    <figcaption>Modelo de Lyle McDonald citado pelo Haluch: potencial médio de massa livre de gordura por ano de treino adequado, em homens.</figcaption>
+  </figure>
+  <p class="txt">A resposta individual varia muito. No mesmo programa há quem quase não cresça e quem aumente vários centímetros e dobre a força. O que explica: proporção de tipos de fibra, número de células satélite, sensibilidade a andrógenos e insulina. Um estudo com homens treinados mostrou que o <b>conteúdo de receptor androgênico no músculo</b> se associou à hipertrofia, e a testosterona circulante dentro da faixa normal não.</p>
+
+  <h3 class="sub">Superávit, déficit e aeróbio</h3>
+  <div class="grid3">
+    <div class="tile"><h4>Superávit</h4><p>Construir tecido custa energia. Faixa citada para o off season: 300 a 1.000 kcal, cerca de 10 a 15% do gasto total, vindo principalmente de carboidratos. Os ganhos são maiores nas primeiras semanas e estagnam em 6 a 10.</p></div>
+    <div class="tile"><h4>Crescer em déficit</h4><p>Possível com treino e dieta hiperproteica, usando a gordura estocada como energia. Mais fácil em pouco treinados e com gordura elevada, ou em quem usa hormônios. Em avançados e magros, a meta realista é manter.</p></div>
+    <div class="tile"><h4>Aeróbio atrapalha?</h4><p>Sem exagero, separado da musculação e com dieta hiperproteica, não prejudica massa nem força. O excesso atrapalha porque derruba o desempenho na musculação e pode criar déficit calórico.</p></div>
+  </div>
+  <div class="donebar"><button data-done="m4" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="mod" id="m5" style="--c:var(--c5)" data-title="Princípios do treinamento">
+  <div class="mhead" data-n="05"><div class="kick">Módulo 05</div><h2>Princípios do treinamento</h2><div class="src">McArdle caps. 21 e 22</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Treino é um <b>estresse controlado</b>. O corpo se adapta para que o mesmo estresse custe menos da próxima vez.</li>
+    <li>Quatro princípios: <mark>sobrecarga</mark>, <mark>especificidade</mark>, <mark>diferenças individuais</mark> e <mark>reversibilidade</mark>.</li>
+    <li>Sem recuperação não há adaptação. Excesso crônico leva ao overtraining.</li>
+  </ul></div>
+
+  <h3 class="sub">Por que o corpo se adapta</h3>
+  <ol class="steps">
+    <li><b>Estímulo</b>A sessão tira o corpo do equilíbrio (homeostase): gasta substratos, acumula metabólitos, gera tensão e microlesões.</li>
+    <li><b>Fadiga</b>Logo depois, a capacidade de desempenho fica abaixo do normal.</li>
+    <li><b>Recuperação</b>Com descanso e nutrição, os estoques são repostos e as estruturas reparadas.</li>
+    <li><b>Supercompensação</b>O corpo reconstrói um pouco acima do nível anterior: mais glicogênio, mais mitocôndrias, mais proteína contrátil.</li>
+    <li><b>Novo estímulo na hora certa</b>Cedo demais, você acumula fadiga. Tarde demais, a adaptação se perde. Carga progressiva no momento certo é o que constrói.</li>
+  </ol>
+  <div class="grid2">
+    <div class="tile"><h4>Sobrecarga</h4><p>O estímulo precisa passar do habitual. Você manipula frequência, intensidade e duração, de forma progressiva e individual. Vale para atleta, sedentário e cardiopata.</p></div>
+    <div class="tile"><h4>Especificidade (AEDI)</h4><p>Adaptações específicas às demandas impostas. No estudo do McArdle, 10 semanas de natação melhoraram muito mais o VO2máx medido nadando que o medido correndo: a adaptação está nos músculos treinados.</p></div>
+    <div class="tile"><h4>Diferenças individuais</h4><p>O mesmo programa gera respostas diferentes. Nível inicial e genética decidem o tamanho da resposta. Prescreva em relação à capacidade do indivíduo.</p></div>
+    <div class="tile"><h4>Reversibilidade</h4><p>Parou, perde. 1 a 2 semanas já reduzem a capacidade metabólica. Em idosos, 4 meses sem treino anularam as adaptações. Fora de temporada, mantenha um mínimo.</p></div>
+  </div>
+  <h3 class="sub">Como sobrecarregar cada sistema energético</h3>
+  <div class="tw"><table>
+    <tr><th>Alvo</th><th>Esforço</th><th>Pausa</th><th>Por quê</th></tr>
+    <tr><td>ATP-PCr</td><td>Máximo, 5 a 10 s</td><td>Longa: 3 a 8 min</td><td>Cada tiro precisa da PCr reposta para ser máximo de verdade</td></tr>
+    <tr><td>Glicolítico</td><td>Muito intenso, 30 s a 2 min</td><td>Incompleta</td><td>Acumular H+ é o estímulo para aumentar tamponamento e MCT</td></tr>
+    <tr><td>Aeróbio</td><td>Contínuo, ou intervalos de 3 a 5 min</td><td>Curta ou ativa</td><td>Manter débito cardíaco e consumo de O2 altos por muito tempo</td></tr>
+  </table></div>
+  <div class="note warn"><b class="tag">Overtraining</b>Quando a carga supera a recuperação por semanas, o desempenho cai mesmo treinando mais. Sinais: fadiga que não passa, queda de rendimento, sono ruim, humor alterado, frequência cardíaca de repouso alterada, infecções frequentes, perda de apetite. O tratamento é descanso, que pode levar semanas ou meses. Reduzir a carga antes de competir (polimento) funciona pelo motivo oposto: remove a fadiga e mantém a adaptação.</div>
+  <div class="donebar"><button data-done="m5" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="mod" id="m6" style="--c:var(--c6)" data-title="Gasto energético e montagem da dieta">
+  <div class="mhead" data-n="06"><div class="kick">Módulo 06</div><h2>Gasto energético e montagem da dieta</h2><div class="src">McArdle caps. 4, 8 a 10 e 30 · Hipertrofia cap. 6 · Ciclo de Carboidratos cap. 5 · Cutting</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Peso corporal obedece ao <b>balanço energético</b>: energia que entra menos energia que sai.</li>
+    <li>O gasto do dia tem três partes: <mark>repouso</mark> (50 a 70%), <mark>atividade</mark> e <mark>efeito térmico dos alimentos</mark> (~10%).</li>
+    <li>Fórmulas dão um ponto de partida. O ajuste fino vem de <b>peso e medidas ao longo das semanas</b>.</li>
+    <li>Ordem de montagem: calorias → proteína → gordura → carboidrato.</li>
+  </ul></div>
+
+  <h3 class="sub">O que é uma caloria e quanto cada nutriente fornece</h3>
+  <p class="txt">Caloria é uma unidade de energia. Na nutrição usamos a quilocaloria (kcal): a energia para aquecer 1 kg de água em 1 °C. O corpo extrai essa energia oxidando os nutrientes, como viu no módulo 1.</p>
+  <div class="grid3">
+    <div class="tile"><b class="big">4 kcal/g</b><h4>Carboidrato</h4><p>Combustível rápido. Estoque total de uns 500 g, a maior parte no músculo.</p></div>
+    <div class="tile"><b class="big">4 kcal/g</b><h4>Proteína</h4><p>Material de construção. Só vira combustível em pequena parte.</p></div>
+    <div class="tile"><b class="big">9 kcal/g</b><h4>Gordura</h4><p>Reserva compacta e quase ilimitada. O álcool fornece 7 kcal/g.</p></div>
+  </div>
+
+  <h3 class="sub">Os componentes do gasto</h3>
+  <ol class="steps">
+    <li><b>Gasto energético de repouso (GER)</b>É o custo de manter o corpo vivo: coração, cérebro, respiração, rins, temperatura, renovação de tecidos. Responde por 50 a 70% do total. Depende principalmente da <b>massa magra</b>: quanto mais músculo e órgãos, maior.</li>
+    <li><b>Efeito térmico dos alimentos (ETA)</b>Digerir, absorver e processar nutrientes gasta energia: cerca de 10% do que você come. Proteína é a mais cara de processar.</li>
+    <li><b>Exercício</b>O treino planejado. Varia muito com duração, intensidade e peso corporal.</li>
+    <li><b>Movimento fora do treino (NEAT)</b>Andar, ficar em pé, gesticular, tarefas do dia. Difere em centenas de calorias entre pessoas e cai sem você perceber quando está em dieta.</li>
+  </ol>
+  <figure class="fig">
+    <svg viewBox="0 0 640 150" role="img" aria-label="Efeito térmico: gordura 0 a 3 por cento, carboidrato 5 a 10, proteína 20 a 30">
+      <g font-size="13"><text x="14" y="38" font-weight="700">Gordura</text><rect x="120" y="22" width="42" height="24" rx="6" fill="var(--c10)"/><text x="170" y="39" font-weight="800">0 a 3%</text>
+      <text x="14" y="82" font-weight="700">Carboidrato</text><rect x="120" y="66" width="140" height="24" rx="6" fill="var(--c1)"/><text x="268" y="83" font-weight="800">5 a 10%</text>
+      <text x="14" y="126" font-weight="700">Proteína</text><rect x="120" y="110" width="420" height="24" rx="6" fill="var(--c6)"/><text x="548" y="127" font-weight="800">20 a 30%</text></g>
+    </svg>
+    <figcaption>Quanto da energia de cada macronutriente é gasta para processá-lo. De 100 kcal de proteína, 20 a 30 são gastas no caminho.</figcaption>
+  </figure>
+
+  <h3 class="sub">Como se mede o gasto</h3>
+  <p class="txt">O corpo usa oxigênio para oxidar nutrientes, então medir o oxigênio consumido revela a energia gasta: cada litro de O2 corresponde a perto de 5 kcal. Essa é a <b>calorimetria indireta</b>. Daí vem o MET, a unidade que compara atividades: 1 MET é o gasto de repouso, igual a 3,5 mL de O2 por kg por minuto. Uma atividade de 8 METs gasta 8 vezes o repouso. Fora do laboratório usamos equações que estimam o GER por peso, altura, idade e sexo, multiplicadas por um fator de atividade.</p>
+  <div class="note warn"><b class="tag">Limite das fórmulas</b>Elas erram para mais ou para menos em cada indivíduo. Trate o resultado como hipótese. Se em 2 a 3 semanas o peso não se comporta como previsto, ajuste as calorias. O dado real manda.</div>
+
+  <div class="widget">
+    <h4>Calculadora de faixas de macronutrientes</h4>
+    <div class="hint">Confere se uma dieta está dentro das faixas dos livros. Não substitui a prescrição de um nutricionista.</div>
+    <div class="grid2">
+      <label class="fld" for="cW">Peso corporal (kg)<input id="cW" type="number" inputmode="decimal" min="35" max="200" value="80"></label>
+      <label class="fld" for="cG">Contexto<select id="cG">
+        <option value="hip">Musculação, hipertrofia</option>
+        <option value="cut">Cutting de atleta magro</option>
+        <option value="e1">Endurance, até 1 h por dia</option>
+        <option value="e2">Endurance, 1 a 3 h por dia</option>
+        <option value="e3">Endurance, mais de 4 h por dia</option>
+      </select></label>
+    </div>
+    <div class="out" id="cOut"></div>
+  </div>
+  <h3 class="sub">Montando na ordem certa</h3>
+  <ol class="steps">
+    <li><b>Defina as calorias</b>Gasto estimado, mais superávit para ganhar ou menos déficit para perder. Um déficit de 500 kcal por dia é o ponto de partida seguro, com expectativa inicial de uns 0,5 kg por semana.</li>
+    <li><b>Fixe a proteína</b>É a prioridade porque protege e constrói massa magra (módulo 7).</li>
+    <li><b>Garanta a gordura mínima</b>0,5 a 1,5 g/kg para hormônios e vitaminas (módulo 9).</li>
+    <li><b>Complete com carboidrato</b>O restante das calorias, ajustado ao volume e à intensidade do treino (módulo 8).</li>
+    <li><b>Acompanhe e ajuste</b>A perda desacelera porque o gasto cai junto com o peso (módulo 10).</li>
+  </ol>
+  <div class="donebar"><button data-done="m6" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="mod" id="m7" style="--c:var(--c7)" data-title="Proteínas">
+  <div class="mhead" data-n="07"><div class="kick">Módulo 07</div><h2>Proteínas</h2><div class="src">Nutrição Esportiva cap. 3 · Hipertrofia caps. 1, 2 e 7 · Metabolismo e Emagrecimento cap. 3 · McArdle cap. 1</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Proteína é uma corrente de <b>aminoácidos</b>. São 20, e 9 são essenciais: o corpo não fabrica, tem que comer.</li>
+    <li>O corpo não tem "estoque" de proteína como tem de gordura. O músculo é a reserva, e está em renovação constante.</li>
+    <li>Hipertrofia: <mark>1,6 a 2,2 g/kg</mark>. Cutting de atleta magro: <mark>2,0 a 3,5 g/kg</mark>. Por refeição: <mark>0,25 a 0,50 g/kg</mark>.</li>
+    <li>Com proteína suficiente, BCAA, leucina isolada, glutamina e HMB não acrescentam.</li>
+  </ul></div>
+
+  <h3 class="sub">Do prato ao músculo</h3>
+  <ol class="steps">
+    <li><b>Estômago</b>O ácido clorídrico desenrola a proteína (desnaturação) e a pepsina começa a cortá-la em pedaços menores.</li>
+    <li><b>Intestino delgado</b>Enzimas do pâncreas (tripsina e outras) cortam em aminoácidos e peptídeos de 2 ou 3 unidades, que são absorvidos pelas células do intestino.</li>
+    <li><b>Fígado</b>O sangue do intestino passa primeiro pelo fígado, que usa parte dos aminoácidos e libera o resto para a circulação.</li>
+    <li><b>Pool de aminoácidos</b>É o conjunto de aminoácidos livres no sangue e nos tecidos. Entram nele os da dieta e os da degradação de proteínas do corpo. Saem dele os usados para construir proteínas novas, hormônios e enzimas.</li>
+    <li><b>Síntese no músculo</b>A leucina que chega à fibra ativa a mTOR, e os ribossomos montam proteínas com os aminoácidos disponíveis.</li>
+    <li><b>O que sobra é oxidado</b>O corpo não guarda aminoácido excedente. O grupo com nitrogênio é retirado e o resto vira energia, glicose ou gordura.</li>
+  </ol>
+
+  <h3 class="sub">Turnover e balanço nitrogenado</h3>
+  <p class="txt">As proteínas do corpo são destruídas e refeitas o tempo todo (turnover). Como só a proteína contém nitrogênio entre os macronutrientes, comparar o nitrogênio que entra (dieta) com o que sai (urina, fezes, suor) mostra o saldo. <b>Balanço positivo</b>: o corpo está retendo proteína, como em crescimento e hipertrofia. <b>Negativo</b>: está perdendo, como em déficit severo, doença ou proteína insuficiente.</p>
+  <p class="txt"><b>Para onde vai o nitrogênio:</b> o grupo amino é transferido entre moléculas (transaminação) ou removido (desaminação), formando amônia, que é tóxica. O fígado converte a amônia em ureia (ciclo da ureia) e o rim elimina na urina. Comer mais proteína aumenta a ureia, o que é adaptação normal e não sinal de lesão em rim saudável.</p>
+
+  <h3 class="sub">Como a refeição liga a síntese: o limiar de leucina</h3>
+  <p class="txt">A síntese proteica muscular responde à dose de proteína até um teto. Abaixo de ~0,25 g/kg a leucina no sangue não sobe o bastante para ligar a mTOR ao máximo. Entre 0,25 e 0,50 g/kg a resposta atinge o pico. Acima disso o excedente é oxidado. Depois de um pico, o músculo fica algumas horas menos responsivo, mesmo com aminoácidos disponíveis. Por isso distribuir em 3 a 4 refeições ou mais funciona melhor que concentrar tudo em uma.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 170" role="img" aria-label="Resposta da síntese proteica à dose de proteína por refeição">
+      <line x1="60" y1="130" x2="610" y2="130" stroke="var(--line)" stroke-width="2"/>
+      <rect x="215" y="20" width="185" height="110" fill="var(--hl)" opacity=".55"/>
+      <path d="M60 126 C150 120 190 60 290 44 C380 32 480 30 610 30" fill="none" stroke="var(--c7)" stroke-width="4"/>
+      <line x1="215" y1="20" x2="215" y2="130" stroke="var(--muted)" stroke-dasharray="5 5"/><line x1="400" y1="20" x2="400" y2="130" stroke="var(--muted)" stroke-dasharray="5 5"/>
+      <g font-size="12" text-anchor="middle"><text x="215" y="148" font-weight="800">0,25 g/kg</text><text x="400" y="148" font-weight="800">0,50 g/kg</text>
+      <text x="130" y="164" class="mut">abaixo do limiar</text><text x="308" y="164" font-weight="700">zona útil</text><text x="510" y="164" class="mut">platô: excedente é oxidado</text></g>
+      <text x="20" y="80" font-size="12" class="mut" transform="rotate(-90 20 80)" text-anchor="middle">síntese proteica</text>
+    </svg>
+    <figcaption>Curva esquemática da lógica descrita pelo Haluch. Para 80 kg, a zona útil é de 20 a 40 g por refeição. Na ceia, cerca de 0,5 g/kg de proteína lenta (caseína, ovos) cobre a noite.</figcaption>
+  </figure>
+
+  <h3 class="sub">Faixas por contexto</h3>
+  <div class="tw"><table>
+    <tr><th>Contexto</th><th>g/kg/dia</th><th>Por quê</th></tr>
+    <tr><td>Adulto sedentário (RDA)</td><td class="num">0,8</td><td>Repõe as perdas diárias. É o mínimo, e não o ideal para quem treina</td></tr>
+    <tr><td>Endurance</td><td class="num">~1,4</td><td>Repara o dano e sustenta a construção de mitocôndrias. Muito acima rouba espaço do carboidrato</td></tr>
+    <tr><td>Hipertrofia</td><td class="num">1,6 a 2,2</td><td>Acima de ~2,2 não houve ganho extra de massa. Haluch usa 2,0 como referência prática</td></tr>
+    <tr><td>Cutting, atleta magro</td><td class="num">2,0 a 3,5</td><td>Com pouca gordura e déficit, o corpo recorre mais aos aminoácidos para fazer glicose. Mais proteína protege o músculo e segura a fome</td></tr>
+    <tr><td>Longevidade, adulto não atleta</td><td class="num">~0,8</td><td>Menor estímulo crônico de IGF-1 e mTOR. Acima de 65 anos a recomendação sobe (módulo 13)</td></tr>
+  </table></div>
+
+  <h3 class="sub">Qualidade da proteína</h3>
+  <p class="txt">Depende de duas coisas: ter todos os aminoácidos essenciais em boa quantidade e ser bem digerida. Proteínas animais (ovo, leite, carnes) e a soja pontuam alto. Cereais e leguminosas isolados têm um aminoácido em menor quantidade (limitante), mas se completam quando combinados, como arroz com feijão. Em dieta mista com proteína total adequada, a qualidade individual de cada fonte perde importância.</p>
+  <div class="grid2">
+    <div class="note myth"><b class="tag">Mito</b>"O corpo só absorve 30 g por refeição." O intestino absorve praticamente tudo, só leva mais tempo. O que tem teto é o uso para síntese muscular naquela refeição. O restante é usado por outros tecidos ou oxidado.</div>
+    <div class="note myth"><b class="tag">Mito</b>"Proteína alta estraga o rim." Em pessoas com rim saudável, estudos com atletas consumindo até ~2,8 g/kg não mostram prejuízo. Doença renal prévia muda o quadro e exige acompanhamento médico.</div>
+  </div>
+  <div class="tw"><table>
+    <tr><th>Fonte</th><th>Característica</th><th>Uso</th></tr>
+    <tr><td>Whey</td><td>Absorção rápida, rico em leucina</td><td>Praticidade para bater a meta. Sem vantagem se a dieta já entrega</td></tr>
+    <tr><td>Caseína, leite</td><td>Forma um gel no estômago: absorção lenta</td><td>Ceia, longos períodos sem comer</td></tr>
+    <tr><td>Albumina, soja</td><td>Boa qualidade</td><td>Alternativas válidas no total diário</td></tr>
+    <tr><td>BCAA, leucina, EAA</td><td>Parte do que a proteína inteira já tem</td><td>A leucina liga a síntese, mas faltam os outros aminoácidos para construir. Sem benefício com ~2,0 g/kg na dieta</td></tr>
+  </table></div>
+  <div class="note do"><b class="tag">Janela anabólica</b>Ela existe, mas é larga. A síntese fica elevada por um dia ou mais após o treino. Uma refeição com proteína algumas horas antes ou depois cobre a necessidade. O pós-treino imediato importa mais para quem treinou em jejum prolongado ou treina duas vezes no dia.</div>
+  <div class="donebar"><button data-done="m7" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="mod" id="m8" style="--c:var(--c8)" data-title="Carboidratos">
+  <div class="mhead" data-n="08"><div class="kick">Módulo 08</div><h2>Carboidratos</h2><div class="src">Nutrição Esportiva cap. 4 · McArdle caps. 1, 3 e 23 · Metabolismo e Emagrecimento cap. 1 · Hipertrofia cap. 3</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Todo carboidrato digerível vira <b>glicose</b> no sangue. O corpo guarda como <b>glicogênio</b>, no fígado e no músculo.</li>
+    <li><b>Insulina</b> guarda a glicose. <b>Glucagon</b> e adrenalina liberam.</li>
+    <li>A dose depende do <b>volume de treino</b>. Força: <mark>4 a 8 g/kg</mark>. Endurance: <mark>5 a 12 g/kg</mark>.</li>
+    <li>Prova acima de 90 min: <mark>10 a 12 g/kg nas 48 h</mark> anteriores, <mark>1 a 4 g/kg de 1 a 4 h antes</mark> e <mark>30 a 60 g por hora</mark> durante.</li>
+  </ul></div>
+
+  <h3 class="sub">Tipos de carboidrato</h3>
+  <div class="tw"><table>
+    <tr><th>Grupo</th><th>O que é</th><th>Exemplos</th></tr>
+    <tr><td><b>Monossacarídeos</b></td><td>Uma unidade de açúcar. Já prontos para absorver</td><td>Glicose, frutose, galactose</td></tr>
+    <tr><td><b>Dissacarídeos</b></td><td>Duas unidades ligadas</td><td>Sacarose (açúcar de mesa), lactose (leite), maltose</td></tr>
+    <tr><td><b>Amido</b></td><td>Milhares de glicoses em cadeia</td><td>Arroz, batata, pão, macarrão, aveia</td></tr>
+    <tr><td><b>Fibras</b></td><td>Cadeias que nossas enzimas não quebram. Alimentam as bactérias do intestino e retardam a digestão</td><td>Vegetais, frutas, leguminosas, grãos integrais</td></tr>
+  </table></div>
+
+  <h3 class="sub">Do prato ao glicogênio</h3>
+  <ol class="steps">
+    <li><b>Digestão</b>A amilase da saliva e a do pâncreas cortam o amido. Na parede do intestino, enzimas terminam o serviço até sobrar glicose, frutose e galactose.</li>
+    <li><b>Absorção</b>A glicose entra na célula intestinal pelo transportador SGLT-1, junto com sódio. A frutose usa outro, o GLUT5. O SGLT-1 satura perto de <mark>60 g de glicose por hora</mark>.</li>
+    <li><b>Fígado primeiro</b>O sangue do intestino passa pelo fígado, que retém parte da glicose como glicogênio hepático e processa quase toda a frutose.</li>
+    <li><b>A glicemia sobe e o pâncreas responde</b>As células beta liberam insulina.</li>
+    <li><b>A insulina abre a porta</b>No músculo e no tecido adiposo, a insulina faz o transportador GLUT4 migrar para a membrana. A glicose entra.</li>
+    <li><b>Glicogênese</b>Dentro da célula, a enzima glicogênio sintase encadeia as glicoses em glicogênio.</li>
+  </ol>
+  <p class="txt"><b>O caminho de volta:</b> quando a glicemia cai, no jejum ou no exercício, o pâncreas libera glucagon. Ele manda o fígado quebrar glicogênio (glicogenólise) e fabricar glicose nova a partir de lactato, glicerol e aminoácidos (gliconeogênese). O glicogênio do músculo não ajuda a glicemia: falta ali a enzima glicose-6-fosfatase, então ele só abastece a própria fibra.</p>
+  <div class="note ex"><b class="tag">Detalhe que explica muita coisa</b>A contração muscular também leva o GLUT4 para a membrana, sem precisar de insulina. É por isso que o exercício baixa a glicemia, melhora a sensibilidade à insulina e deixa o músculo ávido por carboidrato nas horas seguintes ao treino.</div>
+
+  <h3 class="sub">Índice glicêmico e carga glicêmica</h3>
+  <p class="txt">O índice glicêmico (IG) mede a velocidade com que um alimento eleva a glicemia, comparado à glicose pura. A carga glicêmica (CG) corrige pela quantidade: <mark>CG = IG × gramas de carboidrato ÷ 100</mark>. Melancia tem IG alto, mas pouca glicose por porção, então a carga é baixa. Fibra, gordura e proteína na mesma refeição reduzem a resposta. Para composição corporal, o total de calorias pesa muito mais que o IG.</p>
+
+  <h3 class="sub">Por que o glicogênio manda no desempenho</h3>
+  <div class="wwq">
+    <div><h5>Por quê</h5>É o combustível que entrega ATP rápido. Com ele baixo, sobra a gordura, que é lenta, e o retículo libera menos cálcio.</div>
+    <div><h5>Quando acaba</h5>Em intensidade moderada, depois de 2 a 4 horas. Em alta intensidade repetida, muito antes.</div>
+    <div><h5>O sinal</h5>A "parede" do maratonista: queda brusca de ritmo quando o glicogênio muscular e a glicemia despencam.</div>
+  </div>
+  <div class="widget">
+    <h4>Linha do tempo de uma prova longa</h4>
+    <div class="hint">Toque em cada momento. Os gramas usam o peso informado no módulo 6.</div>
+    <div class="chips" id="raceChips"></div>
+    <div class="detail" id="raceDetail"></div>
+  </div>
+  <div class="tw"><table>
+    <tr><th>Treino de endurance por dia</th><th>Carboidrato</th><th>Para 70 kg</th></tr>
+    <tr><td>Até 1 hora</td><td class="num">5 a 7 g/kg</td><td>350 a 490 g</td></tr>
+    <tr><td>1 a 3 horas</td><td class="num">6 a 10 g/kg</td><td>420 a 700 g</td></tr>
+    <tr><td>Mais de 4 horas</td><td class="num">8 a 12 g/kg</td><td>560 a 840 g</td></tr>
+  </table></div>
+
+  <h3 class="sub">Supercompensação de glicogênio</h3>
+  <p class="txt">Depois de esvaziado pelo exercício, o músculo fica com a glicogênio sintase mais ativa e mais GLUT4 na membrana. Se nesse momento chegar muito carboidrato, ele armazena acima do normal: até 4 a 5 g de glicogênio por 100 g de músculo. Só os músculos que trabalharam supercompensam. Cada grama de glicogênio prende 2,7 g de água, o que explica o peso subir ou cair rápido ao recarregar ou cortar carboidrato.</p>
+  <div class="grid2">
+    <div class="tile"><h4>Antes: efeito poupador</h4><p>Carboidrato antes do treino eleva a glicemia. Com mais glicose chegando pelo sangue, o músculo gasta o próprio glicogênio mais devagar.</p></div>
+    <div class="tile"><h4>Durante: 4 a 8%</h4><p>Bebida nessa concentração esvazia bem do estômago e entrega 30 a 60 g/h. Mais concentrada, fica parada e causa desconforto.</p></div>
+    <div class="tile"><h4>Depois: reposição acelerada</h4><p>Com duas sessões no dia: 0,8 g/kg/h de carboidrato de IG alto, mais 0,2 a 0,4 g/kg/h de proteína. Cafeína 3 a 8 mg/kg pode ajudar.</p></div>
+    <div class="tile"><h4>Musculação</h4><p>Sessões de 30 a 60 min não esvaziam o glicogênio a ponto de exigir carboidrato durante o treino. A refeição anterior basta.</p></div>
+  </div>
+  <div class="grid2">
+    <div class="tile"><h4>Sleep low</h4><p>Treino intenso à noite, dormir sem carboidrato, endurance leve em jejum pela manhã. Glicogênio baixo ativa mais a AMPK e amplia o sinal para criar mitocôndrias. É periodização para sessões escolhidas, e não dieta low carb.</p></div>
+    <div class="tile"><h4>Low carb e hipertrofia</h4><p>Dá para ganhar massa com pouco carboidrato se calorias e proteína estiverem altas. O desempenho em treinos volumosos tende a cair e a saciedade da cetogênica dificulta manter o superávit.</p></div>
+  </div>
+  <div class="donebar"><button data-done="m8" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="mod" id="m9" style="--c:var(--c9)" data-title="Gorduras, hidratação e ambiente">
+  <div class="mhead" data-n="09"><div class="kick">Módulo 09</div><h2>Gorduras, micronutrientes, hidratação e ambiente</h2><div class="src">Nutrição Esportiva cap. 5 · McArdle caps. 1 a 3, 24 e 25 · Longevidade cap. 3</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Gordura: <mark>0,5 a 1,5 g/kg</mark>, cerca de 20 a 30% das calorias. Saturada até 10%. Trans, fora.</li>
+    <li>Só uns 20 a 25% da energia do exercício vira movimento. O resto vira <b>calor</b>, e o suor é a principal saída.</li>
+    <li>Desidratar reduz o volume de sangue e sobrecarrega o coração. Beber demais causa <b>hiponatremia</b>.</li>
+    <li>Calor pede aclimatação. Altitude: <b>viver no alto, treinar no baixo</b>.</li>
+  </ul></div>
+
+  <h3 class="sub">Gorduras: estrutura e tipos</h3>
+  <p class="txt">A gordura da comida e a do corpo são quase toda triacilglicerol: uma molécula de glicerol com três ácidos graxos pendurados. Um ácido graxo é uma cadeia de carbonos. O que muda de um tipo para outro são as ligações duplas da cadeia.</p>
+  <div class="tw"><table>
+    <tr><th>Tipo</th><th>Estrutura</th><th>Fontes</th><th>Efeito</th></tr>
+    <tr><td><b>Saturada</b></td><td>Sem ligação dupla. Cadeia reta, sólida em temperatura ambiente</td><td>Carnes gordas, manteiga, queijos, coco</td><td>Em excesso eleva o LDL. Limite: 10% das calorias</td></tr>
+    <tr><td><b>Monoinsaturada</b></td><td>Uma ligação dupla</td><td>Azeite, abacate, oleaginosas</td><td>Favorável ao perfil lipídico</td></tr>
+    <tr><td><b>Poli-insaturada</b></td><td>Duas ou mais. Inclui ômega 3 e ômega 6, que são essenciais</td><td>Peixes, linhaça, óleos vegetais</td><td>Trocar saturada por ela reduz risco cardiovascular</td></tr>
+    <tr><td><b>Trans</b></td><td>Insaturada modificada pela indústria</td><td>Ultraprocessados antigos, frituras industriais</td><td>Sobe LDL e baixa HDL. Evitar</td></tr>
+  </table></div>
+  <ol class="steps">
+    <li><b>Emulsificação</b>Gordura não se mistura com água. A bile, feita no fígado, quebra as gotas grandes em gotículas.</li>
+    <li><b>Digestão</b>A lipase do pâncreas corta os triacilgliceróis em ácidos graxos e monoacilgliceróis.</li>
+    <li><b>Absorção e empacotamento</b>Dentro da célula intestinal eles são remontados e embalados em quilomícrons, que entram pela linfa e depois no sangue.</li>
+    <li><b>Distribuição</b>A enzima lipase lipoproteica, na parede dos vasos, retira os ácidos graxos para músculo e tecido adiposo. A insulina estimula essa entrega para o adipócito.</li>
+    <li><b>Transporte do colesterol</b>O fígado exporta gordura e colesterol em VLDL, que vira LDL. O LDL em excesso penetra na parede das artérias e inicia a placa (aterosclerose). O HDL faz o caminho de volta ao fígado.</li>
+  </ol>
+  <div class="grid2">
+    <div class="tile"><h4>Por que não zerar</h4><p>Gordura fornece ácidos graxos essenciais, carrega as vitaminas A, D, E e K, e o colesterol é a matéria-prima de testosterona, estrogênio e cortisol.</p></div>
+    <div class="tile"><h4>Desempenho</h4><p>Dieta rica em gordura aumenta a oxidação de gordura, mas reduz a capacidade de usar carboidrato em alta intensidade. TCM e CLA não entregam o que prometem.</p></div>
+  </div>
+
+  <h3 class="sub">Micronutrientes que merecem atenção</h3>
+  <div class="tw"><table>
+    <tr><th>Nutriente</th><th>Função no exercício</th><th>Quem corre risco</th></tr>
+    <tr><td>Ferro</td><td>Centro da hemoglobina e da mioglobina: carrega o oxigênio. Falta de ferro derruba o VO2máx</td><td>Mulheres que menstruam, endurance, dietas restritas ou sem carne</td></tr>
+    <tr><td>Cálcio e vitamina D</td><td>Osso, contração muscular, impulso nervoso</td><td>Baixa ingestão energética, amenorreia, pouco sol</td></tr>
+    <tr><td>Sódio e potássio</td><td>Volume de plasma, impulso nervoso, contração</td><td>Quem sua muito, provas longas no calor</td></tr>
+    <tr><td>Vitaminas do complexo B</td><td>Coenzimas das vias de energia (NAD e FAD vêm delas)</td><td>Dietas muito restritas</td></tr>
+    <tr><td>Antioxidantes</td><td>Controlam as espécies reativas de oxigênio</td><td>Frutas e vegetais resolvem. Megadose de vitamina C e E pode atrapalhar adaptações</td></tr>
+  </table></div>
+  <p class="txt">Com dieta variada e energia suficiente, suplementar vitaminas acima da necessidade não melhora desempenho.</p>
+
+  <h3 class="sub">Termorregulação: como o corpo se livra do calor</h3>
+  <ol class="steps">
+    <li><b>O músculo produz calor</b>A maior parte da energia do exercício é liberada como calor. A temperatura interna começa a subir.</li>
+    <li><b>O hipotálamo detecta</b>Ele funciona como termostato e recebe informação da pele e do sangue.</li>
+    <li><b>Sangue vai para a pele</b>Os vasos da pele dilatam e levam calor do centro para a superfície.</li>
+    <li><b>Suor</b>As glândulas sudoríparas molham a pele. O calor só sai quando o suor <b>evapora</b>: cada litro evaporado leva 580 kcal. Suor que escorre não esfria.</li>
+    <li><b>O custo</b>O suor vem do plasma. Com menos plasma, menos sangue volta ao coração, o volume sistólico cai e a frequência cardíaca sobe para compensar. Músculo e pele passam a disputar o mesmo sangue.</li>
+  </ol>
+  <div class="wwq">
+    <div><h5>Por que a umidade pesa</h5>Ar úmido já está cheio de vapor. O suor não evapora, escorre, e o corpo perde água sem perder calor.</div>
+    <div><h5>Quando vira risco</h5>Temperatura interna alta com confusão, pele quente e parada do suor: insolação. Emergência médica.</div>
+    <div><h5>Quem regula a água</h5>ADH (retém água no rim) e aldosterona (retém sódio, e água junto). Os dois sobem quando você desidrata.</div>
+  </div>
+  <div class="grid3">
+    <div class="tile"><b class="big">1</b><h4>Meça</h4><p>Pese antes e depois, de bexiga vazia. <mark>450 g perdidos = 450 mL</mark> de suor.</p></div>
+    <div class="tile"><b class="big">2</b><h4>Reponha no ritmo</h4><p>Em esforço prolongado, beba perto do que perde, ou pelo menos 80% da taxa de suor.</p></div>
+    <div class="tile"><b class="big">3</b><h4>Some carboidrato</h4><p>Bebida de 4 a 8%: 625 a 1.250 mL por hora, em média 250 mL a cada 15 min.</p></div>
+  </div>
+  <div class="note warn"><b class="tag">Hiponatremia</b>Acontece quando alguém bebe muita água pura por horas enquanto perde sódio no suor. O sódio do sangue cai, a água migra para dentro das células por osmose e o cérebro incha. Sinais leves: dor de cabeça, confusão, náusea, cãibras. Graves: convulsão e coma. Em ultraendurance, sódio na bebida protege e mantém a sede.</div>
+
+  <h3 class="sub">Calor, frio e altitude</h3>
+  <div class="tw"><table>
+    <tr><th>Ambiente</th><th>O que acontece</th><th>Adaptação e conduta</th></tr>
+    <tr><td>Calor</td><td>Disputa de sangue entre pele e músculo, desidratação, temperatura interna alta</td><td>Aclimatar com 2 a 4 h de exposição diária, começando com 15 a 20 min leves. O corpo passa a suar mais cedo, em maior volume (quase o dobro em 10 dias) e com menos sal, e o plasma aumenta</td></tr>
+    <tr><td>Frio</td><td>Vasos da pele contraem para guardar calor. Tremor produz calor. A água rouba calor muito mais rápido que o ar</td><td>Roupas em camadas. Cuidado com vento e roupa molhada</td></tr>
+    <tr><td>Altitude</td><td>A pressão do ar cai, entra menos oxigênio em cada respiração, a saturação da hemoglobina e o VO2máx caem</td><td>Em horas: respiração e FC sobem. Em semanas: o rim libera eritropoetina (EPO) e a medula produz mais hemácias. Viver no alto para adaptar o sangue, treinar no baixo para manter a intensidade</td></tr>
+  </table></div>
+  <div class="donebar"><button data-done="m9" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="mod" id="m10" style="--c:var(--c10)" data-title="Emagrecimento e metabolismo">
+  <div class="mhead" data-n="10"><div class="kick">Módulo 10</div><h2>Emagrecimento e metabolismo</h2><div class="src">Bioquímica do Emagrecimento · Metabolismo e Emagrecimento · Ciclo de Carboidratos · McArdle cap. 30</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Gordura corporal cai com <b>déficit energético sustentado</b>. A divisão de macros muda fome, adesão e massa magra. A regra continua a mesma.</li>
+    <li>Insulina alta depois da refeição não impede emagrecer. <b>Cetose não acelera</b> a perda de gordura com calorias e proteína iguais.</li>
+    <li>O corpo reage ao déficit: <mark>leptina</mark> e T3 caem, o gasto cai além do previsto (<mark>termogênese adaptativa</mark>) e a fome sobe.</li>
+    <li>Jejum intermitente e aeróbio em jejum são ferramentas de <b>adesão</b>. Com calorias iguais, o resultado é o mesmo.</li>
+  </ul></div>
+
+  <h3 class="sub">Como a gordura entra e sai do adipócito</h3>
+  <p class="txt">O adipócito é a célula do tecido adiposo. Ele é quase todo uma grande gota de triacilglicerol. O tamanho dessa gota resulta de dois fluxos que acontecem o dia inteiro.</p>
+  <div class="grid2">
+    <div class="tile"><h4>Entrada (estado alimentado)</h4><p>A insulina ativa a lipase lipoproteica, que tira ácidos graxos dos quilomícrons e do VLDL para dentro do adipócito, onde são remontados em triacilglicerol. A insulina também desliga a lipólise. Fabricar gordura a partir de carboidrato (lipogênese de novo) é pequeno em dieta normal: o carboidrato engorda principalmente porque, ao ser queimado, poupa a gordura que você comeu.</p></div>
+    <div class="tile"><h4>Saída (jejum e exercício)</h4><p>Insulina baixa e adrenalina alta. A adrenalina liga em receptores beta do adipócito, o que ativa a lipase hormônio-sensível. Ela quebra o triacilglicerol, e os ácidos graxos saem para o sangue e são oxidados em músculo, fígado e coração. Os carbonos da gordura deixam o corpo como CO2 na respiração.</p></div>
+  </div>
+  <div class="note myth"><b class="tag">A insulina é a vilã?</b>Depois de comer, a insulina sobe e a lipólise para por algumas horas. No resto do dia e da noite a insulina está baixa e a gordura sai. O que define se o estoque cresce ou encolhe é o <b>saldo das 24 horas</b>, que depende das calorias. Com calorias e proteína iguais, dietas com muito ou pouco carboidrato perdem gordura de forma equivalente.</div>
+
+  <h3 class="sub">Cetose: o que é e por que não é atalho</h3>
+  <ol class="steps">
+    <li><b>Pouco carboidrato, insulina baixa</b>A lipólise acelera e chega muito ácido graxo ao fígado.</li>
+    <li><b>Sobra acetil-CoA no fígado</b>O fígado está usando o oxaloacetato para fazer glicose (gliconeogênese), então o ciclo de Krebs não dá conta de tanto acetil-CoA.</li>
+    <li><b>Nascem os corpos cetônicos</b>O fígado junta os acetil-CoA em corpos cetônicos e os libera no sangue.</li>
+    <li><b>Cérebro e músculo usam</b>Eles servem de combustível, poupando glicose e proteína muscular no jejum prolongado.</li>
+  </ol>
+  <p class="txt">Estar em cetose significa que você está queimando mais gordura <b>e comendo mais gordura</b>. O saldo do estoque continua dependendo das calorias. A queda rápida de peso no início é glicogênio e a água presa a ele. O que a cetogênica pode oferecer é menos fome para algumas pessoas.</p>
+
+  <h3 class="sub">Fome e saciedade: quem manda</h3>
+  <p class="txt">O centro de controle é o hipotálamo. Ele recebe sinais de curto prazo, do tubo digestivo, e de longo prazo, do tecido adiposo.</p>
+  <div class="tw"><table>
+    <tr><th>Sinal</th><th>De onde vem</th><th>O que faz</th></tr>
+    <tr><td><b>Grelina</b></td><td>Estômago vazio</td><td>Aumenta a fome. Sobe antes das refeições e durante dietas</td></tr>
+    <tr><td><b>CCK, GLP-1, PYY</b></td><td>Intestino, quando chega comida</td><td>Saciedade: retardam o esvaziamento do estômago e avisam o cérebro. Proteína e fibra estimulam mais</td></tr>
+    <tr><td><b>Insulina</b></td><td>Pâncreas</td><td>Além de guardar nutrientes, sinaliza saciedade no cérebro</td></tr>
+    <tr><td><b>Leptina</b></td><td>Adipócitos, em proporção à gordura estocada</td><td>Informa o tamanho da reserva. Alta: reduz fome e libera gasto. Baixa: fome e economia</td></tr>
+  </table></div>
+  <p class="txt"><b>Resistência à leptina:</b> pessoas com obesidade têm leptina alta, mas o cérebro responde mal a ela, como se a reserva fosse menor do que é. <b>Resistência à insulina:</b> com excesso de gordura, principalmente visceral e dentro do fígado e do músculo, as células respondem pior à insulina. O pâncreas compensa produzindo mais, até não dar conta, e a glicemia sobe. Perder gordura e treinar revertem boa parte disso. Alimentos ultraprocessados somam alta densidade calórica, pouca fibra e muita palatabilidade, o que faz comer mais antes de a saciedade chegar.</p>
+
+  <h3 class="sub">O que o corpo faz quando você corta calorias</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230" role="img" aria-label="Adaptações ao déficit calórico">
+      <rect x="230" y="10" width="180" height="46" rx="12" fill="var(--c10)"/><text x="320" y="39" text-anchor="middle" font-weight="800" font-size="15" class="w">Déficit prolongado</text>
+      <g font-size="13" text-anchor="middle">
+        <g stroke="var(--muted)" stroke-width="2" fill="none"><path d="M270 56 L110 96"/><path d="M320 56 L320 96"/><path d="M370 56 L530 96"/></g>
+        <rect x="20" y="96" width="180" height="56" rx="10" fill="none" stroke="var(--c10)" stroke-width="2.5"/><text x="110" y="120" font-weight="800">Adipócito encolhe</text><text x="110" y="140" class="mut">↓ leptina</text>
+        <rect x="230" y="96" width="180" height="56" rx="10" fill="none" stroke="var(--c10)" stroke-width="2.5"/><text x="320" y="120" font-weight="800">Tireoide</text><text x="320" y="140" class="mut">↓ conversão de T4 em T3</text>
+        <rect x="440" y="96" width="180" height="56" rx="10" fill="none" stroke="var(--c10)" stroke-width="2.5"/><text x="530" y="120" font-weight="800">Corpo menor</text><text x="530" y="140" class="mut">↓ repouso, ↓ custo de mover</text>
+        <g stroke="var(--muted)" stroke-width="2" fill="none"><path d="M110 152 L250 186"/><path d="M320 152 L320 184"/><path d="M530 152 L390 186"/></g>
+        <rect x="170" y="184" width="300" height="40" rx="10" fill="var(--hl)"/><text x="320" y="209" font-weight="800">↑ fome  ·  ↓ gasto  ·  platô</text>
+      </g>
+    </svg>
+    <figcaption>O T3 é o hormônio ativo da tireoide e regula a velocidade do metabolismo. O platô é esperado: em fisiculturistas chega com 12 a 16 semanas de dieta, e em pessoas com obesidade com 6 a 8 meses.</figcaption>
+  </figure>
+  <p class="txt"><b>Termogênese adaptativa</b> é a parte da queda do gasto que vai além do explicado pelo corpo menor. O organismo fica mais econômico: gasta menos em repouso e se mexe menos sem perceber. Somada à fome maior (leptina baixa, grelina alta), ela explica por que manter o peso perdido é mais difícil que perder. O corpo defende a reserva de gordura como defesa contra a fome, e não distingue dieta de escassez.</p>
+
+  <h3 class="sub">Perguntas que caem em toda consulta</h3>
+  <div class="tw"><table>
+    <tr><th>Pergunta</th><th>Resposta dos livros</th></tr>
+    <tr><td>Low carb emagrece mais?</td><td>Com calorias e proteína equiparadas, a perda de gordura é equivalente. Perde mais peso no início por água e glicogênio</td></tr>
+    <tr><td>Perder rápido faz reganhar mais?</td><td>O reganho no longo prazo foi semelhante entre perda rápida e gradual. Em atletas, perda rápida custa mais massa magra e desempenho</td></tr>
+    <tr><td>Jejum intermitente é superior?</td><td>Efeito semelhante à restrição contínua com as mesmas calorias. Serve para quem se adapta melhor a menos refeições</td></tr>
+    <tr><td>Aeróbio em jejum queima mais?</td><td>A oxidação de gordura na sessão sobe um pouco, mas a perda final não muda com calorias iguais. Aminoácidos cobrem só 5 a 10% do gasto do exercício, então não "derrete" músculo</td></tr>
+    <tr><td>Proteína alta ajuda?</td><td>Sim: mais saciedade, maior efeito térmico e melhor preservação de massa magra</td></tr>
+    <tr><td>Fruta e arroz branco engordam?</td><td>Frutas, vegetais, leguminosas e fibras têm baixa densidade energética e saciam. Arroz branco cabe em dieta saudável dentro do total</td></tr>
+  </table></div>
+
+  <h3 class="sub">Estratégias para contornar a adaptação</h3>
+  <div class="grid2">
+    <div class="tile"><h4>Flexibilidade metabólica</h4><p>É a capacidade de alternar entre queimar gordura e carboidrato conforme a oferta. Treino e períodos alternados de mais e menos carboidrato melhoram. É a base teórica do ciclo de carboidratos.</p></div>
+    <div class="tile"><h4>Carb cycling (dias)</h4><p>Dias low carb e dias high carb na mesma semana, mantendo o déficit médio. Na dieta metabólica de Di Pasquale: 5 dias com até 10% de carboidrato e 2 dias de recarga com 35 a 60%.</p></div>
+    <div class="tile"><h4>Pausas na dieta (MATADOR)</h4><p>Alternar blocos de restrição com blocos em manutenção melhorou a eficiência da perda em homens com obesidade. A ideia é dar tempo para a resposta adaptativa recuar.</p></div>
+    <div class="tile"><h4>Modelo Haluch (semanas)</h4><p>Fase 1: 8 a 12 semanas low carb e hiperproteica. Depois alterna blocos de 2 a 4 semanas high carb (30 a 60%) e low carb (10 a 45%), sempre em déficit.</p></div>
+  </div>
+  <div class="note warn"><b class="tag">Leia com senso crítico</b>O aumento de gasto com a recarga de carboidratos depois de semanas em low carb, que o autor chama de efeito Haluch, vem da observação prática dele com atletas. Não é resultado de ensaio controlado. Use como hipótese de trabalho.</div>
+  <h3 class="sub">Termogênicos e fármacos</h3>
+  <p class="txt">Termogênicos agem imitando ou ampliando a adrenalina nos receptores adrenérgicos: beta estimula a lipólise e o gasto, alfa-2 freia. Cafeína, chá verde e capsaicina têm efeito pequeno. Efedrina, clembuterol, sibutramina, análogos de GLP-1 (que ampliam a saciedade e retardam o estômago) e metformina são <b>medicamentos</b>, com riscos e indicação próprios. O profissional precisa reconhecer mecanismo e sinais de uso. Prescrever é ato médico.</p>
+  <div class="donebar"><button data-done="m10" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="mod" id="m11" style="--c:var(--c11)" data-title="Suplementos">
+  <div class="mhead" data-n="11"><div class="kick">Módulo 11</div><h2>Suplementos: o que tem evidência</h2><div class="src">Nutrição Esportiva cap. 6 · Hipertrofia cap. 2 · McArdle cap. 23</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Suplemento que funciona ataca <b>um mecanismo de fadiga</b> do módulo 2. Sabendo o mecanismo, você sabe para quem serve.</li>
+    <li>Evidência forte: <mark>creatina</mark>, <mark>cafeína</mark>, <mark>beta-alanina</mark>, <mark>bicarbonato</mark> e carboidrato durante provas longas.</li>
+    <li><b>Crônicos</b> (precisam saturar o músculo por semanas): creatina e beta-alanina. <b>Agudos</b> (efeito na hora): cafeína, bicarbonato, citrulina, nitrato.</li>
+  </ul></div>
+  <div class="tw"><table>
+    <tr><th>Mecanismo de fadiga</th><th>Suplemento que ataca</th><th>Como</th></tr>
+    <tr><td>Queda de fosfocreatina</td><td>Creatina</td><td>Aumenta o estoque de PCr</td></tr>
+    <tr><td>Acidose dentro da fibra</td><td>Beta-alanina</td><td>Aumenta a carnosina, que captura H+</td></tr>
+    <tr><td>Acidose, saída do H+</td><td>Bicarbonato</td><td>Tampona o sangue e puxa o H+ para fora do músculo</td></tr>
+    <tr><td>Hipóxia</td><td>Nitrato, citrulina</td><td>Geram óxido nítrico, que dilata os vasos</td></tr>
+    <tr><td>Glicogênio baixo</td><td>Carboidrato</td><td>Mantém a glicemia e poupa o estoque</td></tr>
+    <tr><td>Fadiga central</td><td>Cafeína</td><td>Bloqueia a adenosina e reduz a percepção de esforço</td></tr>
+  </table></div>
+  <div class="widget">
+    <h4>Ficha de cada suplemento</h4>
+    <div class="hint">Filtre pelo nível de evidência descrito nos livros.</div>
+    <div class="chips" id="supChips"></div>
+    <div id="supList" style="display:grid;gap:10px"></div>
+  </div>
+  <div class="donebar"><button data-done="m11" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="mod" id="m12" style="--c:var(--c12)" data-title="Fisiculturismo, hormônios e saúde do atleta">
+  <div class="mhead" data-n="12"><div class="kick">Módulo 12</div><h2>Fisiculturismo, hormônios e saúde do atleta</h2><div class="src">Nutrição no Fisiculturismo · Cutting e Pré-Contest · Hormônios no Fisiculturismo · Hormônios Anabólicos em Mulheres · McArdle caps. 2, 20 e 23</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>Off season limpo: homens entre <mark>8 e 12%</mark> de gordura, mulheres entre <mark>12 e 18%</mark>. Preparação típica de <mark>12 a 16 semanas</mark>.</li>
+    <li>Semana final: <b>não restringir sódio</b> e não cortar água por mais de 12 horas.</li>
+    <li>Hormônio de fora <b>desliga a produção própria</b>. Esteroides aumentam massa magra e cobram em eixo hormonal, coração, fígado, lipídios e, em mulheres, virilização.</li>
+    <li>Energia de menos por muito tempo desliga o ciclo menstrual e enfraquece o osso: a <b>tríade da mulher atleta</b>.</li>
+  </ul></div>
+
+  <h3 class="sub">Preparação: por que demora e por que piora no fim</h3>
+  <div class="tw"><table>
+    <tr><th>Gordura no off, homens</th><th>Gordura no off, mulheres</th><th>Tempo de preparação</th></tr>
+    <tr><td class="num">7 a 8%</td><td class="num">12 a 13%</td><td>8 semanas</td></tr>
+    <tr><td class="num">9 a 12%</td><td class="num">13 a 15%</td><td>10 a 12 semanas</td></tr>
+    <tr><td class="num">13 a 15%</td><td class="num">16 a 18%</td><td>12 a 16 semanas</td></tr>
+    <tr><td class="num">16 a 18%</td><td class="num">19 a 22%</td><td>16 a 20 semanas</td></tr>
+  </table></div>
+  <p class="txt">Quanto mais magro o atleta e mais longa a dieta, mais fortes as adaptações do módulo 10: leptina e T3 no chão, fome alta, gasto reduzido. Com pouca gordura para fornecer energia, o corpo usa mais proteína muscular. Por isso manter dieta muito restritiva além de 3 a 4 meses raramente compensa. Depois da competição, a fome continua alta e o gasto baixo: é o cenário do rebote. A saída é subir calorias de forma planejada.</p>
+
+  <h3 class="sub">Semana final: a fisiologia por trás</h3>
+  <ol class="steps">
+    <li><b>Depleção e carga de carboidrato</b>Geralmente 3 a 4 dias com pouco carboidrato e depois 2 a 3 dias de carga. O músculo esvaziado supercompensa glicogênio e puxa água para dentro da fibra, o que dá volume. A glicogênio sintase já fica mais ativa sem depleção total, então zerar carboidrato não é obrigatório.</li>
+    <li><b>Cortar sódio sai pela culatra</b>Com pouco sódio, o rim ativa o sistema renina-angiotensina-aldosterona. A aldosterona manda reter sódio e água.</li>
+    <li><b>Cortar água também</b>Com menos água, a hipófise libera ADH, que manda o rim segurar água. Beber normalmente mantém o ADH baixo e a urina fluindo.</li>
+    <li><b>O risco real</b>Manipular água, sódio e potássio e usar diuréticos pode causar desidratação grave, potássio alto, sódio baixo e arritmia cardíaca.</li>
+  </ol>
+  <div class="note do"><b class="tag">Orientação do Haluch</b>Não restringir sódio. Não reduzir a água por mais de 12 horas antes de subir ao palco.</div>
+
+  <h3 class="sub">O eixo que produz testosterona</h3>
+  <ol class="steps">
+    <li><b>Hipotálamo</b>Libera GnRH em pulsos.</li>
+    <li><b>Hipófise</b>Responde liberando LH e FSH no sangue.</li>
+    <li><b>Testículo</b>O LH estimula as células de Leydig a produzir testosterona. O FSH, com a testosterona local, sustenta a produção de espermatozoides.</li>
+    <li><b>Feedback negativo</b>Testosterona e estradiol altos avisam hipotálamo e hipófise para reduzir GnRH, LH e FSH. É um termostato.</li>
+    <li><b>O que o hormônio de fora faz</b>O cérebro detecta andrógeno sobrando e desliga LH e FSH. O testículo para de produzir e encolhe, e a fertilidade cai. Ao parar o uso, o eixo pode levar meses para religar, e nem sempre volta ao nível anterior.</li>
+  </ol>
+  <figure class="fig">
+    <svg viewBox="0 0 640 200" role="img" aria-label="Eixo hipotálamo, hipófise, testículo com feedback negativo">
+      <g font-size="13" text-anchor="middle" font-weight="800">
+        <rect x="40" y="20" width="160" height="50" rx="12" fill="var(--c12)"/><text x="120" y="50" class="w">Hipotálamo</text>
+        <rect x="240" y="20" width="160" height="50" rx="12" fill="none" stroke="var(--c12)" stroke-width="3"/><text x="320" y="50">Hipófise</text>
+        <rect x="440" y="20" width="160" height="50" rx="12" fill="none" stroke="var(--c12)" stroke-width="3"/><text x="520" y="50">Testículo</text>
+        <g stroke="var(--ink)" stroke-width="2.5"><line x1="202" y1="45" x2="232" y2="45"/><line x1="402" y1="45" x2="432" y2="45"/></g>
+        <path d="M232 45l-9-5v10z M432 45l-9-5v10z" fill="var(--ink)"/>
+        <text x="218" y="14" font-size="11">GnRH</text><text x="418" y="14" font-size="11">LH, FSH</text>
+        <rect x="440" y="120" width="160" height="46" rx="12" fill="var(--hl)"/><text x="520" y="148">Testosterona</text>
+        <line x1="520" y1="72" x2="520" y2="116" stroke="var(--ink)" stroke-width="2.5"/><path d="M520 118l-5-9h10z" fill="var(--ink)"/>
+        <path d="M438 143 H120 V74" fill="none" stroke="var(--c12)" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M120 72l-5 9h10z" fill="var(--c12)"/>
+        <path d="M320 143 V74" fill="none" stroke="var(--c12)" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M320 72l-5 9h10z" fill="var(--c12)"/>
+        <text x="250" y="164" font-size="12" style="fill:var(--c12)">feedback negativo: freia a produção</text>
+      </g>
+    </svg>
+    <figcaption>Na mulher o desenho é o mesmo, com o ovário no lugar do testículo e estrogênio e progesterona como produtos. As suprarrenais e o ovário produzem a pequena quantidade de testosterona feminina.</figcaption>
+  </figure>
+
+  <h3 class="sub">Como os andrógenos agem e de onde vêm os efeitos colaterais</h3>
+  <p class="txt">A testosterona atravessa a membrana da célula e se liga ao receptor androgênico. O par vai ao núcleo e liga genes: mais síntese e menos degradação de proteína no músculo, mais hemácias, mais densidade óssea. Parte da testosterona é convertida por duas enzimas, e essas conversões explicam vários efeitos.</p>
+  <div class="tw"><table>
+    <tr><th>Caminho</th><th>O que acontece</th><th>Efeito colateral ligado</th></tr>
+    <tr><td><b>Aromatase</b></td><td>Converte testosterona em estradiol, principalmente no tecido adiposo</td><td>Ginecomastia, retenção de líquido</td></tr>
+    <tr><td><b>5-alfa-redutase</b></td><td>Converte em DHT, andrógeno mais potente, na pele, couro cabeludo e próstata</td><td>Acne, queda de cabelo, crescimento da próstata</td></tr>
+    <tr><td><b>Ação direta no eixo</b></td><td>Feedback negativo</td><td>Atrofia testicular, infertilidade, queda de libido ao parar</td></tr>
+    <tr><td><b>Sangue e coração</b></td><td>Mais hemácias engrossam o sangue. HDL cai e LDL sobe. O coração hipertrofia</td><td>Pressão alta, risco de trombose, infarto e arritmia</td></tr>
+    <tr><td><b>Fígado</b></td><td>Esteroides orais são modificados (17-alfa-alquilados) para resistir à primeira passagem pelo fígado</td><td>Toxicidade hepática, piora maior dos lipídios</td></tr>
+  </table></div>
+  <div class="grid2">
+    <div class="tile"><h4>Faixa fisiológica</h4><p>Testosterona total em homens: 300 a 900 ng/dL. Em mulheres: 15 a 75 ng/dL. É essa diferença de mais de 10 vezes que explica a diferença de massa muscular entre os sexos.</p></div>
+    <div class="tile"><h4>Tamanho do efeito</h4><p>Estudo clássico, dose suprafisiológica por 10 semanas: +3,2 kg de massa magra sem treinar, +1,9 kg treinando com placebo, +6,1 kg com as duas coisas.</p></div>
+  </div>
+  <p class="txt"><b>Em mulheres:</b> como o nível natural é muito baixo, pequenas quantidades de andrógeno já representam um salto grande. Daí a virilização: voz grossa, clitoromegalia, pelos no rosto e corpo, redução das mamas, acne, interrupção da menstruação. Voz e clitóris podem não regredir. O quadro lembra a síndrome dos ovários policísticos, inclusive com piora da sensibilidade à insulina. O Haluch registra relatos de virilização mesmo em doses consideradas baixas.</p>
+  <p class="txt"><b>GH, insulina, SARMs e diuréticos:</b> o GH age em grande parte via IGF-1 produzido no fígado e, em excesso, reduz a sensibilidade à insulina. Insulina exógena pode causar hipoglicemia fatal. SARMs também suprimem o eixo e não têm segurança estabelecida. Diuréticos causam distúrbios de eletrólitos com risco de morte.</p>
+  <div class="note warn"><b class="tag">Escopo e ética</b>Deixei de fora doses, combinações e esquemas de uso que os livros de hormônios trazem. Prescrever hormônio é ato médico, o uso estético não é indicação reconhecida no Brasil e essas substâncias são doping. O seu papel é entender a fisiologia, reconhecer sinais de uso e de efeito colateral, ajustar treino e dieta à realidade do aluno e encaminhar ao médico.</div>
+
+  <h3 class="sub">Tríade da mulher atleta: o mecanismo</h3>
+  <ol class="steps">
+    <li><b>Sobra pouca energia</b>Disponibilidade de energia é o que resta da dieta depois de descontar o gasto do treino. Treino pesado com pouca comida deixa esse valor baixo.</li>
+    <li><b>O hipotálamo economiza</b>Ele interpreta como escassez e reduz os pulsos de GnRH. Reprodução é um luxo quando falta energia.</li>
+    <li><b>LH e FSH caem</b>O ovário produz menos estrogênio e a menstruação fica irregular ou some (amenorreia).</li>
+    <li><b>O osso paga</b>O estrogênio freia os osteoclastos, células que reabsorvem osso. Sem ele, a reabsorção supera a formação. Somam-se cortisol alto e pouca oferta de cálcio e proteína.</li>
+    <li><b>Consequência</b>Fraturas por estresse agora e menor pico de massa óssea para a vida toda, já que ele é construído até o início da vida adulta.</li>
+  </ol>
+  <figure class="fig">
+    <svg viewBox="0 0 640 190" role="img" aria-label="Tríade: baixa energia, amenorreia, osso frágil">
+      <g font-size="13" text-anchor="middle" font-weight="800">
+        <circle cx="320" cy="48" r="40" fill="var(--c12)"/><text x="320" y="44" class="w">Baixa energia</text><text x="320" y="62" font-size="11" font-weight="400" class="w">disponível</text>
+        <circle cx="160" cy="140" r="40" fill="none" stroke="var(--c12)" stroke-width="3"/><text x="160" y="145">Amenorreia</text>
+        <circle cx="480" cy="140" r="40" fill="none" stroke="var(--c12)" stroke-width="3"/><text x="480" y="138">Osso</text><text x="480" y="156" font-size="11" font-weight="400">frágil</text>
+        <g stroke="var(--muted)" stroke-width="2.5" fill="none"><path d="M286 70 L194 118"/><path d="M354 70 L446 118"/><path d="M202 140 L438 140"/></g>
+        <text x="320" y="132" font-size="11" font-weight="400" class="mut">↓ estrogênio</text>
+      </g>
+    </svg>
+    <figcaption>Atinge de 15 a 60% das atletas, mais em esportes que valorizam magreza. A menstruação que some é a bandeira vermelha, e nunca sinal de "treino forte". Homens em déficit crônico também têm queda de testosterona e de massa óssea.</figcaption>
+  </figure>
+  <p class="txt"><b>Composição corporal de referência:</b> gordura essencial é a que fica em órgãos, medula e sistema nervoso e é necessária para funcionar. Na mulher ela é cerca de 4 vezes a do homem, por causa da gordura sexo-específica ligada à função reprodutiva. Metas de percentual para mulheres precisam respeitar esse piso.</p>
+  <div class="donebar"><button data-done="m12" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="mod" id="m13" style="--c:var(--c13)" data-title="Nutrição e longevidade">
+  <div class="mhead" data-n="13"><div class="kick">Módulo 13</div><h2>Nutrição, saúde e longevidade</h2><div class="src">Nutrição e Longevidade · McArdle caps. 31 e 32</div></div>
+  <div class="tldr"><h4>Em 30 segundos</h4><ul>
+    <li>As vias que constroem tecido (insulina, IGF-1, mTOR) são as mesmas que, <b>ligadas o tempo todo</b>, aceleram o envelhecimento em modelos animais.</li>
+    <li>As vias de escassez (AMPK, sirtuínas, autofagia) fazem <b>manutenção e reparo</b>.</li>
+    <li>Dieta da longevidade (Longo): base vegetal, proteína <mark>baixa mas suficiente (~0,8 g/kg)</mark>, peixe com regularidade, gordura de <mark>25 a 35%</mark> das calorias.</li>
+    <li><b>Depois dos 65 anos a regra inverte</b>: mais proteína e treino de força contra a sarcopenia.</li>
+  </ul></div>
+
+  <h3 class="sub">Dois modos de funcionamento da célula</h3>
+  <div class="grid2">
+    <div class="tile"><h4>Modo construção</h4><p><b>Quando:</b> comida abundante, proteína e insulina altas.<br><b>Quem:</b> insulina, GH/IGF-1, mTOR.<br><b>Faz:</b> cresce, multiplica, armazena. Essencial para ganhar músculo e para crianças e jovens. Sempre ligado, acumula dano e favorece crescimento de células defeituosas.</p></div>
+    <div class="tile"><h4>Modo manutenção</h4><p><b>Quando:</b> jejum, restrição calórica, exercício.<br><b>Quem:</b> AMPK, sirtuínas.<br><b>Faz:</b> liga a <b>autofagia</b> (a célula digere e recicla componentes velhos e defeituosos), cria mitocôndrias novas, aumenta defesas antioxidantes.</p></div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 170" role="img" aria-label="Balança entre anabolismo e autofagia">
+      <line x1="120" y1="70" x2="520" y2="70" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M320 70 L296 140 L344 140 Z" fill="var(--c13)"/>
+      <rect x="60" y="76" width="180" height="62" rx="12" fill="none" stroke="var(--c4)" stroke-width="3"/>
+      <text x="150" y="102" text-anchor="middle" font-weight="800" font-size="14">Construção</text><text x="150" y="122" text-anchor="middle" font-size="12" class="mut">mTOR, IGF-1, insulina</text>
+      <rect x="400" y="76" width="180" height="62" rx="12" fill="none" stroke="var(--c13)" stroke-width="3"/>
+      <text x="490" y="102" text-anchor="middle" font-weight="800" font-size="14">Manutenção</text><text x="490" y="122" text-anchor="middle" font-size="12" class="mut">AMPK, sirtuínas, autofagia</text>
+      <text x="150" y="40" text-anchor="middle" font-size="12" class="mut">proteína alta, superávit</text><text x="490" y="40" text-anchor="middle" font-size="12" class="mut">restrição, exercício</text>
+      <text x="320" y="162" text-anchor="middle" font-size="12" font-weight="700">Saúde pede alternância entre os dois lados</text>
+    </svg>
+    <figcaption>Para o atleta em fase competitiva, o lado da construção manda. Para o adulto de meia-idade sedentário, excesso crônico de calorias e proteína animal pesa do lado errado.</figcaption>
+  </figure>
+  <p class="txt"><b>Por que a proteína entra nessa conta:</b> aminoácidos, especialmente leucina e metionina, ativam mTOR e elevam o IGF-1. Em animais, restringir calorias, proteína ou só a metionina aumenta a vida. Em humanos ainda não há prova de que viva mais, mas os marcadores de saúde melhoram. Leguminosas têm pouca metionina, o que ajuda a explicar a vantagem das fontes vegetais.</p>
+  <p class="txt"><b>Por que a regra inverte no idoso:</b> com a idade o músculo responde pior à proteína (resistência anabólica) e o IGF-1 já é baixo. O risco passa a ser sarcopenia, a perda de massa e força muscular, que leva a quedas, fragilidade e dependência. Acima de 65 anos, mais proteína e treino de força protegem.</p>
+
+  <h3 class="sub">O que colocar no prato</h3>
+  <div class="grid2">
+    <div class="tile"><h4>Fibras, frutas e vegetais</h4><p>Associados a menos diabetes, hipertensão, doença cardiovascular e câncer. As fibras alimentam bactérias que produzem compostos anti-inflamatórios, e os vegetais trazem antioxidantes no formato que funciona.</p></div>
+    <div class="tile"><h4>Proteína</h4><p>Leguminosas como base, peixe com regularidade, carnes e laticínios em menor frequência. Carnes processadas são as mais associadas a risco.</p></div>
+    <div class="tile"><h4>Gorduras</h4><p>25 a 35% das calorias, de azeite, oleaginosas, abacate e peixes. O colesterol do ovo influencia pouco o colesterol do sangue. A gordura saturada do conjunto da dieta influencia mais.</p></div>
+    <div class="tile"><h4>Padrões com evidência</h4><p>Dieta mediterrânea e a alimentação das zonas azuis (Okinawa, Sardenha, Icária, Nicoya, Loma Linda): muito vegetal, grão integral, leguminosa, pouca carne.</p></div>
+  </div>
+  <p class="txt"><b>Jejum:</b> ativa cetogênese e autofagia e aumenta a longevidade em leveduras, vermes e roedores. Em humanos, o benefício comprovado vem da perda de peso e da melhora metabólica. Jejuns longos são difíceis de manter e podem causar perda de massa magra.</p>
+  <div class="note do"><b class="tag">Na prática</b>Dá para conciliar desempenho e saúde: proteína na faixa de hipertrofia nas fases de ganho, sem exagero crônico, com a base da dieta em vegetais, grãos integrais, leguminosas e peixe. Gordura corporal controlada e exercício regular, que ativa AMPK e também preserva músculo, protegem mais que qualquer ajuste fino de macros.</div>
+  <div class="donebar"><button data-done="m13" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="mod" id="m14" style="--c:var(--c14)" data-title="Aplicação por esporte e revisão">
+  <div class="mhead" data-n="14"><div class="kick">Módulo 14</div><h2>Aplicação por esporte, flashcards e simulado</h2><div class="src">Síntese minha, cruzando os módulos anteriores</div></div>
+  <div class="tldr"><h4>Roteiro para analisar qualquer modalidade</h4><ul>
+    <li><b>1.</b> Qual a duração e a intensidade dos esforços decisivos? Isso aponta o sistema energético (módulo 1).</li>
+    <li><b>2.</b> Qual mecanismo de fadiga limita? Isso aponta o treino e o suplemento (módulos 2 e 11).</li>
+    <li><b>3.</b> Qual o volume semanal? Isso define o carboidrato (módulo 8).</li>
+    <li><b>4.</b> O ambiente pesa? Calor, altitude, duração definem hidratação (módulo 9).</li>
+    <li><b>5.</b> Peso ou aparência contam? Isso define o cuidado com déficit e saúde (módulos 10 e 12).</li>
+  </ul></div>
+  <div class="widget">
+    <h4>Perfil por família de esportes</h4>
+    <div class="hint">Esportes agrupados pela demanda fisiológica. Os números vêm dos módulos anteriores.</div>
+    <div class="chips" id="spChips"></div>
+    <div class="detail" id="spDetail"></div>
+  </div>
+
+  <h3 class="sub">Flashcards</h3>
+  <div class="widget fc">
+    <button class="cardface" id="fcCard" aria-live="polite"><span class="side" id="fcSide">Pergunta</span><span class="q" id="fcText"></span></button>
+    <div class="fcnav" style="margin-top:12px">
+      <button class="btn" id="fcPrev">Anterior</button>
+      <span class="progtxt" id="fcPos"></span>
+      <button class="btn primary" id="fcNext">Próximo</button>
+    </div>
+    <p class="cap">Toque no cartão para virar.</p>
+  </div>
+
+  <h3 class="sub">Simulado</h3>
+  <div class="widget qz">
+    <div class="progtxt" id="qzPos"></div>
+    <div class="qtext" id="qzQ"></div>
+    <div class="opts" id="qzOpts"></div>
+    <div class="fb" id="qzFb" aria-live="polite"></div>
+    <div class="fcnav" style="margin-top:12px"><span class="progtxt" id="qzScore"></span><button class="btn primary" id="qzNext">Próxima</button></div>
+  </div>
+  <div class="donebar"><button data-done="m14" aria-pressed="false">Marcar como estudado</button></div>
+</section>
+
+<section id="glos" style="--c:var(--c10);margin-top:44px">
+  <h3 class="sub" style="font-size:24px">Glossário</h3>
+  <p class="txt">Todos os termos técnicos do material em ordem alfabética. No texto, toque na palavra pontilhada para abrir a mesma explicação.</p>
+  <label class="fld" for="gSearch">Buscar termo<input id="gSearch" type="search" placeholder="Ex.: mTOR, glicogênio, leptina"></label>
+  <div class="gl" id="gList"></div>
+</section>
+
+<footer>
+  <b>Livros de base</b>
+  <ul>
+    <li>McArdle, Katch e Katch. Fisiologia do Exercício: Nutrição, Energia e Desempenho Humano, 8ª ed.</li>
+    <li>Haluch e Conrado. Nutrição Esportiva: Fisiologia da Fadiga, Metabolismo e Suplementação.</li>
+    <li>Haluch. Nutrição e Hipertrofia Muscular · Nutrição e Longevidade · Nutrição no Fisiculturismo · Hormônios no Fisiculturismo · Hormônios Anabólicos em Mulheres · Estratégias Nutricionais para Definição Muscular · Metabolismo e Emagrecimento.</li>
+    <li>Haluch e Michelotti. Bioquímica do Emagrecimento · Ciclo de Carboidratos.</li>
+  </ul>
+  <p>Material de estudo pessoal de Matheus Garrido. Explica as ideias dos livros com palavras próprias e diagramas originais. Não substitui a leitura dos capítulos nem a avaliação individual de cada atleta.</p>
+</footer>
+</main>
+
+<div class="sheet" id="sheet" role="dialog" aria-live="polite"><div class="in"><button id="sheetX" aria-label="Fechar">×</button><h5 id="sheetT"></h5><p id="sheetD"></p></div></div>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
+function fmt(n){return (Math.round(n/5)*5).toLocaleString("pt-BR")}
+var store={get:function(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* ---------- navegação e progresso ---------- */
+var mods=[].slice.call(document.querySelectorAll("section.mod"));
+var done=store.get("mgc-fisio-done")||{};
+var map=$("map"),nav=$("navlist");
+mods.forEach(function(s,i){
+  var c=s.style.getPropertyValue("--c"),n=("0"+(i+1)).slice(-2),t=s.dataset.title;
+  var a=el("a",null,"<small>MÓDULO "+n+"</small><b>"+t+"</b>");a.href="#"+s.id;a.style.setProperty("--c",c);map.appendChild(a);
+  var b=el("a",null,'<span class="n">'+n+"</span><span>"+t+"</span>");b.href="#"+s.id;b.style.setProperty("--c",c);b.dataset.id=s.id;nav.appendChild(b);
+});
+function paint(){
+  var k=0;
+  mods.forEach(function(s){var d=!!done[s.id];if(d)k++;
+    var btn=s.querySelector("[data-done]");btn.setAttribute("aria-pressed",d);btn.textContent=d?"Estudado ✓":"Marcar como estudado";
+    var l=nav.querySelector('[data-id="'+s.id+'"]');if(l)l.classList.toggle("done",d);});
+  $("progbar").style.width=(k/mods.length*100)+"%";$("progtxt").textContent=k+"/"+mods.length;
+}
+document.addEventListener("click",function(e){
+  var b=e.target.closest("[data-done]");if(b){var id=b.dataset.done;done[id]=!done[id];store.set("mgc-fisio-done",done);paint();}
+});
+var drawer=$("drawer");
+$("openNav").onclick=function(){drawer.classList.add("open")};
+$("shade").onclick=function(){drawer.classList.remove("open")};
+nav.addEventListener("click",function(e){if(e.target.closest("a"))drawer.classList.remove("open")});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")drawer.classList.remove("open")});
+paint();
+
+/* ---------- chips genéricos ---------- */
+function chipGroup(host,items,onPick,start){
+  items.forEach(function(it,i){var b=el("button","chip",it.label);b.type="button";b.setAttribute("aria-pressed",i===(start||0));
+    b.onclick=function(){[].forEach.call(host.children,function(c){c.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");onPick(it)};host.appendChild(b)});
+  onPick(items[start||0]);
+}
+
+/* ---------- 1. sistemas energéticos ---------- */
+var exs=[[10,"Até 10 s","100 m rasos, salto, arremesso, 1RM. A PCr resolve quase tudo. Pausa longa para repetir com qualidade."],
+[30,"10 a 30 s","200 m, série de 6 a 10 repetições pesadas. A PCr despenca e a glicólise assume."],
+[120,"30 s a 2 min","400 a 800 m, 100 a 200 m na natação, round intenso de luta. Pico de glicólise e de acidose."],
+[600,"2 a 10 min","1.500 m, remo de 2.000 m, 400 m nado. Aeróbio já é maioria, com reserva anaeróbia decidindo o final."],
+[1e9,"Mais de 10 min","5 km em diante, ciclismo de estrada, maratona, triatlo. Aeróbio domina. Glicogênio, hidratação e limiar decidem."]];
+function tLabel(t){if(t<60)return Math.round(t)+" s";if(t<3600){var m=Math.floor(t/60),s=Math.round(t%60/5)*5;return m+" min"+(s&&m<10?" "+s+" s":"")}return (t/3600).toFixed(1).replace(".",",")+" h"}
+function energy(){
+  var x=+$("eRange").value,t=Math.pow(10,x/100*Math.log10(7200));
+  var aer=t/(t+75),rest=1-aer,pcr=rest*Math.exp(-t/15),gli=rest-pcr;
+  var v=[pcr,gli,aer].map(function(n){return Math.round(n*100)});v[2]=100-v[0]-v[1];
+  $("eTime").textContent=tLabel(t);
+  for(var i=0;i<3;i++){$("b"+(i+1)).style.width=v[i]+"%";$("v"+(i+1)).textContent=v[i]+"%"}
+  var ex=exs.filter(function(e){return t<=e[0]})[0];
+  $("eEx").innerHTML="<h5>"+ex[1]+"</h5>"+ex[2];
+}
+$("eRange").addEventListener("input",energy);energy();
+
+/* ---------- 2. fadiga ---------- */
+var fat=[
+{label:"Fosfocreatina",o:"O estoque de PCr cai muito em 15 a 20 s de esforço máximo.",p:"Sem PCr, o ATP passa a ser refeito pela glicólise e pelo sistema aeróbio, que são mais lentos. A miosina recebe ATP em menor velocidade e a potência cai.",q:"Sprints, séries pesadas, qualquer esforço máximo repetido com pausa curta.",c:"Pausa de 3 a 8 min quando a meta é qualidade. Creatina de uso crônico aumenta o estoque. Boa base aeróbia acelera a reposição."},
+{label:"Acidose (H+)",o:"Cada ATP quebrado libera um H+. Em alta intensidade a quebra supera a capacidade de tamponar e remover, e o pH da fibra cai.",p:"O H+ freia a PFK (menos ATP pela glicólise), atrapalha a liberação de cálcio pelo retículo e compete com o cálcio na troponina. É a sensação de queimação.",q:"Alta intensidade com pausas menores que 2 min, séries perto da falha, esforços de 30 s a alguns minutos.",c:"Treino intervalado aumenta MCT e tampões. Beta-alanina eleva a carnosina (tampão dentro da fibra). Bicarbonato tampona o sangue e puxa H+ para fora."},
+{label:"Estresse oxidativo",o:"Quanto mais oxigênio a mitocôndria usa, mais espécies reativas ela gera. No esforço intenso ou muito longo, a produção supera as enzimas antioxidantes.",p:"As espécies reativas danificam os canais do retículo e reduzem a liberação de cálcio. Depois do treino, as células de defesa que limpam o dano continuam produzindo essas moléculas.",q:"Treinos muito intensos ou muito volumosos, e sessões com muito dano muscular.",c:"O próprio treino aumenta as enzimas antioxidantes. Frutas e vegetais ajudam. Megadose de vitamina C e E pode bloquear o sinal de adaptação."},
+{label:"Glicogênio",o:"O estoque de glicogênio muscular cai com o volume e, mais depressa, com a intensidade.",p:"Sem glicogênio sobra a gordura, que entrega ATP devagar: o ritmo forte fica insustentável. Além disso, o retículo libera menos cálcio quando o glicogênio ao redor dele está baixo.",q:"Esforços longos (2 a 4 h), alta intensidade repetida, dieta pobre em carboidrato.",c:"Começar com o estoque cheio, carboidrato antes e durante sessões acima de 1 h, repor depois."},
+{label:"Hipóxia",o:"Em esforço intenso, a entrega de oxigênio ao músculo não acompanha a demanda da mitocôndria.",p:"Sem oxigênio suficiente a cadeia de elétrons desacelera e produz menos ATP. A fibra depende ainda mais da glicólise, o que acelera a acidose.",q:"Esforços próximos do máximo, contrações sustentadas que comprimem os vasos, treino com restrição de fluxo.",c:"Adaptação aeróbia (capilares, mitocôndrias). Nitrato e citrulina aumentam o óxido nítrico e a vasodilatação."},
+{label:"Fadiga central",o:"H+, falta de oxigênio e outros metabólitos ativam os nervos aferentes III e IV do músculo.",p:"Esses nervos informam o sistema nervoso central, que reduz a frequência de disparos do córtex motor. Chegam menos impulsos à fibra, menos cálcio é liberado e a força cai, mesmo que o músculo ainda pudesse responder.",q:"Junto com fadiga periférica intensa, em provas longas, no calor e com glicemia baixa.",c:"Tudo que atrasa a fadiga periférica atrasa a central. Cafeína bloqueia a adenosina e reduz a percepção de esforço. Carboidrato mantém a glicemia para o cérebro."}];
+chipGroup($("fatChips"),fat,function(f){$("fatDetail").innerHTML="<h5>"+f.label+"</h5><dl><dt>O que acontece</dt><dd>"+f.o+"</dd><dt>Por que derruba a força</dt><dd>"+f.p+"</dd><dt>Quando domina</dt><dd>"+f.q+"</dd><dt>Como atrasar</dt><dd>"+f.c+"</dd></dl>"});
+
+/* ---------- 6. calculadora ---------- */
+var ctx={hip:{p:[1.6,2.2],c:[4,8],cn:"Força e potência: 45 a 60% das calorias"},
+cut:{p:[2.0,3.5],c:null,cn:"O que sobra depois de proteína e gordura, priorizando o entorno do treino"},
+e1:{p:[1.4,1.4],c:[5,7],cn:"Treino de até 1 h por dia"},e2:{p:[1.4,1.4],c:[6,10],cn:"Treino de 1 a 3 h por dia"},e3:{p:[1.4,1.4],c:[8,12],cn:"Treino acima de 4 h por dia"}};
+function rng(a,w,u){return a[0]===a[1]?"~"+fmt(a[0]*w)+" "+u:fmt(a[0]*w)+" a "+fmt(a[1]*w)+" "+u}
+function weight(){var w=parseFloat($("cW").value);return (w>=35&&w<=200)?w:null}
+function calc(){
+  var w=weight(),o=$("cOut");
+  if(!w){o.innerHTML='<div class="row"><span>Informe um peso entre 35 e 200 kg.</span></div>';return}
+  var k=ctx[$("cG").value],h="";
+  function row(n,s,v){h+='<div class="row"><span>'+n+"<small>"+s+"</small></span><b>"+v+"</b></div>"}
+  row("Proteína por dia",(k.p[0]===k.p[1]?"~"+k.p[0]:k.p[0]+" a "+k.p[1]).toString().replace(/\./g,",")+" g/kg",rng(k.p,w,"g"));
+  row("Proteína por refeição","0,25 a 0,50 g/kg, em 3 a 4 refeições ou mais",Math.round(.25*w)+" a "+Math.round(.5*w)+" g");
+  row("Carboidrato por dia",k.cn,k.c?rng(k.c,w,"g"):"variável");
+  row("Gordura por dia","0,5 a 1,5 g/kg, cerca de 20 a 30% das calorias",rng([.5,1.5],w,"g"));
+  row("Creatina","Uso diário, com ou sem treino","3 a 5 g");
+  o.innerHTML=h; if(window.__race)window.__race();
+}
+$("cW").addEventListener("input",calc);$("cG").addEventListener("change",calc);
+
+/* ---------- 8. linha do tempo da prova ---------- */
+var race=[
+{label:"48 h antes",f:function(w){return "<h5>Carga de carboidrato</h5>10 a 12 g/kg por dia nas 48 h antes de provas com mais de 90 min. Para "+w+" kg: <b>"+fmt(10*w)+" a "+fmt(12*w)+" g por dia</b>. Objetivo: largar com o glicogênio no teto."}},
+{label:"1 a 4 h antes",f:function(w){return "<h5>Refeição pré-prova</h5>1 a 4 g/kg de carboidrato, de 1 a 4 horas antes. Para "+w+" kg: <b>"+fmt(w)+" a "+fmt(4*w)+" g</b>. Quanto mais perto da largada, menor a dose e mais fácil a digestão. Poupa glicogênio muscular."}},
+{label:"Durante",f:function(){return "<h5>Abastecimento</h5><b>30 a 60 g de carboidrato por hora</b> em esforços acima de 1 h, em bebida de 4 a 8%. Cerca de 250 mL a cada 15 min. Em ultraendurance, com sódio. Treine o intestino antes: nada novo no dia da prova."}},
+{label:"Depois",f:function(w){return "<h5>Reposição</h5>Com nova sessão em menos de 24 h: 0,8 g/kg/h de carboidrato de IG alto, mais 0,2 a 0,4 g/kg/h de proteína. Para "+w+" kg: <b>"+Math.round(.8*w)+" g de carboidrato e "+Math.round(.2*w)+" a "+Math.round(.4*w)+" g de proteína por hora</b>. Sem pressa? As refeições normais do dia repõem."}}];
+var raceSel=race[0];
+window.__race=function(){$("raceDetail").innerHTML=raceSel.f(weight()||70)};
+chipGroup($("raceChips"),race,function(r){raceSel=r;window.__race()});
+calc();
+
+/* ---------- 11. suplementos ---------- */
+var sup=[
+["Creatina","forte","Crônico","3 a 5 g por dia (0,03 a 0,1 g/kg), todos os dias. Saturação de ~20 g/dia por alguns dias é opcional: só chega mais rápido ao mesmo ponto.","O músculo guarda mais creatina e, portanto, mais fosfocreatina. O sistema ATP-PCr dura um pouco mais e se repõe mais rápido entre séries. Você faz mais repetições com a mesma carga, e esse volume extra gera mais adaptação. A creatina também puxa água para dentro da fibra, o que explica o ganho rápido de peso.","Força, potência, sprints repetidos, hipertrofia. Horário indiferente, porque o efeito depende do estoque acumulado. Melhor junto de refeição com carboidrato. Segura para rim saudável nas doses estudadas."],
+["Cafeína","forte","Agudo","3 a 6 mg/kg, 1 hora antes. Até 9 mg/kg com mais efeitos colaterais.","A adenosina se acumula no cérebro e gera sono e sensação de cansaço. A cafeína ocupa o receptor dela sem ativá-lo. Resultado: mais alerta e menor percepção de esforço. Também eleva adrenalina e facilita a liberação de cálcio na fibra.","Quase todas as modalidades. Pico no sangue em cerca de 1 hora. Tomada até 6 horas antes de dormir, prejudica o sono, e sono ruim custa mais que o ganho. Insônia e pressão alta em doses altas."],
+["Beta-alanina","forte","Crônico","3,2 a 6,4 g por dia, por pelo menos 3 a 4 semanas.","A beta-alanina entra na fibra e se une à histidina para formar carnosina, que captura H+ dentro do músculo. Com mais carnosina, a acidose demora mais para se instalar.","Esforços intensos de 30 s a 10 min, onde a acidose é o limitante. Dose única no pré-treino não funciona: é preciso saturar o músculo. O formigamento na pele é inofensivo e diminui fracionando a dose."],
+["Bicarbonato de sódio","forte","Agudo","0,3 g/kg antes do exercício.","Eleva o bicarbonato do sangue. Com o sangue menos ácido, aumenta a diferença de H+ entre o músculo e o sangue, e o MCT expulsa H+ da fibra mais depressa.","Esforços glicolíticos e séries com pausa curta. Barato. Pode causar desconforto gastrointestinal: testar sempre no treino."],
+["Carboidrato (gel, bebida)","forte","Agudo","30 a 60 g por hora durante sessões acima de 1 h.","Mantém a glicemia, fornece combustível pelo sangue e poupa o glicogênio do músculo e do fígado. Também abastece o cérebro e atrasa a fadiga central.","Endurance e esportes longos. Dispensável na musculação de 30 a 60 min."],
+["Nitrato (beterraba)","moderada","Agudo","4 a 10 mg/kg cerca de 2 h antes. Pico no sangue em 90 a 150 min.","Bactérias da boca convertem nitrato em nitrito, que vira óxido nítrico no corpo. Os vasos dilatam, chega mais oxigênio ao músculo e o custo de oxigênio do exercício diminui.","Endurance e esforços intensos repetidos. Pode vir da beterraba e de folhas verdes na refeição pré-treino."],
+["Citrulina","moderada","Agudo","6 a 8 g, de 45 a 60 min antes.","O rim converte citrulina em arginina, a matéria-prima do óxido nítrico. Ela chega ao sangue muito melhor que a própria arginina, que é degradada no intestino e no fígado.","Mais repetições até a falha em alguns estudos. Resultados não são unânimes."],
+["Whey, caseína, albumina","moderada","Alimento","O necessário para fechar a meta de proteína do dia.","São proteína completa em forma prática. Agem como qualquer proteína de boa qualidade: fornecem leucina para ligar a mTOR e aminoácidos para construir.","Úteis pela conveniência. Sem vantagem sobre comida se a dieta já atinge a meta."],
+["BCAA, leucina, EAA","fraca","","","A leucina liga a síntese proteica, mas para construir proteína são necessários todos os aminoácidos essenciais. Isolados, ligam a máquina sem entregar os tijolos.","Sem benefício quando a dieta tem perto de 2,0 g/kg de proteína."],
+["Glutamina e HMB","fraca","","","Glutamina é combustível do intestino e das células de defesa, e o corpo a produz. HMB é um derivado da leucina proposto para reduzir degradação.","Não aumentam massa muscular em pessoas treinadas com proteína adequada."],
+["Arginina","fraca","","","Precursora de óxido nítrico.","Grande parte é degradada antes de chegar ao sangue. A citrulina faz melhor o mesmo papel."],
+["Carnitina, CLA, TCM, cromo","fraca","","","Carnitina transporta ácidos graxos para a mitocôndria, mas o músculo já tem o suficiente e suplementar quase não eleva o estoque. Os outros são vendidos como queimadores de gordura.","Os estudos não sustentam efeito relevante em desempenho ou composição corporal."],
+["Vitaminas C e E em megadose","fraca","","","As espécies reativas geradas no treino são parte do sinal que liga as adaptações. Antioxidante em excesso apaga esse sinal.","Podem atenuar as adaptações ao treino. Prefira frutas e vegetais."]];
+var colors={forte:"var(--ok)",moderada:"var(--warn)",fraca:"var(--bad)"};
+function supRender(f){
+  var h=$("supList");h.innerHTML="";
+  sup.filter(function(s){return f.v==="all"||s[1]===f.v}).forEach(function(s){
+    var d=el("div","detail");d.style.marginTop="0";d.style.borderLeft="5px solid "+colors[s[1]];
+    d.innerHTML="<h5>"+s[0]+' <span style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:'+colors[s[1]]+'">· evidência '+s[1]+(s[2]?" · "+s[2].toLowerCase():"")+"</span></h5><dl>"+
+      (s[3]?"<dt>Dose</dt><dd>"+s[3]+"</dd>":"")+"<dt>Como funciona</dt><dd>"+s[4]+"</dd><dt>Para quem</dt><dd>"+s[5]+"</dd></dl>";h.appendChild(d)});
+}
+chipGroup($("supChips"),[{label:"Todos",v:"all"},{label:"Forte",v:"forte"},{label:"Moderada",v:"moderada"},{label:"Fraca ou sem efeito",v:"fraca"}],supRender,1);
+
+/* ---------- 14. esportes ---------- */
+var sp=[
+{label:"Força e potência",ex:"Levantamento de peso, powerlifting, arremessos, saltos, 100 m",s:"ATP-PCr",f:"Queda de fosfocreatina e fadiga neural",n:"Carboidrato 4 a 8 g/kg. Proteína 1,6 a 2,2 g/kg. Superávit controlado nas fases de ganho.",su:"Creatina, cafeína",a:"Pausas longas (3 a 8 min) nos treinos de qualidade. Em categorias de peso, planeje a perda com antecedência."},
+{label:"Glicolíticos",ex:"400 e 800 m, natação de 100 e 200 m, remo, treinos de circuito intenso, ciclismo de pista",s:"Glicolítico, com ATP-PCr na largada e aeróbio no final",f:"Acidose (H+)",n:"Carboidrato 5 a 8 g/kg para sustentar a glicólise. Glicogênio cheio no dia.",su:"Beta-alanina, bicarbonato, cafeína, creatina",a:"Intervalados com pausa incompleta treinam o tamponamento."},
+{label:"Endurance",ex:"Corrida de fundo, ciclismo de estrada, triatlo, natação de águas abertas",s:"Aeróbio",f:"Glicogênio, desidratação, calor, fadiga central",n:"Carboidrato 5 a 12 g/kg conforme o volume. Proteína ~1,4 g/kg. Carga de 10 a 12 g/kg nas 48 h. 30 a 60 g/h durante.",su:"Carboidrato, cafeína, nitrato",a:"Medir taxa de suor. Sódio em provas longas. Periodizar carboidrato (sleep low) só em treinos leves."},
+{label:"Intermitentes e coletivos",ex:"Futebol, basquete, handebol, vôlei, rúgbi, tênis",s:"Misto: sprints em ATP-PCr e glicólise sobre uma base aeróbia que recupera entre as ações",f:"Glicogênio no segundo tempo, PCr entre sprints, calor",n:"Carboidrato 5 a 10 g/kg em semanas cheias. Proteína 1,6 a 2,0 g/kg. Reposição rápida com jogos próximos.",su:"Creatina, cafeína, carboidrato no intervalo",a:"Hidratação individual pela pesagem. Atenção a calendário congestionado e viagens."},
+{label:"Lutas e categorias de peso",ex:"Judô, jiu-jítsu, boxe, MMA, wrestling, remo peso leve",s:"Glicolítico com picos de ATP-PCr, repetido por rounds",f:"Acidose, e a própria perda de peso mal feita",n:"Chegar perto do peso com déficit gradual (~500 kcal/dia) e proteína alta (2,0 g/kg ou mais). Recarga de carboidrato e líquidos após a pesagem.",su:"Creatina fora do período de corte, cafeína, beta-alanina, bicarbonato",a:"Desidratação severa reduz desempenho e é perigosa. Diuréticos são doping e risco de morte."},
+{label:"Estéticos",ex:"Fisiculturismo, ginástica, nado artístico, dança, fitness",s:"Depende da modalidade. O limitante é a composição corporal",f:"Baixa disponibilidade de energia",n:"Preparação de 12 a 16 semanas. Proteína 2,0 a 3,5 g/kg no cutting. Volume de comida com vegetais, frutas e fibras para a fome.",su:"Creatina, cafeína",a:"Vigiar ciclo menstrual, humor, sono e lesões por estresse. Planejar a saída da dieta para evitar rebote."}];
+chipGroup($("spChips"),sp,function(s){$("spDetail").innerHTML="<h5>"+s.label+"</h5><dl><dt>Exemplos</dt><dd>"+s.ex+"</dd><dt>Sistema dominante</dt><dd>"+s.s+"</dd><dt>O que limita</dt><dd>"+s.f+"</dd><dt>Nutrição</dt><dd>"+s.n+"</dd><dt>Suplementos com sentido</dt><dd>"+s.su+"</dd><dt>Atenção</dt><dd>"+s.a+"</dd></dl>"});
+
+/* ---------- flashcards ---------- */
+var fc=[
+["Por que a glicólise forma lactato?","Para regenerar o NAD+. Sem NAD+ a glicólise para. O piruvato recebe o hidrogênio do NADH e vira lactato."],
+["Qual o papel do oxigênio na mitocôndria?","É o aceptor final dos elétrons da cadeia de transporte. Recebe elétrons e H+ e forma água."],
+["O que o cálcio faz na contração?","Liga na troponina, que desloca a tropomiosina e libera os pontos de encaixe da actina para a miosina."],
+["O que é o princípio do tamanho?","Unidades motoras pequenas (tipo I) são recrutadas primeiro. As maiores (tipo II) entram conforme a força exigida sobe."],
+["Como a tensão mecânica vira hipertrofia?","Ativa a mTOR, que acelera a síntese de proteínas nos ribossomos. Com o tempo, células satélite doam núcleos à fibra."],
+["Por que o exercício baixa a glicemia sem insulina?","A contração leva o GLUT4 para a membrana da fibra, e a glicose entra."],
+["Por que a cetose não acelera a perda de gordura?","Você queima mais gordura, mas também come mais gordura. O saldo do estoque depende das calorias."],
+["O que acontece com o eixo hormonal ao usar testosterona de fora?","O feedback negativo desliga LH e FSH. O testículo para de produzir e a fertilidade cai."],
+["Por que cortar sódio na semana final atrapalha?","Ativa a aldosterona, que manda o rim reter sódio e água."],
+["O que é autofagia?","A célula digere e recicla componentes velhos ou defeituosos. É ligada por jejum, restrição e exercício."],
+
+["Quais são as duas condições para a contração muscular acontecer?","ATP disponível para a cabeça da miosina e cálcio liberado pelo retículo sarcoplasmático."],
+["Em quanto tempo a fosfocreatina cai de forma drástica em esforço máximo?","Em torno de 15 a 20 segundos."],
+["Quanto tempo de pausa repõe 100% da fosfocreatina?","De 3 a 8 minutos."],
+["Lactato causa fadiga?","Não. A formação e o transporte do lactato consomem H+. Ele é combustível e precursor de glicose no fígado."],
+["De onde vem o H+ da acidose no exercício?","Da quebra acelerada de ATP, principalmente em alta intensidade com pausas curtas."],
+["O que é fadiga central?","Redução dos disparos do córtex motor para o músculo, provocada pelos aferentes III e IV ativados por metabólitos."],
+["Escreva a equação do débito cardíaco.","Débito cardíaco = frequência cardíaca × volume sistólico."],
+["Repouso: não treinado × treinado em endurance.","70 bpm × 71 mL e 50 bpm × 100 mL. Os dois dão 5 L/min."],
+["Três determinantes do desempenho de endurance.","VO2máx, limiar de lactato e economia de movimento."],
+["Quais são os quatro princípios do treinamento?","Sobrecarga, especificidade, diferenças individuais e reversibilidade."],
+["O que significa AEDI?","Adaptações específicas às demandas impostas: o princípio da especificidade."],
+["Em quanto tempo o destreinamento já aparece?","Em 1 a 2 semanas já há queda de capacidade metabólica e desempenho."],
+["Efeito térmico de cada macronutriente.","Gordura 0 a 3%, carboidrato 5 a 10%, proteína 20 a 30%."],
+["Faixa de proteína para hipertrofia.","1,6 a 2,2 g/kg por dia."],
+["Proteína por refeição para maximizar a síntese.","0,25 a 0,50 g/kg, em pelo menos 3 a 4 refeições."],
+["Proteína no cutting de atleta magro.","2,0 a 3,5 g/kg por dia."],
+["Carboidrato para quem treina endurance de 1 a 3 h por dia.","6 a 10 g/kg por dia."],
+["Carga de carboidrato antes de prova acima de 90 min.","10 a 12 g/kg por dia nas 48 horas anteriores."],
+["Carboidrato durante o exercício prolongado.","30 a 60 g por hora, em bebida de 4 a 8%."],
+["Por que o glicogênio muscular não sustenta a glicemia?","O músculo não tem glicose-6-fosfatase. Só o fígado libera glicose no sangue."],
+["Como estimar a perda de líquido no treino?","Pesando antes e depois: 450 g perdidos equivalem a 450 mL."],
+["O que é hiponatremia associada ao exercício?","Sódio plasmático baixo por excesso de água e perda de sódio, com risco de edema cerebral."],
+["Dose e uso da creatina.","3 a 5 g por dia, todos os dias, em qualquer horário."],
+["Dose e tempo da cafeína.","3 a 6 mg/kg, 1 hora antes."],
+["Para que duração de esforço a beta-alanina funciona?","Esforços intensos de 30 segundos a 10 minutos, com uso diário por 3 a 4 semanas."],
+["O que cai no corpo durante um déficit longo?","Leptina, T3 e gasto energético. A fome sobe."],
+["Componentes da tríade da mulher atleta.","Baixa disponibilidade de energia, amenorreia e perda de massa óssea."],
+["Proteína na dieta da longevidade e a exceção.","Cerca de 0,8 g/kg, de base vegetal. Acima de 65 anos, mais proteína para evitar sarcopenia."]];
+var fi=0,back=false;
+function fcShow(){$("fcSide").textContent=back?"Resposta":"Pergunta";var t=$("fcText");t.className=back?"a":"q";t.textContent=fc[fi][back?1:0];$("fcPos").textContent=(fi+1)+" de "+fc.length}
+$("fcCard").onclick=function(){back=!back;fcShow()};
+$("fcNext").onclick=function(){fi=(fi+1)%fc.length;back=false;fcShow()};
+$("fcPrev").onclick=function(){fi=(fi-1+fc.length)%fc.length;back=false;fcShow()};
+fcShow();
+
+/* ---------- simulado ---------- */
+var qz=[
+["Um atleta faz 6 sprints de 6 s com 30 s de pausa e perde velocidade a partir do terceiro. A causa mais direta é:",["Falta de glicogênio hepático","Reposição incompleta da fosfocreatina","Desidratação","Baixa oxidação de gordura"],1,"Com 30 s a PCr não volta. A reposição completa pede 3 a 8 min."],
+["Sobre o lactato, é correto dizer que:",["Ele acidifica o músculo e deve ser evitado","Sua formação consome H+ e ele serve de combustível","Ele só é produzido sem oxigênio","Ele causa a dor muscular tardia"],1,"Lactato alto indica glicólise acelerada. Ele ajuda no controle do pH e vira glicose no fígado."],
+["O principal ganho central do treino de endurance é:",["Aumento da FC máxima","Aumento do volume sistólico","Aumento da capacidade pulmonar total","Redução do volume de sangue"],1,"Mais volume sistólico explica a FC menor em repouso e o débito máximo maior."],
+["Nadadores treinaram 10 semanas e o VO2máx subiu bem mais no teste de natação que na esteira. Isso ilustra:",["Reversibilidade","Sobrecarga","Especificidade","Individualidade"],2,"Adaptações específicas às demandas impostas."],
+["Para um homem de 80 kg focado em hipertrofia, a proteína diária pelos livros fica em:",["64 g","130 a 175 g","240 a 280 g","Acima de 320 g"],1,"1,6 a 2,2 g/kg dá 128 a 176 g. Acima disso não há ganho extra de massa."],
+["A frase \"o corpo só absorve 30 g de proteína por refeição\" está:",["Certa, o excesso é perdido nas fezes","Errada: a absorção é quase total, o que satura é o uso para síntese muscular","Certa apenas para whey","Errada: não existe nenhum limite de uso"],1,"O intestino absorve. A síntese proteica muscular por refeição é que tem teto, perto de 0,5 g/kg."],
+["Ciclista de 70 kg que treina 2 h por dia deve consumir de carboidrato:",["140 a 210 g","280 a 350 g","420 a 700 g","Mais de 900 g"],2,"6 a 10 g/kg para 1 a 3 h de treino diário."],
+["Durante uma maratona, a recomendação de carboidrato é:",["Nenhum, para estimular a gordura","30 a 60 g por hora","120 g por hora só de glicose","Só água"],1,"O SGLT-1 satura perto de 60 g/h de glicose. Bebida de 4 a 8%."],
+["Carboidrato intra-treino em uma sessão de musculação de 50 min:",["É essencial","É desnecessário se houve carboidrato antes","Aumenta a hipertrofia","Substitui a proteína"],1,"O treino não é longo o bastante para esgotar o glicogênio."],
+["Qual suplemento atua como tampão dentro do músculo?",["Bicarbonato","Creatina","Beta-alanina, via carnosina","Nitrato"],2,"O bicarbonato tampona no sangue. A carnosina tampona dentro da fibra."],
+["Beta-alanina tomada só no pré-treino, 2 g:",["Funciona de forma aguda","Não segue a evidência: o uso é diário, 3,2 a 6,4 g por semanas","É melhor que creatina","Serve para provas de 3 h"],1,"O efeito depende de saturar a carnosina muscular."],
+["Atleta perdeu 1,35 kg em um treino. Isso equivale a cerca de:",["450 mL de suor","900 mL","1.350 mL","2.700 mL"],2,"450 g = 450 mL. Pesar antes e depois, de bexiga vazia."],
+["Maratonista lento bebe muita água pura e chega confuso, com náusea e dor de cabeça. Suspeita:",["Hipoglicemia apenas","Hiponatremia","Hipertermia leve","Acidose lática"],1,"Excesso de água com perda de sódio. Emergência médica."],
+["Em dietas com calorias e proteína iguais, a cetogênica:",["Perde mais gordura por causa da cetose","Perde gordura de forma equivalente","Impede a perda de massa magra","Acelera o metabolismo em 20%"],1,"Cetose não otimiza a perda de gordura. A diferença inicial de peso é água e glicogênio."],
+["Aeróbio em jejum, com calorias iguais no dia:",["Dobra a perda de gordura","Causa grande catabolismo","Não muda a perda de gordura final","É proibido para iniciantes"],2,"A oxidação de gordura na sessão sobe pouco e o saldo do dia decide."],
+["A termogênese adaptativa é:",["O gasto com a digestão","A queda do gasto além do previsto pela perda de peso","O calor do exercício","O efeito da cafeína"],1,"Vem junto com queda de leptina e T3 e aumento da fome."],
+["Na semana final do fisiculturista, o Haluch orienta:",["Cortar sódio por 7 dias","Cortar água por 48 h","Não restringir sódio e não reduzir água por mais de 12 h","Usar diurético de alça"],2,"Cortar sódio e água ativa aldosterona e ADH e aumenta a retenção, com risco real."],
+["O sinal de alerta mais reconhecível da tríade da mulher atleta é:",["Ganho de peso","Amenorreia","Hipertensão","Aumento de força"],1,"A perda da menstruação indica baixa disponibilidade de energia e risco ósseo."],
+["Em mulheres, qual efeito de esteroides anabolizantes pode não regredir?",["Acne","Engrossamento da voz","Retenção de líquido","Aumento do apetite"],1,"Voz e clitoromegalia podem ser permanentes."],
+["Na dieta da longevidade descrita pelo Haluch, a proteína para um adulto de 40 anos fica:",["Perto de 0,8 g/kg, com base vegetal","Em 3 g/kg","Zero proteína animal e 0,3 g/kg","Livre"],0,"Baixa mas suficiente. Depois dos 65 anos a recomendação sobe."]];
+var qi=0,score=0,answered=false;
+function qzShow(){
+  answered=false;var q=qz[qi];$("qzPos").textContent="Questão "+(qi+1)+" de "+qz.length;$("qzQ").textContent=q[0];$("qzFb").textContent="";
+  var o=$("qzOpts");o.innerHTML="";
+  q[1].forEach(function(t,i){var b=el("button",null);b.type="button";b.textContent=t;b.onclick=function(){
+    if(answered)return;answered=true;var ok=i===q[2];if(ok)score++;
+    b.classList.add(ok?"right":"wrong");o.children[q[2]].classList.add("right");
+    $("qzFb").innerHTML="<b>"+(ok?"Certo. ":"Não foi dessa vez. ")+"</b>"+q[3];$("qzScore").textContent="Acertos: "+score;
+    $("qzNext").textContent=qi===qz.length-1?"Ver resultado":"Próxima"};o.appendChild(b)});
+  $("qzScore").textContent="Acertos: "+score;$("qzNext").textContent="Pular";
+}
+$("qzNext").onclick=function(){
+  if(qi===qz.length-1){
+    $("qzQ").textContent="Resultado: "+score+" de "+qz.length;$("qzOpts").innerHTML="";$("qzPos").textContent="Simulado concluído";
+    $("qzFb").textContent=score>=17?"Domínio muito bom. Revise só os módulos das questões erradas.":score>=12?"Boa base. Volte aos quadros Em 30 segundos dos módulos em que errou.":"Vale reler os módulos 1, 2, 7 e 8 e refazer.";
+    $("qzNext").textContent="Refazer";qi=-1;score=0;return}
+  qi++;qzShow();
+};
+qzShow();
+/* ---------- glossário ---------- */
+var G=[
+["ATP",["ATP"],"Adenosina trifosfato. A molécula que entrega energia pronta para a célula usar. Quebrar o último fosfato libera a energia."],
+["ADP",["ADP"],"Adenosina difosfato. O que sobra do ATP depois de usado. Precisa receber um fosfato de volta para virar ATP de novo."],
+["AMP",["AMP"],"Adenosina monofosfato. Aparece quando a energia da célula está bem baixa. É o sinal que liga a AMPK."],
+["Fosfocreatina (PCr)",["fosfocreatina","PCr"],"Creatina ligada a um fosfato, guardada no músculo. Doa o fosfato ao ADP e refaz ATP em uma única reação."],
+["Creatina quinase",["creatina quinase"],"Enzima que passa o fosfato da fosfocreatina para o ADP no esforço, e faz o inverso na pausa."],
+["Enzima",["enzima","enzimas"],"Proteína que acelera uma reação química específica. Quase toda reação do corpo depende de uma."],
+["Citosol",["citosol"],"O líquido que preenche a célula, fora das organelas. É onde acontecem o sistema ATP-PCr e a glicólise."],
+["Mitocôndria",["mitocôndria","mitocôndrias"],"Organela que produz a maior parte do ATP usando oxigênio. Quanto mais mitocôndrias, maior a capacidade aeróbia."],
+["Glicólise",["glicólise"],"Sequência de 10 reações no citosol que quebra uma glicose em dois piruvatos e rende 2 a 3 ATP, sem usar oxigênio."],
+["Glicogênio",["glicogênio"],"Forma de estoque da glicose: milhares de glicoses ligadas, guardadas no músculo e no fígado."],
+["Glicogenólise",["glicogenólise"],"Quebra do glicogênio para liberar glicose."],
+["Glicogênese",["glicogênese"],"Construção de glicogênio a partir de glicose, estimulada pela insulina."],
+["Gliconeogênese",["gliconeogênese"],"Fabricação de glicose nova no fígado a partir de lactato, glicerol e aminoácidos. Mantém a glicemia no jejum."],
+["Glicemia",["glicemia"],"Concentração de glicose no sangue."],
+["Piruvato",["piruvato"],"Molécula de 3 carbonos que sobra da glicólise. Pode entrar na mitocôndria ou virar lactato."],
+["Lactato",["lactato"],"Formado quando o piruvato recebe hidrogênio do NADH. Não causa fadiga: é combustível e vira glicose no fígado."],
+["LDH",["LDH"],"Lactato desidrogenase. Enzima que converte piruvato em lactato e vice-versa."],
+["NAD+ e NADH",["NADH","NAD+"],"Transportador de hidrogênios. NAD+ é a forma vazia. NADH é a forma carregada, que leva os hidrogênios até a mitocôndria."],
+["FADH2",["FADH2"],"Outro transportador de hidrogênios, como o NADH, gerado no ciclo de Krebs e na beta-oxidação."],
+["PFK",["PFK","fosfofrutoquinase"],"Fosfofrutoquinase. Enzima que controla a velocidade da glicólise. Acelera com ADP alto e freia com ATP sobrando ou H+ acumulado."],
+["Acetil-CoA",["acetil-CoA"],"Molécula de 2 carbonos em que carboidrato, gordura e proteína se convertem antes de entrar no ciclo de Krebs."],
+["Ciclo de Krebs",["ciclo de Krebs"],"Roda de reações na mitocôndria que desmonta o acetil-CoA, libera CO2 e carrega NADH e FADH2 com hidrogênios."],
+["Cadeia de transporte de elétrons",["cadeia de transporte de elétrons","cadeia de elétrons"],"Fila de proteínas na membrana interna da mitocôndria. Usa os elétrons do NADH para bombear H+ e depende de oxigênio no final."],
+["Fosforilação oxidativa",["fosforilação oxidativa"],"Produção de ATP na mitocôndria usando oxigênio: cadeia de elétrons mais ATP sintase."],
+["ATP sintase",["ATP sintase"],"Enzima em forma de turbina na mitocôndria. A passagem de H+ por ela junta ADP e fosfato em ATP."],
+["Beta-oxidação",["beta-oxidação"],"Processo na mitocôndria que corta o ácido graxo de 2 em 2 carbonos, formando acetil-CoA."],
+["Lipólise",["lipólise"],"Quebra do triacilglicerol em ácidos graxos e glicerol, para a gordura ser usada como energia."],
+["Lipogênese",["lipogênese"],"Fabricação de gordura. Lipogênese de novo é fazer gordura a partir de carboidrato, o que é pequeno em dieta normal."],
+["Triacilglicerol",["triacilglicerol","triacilgliceróis"],"A forma em que a gordura é comida e guardada: um glicerol com três ácidos graxos."],
+["Ácido graxo",["ácido graxo","ácidos graxos"],"Cadeia de carbonos que é a unidade da gordura. Pode ser saturado ou insaturado."],
+["Glicerol",["glicerol"],"A 'espinha' do triacilglicerol. Liberado na lipólise, pode virar glicose no fígado."],
+["Carnitina",["carnitina"],"Molécula que carrega ácidos graxos longos para dentro da mitocôndria."],
+["Albumina",["albumina"],"Principal proteína do plasma. Transporta ácidos graxos no sangue."],
+["H+",["H+"],"Íon hidrogênio. Quanto mais H+ livre, mais ácido o meio. Vem principalmente da quebra acelerada de ATP."],
+["Acidose",["acidose"],"Queda do pH por acúmulo de H+. No músculo, freia a glicólise e a liberação de cálcio."],
+["pH",["pH"],"Escala de acidez. Quanto menor o número, mais ácido."],
+["MCT",["MCT"],"Transportador de monocarboxilato. Proteína da membrana que leva lactato e H+ para fora da fibra. Aumenta com o treino intenso."],
+["Ciclo de Cori",["ciclo de Cori"],"Lactato sai do músculo, vai ao fígado, vira glicose e volta ao músculo."],
+["EPOC",["EPOC"],"Consumo excessivo de oxigênio após o exercício. O oxigênio a mais usado na recuperação."],
+["Quociente respiratório",["quociente respiratório"],"CO2 produzido dividido pelo O2 consumido. Perto de 0,7 indica queima de gordura. Perto de 1,0, de carboidrato."],
+["VO2máx",["VO2máx"],"Maior volume de oxigênio que o corpo consegue captar, transportar e usar por minuto. Medida da capacidade aeróbia."],
+["Potencial de ação",["potencial de ação"],"Impulso elétrico que percorre nervos e fibras musculares pela entrada rápida de sódio."],
+["Motoneurônio",["motoneurônio","motoneurônios"],"Neurônio que sai da medula e comanda as fibras musculares."],
+["Córtex motor",["córtex motor"],"Região do cérebro que origina o comando do movimento voluntário."],
+["Acetilcolina",["acetilcolina"],"Mensageiro químico liberado pelo nervo para ativar a fibra muscular. Também é o freio do coração."],
+["Junção neuromuscular",["junção neuromuscular"],"Ponto de contato entre o nervo e a fibra muscular."],
+["Sarcolema",["sarcolema"],"A membrana da fibra muscular."],
+["Túbulos T",["túbulos T"],"Dobras do sarcolema que levam o impulso elétrico para o interior da fibra."],
+["Retículo sarcoplasmático",["retículo sarcoplasmático","retículo"],"Rede de bolsas dentro da fibra que guarda cálcio e o libera para iniciar a contração."],
+["SERCA",["SERCA","bomba de cálcio"],"Bomba que devolve o cálcio ao retículo para o músculo relaxar. Gasta ATP."],
+["Troponina",["troponina"],"Proteína que recebe o cálcio e move a tropomiosina, liberando a actina."],
+["Tropomiosina",["tropomiosina"],"Proteína em fita que cobre os pontos de encaixe da actina quando o músculo está em repouso."],
+["Actina",["actina"],"Filamento fino do sarcômero. É puxado pela miosina."],
+["Miosina",["miosina"],"Filamento grosso do sarcômero. Suas cabeças se encaixam na actina e geram força gastando ATP."],
+["Sarcômero",["sarcômero","sarcômeros"],"Menor unidade contrátil do músculo, entre duas linhas Z."],
+["Miofibrila",["miofibrila","miofibrilas"],"Fila de sarcômeros dentro da fibra muscular. Hipertrofiar é acrescentar miofibrilas."],
+["Espécies reativas de oxigênio",["espécies reativas de oxigênio","espécies reativas"],"Moléculas instáveis geradas quando a mitocôndria usa oxigênio. Em excesso danificam estruturas. Também chamadas de radicais livres."],
+["Estresse oxidativo",["estresse oxidativo"],"Quando a produção de espécies reativas supera a capacidade das defesas antioxidantes."],
+["Hipóxia",["hipóxia"],"Falta de oxigênio no tecido."],
+["Aferentes III e IV",["aferentes III e IV"],"Nervos sensitivos do músculo que detectam metabólitos e avisam o sistema nervoso central."],
+["Neutrófilos",["neutrófilos"],"Primeiras células de defesa a chegar ao músculo lesado. Iniciam a limpeza."],
+["Macrófagos",["macrófagos"],"Células de defesa que engolem restos de tecido e liberam sinais de reconstrução."],
+["Fagocitose",["fagocitose"],"Ato de uma célula englobar e digerir partículas ou restos celulares."],
+["Células satélite",["células satélite"],"Células-tronco do músculo. Ativadas pelo treino, doam núcleos à fibra e ajudam no reparo e no crescimento."],
+["Excêntrica",["excêntrica","excêntricas"],"Fase em que o músculo produz força enquanto alonga, como na descida do agachamento. Gera mais dano."],
+["Débito cardíaco",["débito cardíaco"],"Litros de sangue que o coração bombeia por minuto. Frequência cardíaca vezes volume sistólico."],
+["Volume sistólico",["volume sistólico"],"Quantidade de sangue ejetada pelo ventrículo a cada batida."],
+["Hemoglobina",["hemoglobina"],"Proteína das hemácias que carrega oxigênio. Tem ferro no centro."],
+["Hemácias",["hemácias"],"Glóbulos vermelhos. Células do sangue que transportam oxigênio."],
+["Mioglobina",["mioglobina"],"Proteína do músculo que recebe o oxigênio do sangue e o leva até a mitocôndria."],
+["Alvéolos",["alvéolos"],"Bolsas microscópicas do pulmão onde o oxigênio passa para o sangue."],
+["Diferença arteriovenosa",["diferença arteriovenosa"],"Diferença entre o oxigênio do sangue que chega e o do que sai do músculo. Mede quanto o músculo extraiu."],
+["Efeito Bohr",["efeito Bohr"],"Calor, CO2 e acidez fazem a hemoglobina soltar o oxigênio com mais facilidade, justamente no músculo ativo."],
+["Frank-Starling",["Frank-Starling"],"Quanto mais o ventrículo enche, mais forte ele contrai e mais sangue ejeta."],
+["Nó sinoatrial",["nó sinoatrial"],"Marca-passo natural do coração."],
+["Parassimpático",["parassimpático"],"Ramo do sistema nervoso que desacelera o coração e favorece repouso e digestão."],
+["Simpático",["simpático"],"Ramo do sistema nervoso que acelera o coração e prepara o corpo para o esforço."],
+["Manobra de Valsalva",["manobra de Valsalva"],"Fazer força com a respiração presa. Eleva muito a pressão arterial."],
+["Limiar de lactato",["limiar de lactato"],"Intensidade a partir da qual o lactato no sangue passa a subir continuamente."],
+["Bicarbonato",["bicarbonato"],"Principal tampão do sangue. Captura H+ e forma CO2 e água."],
+["AMPK",["AMPK"],"Enzima sensora de energia baixa. Ligada pelo exercício e pelo jejum, estimula a queima de combustível e a criação de mitocôndrias, e freia a mTOR."],
+["PGC-1α",["PGC-1α"],"Proteína que liga os genes de construção de mitocôndrias."],
+["Biogênese mitocondrial",["biogênese mitocondrial"],"Criação de novas mitocôndrias."],
+["Angiogênese",["angiogênese"],"Formação de novos capilares."],
+["VEGF",["VEGF"],"Fator de crescimento liberado pelo músculo que estimula novos vasos."],
+["Plasma",["plasma"],"A parte líquida do sangue. É de onde sai o suor."],
+["Unidade motora",["unidade motora","unidades motoras"],"Um motoneurônio mais todas as fibras que ele comanda."],
+["mTOR",["mTOR","mTORC1"],"Proteína que coordena a construção na célula. Ativada por tensão mecânica, aminoácidos e insulina. Liga a síntese de proteínas."],
+["Ribossomos",["ribossomos"],"Fábricas da célula que montam proteínas lendo o RNA mensageiro."],
+["Síntese proteica",["síntese proteica"],"Construção de proteínas novas a partir de aminoácidos."],
+["Leucina",["leucina"],"Aminoácido essencial que funciona como sinal para ligar a mTOR."],
+["IGF-1",["IGF-1"],"Fator de crescimento semelhante à insulina. Produzido no fígado sob comando do GH. Estimula crescimento."],
+["GH",["GH"],"Hormônio do crescimento. Estimula lipólise e a produção de IGF-1."],
+["Miostatina",["miostatina"],"Proteína produzida pelo músculo que limita o seu próprio crescimento."],
+["Receptor androgênico",["receptor androgênico","receptores androgênicos"],"Proteína dentro da célula à qual a testosterona se liga para produzir seus efeitos."],
+["Cortisol",["cortisol"],"Hormônio do estresse. Mobiliza energia e, cronicamente alto, aumenta a degradação de proteína."],
+["Adrenalina",["adrenalina"],"Hormônio de ação rápida do esforço. Acelera o coração, quebra glicogênio e estimula a lipólise."],
+["Insulina",["insulina"],"Hormônio do pâncreas liberado após comer. Coloca glicose e nutrientes dentro das células e freia a lipólise."],
+["Glucagon",["glucagon"],"Hormônio do pâncreas liberado no jejum. Manda o fígado liberar glicose."],
+["Homeostase",["homeostase"],"Equilíbrio interno do corpo, mantido dentro de faixas estreitas."],
+["Supercompensação",["supercompensação"],"Reconstrução acima do nível anterior depois de um estímulo e da recuperação."],
+["Overtraining",["overtraining"],"Queda persistente de desempenho por carga acima da capacidade de recuperação por semanas."],
+["NEAT",["NEAT"],"Gasto de energia com movimentos fora do treino: andar, ficar em pé, tarefas do dia."],
+["MET",["MET","METs"],"Unidade de intensidade. 1 MET é o gasto de repouso: 3,5 mL de O2 por kg por minuto."],
+["Calorimetria indireta",["calorimetria indireta"],"Estimativa do gasto de energia medindo o oxigênio consumido e o CO2 produzido."],
+["Massa magra",["massa magra"],"Tudo no corpo que não é gordura: músculo, órgãos, ossos e água."],
+["Aminoácidos",["aminoácidos","aminoácido"],"Unidades que formam as proteínas. São 20. Nove são essenciais: precisam vir da dieta."],
+["Pepsina",["pepsina"],"Enzima do estômago que inicia a digestão das proteínas."],
+["Pool de aminoácidos",["pool de aminoácidos"],"Conjunto de aminoácidos livres no sangue e nos tecidos, disponível para uso."],
+["Turnover",["turnover"],"Renovação constante: proteínas sendo degradadas e refeitas."],
+["Transaminação",["transaminação"],"Transferência do grupo com nitrogênio de um aminoácido para outra molécula."],
+["Ureia",["ureia"],"Forma segura em que o fígado elimina o nitrogênio dos aminoácidos. Sai pela urina."],
+["Balanço nitrogenado",["balanço nitrogenado"],"Nitrogênio que entra menos o que sai. Positivo indica ganho de proteína corporal. Negativo, perda."],
+["RDA",["RDA"],"Ingestão diária recomendada para cobrir a necessidade de quase toda a população saudável."],
+["Caseína",["caseína"],"Principal proteína do leite. Digestão lenta."],
+["Whey",["whey"],"Proteína do soro do leite. Digestão rápida e rica em leucina."],
+["BCAA",["BCAA"],"Aminoácidos de cadeia ramificada: leucina, isoleucina e valina."],
+["SGLT-1",["SGLT-1"],"Transportador que absorve glicose no intestino junto com sódio. Satura perto de 60 g por hora."],
+["GLUT4",["GLUT4"],"Transportador de glicose do músculo e do tecido adiposo. Vai para a membrana com insulina ou com a contração muscular."],
+["GLUT5",["GLUT5"],"Transportador que absorve frutose no intestino."],
+["Amilase",["amilase"],"Enzima da saliva e do pâncreas que quebra o amido."],
+["Índice glicêmico",["índice glicêmico"],"Velocidade com que um alimento eleva a glicemia, comparado à glicose pura."],
+["Glicogênio sintase",["glicogênio sintase"],"Enzima que monta o glicogênio. Fica mais ativa depois do exercício e com insulina."],
+["Bile",["bile"],"Líquido produzido pelo fígado que quebra a gordura em gotículas para a digestão."],
+["Quilomícrons",["quilomícrons"],"Pacotes que carregam a gordura absorvida do intestino para o sangue."],
+["VLDL",["VLDL"],"Lipoproteína com que o fígado exporta gordura. Depois de entregar a gordura, vira LDL."],
+["LDL",["LDL"],"Lipoproteína que leva colesterol aos tecidos. Em excesso se deposita na parede das artérias."],
+["HDL",["HDL"],"Lipoproteína que recolhe colesterol dos tecidos e leva de volta ao fígado."],
+["Aterosclerose",["aterosclerose"],"Formação de placas de gordura e inflamação na parede das artérias."],
+["Lipase lipoproteica",["lipase lipoproteica"],"Enzima da parede dos vasos que retira ácidos graxos das lipoproteínas para os tecidos."],
+["Lipase hormônio-sensível",["lipase hormônio-sensível"],"Enzima do adipócito que quebra a gordura estocada. Ligada pela adrenalina e desligada pela insulina."],
+["Hipotálamo",["hipotálamo"],"Região do cérebro que controla temperatura, fome, sede e o comando dos hormônios."],
+["Hipófise",["hipófise"],"Glândula na base do cérebro que obedece ao hipotálamo e comanda outras glândulas."],
+["ADH",["ADH"],"Hormônio antidiurético. Faz o rim reter água."],
+["Aldosterona",["aldosterona"],"Hormônio que faz o rim reter sódio, e água junto."],
+["Hiponatremia",["hiponatremia"],"Sódio baixo no sangue. No esporte, vem de beber água em excesso durante esforços longos."],
+["Osmose",["osmose"],"Movimento da água para o lado onde há mais partículas dissolvidas."],
+["Eritropoetina (EPO)",["eritropoetina"],"Hormônio do rim que estimula a medula a produzir hemácias. Sobe na altitude."],
+["Adipócito",["adipócito","adipócitos"],"Célula do tecido adiposo, especializada em guardar gordura."],
+["Tecido adiposo",["tecido adiposo"],"O tecido de gordura do corpo. Também produz hormônios como a leptina."],
+["Leptina",["leptina"],"Hormônio produzido pelos adipócitos em proporção à gordura estocada. Informa o cérebro sobre a reserva de energia."],
+["Grelina",["grelina"],"Hormônio do estômago que aumenta a fome."],
+["GLP-1",["GLP-1"],"Hormônio do intestino que sinaliza saciedade e retarda o esvaziamento do estômago."],
+["Corpos cetônicos",["corpos cetônicos"],"Combustíveis feitos pelo fígado a partir de gordura quando há pouco carboidrato."],
+["Cetose",["cetose"],"Estado em que os corpos cetônicos estão elevados no sangue."],
+["Oxaloacetato",["oxaloacetato"],"Molécula que recebe o acetil-CoA no ciclo de Krebs. No jejum, o fígado a desvia para fabricar glicose."],
+["Termogênese adaptativa",["termogênese adaptativa"],"Queda do gasto de energia além do esperado pela perda de peso."],
+["T3",["T3"],"Forma ativa do hormônio da tireoide. Regula a velocidade do metabolismo."],
+["Resistência à insulina",["resistência à insulina"],"Quando as células respondem mal à insulina e o pâncreas precisa produzir mais para o mesmo efeito."],
+["Receptores beta",["receptores beta"],"Receptores de adrenalina. No adipócito, ligam a lipólise."],
+["Carnosina",["carnosina"],"Molécula do músculo que captura H+. A beta-alanina aumenta o seu estoque."],
+["Óxido nítrico",["óxido nítrico"],"Gás produzido pelos vasos que os faz dilatar."],
+["Adenosina",["adenosina"],"Molécula que forma a base do ATP. Solta no cérebro, ela se acumula ao longo do dia e gera sono e sensação de cansaço. A cafeína bloqueia o receptor dela."],
+["GnRH",["GnRH"],"Hormônio do hipotálamo que manda a hipófise liberar LH e FSH."],
+["LH",["LH"],"Hormônio da hipófise que estimula o testículo a produzir testosterona e, na mulher, dispara a ovulação."],
+["FSH",["FSH"],"Hormônio da hipófise que sustenta a produção de espermatozoides e o amadurecimento dos óvulos."],
+["Células de Leydig",["células de Leydig"],"Células do testículo que produzem testosterona."],
+["Feedback negativo",["feedback negativo"],"O produto final freia a própria produção, como um termostato."],
+["Aromatase",["aromatase"],"Enzima que converte testosterona em estradiol."],
+["DHT",["DHT"],"Di-hidrotestosterona. Andrógeno mais potente que a testosterona, formado na pele e na próstata."],
+["Estradiol",["estradiol"],"Principal estrogênio."],
+["Estrogênio",["estrogênio"],"Hormônio sexual feminino principal. Protege o osso."],
+["Ginecomastia",["ginecomastia"],"Crescimento do tecido mamário em homens."],
+["Virilização",["virilização"],"Aparecimento de características masculinas em mulheres por excesso de andrógenos."],
+["Clitoromegalia",["clitoromegalia"],"Aumento do clitóris causado por andrógenos."],
+["Amenorreia",["amenorreia"],"Ausência de menstruação."],
+["Osteoclastos",["osteoclastos"],"Células que reabsorvem osso."],
+["Autofagia",["autofagia"],"Processo em que a célula digere e recicla seus próprios componentes velhos ou defeituosos."],
+["Sirtuínas",["sirtuínas"],"Proteínas ligadas pela baixa energia que ativam reparo e defesa celular."],
+["Sarcopenia",["sarcopenia"],"Perda de massa e força muscular com o envelhecimento."],
+["Metionina",["metionina"],"Aminoácido essencial abundante em proteínas animais. Sua restrição aumenta a vida em animais."],
+["Off season",["off season"],"Fase fora de competição do fisiculturista, voltada a ganhar massa."],
+["Cutting",["cutting"],"Fase de perda de gordura com preservação de massa muscular."]
+];
+(function(){
+  var byForm={},forms=[];
+  G.forEach(function(g,i){g[1].forEach(function(f){[f,f.charAt(0).toUpperCase()+f.slice(1)].forEach(function(v){if(!(v in byForm)){byForm[v]=i;forms.push(v)}})})});
+  forms.sort(function(a,b){return b.length-a.length});
+  var esc=function(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")};
+  var re=new RegExp("(?<![\\p{L}\\p{N}-])("+forms.map(esc).join("|")+")(?![\\p{L}\\p{N}])","u");
+  var skip={SVG:1,BUTTON:1,A:1,H2:1,H3:1,H4:1,H5:1,TH:1,LABEL:1,SELECT:1,OPTION:1,SCRIPT:1,FIGCAPTION:1};
+  mods.forEach(function(sec){
+    var used={},tw=document.createTreeWalker(sec,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+      for(var p=n.parentNode;p&&p!==sec;p=p.parentNode){if(skip[p.nodeName.toUpperCase()]||(p.classList&&(p.classList.contains("mhead")||p.classList.contains("detail")||p.classList.contains("out"))))return NodeFilter.FILTER_REJECT}
+      return NodeFilter.FILTER_ACCEPT}}),nodes=[],n;
+    while((n=tw.nextNode()))nodes.push(n);
+    nodes.forEach(function(node){
+      var guard=0;
+      while(node&&guard++<40){
+        var txt=node.nodeValue,m,from=0,hit=null;
+        while((m=re.exec(txt.slice(from)))){var k=byForm[m[1]];if(!used[k]){hit={i:from+m.index,len:m[1].length,k:k};break}from+=m.index+m[1].length}
+        if(!hit)break;
+        used[hit.k]=1;
+        var rest=node.splitText(hit.i),after=rest.splitText(hit.len);
+        var b=document.createElement("button");b.type="button";b.className="g";b.dataset.g=hit.k;b.textContent=rest.nodeValue;
+        rest.parentNode.replaceChild(b,rest);node=after;
+      }
+    });
+  });
+  var sheet=$("sheet");
+  function show(k){$("sheetT").textContent=G[k][0];$("sheetD").textContent=G[k][2];sheet.classList.add("open")}
+  document.addEventListener("click",function(e){var b=e.target.closest(".g");if(b){show(+b.dataset.g);return}
+    if(!e.target.closest("#sheet"))sheet.classList.remove("open")});
+  $("sheetX").onclick=function(){sheet.classList.remove("open")};
+  var sorted=G.slice().sort(function(a,b){return a[0].localeCompare(b[0],"pt")});
+  function list(q){var h=$("gList");h.innerHTML="";q=(q||"").toLowerCase();
+    var r=sorted.filter(function(g){return !q||g[0].toLowerCase().indexOf(q)>-1||g[2].toLowerCase().indexOf(q)>-1});
+    r.forEach(function(g){var d=el("div");var b=el("b");b.textContent=g[0];d.appendChild(b);d.appendChild(document.createTextNode(g[2]));h.appendChild(d)});
+    if(!r.length)h.innerHTML='<div>Nenhum termo encontrado. Tente outra palavra.</div>'}
+  $("gSearch").addEventListener("input",function(){list(this.value)});list("");
+  var a=el("a",null,'<span class="n">Az</span><span>Glossário</span>');a.href="#glos";a.style.setProperty("--c","var(--c10)");nav.appendChild(a);
+})();
+
+})();
+</script>
+</body>
+</html>

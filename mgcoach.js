@@ -13,7 +13,7 @@
       : '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6.5 6.5 0 1 0 20 14.5z" fill="currentColor"/>';
   }
   var saved=null;try{saved=localStorage.getItem(KEY);}catch(e){}
-  apply(saved||"dark");
+  apply(saved||"light");
   document.addEventListener("click",function(e){
     var btn=e.target.closest&&e.target.closest(".theme-toggle");
     if(!btn)return;

@@ -1,0 +1,520 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Torque no Tríceps Coice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Animação interativa do tríceps coice: vetor da carga, braço de momento e curva de torque no halter e no cabo.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: palco único (canvas) com o coice em vista lateral, capítulos acima, controles e leitura logo abaixo, curva de torque e resumo. Visual escuro deliberado (identidade MG COACH). */
+:root{
+  --bg:#0a0a0a;
+  --surface:#13110f;
+  --surface-2:#1b1815;
+  --line:#2c2622;
+  --fg:#f5efe8;
+  --muted:#9d9188;
+  --body:#5f5650;
+  --accent:#ff6b1a;
+  --accent-soft:#ffa265;
+  --cable:#5cc6ff;
+  --display:"Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  --text:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--fg)}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--text);font-size:15px;line-height:1.5}
+[hidden]{display:none!important}
+.wrap{max-width:980px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));display:flex;flex-direction:column;gap:22px}
+.back{font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;align-self:flex-start;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.back:hover,.back:focus-visible{color:var(--fg);border-color:var(--muted)}
+header{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{color:var(--accent);font-weight:600}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,8vw,76px);line-height:.92;letter-spacing:.005em;text-transform:uppercase;margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{margin:0;max-width:62ch;color:var(--muted);font-size:16px}
+.lede strong{color:var(--fg);font-weight:600}
+
+.chapters{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chapters::-webkit-scrollbar{display:none}
+.chap{flex:0 0 auto;font:600 13px/1 var(--text);color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 14px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.chap span{font-family:var(--mono);font-size:11px;color:var(--body)}
+.chap[aria-pressed="true"]{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+.chap[aria-pressed="true"] span{color:rgba(10,10,10,.6)}
+.chap:focus-visible,.seg button:focus-visible,.btn:focus-visible,input[type=range]:focus-visible{outline:2px solid var(--accent-soft);outline-offset:2px}
+
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.caption{padding:16px 18px 4px;min-height:84px;display:flex;flex-direction:column;gap:4px}
+.caption h2{margin:0;font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.02em;text-transform:uppercase}
+.caption p{margin:0;max-width:68ch;color:var(--muted)}
+.canvas-box{position:relative;width:100%;aspect-ratio:580/430;max-width:100%}
+.canvas-box canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+
+.readouts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.ro{padding:12px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.ro+.ro{border-left:1px solid var(--line)}
+.ro .k{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ro .v{font-family:var(--display);font-weight:700;font-size:32px;line-height:1;font-variant-numeric:tabular-nums}
+.ro .v small{font-size:16px;color:var(--muted);margin-left:2px}
+.meter{height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden;margin-top:6px}
+.meter i{display:block;height:100%;width:0;background:var(--accent);border-radius:3px;transition:width .08s linear}
+.tag{font-family:var(--mono);font-size:11px;color:var(--cable)}
+
+.controls{border-top:1px solid var(--line);padding:16px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 18px;align-items:center}
+.row-left{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg)}
+.seg button{font:600 13px/1 var(--text);color:var(--muted);background:transparent;border:0;border-radius:999px;padding:8px 14px;cursor:pointer}
+.seg button[aria-pressed="true"][data-mode="halter"]{background:var(--accent);color:var(--bg)}
+.seg button[aria-pressed="true"][data-mode="cabo"]{background:var(--cable);color:var(--bg)}
+.btn{font:600 13px/1 var(--text);color:var(--fg);background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:9px 14px;cursor:pointer;min-width:92px}
+.btn:hover{border-color:var(--muted)}
+.slider{display:flex;flex-direction:column;gap:6px;min-width:0}
+.slider label{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
+.slider label output{font-family:var(--mono);color:var(--fg);font-variant-numeric:tabular-nums}
+.slider .ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--body)}
+input[type=range]{width:100%;accent-color:var(--accent);margin:0}
+.ctl-label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.panel-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.panel h3{margin:0;font-family:var(--display);font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:.02em}
+.legend{display:flex;gap:14px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:16px;height:3px;border-radius:2px;display:inline-block}
+.graph-box{position:relative;width:100%;aspect-ratio:580/250;max-width:100%}
+.graph-box canvas{position:absolute;inset:0;width:100%;height:100%}
+.insight{margin:0;max-width:70ch}
+.insight .nums{display:block;font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:4px;font-variant-numeric:tabular-nums}
+
+.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0;background:var(--bg)}
+.pill{align-self:flex-start;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:4px 10px;border:1px solid currentColor}
+.pill.h{color:var(--accent)}
+.pill.c{color:var(--cable)}
+.pill.b{color:var(--accent-soft)}
+.card h4{margin:0;font-size:17px;font-weight:700;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.formula{font-family:var(--mono);font-size:14px;color:var(--fg);background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;align-self:flex-start;max-width:100%;overflow-x:auto}
+footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+footer b{color:var(--accent);font-weight:600}
+.nojs{border:1px solid var(--accent);border-radius:12px;padding:12px 14px;font-size:14px}
+
+@media (max-width:720px){
+  .controls{grid-template-columns:minmax(0,1fr)}
+  .summary{grid-template-columns:minmax(0,1fr)}
+  .ro{padding:10px 12px}
+  .ro .v{font-size:26px}
+  .caption h2{font-size:21px}
+}
+@media (prefers-reduced-motion:reduce){.meter i{transition:none}}
+</style>
+
+<div class="wrap">
+  <a class="back" href="https://mgcoach.github.io/teoriaepratica/">← Teoria e Prática</a>
+
+  <header>
+    <div class="eyebrow"><b>MG COACH</b> · Biomecânica do treino</div>
+    <h1>Tríceps coice: <em>onde a carga pesa?</em></h1>
+    <p class="lede">A gravidade sempre aponta para baixo, mas o que define o esforço do tríceps é o <strong>braço de momento</strong>: a distância perpendicular entre o cotovelo e a linha da carga. Veja como ele muda ao longo do movimento, no halter e no cabo.</p>
+  </header>
+
+  <noscript><div class="nojs">Esta animação precisa de JavaScript ativado para funcionar.</div></noscript>
+
+  <nav class="chapters" aria-label="Capítulos da animação" id="chapters"></nav>
+
+  <section class="stage" aria-label="Animação do tríceps coice">
+    <div class="caption" aria-live="polite">
+      <h2 id="capTitle">Vetor da gravidade</h2>
+      <p id="capText"></p>
+    </div>
+    <div class="canvas-box"><canvas id="stage" role="img" aria-label="Vista lateral do tríceps coice com vetor da carga e braço de momento"></canvas></div>
+    <div class="readouts">
+      <div class="ro"><span class="k">Cotovelo</span><span class="v" id="roAlpha">90<small>°</small></span></div>
+      <div class="ro"><span class="k">Braço de momento</span><span class="v" id="roD">0<small>cm</small></span><span class="tag" id="roTag"></span></div>
+      <div class="ro"><span class="k">Torque</span><span class="v" id="roT">0<small>%</small></span><div class="meter"><i id="meter"></i></div></div>
+    </div>
+    <div class="controls">
+      <div class="row-left">
+        <div class="seg" role="group" aria-label="Tipo de resistência">
+          <button type="button" id="mHalter" data-mode="halter" aria-pressed="true">Halter</button>
+          <button type="button" id="mCabo" data-mode="cabo" aria-pressed="false">Cabo</button>
+        </div>
+        <button type="button" class="btn" id="play">Pausar</button>
+      </div>
+      <div class="slider">
+        <label for="alpha">Ângulo do cotovelo <output id="alphaOut">90°</output></label>
+        <input type="range" id="alpha" min="90" max="180" step="1" value="90">
+        <div class="ends"><span>90° · flexionado</span><span>180° · estendido</span></div>
+      </div>
+      <span class="ctl-label">Braço × chão</span>
+      <div class="slider">
+        <label for="beta">Inclinação do braço <output id="betaOut">0° · paralelo</output></label>
+        <input type="range" id="beta" min="-30" max="30" step="1" value="0">
+        <div class="ends"><span>cotovelo acima do ombro</span><span>abaixo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" aria-label="Curva de torque">
+    <div class="panel-head">
+      <h3>Curva de torque</h3>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Halter</span><span><i style="background:var(--cable)"></i>Cabo</span></div>
+    </div>
+    <div class="graph-box"><canvas id="graph" role="img" aria-label="Torque relativo ao longo do ângulo do cotovelo"></canvas></div>
+    <p class="insight" aria-live="polite"><span id="insText"></span><span class="nums" id="insNums"></span></p>
+  </section>
+
+  <section class="panel" aria-label="Resumo">
+    <h3>Resumo prático</h3>
+    <div class="formula">Torque = carga × braço de momento (d)</div>
+    <div class="summary">
+      <article class="card">
+        <span class="pill h">Halter</span>
+        <h4>Pico no final, com o tríceps encurtado</h4>
+        <p>Com o braço paralelo ao chão, o antebraço começa na vertical e d fica perto de zero. O torque só chega ao máximo na extensão completa.</p>
+      </article>
+      <article class="card">
+        <span class="pill c">Cabo</span>
+        <h4>Tensão já no início, com o tríceps alongado</h4>
+        <p>Com a polia baixa à frente, o cabo puxa a mão para a frente. A linha da carga passa longe do cotovelo desde o começo do movimento.</p>
+      </article>
+      <article class="card">
+        <span class="pill b">Ajuste</span>
+        <h4>Elevar o cotovelo desloca o pico</h4>
+        <p>Com o cotovelo um pouco acima da linha do ombro, o antebraço passa pela horizontal antes do fim e a carga deixa de sumir no início.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <span><b>MG COACH</b> · Matheus Garrido · @matheusgarrido</span>
+    <span>Modelo simplificado, em vista lateral</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var css = getComputedStyle(document.documentElement);
+  function tok(n){ return css.getPropertyValue(n).trim(); }
+  var C = {
+    bg:tok('--bg'), surface:tok('--surface'), line:tok('--line'), fg:tok('--fg'),
+    muted:tok('--muted'), body:tok('--body'), accent:tok('--accent'),
+    soft:tok('--accent-soft'), cable:tok('--cable'), mono:tok('--mono'), text:tok('--text')
+  };
+
+  // Mundo em px lógicos; janela visível do palco
+  var VIEW = {x0:200, y0:70, w:580, h:430};
+  var S = {x:560, y:240};       // ombro (tronco)
+  var SA = {x:552, y:258};      // ombro do braço de trabalho
+  var H = {x:340, y:262};       // quadril
+  var U = 140, LF = 120;        // braço e antebraço (até o centro da carga)
+  var PULLEY = {x:735, y:440};
+  var L_CM = 33;                // cotovelo → centro da pegada, em cm
+
+  var state = {alpha:90, beta:0, mode:'halter', playing:true, chapter:0, t0:null};
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) state.playing = false;
+
+  var CHAPTERS = [
+    {t:'Vetor da gravidade', p:'O peso do halter aponta para baixo em qualquer ponto do movimento. O que muda é a posição do antebraço em relação a essa linha vertical.', mode:'halter', beta:0},
+    {t:'Braço de momento', p:'O braço de momento (d, em laranja) é a distância perpendicular entre o cotovelo e a linha da carga. Com o antebraço na vertical, d fica perto de zero.', mode:'halter', beta:0},
+    {t:'Curva de torque', p:'Com o braço paralelo ao chão, o torque começa em 0% e cresce até 100% na extensão completa. A carga pesa mais quando o tríceps já está encurtado.', mode:'halter', beta:0},
+    {t:'Halter × cabo', p:'No cabo, a força segue a direção do cabo, e não a vertical. Com a polia baixa à frente, a linha da carga passa longe do cotovelo já no início.', mode:'cabo', beta:0},
+    {t:'Ângulo do braço', p:'Com o cotovelo acima da linha do ombro, o antebraço fica horizontal antes do fim do movimento. O pico vai para o meio da amplitude.', mode:'halter', beta:-25}
+  ];
+
+  function geom(alpha, beta, mode){
+    var b = beta*Math.PI/180;
+    var E = {x:SA.x - U*Math.cos(b), y:SA.y + U*Math.sin(b)};
+    var psi = b + (180-alpha)*Math.PI/180;
+    var D = {x:E.x - LF*Math.cos(psi), y:E.y + LF*Math.sin(psi)};
+    var F;
+    if (mode === 'halter') F = {x:0, y:1};
+    else { var dx = PULLEY.x-D.x, dy = PULLEY.y-D.y, n = Math.hypot(dx,dy); F = {x:dx/n, y:dy/n}; }
+    var rx = D.x-E.x, ry = D.y-E.y;
+    var resist = (ry*F.x - rx*F.y)/LF;
+    var t = (E.x-D.x)*F.x + (E.y-D.y)*F.y;
+    var Q = {x:D.x+t*F.x, y:D.y+t*F.y};
+    return {E:E, D:D, F:F, resist:resist, Q:Q};
+  }
+
+  function profile(mode, beta){
+    var s = geom(90,beta,mode).resist, e = geom(180,beta,mode).resist, pk = -9, pa = 90;
+    for (var a=90; a<=180; a++){ var r = geom(a,beta,mode).resist; if (r > pk + 1e-9){ pk = r; pa = a; } }
+    return {s:s, e:e, pk:pk, pa:pa};
+  }
+
+  // ---------- canvas helpers
+  var stage = document.getElementById('stage'), sctx = stage.getContext('2d');
+  var graph = document.getElementById('graph'), gctx = graph.getContext('2d');
+  function fit(cv, ctx){
+    var r = cv.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio||1, 2.5);
+    var w = Math.max(1, Math.round(r.width*dpr)), h = Math.max(1, Math.round(r.height*dpr));
+    if (cv.width !== w || cv.height !== h){ cv.width = w; cv.height = h; }
+    return {w:w, h:h, dpr:dpr, cssW:r.width};
+  }
+  function line(ctx, a, b, color, w){ ctx.strokeStyle = color; ctx.lineWidth = w; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+  function poly(ctx, pts, color, w){ ctx.strokeStyle = color; ctx.lineWidth = w; ctx.beginPath(); ctx.moveTo(pts[0].x,pts[0].y); for (var i=1;i<pts.length;i++) ctx.lineTo(pts[i].x,pts[i].y); ctx.stroke(); }
+  function label(ctx, txt, x, y, color, size, align){
+    ctx.font = '600 '+size+'px '+C.mono; ctx.textAlign = align||'left'; ctx.textBaseline = 'middle';
+    ctx.lineJoin = 'round'; ctx.lineWidth = 7; ctx.strokeStyle = C.surface; ctx.strokeText(txt, x, y);
+    ctx.fillStyle = color; ctx.fillText(txt, x, y);
+  }
+  function arrow(ctx, from, dir, len, color, w){
+    var to = {x:from.x+dir.x*len, y:from.y+dir.y*len};
+    line(ctx, from, to, color, w);
+    var ah = 14, aw = 8, px = -dir.y, py = dir.x;
+    ctx.fillStyle = color; ctx.beginPath();
+    ctx.moveTo(to.x+dir.x*4, to.y+dir.y*4);
+    ctx.lineTo(to.x-dir.x*ah+px*aw, to.y-dir.y*ah+py*aw);
+    ctx.lineTo(to.x-dir.x*ah-px*aw, to.y-dir.y*ah-py*aw);
+    ctx.closePath(); ctx.fill();
+    return to;
+  }
+
+  function drawStage(){
+    var f = fit(stage, sctx), ctx = sctx;
+    var sc = f.w / VIEW.w;
+    var lblSize = f.cssW < 480 ? 24 : 18;
+    ctx.setTransform(1,0,0,1,0,0);
+    ctx.fillStyle = C.surface; ctx.fillRect(0,0,f.w,f.h);
+    ctx.setTransform(sc,0,0,sc,-VIEW.x0*sc,-VIEW.y0*sc);
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+
+    var g = geom(state.alpha, state.beta, state.mode);
+    var accent = state.mode === 'halter' ? C.accent : C.cable;
+
+    // chão
+    line(ctx, {x:VIEW.x0, y:480}, {x:VIEW.x0+VIEW.w, y:480}, C.line, 2);
+    ctx.strokeStyle = C.line; ctx.lineWidth = 1;
+    for (var hx = VIEW.x0+10; hx < VIEW.x0+VIEW.w; hx += 22){ ctx.beginPath(); ctx.moveTo(hx,482); ctx.lineTo(hx-10,494); ctx.stroke(); }
+
+    // torre da polia
+    if (state.mode === 'cabo'){
+      ctx.fillStyle = C.line; ctx.fillRect(744, 110, 16, 370);
+      ctx.strokeStyle = C.muted; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.arc(PULLEY.x, PULLEY.y, 13, 0, Math.PI*2); ctx.stroke();
+      ctx.fillStyle = C.muted; ctx.beginPath(); ctx.arc(PULLEY.x, PULLEY.y, 3, 0, Math.PI*2); ctx.fill();
+      label(ctx, 'polia', PULLEY.x-4, PULLEY.y+30, C.muted, lblSize-2, 'center');
+    }
+
+    // linha de ação da carga
+    ctx.save(); ctx.setLineDash([8,8]);
+    line(ctx, {x:g.D.x-g.F.x*900, y:g.D.y-g.F.y*900}, {x:g.D.x+g.F.x*900, y:g.D.y+g.F.y*900}, 'rgba(157,145,136,.45)', 2);
+    ctx.restore();
+
+    // corpo (afundo, mão de apoio no joelho)
+    var K2 = {x:300,y:372}, F2 = {x:240,y:474};
+    var K1 = {x:470,y:366}, F1 = {x:468,y:474};
+    poly(ctx, [H, K2, F2, {x:216,y:476}], '#3d3632', 22);
+    poly(ctx, [H, K1, F1, {x:502,y:476}], C.body, 24);
+    line(ctx, S, H, C.body, 30);
+    line(ctx, S, {x:596,y:232}, C.body, 16);
+    ctx.fillStyle = C.body; ctx.beginPath(); ctx.arc(616, 224, 25, 0, Math.PI*2); ctx.fill();
+    poly(ctx, [S, {x:532,y:318}, {x:482,y:350}], '#4a423d', 15);
+
+    // cabo
+    if (state.mode === 'cabo') line(ctx, g.D, PULLEY, C.cable, 3);
+
+    // braço de trabalho
+    line(ctx, SA, g.E, C.soft, 19);
+    line(ctx, g.E, g.D, C.accent, 17);
+
+    // brilho de torque no cotovelo
+    var tq = Math.max(0, g.resist);
+    ctx.fillStyle = state.mode === 'halter' ? 'rgba(255,107,26,'+(0.12+0.25*tq)+')' : 'rgba(92,198,255,'+(0.12+0.25*tq)+')';
+    ctx.beginPath(); ctx.arc(g.E.x, g.E.y, 14+30*tq, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = C.fg; ctx.beginPath(); ctx.arc(g.E.x, g.E.y, 5, 0, Math.PI*2); ctx.fill();
+
+    // ângulo do cotovelo
+    var aU = Math.atan2(SA.y-g.E.y, SA.x-g.E.x), aF = Math.atan2(g.D.y-g.E.y, g.D.x-g.E.x);
+    ctx.strokeStyle = C.fg; ctx.lineWidth = 2; ctx.globalAlpha = .7;
+    ctx.beginPath(); ctx.arc(g.E.x, g.E.y, 30, aU, aF, false); ctx.stroke(); ctx.globalAlpha = 1;
+
+    // carga
+    if (state.mode === 'halter'){
+      ctx.fillStyle = '#2a2420'; ctx.strokeStyle = C.fg; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.arc(g.D.x, g.D.y, 18, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+      ctx.beginPath(); ctx.arc(g.D.x, g.D.y, 7, 0, Math.PI*2); ctx.stroke();
+    } else {
+      ctx.fillStyle = C.surface; ctx.strokeStyle = C.cable; ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.arc(g.D.x, g.D.y, 9, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+    }
+
+    // vetor da força
+    var tip = arrow(ctx, g.D, g.F, 78, state.mode === 'halter' ? C.fg : C.cable, 4);
+    var off = state.mode === 'halter' ? {x:14,y:-8} : {x:-6,y:24};
+    label(ctx, state.mode === 'halter' ? 'peso' : 'tensão', tip.x+off.x, tip.y+off.y, state.mode === 'halter' ? C.fg : C.cable, lblSize, state.mode === 'halter' ? 'left' : 'center');
+
+    // braço de momento
+    var dx = g.E.x-g.Q.x, dy = g.E.y-g.Q.y, dlen = Math.hypot(dx,dy);
+    if (dlen > 4){
+      var v = {x:dx/dlen, y:dy/dlen}, u = g.F, m = 10;
+      var dirSign = ((g.D.x-g.Q.x)*u.x + (g.D.y-g.Q.y)*u.y) >= 0 ? 1 : -1;
+      var uu = {x:u.x*dirSign, y:u.y*dirSign};
+      poly(ctx, [{x:g.Q.x+uu.x*m, y:g.Q.y+uu.y*m}, {x:g.Q.x+uu.x*m+v.x*m, y:g.Q.y+uu.y*m+v.y*m}, {x:g.Q.x+v.x*m, y:g.Q.y+v.y*m}], C.fg, 2);
+      line(ctx, g.E, g.Q, C.accent, 6);
+      ctx.fillStyle = C.accent; ctx.beginPath(); ctx.arc(g.Q.x, g.Q.y, 5, 0, Math.PI*2); ctx.fill();
+    }
+    var dcm = Math.abs(g.resist)*L_CM;
+    var mid = {x:(g.E.x+g.Q.x)/2, y:(g.E.y+g.Q.y)/2};
+    var nrm = dlen > 4 ? {x:-dy/dlen, y:dx/dlen} : {x:0, y:-1};
+    if (nrm.y > 0){ nrm.x = -nrm.x; nrm.y = -nrm.y; }
+    label(ctx, dlen > 4 ? 'd = '+dcm.toFixed(0)+' cm' : 'd ≈ 0', mid.x+nrm.x*24, mid.y+nrm.y*24, C.accent, lblSize, 'center');
+
+    // valor do ângulo
+    label(ctx, Math.round(state.alpha)+'°', g.E.x+6, g.E.y-46, C.fg, lblSize-2, 'center');
+  }
+
+  function drawGraph(){
+    var f = fit(graph, gctx), ctx = gctx;
+    var W = 580, Hh = 250, sc = f.w / W;
+    var fs = f.cssW < 480 ? 19 : 14;
+    ctx.setTransform(1,0,0,1,0,0);
+    ctx.fillStyle = C.surface; ctx.fillRect(0,0,f.w,f.h);
+    ctx.setTransform(sc,0,0,sc,0,0);
+    var pad = {l: f.cssW < 480 ? 64 : 52, r: f.cssW < 480 ? 34 : 24, t:14, b: f.cssW < 480 ? 50 : 42};
+    var curves = {halter:[], cabo:[]}, ymin = -0.05;
+    ['halter','cabo'].forEach(function(m){
+      for (var a=90; a<=180; a++){ var r = geom(a, state.beta, m).resist; curves[m].push({a:a, r:r}); if (r < ymin) ymin = r; }
+    });
+    ymin = Math.min(-0.05, Math.floor((ymin-0.05)*10)/10);
+    var ymax = 1.08;
+    function X(a){ return pad.l + (a-90)/90*(W-pad.l-pad.r); }
+    function Y(r){ return pad.t + (ymax-r)/(ymax-ymin)*(Hh-pad.t-pad.b); }
+
+    // grade
+    ctx.font = '500 '+fs+'px '+C.mono; ctx.textBaseline = 'middle';
+    [0, 0.5, 1].forEach(function(v){
+      line(ctx, {x:pad.l, y:Y(v)}, {x:W-pad.r, y:Y(v)}, v === 0 ? C.muted : C.line, v === 0 ? 1.5 : 1);
+      ctx.fillStyle = C.muted; ctx.textAlign = 'right'; ctx.fillText(Math.round(v*100)+'%', pad.l-8, Y(v));
+    });
+    if (ymin < -0.15){
+      ctx.fillStyle = 'rgba(92,198,255,.06)'; ctx.fillRect(pad.l, Y(0), W-pad.l-pad.r, Y(ymin)-Y(0));
+      ctx.fillStyle = C.muted; ctx.textAlign = 'left'; ctx.fillText('peso ajuda a estender', pad.l+8, Y(ymin)-fs*0.8);
+    }
+    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    [90,120,150,180].forEach(function(a){
+      ctx.fillStyle = C.muted; ctx.fillText(a+'°', X(a), Hh-pad.b+8);
+      line(ctx, {x:X(a), y:Hh-pad.b}, {x:X(a), y:Hh-pad.b+4}, C.muted, 1);
+    });
+    ctx.fillStyle = C.body; ctx.textAlign = 'left';
+    ctx.fillText('alongado', pad.l, Hh-pad.b+10+fs);
+    ctx.textAlign = 'right'; ctx.fillText('encurtado', W-pad.r, Hh-pad.b+10+fs);
+
+    function path(pts){ ctx.beginPath(); pts.forEach(function(p,i){ var x = X(p.a), y = Y(p.r); if (i) ctx.lineTo(x,y); else ctx.moveTo(x,y); }); }
+    var other = state.mode === 'halter' ? 'cabo' : 'halter';
+    var col = {halter:C.accent, cabo:C.cable};
+
+    ctx.save(); ctx.setLineDash([6,6]); ctx.globalAlpha = .55;
+    path(curves[other]); ctx.strokeStyle = col[other]; ctx.lineWidth = 2.5; ctx.stroke(); ctx.restore();
+
+    var cur = curves[state.mode];
+    path(cur); ctx.lineTo(X(180), Y(0)); ctx.lineTo(X(90), Y(0)); ctx.closePath();
+    ctx.fillStyle = state.mode === 'halter' ? 'rgba(255,107,26,.14)' : 'rgba(92,198,255,.14)'; ctx.fill();
+    path(cur); ctx.strokeStyle = col[state.mode]; ctx.lineWidth = 4; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.stroke();
+
+    var g = geom(state.alpha, state.beta, state.mode);
+    line(ctx, {x:X(state.alpha), y:pad.t}, {x:X(state.alpha), y:Hh-pad.b}, 'rgba(245,239,232,.35)', 1.5);
+    ctx.fillStyle = C.surface; ctx.strokeStyle = col[state.mode]; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.arc(X(state.alpha), Y(g.resist), 7, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+  }
+
+  // ---------- UI
+  var $ = function(id){ return document.getElementById(id); };
+  var chapEl = $('chapters');
+  CHAPTERS.forEach(function(c, i){
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'chap'; b.id = 'chap'+i;
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.innerHTML = '<span>0'+(i+1)+'</span>'+c.t;
+    b.addEventListener('click', function(){ setChapter(i); });
+    chapEl.appendChild(b);
+  });
+
+  function setChapter(i){
+    state.chapter = i;
+    var c = CHAPTERS[i];
+    state.mode = c.mode; state.beta = c.beta;
+    $('beta').value = c.beta;
+    if (!reduce) setPlaying(true);
+    for (var k=0; k<CHAPTERS.length; k++) $('chap'+k).setAttribute('aria-pressed', k === i ? 'true' : 'false');
+    $('capTitle').textContent = c.t; $('capText').textContent = c.p;
+    syncMode(); update();
+  }
+  function syncMode(){
+    $('mHalter').setAttribute('aria-pressed', state.mode === 'halter' ? 'true' : 'false');
+    $('mCabo').setAttribute('aria-pressed', state.mode === 'cabo' ? 'true' : 'false');
+    $('alpha').style.accentColor = state.mode === 'halter' ? C.accent : C.cable;
+    $('meter').style.background = state.mode === 'halter' ? C.accent : C.cable;
+  }
+  function setPlaying(p){
+    var was = state.playing;
+    state.playing = p; state.t0 = null;
+    $('play').textContent = p ? 'Pausar' : 'Animar';
+    if (p && !was) requestAnimationFrame(tick);
+  }
+  function betaText(b){
+    if (b === 0) return '0° · paralelo';
+    return Math.abs(b)+'° · '+(b < 0 ? 'cotovelo acima' : 'cotovelo abaixo');
+  }
+
+  function updateInsight(){
+    var pr = profile(state.mode, state.beta), txt;
+    if (pr.s < 0.2 && pr.pa >= 165) txt = 'A carga quase não pesa no início, com o tríceps alongado, e só chega ao máximo perto da extensão completa.';
+    else if (pr.s >= 0.6 && pr.e < pr.s - 0.2) txt = 'A tensão já é alta no início, com o tríceps alongado, e diminui perto da extensão completa.';
+    else if (pr.pa > 100 && pr.pa < 165) txt = 'O pico de torque vai para o meio da amplitude, a '+pr.pa+'° de cotovelo, e a carga deixa de sumir no início.';
+    else txt = 'A tensão fica distribuída ao longo do movimento.';
+    if (pr.s < -0.02) txt += ' No começo o torque é negativo: o peso ajuda a estender o cotovelo.';
+    $('insText').textContent = (state.mode === 'halter' ? 'Halter: ' : 'Cabo: ') + txt;
+    $('insNums').textContent = 'Início '+Math.round(pr.s*100)+'% · pico '+Math.round(pr.pk*100)+'% a '+pr.pa+'° · final '+Math.round(pr.e*100)+'%';
+  }
+
+  function update(){
+    var g = geom(state.alpha, state.beta, state.mode);
+    $('alpha').value = Math.round(state.alpha);
+    $('alphaOut').textContent = Math.round(state.alpha)+'°';
+    $('betaOut').textContent = betaText(state.beta);
+    $('roAlpha').innerHTML = Math.round(state.alpha)+'<small>°</small>';
+    $('roD').innerHTML = (Math.abs(g.resist)*L_CM).toFixed(0)+'<small>cm</small>';
+    $('roTag').textContent = g.resist < -0.02 ? 'peso ajuda a estender' : '';
+    $('roT').innerHTML = Math.round(g.resist*100)+'<small>%</small>';
+    $('meter').style.width = Math.max(0, Math.min(100, g.resist*100))+'%';
+    drawStage(); drawGraph();
+  }
+
+  function tick(ts){
+    if (!state.playing) return;
+    if (state.t0 === null) state.t0 = ts - (Math.acos(Math.max(-1, Math.min(1, 1 - 2*(state.alpha-90)/90))) / (2*Math.PI)) * 3600;
+    var ph = ((ts - state.t0) % 3600) / 3600;
+    state.alpha = 90 + 90*(0.5 - 0.5*Math.cos(ph*2*Math.PI));
+    update();
+    requestAnimationFrame(tick);
+  }
+
+  $('mHalter').addEventListener('click', function(){ state.mode = 'halter'; syncMode(); updateInsight(); update(); });
+  $('mCabo').addEventListener('click', function(){ state.mode = 'cabo'; syncMode(); updateInsight(); update(); });
+  $('play').addEventListener('click', function(){ setPlaying(!state.playing); });
+  $('alpha').addEventListener('input', function(e){ if (state.playing) setPlaying(false); state.alpha = +e.target.value; update(); });
+  $('beta').addEventListener('input', function(e){ state.beta = +e.target.value; updateInsight(); update(); });
+
+  var origSet = setChapter;
+  setChapter = function(i){ origSet(i); updateInsight(); };
+
+  if (window.ResizeObserver){ new ResizeObserver(function(){ update(); }).observe(stage); }
+  else window.addEventListener('resize', update);
+
+  $('capText').textContent = CHAPTERS[0].p;
+  $('play').textContent = state.playing ? 'Pausar' : 'Animar';
+  syncMode(); updateInsight(); update();
+  if (state.playing) requestAnimationFrame(tick);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(update);
+})();
+</script>
+
+</body></html>

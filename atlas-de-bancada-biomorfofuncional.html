@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas de bancada: prova prática de Biomorfofuncional I</title>
+<meta name="description" content="Material visual para a prova prática: cíngulo pélvico e MMII, cíngulo escapular e MMSS, tecido conjuntivo propriamente dito e cartilagem.">
+<meta property="og:title" content="Atlas de bancada: prova prática de Biomorfofuncional I">
+<meta property="og:description" content="Ossos, músculos, lâminas e células com modo prova e treino de identificação.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF2F1;--surface:#FFFFFF;--ink:#1F2A2E;--muted:#58676C;--line:#D3DCDA;--accent:#5B3F8C;--accent-ink:#fff;--eosin:#C44A7E;--plate:#FBFAF6;--soft:#E6E0F1;--ok:#2F7D5B;--bad:#B23B4E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161B1E;--surface:#1F2629;--ink:#E6ECEA;--muted:#9AA8AC;--line:#33403F;--accent:#B9A2E6;--accent-ink:#1b1430;--eosin:#E68AB2;--plate:#F1F0EA;--soft:#2C2740;--ok:#6BC49A;--bad:#F08A9A}}
+:root[data-theme="dark"]{--bg:#161B1E;--surface:#1F2629;--ink:#E6ECEA;--muted:#9AA8AC;--line:#33403F;--accent:#B9A2E6;--accent-ink:#1b1430;--eosin:#E68AB2;--plate:#F1F0EA;--soft:#2C2740;--ok:#6BC49A;--bad:#F08A9A}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;counter-reset:sec}
+h1,h2,h3{font-family:Literata,Georgia,"Times New Roman",serif;line-height:1.2;margin:0}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--eosin);outline-offset:2px}
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:900px;margin:auto;display:flex;gap:8px;align-items:center;padding:8px 14px}
+.bar-t{font-weight:700;font-size:.95rem;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tg{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:.85rem;font-weight:600;cursor:pointer}
+.tg[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+main{max-width:900px;margin:auto;padding:0 14px 80px}
+.hero{padding:34px 0 10px}
+.hero h1{font-size:clamp(1.9rem,6vw,3rem);font-weight:700;letter-spacing:-.01em;max-width:18ch}
+.hero p{color:var(--muted);max-width:62ch;margin:.8rem 0 0}
+.count{display:inline-block;margin-top:14px;padding:6px 12px;border-radius:8px;background:var(--soft);font-weight:600;font-size:.9rem}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.cta a{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--accent)}
+.cta a.p{background:var(--accent);color:var(--accent-ink)}
+details.toc{margin:22px 0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+details.toc summary{cursor:pointer;font-weight:700}
+.toc ol{margin:.5rem 0 0;padding-left:1.2rem}
+.toc li{margin:.15rem 0}
+.toc ul{padding-left:1rem;margin:.1rem 0 .4rem;font-size:.9rem}
+section.blk{counter-increment:sec;margin-top:46px;counter-reset:fig}
+section.blk>h2{font-size:clamp(1.45rem,4.5vw,2rem);display:flex;gap:12px;align-items:baseline}
+.sec-num::before{content:counter(sec);font-family:Figtree,sans-serif;font-size:.8em;color:var(--eosin);font-weight:700}
+.lead{color:var(--muted);max-width:66ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin:18px 0}
+.card h3{font-size:1.2rem;margin-bottom:4px}
+.card .sub{color:var(--muted);font-size:.9rem;margin:0 0 10px}
+.plate{background:var(--plate);border-radius:10px;padding:6px;border:1px solid #e3e1d8}
+.plate svg{display:block;width:100%;height:auto;max-height:72vh;margin:auto}
+.dg .bn{fill:#EFE5CF;stroke:#8A7652;stroke-width:1.6;stroke-linejoin:round}
+.dg .bn2{fill:#E2D4B6;stroke:#8A7652;stroke-width:1.2}
+.dg .hole{fill:#FBFAF6;stroke:#8A7652;stroke-width:1.6}
+.dg .dk{fill:#CDB98F;stroke:#8A7652;stroke-width:1.2}
+.dg .ln{fill:none;stroke:#8A7652;stroke-width:1.4}
+.dg .dash{fill:none;stroke:#8A7652;stroke-width:1.2;stroke-dasharray:4 4}
+.dg .sk{fill:#F3E9E3;stroke:#C9B3A6;stroke-width:1.2}
+.dg .mu{stroke:rgba(40,20,20,.45);stroke-width:1.2;stroke-linejoin:round}
+.dg .td{fill:#F2ECDD;stroke:#9E927A;stroke-width:1.2}
+.dg .cap{font:600 11px Figtree,sans-serif;fill:#5b5b5b}
+.dg .pin circle{fill:#1F2A2E;stroke:#fff;stroke-width:2;cursor:pointer;transition:r .15s}
+.dg .pin text{fill:#fff;font:700 9.5px Figtree,sans-serif;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.dg .pin.on circle{fill:#C44A7E;r:11}
+.dg.hl .pin{display:none}.dg.hl .pin.q{display:inline}
+.dg .pin.q circle{fill:#C44A7E;r:12}
+.legend{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:4px}
+@media(min-width:640px){.legend{grid-template-columns:1fr 1fr}}
+.legend li{display:flex;gap:8px;align-items:flex-start;padding:6px 8px;border-radius:8px;cursor:pointer}
+.legend li:hover,.legend li.on{background:var(--soft)}
+.legend b{flex:none;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:.72rem;display:grid;place-items:center;margin-top:1px}
+.legend li.on b{background:var(--eosin);color:#fff}
+.legend .nm{font-weight:600}
+.legend small{display:block;color:var(--muted);font-size:.83rem;line-height:1.35}
+body.prova .legend li:not(.rev) .nm,body.prova .legend li:not(.rev) small{filter:blur(6px);user-select:none}
+.tip{border-left:4px solid var(--eosin);background:var(--soft);padding:10px 12px;border-radius:0 10px 10px 0;margin:12px 0;font-size:.93rem}
+.tip strong{display:block;margin-bottom:2px}
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.9rem;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.conf{font-size:.75rem;font-weight:700;padding:1px 6px;border-radius:5px;white-space:nowrap}
+.conf.a{background:#d7efe3;color:#1d5b40}.conf.c{background:#f6e3c6;color:#7a4b0f}
+.cells{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.cell{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px}
+.cell svg{width:100%;height:auto;display:block;border-radius:8px}
+.cell h4{margin:8px 2px 2px;font-size:1rem}
+.cell p{margin:0 2px;font-size:.85rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:.85rem;cursor:pointer;font-weight:600}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.quiz .opts{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+@media(min-width:600px){.quiz .opts{grid-template-columns:1fr 1fr}}
+.opt{padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);cursor:pointer;text-align:left;font-weight:600}
+.opt.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.bad{background:var(--bad);color:#fff;border-color:var(--bad)}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.score{font-weight:700;font-size:1.05rem}
+.qfb{min-height:1.5em;margin-top:10px;font-size:.92rem}
+.nextb{margin-top:10px;padding:10px 18px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:700;cursor:pointer}
+.row2{display:grid;gap:12px}
+@media(min-width:720px){.row2{grid-template-columns:1fr 1fr}}
+.prog{height:10px;border-radius:6px;background:var(--soft);overflow:hidden;margin-top:8px}.prog i{display:block;height:100%;width:0;background:var(--eosin);transition:width .2s}
+.ck{display:grid;grid-template-columns:1fr;gap:2px;margin:0;padding:0;list-style:none}@media(min-width:640px){.ck{grid-template-columns:1fr 1fr}}
+.ck label{display:flex;gap:8px;align-items:flex-start;padding:5px 6px;border-radius:8px;cursor:pointer}.ck label:hover{background:var(--soft)}.ck input{accent-color:var(--eosin);width:18px;height:18px;margin-top:2px;flex:none}.ck a{font-size:.8rem;margin-left:auto;white-space:nowrap}
+details.grp{border-top:1px solid var(--line);padding:8px 0}details.grp summary{cursor:pointer;font-weight:700;display:flex;justify-content:space-between;gap:8px}details.grp summary span{color:var(--muted);font-weight:600;font-size:.88rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:50px;border-top:1px solid var(--line);padding-top:14px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="bar-in">
+  <span class="bar-t">Atlas de bancada</span>
+  <button class="tg" id="bProva" aria-pressed="false" title="Esconde os nomes das legendas: toque para revelar">Modo prova</button>
+  <button class="tg" id="bTema" aria-label="Alternar tema claro/escuro">Tema</button>
+</div></div>
+<main>
+<header class="hero">
+  <h1>Prova prática de Biomorfofuncional I</h1>
+  <p>Ossos, músculos, lâminas e células, desenhados para você aprender a apontar e nomear. Ative o <b>modo prova</b> no topo: as legendas ficam borradas e você revela uma a uma, como na bancada. Toque num número do desenho para achar o nome na legenda.</p>
+  <span class="count" id="countdown">Prova na sexta, 18/09</span>
+  <div class="cta"><a class="p" href="#treino">Treinar identificação</a><a href="#s-pelve">Começar pelo cíngulo pélvico</a></div>
+</header>
+
+<details class="toc" id="toc"><summary>Sumário</summary><ol id="tocList"></ol></details>
+
+<section class="blk" id="s-oficial"><h2><span class="sec-num"></span>O que cai na prova</h2>
+<p class="lead">Lista oficial dos roteiros de prova prática (ossos e músculos). Marque o que já domina: fica salvo neste aparelho. Tecido conjuntivo propriamente dito e cartilaginoso seguem nas seções de histologia.</p>
+<div class="card"><div class="qhead"><h3>Seu progresso</h3><span class="score" id="progTxt">0 / 0</span></div><div class="prog"><i id="progBar"></i></div><button class="chip" id="progReset" style="margin-top:10px">Limpar marcações</button></div>
+<div id="oficial"></div></section>
+
+<section class="blk" id="s-pelve"><h2><span class="sec-num"></span>Cíngulo pélvico e membro inferior: ossos</h2>
+<p class="lead">Na bancada, a primeira pergunta é sempre “qual lado e qual vista?”. Cada peça abaixo tem uma dica de orientação para você não travar.</p>
+<div id="g-pelve"></div></section>
+
+<section class="blk" id="s-mmii-m"><h2><span class="sec-num"></span>Membro inferior: músculos</h2>
+<p class="lead">Nas cores diferentes, como pede o roteiro. No modelo sintético, siga os trajetos: quem cruza, quem vai para onde.</p>
+<div id="g-mmii-m"></div>
+<div class="tip"><strong>Pata de ganso (pé anserino)</strong>Sartório, grácil e semitendinoso se inserem juntos na face medial da tíbia. Se achar os três tendões juntos, você achou os três músculos.</div>
+<div class="tw"><table><thead><tr><th>Grupo</th><th>Músculos do roteiro</th><th>Como reconhecer na peça</th></tr></thead><tbody>
+<tr><td>Pélvicos</td><td>Ilíaco, psoas maior (juntos = iliopsoas); glúteos máximo, médio, mínimo</td><td>Iliopsoas passa por baixo do ligamento inguinal até o trocanter menor. Glúteo máximo cobre tudo; médio aparece acima dele; mínimo só por baixo do médio.</td></tr>
+<tr><td>Adutores</td><td>Pectíneo, adutor curto, longo e magno; grácil</td><td>Leque que sai do púbis/ísquio para a linha áspera. Pectíneo é o mais alto e lateral; o magno é o maior e mais posterior; o curto fica atrás do longo.</td></tr>
+<tr><td>Isquiotibiais</td><td>Semitendinoso, semimembranáceo, bíceps femoral (cabeça longa)</td><td>Saem do túber isquiático. Semitendinoso tem tendão longo e cilíndrico; semimembranáceo é largo e membranoso, por baixo dele; bíceps é lateral e vai para a cabeça da fíbula.</td></tr>
+<tr><td>Anteriores da coxa</td><td>Quadríceps (reto femoral, vastos lateral, medial, intermédio), sartório</td><td>Reto femoral no meio; vasto medial em “gota” perto do joelho; vasto intermédio fica embaixo do reto femoral. Sartório é a fita diagonal.</td></tr>
+<tr><td>Perna</td><td>Tibial anterior, fibular longo e curto, tríceps sural</td><td>Tibial anterior colado na margem anterior da tíbia. Fibulares na face lateral, tendões atrás do maléolo lateral. Gastrocnêmio (2 cabeças) sobre o sóleo, todos no tendão do calcâneo.</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="blk" id="s-mmss"><h2><span class="sec-num"></span>Cíngulo escapular e membro superior: ossos</h2>
+<div id="g-mmss"></div></section>
+
+<section class="blk" id="s-mmss-m"><h2><span class="sec-num"></span>Membro superior: músculos</h2>
+<div id="g-mmss-m"></div>
+<div class="tip"><strong>Manguito rotador (SIRS)</strong>Supraespinal, Infraespinal, Redondo menor e Subescapular. O redondo maior não faz parte, e fica logo abaixo do redondo menor: compare os dois na peça.</div>
+</section>
+
+<section class="blk" id="s-tc"><h2><span class="sec-num"></span>Tecido conjuntivo propriamente dito</h2>
+<p class="lead">Na lâmina, o raciocínio é: muita célula e pouca fibra ou o contrário? As fibras estão organizadas numa direção ou em várias? Os desenhos imitam a coloração HE (núcleos roxos, colágeno rosa).</p>
+<h3 style="margin-top:22px">Células que você precisa reconhecer</h3>
+<div class="cells" id="cells"></div>
+<div id="g-tc"></div>
+<div class="tw"><table><thead><tr><th>Tipo</th><th>O que você vê</th><th>Onde cai na prova</th></tr></thead><tbody>
+<tr><td>Frouxo</td><td>Muitas células variadas, fibras finas e espaçadas, bastante substância fundamental (espaço claro), vasos</td><td>Lâmina própria de mucosas, papilas da derme, ao redor de vasos</td></tr>
+<tr><td>Denso não modelado</td><td>Feixes grossos de colágeno em várias direções, poucas células (fibrócitos achatados)</td><td>Derme reticular, cápsulas de órgãos, pericôndrio, periósteo</td></tr>
+<tr><td>Denso modelado</td><td>Feixes paralelos, núcleos alongados enfileirados entre os feixes</td><td>Tendões, ligamentos, aponeuroses</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Fibra</th><th>Composição</th><th>Coloração que evidencia</th><th>Aspecto</th></tr></thead><tbody>
+<tr><td>Colágena</td><td>Colágeno tipo I</td><td>HE (rosa, acidófila); tricrômico</td><td>Grossa, ondulada, não ramifica</td></tr>
+<tr><td>Reticular</td><td>Colágeno tipo III</td><td>Impregnação por prata (preta); PAS</td><td>Fina, forma rede; invisível no HE</td></tr>
+<tr><td>Elástica</td><td>Elastina + microfibrilas de fibrilina</td><td>Orceína, Weigert, Verhoeff (escura)</td><td>Fina, reta, ramificada; mal vista no HE</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="blk" id="s-cart"><h2><span class="sec-num"></span>Tecido cartilaginoso</h2>
+<p class="lead">As três cartilagens têm condrócitos em lacunas. O que muda é a fibra na matriz e a presença de pericôndrio.</p>
+<div id="g-cart"></div>
+<div class="tw"><table><thead><tr><th></th><th>Hialina</th><th>Elástica</th><th>Fibrocartilagem</th></tr></thead><tbody>
+<tr><th>Fibra</th><td>Colágeno tipo II (não se vê no HE)</td><td>Colágeno II + fibras elásticas</td><td>Colágeno tipo I (feixes visíveis) + II</td></tr>
+<tr><th>Matriz no HE</th><td>Homogênea, “vidro fosco”, basófila</td><td>Com fibras escuras (coloração especial)</td><td>Rosa, acidófila, com feixes</td></tr>
+<tr><th>Células</th><td>Grupos isógenos (2 a 8)</td><td>Condrócitos maiores, isolados ou em pares</td><td>Fileiras entre os feixes</td></tr>
+<tr><th>Pericôndrio</th><td>Sim (exceto cartilagem articular)</td><td>Sim</td><td>Não</td></tr>
+<tr><th>Onde</th><td>Traqueia, brônquios, costal, articular, placa epifisária, nariz</td><td>Pavilhão auricular, epiglote, tuba auditiva</td><td>Disco intervertebral, sínfise púbica, meniscos</td></tr>
+</tbody></table></div>
+<div class="tip"><strong>Pegadinhas clássicas de bancada</strong>
+Fibrocartilagem x tendão: no tendão os núcleos são achatados e sem espaço ao redor; na fibrocartilagem as células são redondas, dentro de lacunas, com um halo basófilo.<br>
+Hialina x osso: osso tem lamelas concêntricas e canal central (ósteon); cartilagem não tem vaso nenhum na matriz.<br>
+Pericôndrio: camada fibrosa externa (fibroblastos, colágeno I) e camada condrogênica interna (células achatadas que viram condroblastos). Crescimento aposicional vem daí; o intersticial vem da divisão dos condrócitos, formando os grupos isógenos.</div>
+</section>
+
+<section class="blk" id="s-gab"><h2><span class="sec-num"></span>Gabarito dos roteiros</h2>
+<p class="lead">Respostas para os números das figuras do roteiro (Netter para colorir). Onde a imagem do PDF está cortada ou ambígua, marquei <span class="conf c">conferir</span>: confirme na aula com a monitoria ou no atlas.</p>
+<div id="gab"></div>
+</section>
+
+<section class="blk" id="treino"><h2><span class="sec-num"></span>Treino de identificação</h2>
+<p class="lead">Um número acende no desenho, você escolhe o nome. Filtre pelo bloco que quer revisar.</p>
+<div class="card quiz">
+  <div class="chips" id="qf"></div>
+  <div class="qhead"><h3 id="qt">…</h3><span class="score" id="qs">0 / 0</span></div>
+  <div class="plate" id="qp"></div>
+  <div class="opts" id="qo"></div>
+  <div class="qfb" id="qfb" aria-live="polite"></div>
+  <button class="nextb" id="qn">Próxima</button>
+</div>
+</section>
+
+<footer>Desenhos esquemáticos originais, simplificados para estudo; use o roteiro, o atlas (Netter, Prometheus) e as peças como referência final. Histologia em cores que imitam HE. Base: roteiros de aula prática de Claudia Furtado e Moema Guimarães e roteiros oficiais de prova prática (ossos e músculos), Biomorfofuncional I, EBMSP. Referências: Moore, Dalley e Agur, Anatomia orientada para a clínica; Netter, Atlas de Anatomia Humana; Junqueira e Carneiro, Histologia básica. Material de estudo entre colegas, sem fins comerciais.</footer>
+</main>
+
+<script>
+/* ---------- utilidades ---------- */
+const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const B=(d,c='bn')=>`<path class="${c}" d="${d}"/>`;
+const M=(c,d)=>`<path class="mu" fill="${c}" d="${d}"/>`;
+const C=['#C9594F','#D98B4A','#C7A93F','#7FA35A','#4F9A94','#5A86C0','#8A6BB8','#C46FA0','#9C7A5B','#6E8F3E','#B5654A'];
+function rng(s){return function(){s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function wavy(x,y,len,ang,amp,waves){const n=Math.max(8,Math.round(len/5));let d='';const ca=Math.cos(ang),sa=Math.sin(ang);for(let i=0;i<=n;i++){const t=i/n,u=(t-.5)*len,v=Math.sin(t*Math.PI*2*waves)*amp;d+=(i?'L':'M')+(x+u*ca-v*sa).toFixed(1)+','+(y+u*sa+v*ca).toFixed(1)}return d}
+
+/* ---------- histologia: células ---------- */
+const H={
+ fibroblasto:(x,y)=>`<path d="M${x-28},${y+5}C${x-12},${y-11} ${x+12},${y-10} ${x+28},${y-5}C${x+12},${y+9} ${x-12},${y+11} ${x-28},${y+5}Z" fill="#c7a1d6" opacity=".85"/><ellipse cx="${x}" cy="${y}" rx="11" ry="5.5" fill="#9b7cc6" stroke="#5a3d8a"/><circle cx="${x+2}" cy="${y}" r="1.8" fill="#3b2566"/>`,
+ fibrocito:(x,y,a=0)=>`<ellipse cx="${x}" cy="${y}" rx="10" ry="2.4" transform="rotate(${a} ${x} ${y})" fill="#4a2f7d"/>`,
+ macrofago:(x,y)=>`<path d="M${x-19},${y-6}C${x-21},${y-19} ${x-2},${y-23} ${x+9},${y-16}C${x+24},${y-14} ${x+23},${y+5} ${x+15},${y+13}C${x+6},${y+23} ${x-15},${y+19} ${x-19},${y+6}Z" fill="#e2bfd6" stroke="#a97c99"/><path d="M${x-9},${y-4}C${x-9},${y-12} ${x+4},${y-12} ${x+5},${y-5}C${x+1},${y-3} ${x+1},${y+2} ${x+5},${y+4}C${x+3},${y+11} ${x-9},${y+9} ${x-9},${y-4}Z" fill="#6a4a96"/><circle cx="${x+12}" cy="${y+3}" r="2.5" fill="#fbf2f6"/><circle cx="${x+9}" cy="${y-10}" r="2" fill="#fbf2f6"/><circle cx="${x-12}" cy="${y+12}" r="1.8" fill="#fbf2f6"/>`,
+ mastocito:(x,y,s=7)=>{const r=rng(s);let g=`<ellipse cx="${x}" cy="${y}" rx="16" ry="13" fill="#c2a6db" stroke="#7b5aa8"/><ellipse cx="${x}" cy="${y}" rx="5" ry="4.5" fill="#8a6bb8" opacity=".6"/>`;for(let i=0;i<46;i++){const a=r()*6.28,d=Math.sqrt(r())*12;g+=`<circle cx="${(x+Math.cos(a)*d*1.2).toFixed(1)}" cy="${(y+Math.sin(a)*d).toFixed(1)}" r="1.5" fill="#3f1f6e"/>`}return g},
+ plasmocito:(x,y)=>{let g=`<ellipse cx="${x}" cy="${y}" rx="14" ry="11" fill="#a888d2" stroke="#6a4a9a"/><circle cx="${x+1}" cy="${y-1}" r="4" fill="#efe4f7"/><circle cx="${x-6}" cy="${y+1}" r="6.5" fill="#5a3d8f"/>`;for(let i=0;i<8;i++){const a=i*.785;g+=`<circle cx="${(x-6+Math.cos(a)*4.4).toFixed(1)}" cy="${(y+1+Math.sin(a)*4.4).toFixed(1)}" r="1.3" fill="#24113f"/>`}return g+`<circle cx="${x-6}" cy="${y+1}" r="1.4" fill="#24113f"/>`},
+ adipocito:(x,y,r=26)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#fcf5f8" stroke="#d58fb0" stroke-width="2.2"/><path d="M${x+r*.55},${y-r*.78}Q${x+r*.98},${y-r*.2} ${x+r*.7},${y+r*.7}Q${x+r*.84},${y} ${x+r*.55},${y-r*.78}Z" fill="#5a3d8a"/>`,
+ vaso:(x,y,r=22)=>{let g=`<circle cx="${x}" cy="${y}" r="${r}" fill="#f7e8ee" stroke="#d27aa1" stroke-width="4"/>`;[[-7,-5],[5,-8],[8,5],[-4,7],[0,0],[-11,3]].forEach(p=>g+=`<circle cx="${x+p[0]*r/22}" cy="${y+p[1]*r/22}" r="${3.6*r/22}" fill="#e0587a"/>`);[0,1.6,3.2,4.8].forEach(a=>g+=`<ellipse cx="${(x+Math.cos(a)*r).toFixed(1)}" cy="${(y+Math.sin(a)*r).toFixed(1)}" rx="4.5" ry="1.6" transform="rotate(${(a*57.3+90).toFixed(0)} ${(x+Math.cos(a)*r).toFixed(1)} ${(y+Math.sin(a)*r).toFixed(1)})" fill="#4a2f7d"/>`);return g},
+ lacuna:(x,y,s=1)=>`<ellipse cx="${x}" cy="${y}" rx="${9*s}" ry="${7*s}" fill="#f7f1fb"/><ellipse cx="${x-.6*s}" cy="${y}" rx="${6.4*s}" ry="${5*s}" fill="#b393d4"/><circle cx="${x-.6*s}" cy="${y}" r="${2.7*s}" fill="#4b2f7d"/>`,
+ condroblasto:(x,y)=>`<ellipse cx="${x}" cy="${y}" rx="10" ry="4.2" fill="#f4eef9"/><ellipse cx="${x}" cy="${y}" rx="8" ry="3" fill="#a787cf"/><ellipse cx="${x}" cy="${y}" rx="3.4" ry="1.8" fill="#4b2f7d"/>`
+};
+function group(x,y,k,rot,s=1){const pts={2:[[-8,0],[8,0]],3:[[-9,-5],[8,-5],[0,8]],4:[[-8,-7],[8,-7],[-8,7],[8,7]]}[k];let g=`<circle cx="${x}" cy="${y}" r="${(k>2?22:17)*s}" fill="#8b6fbd" opacity=".42"/>`;pts.forEach(p=>{const a=rot*Math.PI/180,px=x+(p[0]*Math.cos(a)-p[1]*Math.sin(a))*s,py=y+(p[0]*Math.sin(a)+p[1]*Math.cos(a))*s;g+=H.lacuna(px.toFixed(1),py.toFixed(1),.85*s)});return g}
+function field(id,bg,inner){return `<defs><clipPath id="cp-${id}"><circle cx="160" cy="160" r="150"/></clipPath></defs><g clip-path="url(#cp-${id})"><rect width="320" height="320" fill="${bg}"/>${inner}</g><circle cx="160" cy="160" r="150" fill="none" stroke="#2b2b2b" stroke-width="7"/>`}
+const far=(x,y,pts,d)=>pts.every(p=>Math.hypot(p[0]-x,p[1]-y)>d);
+
+function histFrouxo(){const r=rng(11),sp=[[95,100],[222,100],[228,218],[105,225],[160,255],[175,160],[150,55],[70,165]];let g='';
+ for(let i=0;i<26;i++){const x=20+r()*280,y=20+r()*280;g+=`<path d="${wavy(x,y,60+r()*90,r()*3.14,3+r()*3,1.5+r())}" fill="none" stroke="#e39bbb" stroke-width="${2.5+r()*2.5}" opacity=".8" stroke-linecap="round"/>`}
+ for(let i=0;i<14;i++){const x=20+r()*280,y=20+r()*280;g+=`<path d="${wavy(x,y,70+r()*90,r()*3.14,1,.5)}" fill="none" stroke="#7a4a6e" stroke-width="1.1" opacity=".8"/>`}
+ for(let i=0;i<22;i++){const x=25+r()*270,y=25+r()*270;if(far(x,y,sp,26))g+=H.fibrocito(x.toFixed(0),y.toFixed(0),(r()*180).toFixed(0))}
+ g+=`<path d="${wavy(175,160,130,.35,4,1.8)}" fill="none" stroke="#d9709c" stroke-width="6" stroke-linecap="round"/>`;
+ g+=`<path d="${wavy(150,55,140,-.2,1.2,.6)}" fill="none" stroke="#5e2f55" stroke-width="1.6"/>`;
+ g+=H.macrofago(95,100)+H.mastocito(222,100)+H.plasmocito(228,218)+H.vaso(105,225)+H.fibroblasto(160,255)+H.adipocito(62,165,20);
+ return field('frouxo','#f8e7ef',g)}
+function histDNM(){const r=rng(23);let g='';for(let i=0;i<48;i++){const x=10+r()*300,y=10+r()*300;g+=`<path d="${wavy(x,y,70+r()*90,r()*3.14,4,1.2)}" fill="none" stroke="#d77ea4" stroke-width="${10+r()*6}" opacity=".85" stroke-linecap="round"/>`}
+ for(let i=0;i<26;i++){const x=25+r()*270,y=25+r()*270;g+=H.fibrocito(x.toFixed(0),y.toFixed(0),(r()*180).toFixed(0))}
+ g+=H.fibrocito(205,122,30).replace('rx="10"','rx="13"')+H.vaso(90,232,14);return field('dnm','#efcadb',g)}
+function histDM(){const r=rng(5);let g='';for(let y=4;y<320;y+=15){g+=`<path d="${wavy(160,y,360,0,2.2,6)}" fill="none" stroke="#dc86ab" stroke-width="11" stroke-linecap="round"/>`;let x=10+r()*40;while(x<310){g+=`<ellipse cx="${x.toFixed(0)}" cy="${y+7.5}" rx="11" ry="2" fill="#4a2f7d"/>`;x+=40+r()*40}}
+ return field('dm','#f3d3e1',g)}
+function histRet(){const r=rng(9);const P=[];for(let i=0;i<14;i++){P[i]=[];for(let j=0;j<14;j++)P[i][j]=[i*24+4+r()*14,j*24+4+r()*14]}let g='';
+ for(let i=0;i<14;i++)for(let j=0;j<14;j++){const p=P[i][j];if(i<13&&r()<.8)g+=`<line x1="${p[0]}" y1="${p[1]}" x2="${P[i+1][j][0]}" y2="${P[i+1][j][1]}"/>`;if(j<13&&r()<.8)g+=`<line x1="${p[0]}" y1="${p[1]}" x2="${P[i][j+1][0]}" y2="${P[i][j+1][1]}"/>`}
+ let c='';for(let i=0;i<22;i++)c+=`<circle cx="${(20+r()*280).toFixed(0)}" cy="${(20+r()*280).toFixed(0)}" r="6" fill="#bda067" opacity=".8"/>`;
+ return field('ret','#e8d8ab',c+`<g stroke="#1d1a14" stroke-width="1.3">${g}</g>`)}
+function histHial(){const r=rng(3);let g=`<rect y="0" width="320" height="56" fill="#e7b1ca"/>`;
+ for(let y=8;y<54;y+=10)g+=`<path d="${wavy(160,y,340,0,1.5,5)}" fill="none" stroke="#d27aa1" stroke-width="2.5"/>`;
+ for(let i=0;i<14;i++)g+=H.fibrocito((10+r()*300).toFixed(0),(10+r()*42).toFixed(0),(r()*10-5).toFixed(0));
+ g+=`<rect y="56" width="320" height="40" fill="#ddc7e6"/>`;for(let x=14;x<320;x+=30)g+=H.condroblasto((x+r()*8).toFixed(0),(70+r()*18).toFixed(0));
+ const G=[[175,205,4,20],[80,150,2,70],[250,150,3,10],[115,265,3,40],[225,275,2,110],[160,130,2,0],[50,220,2,90],[270,225,2,30]];G.forEach(q=>g+=group(...q));
+ return field('hial','#d6c9e9',g)}
+function histElast(){const r=rng(17);let g=`<rect y="0" width="320" height="50" fill="#e6b3cb"/>`;for(let i=0;i<12;i++)g+=H.fibrocito((10+r()*300).toFixed(0),(8+r()*38).toFixed(0),0);
+ for(let i=0;i<230;i++){const x=r()*320,y=52+r()*270;g+=`<path d="${wavy(x,y,18+r()*30,r()*3.14,2,1)}" fill="none" stroke="#35203f" stroke-width="1.2" opacity=".75"/>`}
+ [[160,170,1.5],[90,120,1.3],[235,120,1.35],[70,215,1.3],[250,215,1.4],[140,265,1.35],[210,270,1.3],[120,190,1.25],[195,110,1.2]].forEach(q=>g+=`<ellipse cx="${q[0]}" cy="${q[1]}" rx="${12*q[2]}" ry="${10*q[2]}" fill="#9d7fc4" opacity=".35"/>`+H.lacuna(q[0],q[1],q[2]));
+ return field('elast','#dcc6df',g)}
+function histFibro(){const r=rng(29);let g='';for(let x=4;x<330;x+=24)g+=`<path d="${wavy(x,160,360,1.5708,3,2.5)}" fill="none" stroke="#d27aa1" stroke-width="12" opacity=".8" stroke-linecap="round"/>`;
+ for(let x=16;x<320;x+=48){let y=20+r()*50;while(y<300){for(let k=0;k<4&&y<300;k++){g+=`<ellipse cx="${x}" cy="${y.toFixed(0)}" rx="8" ry="7" fill="#8a6bbc" opacity=".55"/>`+H.lacuna(x,y.toFixed(0),.62);y+=15}y+=35+r()*25}}
+ return field('fibro','#f0cadb',g)}
+
+/* ---------- diagramas ---------- */
+const HIP='M60,90C55,55 90,25 150,22C205,20 245,40 252,78L250,98C242,108 236,112 240,130L236,150C240,170 250,205 262,240C272,258 285,272 282,295C278,315 255,320 235,318C215,316 200,325 185,340C165,358 130,360 115,345C100,330 105,300 112,280C115,262 108,245 112,228L98,215C104,195 100,170 82,150L70,140C66,125 70,115 62,105Z';
+const FEM='M40,52C38,38 52,32 62,40L95,55L100,78C92,85 90,92 96,100L100,108C92,112 90,120 92,130L100,320C104,335 130,340 135,360C138,380 125,392 110,390L95,388C90,380 80,380 75,388L60,390C45,392 35,380 38,362C42,342 62,335 66,320L58,120C50,100 40,80 40,52Z';
+const HUM='M40,50C38,32 60,26 80,32L100,40L110,72C104,82 100,90 98,100L96,320C110,335 128,345 132,358C132,370 124,372 120,370C116,385 105,392 90,392L62,392C50,392 42,385 42,372C36,372 30,365 34,352C40,340 55,335 64,320L56,110C44,90 40,72 40,50Z';
+function bone2(x1,y1,x2,y2,w){return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#8A7652" stroke-width="${w+3}" stroke-linecap="round"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#EFE5CF" stroke-width="${w}" stroke-linecap="round"/>`}
+
+const D=[
+/* ===== PELVE / MMII ossos ===== */
+{id:'quadril-lat',g:'pelve',bl:'MMII ossos',t:'Osso do quadril, vista lateral',s:'Lado direito. Anterior para a direita do desenho.',vb:'0 0 300 380',
+ svg:B(HIP)+`<path class="ln" d="M80,120C120,90 170,70 235,72M100,175C140,140 185,115 240,112" opacity=".45"/><circle class="dk" cx="180" cy="210" r="42"/><path class="bn2" d="M152,238A40,40 0 1 1 208,238L196,226A24,24 0 1 0 164,226Z"/><ellipse class="hole" cx="205" cy="290" rx="30" ry="19" transform="rotate(-18 205 290)"/><path class="dash" d="M140,200L120,300M190,170L230,110M215,245L250,300"/>`,
+ p:[[150,24,'Crista ilíaca','Borda superior do ílio, palpável na cintura'],[252,86,'Espinha ilíaca anterossuperior (EIAS)','Ponta anterior da crista; origem do sartório e TFL'],[240,137,'Espinha ilíaca anteroinferior (EIAI)','Abaixo da EIAS; origem do reto femoral'],[58,98,'Espinha ilíaca posterossuperior (EIPS)','Ponta posterior da crista (as “covinhas” lombares)'],[74,143,'Espinha ilíaca posteroinferior (EIPI)','Logo abaixo da EIPS, acima da incisura'],[92,186,'Incisura isquiática maior','Grande chanfradura posterior; passa o piriforme e o n. isquiático'],[106,224,'Espinha isquiática','Separa as incisuras isquiáticas maior e menor'],[150,96,'Face glútea','Face lateral do ílio; origem dos glúteos'],[160,178,'Acetábulo (face semilunar)','Ferradura articular que recebe a cabeça do fêmur'],[181,247,'Incisura do acetábulo','Abertura inferior da ferradura'],[205,290,'Forame obturado','Grande orifício entre ísquio e púbis'],[124,338,'Túber (tuberosidade) isquiático','Onde você senta; origem dos isquiotibiais'],[114,268,'Corpo do ísquio','Parte posteroinferior do acetábulo, acima do túber'],[246,258,'Ramo superior do púbis','Do acetábulo até o corpo do púbis'],[236,318,'Ramo inferior do púbis','Desce e se une ao ramo do ísquio'],[268,292,'Púbis','Parte anteroinferior; os 3 ossos se fundem no acetábulo'],[184,334,'Ramo do ísquio','Une-se ao ramo inferior do púbis']],
+ tip:'Orientação: o acetábulo olha para fora; o forame obturado fica embaixo e à frente dele; a incisura do acetábulo aponta para baixo. Ílio em cima, ísquio atrás e embaixo, púbis na frente.'},
+{id:'quadril-med',g:'pelve',bl:'MMII ossos',t:'Osso do quadril, vista medial',s:'Lado direito. Anterior para a esquerda do desenho.',vb:'0 0 300 380',
+ svg:`<g transform="translate(300 0) scale(-1 1)">${B(HIP)}<ellipse class="hole" cx="205" cy="290" rx="30" ry="19" transform="rotate(-18 205 290)"/></g><path class="bn2" d="M198,118C220,110 238,130 234,158C230,180 212,186 200,172C194,160 206,150 198,138C190,130 186,122 198,118Z"/><path class="ln" d="M205,110C220,98 238,96 244,108" stroke-dasharray="2 3"/><path class="ln" d="M196,176C160,200 110,222 60,250" stroke-width="2.6"/><path class="bn2" d="M20,280C14,292 18,312 30,316L40,312C32,300 30,290 34,282Z"/><path class="dash" d="M180,170L170,300M110,230L60,300"/>`,
+ p:[[140,80,'Fossa ilíaca','Face medial côncava do ílio; origem do músculo ilíaco'],[216,150,'Face auricular','Forma de orelha; articula com o sacro (sacroilíaca)'],[236,104,'Tuberosidade ilíaca','Área rugosa acima da face auricular; ligamentos'],[120,210,'Linha arqueada','Borda da pelve menor, continua para o púbis'],[28,300,'Face sinfisial (sínfise púbica)','Os dois púbis se unem aqui por fibrocartilagem'],[48,270,'Tubérculo púbico','Saliência onde se prende o ligamento inguinal'],[194,224,'Espinha isquiática','Visível também pela face medial'],[95,290,'Forame obturado','Mesmo forame visto por dentro'],[178,338,'Túber isquiático','Parte mais baixa e posterior']],
+ tip:'Se você vê a face auricular e uma fossa côncava lisa, está olhando por dentro. A face sinfisial fica na frente; a face auricular atrás.'},
+{id:'femur',g:'pelve',bl:'MMII ossos',t:'Fêmur, vistas anterior e posterior',s:'Fêmur direito. Esquerda: anterior. Direita: posterior.',vb:'0 0 320 420',
+ svg:B(FEM)+`<circle class="bn" cx="107" cy="58" r="19"/><ellipse class="bn2" cx="88" cy="368" rx="22" ry="14"/><g transform="translate(305 0) scale(-1 1)">${B(FEM)}<circle class="bn" cx="107" cy="58" r="19"/><path class="ln" d="M80,125L85,320" stroke-width="3"/><path class="ln" d="M50,80C60,95 82,100 96,100"/></g><path class="hole" d="M207,375C210,390 226,390 228,375C224,366 212,366 207,375Z"/><text class="cap" x="54" y="414">anterior</text><text class="cap" x="196" y="414">posterior</text>`,
+ p:[[108,54,'Cabeça do fêmur','Esférica, medial, vai no acetábulo'],[86,62,'Colo do fêmur','Liga cabeça ao corpo; local clássico de fratura'],[44,48,'Trocanter maior','Lateral e alto; inserção dos glúteos médio e mínimo'],[97,104,'Trocanter menor','Posteromedial; inserção do iliopsoas'],[137,352,'Epicôndilo medial','Saliência acima do côndilo medial'],[36,352,'Epicôndilo lateral','Saliência acima do côndilo lateral'],[88,368,'Face patelar','Sulco anterior onde desliza a patela'],[222,220,'Linha áspera','Crista posterior; inserção dos adutores e origem dos vastos'],[217,380,'Fossa intercondilar','Entre os côndilos, por trás; ligamentos cruzados'],[186,370,'Côndilo medial','Posterior, mais volumoso'],[252,370,'Côndilo lateral','Posterior, lateral'],[262,46,'Trocanter maior (vista posterior)','Com a fossa trocantérica por dentro']],
+ tip:'Lado do fêmur: cabeça para dentro (medial), linha áspera para trás, face patelar para frente. Com isso, o trocanter maior aponta para o lado do corpo ao qual o osso pertence.'},
+{id:'tibfib',g:'pelve',bl:'MMII ossos',t:'Tíbia e fíbula, vista anterior',s:'Perna direita. Fíbula à esquerda do desenho (lateral).',vb:'0 0 300 420',
+ svg:`<path class="bn" d="M92,45C92,28 120,24 155,26C190,24 218,28 218,45L214,62C205,72 185,78 178,95L172,330C180,345 192,360 192,375L190,405C184,410 178,405 176,392L120,392C112,392 112,380 116,365C124,345 134,335 138,320L135,100C128,80 100,72 96,62Z"/><path class="bn2" d="M140,27L147,14L153,27M158,27L164,13L170,27"/><ellipse class="bn2" cx="158" cy="92" rx="10" ry="8"/><path class="bn" d="M68,80C66,66 74,58 80,60L82,64C92,68 96,78 92,90L90,105L104,355C112,365 110,400 100,412C90,414 86,395 88,380L78,110C72,100 68,92 68,80Z"/><path class="dash" d="M100,160L138,150M103,220L140,210M106,280L140,272M108,330L140,322"/><line class="ln" x1="120" y1="392" x2="176" y2="392" stroke-width="3"/>`,
+ p:[[200,42,'Côndilo medial da tíbia','Maior, plano; faces articulares superiores'],[108,42,'Côndilo lateral da tíbia','Articula por baixo com a cabeça da fíbula'],[155,11,'Eminência intercondilar','Dois tubérculos entre os côndilos'],[158,92,'Tuberosidade da tíbia','Inserção do ligamento da patela'],[155,220,'Corpo (margem anterior) da tíbia','A “canela”, palpável'],[190,398,'Maléolo medial','Tíbia; osso de dentro do tornozelo'],[148,382,'Face articular inferior','Articula com o tálus'],[79,56,'Ápice da cabeça da fíbula','Ponta superior'],[74,80,'Cabeça da fíbula','Inserção do bíceps femoral'],[87,102,'Colo da fíbula','Abaixo da cabeça; n. fibular comum contorna aqui'],[122,170,'Membrana interóssea','Une tíbia e fíbula'],[96,250,'Corpo da fíbula','Fino, lateral'],[97,402,'Maléolo lateral','Fíbula; desce mais baixo que o medial']],
+ tip:'A fíbula é sempre lateral e não participa do joelho. Maléolo lateral é mais baixo e mais posterior que o medial: use isso para saber o lado.'},
+{id:'patela',g:'pelve',bl:'MMII ossos',t:'Patela, vistas anterior e posterior',s:'Patela direita. Esquerda: anterior. Direita: posterior (articular).',vb:'0 0 300 230',
+ svg:`<path class="bn" d="M30,40C50,22 110,22 130,40C140,70 112,150 82,196C50,150 20,70 30,40Z"/><path class="ln" d="M50,60L60,160M80,50L82,180M110,60L102,160" opacity=".35"/><path class="bn" d="M170,40C190,22 250,22 270,40C280,70 252,150 222,196C190,150 160,70 170,40Z"/><path class="bn2" d="M176,52C196,40 216,46 219,60L220,150C206,150 186,110 176,52Z"/><path class="bn2" d="M224,60C228,44 256,38 266,52C262,100 244,140 224,150Z"/><path class="ln" d="M222,52L222,160" stroke-width="2.5"/><text class="cap" x="54" y="224">anterior</text><text class="cap" x="190" y="224">posterior</text>`,
+ p:[[80,30,'Base da patela','Borda superior larga; tendão do quadríceps'],[82,194,'Ápice da patela','Ponta inferior; ligamento da patela'],[80,110,'Face anterior','Rugosa, subcutânea'],[196,96,'Face articular medial','Menor; articula com o côndilo medial'],[248,96,'Face articular lateral','Maior e mais larga: indica o lado'],[222,44,'Crista vertical','Separa as duas faces articulares']],
+ tip:'Lado da patela: deite com o ápice para baixo e a face articular para trás; a face articular lateral (maior) aponta para o lado a que a patela pertence.'},
+{id:'pe',g:'pelve',bl:'MMII ossos',t:'Ossos do pé, vista dorsal',s:'Pé direito. Hálux à esquerda.',vb:'0 0 280 440',
+ svg:`<ellipse class="bn2" cx="165" cy="380" rx="52" ry="55"/><path class="bn" d="M70,300C72,284 100,280 120,286C150,284 172,292 172,316C170,342 150,352 120,350C92,350 70,330 70,300Z"/><path class="bn" d="M62,258L158,258L160,282L64,284Z"/><path class="bn" d="M162,222L216,236L214,292L164,290Z"/><path class="bn" d="M60,214L100,214L100,256L62,256Z"/><path class="bn" d="M104,216L128,216L128,256L104,256Z"/><path class="bn" d="M132,218L158,218L158,256L132,256Z"/>`+
+  [[80,130,210,36],[115,112,212,17],[144,120,214,15],[173,130,218,15],[201,144,230,15]].map(m=>bone2(m[0],m[1]+6,m[0],m[2]-6,m[3])).join('')+`<ellipse class="bn2" cx="220" cy="238" rx="10" ry="8"/>`+
+  [[80,90,124,30],[80,54,84,26],[115,72,104,15],[115,48,64,13],[115,28,40,11],[144,80,112,14],[144,58,72,12],[144,40,50,10],[173,92,122,13],[173,72,84,11],[173,56,64,9],[201,108,136,12],[201,92,100,10],[201,78,84,8]].map(f=>bone2(f[0],f[1],f[0],f[2],f[3])).join(''),
+ p:[[190,408,'Calcâneo','Maior osso do pé; tuberosidade atrás'],[118,318,'Tálus','Articula com tíbia e fíbula (tornozelo)'],[100,270,'Navicular','Medial, em forma de barco, entre tálus e cuneiformes'],[190,262,'Cuboide','Lateral, embaixo dos metatarsais IV e V'],[80,236,'Cuneiforme medial','Base do 1º metatarsal'],[116,236,'Cuneiforme intermédio','O menor; base do 2º'],[145,238,'Cuneiforme lateral','Base do 3º'],[115,196,'Base do metatarsal','Extremidade proximal (II)'],[80,170,'Corpo do 1º metatarsal','Diáfise'],[80,134,'Cabeça do metatarsal','Extremidade distal (I)'],[144,96,'Falange proximal','Todos os dedos têm'],[144,64,'Falange média','O hálux não tem'],[144,44,'Falange distal','Ponta do dedo']],
+ tip:'Retropé: tálus e calcâneo. Mediopé: navicular, cuboide e 3 cuneiformes. Antepé: 5 metatarsais e 14 falanges. Contagem dos metatarsais começa no hálux (I).'},
+
+/* ===== MMII músculos ===== */
+{id:'coxa-ant',g:'mmii-m',bl:'MMII músculos',t:'Quadril e coxa, vista anterior',s:'Coxa direita. Lateral à esquerda do desenho.',vb:'0 0 300 440',
+ svg:`<path class="sk" d="M40,20C30,120 55,300 90,440L200,440C215,330 235,200 232,20Z"/>`+M(C[1],'M72,150C62,220 66,300 100,365L120,372C112,300 112,220 108,130Z')+M(C[4],'M175,240C200,280 205,340 170,378L142,372C150,330 150,280 158,245Z')+M(C[0],'M118,105C104,160 106,280 128,370L142,370C160,280 158,160 140,105Z')+M(C[3],'M182,100L204,100C200,160 192,200 180,245L168,240C172,190 178,140 182,100Z')+M(C[10],'M204,100L218,104C222,220 215,320 200,395L190,392C200,310 206,210 204,100Z')+M(C[6],'M70,25C100,10 140,20 148,40L150,95L132,115C115,90 90,60 70,25Z')+M(C[5],'M150,8L172,10L168,90L150,115L148,40Z')+M(C[9],'M160,90L196,96L180,130L158,122Z')+M(C[8],'M52,60L78,70L80,140L58,150Z')+`<path class="td" d="M58,150L80,140L110,372L97,378Z"/>`+M(C[2],'M66,62L88,58C120,160 180,270 212,388L196,394C160,280 104,170 66,62Z')+`<path class="dash" d="M70,60L205,98" stroke-width="2"/><ellipse class="bn" cx="136" cy="388" rx="18" ry="20"/><path class="td" d="M128,406L146,406L145,436L130,436Z"/>`,
+ p:[[105,55,'Ilíaco','Nasce na fossa ilíaca; forma o iliopsoas'],[160,48,'Psoas maior','Vem das vértebras lombares'],[176,111,'Pectíneo','Adutor mais alto, ao lado do iliopsoas'],[188,170,'Adutor longo','Triângulo medial; borda do trígono femoral'],[212,290,'Grácil','Fita mais medial da coxa; pata de ganso'],[122,160,'Sartório','Fita diagonal da EIAS à face medial da tíbia'],[66,104,'Tensor da fáscia lata','Lateral, alto; continua no trato iliotibial'],[99,330,'Trato iliotibial','Faixa tendínea lateral'],[88,240,'Vasto lateral','Maior dos vastos, lateral'],[134,300,'Reto femoral','Centro da coxa; único biarticular do quadríceps'],[168,332,'Vasto medial','“Gota” acima do joelho, medial'],[136,388,'Patela','Sesamoide dentro do tendão do quadríceps'],[70,40,'Ligamento inguinal (tracejado)','Da EIAS ao tubérculo púbico']],
+ tip:'Vasto intermédio não aparece: está embaixo do reto femoral, direto sobre o fêmur. Afaste o reto femoral no modelo para achá-lo. Adutor curto fica atrás do pectíneo e do adutor longo.'},
+{id:'coxa-post',g:'mmii-m',bl:'MMII músculos',t:'Glúteos e coxa, vista posterior',s:'Lado direito. Lateral à direita do desenho.',vb:'0 0 300 440',
+ svg:`<path class="sk" d="M40,20C30,160 50,330 70,440L250,440C255,330 260,160 250,20Z"/>`+M(C[3],'M70,40C110,10 200,10 240,45L235,90L75,80Z')+M(C[0],'M62,70C100,50 170,55 232,95L238,180C200,175 150,165 110,172L70,150Z')+M(C[10],'M46,150L64,150C66,260 70,340 84,405L70,408C55,340 48,260 46,150Z')+M(C[9],'M64,150L100,165L96,290L70,300C66,250 64,200 64,150Z')+M(C[5],'M72,220L108,210C112,290 112,350 100,395L86,398C78,340 72,280 72,220Z')+M(C[1],'M190,180L222,180L226,360L208,370C205,300 198,240 190,180Z')+M(C[2],'M108,170L140,172C138,240 132,300 118,398L106,398C112,300 110,240 108,170Z')+M(C[6],'M150,172L185,176C200,250 212,330 214,400L198,404C188,330 165,250 150,172Z')+`<path class="td" d="M222,120L242,125L236,405L222,405Z"/><path class="td" d="M112,330L124,330L118,400L108,400Z"/>`+M('#A58BD0','M186,290L206,292L214,392L200,396Z'),
+ p:[[150,35,'Glúteo médio','Aparece acima do máximo; o mínimo está embaixo dele'],[150,118,'Glúteo máximo','O maior e mais superficial'],[122,176,'Túber isquiático (região)','Origem comum dos isquiotibiais'],[124,260,'Semitendinoso','Tendão longo e redondo na metade inferior'],[172,250,'Bíceps femoral (cabeça longa)','Sai do túber isquiático; lateral'],[202,340,'Bíceps femoral (cabeça curta)','Sai da linha áspera, lateral e distal à longa'],[92,340,'Semimembranáceo (semimembranoso)','Largo, por baixo do semitendinoso, medial'],[84,228,'Adutor magno','Visível medialmente entre isquiotibiais e grácil'],[56,300,'Grácil','Borda medial da coxa'],[210,215,'Vasto lateral','Aparece lateral ao bíceps'],[232,300,'Trato iliotibial','Faixa lateral']],
+ tip:'Regra de lado: bíceps femoral lateral (“b” de fora), “semis” mediais. O semitendinoso é superficial ao semimembranáceo.'},
+{id:'perna',g:'mmii-m',bl:'MMII músculos',t:'Perna: anterolateral e posterior',s:'Perna direita. Esquerda: vista anterior. Direita: vista posterior.',vb:'0 0 320 420',
+ svg:`<path class="sk" d="M30,20C20,150 45,300 60,400L125,400C130,300 142,150 138,20Z"/><path class="bn" d="M120,40L132,40C130,200 124,320 118,380L110,380C116,300 120,200 120,40Z"/>`+M(C[2],'M40,230L55,228C66,300 68,350 64,395L54,396C48,340 42,290 40,230Z')+M(C[1],'M30,35L52,38C56,120 58,180 52,230L40,232C32,160 28,100 30,35Z')+M(C[4],'M52,40L78,40C82,150 90,260 96,390L86,392C74,280 60,170 52,40Z')+M(C[6],'M86,250L99,250C104,320 106,360 104,395L95,395C93,340 90,300 86,250Z')+M(C[0],'M78,40L118,40C116,160 108,260 110,390L100,392C94,280 84,160 78,40Z')+`<rect x="40" y="342" width="90" height="16" fill="#fff" opacity=".55" stroke="#9E927A"/>`+
+ `<path class="sk" d="M190,20C178,150 205,300 222,400L278,400C292,300 318,150 306,20Z"/>`+M(C[3],'M200,120L300,120C300,220 280,300 262,340L232,340C212,300 200,220 200,120Z')+`<path class="td" d="M238,300L264,300L259,395L243,395Z"/>`+M(C[8],'M204,40L250,45L250,275C225,270 204,220 204,40Z')+M(C[5],'M250,45L298,40C300,200 280,250 250,260Z')+`<ellipse class="bn" cx="251" cy="404" rx="20" ry="10"/><text class="cap" x="50" y="416">anterior</text><text class="cap" x="226" y="416">posterior</text>`,
+ p:[[100,150,'Tibial anterior','Encostado na tíbia; dorsiflexão e inversão'],[67,150,'Extensor longo dos dedos','Entre tibial anterior e fibulares'],[39,120,'Fibular longo','Face lateral, mais superficial e alto'],[53,315,'Fibular curto','Embaixo do longo, mais distal'],[96,300,'Extensor longo do hálux','Aparece entre os dois na parte distal'],[126,210,'Face medial da tíbia','Osso subcutâneo, sem músculo'],[112,350,'Retináculo dos extensores','Faixa que segura os tendões'],[225,140,'Gastrocnêmio (cabeça medial)','Desce mais que a lateral'],[278,140,'Gastrocnêmio (cabeça lateral)','Nasce acima do côndilo lateral do fêmur'],[276,305,'Sóleo','Embaixo do gastrocnêmio, aparece nas laterais'],[251,360,'Tendão do calcâneo','Tendão comum do tríceps sural'],[251,404,'Tuberosidade do calcâneo','Inserção do tendão']],
+ tip:'Tríceps sural = gastrocnêmio (2 cabeças) + sóleo. O plantar é um músculo pequeno com tendão longo e fino entre os dois. Os tendões dos fibulares passam atrás do maléolo lateral.'},
+
+/* ===== MMSS ossos ===== */
+{id:'escapula',g:'mmss',bl:'MMSS ossos',t:'Escápula (posterior) e clavícula',s:'Lado direito. Lateral à direita do desenho.',vb:'0 0 320 360',
+ svg:`<path class="bn" d="M68,70L150,78C165,80 172,72 185,80L205,88C222,92 232,100 238,118C236,132 226,140 215,142C190,200 150,270 112,322C100,300 80,200 68,70Z"/><path class="bn2" d="M198,82C200,62 215,50 235,52L236,60C222,62 212,70 210,86Z"/><path class="bn2" d="M70,122L205,92L208,104L74,136Z"/><path class="bn" d="M205,88C220,70 250,55 272,62C282,68 276,85 262,90L215,104Z"/><ellipse class="dk" cx="236" cy="124" rx="6" ry="16"/><path class="bn" d="M40,30C90,15 150,40 200,32C230,28 255,36 268,48L264,56C250,46 228,40 200,44C150,52 90,30 44,42Z"/>`,
+ p:[[248,70,'Acrômio','Ponto mais alto e lateral do ombro'],[140,114,'Espinha da escápula','Crista posterior que termina no acrômio'],[130,93,'Fossa supraespinal','Acima da espinha; músculo supraespinal'],[135,190,'Fossa infraespinal','Abaixo da espinha; músculo infraespinal'],[236,124,'Cavidade glenoidal','Articula com a cabeça do úmero (lateral)'],[222,52,'Processo coracoide','Anterior, “bico de corvo”; aparece por cima'],[180,76,'Incisura da escápula','Na margem superior; n. supraescapular'],[68,70,'Ângulo superior','Encontro das margens superior e medial'],[112,322,'Ângulo inferior','Ponta de baixo'],[84,220,'Borda (margem) medial ou vertebral','Voltada para a coluna'],[178,215,'Borda (margem) lateral ou axilar','Voltada para a axila'],[150,40,'Corpo da clavícula','Parte entre as extremidades, em S'],[46,34,'Extremidade esternal da clavícula','Arredondada, articula com o esterno'],[262,50,'Extremidade acromial da clavícula','Achatada, articula com o acrômio']],
+ tip:'Escápula: espinha atrás, glenoide para fora, coracoide para frente. Clavícula: ponta arredondada vai no esterno, ponta achatada vai no acrômio; a curva medial é convexa para frente.'},
+{id:'escapula-ant',g:'mmss',bl:'MMSS ossos',t:'Escápula, vista anterior (costal)',s:'Lado direito. Lateral à esquerda do desenho.',vb:'0 0 320 360',
+ svg:`<g transform="translate(306 0) scale(-1 1)"><path class="bn" d="M68,70L150,78C165,80 172,72 185,80L205,88C222,92 232,100 238,118C236,132 226,140 215,142C190,200 150,270 112,322C100,300 80,200 68,70Z"/><path class="bn" d="M205,88C220,70 250,55 272,62C282,68 276,85 262,90L215,104Z" opacity=".8"/></g><path class="bn" d="M110,88C96,60 72,48 52,58C44,64 50,74 60,72C76,68 90,80 96,100Z"/><ellipse class="dk" cx="70" cy="124" rx="6" ry="16"/><path class="ln" d="M150,120L210,110M140,170L225,150M150,220L220,200" opacity=".4"/>`,
+ p:[[175,180,'Fossa subescapular','Face anterior côncava; origem do subescapular'],[62,56,'Processo coracoide','Projeta-se para frente; peitoral menor, bíceps (curta), coracobraquial'],[44,66,'Acrômio (visto pela frente)','Atrás e acima do coracoide'],[70,124,'Cavidade glenoidal','Lateral'],[238,70,'Ângulo superior','Medial e alto'],[194,322,'Ângulo inferior','Ponta de baixo'],[228,200,'Borda medial (vertebral)','Voltada para a coluna'],[130,215,'Borda lateral (axilar)','Voltada para a axila']],
+ tip:'Face lisa e côncava sem espinha = vista anterior. Se enxergar a espinha, virou posterior.'},
+{id:'umero',g:'mmss',bl:'MMSS ossos',t:'Úmero, vistas anterior e posterior',s:'Úmero direito. Esquerda: anterior. Direita: posterior.',vb:'0 0 320 420',
+ svg:B(HUM)+`<circle class="bn" cx="108" cy="48" r="24"/><path class="ln" d="M64,48L66,112" stroke-width="3"/><path class="ln" d="M50,160L60,185" stroke-width="3"/><ellipse class="hole" cx="92" cy="350" rx="9" ry="6"/><ellipse class="hole" cx="62" cy="354" rx="7" ry="5"/><circle class="bn2" cx="58" cy="378" r="11"/><path class="bn2" d="M80,372C80,362 112,362 112,372L108,378C112,386 110,392 96,392C84,392 78,386 84,378Z"/><g transform="translate(310 0) scale(-1 1)">${B(HUM)}<circle class="bn" cx="108" cy="48" r="24"/><path class="dash" d="M50,140L78,230" stroke-width="2.4"/></g><path class="hole" d="M218,352C218,338 246,338 246,352C246,364 218,364 218,352Z"/><path class="bn2" d="M216,376C216,368 248,368 248,376C248,388 216,388 216,376Z"/><text class="cap" x="54" y="414">anterior</text><text class="cap" x="204" y="414">posterior</text>`,
+ p:[[112,44,'Cabeça do úmero','Medial; vai na cavidade glenoidal'],[44,56,'Tubérculo maior','Lateral; supra, infraespinal e redondo menor'],[82,66,'Tubérculo menor','Anterior; subescapular'],[65,96,'Sulco intertubercular','Entre os tubérculos; tendão da cabeça longa do bíceps'],[55,172,'Tuberosidade para o deltoide','Rugosidade lateral no meio do corpo'],[34,352,'Epicôndilo lateral','Origem dos extensores do antebraço'],[131,356,'Epicôndilo medial','Maior; origem dos flexores'],[58,378,'Capítulo','Redondo, lateral; articula com o rádio'],[97,382,'Tróclea','Carretel medial; articula com a ulna'],[92,346,'Fossa coronoide','Recebe o processo coronoide na flexão'],[62,352,'Fossa radial','Acima do capítulo; recebe a cabeça do rádio na flexão'],[232,350,'Fossa do olécrano','Posterior, grande; recebe o olécrano na extensão'],[250,185,'Sulco do nervo radial','Diagonal na face posterior']],
+ tip:'Sulco intertubercular fica na frente; fossa do olécrano atrás. O epicôndilo medial é o mais saliente: aponta para o corpo.'},
+{id:'radulna',g:'mmss',bl:'MMSS ossos',t:'Rádio e ulna, vista anterior (supinação)',s:'Antebraço direito. Rádio à esquerda (lateral).',vb:'0 0 300 420',
+ svg:`<path class="bn" d="M168,95L190,85C188,200 180,300 182,360C190,370 192,385 186,398L176,398C168,385 166,370 168,360C172,300 170,200 168,95Z"/><path class="bn" d="M160,72C150,50 158,22 178,18C196,14 214,20 214,36C212,56 200,72 190,86L168,96C164,90 166,84 172,80C186,70 194,54 186,46C178,40 170,46 168,56Z"/><path class="bn" d="M92,95L130,95L128,112L124,125C132,135 132,148 124,155C124,250 140,330 158,372L158,392C130,395 105,398 82,408C74,398 76,385 80,375C92,300 104,220 100,155L96,112Z"/><ellipse class="bn2" cx="111" cy="95" rx="20" ry="7"/><path class="dash" d="M118,170L170,150M124,210L172,190M130,250L174,232M138,290L176,272M146,330L178,312"/>`,
+ p:[[200,22,'Olécrano','Ponta do cotovelo'],[178,58,'Incisura troclear','Encaixa na tróclea do úmero'],[170,90,'Processo coronoide','Lábio anterior da incisura troclear'],[111,90,'Cabeça do rádio','Disco que gira no capítulo'],[112,118,'Colo do rádio','Abaixo da cabeça'],[128,142,'Tuberosidade do rádio','Inserção do bíceps braquial'],[152,212,'Membrana interóssea','Une rádio e ulna'],[116,270,'Corpo do rádio','Diáfise, alarga para distal'],[180,250,'Corpo da ulna','Diáfise, afina para distal'],[80,400,'Processo estiloide do rádio','Lateral, maior e mais baixo'],[184,398,'Processo estiloide da ulna','Medial, menor'],[180,375,'Cabeça da ulna','Distal (a cabeça do rádio é proximal)']],
+ tip:'Rádio: cabeça em cima, largo embaixo. Ulna: olécrano em cima, fina embaixo. Em pronação o rádio cruza por cima da ulna.'},
+{id:'mao',g:'mmss',bl:'MMSS ossos',t:'Ossos da mão, vista anterior',s:'Mão direita. Polegar à esquerda.',vb:'0 0 300 420',
+ svg:[[80,315,46,248,17],[110,312,110,212,13],[140,314,140,202,13],[168,314,168,214,12],[195,314,195,230,11],[46,238,32,196,12],[30,188,22,160,10],[110,202,110,152,11],[110,146,110,116,9],[110,110,110,90,8],[140,192,140,136,11],[140,130,140,96,9],[140,90,140,68,8],[168,204,168,152,10],[168,146,168,114,9],[168,108,168,88,7],[195,220,195,176,9],[195,170,195,146,8],[195,140,195,124,7]].map(b=>bone2(...b)).join('')+`<ellipse class="bn" cx="96" cy="378" rx="18" ry="14"/><ellipse class="bn" cx="130" cy="384" rx="15" ry="13"/><ellipse class="bn" cx="163" cy="378" rx="15" ry="13"/><circle class="bn2" cx="186" cy="364" r="9"/><ellipse class="bn" cx="80" cy="336" rx="16" ry="13"/><ellipse class="bn" cx="109" cy="338" rx="12" ry="12"/><ellipse class="bn" cx="140" cy="342" rx="16" ry="18"/><ellipse class="bn" cx="173" cy="336" rx="16" ry="15"/><path class="bn2" d="M168,332C176,320 186,322 184,334Z"/><circle class="bn2" cx="42" cy="246" r="4.5"/><circle class="bn2" cx="54" cy="252" r="4.5"/>`,
+ p:[[92,382,'Escafoide','Fileira proximal, lateral (lado do polegar)'],[130,388,'Semilunar','Meia-lua, no centro'],[160,384,'Piramidal','Medial, embaixo do pisiforme'],[190,360,'Pisiforme','Pequeno, anterior ao piramidal'],[74,332,'Trapézio','Base do polegar'],[108,332,'Trapezoide','Base do 2º metacarpal'],[140,346,'Capitato','O maior, central'],[176,340,'Hamato','Tem o hâmulo (gancho) anterior'],[140,298,'Base do metacarpal','Proximal, articula com o carpo'],[140,255,'Corpo do metacarpal','Diáfise (I a V a partir do polegar)'],[140,212,'Cabeça do metacarpal','Distal, forma os “nós dos dedos”'],[140,164,'Falange proximal','Dedos II a V têm 3 falanges'],[140,113,'Falange média','O polegar não tem'],[140,79,'Falange distal','Ponta'],[48,262,'Sesamoides','Na cabeça do 1º metacarpal']],
+ tip:'Carpais, de lateral para medial. Fileira proximal: escafoide, semilunar, piramidal, pisiforme. Fileira distal: trapézio, trapezoide, capitato, hamato. O trapézio fica embaixo do polegar (“o T do polegar”).'},
+
+/* ===== MMSS músculos ===== */
+{id:'ombro',g:'mmss-m',bl:'MMSS músculos',t:'Ombro: manguito rotador e superficiais',s:'Lado direito. Esquerda: posterior (lateral à direita). Direita: anterior (lateral à esquerda).',vb:'0 0 320 360',
+ svg:`<path class="bn" d="M20,50L110,55L118,80C90,180 60,250 45,300C35,230 25,140 20,50Z"/><rect class="bn" x="130" y="62" width="16" height="280"/><circle class="bn" cx="134" cy="72" r="18"/>`+M(C[2],'M22,58L108,60L126,62L128,72L118,72L24,92Z')+`<path class="bn2" d="M22,95L120,70L124,80L26,108Z"/>`+M(C[3],'M28,112L118,86L140,92L142,108L112,112C80,140 55,170 38,185Z')+M(C[4],'M40,190C70,165 100,130 140,115L142,130C110,145 80,180 45,210Z')+M(C[5],'M45,230C80,200 110,170 140,160L140,178C110,190 80,230 48,262Z')+M(C[6],'M40,270C80,240 110,210 140,190L138,205C110,230 70,280 30,340L22,320Z')+`<path d="M112,60C130,40 162,50 162,70L152,180L130,170C125,120 118,90 112,60Z" fill="${C[0]}" opacity=".55" stroke="rgba(40,20,20,.45)" stroke-dasharray="4 3"/>`+
+ `<path class="sk" d="M172,40L318,40L318,340L200,340Z"/>`+M(C[8],'M222,200L260,212L252,228L218,218ZM220,232L258,244L250,260L216,250Z')+`<path class="bn" d="M185,45L315,62L313,72L184,56Z"/>`+M(C[7],'M215,60L312,74L315,180C280,200 240,190 215,170C225,140 225,95 215,60Z')+`<path class="sk" d="M175,190L206,190L201,340L178,340Z"/>`+M(C[9],'M180,200L202,200L200,330L182,330Z')+M(C[0],'M180,50C168,80 172,140 195,190L215,180C215,130 212,85 215,56Z'),
+ p:[[65,70,'Supraespinal','Na fossa supraespinal, sob o acrômio'],[62,94,'Espinha da escápula','Referência entre supra e infra'],[80,130,'Infraespinal','Na fossa infraespinal'],[92,164,'Redondo menor','Logo abaixo do infraespinal (manguito)'],[96,206,'Redondo maior','Mais abaixo; NÃO é manguito'],[70,275,'Latíssimo do dorso','Largo, sobe para o úmero'],[150,112,'Deltoide (tracejado)','Cobre o ombro por cima de todos'],[196,110,'Deltoide (anterior)','Parte clavicular'],[268,122,'Peitoral maior','Da clavícula e esterno ao sulco intertubercular'],[191,272,'Bíceps braquial','Na frente do braço'],[240,236,'Serrátil anterior','Dentes na parede lateral do tórax'],[250,56,'Clavícula','Referência óssea']],
+ tip:'Subescapular é o único do manguito na face anterior (costal) da escápula: só aparece ao afastar a escápula do tórax no modelo. Trapézio fica por cima de supraespinal e da espinha, na vista posterior superficial.'},
+{id:'dorso',g:'mmss-m',bl:'MMSS músculos',t:'Cintura escapular, vista posterior',s:'Lado direito. Linha média à esquerda. Esquerda: superficial. Direita: profunda (trapézio removido).',vb:'0 0 360 380',
+ svg:`<path class="sk" d="M8,5L175,5L175,370L8,370Z"/><line class="dash" x1="10" y1="5" x2="10" y2="370"/>`+M(C[6],'M10,250C60,200 120,170 170,190L165,232C100,262 50,300 10,340Z')+M(C[5],'M10,10L30,15C60,55 120,65 168,72L162,95C120,108 60,170 10,250Z')+M(C[0],'M150,70C176,68 178,110 172,150L152,140Z')+
+ `<path class="sk" d="M185,5L352,5L352,370L185,370Z"/><line class="dash" x1="190" y1="5" x2="190" y2="370"/><path class="bn" d="M250,60L330,70L345,92C325,150 305,210 272,262C264,200 256,130 250,60Z"/><path class="bn2" d="M252,98L340,78L343,90L255,112Z"/>`+M(C[2],'M204,8L220,8L262,64L248,74Z')+M(C[3],'M192,68L200,66L252,76L252,98L192,96Z')+M(C[4],'M192,102L253,108L271,256L192,214Z'),
+ p:[[80,90,'Trapézio','Losango superficial: occipital, vértebras, espinha e acrômio'],[150,95,'Espinha da escápula (inserção)','Trapézio insere-se aqui e no acrômio'],[70,280,'Latíssimo do dorso','Abaixo do trapézio'],[162,110,'Deltoide','Sobre o ombro'],[233,40,'Elevador da escápula','Das vértebras cervicais ao ângulo superior'],[222,84,'Romboide menor','Faixa estreita acima da espinha'],[228,160,'Romboide maior','Largo, abaixo; até a borda medial'],[300,160,'Escápula (face posterior)','Referência óssea']],
+ tip:'Romboides e elevador ficam embaixo do trapézio: rebata o trapézio no modelo. Romboides levam a borda medial da escápula em direção à coluna.'},
+{id:'torax-ant',g:'mmss-m',bl:'MMSS músculos',t:'Tórax anterior profundo',s:'Lado direito, peitoral maior removido. Lateral à esquerda.',vb:'0 0 300 330',
+ svg:`<path class="sk" d="M5,5L295,5L295,325L5,325Z"/>`+[90,125,160,195,230,265].map(y=>`<path class="ln" d="M20,${y}C90,${y-30} 200,${y-24} 280,${y-4}" stroke-width="5" opacity=".35"/>`).join('')+`<path class="bn" d="M40,32L285,40L284,52L40,46Z"/><path class="bn" d="M72,96C58,76 44,66 30,74C24,80 30,88 38,86C50,84 60,92 66,104Z"/>`+M(C[8],'M18,120L60,130L52,150L16,142ZM18,160L66,170L58,190L16,182ZM18,200L70,210L62,230L16,222ZM18,240L72,250L62,270L16,262Z')+M(C[10],'M64,96L80,90L175,160L168,215L128,218Z'),
+ p:[[120,165,'Peitoral menor','Das costelas 3 a 5 ao processo coracoide'],[36,80,'Processo coracoide','Inserção do peitoral menor'],[42,215,'Serrátil anterior','Digitações nas costelas, parede lateral'],[160,44,'Clavícula','Referência'],[240,250,'Costelas','Referência']],
+ tip:'O peitoral menor só aparece depois de rebater o peitoral maior; seu tendão sempre aponta para o coracoide.'},
+{id:'braco',g:'mmss-m',bl:'MMSS músculos',t:'Braço: flexores e tríceps',s:'Braço direito. Esquerda: anterior. Direita: posterior.',vb:'0 0 320 400',
+ svg:`<path class="sk" d="M30,20L130,20L125,390L40,390Z"/><rect class="bn" x="72" y="30" width="18" height="340" opacity=".6"/>`+M(C[4],'M45,200L118,200C120,280 110,330 90,360L70,360C55,320 42,270 45,200Z')+M(C[0],'M62,40L92,40C105,120 105,250 90,340L72,340C60,250 55,120 62,40Z')+`<path class="ln" d="M77,40L78,110" stroke="#fff" stroke-width="1.5"/>`+M(C[2],'M95,40L113,42L105,160L92,158Z')+`<path class="td" d="M74,338L90,338L88,372L76,372Z"/>`+
+ `<path class="sk" d="M190,20L295,20L290,390L200,390Z"/>`+M(C[6],'M212,240L275,238C272,290 260,320 250,330L225,330C215,300 210,270 212,240Z')+M(C[5],'M205,40L240,40L238,250L210,240C200,160 198,90 205,40Z')+M(C[1],'M240,40L280,50C288,120 280,200 262,240L238,250Z')+`<path class="td" d="M220,300L262,300L255,360L230,360Z"/><ellipse class="bn" cx="243" cy="372" rx="14" ry="9"/>`+M(C[8],'M254,360L278,352L286,390L260,394Z')+`<text class="cap" x="56" y="398">anterior</text><text class="cap" x="220" y="398">posterior</text>`,
+ p:[[78,180,'Bíceps braquial','Duas cabeças (longa lateral, curta medial)'],[104,100,'Coracobraquial','Medial e alto, do coracoide ao úmero'],[52,290,'Braquial','Embaixo do bíceps; aparece nas bordas distais'],[220,140,'Tríceps: cabeça longa','Nasce na escápula (tubérculo infraglenoidal)'],[264,120,'Tríceps: cabeça lateral','Lateral e alta'],[222,262,'Tríceps: cabeça medial','Profunda, aparece distal'],[242,326,'Tendão do tríceps','Vai para o olécrano'],[272,378,'Ancôneo','Pequeno triângulo lateral ao olécrano'],[232,378,'Olécrano','Referência óssea']],
+ tip:'Braquial é o flexor “de verdade” do cotovelo e fica sob o bíceps: afaste o bíceps no modelo. Coracobraquial fica medial, perto da axila.'},
+{id:'antebraco',g:'mmss-m',bl:'MMSS músculos',t:'Antebraço: anterior e posterior',s:'Antebraço direito. Esquerda: anterior (lateral à esquerda). Direita: posterior (lateral à direita).',vb:'0 0 320 420',
+ svg:`<path class="sk" d="M20,10L160,10L150,410L40,410Z"/>`+M(C[9],'M70,230L135,230C130,300 120,350 115,390L80,390C76,340 70,290 70,230Z')+M(C[2],'M25,20L55,15C60,120 55,220 50,330L35,330C28,220 22,120 25,20Z')+M(C[1],'M140,25L152,40L80,170L62,160Z')+M(C[5],'M146,35L158,38C158,150 152,280 142,395L128,395C136,280 140,150 146,35Z')+M(C[4],'M140,38L150,42C140,160 122,260 106,390L97,390C110,260 128,160 140,38Z')+M(C[0],'M132,35L144,42C125,150 98,260 82,380L68,378C82,260 110,150 132,35Z')+`<rect x="38" y="392" width="118" height="14" fill="#fff" opacity=".55" stroke="#9E927A"/><path class="bn" d="M138,12C150,8 162,16 158,28L146,32Z"/>`+
+ `<path class="sk" d="M175,10L315,10L308,410L190,410Z"/>`+M(C[5],'M185,40L203,40C203,200 198,300 190,390L180,390C182,300 184,200 185,40Z')+M(C[8],'M205,80L226,80C224,200 218,300 210,392L198,390C200,300 204,200 205,80Z')+M(C[6],'M226,70L242,70C240,180 234,280 228,390L218,390C222,280 226,180 226,70Z')+M(C[3],'M242,45L270,45C270,160 262,260 255,390L235,390C238,260 238,160 242,45Z')+M(C[1],'M272,40L292,45C295,120 290,190 282,240L268,236C272,170 272,100 272,40Z')+M(C[2],'M290,15L310,20C312,100 305,160 298,200L285,195C290,140 292,80 290,15Z')+M(C[7],'M262,240L285,245L308,360L295,368Z')+M(C[10],'M255,272L275,274L296,380L284,386Z')+M(C[0],'M248,292L262,292L280,395L270,398Z')+M(C[9],'M200,30L225,35L240,80L208,78Z')+`<ellipse class="bn" cx="200" cy="18" rx="14" ry="9"/><rect x="182" y="372" width="130" height="14" fill="#fff" opacity=".55" stroke="#9E927A"/>`,
+ p:[[40,170,'Braquiorradial','Borda lateral; flexor do cotovelo'],[98,110,'Pronador redondo','Diagonal do epicôndilo medial ao meio do rádio'],[100,248,'Flexor radial do carpo','Tendão vai para o lado do polegar'],[126,250,'Palmar longo','Tendão fino no meio do punho (pode faltar)'],[150,210,'Flexor ulnar do carpo','Borda medial'],[96,350,'Flexor superficial dos dedos','Mais profundo, aparece entre os tendões'],[150,20,'Epicôndilo medial','Origem comum dos flexores'],[222,56,'Ancôneo','Perto do olécrano'],[190,200,'Flexor ulnar do carpo','Visto por trás, borda medial'],[212,250,'Extensor ulnar do carpo','Medial dos extensores'],[233,196,'Extensor do dedo mínimo','Entre o ulnar do carpo e o dos dedos'],[254,160,'Extensor dos dedos','Central, 4 tendões'],[281,140,'Extensor radial curto do carpo','Lateral'],[300,90,'Extensor radial longo do carpo','Mais lateral, abaixo do braquiorradial'],[288,300,'Abdutor longo do polegar','Cruza em diagonal para o polegar'],[278,334,'Extensor curto do polegar','Junto do abdutor longo'],[266,350,'Extensor longo do polegar','Mais medial, contorna o tubérculo do rádio']],
+ tip:'Anterior, de lateral para medial, a partir do epicôndilo medial: pronador redondo, flexor radial do carpo, palmar longo, flexor ulnar do carpo (mnemônico: “Pedro Faz Pão Fresco”). Posterior, de lateral para medial: radial longo, radial curto, dos dedos, dedo mínimo, ulnar do carpo.'},
+
+/* ===== Histologia ===== */
+{id:'h-frouxo',g:'tc',bl:'Histologia',t:'TCPD frouxo (HE)',s:'Muitas células, fibras finas espaçadas, muita substância fundamental.',vb:'0 0 320 320',svg:histFrouxo(),
+ p:[[160,255,'Fibroblasto','Núcleo ovoide claro com nucléolo; célula alongada ativa'],[175,160,'Fibra colágena','Rosa, grossa, ondulada'],[112,48,'Fibra elástica','Fina, escura, reta e ramificada'],[95,100,'Macrófago','Núcleo em rim, citoplasma com vacúolos'],[222,100,'Mastócito','Cheio de grânulos escuros (metacromáticos)'],[228,218,'Plasmócito','Núcleo excêntrico em “roda de carroça”, halo claro do Golgi'],[105,225,'Vaso sanguíneo','Hemácias dentro, endotélio na parede'],[62,165,'Adipócito','Vazio (gordura dissolvida), núcleo achatado na borda'],[260,160,'Substância fundamental','Espaço claro entre fibras e células']]},
+{id:'h-dnm',g:'tc',bl:'Histologia',t:'TCPD denso não modelado (HE)',s:'Ex.: derme reticular. Feixes grossos em todas as direções.',vb:'0 0 320 320',svg:histDNM(),
+ p:[[150,165,'Feixes de colágeno em várias direções','Critério principal: sem orientação única'],[205,122,'Núcleo de fibrócito','Achatado, escuro, pouco citoplasma'],[90,232,'Vaso','Poucos, pequenos']]},
+{id:'h-dm',g:'tc',bl:'Histologia',t:'TCPD denso modelado (HE)',s:'Ex.: tendão. Feixes paralelos e núcleos em fila.',vb:'0 0 320 320',svg:histDM(),
+ p:[[160,146,'Feixes paralelos de colágeno','Todos na mesma direção'],[120,176,'Fibrócitos enfileirados','Núcleos alongados entre os feixes, sem lacuna']]},
+{id:'h-ret',g:'tc',bl:'Histologia',t:'Fibras reticulares (impregnação por prata)',s:'Ex.: linfonodo, baço, fígado. Rede preta sobre fundo amarelado.',vb:'0 0 320 320',svg:histRet(),
+ p:[[150,150,'Fibras reticulares (colágeno III)','Finas, pretas, formam rede de sustentação'],[240,90,'Núcleos celulares','Castanho claro, não coram em preto']]},
+{id:'h-hial',g:'cart',bl:'Histologia',t:'Cartilagem hialina (HE)',s:'Ex.: traqueia, cartilagem costal.',vb:'0 0 320 320',svg:histHial(),
+ p:[[160,24,'Pericôndrio (camada fibrosa)','TCD com fibroblastos alongados'],[150,78,'Condroblastos (camada condrogênica)','Achatados, paralelos à superfície'],[175,205,'Grupo isógeno','Condrócitos originados da mesma célula (crescimento intersticial)'],[250,150,'Condrócito na lacuna','O espaço claro é artefato de retração'],[200,228,'Matriz territorial','Halo mais basófilo ao redor do grupo'],[110,205,'Matriz interterritorial','Entre os grupos, mais clara']]},
+{id:'h-elast',g:'cart',bl:'Histologia',t:'Cartilagem elástica (coloração para elástica)',s:'Ex.: pavilhão auricular, epiglote.',vb:'0 0 320 320',svg:histElast(),
+ p:[[160,24,'Pericôndrio','Presente, como na hialina'],[118,152,'Fibras elásticas na matriz','Rede escura ramificada'],[160,170,'Condrócito na lacuna','Maiores e mais numerosos, isolados ou em pares']]},
+{id:'h-fibro',g:'cart',bl:'Histologia',t:'Fibrocartilagem (HE)',s:'Ex.: disco intervertebral, sínfise púbica, menisco.',vb:'0 0 320 320',svg:histFibro(),
+ p:[[76,160,'Feixes de colágeno tipo I','Rosa, paralelos, bem visíveis'],[112,110,'Condrócitos em fileira','Alinhados entre os feixes, dentro de lacunas'],[208,200,'Halo de matriz basófila','Pouca matriz cartilaginosa ao redor das células'],[238,50,'Sem pericôndrio','Diferença-chave com hialina e elástica']]}
+];
+
+/* ---------- galeria de células ---------- */
+const CELLS=[
+ ['Fibroblasto','fibroblasto','Ativo: núcleo grande, claro, com nucléolo; citoplasma basófilo com prolongamentos. Produz fibras e matriz.'],
+ ['Fibrócito','fib2','Inativo: núcleo pequeno, escuro e alongado, quase sem citoplasma visível. Típico do tecido denso.'],
+ ['Macrófago','macrofago','Núcleo em forma de rim, citoplasma com vacúolos. Fagocita; vem do monócito.'],
+ ['Mastócito','mastocito','Oval, cheio de grânulos (heparina e histamina) que ficam roxos/metacromáticos no azul de toluidina.'],
+ ['Plasmócito','plasmocito','Núcleo excêntrico em “roda de carroça”, citoplasma basófilo e halo claro perinuclear (Golgi). Produz anticorpos.'],
+ ['Adipócito unilocular','adipocito','Uma gota de gordura que some no preparo: parece vazio, núcleo espremido na borda (anel de sinete).'],
+ ['Condroblasto','condroblasto','Achatado, logo abaixo do pericôndrio. Ainda sintetizando matriz.'],
+ ['Condrócito','lacuna','Redondo, dentro de uma lacuna na matriz. Pode formar grupos isógenos.']
+];
+function cellSvg(k){const bg=k==='condroblasto'||k==='lacuna'?'#d6c9e9':'#f8e7ef';let inner;
+ if(k==='fib2')inner=`<g transform="translate(70 55) scale(2.4)">${H.fibrocito(0,0,-8)}</g>`;
+ else if(k==='adipocito')inner=`<g transform="translate(70 55) scale(1.5)">${H.adipocito(0,0,26)}</g>`;
+ else if(k==='lacuna')inner=`<g transform="translate(70 55) scale(3)">${H.lacuna(0,0,1)}</g>`;
+ else inner=`<g transform="translate(70 55) scale(2.2)">${H[k](0,0)}</g>`;
+ return `<svg viewBox="0 0 140 110" role="img" aria-label="Desenho de ${k}"><rect width="140" height="110" fill="${bg}"/>${inner}</svg>`}
+
+/* ---------- gabarito ---------- */
+const GAB=[
+ ['Roteiro 5 · Fig. 1: osso do quadril',[['1','Ísquio','a'],['2','Ílio','a'],['3','Púbis','a'],['Retângulos, vista lateral (de cima p/ baixo)','Espinha ilíaca posterossuperior; espinha ilíaca posteroinferior; incisura isquiática maior; acetábulo (retângulo à direita, dentro da cavidade)','c'],['Retângulos, vista medial (de cima p/ baixo)','Face auricular; espinha ilíaca posteroinferior / incisura isquiática maior; incisura isquiática menor (termina em “…or”); túber isquiático','c']]],
+ ['Roteiro 5 · Fig. 2: ossos do MI e pé',[['1','Fêmur','a'],['2','Patela','a'],['3','Tíbia','a'],['4','Fíbula','a'],['Pé 1','Calcâneo','a'],['Pé 2','Tálus','a'],['Pé 3','Navicular','a'],['Pé 4','Cuneiformes (medial, intermédio, lateral)','a'],['Pé 5','Cuboide','a'],['Pé 6','Metatarsais','a'],['Pé 7','Falanges','a']]],
+ ['Roteiro 5 · coxa posterior',[['1','Semitendinoso','a'],['2','Semimembranáceo','a'],['3 e 4','Bíceps femoral: cabeça longa e cabeça curta (a curta é mais profunda e lateral, sai da linha áspera)','c']]],
+ ['Roteiro 5 · coxa anterior',[['1','Pectíneo','c'],['2','Iliopsoas','c'],['3','Tensor da fáscia lata','c'],['4','Sartório','a'],['5','Reto femoral','a'],['6','Vasto lateral','a'],['7','Vasto medial','a']]],
+ ['Roteiro 5 · perna anterolateral',[['1','Fibular longo','a'],['2','Tibial anterior','a'],['3','Fibular curto','a'],['4','Extensor longo dos dedos','a'],['5','Extensor longo do hálux','a'],['6','Extensor curto dos dedos (dorso do pé)','c']]],
+ ['Roteiro 5 · perna posterior',[['1','Plantar','c'],['2','Gastrocnêmio','a'],['3','Sóleo','a']]],
+ ['Roteiro 4 · Fig. 1: cíngulo escapular e úmero',[['1','Clavícula','a'],['2','Escápula','a'],['3','Úmero','a'],['4','Espinha da escápula','a'],['5','Cavidade glenoidal / colo da escápula','c'],['6','Tróclea (vista posterior)','c'],['7','Extremidade esternal da clavícula','a'],['8','Extremidade acromial da clavícula','a']]],
+ ['Roteiro 4 · antebraço e mão (ossos)',[['1','Rádio','a'],['2','Ulna','a'],['9','Metacarpais','a'],['10','Falanges (proximal, média, distal)','a'],['11','Sesamoides','a']]],
+ ['Roteiro 4 · ombro',[['1','Deltoide','a'],['3','Supraespinal','a'],['4','Infraespinal','a'],['5','Redondo menor','c'],['7','Subescapular','a']]],
+ ['Roteiro 4 · braço',[['1','Bíceps braquial','a'],['2','Coracobraquial','a'],['3','Braquial','a'],['4','Tríceps braquial','a'],['5','Ancôneo','c']]],
+ ['Roteiro 4 · antebraço anterior',[['1','Pronador redondo','a'],['2','Flexor radial do carpo','a'],['3','Palmar longo','a'],['4','Flexor ulnar do carpo','a']]],
+ ['Roteiro 4 · antebraço posterior',[['1','Extensor ulnar do carpo','c'],['2','Extensor do dedo mínimo','c'],['5','Extensor radial curto do carpo','c'],['6','Extensor dos dedos','c'],['7','Abdutor longo do polegar','a'],['8','Extensor curto do polegar','a'],['9','Extensor longo do polegar','a']]]
+];
+
+/* ---------- render ---------- */
+function svgFor(d,opt={}){const pins=d.p.map((q,i)=>`<g class="pin${opt.q===i?' q':''}" data-i="${i}" tabindex="${opt.q==null?0:-1}" role="button" aria-label="Estrutura ${i+1}"><circle cx="${q[0]}" cy="${q[1]}" r="9"/><text x="${q[0]}" y="${q[1]}">${opt.q!=null?'?':i+1}</text></g>`).join('');
+ return `<svg class="dg${opt.q!=null?' hl':''}" viewBox="${d.vb}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${d.t}">${d.svg}${pins}</svg>`}
+function renderDiagram(d){const el=document.createElement('article');el.className='card';el.id='d-'+d.id;
+ el.innerHTML=`<h3>${d.t}</h3><p class="sub">${d.s}</p><div class="plate">${svgFor(d)}</div><ol class="legend">${d.p.map((q,i)=>`<li data-i="${i}"><b>${i+1}</b><div><span class="nm">${q[2]}</span><small>${q[3]}</small></div></li>`).join('')}</ol>${d.tip?`<div class="tip"><strong>Dica de bancada</strong>${d.tip}</div>`:''}`;
+ const sel=i=>{el.querySelectorAll('.pin').forEach(p=>p.classList.toggle('on',p.dataset.i==i));el.querySelectorAll('.legend li').forEach(l=>l.classList.toggle('on',l.dataset.i==i))};
+ el.querySelectorAll('.pin').forEach(p=>{const f=()=>{sel(p.dataset.i);const li=el.querySelector(`.legend li[data-i="${p.dataset.i}"]`);li.classList.add('rev');li.scrollIntoView({block:'nearest',behavior:'smooth'})};p.addEventListener('click',f);p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f()}})});
+ el.querySelectorAll('.legend li').forEach(l=>l.addEventListener('click',()=>{l.classList.toggle('rev');sel(l.dataset.i)}));
+ document.getElementById('g-'+d.g).appendChild(el)}
+D.forEach(renderDiagram);
+
+document.getElementById('cells').innerHTML=CELLS.map(c=>`<div class="cell">${cellSvg(c[1])}<h4>${c[0]}</h4><p>${c[2]}</p></div>`).join('');
+document.getElementById('gab').innerHTML=GAB.map(g=>`<div class="card"><h3>${g[0]}</h3><div class="tw"><table><thead><tr><th style="width:26%">Nº</th><th>Estrutura</th><th style="width:80px">Status</th></tr></thead><tbody>${g[1].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><span class="conf ${r[2]}">${r[2]==='a'?'ok':'conferir'}</span></td></tr>`).join('')}</tbody></table></div></div>`).join('');
+
+
+/* ---------- conteúdo oficial ---------- */
+const OF=[
+ ['Ossos · Cintura escapular',[['Clavícula: extremidade esternal, acromial e corpo','escapula'],['Escápula: espinha, acrômio, processo coracoide','escapula'],['Escápula: fossa subescapular','escapula-ant'],['Escápula: fossas supra e infraespinal','escapula'],['Escápula: ângulos inferior e superior','escapula'],['Escápula: bordas medial (vertebral) e lateral (axilar)','escapula'],['Escápula: cavidade glenoidal','escapula']]],
+ ['Ossos · Membro superior',[['Úmero: cabeça, tubérculos maior e menor','umero'],['Úmero: epicôndilos medial e lateral, tróclea','umero'],['Úmero: fossas coronoide, radial e do olécrano','umero'],['Ulna: olécrano, processo coronoide, corpo, cabeça, processo estiloide','radulna'],['Rádio: cabeça, tuberosidade, corpo, processo estiloide','radulna'],['Carpo: escafoide, semilunar, piramidal, pisiforme','mao'],['Carpo: trapézio, trapezoide, capitato, hamato','mao'],['Metacarpos e falanges: base, corpo e cabeça','mao']]],
+ ['Ossos · Cintura pélvica',[['Crista ilíaca, EIAS, EIAI, EIPS, EIPI','quadril-lat'],['Face auricular e tuberosidade ilíaca','quadril-med'],['Corpo do ísquio, tuberosidade isquiática, ramo do ísquio','quadril-lat'],['Púbis, ramos superior e inferior','quadril-lat'],['Sínfise púbica','quadril-med'],['Acetábulo (face semilunar) e forame obturado','quadril-lat']]],
+ ['Ossos · Membro inferior',[['Fêmur: cabeça, colo, trocanteres maior e menor','femur'],['Fêmur: epicôndilos e côndilos medial e lateral, face patelar','femur'],['Patela: base, ápice, faces articulares','patela'],['Tíbia: côndilos, tuberosidade, corpo, maléolo medial','tibfib'],['Fíbula: cabeça, colo, corpo, maléolo lateral','tibfib'],['Tarso: calcâneo, tálus, navicular, cuboide, cuneiformes','pe'],['Metatarsos e falanges: base, corpo e cabeça','pe']]],
+ ['Músculos · Cintura escapular',[['Trapézio','dorso'],['Romboides maior e menor','dorso'],['Elevador da escápula','dorso'],['Serrátil anterior','torax-ant'],['Peitoral menor','torax-ant']]],
+ ['Músculos · Ombro e braço',[['Deltoide e peitoral maior','ombro'],['Subescapular','escapula-ant'],['Supraespinal e infraespinal','ombro'],['Redondo maior e redondo menor','ombro'],['Bíceps braquial (cabeças longa e curta), braquial, coracobraquial','braco'],['Tríceps braquial','braco'],['Braquiorradial','antebraco']]],
+ ['Músculos · Pelve e quadril',[['Glúteos máximo e médio','coxa-post'],['Glúteo mínimo (profundo ao médio)','coxa-post'],['Tensor da fáscia lata','coxa-ant'],['Iliopsoas','coxa-ant']]],
+ ['Músculos · Coxa e perna',[['Sartório','coxa-ant'],['Quadríceps: reto femoral, vastos lateral, medial e intermédio','coxa-ant'],['Grácil, adutores longo, curto e magno','coxa-ant'],['Bíceps femoral (cabeças longa e curta)','coxa-post'],['Semitendinoso e semimembranoso','coxa-post'],['Tibial anterior','perna'],['Gastrocnêmio e sóleo','perna']]],
+ ['Histologia',[['Células do TCPD: fibroblasto, macrófago, mastócito, plasmócito, adipócito','s-tc'],['TCPD frouxo, denso modelado e não modelado','s-tc'],['Fibras colágenas, reticulares e elásticas','s-tc'],['Cartilagem hialina, elástica e fibrocartilagem','s-cart']]]
+];
+let marks={};try{marks=JSON.parse(LS.get('bmf-check')||'{}')}catch(e){}
+document.getElementById('oficial').innerHTML=OF.map((g,gi)=>`<details class="grp"${gi<2?' open':''}><summary>${g[0]}<span data-g="${gi}"></span></summary><ul class="ck">${g[1].map((it,ii)=>{const k=gi+'-'+ii,href=it[1].startsWith('s-')?it[1]:'d-'+it[1];return `<li><label><input type="checkbox" data-k="${k}"${marks[k]?' checked':''}><span>${it[0]}</span><a href="#${href}">ver</a></label></li>`}).join('')}</ul></details>`).join('');
+function prog(){const all=document.querySelectorAll('#oficial input');const on=[...all].filter(i=>i.checked).length;document.getElementById('progTxt').textContent=`${on} / ${all.length}`;document.getElementById('progBar').style.width=(100*on/all.length)+'%';
+ document.querySelectorAll('#oficial summary span').forEach(sp=>{const ins=sp.closest('details').querySelectorAll('input');sp.textContent=`${[...ins].filter(i=>i.checked).length}/${ins.length}`})}
+document.querySelectorAll('#oficial input').forEach(i=>i.addEventListener('change',()=>{marks[i.dataset.k]=i.checked;LS.set('bmf-check',JSON.stringify(marks));prog()}));
+document.getElementById('progReset').addEventListener('click',()=>{marks={};LS.set('bmf-check','{}');document.querySelectorAll('#oficial input').forEach(i=>i.checked=false);prog()});prog();
+
+/* sumário */
+const tl=document.getElementById('tocList');
+document.querySelectorAll('section.blk').forEach(s=>{const li=document.createElement('li');const h=s.querySelector('h2');li.innerHTML=`<a href="#${s.id}">${h.textContent.trim()}</a>`;const cards=s.querySelectorAll(':scope>div>article.card');if(cards.length){li.innerHTML+=`<ul>${[...cards].map(c=>`<li><a href="#${c.id}">${c.querySelector('h3').textContent}</a></li>`).join('')}</ul>`}tl.appendChild(li)});
+const toc=document.getElementById('toc');if(LS.get('bmf-toc')==='1')toc.open=true;toc.addEventListener('toggle',()=>LS.set('bmf-toc',toc.open?'1':'0'));
+
+/* modo prova e tema */
+const bP=document.getElementById('bProva');
+function setProva(on){document.body.classList.toggle('prova',on);bP.setAttribute('aria-pressed',on);document.querySelectorAll('.legend li').forEach(l=>l.classList.remove('rev'));LS.set('bmf-prova',on?'1':'0')}
+bP.addEventListener('click',()=>setProva(!document.body.classList.contains('prova')));setProva(LS.get('bmf-prova')==='1');
+const root=document.documentElement,t0=LS.get('bmf-tema');if(t0)root.dataset.theme=t0;
+document.getElementById('bTema').addEventListener('click',()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark';LS.set('bmf-tema',root.dataset.theme)});
+
+/* contagem */
+(function(){const prova=new Date(2026,8,18);const hoje=new Date();hoje.setHours(0,0,0,0);const n=Math.round((prova-hoje)/864e5);const el=document.getElementById('countdown');
+ if(n>1)el.textContent=`Prova na sexta, 18/09: faltam ${n} dias`;else if(n===1)el.textContent='Prova amanhã, sexta 18/09';else if(n===0)el.textContent='Prova hoje. Boa prova!'})();
+
+/* treino */
+const BLOCOS=['Tudo','MMII ossos','MMII músculos','MMSS ossos','MMSS músculos','Histologia'];let filtro=LS.get('bmf-filtro')||'Tudo';if(!BLOCOS.includes(filtro))filtro='Tudo';
+let score=[0,0],cur=null,respondido=false;
+const qf=document.getElementById('qf');
+function drawChips(){qf.innerHTML=BLOCOS.map(b=>`<button class="chip" aria-pressed="${b===filtro}">${b}</button>`).join('');qf.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{filtro=c.textContent;LS.set('bmf-filtro',filtro);drawChips();nova()}))}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function nova(){respondido=false;const pool=D.filter(d=>filtro==='Tudo'||d.bl===filtro);const d=pool[Math.floor(Math.random()*pool.length)];const i=Math.floor(Math.random()*d.p.length);cur={d,i};
+ document.getElementById('qt').textContent=d.t;document.getElementById('qp').innerHTML=svgFor(d,{q:i});
+ const nomes=[...new Set(D.filter(x=>x.bl===d.bl).flatMap(x=>x.p.map(q=>q[2])))].filter(n=>n!==d.p[i][2]);
+ const local=shuffle(d.p.map(q=>q[2]).filter(n=>n!==d.p[i][2]));const ops=[d.p[i][2]];for(const n of local.concat(shuffle(nomes))){if(ops.length>=4)break;if(!ops.includes(n))ops.push(n)}
+ const qo=document.getElementById('qo');qo.innerHTML=shuffle(ops).map(o=>`<button class="opt">${o}</button>`).join('');document.getElementById('qfb').textContent='';
+ qo.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{if(respondido)return;respondido=true;const certo=b.textContent===d.p[i][2];score[1]++;if(certo)score[0]++;
+  qo.querySelectorAll('.opt').forEach(x=>{if(x.textContent===d.p[i][2])x.classList.add('ok')});if(!certo)b.classList.add('bad');
+  document.getElementById('qs').textContent=`${score[0]} / ${score[1]}`;document.getElementById('qfb').textContent=(certo?'Certo. ':'Era: '+d.p[i][2]+'. ')+d.p[i][3]}))}
+document.getElementById('qn').addEventListener('click',nova);drawChips();nova();
+</script>
+</body>
+</html>

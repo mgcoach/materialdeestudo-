@@ -1,0 +1,1155 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Mapa dos Nootrópicos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: coluna única de leitura (~740px). Parte A = aulas sobre o sistema nervoso; Parte B = catálogo. Cada família herda a cor da "alavanca" cerebral que puxa. */
+:root{
+  --bg:#F3F5FA; --surface:#FFFFFF; --ink:#151B2C; --muted:#56607A; --line:#D9DFEB;
+  --glu:#7238C9; --ach:#0B8577; --cat:#C9620F; --nrg:#1E4ED6; --bdnf:#3A8424; --calm:#BE3866; --warn:#B3261E;
+  --display:"Unbounded","Trebuchet MS",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1120; --surface:#151C2F; --ink:#E7EBF5; --muted:#A2ABC2; --line:#283150;
+  --glu:#B28BFF; --ach:#4CCFBC; --cat:#FFA24D; --nrg:#86A6FF; --bdnf:#8ACF66; --calm:#FF7DA5; --warn:#FF8A80; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1120; --surface:#151C2F; --ink:#E7EBF5; --muted:#A2ABC2; --line:#283150;
+  --glu:#B28BFF; --ach:#4CCFBC; --cat:#FFA24D; --nrg:#86A6FF; --bdnf:#8ACF66; --calm:#FF7DA5; --warn:#FF8A80; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:740px;margin:0 auto;padding-block:28px 64px;display:flex;flex-direction:column;gap:60px}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;line-height:1.22;margin:0}
+h1{font-size:clamp(30px,8vw,46px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(21px,5.2vw,27px);font-weight:700}
+h3{font-size:18px;font-weight:700}
+h4{font-size:16px;font-weight:500}
+p{margin:0}
+a{color:var(--nrg)}
+sub,sup{line-height:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:18px;scroll-margin-top:64px}
+.lead{font-size:19px;color:var(--muted);max-width:62ch}
+.prose{display:flex;flex-direction:column;gap:14px;max-width:65ch}
+.muted{color:var(--muted)}
+.tint{--c:var(--nrg);background:color-mix(in srgb,var(--c) 10%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 35%,var(--line));border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.tint strong{color:var(--c)}
+.part{display:flex;flex-direction:column;gap:6px;padding:18px 0 4px;border-top:3px solid var(--ink)}
+.part h2{font-size:clamp(24px,6vw,32px)}
+
+/* navegação */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding:10px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line)}
+nav.toc ul{list-style:none;margin:0 auto;padding:0;display:flex;gap:8px;overflow-x:auto;max-width:740px;scrollbar-width:none}
+nav.toc a{display:block;white-space:nowrap;font-size:14px;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px}
+nav.toc a.strong{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--nrg);outline-offset:2px}
+
+/* alavancas */
+.levers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.lever{--c:var(--nrg);display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:color-mix(in srgb,var(--c) 9%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 30%,var(--line))}
+.lever .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--c);color:var(--surface);font-family:var(--mono);font-size:14px;display:grid;place-items:center}
+.lever b{display:block;color:var(--c);font-size:15px}
+.lever span{font-size:14.5px;color:var(--muted);line-height:1.45;display:block}
+.glu{--c:var(--glu)}.ach{--c:var(--ach)}.cat{--c:var(--cat)}.nrg{--c:var(--nrg)}.bdnf{--c:var(--bdnf)}.calm{--c:var(--calm)}.warn{--c:var(--warn)}
+
+figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px}
+figure svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
+figcaption{font-size:14px;color:var(--muted)}
+.svg-t{font-family:var(--body);font-size:11px;fill:var(--muted)}
+.svg-s{font-family:var(--body);font-size:11px;fill:var(--ink)}
+.svg-b{font-family:var(--mono);font-size:12px;fill:var(--surface);font-weight:500}
+.svg-h{font-family:var(--body);font-size:12px;fill:var(--ink);font-weight:700}
+
+/* aulas */
+.aula{display:flex;flex-direction:column;gap:14px;padding:22px 0 0;border-top:1px solid var(--line)}
+.aula-head{display:flex;gap:14px;align-items:flex-start}
+.aula-num{flex:none;font-family:var(--mono);font-size:12px;color:var(--surface);background:var(--c,var(--ink));border-radius:8px;padding:6px 9px;letter-spacing:.04em;margin-top:2px}
+.link{--c:var(--nrg);border-left:4px solid var(--c);border-radius:0;background:color-mix(in srgb,var(--c) 7%,var(--surface));padding:12px 14px;font-size:15.5px}
+.link b{color:var(--c);font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:2px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;font-size:16px}
+.steps li::before{content:counter(s);font-family:var(--mono);font-size:13px;width:28px;height:28px;border-radius:50%;background:var(--c,var(--ink));color:var(--surface);display:grid;place-items:center}
+.steps li>div{min-width:0}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.compare>div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;font-size:15.5px;display:flex;flex-direction:column;gap:6px}
+.compare h4{font-size:15px}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.key{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:14.5px;display:flex;flex-direction:column;gap:4px}
+.key b{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--c,var(--ink))}
+.mol{font-family:var(--mono);font-size:13.5px;background:color-mix(in srgb,var(--muted) 10%,var(--surface));border-radius:6px;padding:1px 6px;white-space:nowrap}
+
+/* famílias */
+.family{display:flex;flex-direction:column;gap:14px;padding-top:6px}
+.fam-head{--c:var(--glu);display:flex;align-items:center;gap:12px;border-bottom:2px solid var(--c);padding-bottom:10px;flex-wrap:wrap}
+.fam-head .dot{width:14px;height:14px;border-radius:50%;background:var(--c);flex:none}
+.fam-head h3{font-size:19px}
+.fam-head .tag{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--c);white-space:nowrap}
+.items{display:grid;gap:12px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.item-top{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+.item h4{font-size:16px}
+.item .aka{font-size:13.5px;color:var(--muted)}
+.ev{margin-left:auto;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.ev-forte{background:color-mix(in srgb,var(--bdnf) 18%,var(--surface));color:var(--bdnf)}
+.ev-mod{background:color-mix(in srgb,var(--ach) 16%,var(--surface));color:var(--ach)}
+.ev-fraca{background:color-mix(in srgb,var(--cat) 16%,var(--surface));color:var(--cat)}
+.ev-nula{background:color-mix(in srgb,var(--muted) 16%,var(--surface));color:var(--muted)}
+.ev-animal{background:color-mix(in srgb,var(--calm) 15%,var(--surface));color:var(--calm)}
+.ev-falhou{background:color-mix(in srgb,var(--warn) 14%,var(--surface));color:var(--warn)}
+.ev-f3{background:color-mix(in srgb,var(--nrg) 15%,var(--surface));color:var(--nrg)}
+.row{display:grid;grid-template-columns:104px 1fr;gap:4px 12px;font-size:15.5px}
+.row dt{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.row dd{margin:0;min-width:0}
+.analogy{font-style:italic;color:var(--muted);font-size:15px;border-left:3px solid var(--line);padding-left:10px;border-radius:0}
+.flag{color:var(--warn);font-weight:700}
+@media (max-width:460px){.row{grid-template-columns:1fr}.row dt{padding-top:6px}}
+
+/* pipeline */
+.pipe{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}
+.pipe div{background:color-mix(in srgb,var(--nrg) calc(var(--k)*1%),var(--surface));border:1px solid var(--line);border-radius:8px;padding:8px 6px;font-size:12.5px;text-align:center;line-height:1.3;min-width:0;overflow-wrap:anywhere}
+.pipe b{display:block;font-family:var(--mono);font-size:11px;color:var(--nrg)}
+@media (max-width:520px){.pipe{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* azul de metileno */
+.mb-hero{border-radius:18px;padding:22px 20px;background:color-mix(in srgb,var(--nrg) 14%,var(--surface));border:1px solid color-mix(in srgb,var(--nrg) 40%,var(--line));display:flex;flex-direction:column;gap:12px}
+.mb-hero h2{color:var(--nrg)}
+.hormesis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hormesis div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px}
+.hormesis b{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+.danger ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+
+/* mapa */
+.matrix-wrap{overflow-x:auto}
+.matrix{display:grid;grid-template-columns:34px repeat(3,minmax(100px,1fr));grid-template-rows:repeat(3,auto) 34px;gap:6px;min-width:360px}
+.cell{border-radius:10px;padding:8px;display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start;min-height:92px;background:color-mix(in srgb,var(--muted) 6%,var(--surface));border:1px solid var(--line)}
+.cell.hot{background:color-mix(in srgb,var(--warn) 9%,var(--surface))}
+.cell.good{background:color-mix(in srgb,var(--bdnf) 11%,var(--surface))}
+.chip{font-size:12.5px;line-height:1.25;padding:3px 8px;border-radius:999px;background:var(--surface);border:1px solid color-mix(in srgb,var(--c,var(--muted)) 55%,var(--line));color:var(--ink)}
+.ylab,.xlab{font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;align-items:center;justify-content:center;text-align:center;letter-spacing:.03em}
+.ylab{writing-mode:vertical-rl;transform:rotate(180deg)}
+.axis-note{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:var(--muted);gap:12px;flex-wrap:wrap}
+
+.lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.lesson{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.lesson h3{font-size:15px}
+.lesson p{font-size:15px;color:var(--muted)}
+.scale{display:flex;flex-direction:column;gap:6px;font-family:var(--mono);font-size:12.5px}
+.scale div{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:center}
+.bar{height:12px;border-radius:6px;background:var(--nrg)}
+
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+tr:last-child td{border-bottom:0}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.fc{--c:var(--nrg);text-align:left;font:inherit;color:var(--ink);background:var(--surface);border:1px solid color-mix(in srgb,var(--c) 40%,var(--line));border-top:4px solid var(--c);border-radius:4px 4px 14px 14px;padding:14px 16px;cursor:pointer;display:flex;flex-direction:column;gap:8px;min-height:120px}
+.fc .q{font-weight:700;font-size:15.5px}
+.fc .a{font-size:15px;color:var(--muted)}
+.fc .hint{font-family:var(--mono);font-size:11px;color:var(--c);margin-top:auto}
+.fc[aria-expanded="true"]{background:color-mix(in srgb,var(--c) 8%,var(--surface))}
+
+.refs{font-size:14.5px;display:flex;flex-direction:column;gap:8px;padding-left:20px;margin:0}
+.refs li{min-width:0;overflow-wrap:anywhere}
+.refs li.grp{display:block;font-size:12.5px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:12px 0 0 -20px}
+footer{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<nav class="toc" aria-label="Seções">
+  <ul>
+    <li><a class="strong" href="#aulas">Aulas</a></li>
+    <li><a href="#aula1">1 · Bateria</a></li>
+    <li><a href="#aula2">2 · Sinapse</a></li>
+    <li><a href="#aula3">3 · Receptores</a></li>
+    <li><a href="#aula4">4 · Memória</a></li>
+    <li><a href="#aula5">5 · BDNF</a></li>
+    <li><a href="#aula6">6 · Dopamina</a></li>
+    <li><a href="#aula7">7 · Vigília</a></li>
+    <li><a href="#aula8">8 · Energia</a></li>
+    <li><a href="#aula9">9 · Barreira</a></li>
+    <li><a class="strong" href="#catalogo">Catálogo</a></li>
+    <li><a href="#familias">Famílias clássicas</a></li>
+    <li><a href="#peptideos">Peptídeos</a></li>
+    <li><a href="#fronteira">Fronteira 2025–26</a></li>
+    <li><a href="#azul">Azul de metileno</a></li>
+    <li><a href="#armadilhas">Armadilhas</a></li>
+    <li><a href="#mapa">Mapa</a></li>
+    <li><a href="#ler">Ler estudos</a></li>
+    <li><a href="#seguranca">Doping</a></li>
+    <li><a href="#revisao">Revisão</a></li>
+    <li><a href="#fontes">Fontes</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+
+<header style="display:flex;flex-direction:column;gap:16px">
+  <span class="eyebrow">Guia de estudo · neurofarmacologia do zero</span>
+  <h1>Mapa dos Nootrópicos</h1>
+  <p class="lead">Primeiro, nove aulas sobre como o sistema nervoso funciona, molécula por molécula. Depois, o catálogo: famílias clássicas, peptídeos, o que está sendo pesquisado agora, azul de metileno e as armadilhas do mercado.</p>
+  <div class="tint nrg">
+    <p><strong>A ideia central:</strong> todo nootrópico mexe em uma de poucas "alavancas" do cérebro. Em pessoas saudáveis e descansadas, quase todos têm efeito pequeno ou nenhum. Os efeitos maiores aparecem quando algo está faltando: sono, energia, idade avançada ou doença. As aulas explicam por quê.</p>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 360 290" role="img" aria-labelledby="syn-t syn-d">
+      <title id="syn-t">Sinapse com as seis alavancas dos nootrópicos</title>
+      <desc id="syn-d">Neurônio que envia em cima, com mitocôndria e vesículas; fenda sináptica no meio; neurônio que recebe embaixo, com receptores e núcleo. Seis marcadores numerados indicam onde cada família age.</desc>
+      <rect x="62" y="12" width="236" height="104" rx="48" fill="color-mix(in srgb, var(--muted) 10%, var(--surface))" stroke="var(--line)"/>
+      <text class="svg-t" x="180" y="30" text-anchor="middle">neurônio que envia</text>
+      <ellipse cx="118" cy="62" rx="32" ry="15" fill="color-mix(in srgb, var(--nrg) 22%, var(--surface))" stroke="var(--nrg)"/>
+      <path d="M94 62 q6 -8 12 0 t12 0 t12 0 t12 0" fill="none" stroke="var(--nrg)" stroke-width="1.2"/>
+      <circle cx="190" cy="62" r="9" fill="color-mix(in srgb, var(--ach) 22%, var(--surface))" stroke="var(--ach)"/>
+      <circle cx="212" cy="74" r="9" fill="color-mix(in srgb, var(--glu) 22%, var(--surface))" stroke="var(--glu)"/>
+      <circle cx="232" cy="56" r="9" fill="color-mix(in srgb, var(--cat) 22%, var(--surface))" stroke="var(--cat)"/>
+      <rect x="258" y="100" width="22" height="16" rx="4" fill="var(--cat)"/>
+      <text class="svg-t" x="180" y="137" text-anchor="middle">fenda sináptica</text>
+      <circle cx="160" cy="128" r="3" fill="var(--glu)"/><circle cx="200" cy="130" r="3" fill="var(--ach)"/><circle cx="226" cy="126" r="3" fill="var(--cat)"/>
+      <rect x="40" y="152" width="280" height="118" rx="22" fill="color-mix(in srgb, var(--muted) 10%, var(--surface))" stroke="var(--line)"/>
+      <rect x="168" y="146" width="24" height="14" rx="4" fill="var(--glu)"/>
+      <rect x="236" y="146" width="24" height="14" rx="4" fill="var(--calm)"/>
+      <rect x="112" y="146" width="24" height="14" rx="4" fill="var(--ach)"/>
+      <ellipse cx="102" cy="226" rx="34" ry="22" fill="color-mix(in srgb, var(--bdnf) 20%, var(--surface))" stroke="var(--bdnf)"/>
+      <text class="svg-t" x="102" y="230" text-anchor="middle">núcleo</text>
+      <text class="svg-t" x="250" y="258" text-anchor="middle">neurônio que recebe</text>
+      <circle cx="180" cy="186" r="12" fill="var(--glu)"/><text class="svg-b" x="180" y="190" text-anchor="middle">1</text>
+      <circle cx="124" cy="186" r="12" fill="var(--ach)"/><text class="svg-b" x="124" y="190" text-anchor="middle">2</text>
+      <circle cx="318" cy="92" r="12" fill="var(--cat)"/><text class="svg-b" x="318" y="96" text-anchor="middle">3</text>
+      <path d="M306 96 L284 104" stroke="var(--cat)" stroke-width="1.2"/>
+      <circle cx="118" cy="97" r="12" fill="var(--nrg)"/><text class="svg-b" x="118" y="101" text-anchor="middle">4</text>
+      <circle cx="160" cy="226" r="12" fill="var(--bdnf)"/><text class="svg-b" x="160" y="230" text-anchor="middle">5</text>
+      <circle cx="248" cy="186" r="12" fill="var(--calm)"/><text class="svg-b" x="248" y="190" text-anchor="middle">6</text>
+    </svg>
+    <figcaption>As seis alavancas. Cada família de nootrópico ganha, neste guia, a cor da alavanca que puxa.</figcaption>
+  </figure>
+
+  <div class="levers">
+    <div class="lever glu"><div class="n">1</div><div><b>Glutamato / AMPA</b><span>O acelerador do cérebro e a base do aprendizado. Racetams e ampakinas.</span></div></div>
+    <div class="lever ach"><div class="n">2</div><div><b>Acetilcolina</b><span>Atenção e codificação de memória. Colinérgicos e nicotina.</span></div></div>
+    <div class="lever cat"><div class="n">3</div><div><b>Dopamina e noradrenalina</b><span>Motivação, alerta e foco executivo. Estimulantes e modafinil.</span></div></div>
+    <div class="lever nrg"><div class="n">4</div><div><b>Energia mitocondrial</b><span>ATP para a "bateria" do neurônio. Creatina, cetonas, azul de metileno.</span></div></div>
+    <div class="lever bdnf"><div class="n">5</div><div><b>Fatores de crescimento</b><span>BDNF, NGF, HGF: construir e manter conexões. A maioria dos peptídeos.</span></div></div>
+    <div class="lever calm"><div class="n">6</div><div><b>Freios e vigília</b><span>Adenosina, GABA e orexina. Cafeína, L-teanina, agonistas de orexina.</span></div></div>
+  </div>
+</header>
+
+<!-- ======================= PARTE A: AULAS ======================= -->
+<section id="aulas">
+  <div class="part">
+    <span class="eyebrow">Parte A</span>
+    <h2>Nove aulas sobre o sistema nervoso</h2>
+    <p class="muted">Cada aula termina ligando o conteúdo aos nootrópicos do catálogo. A ordem importa: cada uma usa a anterior.</p>
+  </div>
+
+  <!-- AULA 1 -->
+  <article class="aula" id="aula1" style="--c:var(--nrg)">
+    <div class="aula-head"><span class="aula-num">AULA 1</span><h3>O neurônio é uma bateria que dispara</h3></div>
+    <div class="prose">
+      <p>Dentro do neurônio há muito potássio (K⁺); fora, muito sódio (Na⁺). Essa diferença é mantida por uma proteína chamada <b>bomba de sódio e potássio</b> (Na⁺/K⁺-ATPase): a cada ciclo ela joga 3 Na⁺ para fora e traz 2 K⁺ para dentro, gastando uma molécula de ATP. O resultado é que o interior da célula fica negativo, perto de <b>−70 mV</b>. Esse é o potencial de repouso: uma bateria carregada.</p>
+      <p>Quando o neurônio recebe estímulo suficiente e chega a cerca de <b>−55 mV</b> (o limiar), canais de sódio sensíveis à voltagem se abrem de uma vez. O Na⁺ entra em avalanche e a voltagem sobe até uns +40 mV. Logo depois os canais de sódio fecham, canais de potássio abrem, o K⁺ sai e a voltagem despenca, passando um pouco abaixo do repouso antes de voltar. Isso é o <b>potencial de ação</b>, o "disparo".</p>
+      <p>Ele é <b>tudo ou nada</b>: ou atinge o limiar e dispara inteiro, ou não dispara. O neurônio não manda disparos "mais fortes"; manda disparos <em>mais frequentes</em>. A bainha de mielina faz o sinal saltar de um nó a outro do axônio, o que deixa a condução muito mais rápida.</p>
+    </div>
+    <figure>
+      <svg viewBox="0 0 360 200" role="img" aria-labelledby="ap-t ap-d">
+        <title id="ap-t">Potencial de ação</title>
+        <desc id="ap-d">Gráfico da voltagem da membrana ao longo do tempo: repouso em menos 70, limiar em menos 55, pico perto de mais 40 com entrada de sódio, queda com saída de potássio e breve hiperpolarização.</desc>
+        <line x1="44" y1="74" x2="340" y2="74" stroke="var(--line)" stroke-dasharray="4 4"/>
+        <line x1="44" y1="134" x2="340" y2="134" stroke="var(--warn)" stroke-dasharray="4 4" opacity=".7"/>
+        <line x1="44" y1="150" x2="340" y2="150" stroke="var(--line)" stroke-dasharray="4 4"/>
+        <text class="svg-t" x="38" y="35" text-anchor="end">+40</text>
+        <text class="svg-t" x="38" y="78" text-anchor="end">0</text>
+        <text class="svg-t" x="38" y="131" text-anchor="end">−55</text>
+        <text class="svg-t" x="38" y="155" text-anchor="end">−70</text>
+        <text class="svg-t" x="12" y="18">mV</text>
+        <path d="M44 150 L108 150 L124 134 C 130 120, 134 40, 140 31 C 146 40, 152 120, 162 161 C 176 167, 200 152, 232 150 L340 150" fill="none" stroke="var(--nrg)" stroke-width="2.6"/>
+        <circle cx="140" cy="31" r="4" fill="var(--nrg)"/>
+        <text class="svg-s" x="104" y="60" text-anchor="end">Na⁺ entra</text>
+        <path d="M106 57 L128 62" stroke="var(--muted)" stroke-width="1"/>
+        <text class="svg-s" x="176" y="60">K⁺ sai</text>
+        <path d="M174 57 L152 72" stroke="var(--muted)" stroke-width="1"/>
+        <text class="svg-t" x="250" y="128">limiar</text>
+        <text class="svg-t" x="250" y="168">repouso</text>
+        <text class="svg-t" x="100" y="178" text-anchor="middle">estímulo</text>
+        <text class="svg-t" x="176" y="186" text-anchor="middle">hiperpolarização</text>
+        <text class="svg-t" x="340" y="196" text-anchor="end">tempo (≈ 2 ms) →</text>
+      </svg>
+      <figcaption>Um potencial de ação dura cerca de 2 milissegundos. A linha tracejada vermelha é o limiar.</figcaption>
+    </figure>
+    <div class="prose"><p>Repare: recarregar a bateria depois de cada disparo custa ATP. Por isso o cérebro, que tem uns 2% do peso do corpo, consome cerca de 20% da energia em repouso.</p></div>
+    <div class="link nrg"><b>Ligação com os nootrópicos</b>Tudo o que mexe com energia (creatina, cetonas, azul de metileno) mira essa conta: um neurônio com pouco ATP dispara pior. Já a cafeína e os estimulantes mudam a frequência dos disparos, não a "força" de cada um.</div>
+  </article>
+
+  <!-- AULA 2 -->
+  <article class="aula" id="aula2" style="--c:var(--glu)">
+    <div class="aula-head"><span class="aula-num">AULA 2</span><h3>A sinapse química, passo a passo</h3></div>
+    <div class="prose"><p>Os neurônios não se tocam. Entre eles há uma fenda de uns 20 nanômetros. O sinal elétrico vira sinal químico, atravessa a fenda e volta a ser elétrico do outro lado. A sequência é sempre a mesma:</p></div>
+    <ol class="steps" style="--c:var(--glu)">
+      <li><div><b>O disparo chega ao terminal.</b> A mudança de voltagem abre canais de cálcio (Ca²⁺) na ponta do axônio.</div></li>
+      <li><div><b>O cálcio solta as vesículas.</b> Bolsinhas cheias de neurotransmissor estão "ancoradas" por proteínas chamadas SNAREs. O Ca²⁺ faz elas se fundirem à membrana e despejarem o conteúdo na fenda.</div></li>
+      <li><div><b>O neurotransmissor encontra o receptor.</b> Do outro lado, receptores reconhecem a molécula pelo formato, como fechadura e chave (aula 3).</div></li>
+      <li><div><b>O sinal precisa terminar.</b> Se o neurotransmissor ficasse na fenda, o sinal nunca acabaria. Há três jeitos de limpar: <b>recaptação</b> por transportadores que puxam a molécula de volta (é o caso da dopamina, noradrenalina e serotonina), <b>degradação</b> por enzimas (a acetilcolinesterase quebra a acetilcolina; a MAO e a COMT quebram as monoaminas) e <b>difusão</b> para longe.</div></li>
+      <li><div><b>O neurônio se autorregula.</b> Autorreceptores no próprio terminal "sentem" quanto foi liberado e freiam novas liberações.</div></li>
+    </ol>
+    <div class="keys">
+      <div class="key glu"><b>Glutamato</b>Principal excitatório. Aprende e acelera.</div>
+      <div class="key calm"><b>GABA</b>Principal inibitório. Freia e estabiliza.</div>
+      <div class="key ach"><b>Acetilcolina</b>Atenção, memória, músculo.</div>
+      <div class="key cat"><b>Dopamina</b>Motivação, saliência, recompensa.</div>
+      <div class="key cat"><b>Noradrenalina</b>Alerta, foco sob demanda.</div>
+      <div class="key bdnf"><b>Serotonina</b>Humor, impulsividade, sono.</div>
+    </div>
+    <div class="link glu"><b>Ligação com os nootrópicos</b>Cada passo é um alvo. O levetiracetam age na vesícula (proteína SV2A). Metilfenidato e modafinil bloqueiam a recaptação (passo 4). O azul de metileno bloqueia a MAO-A, também no passo 4, e é daí que vem o seu risco com antidepressivos.</div>
+  </article>
+
+  <!-- AULA 3 -->
+  <article class="aula" id="aula3" style="--c:var(--ach)">
+    <div class="aula-head"><span class="aula-num">AULA 3</span><h3>Receptores: canais rápidos e cascatas lentas</h3></div>
+    <div class="prose"><p>Existem dois grandes tipos de receptor, e quase toda a farmacologia depende de saber qual é qual.</p></div>
+    <div class="compare">
+      <div><h4>Ionotrópicos (canais)</h4><p>O receptor <em>é</em> um canal. Quando o neurotransmissor encaixa, o canal abre e íons passam na hora. Resposta em milissegundos.</p><p class="muted" style="font-size:14.5px">Exemplos: AMPA e NMDA (glutamato), GABA-A, nicotínico (acetilcolina).</p></div>
+      <div><h4>Metabotrópicos (proteína G)</h4><p>O receptor ativa uma proteína G por dentro, que liga uma cascata de "segundos mensageiros" (como o AMPc). Resposta lenta, de segundos a minutos, que muda o estado da célula.</p><p class="muted" style="font-size:14.5px">Exemplos: dopamina, adrenérgicos, muscarínicos, adenosina, orexina, serotonina 5-HT2A.</p></div>
+    </div>
+    <div class="prose"><p>E como uma molécula de remédio pode interagir com um receptor:</p></div>
+    <div class="keys">
+      <div class="key ach"><b>Agonista</b>Chave que abre. Imita o neurotransmissor. <span class="muted">Ex.: nicotina, oveporexton.</span></div>
+      <div class="key cat"><b>Antagonista</b>Chave que entra mas não gira. Bloqueia. <span class="muted">Ex.: cafeína na adenosina.</span></div>
+      <div class="key glu"><b>Modulador alostérico positivo</b>Não é chave: é um calço num ponto lateral que deixa a porta abrir melhor quando a chave certa chega. <span class="muted">Ex.: aniracetam no AMPA.</span></div>
+      <div class="key calm"><b>Agonista inverso</b>Desliga até a atividade "de fundo" do receptor.</div>
+    </div>
+    <div class="link ach"><b>Ligação com os nootrópicos</b>Moduladores alostéricos são considerados mais "gentis" que agonistas: só amplificam sinais que já existem, respeitando o ritmo natural. Por isso as ampakinas e os racetams nunca causam o efeito brusco de um estimulante.</div>
+  </article>
+
+  <!-- AULA 4 -->
+  <article class="aula" id="aula4" style="--c:var(--glu)">
+    <div class="aula-head"><span class="aula-num">AULA 4</span><h3>Como uma memória é gravada: a potenciação de longo prazo (LTP)</h3></div>
+    <div class="prose">
+      <p>Aprender é, fisicamente, fortalecer sinapses. A regra de Hebb resume: neurônios que disparam juntos se conectam mais. O mecanismo molecular se chama <b>LTP</b> e depende de dois receptores de glutamato trabalhando em dupla.</p>
+    </div>
+    <figure>
+      <svg viewBox="0 0 360 300" role="img" aria-labelledby="ltp-t ltp-d">
+        <title id="ltp-t">Mecanismo da LTP numa espinha dendrítica</title>
+        <desc id="ltp-d">Terminal libera glutamato. O receptor AMPA deixa entrar sódio, o que expulsa o magnésio que tampa o receptor NMDA. O cálcio entra pelo NMDA, ativa a CaMKII, que insere mais receptores AMPA na membrana e, a longo prazo, ativa a CREB no núcleo.</desc>
+        <rect x="80" y="10" width="200" height="56" rx="26" fill="color-mix(in srgb, var(--muted) 10%, var(--surface))" stroke="var(--line)"/>
+        <text class="svg-t" x="180" y="34" text-anchor="middle">terminal que envia</text>
+        <text class="svg-t" x="180" y="50" text-anchor="middle">libera glutamato</text>
+        <circle cx="120" cy="82" r="3.5" fill="var(--glu)"/><circle cx="150" cy="88" r="3.5" fill="var(--glu)"/><circle cx="196" cy="84" r="3.5" fill="var(--glu)"/><circle cx="230" cy="90" r="3.5" fill="var(--glu)"/>
+        <rect x="40" y="108" width="280" height="182" rx="26" fill="color-mix(in srgb, var(--muted) 8%, var(--surface))" stroke="var(--line)"/>
+        <rect x="88" y="100" width="28" height="16" rx="4" fill="var(--glu)"/>
+        <text class="svg-t" x="102" y="132" text-anchor="middle">AMPA</text>
+        <rect x="168" y="100" width="28" height="16" rx="4" fill="var(--ach)"/>
+        <circle cx="182" cy="98" r="6" fill="var(--muted)"/>
+        <text class="svg-t" x="214" y="96">Mg²⁺ tampa</text>
+        <text class="svg-t" x="182" y="132" text-anchor="middle">NMDA</text>
+        <rect x="258" y="100" width="28" height="16" rx="4" fill="none" stroke="var(--glu)" stroke-dasharray="3 3"/>
+        <text class="svg-t" x="272" y="132" text-anchor="middle">+AMPA</text>
+        <path d="M102 138 L102 166" stroke="var(--glu)" stroke-width="1.8" marker-end="url(#ah)"/>
+        <text class="svg-s" x="110" y="160">Na⁺</text>
+        <path d="M182 138 L182 176" stroke="var(--ach)" stroke-width="1.8" marker-end="url(#ah2)"/>
+        <text class="svg-s" x="190" y="160">Ca²⁺</text>
+        <rect x="146" y="182" width="72" height="26" rx="8" fill="color-mix(in srgb, var(--ach) 20%, var(--surface))" stroke="var(--ach)"/>
+        <text class="svg-h" x="182" y="199" text-anchor="middle">CaMKII</text>
+        <path d="M218 194 C 262 194, 276 168, 272 140" fill="none" stroke="var(--glu)" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+        <path d="M182 208 L182 236" stroke="var(--bdnf)" stroke-width="1.6" marker-end="url(#ah3)"/>
+        <rect x="80" y="240" width="204" height="36" rx="10" fill="color-mix(in srgb, var(--bdnf) 18%, var(--surface))" stroke="var(--bdnf)"/>
+        <text class="svg-s" x="182" y="255" text-anchor="middle">CREB liga genes: proteínas novas,</text>
+        <text class="svg-s" x="182" y="269" text-anchor="middle">BDNF e espinhas maiores</text>
+        <circle cx="60" cy="86" r="10" fill="var(--glu)"/><text class="svg-b" x="60" y="90" text-anchor="middle">1</text>
+        <circle cx="66" cy="152" r="10" fill="var(--glu)"/><text class="svg-b" x="66" y="156" text-anchor="middle">2</text>
+        <circle cx="146" cy="152" r="10" fill="var(--ach)"/><text class="svg-b" x="146" y="156" text-anchor="middle">3</text>
+        <circle cx="300" cy="170" r="10" fill="var(--glu)"/><text class="svg-b" x="300" y="174" text-anchor="middle">4</text>
+        <circle cx="60" cy="258" r="10" fill="var(--bdnf)"/><text class="svg-b" x="60" y="262" text-anchor="middle">5</text>
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--glu)" stroke-width="1.6"/></marker>
+          <marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--ach)" stroke-width="1.6"/></marker>
+          <marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--bdnf)" stroke-width="1.6"/></marker>
+        </defs>
+      </svg>
+      <figcaption>Os números seguem a lista abaixo. A seta tracejada é a inserção de novos receptores AMPA: a sinapse fica mais "sensível" da próxima vez.</figcaption>
+    </figure>
+    <ol class="steps" style="--c:var(--glu)">
+      <li><div><b>Glutamato é liberado</b> e se liga aos dois receptores ao mesmo tempo.</div></li>
+      <li><div><b>O AMPA abre e deixa entrar Na⁺.</b> A membrana da espinha despolariza um pouco.</div></li>
+      <li><div><b>O NMDA é um "detector de coincidência".</b> Em repouso, um íon de magnésio (Mg²⁺) tampa o seu poro. Só quando a membrana já está despolarizada (pelo AMPA) <em>e</em> há glutamato, o Mg²⁺ é expulso e o cálcio entra. Ou seja: o NMDA só abre quando os dois neurônios estão ativos juntos.</div></li>
+      <li><div><b>Fase precoce (minutos):</b> o Ca²⁺ ativa a enzima CaMKII, que fosforila os AMPA existentes (deixando-os mais eficientes) e puxa novos AMPA de reserva para a membrana.</div></li>
+      <li><div><b>Fase tardia (horas):</b> o sinal chega ao núcleo, ativa o fator de transcrição CREB e liga genes que fabricam proteínas novas, incluindo BDNF. A espinha cresce. A memória deixa de ser frágil.</div></li>
+    </ol>
+    <div class="link glu"><b>Ligação com os nootrópicos</b>Racetams e ampakinas atuam no passo 2: deixam o AMPA aberto por mais tempo, o que facilita expulsar o Mg²⁺ do NMDA. Mas excesso de glutamato também mata neurônios (excitotoxicidade), por isso drogas que forçam o NMDA diretamente nunca viraram nootrópicos. A L-teanina e as cetonas reduzem o glutamato e ficam do lado da proteção.</div>
+  </article>
+
+  <!-- AULA 5 -->
+  <article class="aula" id="aula5" style="--c:var(--bdnf)">
+    <div class="aula-head"><span class="aula-num">AULA 5</span><h3>BDNF: o adubo das conexões</h3></div>
+    <div class="prose">
+      <p>Neurotrofinas são proteínas que mantêm neurônios vivos e fazem conexões crescerem. A mais estudada é o <b>BDNF</b> (fator neurotrófico derivado do cérebro). Ele age se ligando ao receptor <b>TrkB</b>, que atravessa a membrana.</p>
+      <p>TrkB é um receptor do tipo <em>tirosina-quinase</em>: quando dois BDNF se encaixam, dois TrkB se juntam e se "carimbam" mutuamente com fosfatos. Esses carimbos viram plataforma para três cascatas, cada uma com uma função:</p>
+    </div>
+    <figure>
+      <svg viewBox="0 0 360 250" role="img" aria-labelledby="tr-t tr-d">
+        <title id="tr-t">Sinalização BDNF e TrkB</title>
+        <desc id="tr-d">BDNF se liga a dois receptores TrkB na membrana, que se fosforilam e ativam três vias: MAPK/ERK leva à CREB e genes da memória; PI3K/Akt leva à sobrevivência do neurônio; PLC gama leva a cálcio e liberação de neurotransmissor.</desc>
+        <circle cx="166" cy="24" r="12" fill="var(--bdnf)"/><circle cx="194" cy="24" r="12" fill="var(--bdnf)"/>
+        <text class="svg-s" x="216" y="28">BDNF</text>
+        <rect x="10" y="52" width="340" height="22" fill="color-mix(in srgb, var(--muted) 14%, var(--surface))"/>
+        <text class="svg-t" x="16" y="67">membrana</text>
+        <rect x="160" y="40" width="12" height="70" rx="4" fill="color-mix(in srgb, var(--bdnf) 40%, var(--surface))" stroke="var(--bdnf)"/>
+        <rect x="188" y="40" width="12" height="70" rx="4" fill="color-mix(in srgb, var(--bdnf) 40%, var(--surface))" stroke="var(--bdnf)"/>
+        <text class="svg-t" x="216" y="96">TrkB (par)</text>
+        <circle cx="166" cy="104" r="5" fill="var(--cat)"/><circle cx="194" cy="104" r="5" fill="var(--cat)"/>
+        <path d="M180 112 L70 138" stroke="var(--muted)" stroke-width="1.4"/>
+        <path d="M180 112 L180 138" stroke="var(--muted)" stroke-width="1.4"/>
+        <path d="M180 112 L290 138" stroke="var(--muted)" stroke-width="1.4"/>
+        <rect x="20" y="140" width="100" height="30" rx="8" fill="color-mix(in srgb, var(--glu) 16%, var(--surface))" stroke="var(--glu)"/>
+        <text class="svg-h" x="70" y="159" text-anchor="middle">MAPK/ERK</text>
+        <rect x="130" y="140" width="100" height="30" rx="8" fill="color-mix(in srgb, var(--bdnf) 16%, var(--surface))" stroke="var(--bdnf)"/>
+        <text class="svg-h" x="180" y="159" text-anchor="middle">PI3K/Akt</text>
+        <rect x="240" y="140" width="100" height="30" rx="8" fill="color-mix(in srgb, var(--calm) 16%, var(--surface))" stroke="var(--calm)"/>
+        <text class="svg-h" x="290" y="159" text-anchor="middle">PLCγ</text>
+        <path d="M70 170 L70 192" stroke="var(--muted)" stroke-width="1.4"/>
+        <path d="M180 170 L180 192" stroke="var(--muted)" stroke-width="1.4"/>
+        <path d="M290 170 L290 192" stroke="var(--muted)" stroke-width="1.4"/>
+        <text class="svg-s" x="70" y="208" text-anchor="middle">CREB: genes</text>
+        <text class="svg-s" x="70" y="222" text-anchor="middle">da memória</text>
+        <text class="svg-s" x="180" y="208" text-anchor="middle">sobrevivência</text>
+        <text class="svg-s" x="180" y="222" text-anchor="middle">(freia GSK-3β)</text>
+        <text class="svg-s" x="290" y="208" text-anchor="middle">cálcio e</text>
+        <text class="svg-s" x="290" y="222" text-anchor="middle">liberação</text>
+      </svg>
+      <figcaption>Os pontos laranja são os fosfatos que ativam o receptor. A via do meio também inibe a GSK-3β, enzima que, em excesso, deixa a proteína tau alterada (marca do Alzheimer).</figcaption>
+    </figure>
+    <div class="prose">
+      <p>Dois detalhes importantes. Primeiro, o BDNF não atravessa bem do sangue para o cérebro, então tomar BDNF não funciona; a estratégia é fazer o próprio cérebro produzir mais ou mexer no receptor. Segundo, o estímulo mais confiável para subir o BDNF não é um suplemento: o exercício aeróbio aumenta o BDNF circulante de forma bem documentada.</p>
+    </div>
+    <div class="link bdnf"><b>Ligação com os nootrópicos</b>Semax, P021, Noopept e juba-de-leão dizem aumentar BDNF ou NGF (quase tudo em animais). Dihexa mira outro receptor da mesma "família" de tirosina-quinases, o c-Met. E uma descoberta de 2023 mostrou que psilocina e LSD se ligam direto ao TrkB.</div>
+  </article>
+
+  <!-- AULA 6 -->
+  <article class="aula" id="aula6" style="--c:var(--cat)">
+    <div class="aula-head"><span class="aula-num">AULA 6</span><h3>Dopamina, noradrenalina e a curva em U invertido</h3></div>
+    <div class="prose">
+      <p>O córtex pré-frontal, logo atrás da testa, é onde ficam a memória de trabalho, o planejamento e o controle de impulsos. Ele depende de doses <em>certas</em> de dopamina (via receptores D1) e noradrenalina (via receptores α2A). A relação não é linear: tanto falta quanto excesso pioram o desempenho.</p>
+    </div>
+    <figure>
+      <svg viewBox="0 0 360 210" role="img" aria-labelledby="u-t u-d">
+        <title id="u-t">Curva em U invertido</title>
+        <desc id="u-d">Desempenho no eixo vertical e nível de dopamina e noradrenalina no horizontal. Pessoas cansadas ficam à esquerda e melhoram com estimulante; o ponto ótimo fica no topo; estresse ou excesso ficam à direita e pioram.</desc>
+        <line x1="44" y1="160" x2="340" y2="160" stroke="var(--line)"/>
+        <line x1="44" y1="20" x2="44" y2="160" stroke="var(--line)"/>
+        <text class="svg-t" x="50" y="18">desempenho</text>
+        <path d="M50 150 C 120 20, 260 20, 330 150" fill="none" stroke="var(--cat)" stroke-width="2.6"/>
+        <circle cx="86" cy="100" r="6" fill="var(--nrg)"/>
+        <circle cx="190" cy="52" r="6" fill="var(--bdnf)"/>
+        <circle cx="294" cy="100" r="6" fill="var(--warn)"/>
+        <text class="svg-h" x="190" y="38" text-anchor="middle">ponto ótimo</text>
+        <text class="svg-s" x="86" y="122" text-anchor="middle">cansado</text>
+        <text class="svg-t" x="86" y="136" text-anchor="middle">estimulante ajuda</text>
+        <text class="svg-s" x="294" y="122" text-anchor="middle">estresse/excesso</text>
+        <text class="svg-t" x="294" y="136" text-anchor="middle">estimulante piora</text>
+        <text class="svg-t" x="192" y="182" text-anchor="middle">nível de dopamina e noradrenalina no pré-frontal →</text>
+      </svg>
+      <figcaption>Isso explica por que quem já está bem descansado ganha pouco com estimulante, e por que doses altas ou ansiedade podem atrapalhar.</figcaption>
+    </figure>
+    <div class="prose">
+      <p>Como as drogas sobem esses níveis: o <b>metilfenidato</b> bloqueia os transportadores (DAT e NET) que fazem a recaptação. As <b>anfetaminas</b> vão além e fazem o transportador funcionar ao contrário, empurrando dopamina para fora. O <b>modafinil</b> bloqueia o DAT de forma mais fraca e age indiretamente sobre orexina e histamina. A <b>cafeína</b> sobe dopamina por tabela, ao tirar o freio da adenosina (aula 7).</p>
+    </div>
+    <div class="link cat"><b>Ligação com os nootrópicos</b>A curva explica o achado mais repetido das meta-análises: estimulantes ajudam mais quem tem desempenho basal baixo, privação de sono ou TDAH. Em quem está no topo, o efeito médio fica perto de zero.</div>
+  </article>
+
+  <!-- AULA 7 -->
+  <article class="aula" id="aula7" style="--c:var(--calm)">
+    <div class="aula-head"><span class="aula-num">AULA 7</span><h3>Os sistemas de vigília: acetilcolina, adenosina e orexina</h3></div>
+    <div class="items">
+      <div class="item">
+        <h4 style="color:var(--ach)">Acetilcolina: o holofote da atenção</h4>
+        <p>Um grupo de neurônios na base do cérebro (núcleo basal de Meynert) espalha acetilcolina pelo córtex e deixa a informação relevante mais "nítida" na hora de codificar uma memória. Ela é fabricada a partir de <span class="mol">colina + acetil-CoA</span> e destruída em microssegundos pela enzima acetilcolinesterase. Os remédios para Alzheimer (como a donepezila) inibem essa enzima. Há dois tipos de receptor: <b>nicotínicos</b> (canais rápidos, onde a nicotina age) e <b>muscarínicos</b> (proteína G).</p>
+      </div>
+      <div class="item">
+        <h4 style="color:var(--calm)">Adenosina: o contador de cansaço</h4>
+        <p>Cada vez que o neurônio gasta ATP, sobram restos: <span class="mol">ATP → ADP → AMP → adenosina</span>. A adenosina se acumula ao longo do dia, ativa receptores A1 e A2A e vai freando os sistemas de alerta. É a "pressão de sono". O sono limpa a adenosina. A cafeína tem formato parecido (as duas têm um núcleo de purina), encaixa nos receptores e os bloqueia sem ativar.</p>
+      </div>
+      <div class="item">
+        <h4 style="color:var(--nrg)">Orexina: o estabilizador da vigília</h4>
+        <p>Um pequeno grupo de neurônios no hipotálamo lateral produz orexina (também chamada hipocretina), um peptídeo que mantém ligados os sistemas de noradrenalina, dopamina, histamina e acetilcolina. Na narcolepsia tipo 1, esses neurônios morrem: a pessoa cai no sono de repente e perde o tônus muscular com emoções (cataplexia). Os agonistas de orexina, novidade de 2025, repõem esse sinal.</p>
+      </div>
+    </div>
+    <div class="link calm"><b>Ligação com os nootrópicos</b>Colinérgicos dão matéria-prima à acetilcolina; nicotina ativa o receptor nicotínico; cafeína bloqueia a adenosina; modafinil e oveporexton puxam o sistema da orexina. Nenhum deles repõe sono: a adenosina continua lá.</div>
+  </article>
+
+  <!-- AULA 8 -->
+  <article class="aula" id="aula8" style="--c:var(--nrg)">
+    <div class="aula-head"><span class="aula-num">AULA 8</span><h3>Energia: glicose, cetonas, fosfocreatina e a mitocôndria</h3></div>
+    <div class="prose">
+      <p>O neurônio queima principalmente glicose. Ela é quebrada em piruvato no citoplasma (glicólise), entra na mitocôndria, vira acetil-CoA e roda o ciclo de Krebs. O ciclo carrega moléculas transportadoras de elétrons (NADH e FADH₂), que descarregam na <b>cadeia respiratória</b>: complexos I, III e IV bombeiam prótons e, no final, os elétrons encontram o oxigênio. O fluxo de prótons de volta gira a ATP-sintase como uma turbina.</p>
+    </div>
+    <figure>
+      <svg viewBox="0 0 360 240" role="img" aria-labelledby="en-t en-d">
+        <title id="en-t">Combustíveis do neurônio</title>
+        <desc id="en-d">Glicose e cetonas entram na mitocôndria, que produz ATP. A fosfocreatina recarrega ATP diretamente pela creatina quinase.</desc>
+        <rect x="12" y="28" width="96" height="32" rx="8" fill="color-mix(in srgb, var(--cat) 16%, var(--surface))" stroke="var(--cat)"/>
+        <text class="svg-h" x="60" y="48" text-anchor="middle">Glicose</text>
+        <rect x="12" y="84" width="96" height="32" rx="8" fill="color-mix(in srgb, var(--calm) 16%, var(--surface))" stroke="var(--calm)"/>
+        <text class="svg-h" x="60" y="104" text-anchor="middle">Cetonas βHB</text>
+        <rect x="12" y="156" width="96" height="32" rx="8" fill="color-mix(in srgb, var(--bdnf) 16%, var(--surface))" stroke="var(--bdnf)"/>
+        <text class="svg-h" x="60" y="176" text-anchor="middle">Fosfocreatina</text>
+        <ellipse cx="208" cy="90" rx="74" ry="44" fill="color-mix(in srgb, var(--nrg) 14%, var(--surface))" stroke="var(--nrg)"/>
+        <path d="M150 92 q8 -12 16 0 t16 0 t16 0 t16 0 t16 0 t16 0" fill="none" stroke="var(--nrg)" stroke-width="1.2"/>
+        <text class="svg-h" x="208" y="74" text-anchor="middle">mitocôndria</text>
+        <text class="svg-t" x="208" y="114" text-anchor="middle">Krebs → cadeia → ATP</text>
+        <circle cx="318" cy="90" r="24" fill="var(--nrg)"/>
+        <text class="svg-b" x="318" y="94" text-anchor="middle">ATP</text>
+        <path d="M108 44 L140 66" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#am)"/>
+        <path d="M108 100 L132 96" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#am)"/>
+        <path d="M282 90 L290 90" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#am)"/>
+        <path d="M108 172 L318 172 L318 120" fill="none" stroke="var(--bdnf)" stroke-width="1.8" marker-end="url(#am2)"/>
+        <text class="svg-s" x="205" y="164" text-anchor="middle">recarga rápida (creatina quinase)</text>
+        <text class="svg-t" x="180" y="208" text-anchor="middle">Azul de metileno: atalho na cadeia · Urolitina A: troca</text>
+        <text class="svg-t" x="180" y="224" text-anchor="middle">de mitocôndrias velhas · NR: repõe NAD⁺ (o "NADH")</text>
+        <defs>
+          <marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--muted)" stroke-width="1.6"/></marker>
+          <marker id="am2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--bdnf)" stroke-width="1.6"/></marker>
+        </defs>
+      </svg>
+      <figcaption>Três formas de abastecer o neurônio e onde cada nootrópico de energia entra.</figcaption>
+    </figure>
+    <div class="compare">
+      <div><h4 style="color:var(--bdnf)">Fosfocreatina: o capacitor</h4><p>A enzima creatina quinase transfere um fosfato da fosfocreatina para o ADP e refaz ATP em milissegundos: <span class="mol">PCr + ADP ⇄ Cr + ATP</span>. Funciona como um capacitor que segura a voltagem em picos de demanda, no músculo e no neurônio.</p></div>
+      <div><h4 style="color:var(--calm)">Cetonas: o combustível reserva</h4><p>Em jejum ou dieta cetogênica, o fígado produz β-hidroxibutirato (βHB). Ele entra no cérebro por transportadores próprios (MCTs) e vira acetil-CoA sem passar pela glicólise. Isso interessa no Alzheimer, onde o cérebro capta glicose mal, mas continua usando cetonas.</p></div>
+    </div>
+    <div class="link nrg"><b>Ligação com os nootrópicos</b>Nootrópicos de energia brilham quando a energia está curta: privação de sono, envelhecimento, dieta sem carne (creatina) ou metabolismo cerebral prejudicado (cetonas). Em um cérebro jovem e bem nutrido, há pouca margem.</div>
+  </article>
+
+  <!-- AULA 9 -->
+  <article class="aula" id="aula9" style="--c:var(--warn)">
+    <div class="aula-head"><span class="aula-num">AULA 9</span><h3>A barreira hematoencefálica e o problema dos peptídeos</h3></div>
+    <div class="prose">
+      <p>Os vasos do cérebro são diferentes dos do resto do corpo. As células da parede ficam coladas por "junções apertadas", sem frestas. Para chegar ao neurônio, uma molécula precisa atravessar a própria célula. Passam bem as moléculas <b>pequenas e lipossolúveis</b> (cafeína, nicotina, muitos remédios). Passam mal as grandes e as carregadas com cargas elétricas.</p>
+      <p><b>Peptídeos</b> são correntes curtas de aminoácidos unidos por ligações peptídicas. Eles enfrentam três problemas: são digeridos no estômago como qualquer proteína, são cortados no sangue por enzimas chamadas peptidases (meia-vida de minutos) e são grandes e polares demais para a barreira.</p>
+    </div>
+    <figure>
+      <svg viewBox="0 0 360 190" role="img" aria-labelledby="bb-t bb-d">
+        <title id="bb-t">Barreira hematoencefálica</title>
+        <desc id="bb-d">Sangue em cima, parede de células com junções apertadas no meio, cérebro embaixo. Molécula pequena e lipossolúvel atravessa; peptídeo grande é barrado; via nasal entra por fora da barreira.</desc>
+        <rect x="10" y="10" width="340" height="50" rx="8" fill="color-mix(in srgb, var(--warn) 10%, var(--surface))"/>
+        <text class="svg-t" x="18" y="26">sangue</text>
+        <rect x="10" y="66" width="104" height="28" rx="6" fill="color-mix(in srgb, var(--muted) 22%, var(--surface))" stroke="var(--line)"/>
+        <rect x="118" y="66" width="114" height="28" rx="6" fill="color-mix(in srgb, var(--muted) 22%, var(--surface))" stroke="var(--line)"/>
+        <rect x="236" y="66" width="114" height="28" rx="6" fill="color-mix(in srgb, var(--muted) 22%, var(--surface))" stroke="var(--line)"/>
+        <rect x="113" y="66" width="6" height="28" fill="var(--ink)" opacity=".55"/><rect x="231" y="66" width="6" height="28" fill="var(--ink)" opacity=".55"/>
+        <rect x="10" y="100" width="340" height="80" rx="8" fill="color-mix(in srgb, var(--bdnf) 9%, var(--surface))"/>
+        <text class="svg-t" x="18" y="174">cérebro</text>
+        <circle cx="64" cy="36" r="6" fill="var(--nrg)"/>
+        <path d="M64 44 L64 120" stroke="var(--nrg)" stroke-width="1.8" marker-end="url(#ab)"/>
+        <text class="svg-s" x="64" y="140" text-anchor="middle">pequena e</text>
+        <text class="svg-s" x="64" y="154" text-anchor="middle">lipossolúvel</text>
+        <circle cx="160" cy="34" r="5" fill="var(--glu)"/><circle cx="171" cy="38" r="5" fill="var(--glu)"/><circle cx="182" cy="34" r="5" fill="var(--glu)"/><circle cx="193" cy="38" r="5" fill="var(--glu)"/><circle cx="204" cy="34" r="5" fill="var(--glu)"/>
+        <path d="M182 44 L182 60" stroke="var(--glu)" stroke-width="1.8"/>
+        <path d="M174 54 L190 66 M190 54 L174 66" stroke="var(--warn)" stroke-width="2.4"/>
+        <text class="svg-s" x="182" y="130" text-anchor="middle">peptídeo grande</text>
+        <text class="svg-s" x="182" y="144" text-anchor="middle">é barrado</text>
+        <path d="M340 128 L300 128" stroke="var(--calm)" stroke-width="1.8" marker-end="url(#ac)"/>
+        <text class="svg-s" x="292" y="148" text-anchor="middle">via nasal: entra</text>
+        <text class="svg-s" x="292" y="162" text-anchor="middle">por nervos do nariz</text>
+        <defs>
+          <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--nrg)" stroke-width="1.6"/></marker>
+          <marker id="ac" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--calm)" stroke-width="1.6"/></marker>
+        </defs>
+      </svg>
+      <figcaption>As faixas escuras entre as células são as junções apertadas.</figcaption>
+    </figure>
+    <div class="prose"><p>Por isso cada peptídeo do catálogo usa um "truque" para chegar ao cérebro:</p></div>
+    <div class="keys">
+      <div class="key calm"><b>Via nasal</b>Semax, Selank, davunetide. Absorção por nervos olfatórios, fora da barreira.</div>
+      <div class="key glu"><b>Pró-droga</b>Noopept é convertido em cicloprolilglicina, que é menor.</div>
+      <div class="key bdnf"><b>Gordura extra</b>P021 ganha um grupo adamantano; Dihexa foi modificado para ser mais hidrofóbico.</div>
+      <div class="key warn"><b>Injeção</b>Cerebrolysin e BPC-157 costumam ser injetados.</div>
+    </div>
+    <div class="link warn"><b>Ligação com os nootrópicos</b>Antes de perguntar "o que esse peptídeo faz no cérebro", pergunte "ele chega lá, em humanos, em quantidade suficiente?". Para vários, ninguém mediu.</div>
+  </article>
+</section>
+
+<!-- ======================= PARTE B: CATÁLOGO ======================= -->
+<section id="catalogo">
+  <div class="part">
+    <span class="eyebrow">Parte B</span>
+    <h2>O catálogo</h2>
+    <p class="muted">O selo de evidência se refere a <b style="color:var(--ink)">adultos saudáveis</b>, que é como a maioria das pessoas usa. Quando a evidência é em pacientes, o texto avisa. Nos itens em pesquisa, o selo mostra a fase.</p>
+  </div>
+  <div class="pipe" aria-label="Fases da pesquisa de um medicamento">
+    <div style="--k:4"><b>1</b>Célula / tubo</div>
+    <div style="--k:8"><b>2</b>Animal</div>
+    <div style="--k:12"><b>3</b>Fase 1: segurança</div>
+    <div style="--k:16"><b>4</b>Fase 2: funciona?</div>
+    <div style="--k:20"><b>5</b>Fase 3: milhares</div>
+    <div style="--k:26"><b>6</b>Aprovado</div>
+  </div>
+  <p class="muted" style="font-size:15px">A maior parte dos compostos que funcionam em ratos para nas fases 2 e 3. Guarde isso ao ler "estudos mostram".</p>
+</section>
+
+<!-- FAMÍLIAS CLÁSSICAS -->
+<section id="familias">
+  <span class="eyebrow">Catálogo 1</span>
+  <h2>Famílias clássicas</h2>
+
+  <div class="family">
+    <div class="fam-head glu"><span class="dot"></span><h3>Racetams e ampakinas</h3><span class="tag">alavanca 1 · aula 4</span></div>
+    <p class="prose">Os racetams compartilham o anel <span class="mol">2-oxo-pirrolidina</span>: cinco átomos em anel, com um oxigênio duplo. O piracetam é, quimicamente, um parente cíclico do GABA, mas não age em receptores de GABA. O nome da família vem dele.</p>
+    <div class="items">
+      <article class="item">
+        <div class="item-top"><h4>Piracetam</h4><span class="aka">Nootropil · anos 1960</span><span class="ev ev-fraca">fraca</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Interage com a "cabeça" polar dos fosfolipídios da membrana e devolve fluidez a membranas envelhecidas. Com a membrana mais maleável, receptores e canais giram e abrem melhor. Também modula levemente o AMPA.</dd>
+          <dt>Detalhe-chave</dt><dd>Em experimentos, melhora a fluidez de membranas de cérebros velhos e não muda nada em cérebros jovens. Animais jovens e saudáveis ganham pouco ou nada.</dd>
+          <dt>Uso clínico</dt><dd>Mioclonia cortical, vertigem e declínio cognitivo em alguns países.</dd>
+        </dl>
+        <p class="analogy">Analogia: óleo numa dobradiça enferrujada. Se a dobradiça é nova, o óleo não muda nada.</p>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Aniracetam</h4><span class="aka">Roche · anos 1970</span><span class="ev ev-fraca">fraca</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Modulador alostérico positivo do AMPA (aula 3). A estrutura cristalográfica mostra que ele se encaixa na interface entre as duas metades do receptor e retarda tanto o fechamento quanto a dessensibilização.</dd>
+          <dt>Evidência</dt><dd>Mecanismo sólido em laboratório. Em humanos, estudos antigos em demência; quase nada em saudáveis.</dd>
+        </dl>
+        <p class="analogy">Analogia: um calço que segura a porta aberta alguns milissegundos a mais.</p>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Fenilpiracetam</h4><span class="aka">Phenotropil · fonturacetam · carphedon</span><span class="ev ev-fraca">fraca</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Piracetam com um anel fenila acoplado, o que o aproxima dos estimulantes: ação sobre dopamina e noradrenalina. Criado na Rússia nos anos 1980 para cosmonautas.</dd>
+          <dt>Atenção</dt><dd><span class="flag">Proibido pela WADA</span> como estimulante (S6, em competição). Tolerância rápida.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Levetiracetam</h4><span class="ev ev-nula">não é nootrópico</span></div>
+        <dl class="row"><dt>Por que citar</dt><dd>É um racetam na estrutura, mas é remédio para epilepsia: liga-se à proteína SV2A das vesículas (aula 2) e reduz a liberação excessiva. Mostra que família química não define efeito.</dd></dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Ampakinas (CX717 e parentes)</h4><span class="aka">moduladores de AMPA de laboratório</span><span class="ev ev-f3">fase 2</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Mesma ideia do aniracetam, mas desenhadas para serem mais potentes.</dd>
+          <dt>Histórico</dt><dd>O CX717 reverteu efeitos da privação de sono em macacos, mas um estudo em humanos simulando turno noturno não achou melhora. A FDA travou o programa de TDAH por achados em tecidos de animais. Em 2025, um estudo de fase 2A em adultos com TDAH relatou perfil promissor.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+
+  <div class="family">
+    <div class="fam-head ach"><span class="dot"></span><h3>Colinérgicos e nicotina</h3><span class="tag">alavanca 2 · aula 7</span></div>
+    <div class="items">
+      <article class="item">
+        <div class="item-top"><h4>Alfa-GPC e citicolina</h4><span class="aka">colina alfoscerato · CDP-colina</span><span class="ev ev-fraca">fraca</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Atravessam a barreira e liberam colina, que vira acetilcolina e também fosfatidilcolina, o principal fosfolipídio da membrana. O alfa-GPC tem cerca de 41% de colina por peso.</dd>
+          <dt>Evidência</dt><dd>Benefício descrito em demência e doença cerebrovascular, com estudos heterogêneos. Em saudáveis, dados insuficientes.</dd>
+        </dl>
+        <p class="analogy">Analogia: mais farinha na padaria só aumenta a produção se faltava farinha.</p>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Nicotina</h4><span class="aka">agonista nicotínico</span><span class="ev ev-mod">pequena</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Imita a acetilcolina nos receptores nicotínicos (canais), especialmente os tipos α4β2 e α7, e aumenta a liberação de dopamina e glutamato.</dd>
+          <dt>Evidência</dt><dd>Meta-análise de 2010 em pessoas sem abstinência: melhora em motricidade fina, tempo de resposta e precisão de memória episódica de curto prazo. O cuidado do método foi excluir fumantes em abstinência, porque aliviar a abstinência parece "melhora".</dd>
+          <dt>Atenção</dt><dd><span class="flag">Altamente viciante</span>, com efeitos cardiovasculares. Não existe forma "segura" de criar dependência.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+
+  <div class="family">
+    <div class="fam-head cat"><span class="dot"></span><h3>Estimulantes e eugeroicos</h3><span class="tag">alavancas 3 e 6 · aulas 6 e 7</span></div>
+    <div class="items">
+      <article class="item">
+        <div class="item-top"><h4>Cafeína</h4><span class="aka">1,3,7-trimetilxantina</span><span class="ev ev-forte">consistente</span></div>
+        <dl class="row">
+          <dt>Molécula</dt><dd>Uma metilxantina: núcleo de purina, o mesmo esqueleto da adenosina. Por isso ela "cabe" no receptor.</dd>
+          <dt>Como age</dt><dd>Antagonista dos receptores A1 e A2A. No estriado, os receptores A2A formam pares com receptores de dopamina D2 e os freiam; bloquear A2A solta esse freio. Resultado: mais alerta e mais dopamina funcional.</dd>
+          <dt>Detalhe-chave</dt><dd>A adenosina acumulada não desaparece. Quando a cafeína sai do receptor, o cansaço guardado volta.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Modafinil</h4><span class="aka">eugeroico · receita controlada</span><span class="ev ev-mod">pequena</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Inibe a recaptação de dopamina e noradrenalina e, indiretamente, aumenta orexina, histamina e glutamato, reduzindo GABA.</dd>
+          <dt>Evidência</dt><dd>Revisão de Oxford (2015): melhora funções executivas, de forma mais consistente em tarefas longas e complexas. Meta-análise de 2020: efeito geral pequeno (SMD 0,12) em saudáveis descansados.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Metilfenidato e anfetaminas</h4><span class="aka">Ritalina, Venvanse · receita controlada</span><span class="ev ev-mod">pequena</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Metilfenidato bloqueia DAT e NET. Anfetaminas entram no terminal e invertem o transportador, empurrando dopamina para fora (aula 6).</dd>
+          <dt>Evidência</dt><dd>Em saudáveis, efeitos pequenos em controle inibitório e memória, inflados por viés de publicação. Na meta-análise de 2020, a d-anfetamina não mostrou efeito. A sensação de render mais costuma ser maior que o ganho medido.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+
+  <div class="family">
+    <div class="fam-head nrg"><span class="dot"></span><h3>Aminoácidos e energia</h3><span class="tag">alavancas 4 e 6 · aula 8</span></div>
+    <div class="items">
+      <article class="item">
+        <div class="item-top"><h4>L-teanina (+ cafeína)</h4><span class="aka">aminoácido do chá</span><span class="ev ev-forte">consistente</span></div>
+        <dl class="row">
+          <dt>Molécula</dt><dd>Análogo do glutamato (glutamato com um grupo etila). Por isso compete com ele em receptores e transportadores.</dd>
+          <dt>Como age</dt><dd>Reduz levemente a excitação glutamatérgica e modula GABA. Dá calma sem sono e suaviza a aresta da cafeína.</dd>
+          <dt>Evidência</dt><dd>Meta-análise de 2014: efeito moderado da dupla sobre alerta e precisão ao alternar atenção nas 2 primeiras horas. Atualização com 50 ensaios confirma melhora de atenção, com incerteza ainda grande.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Creatina</h4><span class="ev ev-mod">moderada</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Aumenta o estoque de fosfocreatina no cérebro, o "capacitor" da aula 8.</dd>
+          <dt>Evidência</dt><dd>Meta-análise de 2024 (16 ensaios, 492 pessoas): melhora de memória (SMD 0,31, certeza moderada). Sem efeito na cognição geral nem em funções executivas. Brilha mais com privação de sono, em idosos e em dietas sem carne.</dd>
+        </dl>
+        <p class="analogy">Para você, como treinador: o único item deste guia que seus alunos provavelmente já usam, com segurança bem conhecida.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="family">
+    <div class="fam-head bdnf"><span class="dot"></span><h3>Plantas e cogumelos</h3><span class="tag">alavancas 2, 5 e 6</span></div>
+    <div class="items">
+      <article class="item">
+        <div class="item-top"><h4>Bacopa monnieri</h4><span class="aka">brahmi</span><span class="ev ev-mod">moderada</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Os bacosídeos (saponinas) parecem ter ação antioxidante e colinérgica e favorecer a comunicação sináptica. O efeito é lento.</dd>
+          <dt>Evidência</dt><dd>Aparece só após cerca de 12 semanas. Meta-análise de 2014 (9 estudos, 518 pessoas): atenção mais rápida. Revisão de 2012: melhorou 9 de 17 testes de evocação de memória.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Rhodiola rosea</h4><span class="aka">adaptógeno</span><span class="ev ev-fraca">fraca</span></div>
+        <dl class="row"><dt>Evidência</dt><dd>Melhor sinal é contra fadiga mental: 3 de 5 ensaios positivos, mas com falhas de método e desfechos diferentes, o que impediu meta-análise.</dd></dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Ginkgo biloba</h4><span class="ev ev-nula">sem efeito</span></div>
+        <dl class="row"><dt>Evidência</dt><dd>Meta-análise de 2012 com mais de 1.100 saudáveis: efeito praticamente zero em memória, atenção e funções executivas.</dd></dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Juba-de-leão</h4><span class="aka">Hericium erinaceus</span><span class="ev ev-fraca">fraca</span></div>
+        <dl class="row"><dt>Como age</dt><dd>Erinacinas estimulam a produção de NGF em células (aula 5).</dd><dt>Evidência</dt><dd>Ensaios pequenos, sobretudo em idosos com declínio leve. Num deles, o ganho sumiu 4 semanas após parar.</dd></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PEPTÍDEOS -->
+<section id="peptideos">
+  <span class="eyebrow">Catálogo 2</span>
+  <h2>Peptídeos</h2>
+  <div class="prose">
+    <p>Peptídeos são pequenas proteínas: de 2 a algumas dezenas de aminoácidos. O corpo usa muitos como mensageiros (insulina, orexina, ocitocina). A ideia dos peptídeos nootrópicos é copiar um pedaço ativo de uma proteína grande, como um fator de crescimento, num formato que chegue ao cérebro (aula 9).</p>
+    <p>A maioria vem de duas origens: a escola russa de farmacologia, que registrou vários no próprio país sem estudos no padrão ocidental, e laboratórios acadêmicos que pararam na fase animal. Quase todos circulam no mercado como "uso em pesquisa", sem controle de pureza.</p>
+  </div>
+
+  <div class="family">
+    <div class="fam-head" style="--c:var(--calm)"><span class="dot"></span><h3>Escola russa</h3><span class="tag">alavancas 5 e 6</span></div>
+    <div class="items">
+      <article class="item">
+        <div class="item-top"><h4>Semax</h4><span class="aka">MEHFPGP · spray nasal</span><span class="ev ev-animal">quase só animal</span></div>
+        <dl class="row">
+          <dt>Molécula</dt><dd>Fragmento 4 a 10 do hormônio ACTH (o que manda a adrenal produzir cortisol), com três aminoácidos extras (Pro-Gly-Pro) que o protegem das peptidases. Esse fragmento não estimula cortisol.</dd>
+          <dt>Como age</dt><dd>Em ratos, aumenta BDNF e TrkB no hipocampo (aula 5) e ativa sistemas de dopamina e serotonina.</dd>
+          <dt>Situação</dt><dd>Vendido em farmácias da Rússia e Ucrânia. Sem ensaios controlados no padrão ocidental para cognição.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Selank</h4><span class="aka">TKPRPGP · spray nasal</span><span class="ev ev-animal">quase só animal</span></div>
+        <dl class="row">
+          <dt>Molécula</dt><dd>Análogo da tuftsina, um peptídeo do sistema imune, com o mesmo final Pro-Gly-Pro do Semax.</dd>
+          <dt>Como age</dt><dd>Inibe enzimas que quebram encefalinas (opioides naturais do corpo), mexe com citocinas e serotonina em ratos e aumenta BDNF no hipocampo.</dd>
+          <dt>Evidência</dt><dd>Estudos russos de 2008 em ansiedade generalizada comparando com benzodiazepínicos, sem dados robustos publicados.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Noopept</h4><span class="aka">omberacetam · GVS-111</span><span class="ev ev-animal">quase só animal</span></div>
+        <dl class="row">
+          <dt>Molécula</dt><dd>Dipeptídeo (prolina + glicina) desenhado a partir do piracetam. É pró-droga: vira cicloprolilglicina, que aumenta BDNF em células.</dd>
+          <dt>Evidência</dt><dd>Pequenos estudos russos em pacientes; o mais longo durou 56 dias. Nenhum ensaio com placebo em pessoas saudáveis.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Cerebrolysin e Cortexin</h4><span class="aka">extratos de cérebro animal · injetáveis</span><span class="ev ev-falhou">sem benefício</span></div>
+        <dl class="row">
+          <dt>O que é</dt><dd>Mistura de pequenos peptídeos e aminoácidos extraídos de cérebro animal. Muito usado no AVC na Rússia, Leste Europeu e Ásia.</dd>
+          <dt>Evidência</dt><dd>Revisão Cochrane de 2023 (7 ensaios, 1.773 pacientes): provavelmente não reduz mortalidade e provavelmente <span class="flag">aumenta eventos adversos graves não fatais</span> (risco 2,4 vezes). Três dos estudos foram apoiados pelo fabricante.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+
+  <div class="family">
+    <div class="fam-head bdnf"><span class="dot"></span><h3>Peptídeos de laboratório (fatores de crescimento)</h3><span class="tag">alavanca 5</span></div>
+    <div class="items">
+      <article class="item">
+        <div class="item-top"><h4>Dihexa</h4><span class="aka">derivado da angiotensina IV</span><span class="ev ev-animal">só animal</span></div>
+        <dl class="row">
+          <dt>Molécula</dt><dd>Pequeno peptídeo modificado na Washington State University para ser estável e atravessar a barreira.</dd>
+          <dt>Como age</dt><dd>Liga-se ao fator de crescimento de hepatócitos (HGF) e potencializa o receptor c-Met, uma tirosina-quinase parente do TrkB. Em ratos com memória prejudicada, aumentou espinhas dendríticas e sinapses; em ratos normais, não melhorou.</dd>
+          <dt>Atenção</dt><dd>Nenhum estudo publicado em humanos. <span class="flag">O eixo HGF/c-Met está envolvido em muitos cânceres</span>, e em ratos a meia-vida chega a cerca de 12 dias. Um composto da mesma linhagem (fosgonimeton) falhou no desfecho principal em Alzheimer em 2024.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>P021</h4><span class="aka">fragmento do CNTF</span><span class="ev ev-animal">só animal</span></div>
+        <dl class="row">
+          <dt>Molécula</dt><dd>Pedaço da região ativa do fator neurotrófico ciliar (CNTF), com um grupo adamantano para atravessar a barreira.</dd>
+          <dt>Como age</dt><dd>Bloqueia o sinal do LIF, que segura a formação de novos neurônios, e aumenta BDNF, inibindo a GSK-3β (aula 5). Em camundongos com Alzheimer, mais neurogênese e menos tau alterada, com resultados mistos.</dd>
+          <dt>Situação</dt><dd>Nenhum estudo em humanos; segurança humana desconhecida.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>Davunetide (NAP)</h4><span class="aka">spray nasal</span><span class="ev ev-falhou">falhou na fase 3</span></div>
+        <dl class="row">
+          <dt>Como age</dt><dd>Fragmento de uma proteína neuroprotetora (ADNP) que estabiliza microtúbulos e reduz a fosforilação da tau em camundongos.</dd>
+          <dt>Resultado</dt><dd>Em 313 pacientes com paralisia supranuclear progressiva tratados por um ano, nenhum benefício em desfechos principais ou secundários. Foi seguro.</dd>
+        </dl>
+      </article>
+      <article class="item">
+        <div class="item-top"><h4>BPC-157</h4><span class="aka">15 aminoácidos · suco gástrico</span><span class="ev ev-animal">quase só animal</span></div>
+        <dl class="row">
+          <dt>Por que está aqui</dt><dd>Não é vendido como nootrópico, mas é o peptídeo mais procurado por atletas (tendões, lesões) e surge em protocolos de "cérebro".</dd>
+          <dt>Como age</dt><dd>Em animais e células: aumenta VEGF (vasos novos) e óxido nítrico, reduz inflamação; em ratos altera serotonina e dopamina.</dd>
+          <dt>Evidência</dt><dd>Uma revisão de 2025 achou um único estudo humano: relato retrospectivo de 12 pacientes com dor no joelho. Segurança humana desconhecida.</dd>
+          <dt>Situação</dt><dd>FDA classificou em 2023 como substância com sérias preocupações de segurança. <span class="flag">Proibido pela WADA</span>.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+
+  <div class="family">
+    <div class="fam-head nrg"><span class="dot"></span><h3>Hormônio peptídico de grande porte</h3><span class="tag">metabolismo</span></div>
+    <div class="items">
+      <article class="item">
+        <div class="item-top"><h4>GLP-1 (semaglutida)</h4><span class="aka">Ozempic/Rybelsus</span><span class="ev ev-falhou">falhou no Alzheimer</span></div>
+        <dl class="row">
+          <dt>A hipótese</dt><dd>Diabetes e resistência à insulina aumentam o risco de demência; estudos observacionais sugeriam menos demência em usuários de GLP-1; o receptor existe no cérebro e reduz inflamação em animais.</dd>
+          <dt>Resultado</dt><dd>Os ensaios EVOKE e EVOKE+ (3.808 pessoas de 55 a 85 anos com Alzheimer inicial, 2 anos) não desaceleraram a doença, apesar de alguns biomarcadores caírem até cerca de 10%. Resultado apresentado em dezembro de 2025.</dd>
+        </dl>
+        <p class="analogy">Lição: estudos observacionais e biomarcadores bonitos não garantem efeito clínico.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FRONTEIRA -->
+<section id="fronteira">
+  <span class="eyebrow">Catálogo 3</span>
+  <h2>Fronteira 2025–26: o que está sendo pesquisado agora</h2>
+  <p class="prose muted">Itens que viraram notícia científica recentemente. Nenhum deles tem indicação para pessoas saudáveis.</p>
+  <div class="items">
+    <article class="item">
+      <div class="item-top"><h4>Lítio em microdose</h4><span class="aka">orotato de lítio</span><span class="ev ev-animal">animal</span></div>
+      <dl class="row">
+        <dt>A descoberta</dt><dd>Estudo de Harvard na Nature (agosto de 2025) mediu 27 metais em cérebros doados: só o lítio estava baixo já no comprometimento cognitivo leve. As placas de amiloide "sequestram" lítio. Camundongos com dieta pobre em lítio tiveram mais placas, mais tau alterada e perda de memória.</dd>
+        <dt>O teste</dt><dd>Entre 16 sais, o orotato de lítio em dose baixa reverteu placas, emaranhados e perda de memória em camundongos. O carbonato de lítio, usado na psiquiatria, quase não funcionou.</dd>
+        <dt>Mecanismo</dt><dd>O lítio é conhecido por inibir a GSK-3β, a enzima que altera a tau (aula 5).</dd>
+        <dt>Atenção</dt><dd>Ensaio clínico em humanos apenas planejado. Lítio em dose terapêutica tem janela tóxica estreita (rins, tireoide).</dd>
+      </dl>
+    </article>
+    <article class="item">
+      <div class="item-top"><h4>Agonistas de orexina</h4><span class="aka">oveporexton (TAK-861)</span><span class="ev ev-f3">fase 3 positiva</span></div>
+      <dl class="row">
+        <dt>Como age</dt><dd>Primeiro agonista oral seletivo do receptor de orexina 2. Repõe o sinal que falta na narcolepsia tipo 1 (aula 7).</dd>
+        <dt>Resultado</dt><dd>Dois estudos de fase 3 (168 e 105 pacientes, 12 semanas) atingiram todos os desfechos de sonolência e cataplexia. Em 2026, dados de cognição: cerca de 70% relataram ausência de dificuldades cognitivas importantes, contra 15% no placebo (apresentação em congresso).</dd>
+        <dt>Efeitos</dt><dd>Mais comuns: insônia e urgência urinária.</dd>
+        <dt>Por que importa</dt><dd>É a prova de que mirar o sistema certo dá efeito grande, mas em quem tem a falha. Não há dados em pessoas saudáveis.</dd>
+      </dl>
+    </article>
+    <article class="item">
+      <div class="item-top"><h4>Ésteres de cetona</h4><span class="aka">βHB exógeno</span><span class="ev ev-fraca">fase 2 pequena</span></div>
+      <dl class="row">
+        <dt>Resultado</dt><dd>Ensaio de 4 semanas com 50 adultos acima de 55 anos com síndrome metabólica: o éster de cetona elevou o βHB medido dentro do cérebro e reduziu o glutamato cerebral. Cognição: tendências a favor, sem diferença significativa entre grupos.</dd>
+        <dt>Leitura</dt><dd>Confirma que o combustível chega ao cérebro (aula 8). Falta mostrar benefício cognitivo.</dd>
+      </dl>
+    </article>
+    <article class="item">
+      <div class="item-top"><h4>Urolitina A</h4><span class="aka">metabólito da romã via intestino</span><span class="ev ev-f3">fase 2 em curso</span></div>
+      <dl class="row">
+        <dt>Como age</dt><dd>Ativa a mitofagia: a reciclagem de mitocôndrias danificadas.</dd>
+        <dt>Situação</dt><dd>Ensaio de fase 2 com 60 pessoas com comprometimento leve por Alzheimer, 12 meses, anunciado em 2026. Sem dados cognitivos humanos até agora.</dd>
+      </dl>
+    </article>
+    <article class="item">
+      <div class="item-top"><h4>Precursores de NAD⁺</h4><span class="aka">nicotinamida ribosídeo (NR)</span><span class="ev ev-falhou">sem efeito cognitivo</span></div>
+      <dl class="row">
+        <dt>Como age</dt><dd>O NAD⁺ é o carregador de elétrons que vira NADH na aula 8, e cai com a idade.</dd>
+        <dt>Resultado</dt><dd>Ensaio cruzado com 46 adultos com queixa ou declínio cognitivo leve, 8 semanas: nenhuma diferença na cognição. Curiosidade: o marcador pTau217 caiu 7% com NR e subiu 18% no placebo.</dd>
+      </dl>
+    </article>
+    <article class="item">
+      <div class="item-top"><h4>Psicodélicos e plasticidade</h4><span class="aka">psilocibina, LSD · ilegais no Brasil</span><span class="ev ev-animal">mecanismo novo</span></div>
+      <dl class="row">
+        <dt>A descoberta</dt><dd>Estudo de 2023 (Nature Neuroscience): psilocina e LSD se ligam diretamente ao TrkB, o receptor do BDNF, com afinidade cerca de mil vezes maior que outros antidepressivos. Em camundongos, o efeito de plasticidade não depende do receptor 5-HT2A, que é o responsável pela alucinação.</dd>
+        <dt>Microdose</dt><dd>Estudo autocego com 191 pessoas: microdose não foi diferente de placebo. Os escores subiam quando a pessoa <em>achava</em> que tinha tomado a substância.</dd>
+      </dl>
+    </article>
+  </div>
+  <div class="tint warn">
+    <p><strong>O "cemitério" recente.</strong> Semaglutida no Alzheimer (2025), fosgonimeton (2024), davunetide e Cerebrolysin no AVC. Todos tinham mecanismo elegante e resultados em animais. Este é o padrão, não a exceção.</p>
+  </div>
+</section>
+
+<!-- AZUL DE METILENO -->
+<section id="azul">
+  <span class="eyebrow">Catálogo 4 · em destaque</span>
+  <div class="mb-hero">
+    <h2>Azul de metileno</h2>
+    <p>Corante sintetizado em 1876 para tingir tecido, depois usado contra malária e hoje remédio hospitalar para metemoglobinemia e intoxicações. Virou moda como nootrópico por um mecanismo raro: age direto na usina de energia da célula (aula 8).</p>
+  </div>
+  <div class="prose">
+    <h3>A molécula: um "vai e volta" de elétrons</h3>
+    <p>O azul de metileno é uma fenotiazina aromática que alterna facilmente entre duas formas: oxidada (azul) e reduzida (leucometileno, incolor). Como o potencial redox dele é baixo, ele pega elétrons de doadores como o NADH e os entrega adiante, voltando a ficar azul. É um "ciclador redox": uma molécula repete esse ciclo muitas vezes.</p>
+    <h3>O atalho na cadeia respiratória</h3>
+    <p>Dentro da mitocôndria, o azul de metileno pega elétrons no início da cadeia e os entrega direto ao citocromo c, pulando os complexos I e III. Isso mantém o fluxo para o complexo IV (citocromo oxidase) mesmo quando a cadeia está prejudicada, e reduz o "vazamento" de elétrons que vira radical livre.</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 360 230" role="img" aria-labelledby="etc-t etc-d">
+      <title id="etc-t">Atalho do azul de metileno na cadeia respiratória</title>
+      <desc id="etc-d">Membrana mitocondrial com complexos I, III e IV. O caminho normal dos elétrons passa por I, III, citocromo c e IV. O azul de metileno leva elétrons do NADH direto ao citocromo c.</desc>
+      <rect x="10" y="92" width="340" height="40" fill="color-mix(in srgb, var(--muted) 14%, var(--surface))"/>
+      <text class="svg-t" x="14" y="84">espaço entre membranas</text>
+      <text class="svg-t" x="14" y="150">matriz</text>
+      <rect x="40" y="80" width="54" height="64" rx="10" fill="color-mix(in srgb, var(--muted) 28%, var(--surface))" stroke="var(--muted)"/>
+      <text class="svg-h" x="67" y="116" text-anchor="middle">I</text>
+      <rect x="140" y="80" width="54" height="64" rx="10" fill="color-mix(in srgb, var(--muted) 28%, var(--surface))" stroke="var(--muted)"/>
+      <text class="svg-h" x="167" y="116" text-anchor="middle">III</text>
+      <circle cx="236" cy="70" r="14" fill="color-mix(in srgb, var(--cat) 25%, var(--surface))" stroke="var(--cat)"/>
+      <text class="svg-h" x="236" y="74" text-anchor="middle">c</text>
+      <rect x="270" y="80" width="54" height="64" rx="10" fill="color-mix(in srgb, var(--muted) 28%, var(--surface))" stroke="var(--muted)"/>
+      <text class="svg-h" x="297" y="116" text-anchor="middle">IV</text>
+      <path d="M94 112 L138 112" stroke="var(--muted)" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+      <path d="M194 98 L222 78" stroke="var(--muted)" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+      <path d="M250 74 L272 90" stroke="var(--muted)" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+      <text class="svg-h" x="58" y="176" text-anchor="middle">NADH</text>
+      <text class="svg-h" x="297" y="176" text-anchor="middle">O₂ → H₂O</text>
+      <path d="M297 160 L297 146" stroke="var(--muted)" stroke-width="1.6" fill="none"/>
+      <path d="M58 164 L62 148" stroke="var(--muted)" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+      <path d="M78 182 C 130 222, 210 222, 236 160 L 236 88" stroke="var(--nrg)" stroke-width="2.6" stroke-dasharray="7 5" fill="none" marker-end="url(#arb)"/>
+      <rect x="128" y="196" width="66" height="22" rx="11" fill="var(--nrg)"/>
+      <text class="svg-b" x="161" y="211" text-anchor="middle">AM</text>
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--muted)" stroke-width="1.6"/></marker>
+        <marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="var(--nrg)" stroke-width="1.6"/></marker>
+      </defs>
+    </svg>
+    <figcaption>Cinza: caminho normal dos elétrons. Azul tracejado: o atalho do azul de metileno (AM) até o citocromo c.</figcaption>
+  </figure>
+  <div class="prose">
+    <h3>A curva em U invertido (hormese)</h3>
+    <p>O azul de metileno é exemplo de manual de <em>hormese</em>: dose baixa e dose alta fazem coisas opostas.</p>
+  </div>
+  <div class="hormesis">
+    <div style="border-color:color-mix(in srgb,var(--nrg) 45%,var(--line))"><b style="color:var(--nrg)">Dose baixa</b>Doa elétrons à cadeia, ajuda a mitocôndria e age como antioxidante.</div>
+    <div style="border-color:color-mix(in srgb,var(--warn) 45%,var(--line))"><b style="color:var(--warn)">Dose alta</b>Passa a roubar elétrons, piora a produção de energia e pode até causar metemoglobina, o problema que deveria tratar.</div>
+  </div>
+  <div class="prose">
+    <h3>O que se sabe em humanos</h3>
+    <p><strong>Pessoas saudáveis:</strong> o estudo mais citado (Rodriguez et al., 2016, Radiology) tinha 26 participantes, uma única dose baixa e ressonância funcional. O cérebro ativou mais em tarefas de atenção e memória de curto prazo, e os acertos na recuperação de memória subiram 7%. Estudo pequeno e de dose única.</p>
+    <p><strong>Alzheimer:</strong> um derivado (hidrometiltionina, LMTM) foi testado contra o acúmulo da proteína tau. Fases 3 anteriores não bateram o desfecho principal. O estudo LUCIDITY não teve placebo cego de verdade, porque a droga deixa a urina azul; os resultados foram comparados com grupos históricos.</p>
+  </div>
+  <div class="tint warn danger">
+    <p><strong>Por que ele exige mais cuidado do que parece</strong></p>
+    <ul>
+      <li><b>É um inibidor potente da MAO-A</b>, a enzima que degrada serotonina (aula 2). Com antidepressivos (fluoxetina, sertralina, venlafaxina, tricíclicos e outros) pode causar síndrome serotoninérgica grave, com casos fatais. A bula americana traz alerta em tarja preta.</li>
+      <li><b>Deficiência de G6PD</b>, condição genética comum e muitas vezes não diagnosticada, pode levar à destruição de hemácias.</li>
+      <li><b>Gravidez:</b> contraindicado; há risco de malformações.</li>
+      <li><b>Produto:</b> existe azul de metileno de grau industrial e de aquário. A agência australiana (TGA) emitiu alerta sobre produtos orais importados sem registro.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ARMADILHAS -->
+<section id="armadilhas">
+  <span class="eyebrow">Catálogo 5</span>
+  <h2>Armadilhas vendidas como nootrópico</h2>
+  <div class="items">
+    <article class="item" style="border-color:color-mix(in srgb,var(--warn) 45%,var(--line))">
+      <div class="item-top"><h4>Tianeptina</h4><span class="aka">"heroína de posto de gasolina"</span><span class="ev ev-falhou">perigosa</span></div>
+      <dl class="row">
+        <dt>Como age</dt><dd>Antidepressivo francês dos anos 1980 que, além de agir no glutamato, <b>ativa receptores opioides mu</b>, os mesmos da morfina.</dd>
+        <dt>Por que evitar</dt><dd>A FDA emitiu alerta urgente em 2025: overdoses, mortes, dependência e abstinência igual à de opioides. Mais de 300 intoxicações em 2024 nos EUA; não aparece em exames toxicológicos comuns.</dd>
+      </dl>
+    </article>
+    <article class="item" style="border-color:color-mix(in srgb,var(--warn) 45%,var(--line))">
+      <div class="item-top"><h4>Phenibut</h4><span class="aka">derivado do GABA</span><span class="ev ev-falhou">perigoso</span></div>
+      <dl class="row">
+        <dt>Como age</dt><dd>Agonista do receptor GABA-B, um freio do sistema nervoso. Vendido como "calmante com foco".</dd>
+        <dt>Por que evitar</dt><dd>Tolerância rápida e abstinência que pode ser intensa, com ansiedade rebote, insônia e agitação.</dd>
+      </dl>
+    </article>
+    <article class="item">
+      <div class="item-top"><h4>"Research chemicals"</h4><span class="aka">peptídeos e análogos sem registro</span><span class="ev ev-falhou">pureza incerta</span></div>
+      <dl class="row"><dt>O problema</dt><dd>O rótulo "não para consumo humano" é o que permite a venda. Não há garantia de que o frasco contém o que diz, na dose que diz, sem contaminantes.</dd></dl>
+    </article>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section id="mapa">
+  <span class="eyebrow">Síntese</span>
+  <h2>Mapa: evidência × cautela</h2>
+  <p class="prose muted">Horizontal: força da evidência em adultos saudáveis. Vertical: quanta cautela exige (interações, receita, doping, pureza, toxicidade).</p>
+  <div class="matrix-wrap">
+    <div class="matrix" aria-label="Nootrópicos por evidência e cautela">
+      <div class="ylab">cautela alta</div>
+      <div class="cell hot"><span class="chip" style="--c:var(--nrg)">Azul de metileno</span><span class="chip" style="--c:var(--glu)">Fenilpiracetam</span><span class="chip" style="--c:var(--bdnf)">Dihexa</span><span class="chip" style="--c:var(--bdnf)">BPC-157</span><span class="chip" style="--c:var(--calm)">Cerebrolysin</span><span class="chip" style="--c:var(--warn)">Tianeptina</span><span class="chip" style="--c:var(--warn)">Phenibut</span></div>
+      <div class="cell hot"><span class="chip" style="--c:var(--cat)">Modafinil</span><span class="chip" style="--c:var(--cat)">Metilfenidato</span><span class="chip" style="--c:var(--cat)">Anfetaminas</span><span class="chip" style="--c:var(--ach)">Nicotina</span></div>
+      <div class="cell hot"></div>
+      <div class="ylab">média</div>
+      <div class="cell"><span class="chip" style="--c:var(--glu)">Piracetam</span><span class="chip" style="--c:var(--glu)">Aniracetam</span><span class="chip" style="--c:var(--calm)">Noopept</span><span class="chip" style="--c:var(--calm)">Semax</span><span class="chip" style="--c:var(--calm)">Selank</span><span class="chip" style="--c:var(--bdnf)">P021</span><span class="chip" style="--c:var(--bdnf)">Ginkgo</span></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="ylab">baixa</div>
+      <div class="cell"><span class="chip" style="--c:var(--ach)">Alfa-GPC</span><span class="chip" style="--c:var(--ach)">Citicolina</span><span class="chip" style="--c:var(--bdnf)">Rhodiola</span><span class="chip" style="--c:var(--bdnf)">Juba-de-leão</span><span class="chip" style="--c:var(--nrg)">Cetonas</span><span class="chip" style="--c:var(--nrg)">NR</span></div>
+      <div class="cell"><span class="chip" style="--c:var(--nrg)">Creatina</span><span class="chip" style="--c:var(--bdnf)">Bacopa</span></div>
+      <div class="cell good"><span class="chip" style="--c:var(--cat)">Cafeína</span><span class="chip" style="--c:var(--calm)">Cafeína + L-teanina</span></div>
+      <div></div>
+      <div class="xlab">fraca ou nula</div>
+      <div class="xlab">moderada / pequena</div>
+      <div class="xlab">consistente</div>
+    </div>
+  </div>
+  <p class="axis-note"><span>Ginkgo fica em "média" pela interação com anticoagulantes.</span><span>Classificação deste guia, a partir das fontes.</span></p>
+</section>
+
+<!-- COMO LER -->
+<section id="ler">
+  <span class="eyebrow">Ferramentas</span>
+  <h2>Como ler os estudos sem se enganar</h2>
+  <div class="lessons">
+    <div class="lesson"><h3>Tamanho de efeito</h3><p>SMD (ou d) mede o efeito em desvios-padrão. 0,2 é pequeno, 0,5 médio, 0,8 grande.</p>
+      <div class="scale" aria-hidden="true">
+        <div><span>0,12</span><div class="bar" style="width:12%"></div></div>
+        <div><span>0,31</span><div class="bar" style="width:31%;background:var(--ach)"></div></div>
+        <div><span>0,8</span><div class="bar" style="width:80%;background:var(--bdnf)"></div></div>
+      </div>
+      <p style="font-size:13.5px">Modafinil em saudáveis · creatina na memória · referência de efeito grande</p>
+    </div>
+    <div class="lesson"><h3>Quem foi estudado?</h3><p>Resultado em idosos, pacientes ou ratos não vale automaticamente para um jovem descansado. Quem já está no topo da curva (aula 6) tem pouco espaço para subir.</p></div>
+    <div class="lesson"><h3>Placebo é forte</h3><p>O estudo de microdose mostrou: as pessoas melhoravam quando <em>achavam</em> que tinham tomado. Sensação de foco não é foco medido.</p></div>
+    <div class="lesson"><h3>Viés de publicação</h3><p>Estudos positivos são publicados com mais facilidade. Meta-análises de estimulantes acharam esse viés inflando efeitos de memória.</p></div>
+    <div class="lesson"><h3>Mecanismo não é resultado</h3><p>"Aumenta BDNF em ratos" é hipótese. Ginkgo, GLP-1 e davunetide tinham mecanismos plausíveis e falharam em humanos.</p></div>
+    <div class="lesson"><h3>Quem pagou?</h3><p>No Cerebrolysin, 3 dos 7 ensaios eram ligados ao fabricante. Conflito de interesse não invalida, mas exige replicação independente.</p></div>
+    <div class="lesson"><h3>Biomarcador ≠ desfecho</h3><p>Na semaglutida, marcadores caíram e a doença não desacelerou. O que importa é a pessoa funcionar melhor.</p></div>
+    <div class="lesson"><h3>A base vence</h3><p>Sono, treino aeróbio (que sobe BDNF), alimentação e cafeína bem usada movem a cognição mais do que qualquer item deste mapa.</p></div>
+  </div>
+</section>
+
+<!-- SEGURANÇA -->
+<section id="seguranca">
+  <span class="eyebrow">Ferramentas</span>
+  <h2>Segurança, receita e doping</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Substância</th><th>Situação</th><th>Principal cuidado</th></tr></thead>
+      <tbody>
+        <tr><td>Fenilpiracetam</td><td>Proibido WADA (S6)</td><td>Doping em competição; estimulante</td></tr>
+        <tr><td>Modafinil, metilfenidato, anfetaminas</td><td>Receita controlada; proibidos WADA em competição</td><td>Insônia, pressão, potencial de abuso</td></tr>
+        <tr><td>BPC-157</td><td>Proibido WADA; FDA com alerta de segurança</td><td>Pureza e segurança humana desconhecidas</td></tr>
+        <tr><td>Peptídeos sem registro (Semax, Selank, Dihexa, P021)</td><td>Tendem a cair na S0 da WADA (substâncias não aprovadas)</td><td>Pureza; dados humanos escassos</td></tr>
+        <tr><td>Azul de metileno</td><td>Medicamento hospitalar</td><td>Antidepressivos (síndrome serotoninérgica), G6PD, gravidez</td></tr>
+        <tr><td>Tianeptina, phenibut</td><td>Alertas de agências</td><td>Dependência e abstinência</td></tr>
+        <tr><td>Piracetam</td><td>Medicamento com receita no Brasil</td><td>Uso sem acompanhamento</td></tr>
+        <tr><td>Ginkgo</td><td>Fitoterápico</td><td>Interação com anticoagulantes</td></tr>
+        <tr><td>Cafeína, L-teanina, creatina</td><td>Suplementos</td><td>Cafeína à noite atrapalha o sono</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="prose muted" style="font-size:15px">Este guia explica mecanismos e evidências e não traz doses de propósito. Qualquer uso deve passar por um médico, principalmente com medicação contínua.</p>
+</section>
+
+<!-- REVISÃO -->
+<section id="revisao">
+  <span class="eyebrow">Revisão</span>
+  <h2>Flashcards</h2>
+  <p class="muted">Toque no cartão para ver a resposta.</p>
+  <div class="cards">
+    <button class="fc nrg" aria-expanded="false"><span class="q">O que a bomba de sódio e potássio faz a cada ciclo?</span><span class="a" hidden>Joga 3 Na⁺ para fora e traz 2 K⁺ para dentro, gastando 1 ATP. Mantém o repouso em cerca de −70 mV.</span><span class="hint">ver resposta</span></button>
+    <button class="fc glu" aria-expanded="false"><span class="q">Quais são as 3 formas de terminar o sinal na fenda?</span><span class="a" hidden>Recaptação por transportadores, degradação por enzimas (acetilcolinesterase, MAO, COMT) e difusão.</span><span class="hint">ver resposta</span></button>
+    <button class="fc ach" aria-expanded="false"><span class="q">Diferença entre agonista e modulador alostérico positivo?</span><span class="a" hidden>O agonista ativa o receptor sozinho. O modulador encaixa em outro ponto e só amplifica o sinal quando o neurotransmissor natural chega.</span><span class="hint">ver resposta</span></button>
+    <button class="fc glu" aria-expanded="false"><span class="q">Por que o NMDA é chamado de detector de coincidência?</span><span class="a" hidden>Porque só abre quando há glutamato e a membrana já está despolarizada (o que expulsa o Mg²⁺ do poro). Ou seja, quando os dois neurônios estão ativos juntos.</span><span class="hint">ver resposta</span></button>
+    <button class="fc bdnf" aria-expanded="false"><span class="q">Quais as 3 vias ativadas pelo TrkB?</span><span class="a" hidden>MAPK/ERK (CREB, genes da memória), PI3K/Akt (sobrevivência, freia GSK-3β) e PLCγ (cálcio e liberação).</span><span class="hint">ver resposta</span></button>
+    <button class="fc cat" aria-expanded="false"><span class="q">O que a curva em U invertido prevê sobre estimulantes?</span><span class="a" hidden>Ajudam quem está abaixo do ótimo (cansado, TDAH) e pioram quem já está no topo ou estressado.</span><span class="hint">ver resposta</span></button>
+    <button class="fc calm" aria-expanded="false"><span class="q">De onde vem a adenosina que dá sono?</span><span class="a" hidden>Do gasto de ATP: ATP → ADP → AMP → adenosina. Ela acumula durante a vigília e o sono a limpa.</span><span class="hint">ver resposta</span></button>
+    <button class="fc nrg" aria-expanded="false"><span class="q">O que a fosfocreatina faz no neurônio?</span><span class="a" hidden>Recarrega ATP em milissegundos pela creatina quinase: PCr + ADP ⇄ Cr + ATP.</span><span class="hint">ver resposta</span></button>
+    <button class="fc warn" aria-expanded="false"><span class="q">Quais os 3 problemas de um peptídeo para chegar ao cérebro?</span><span class="a" hidden>É digerido no estômago, cortado por peptidases no sangue e é grande e polar demais para a barreira hematoencefálica.</span><span class="hint">ver resposta</span></button>
+    <button class="fc glu" aria-expanded="false"><span class="q">Por que o piracetam quase não funciona em jovens saudáveis?</span><span class="a" hidden>Ele restaura a fluidez de membranas envelhecidas; em membranas jovens não há o que corrigir.</span><span class="hint">ver resposta</span></button>
+    <button class="fc bdnf" aria-expanded="false"><span class="q">Qual o risco teórico do Dihexa?</span><span class="a" hidden>Ele potencializa o eixo HGF/c-Met, envolvido no crescimento de muitos cânceres; não há estudos humanos.</span><span class="hint">ver resposta</span></button>
+    <button class="fc nrg" aria-expanded="false"><span class="q">Qual o "atalho" do azul de metileno?</span><span class="a" hidden>Leva elétrons do NADH direto ao citocromo c, pulando os complexos I e III.</span><span class="hint">ver resposta</span></button>
+    <button class="fc calm" aria-expanded="false"><span class="q">Por que nunca combinar azul de metileno com antidepressivos?</span><span class="a" hidden>Ele inibe fortemente a MAO-A; com ISRS/IRSN a serotonina acumula e pode causar síndrome serotoninérgica.</span><span class="hint">ver resposta</span></button>
+    <button class="fc nrg" aria-expanded="false"><span class="q">O que o estudo do lítio de 2025 encontrou?</span><span class="a" hidden>Lítio baixo no cérebro já no declínio leve, sequestrado pelas placas; orotato de lítio em dose baixa reverteu o quadro em camundongos.</span><span class="hint">ver resposta</span></button>
+    <button class="fc calm" aria-expanded="false"><span class="q">O que é a tianeptina, na prática?</span><span class="a" hidden>Um antidepressivo que ativa receptores opioides mu; vendido como suplemento, causa dependência e overdoses.</span><span class="hint">ver resposta</span></button>
+    <button class="fc glu" aria-expanded="false"><span class="q">Qual racetam é proibido pela WADA?</span><span class="a" hidden>O fenilpiracetam (carphedon), como estimulante na lista S6.</span><span class="hint">ver resposta</span></button>
+  </div>
+</section>
+
+<!-- FONTES -->
+<section id="fontes">
+  <span class="eyebrow">Fontes</span>
+  <h2>Para ir mais fundo</h2>
+  <ol class="refs">
+    <li class="grp">Famílias clássicas</li>
+    <li>Winblad B. Piracetam: a review of pharmacological properties and clinical uses. CNS Drug Rev, 2005. <a href="https://pubmed.ncbi.nlm.nih.gov/16007238/">PubMed</a></li>
+    <li>Leuner K et al. Piracetam e função mitocondrial no envelhecimento. Front Neurosci, 2010. <a href="https://www.frontiersin.org/articles/10.3389/fnins.2010.00044/pdf">PDF</a></li>
+    <li>Jin R et al. Mechanism of positive allosteric modulators acting on AMPA receptors. J Neurosci, 2005. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6725607/">PMC</a></li>
+    <li>CX717 (histórico do programa). <a href="https://en.wikipedia.org/wiki/CX717">Wikipedia</a></li>
+    <li>Heishman SJ et al. Meta-analysis of the acute effects of nicotine and smoking on human performance, 2010. <a href="https://pubmed.ncbi.nlm.nih.gov/20414766/">PubMed</a> · <a href="https://www.tobaccoinaustralia.org.au/chapter-6-addiction/6-6-cognitive-effects">resumo</a></li>
+    <li>Battleday RM, Brem AK. Modafinil em saudáveis sem privação de sono. Eur Neuropsychopharmacol, 2015. <a href="https://pubmed.ncbi.nlm.nih.gov/26381811/">PubMed</a></li>
+    <li>Roberts CA et al. Modafinil, metilfenidato e d-anfetamina em adultos saudáveis. Eur Neuropsychopharmacol, 2020. <a href="https://researchonline.ljmu.ac.uk/id/eprint/13268/">Repositório</a></li>
+    <li>Ilieva IP et al. Prescription stimulants' effects on healthy cognition. J Cogn Neurosci, 2015. <a href="https://pubmed.ncbi.nlm.nih.gov/25591060">PubMed</a></li>
+    <li>Ferré S. Cafeína, receptores A1/A2A e dopamina. J Alzheimers Dis, 2010. <a href="https://content.iospress.com/journals/journal-of-alzheimers-disease/20/s1">Edição</a></li>
+    <li>Camfield DA et al. L-teanina, cafeína e EGCG. Nutr Rev, 2014. <a href="https://pubmed.ncbi.nlm.nih.gov/24946991/">PubMed</a></li>
+    <li>Xu C et al. Creatina e cognição em adultos: meta-análise. Front Nutr, 2024. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11275561/">PMC</a> · <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1570800/pdf">correção</a></li>
+    <li>Kongkeaw C et al. Bacopa monnieri: meta-análise. J Ethnopharmacol, 2014. <a href="https://pubmed.ncbi.nlm.nih.gov/24252493/">PubMed</a></li>
+    <li>Laws KR et al. Ginkgo biloba em saudáveis: meta-análise. Hum Psychopharmacol, 2012. <a href="https://uhra.herts.ac.uk/handle/2299/10981">Repositório</a></li>
+    <li>Ishaque S et al. Rhodiola rosea e fadiga. BMC Complement Altern Med, 2012. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3541197/">PMC</a></li>
+    <li>Sagaro GG et al. Alfa-GPC vs citicolina em demência. Front Neurol, 2025. <a href="https://www.frontiersin.org/articles/10.3389/fneur.2025.1649661/full">Frontiers</a></li>
+    <li class="grp">Peptídeos</li>
+    <li>Vakhitova YV et al. Mecanismo molecular do Noopept. Acta Naturae, 2016. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4837574">PMC</a></li>
+    <li>Selank: estrutura e estudos. <a href="https://en.wikipedia.org/wiki/Selank">Wikipedia</a></li>
+    <li>Ziganshina LE et al. Cerebrolysin for acute ischaemic stroke. Cochrane, 2023. <a href="https://www.cochrane.org/CD007026/STROKE_cerebrolysin-acute-ischaemic-stroke">Cochrane</a></li>
+    <li>ADDF Cognitive Vitality. Dihexa. <a href="https://www.alzdiscovery.org/uploads/cognitive_vitality_media/Dihexa_1.pdf">PDF</a> · fosgonimeton: <a href="https://www.alzheimer-europe.org/news/athira-pharma-announces-results-phase-2/3-lift-ad-trial-mild-moderate-ad">Alzheimer Europe</a></li>
+    <li>ADDF Cognitive Vitality. P021. <a href="https://www.alzdiscovery.org/uploads/cognitive_vitality_media/P021.pdf">PDF</a></li>
+    <li>Davunetide na paralisia supranuclear progressiva. <a href="https://alzforum.org/node/39336">Alzforum</a></li>
+    <li>Revisão sobre BPC-157 em humanos, 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12313605/">PMC</a></li>
+    <li>Semaglutida: resultados EVOKE e EVOKE+. <a href="https://www.alzheimer-europe.org/news/results-evoke-and-evoke-trials-show-no-effect-oral-semaglutide-ad-progression">Alzheimer Europe</a></li>
+    <li class="grp">Fronteira</li>
+    <li>Aron L et al. (Yankner). Lítio e Alzheimer. Nature, 2025. <a href="https://www.nih.gov/news-events/nih-research-matters/lithium-levels-tied-alzheimers-disease-dementia">NIH</a></li>
+    <li>Takeda. Oveporexton: fase 3 em narcolepsia tipo 1. <a href="https://www.takeda.com/newsroom/newsreleases/2025/positive-results-phase-3-oveporexton-narcolepsy-type-1/">Takeda</a> · cognição: <a href="https://www.psychiatrictimes.com/view/oveporexton-improves-daily-function-cognition-and-nighttime-sleep-in-narcolepsy-type-1">Psychiatric Times</a></li>
+    <li>Éster de cetona no metabolismo cerebral: ensaio randomizado. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12739581">PMC</a></li>
+    <li>Urolitina A: fase 2 em Alzheimer. <a href="https://www.neurologylive.com/view/mitophagy-activator-urolithin-a-enters-phase-2-alzheimer-trial-apoe4-carriers">NeurologyLive</a></li>
+    <li>Nicotinamida ribosídeo em declínio cognitivo leve (DOI 10.1002/trc2.70023). <a href="https://www.fightaging.org/?p=61825">Resumo</a></li>
+    <li>Moliner R et al. Psychedelics promote plasticity by directly binding to TrkB. Nat Neurosci, 2023. <a href="https://jyx.jyu.fi/handle/123456789/87517">Repositório</a></li>
+    <li>Szigeti B et al. Self-blinding citizen science: microdosing. eLife, 2021. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7924944">PMC</a></li>
+    <li class="grp">Azul de metileno</li>
+    <li>Rojas JC et al. Mecanismos neurometabólicos do azul de metileno. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3265679">PMC</a></li>
+    <li>Bruchey AK, Gonzalez-Lima F. Hormese do azul de metileno. <a href="https://pmc.ncbi.nlm.nih.gov/articles/pmid/20463863">PMC</a></li>
+    <li>Rodriguez P et al. fMRI do azul de metileno no cérebro humano. Radiology, 2016. <a href="https://www.rsna.org/media/press/i/1888">RSNA</a></li>
+    <li>Gillman PK. Azul de metileno e toxicidade serotoninérgica. <a href="https://www.psychotropical.com/methylene-blue-serotonin-toxicity-syndrome/">PsychoTropical</a> · bula: <a href="https://drugcentral.org/label/fde64824-2be5-4d85-8d57-5098ca6890bb/view">DrugCentral</a></li>
+    <li>TGA (Austrália). Produtos orais de azul de metileno sem registro. <a href="https://www.tga.gov.au/safety/safety-alerts/imported-unregistered-methylene-blue-products">TGA</a></li>
+    <li>LUCIDITY sem placebo cego. <a href="https://www.clinicaltrialsarena.com/analyst-comment/ad-pd-2025-further-evidence-for-efficacy-of-taurxs-lmtx-despite-lack-of-true-placebo-comparator/">Clinical Trials Arena</a></li>
+    <li class="grp">Segurança</li>
+    <li>FDA alerta sobre tianeptina, 2025. <a href="https://www.sciencealert.com/fda-issues-warning-over-dangerous-gas-station-heroin-substance">ScienceAlert</a></li>
+    <li>Docherty JR. Estimulantes proibidos pela WADA. Br J Pharmacol, 2008. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2439527">PMC</a></li>
+    <li>Gwern. Diretório de nootrópicos e auto-experimentos cegos. <a href="https://gwern.net/doc/nootropic/index">gwern.net</a></li>
+  </ol>
+</section>
+
+<footer>Material de estudo · out/2026 · versão 2. Conteúdo educativo, não é orientação médica nem prescrição.</footer>
+</main>
+
+<script>
+document.querySelectorAll('.fc').forEach(function(b){
+  b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open));
+    b.querySelector('.a').hidden=open;
+    b.querySelector('.hint').textContent=open?'ver resposta':'esconder';
+  });
+});
+</script>
+
+</body></html>

@@ -7,6 +7,176 @@
     "arquivo": "colesterol-da-digestao-aos-hormonios.html"
   },
   {
+    "titulo": "Mapa dos Nootrópicos",
+    "categoria": "suplementacao",
+    "data": "Out · 2026",
+    "resumo": "Nove aulas de neurociência (potencial de ação, sinapse, receptores, memória e LTP, BDNF, dopamina, vigília, energia e barreira hematoencefálica) e o catálogo das famílias de nootrópicos com o nível de evidência de cada uma: racetams, colinérgicos, estimulantes, aminoácidos, fitoterápicos, peptídeos, azul de metileno e as pesquisas de 2025–26.",
+    "arquivo": "nootropicos-mapa.html"
+  },
+  {
+    "titulo": "Fisiologia e Nutrição do Atleta",
+    "categoria": "nutricao",
+    "data": "Nov · 2026",
+    "resumo": "Panorama de fisiologia do exercício e nutrição esportiva a partir dos livros do Haluch e do McArdle: sistemas de energia, adaptações ao treino, macronutrientes, hidratação e estratégias para atletas de diferentes esportes.",
+    "arquivo": "fisiologia-nutricao-do-atleta.html"
+  },
+  {
+    "titulo": "Primeiros Socorros: Revisão Completa",
+    "categoria": "fisiologia",
+    "serie": "Tutoria (Graduação)",
+    "data": "Nov · 2026",
+    "resumo": "Revisão para a prova de primeiros socorros: segurança da cena, avaliação primária, trauma, hemorragia e choque, queimaduras, RCP e DEA, engasgo, emergências clínicas, intoxicações, animais peçonhentos e parto de emergência, com flashcards e questões comentadas.",
+    "arquivo": "primeiros-socorros-revisao.html"
+  },
+  {
+    "titulo": "Epitélios do Sistema Respiratório",
+    "categoria": "fisiologia",
+    "serie": "Tutoria (Graduação)",
+    "data": "Out · 2026",
+    "resumo": "Histologia do sistema respiratório do nariz ao alvéolo: desenhos em HE com cada célula apontada, chave de identificação, tabela comparativa e treino.",
+    "arquivo": "histologia-epitelios-respiratorio.html"
+  },
+  {
+    "titulo": "Atlas de Bancada: Prova Prática de Biomorfofuncional I",
+    "categoria": "biomecanica",
+    "serie": "Tutoria (Graduação)",
+    "data": "Set · 2026",
+    "resumo": "Atlas para a prova prática: ossos do cíngulo pélvico, membro inferior, cíngulo escapular e membro superior com acidentes ósseos numerados, músculos, lâminas de tecido conjuntivo e cartilagem, galeria de células e modo de treino.",
+    "arquivo": "atlas-de-bancada-biomorfofuncional.html"
+  },
+  {
+    "titulo": "Guia do Fut 7",
+    "categoria": "treino",
+    "data": "Out · 2026",
+    "resumo": "Página visual sobre o futebol 7: conceitos básicos, motivos para jogar, Kings League e a força da várzea.",
+    "arquivo": "guia-fut7.html"
+  },
+  {
+    "titulo": "Torque no Tríceps Coice: Halter × Cabo",
+    "categoria": "biomecanica",
+    "data": "Nov · 2026",
+    "resumo": "Animação interativa do tríceps coice com o vetor da carga, o braço de momento e a curva de torque no halter e no cabo.",
+    "arquivo": "torque-triceps-coice.html"
+  },
+  {
+    "titulo": "Torque no Agachamento: Convencional × Sumô",
+    "categoria": "biomecanica",
+    "data": "Nov · 2026",
+    "resumo": "Animação interativa comparando o torque no quadril e no joelho no agachamento convencional e no sumô.",
+    "arquivo": "torque-agachamento-convencional-sumo.html"
+  },
+  {
+    "titulo": "Workshop de Biomecânica: Joelho, Coluna e Ombro",
+    "categoria": "biomecanica",
+    "data": "Ago · 2026",
+    "resumo": "Anotações do workshop desenvolvidas em material: hipertrofia de quadríceps e dor no joelho, treino de força com hérnia de disco, correção postural, hipertrofia de deltoide e impacto subacromial.",
+    "arquivo": "workshop-biomecanica-joelho-coluna-ombro.html"
+  },
+  {
+    "titulo": "Nutrição Haluch 13: Aminoácidos",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "A Parte 3 tratou da proteína como macronutriente: quanto, quando, de que fonte. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-13"
+  },
+  {
+    "titulo": "Nutrição Haluch 12: Vitaminas e minerais",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Os macronutrientes das Partes 1 a 3 são o combustível e o tijolo. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-12"
+  },
+  {
+    "titulo": "Nutrição Haluch 11: Longevidade",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "A última parte, e a que tensiona todas as anteriores. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-11"
+  },
+  {
+    "titulo": "Nutrição Haluch 10: Hormônios",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "A fisiologia por trás do que o fisiculturismo usa: como o eixo hormonal se regula, o que a testosterona faz no músculo e no tecido adiposo, por que o estrogênio importa nos dois sexos, o que acontece com o eixo quando chegam hormônios de fora e quais são os riscos documentados. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-10"
+  },
+  {
+    "titulo": "Nutrição Haluch 9: Fisiculturismo",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "O esporte que leva a composição corporal ao limite. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-9"
+  },
+  {
+    "titulo": "Nutrição Haluch 8: Suplementação e termogênicos",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Creatina, beta-alanina, bicarbonato, cafeína, citrulina e nitrato: o que cada um faz dentro da célula, quanto, quando e para qual treino. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-8"
+  },
+  {
+    "titulo": "Nutrição Haluch 7: Estratégias nutricionais",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Dieta flexível, refeição livre, dieta metabólica, ciclo de carboidratos, modelo Haluch, jejum intermitente e nutrient timing. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-7"
+  },
+  {
+    "titulo": "Nutrição Haluch 6: Emagrecimento",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Por que se ganha gordura, como o cérebro controla a fome, o que a obesidade faz com a insulina e a leptina, e por que o corpo resiste a emagrecer. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-6"
+  },
+  {
+    "titulo": "Nutrição Haluch 5: Gasto energético e cálculo de dieta",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Quanto o corpo gasta, onde gasta, como estimar esse número e como transformá-lo em uma dieta, passo a passo. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-5"
+  },
+  {
+    "titulo": "Nutrição Haluch 4: Bioenergética, exercício e fadiga",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Como o músculo fabrica energia, reação por reação, por que ele perde força e o que muda com o treino. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-4"
+  },
+  {
+    "titulo": "Nutrição Haluch 3: Proteínas",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Do aminoácido ao prato do atleta. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-3"
+  },
+  {
+    "titulo": "Nutrição Haluch 2: Lipídios",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Do desenho de um ácido graxo até a escolha do óleo na cozinha. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-2"
+  },
+  {
+    "titulo": "Nutrição Haluch 1: Carboidratos",
+    "categoria": "nutricao",
+    "serie": "Nutrição Haluch",
+    "data": "Nov · 2026",
+    "resumo": "Da estrutura da molécula até a prescrição para o atleta. Parte do material que une os livros do Dudu Haluch, com glossário e figuras.",
+    "arquivo": "nutricao-haluch/index.html#parte-1"
+  },
+  {
     "titulo": "Tutorias 09 e 10: Sistema Digestório Completo (Revisão)",
     "categoria": "fisiologia",
     "serie": "Tutoria (Graduação)",

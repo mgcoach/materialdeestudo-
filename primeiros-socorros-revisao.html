@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primeiros Socorros · Revisão completa</title>
+<meta name="description" content="Revisão de Primeiros Socorros: conteúdo da prova anterior em versão compacta + RCP, emergências clínicas, intoxicação exógena, animais peçonhentos e parto de emergência. Com flashcards e simulado.">
+<meta property="og:title" content="Primeiros Socorros · Revisão completa">
+<meta property="og:description" content="Tudo para a prova, com flashcards e simulado comentado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --ink:#1c2029; --muted:#5a6272; --line:#dde2ea;
+  --red:#c8102e; --red-soft:#fdecee; --blue:#1f4f8f; --blue-soft:#e8f0fa;
+  --amber:#b7791f; --amber-soft:#fdf5e6; --green:#2f7d4a; --green-soft:#e9f5ee;
+  --purple:#6a3fa0; --purple-soft:#f1eafa; --radius:10px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#12151b; --surface:#1b1f27; --ink:#e7e9ee; --muted:#9aa3b2; --line:#2c323d;
+  --red:#ff5a6e; --red-soft:#3a1d23; --blue:#7fb0ef; --blue-soft:#1b2a3d;
+  --amber:#f0b454; --amber-soft:#35291a; --green:#6fcf8f; --green-soft:#1a3024;
+  --purple:#c3a3f0; --purple-soft:#2a2138;}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Atkinson Hyperlegible",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Barlow Condensed",sans-serif;line-height:1.1;margin:0}
+h2{font-size:2rem;font-weight:700;display:flex;gap:.6rem;align-items:baseline}
+h3{font-size:1.35rem;font-weight:600;margin:1.5rem 0 .45rem;color:var(--blue)}
+p{margin:.5rem 0} ul,ol{margin:.4rem 0;padding-left:1.25rem} li{margin:.2rem 0}
+a{color:var(--blue)} a.btn{text-decoration:none}
+summary{cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.small{font-size:.9rem;color:var(--muted)}
+
+.bar{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.5rem;padding:.55rem .9rem}
+.bar .t{font-family:"Barlow Condensed";font-weight:600;font-size:1.15rem;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{font:inherit;font-size:.9rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:.35rem .7rem;display:inline-block}
+
+header.hero{max-width:760px;margin:0 auto;padding:2.2rem 1rem 1rem}
+.hero h1{font-size:clamp(2.6rem,11vw,4.2rem);font-weight:700}
+.hero p{color:var(--muted)}
+.cross{display:inline-block;width:.7em;height:.7em;background:var(--red);vertical-align:.02em;margin-right:.25em;
+  clip-path:polygon(35% 0,65% 0,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0 65%,0 35%,35% 35%)}
+.plan{margin-top:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.9rem 1rem}
+.kb,.kr,.ka{border-radius:4px;padding:0 .3rem;font-weight:700}
+.kb{background:var(--blue-soft);color:var(--blue)} .kr{background:var(--red-soft);color:var(--red)} .ka{background:var(--amber-soft);color:var(--amber)}
+.toc2 a{display:flex;gap:.6rem;padding:.45rem 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.toc2 a span{color:var(--muted);font-family:"Barlow Condensed";font-weight:600;min-width:1.6rem}
+
+main{max-width:760px;margin:0 auto;padding:0 1rem 3rem}
+section{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.3rem 1.1rem;margin:1.1rem 0}
+.num{color:var(--red);font-size:1.3rem}
+.lead{color:var(--muted);margin-top:.3rem}
+.part{margin:2.2rem 0 .4rem;font-family:"Barlow Condensed";font-weight:700;font-size:1.7rem;padding:.7rem 1rem;border-radius:var(--radius);background:var(--grey,#2b2e34);color:#fff;background:#2b2e34}
+.part span{display:block;font-size:.95rem;font-weight:600;opacity:.75;letter-spacing:.08em;text-transform:uppercase}
+.part.new{background:linear-gradient(120deg,#c8102e,#8a1238)}
+
+.box{border-left:4px solid;border-radius:6px;padding:.65rem .85rem;margin:.9rem 0}
+.box b.k{display:block;font-family:"Barlow Condensed";font-size:1.05rem;font-weight:600;margin-bottom:.1rem}
+.prova{border-color:var(--blue);background:var(--blue-soft)} .prova b.k{color:var(--blue)}
+.pega{border-color:var(--red);background:var(--red-soft)} .pega b.k{color:var(--red)}
+.fonte{border-color:var(--amber);background:var(--amber-soft)} .fonte b.k{color:var(--amber)}
+.macete{border-color:var(--green);background:var(--green-soft)} .macete b.k{color:var(--green)}
+
+.tw{overflow-x:auto;margin:.8rem 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{padding:.5rem .6rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--bg);font-family:"Barlow Condensed";font-weight:600;font-size:1rem}
+tr:last-child td{border-bottom:0}
+
+.seq{list-style:none;padding:0;margin:.8rem 0}
+.seq li{display:grid;grid-template-columns:2.6rem 1fr;gap:.7rem;padding:.5rem 0;border-bottom:1px dashed var(--line)}
+.seq li:last-child{border:0}
+.seq .L{font-family:"Barlow Condensed";font-weight:700;font-size:1.9rem;line-height:1;color:var(--red);text-align:center}
+
+.flow{margin:.8rem 0;font-size:.95rem}
+.flow .q{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.5rem .7rem;margin:.35rem 0}
+.flow .q.red{border-color:var(--red);background:var(--red-soft)}
+.tag{display:inline-block;border-radius:4px;padding:0 .4rem;color:#fff;font-weight:700;font-size:.85rem}
+.tag.v{background:#b3122a}.tag.a{background:#c98a0b;color:#1c1500}.tag.g{background:#2f7d4a}.tag.p{background:#2b2e34}
+
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:.9rem 0}
+.tiles div{background:var(--red-soft);border-radius:8px;padding:.6rem .5rem;text-align:center;font-size:.82rem;color:var(--muted);line-height:1.25}
+.tiles b{display:block;font-family:"Barlow Condensed";font-size:1.9rem;color:var(--red);line-height:1.05}
+
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.chips span{background:var(--purple-soft);color:var(--purple);border-radius:999px;padding:.2rem .7rem;font-size:.9rem;font-weight:700}
+
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.8rem 0}
+@media (max-width:520px){.dd{grid-template-columns:1fr}}
+.dd>div{border-radius:8px;padding:.6rem .75rem;font-size:.93rem;border-top:4px solid}
+.dd b{display:block;font-family:"Barlow Condensed";font-size:1.15rem}
+.do{background:var(--green-soft);border-color:var(--green)} .do b{color:var(--green)}
+.dont{background:var(--red-soft);border-color:var(--red)} .dont b{color:var(--red)}
+.do2{background:var(--amber-soft);border-color:var(--amber)} .do2 b{color:var(--amber)}
+.do3{background:var(--purple-soft);border-color:var(--purple)} .do3 b{color:var(--purple)}
+
+.vias{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.8rem 0}
+@media (max-width:520px){.vias{grid-template-columns:1fr}}
+.vias div{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.6rem .75rem;font-size:.92rem}
+.vias b{display:block;font-family:"Barlow Condensed";font-size:1.25rem;color:var(--purple)}
+
+.pos{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:.8rem 0}
+@media (max-width:520px){.pos{grid-template-columns:1fr}}
+.pos div{border-radius:8px;padding:.6rem .7rem;font-size:.9rem;color:#fff}
+.pos b{display:block;font-family:"Barlow Condensed";font-size:1.25rem}
+.pos .ok{background:#2f7d4a}.pos .warn{background:#b7791f}.pos .no{background:#b3122a}
+
+.fases{display:grid;gap:.5rem;margin:.8rem 0}
+.fases div{position:relative;background:var(--bg);border:1px solid var(--line);border-left:6px solid var(--red);border-radius:8px;padding:.6rem .75rem .6rem 3.2rem;font-size:.93rem}
+.fases div:nth-child(2){border-left-color:#b7791f}.fases div:nth-child(3){border-left-color:#2f7d4a}
+.fases span{position:absolute;left:.75rem;top:.45rem;font-family:"Barlow Condensed";font-weight:700;font-size:2rem;color:var(--muted)}
+.fases b{display:block;font-family:"Barlow Condensed";font-size:1.2rem}
+
+.fig{margin:.9rem 0;text-align:center;color:var(--ink)}
+.fig svg{width:100%;max-width:520px;height:auto}
+.fig figcaption{font-size:.9rem;color:var(--muted)}
+
+.cards{display:grid;gap:.6rem}
+.card{border:1px solid var(--line);border-radius:8px;background:var(--bg);padding:.75rem .85rem}
+.card summary{list-style:none}
+.card summary::-webkit-details-marker{display:none}
+.card .q{display:block;font-weight:700}
+.card small{color:var(--muted)}
+.card .a{margin-top:.45rem;padding-top:.45rem;border-top:1px dashed var(--line)}
+.card[open]{border-color:var(--blue)}
+
+.qz{border:1px solid var(--line);border-radius:8px;padding:.8rem;margin:.7rem 0;background:var(--bg)}
+.qz p{font-weight:700;margin:0 0 .4rem}
+.ops{list-style:none;padding:0;margin:.3rem 0 .5rem}
+.ops li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.45rem .6rem;margin:.3rem 0;font-size:.95rem}
+.qz details summary{color:var(--blue);font-weight:700}
+.qz .ex{margin-top:.4rem;padding:.5rem .6rem;border-radius:8px;background:var(--green-soft);font-size:.93rem}
+
+footer{max-width:760px;margin:0 auto;padding:0 1rem 3rem;color:var(--muted);font-size:.85rem}
+
+</style>
+</head>
+<body>
+<div class="bar"><div class="t">Primeiros Socorros · NUC002</div><a class="btn" href="#indice">Índice</a></div>
+
+<header class="hero">
+  <h1><i class="cross" aria-hidden="true"></i>Primeiros Socorros</h1>
+  <p>Revisão completa: o conteúdo da prova anterior em versão compacta e os assuntos novos (emergências clínicas, intoxicação e parto), na ordem do atendimento.</p>
+  <div class="plan">
+    <strong>Plano para hoje</strong>
+    <ol>
+      <li><strong>Parte 2 primeiro</strong> (seções 8 a 13): é o conteúdo que você ainda não revisou.</li>
+      <li>Na Parte 1, leia só as caixas <span class="kb">Cai na prova</span> e <span class="kr">Pegadinha</span>.</li>
+      <li>Flashcards e simulado no final. Caixas <span class="ka">amarelas</span> mostram onde slide, caderno e literatura divergem.</li>
+    </ol>
+  </div>
+  <details class="plan toc2" id="indice" open><summary><strong>Índice</strong></summary><nav aria-label="Índice"><a href="#s1"><span>1</span>Fundamentos, lei e cena</a><a href="#s2"><span>2</span>Exame primário e sinais vitais</a><a href="#s3"><span>3</span>Trauma, lesões e feridas</a><a href="#s4"><span>4</span>Hemorragias e choque</a><a href="#s5"><span>5</span>Queimaduras e choque elétrico</a><a href="#s6"><span>6</span>TRM e TCE</a><a href="#s7"><span>7</span>Múltiplas vítimas e START</a><a href="#s8"><span>8</span>Vítima inconsciente: RCP e DEA</a><a href="#s9"><span>9</span>Perda ou rebaixamento de consciência</a><a href="#s10"><span>10</span>Dor torácica e asma</a><a href="#s11"><span>11</span>Intoxicação exógena</a><a href="#s12"><span>12</span>Animais com veneno</a><a href="#s13"><span>13</span>Parto de emergência</a><a href="#s14"><span>14</span>Pegadinhas finais</a><a href="#s15"><span>15</span>Flashcards</a><a href="#s16"><span>16</span>Simulado</a></nav></details>
+</header>
+
+<main>
+<div class="part"><span>Parte 1</span>Revisão rápida da prova anterior</div>
+
+<!-- 1 -->
+<section id="s1">
+  <h2><span class="num">1</span>Fundamentos, lei e cena</h2>
+  <p class="lead">Antes de tocar na vítima: segurança, lei e o pedido de ajuda certo.</p>
+  <p><strong>Primeiros socorros</strong> = atendimento <strong>temporário e imediato</strong> para manter a vítima viva até chegar o atendimento especializado. Não substituem a equipe de saúde.</p>
+  <div class="box prova"><b class="k">Cai na prova · prioridade</b>
+  <strong>1º Eu → 2º Equipe → 3º Vítima.</strong> Socorrista ferido vira mais uma vítima.</div>
+  <h3>Omissão de socorro · Art. 135 do CP</h3>
+  <p>Crime: deixar de ajudar, <strong>quando possível sem risco pessoal</strong>, ou <strong>não pedir socorro à autoridade pública</strong>. Pena: 1 a 6 meses ou multa; <strong>+½</strong> se lesão grave, <strong>triplica</strong> se morte.</p>
+  <div class="box pega"><b class="k">Pegadinha</b>Quem não pode ajudar sem risco cumpre a lei <strong>ligando para o 192/193</strong>.</div>
+  <div class="tw"><table>
+    <tr><th>Serviço</th><th>Número</th></tr>
+    <tr><td>SAMU</td><td><strong>192</strong></td></tr>
+    <tr><td>Bombeiros</td><td><strong>193</strong></td></tr>
+    <tr><td>Polícia Militar</td><td>190</td></tr>
+    <tr><td>Disque-Intoxicação (Anvisa)</td><td>0800 722 6001</td></tr>
+    <tr><td>CIATox Bahia</td><td>0800 284 4343</td></tr>
+  </table></div>
+  <h3>Quatro passos na cena</h3>
+  <ol>
+    <li><strong>Avaliar de longe:</strong> é seguro? perigos ativos? quantas vítimas?</li>
+    <li><strong>Sinalizar:</strong> velocidade da via = nº de passos longos; <strong>chuva/noite: dobra</strong> (60 km/h à noite = 120 passos).</li>
+    <li><strong>Segurança:</strong> material perigoso ou violência → espere bombeiros/polícia.</li>
+    <li><strong>Biossegurança:</strong> EPI; todo fluido corporal é potencialmente infeccioso (inclusive líquido amniótico).</li>
+  </ol>
+  <div class="box macete"><b class="k">Macete · ao ligar</b>Quem fala → Onde → O que houve → Quantas vítimas → Riscos → Como estão.</div>
+</section>
+
+<!-- 2 -->
+<section id="s2">
+  <h2><span class="num">2</span>Exame primário e sinais vitais</h2>
+  <p class="lead">Achar o que mata primeiro, em 15 a 30 segundos.</p>
+  <ul class="seq">
+    <li><span class="L">X</span><div><strong>Exsanguinação</strong> · conter hemorragia externa grave.</div></li>
+    <li><span class="L">A</span><div><strong>Via aérea + coluna cervical</strong> · <em>jaw thrust</em> no trauma, colar cervical.</div></li>
+    <li><span class="L">B</span><div><strong>Respiração</strong> · Ver, Ouvir, Sentir; FR. Pneumotórax hipertensivo: <strong>estase de jugular + desvio de traqueia</strong>. Ferida aberta no tórax: <strong>curativo de 3 pontas</strong>.</div></li>
+    <li><span class="L">C</span><div><strong>Circulação</strong> · pulso radial bilateral → central. Bebê: <strong>braquial</strong>.</div></li>
+    <li><span class="L">D</span><div><strong>Neurológico</strong> · Glasgow e pupilas. Estímulo: trapézio, leito ungueal, supraorbital.</div></li>
+    <li><span class="L">E</span><div><strong>Exposição</strong> · procurar lesões, <strong>prevenir hipotermia</strong>.</div></li>
+  </ul>
+  <div class="box prova"><b class="k">Cai na prova</b>XABCDE é do <strong>trauma</strong>. Na vítima clínica inconsciente sem respirar, a sequência é <strong>C-A-B</strong> (comprime antes de ventilar). Ver seção 8.</div>
+  <div class="tw"><table>
+    <tr><th>Sinal</th><th>Valores da aula</th></tr>
+    <tr><td>FC adulto</td><td>60–80 bpm (livros: 60–100). &gt;100 taqui · &lt;60 bradi</td></tr>
+    <tr><td>FR adulto</td><td>12–22 ipm · criança 20–25 · RN 30–60</td></tr>
+    <tr><td>PA normal</td><td>&lt;130/85 · hipertensão a partir de 140/90</td></tr>
+    <tr><td>Temperatura</td><td>febre ≥37,5 °C · hipotermia &lt;35 °C</td></tr>
+    <tr><td>Glicemia</td><td>jejum 70–99 · <strong>hipoglicemia &lt;70 mg/dL</strong></td></tr>
+    <tr><td>Dor (EVA)</td><td>leve 0–2 · moderada 3–7 · intensa 8–10</td></tr>
+  </table></div>
+  <p><strong>-sfigmia</strong> = pulso; <strong>-cardia</strong> = coração. Oxímetro em vítima mal perfundida pode ler errado: olhe a vítima.</p>
+  <h3>Pupilas</h3>
+  <figure class="fig">
+  <svg viewBox="0 0 420 120" role="img" aria-label="Miose: pupila pequena. Midríase: pupila grande. Anisocoria: pupilas diferentes.">
+    <g font-family="Atkinson Hyperlegible,sans-serif" font-size="18" text-anchor="middle" fill="currentColor">
+      <g transform="translate(70,48)"><ellipse rx="44" ry="26" fill="#fff" stroke="#888"/><circle r="20" fill="#6b8fb8"/><circle r="5" fill="#111"/></g>
+      <text x="70" y="100" font-weight="700">Miose</text><text x="70" y="117" font-size="14">contraída</text>
+      <g transform="translate(210,48)"><ellipse rx="44" ry="26" fill="#fff" stroke="#888"/><circle r="20" fill="#6b8fb8"/><circle r="15" fill="#111"/></g>
+      <text x="210" y="100" font-weight="700">Midríase</text><text x="210" y="117" font-size="14">dilatada</text>
+      <g transform="translate(325,48)"><ellipse rx="26" ry="18" fill="#fff" stroke="#888"/><circle r="13" fill="#6b8fb8"/><circle r="3.5" fill="#111"/></g>
+      <g transform="translate(385,48)"><ellipse rx="26" ry="18" fill="#fff" stroke="#888"/><circle r="13" fill="#6b8fb8"/><circle r="10" fill="#111"/></g>
+      <text x="355" y="100" font-weight="700">Anisocoria</text><text x="355" y="117" font-size="14">diferentes</text>
+    </g>
+  </svg></figure>
+  <p>Anisocoria → lesão cerebral grave (TCE, AVC). Midríase bilateral sem reação → sugere óbito. <strong>Miose</strong> e <strong>midríase</strong> também aparecem nas intoxicações (seção 11).</p>
+</section>
+
+<!-- 3 -->
+<section id="s3">
+  <h2><span class="num">3</span>Trauma, lesões e feridas</h2>
+  <p class="lead">O essencial para não confundir.</p>
+  <p><strong>3 picos de morte:</strong> imediata (50%, só prevenção) · <strong>precoce</strong> (30%, onde o socorrista faz diferença) · tardia (20%). <strong>3 colisões:</strong> carro × objeto → corpo × carro → <strong>órgãos × corpo</strong> (lesão interna).</p>
+  <div class="tw"><table>
+    <tr><th>Lesão</th><th>Chave</th><th>Conduta</th></tr>
+    <tr><td>Entorse</td><td>Saiu e <strong>voltou</strong></td><td>Imobilizar, gelo</td></tr>
+    <tr><td>Luxação</td><td>Saiu e <strong>ficou fora</strong> (deformidade)</td><td>Imobilizar como está</td></tr>
+    <tr><td>Fratura</td><td>Rompe o osso; aberta = ferida até o osso</td><td>Imobilizar acima e abaixo; gelo só na fechada</td></tr>
+    <tr><td>Contusão</td><td>Trauma superficial, hematoma</td><td>Gelo</td></tr>
+    <tr><td>Distensão</td><td>Rompe fibras <strong>musculares</strong></td><td>Gelo, proteger</td></tr>
+  </table></div>
+  <div class="tw"><table>
+    <tr><th>Situação</th><th>Faça</th><th>Nunca</th></tr>
+    <tr><td>Objeto encravado</td><td>Estabilizar no lugar</td><td>Remover</td></tr>
+    <tr><td>Amputação</td><td>Parte em saco fechado, dentro de recipiente com gelo e água</td><td>Parte direto no gelo</td></tr>
+    <tr><td>Olho</td><td>Cobrir os dois levemente</td><td>Esfregar, tirar objeto</td></tr>
+    <tr><td>Mordida</td><td>Água e sabão; ver antirrábica</td><td>Espremer</td></tr>
+  </table></div>
+</section>
+
+<!-- 4 -->
+<section id="s4">
+  <h2><span class="num">4</span>Hemorragias e choque</h2>
+  <p class="lead">Volume de sangue: adulto ~7% do peso (70 kg ≈ 5 L); criança 8–9%.</p>
+  <div class="tw"><table>
+    <tr><th>Tipo</th><th>Como sai</th></tr>
+    <tr><td>Arterial</td><td>Vermelho vivo, <strong>em jatos</strong> (a mais grave)</td></tr>
+    <tr><td>Venosa</td><td>Vermelho escuro, fluxo contínuo</td></tr>
+    <tr><td>Capilar</td><td>Pontinhos na superfície, leve</td></tr>
+  </table></div>
+  <p><strong>Conduta:</strong> EPI → compressão direta → elevar o membro (sem fratura) → encharcou? <strong>põe outro pano por cima</strong> → 192.</p>
+  <p><strong>Hemorragia interna:</strong> pulso rápido e fraco, pele pálida e fria, suor frio, abdome globoso, confusão.</p>
+  <div class="tw"><table>
+    <tr><th>Choque</th><th>Causa</th><th>Pista</th></tr>
+    <tr><td>Hipovolêmico</td><td>Perda de volume</td><td>Pálido, frio, pulso rápido e fraco</td></tr>
+    <tr><td>Cardiogênico</td><td>Coração não bombeia (infarto)</td><td>Dor no peito, falta de ar</td></tr>
+    <tr><td>Séptico</td><td>Infecção</td><td>Febre, pele quente → fria</td></tr>
+    <tr><td>Anafilático</td><td>Alergia grave</td><td>Inchaço de face/lábios, chiado, urticária</td></tr>
+    <tr><td>Neurogênico</td><td>Lesão medular</td><td><strong>Pulso lento + pele quente</strong></td></tr>
+  </table></div>
+</section>
+
+<!-- 5 -->
+<section id="s5">
+  <h2><span class="num">5</span>Queimaduras e choque elétrico</h2>
+  <div class="tw"><table>
+    <tr><th>Grau</th><th>Aspecto</th><th>Dor</th></tr>
+    <tr><td>1º</td><td>Vermelhidão, sem bolha</td><td>Sim</td></tr>
+    <tr><td>2º</td><td><strong>Bolhas</strong></td><td><strong>A que mais dói</strong></td></tr>
+    <tr><td>3º</td><td>Branca ou escura, necrose</td><td>Não dói (destrói nervos)</td></tr>
+    <tr><td>4º</td><td>Carbonização</td><td>—</td></tr>
+  </table></div>
+  <p><strong>Regra dos nove:</strong> cabeça 9 · cada braço 9 · tronco frente 18 · costas 18 · <strong>cada perna 18</strong> · genitais 1. <strong>Palma da vítima ≈ 1%</strong>. Pequeno &lt;10% · médio 10–20% · grande &gt;20%.</p>
+  <p>Grave em qualquer extensão: <strong>face, mãos, pés, genitais, períneo, grandes articulações</strong>.</p>
+  <p><strong>Térmica:</strong> água corrente fria 10–20 min, sem gelo, tirar anéis. <strong>Química:</strong> lavar ≥ <strong>20 min</strong>. Nunca: pasta de dente, manteiga, gelo, estourar bolha.</p>
+  <p><strong>Elétrico:</strong> desligar a fonte antes de tocar. Fio sobre o carro: não toque no carro, oriente a vítima a ficar dentro. Lesão interna pode ser enorme com marca pequena; risco de <strong>fibrilação ventricular</strong>; observar 24 h.</p>
+</section>
+
+<!-- 6 -->
+<section id="s6">
+  <h2><span class="num">6</span>TRM e TCE</h2>
+  <p><strong>TRM:</strong> lesão primária (no impacto) × <strong>secundária</strong> (edema, sangramento; é a que a imobilização evita). Cervical → tetraplegia; torácica/lombar → paraplegia. Sinais: dor na nuca/costas, formigamento, paralisia, <strong>priapismo</strong>, retenção urinária. Vítima: decúbito dorsal, aquecida, <strong>sem elevar as pernas</strong>.</p>
+  <p><strong>TCE:</strong> sinal do <strong>guaxinim</strong> (olhos roxos) e de <strong>Battle</strong> (atrás da orelha) → fratura de base de crânio. Otorragia, anisocoria.</p>
+  <div class="tw"><table>
+    <tr><th>Pts</th><th>Ocular (máx 4)</th><th>Verbal (máx 5)</th><th>Motora (máx 6)</th></tr>
+    <tr><td>6</td><td>—</td><td>—</td><td>Obedece</td></tr>
+    <tr><td>5</td><td>—</td><td>Orientado</td><td>Localiza a dor</td></tr>
+    <tr><td>4</td><td>Espontânea</td><td>Confuso</td><td>Retirada</td></tr>
+    <tr><td>3</td><td>Ao som</td><td>Palavras inapropriadas</td><td>Decorticação</td></tr>
+    <tr><td>2</td><td>À pressão</td><td>Sons</td><td>Descerebração</td></tr>
+    <tr><td>1</td><td>Nenhuma</td><td>Nenhuma</td><td>Nenhuma</td></tr>
+  </table></div>
+  <p>Mínimo <strong>3</strong>, máximo 15. Grave <strong>≤8</strong> · moderado 9–12 · leve 13–15 (aula: 15).</p>
+</section>
+
+<!-- 7 -->
+<section id="s7">
+  <h2><span class="num">7</span>Múltiplas vítimas e START</h2>
+  <p><strong>Múltiplas vítimas:</strong> não excede a capacidade. <strong>Vítimas em massa:</strong> excede.</p>
+  <div class="flow">
+    <div class="q">1. Anda? Sim → <span class="tag g">VERDE</span></div>
+    <div class="q">2. Respira? Não → abrir via aérea → continua sem? <span class="tag p">PRETA</span> · voltou? <span class="tag v">VERMELHA</span></div>
+    <div class="q">3. FR &gt;30 → <span class="tag v">VERMELHA</span></div>
+    <div class="q">4. Enchimento capilar &gt;2 s → <span class="tag v">VERMELHA</span></div>
+    <div class="q">5. Não obedece comandos → <span class="tag v">VERMELHA</span> · obedece → <span class="tag a">AMARELA</span></div>
+  </div>
+  <div class="box macete"><b class="k">Macete · “30 · 2 · pode fazer”</b>FR acima de 30, enchimento acima de 2 s ou não faz o que manda = vermelha.</div>
+</section>
+
+<div class="part new"><span>Parte 2</span>Assuntos novos</div>
+
+<!-- 8 -->
+<section id="s8">
+  <h2><span class="num">8</span>Vítima inconsciente: RCP e DEA</h2>
+  <p class="lead">Vítima no chão → pedir ajuda e o DEA → RCP: <strong>1º comprime, 2º ventila</strong>.</p>
+  <div class="flow">
+    <div class="q"><strong>1.</strong> Cena segura?</div>
+    <div class="q"><strong>2.</strong> Responde? Toque nos ombros e chame alto.</div>
+    <div class="q"><strong>3.</strong> Não responde → <strong>grite por ajuda, ligue 192 e peça um DEA</strong>.</div>
+    <div class="q"><strong>4.</strong> Respira normalmente? Olhe o tórax por até 10 s. <em>Gasping</em> (suspiros agônicos) = <strong>não respira</strong>.</div>
+    <div class="q red"><strong>5.</strong> Não respira → <strong>RCP já</strong>. Chegou o DEA → ligue e siga a voz.</div>
+  </div>
+  <div class="tiles">
+    <div><b>30:2</b>compressões : ventilações</div>
+    <div><b>100–120</b>compressões por minuto</div>
+    <div><b>5–6 cm</b>profundidade no adulto</div>
+  </div>
+  <ul>
+    <li>Mãos no <strong>centro do peito</strong> (metade inferior do esterno), braços esticados.</li>
+    <li>Deixe o tórax <strong>voltar totalmente</strong> e pare o mínimo possível. Troque quem comprime a cada 2 min.</li>
+    <li>Leigo sem treino em ventilação: <strong>só compressões</strong> já ajuda muito.</li>
+    <li><strong>Criança:</strong> ~5 cm, 1 ou 2 mãos. <strong>Bebê:</strong> ~4 cm, dois polegares abraçando o tórax ou a base de uma mão.</li>
+    <li>DEA: ninguém toca na vítima durante a análise e o choque. Depois do choque, volte <strong>direto</strong> às compressões.</li>
+  </ul>
+  <div class="box fonte"><b class="k">Atualização (AHA 2025)</b>A técnica de <strong>dois dedos no bebê saiu</strong>: não gera compressão profunda o bastante. Use dois polegares ou a base de uma mão.</div>
+  <div class="box pega"><b class="k">Pegadinha · inspecionar a boca</b>Retire só o objeto que <strong>está visível</strong> (com pinça ou dedos). Nunca faça varredura às cegas com o dedo: empurra o objeto mais para dentro.</div>
+  <h3>Respira, mas não acorda</h3>
+  <p>Sem suspeita de trauma → <strong>posição lateral de segurança</strong> (saliva e vômito escorrem) e reavalie a respiração até o SAMU chegar. Com suspeita de trauma → não mova, mantenha a coluna alinhada.</p>
+  <h3>Engasgo (OVACE)</h3>
+  <ul>
+    <li>Tosse forte? Incentive a tossir, não bata.</li>
+    <li>Não fala, não tosse, mão no pescoço → <strong>5 tapas nas costas</strong> (entre as escápulas, tronco inclinado) + <strong>5 compressões abdominais</strong>. Alterne até sair. <em>(AHA 2025)</em></li>
+    <li>Bebê: 5 tapas nas costas + 5 compressões <strong>no tórax</strong> (nunca abdominais).</li>
+    <li>Ficou inconsciente → 192 e RCP.</li>
+  </ul>
+</section>
+
+<!-- 9 -->
+<section id="s9">
+  <h2><span class="num">9</span>Perda ou rebaixamento de consciência</h2>
+  <p class="lead">Tudo que reduz o <strong>sangue, oxigênio ou glicose</strong> no cérebro. O cérebro não tem reserva de energia, então para rápido.</p>
+  <p>Evolui de <strong>leve → grave</strong> e de <strong>consciente → inconsciente</strong>. Causas da aula:</p>
+  <div class="chips"><span>Hipoglicemia</span><span>Síncope / lipotímia</span><span>Overdose / intoxicação</span><span>Convulsão</span><span>Hiperventilação</span><span>Arritmias</span><span>AVC</span></div>
+
+  <h3>Hipoglicemia · glicose &lt;70 mg/dL</h3>
+  <p><strong>Sinais:</strong> suor frio, tremor, palidez, fome, fraqueza, confusão, irritabilidade; pode desmaiar ou convulsionar.</p>
+  <p><strong>Consciente e engole:</strong> dê açúcar (suco, refrigerante comum, 1 colher de açúcar na água) e reavalie em 15 min. <strong>Inconsciente:</strong> nada pela boca, lateral, 192.</p>
+  <div class="box prova"><b class="k">Cai na prova</b>Diabético consciente passando mal e você não sabe se é hipo ou hiper? <strong>Dê açúcar.</strong> Na hipo ele ajuda muito; na hiper, um pouco a mais não piora de forma relevante.</div>
+
+  <h3>Síncope × lipotímia</h3>
+  <div class="tw"><table>
+    <tr><th>Síncope (desmaio)</th><th>Lipotímia (quase desmaio)</th></tr>
+    <tr><td>Perde a consciência por pouco tempo e volta sozinha</td><td>Tontura, visão escura, fraqueza, <strong>sem apagar</strong> por completo</td></tr>
+  </table></div>
+  <p>Causa: <strong>queda da PA</strong> e do fluxo para o cérebro. A mais comum é a <strong>vasovagal</strong> (calor, muito tempo em pé, dor, emoção, ver sangue).</p>
+  <p><strong>Conduta:</strong> deitar, <strong>elevar as pernas</strong> (se não houver trauma), afrouxar roupas, arejar o local. Não acordou em ~1 min → checar respiração e ligar 192.</p>
+
+  <h3>Convulsão e epilepsia</h3>
+  <p><strong>Convulsão</strong> = grande descarga elétrica <strong>desordenada</strong> no cérebro. Pode ser generalizada ou <strong>focal</strong> (só uma região). <strong>Epilepsia</strong> = a <strong>doença</strong> que causa crises repetidas.</p>
+  <div class="dd">
+    <div class="do"><b>Faça</b>Afaste objetos cortantes · proteja a cabeça · afrouxe roupas · <strong>marque a duração</strong> · lateralize (a saliva escorre)</div>
+    <div class="dont"><b>Não faça</b>Segurar os movimentos · colocar nada na boca · puxar a língua · dar água durante a crise</div>
+  </div>
+  <p><strong>Ligue 192</strong> se: durar <strong>&gt;5 min</strong>, crises seguidas sem acordar, primeira crise, gestante, se machucou, na água ou não volta a respirar bem. Depois da crise é normal ficar sonolento e confuso.</p>
+
+  <h3>Hiperventilação</h3>
+  <p>Respiração rápida e profunda, quase sempre por <strong>ansiedade</strong>. O CO₂ cai → <strong>formigamento</strong> em mãos e boca, tontura, mãos “em garra”, pode desmaiar.</p>
+  <p><strong>Conduta:</strong> local calmo, fale devagar, respire junto contando. <strong>Não use saco de papel</strong> (pode baixar o oxigênio). Respiração rápida pode ser asma, infarto ou hipoglicemia: na dúvida, 192.</p>
+
+  <h3>Arritmias</h3>
+  <p>Ritmo cardíaco irregular, rápido ou lento → palpitação, tontura, falta de ar, desmaio. A mais grave, a <strong>fibrilação ventricular</strong>, é parada cardíaca: <strong>RCP + DEA</strong>.</p>
+
+  <h3>AVC · acidente nos vasos do cérebro</h3>
+  <div class="tw"><table>
+    <tr><th>Isquêmico (~85%)</th><th>Hemorrágico (“derrame”)</th></tr>
+    <tr><td>Vaso <strong>entupido</strong> (coágulo)</td><td>Vaso <strong>rompido</strong> (sangramento)</td></tr>
+  </table></div>
+  <p>Causa <strong>déficit neurológico agudo</strong>, que depende do local atingido.</p>
+  <ul class="seq">
+    <li><span class="L">S</span><div><strong>Sorria</strong> · boca torta?</div></li>
+    <li><span class="L">A</span><div><strong>Abrace</strong> · um braço cai ou fica fraco? (paralisia, geralmente de <strong>um lado</strong>)</div></li>
+    <li><span class="L">M</span><div><strong>Música</strong> · cante uma frase: fala enrolada ou confusa?</div></li>
+    <li><span class="L">U</span><div><strong>Urgente</strong> · ligue 192 e <strong>anote a hora</strong> em que começou.</div></li>
+  </ul>
+  <p>Outros sinais: confusão mental, alteração da visão, perda de equilíbrio, dor de cabeça súbita e muito forte (típica do hemorrágico).</p>
+  <div class="box pega"><b class="k">Pegadinha</b><strong>Nada pela boca</strong>, nem água nem remédio: a deglutição pode estar afetada. Tempo é cérebro: o tratamento do isquêmico só funciona nas primeiras horas.</div>
+</section>
+
+<!-- 10 -->
+<section id="s10">
+  <h2><span class="num">10</span>Dor torácica e asma</h2>
+  <h3>Dor torácica</h3>
+  <p><strong>Sinais de gravidade:</strong> dor <strong>intensa</strong>, em aperto ou peso, que pode irradiar para braço esquerdo, mandíbula ou costas, associada a <strong>náusea, sudorese e falta de ar</strong>.</p>
+  <div class="box prova"><b class="k">Cai na prova</b>Dor de origem cardíaca <strong>piora com atividade física e melhora com repouso</strong>. Mulheres, idosos e diabéticos podem ter sintomas atípicos (só cansaço, enjoo).</div>
+  <p><strong>Conduta:</strong> parar a atividade, repouso, posição confortável (semissentado), afrouxar roupas, 192, observar. Parou de respirar → RCP + DEA. Remédio só com orientação do SAMU.</p>
+  <div class="box macete"><b class="k">Na academia</b>Aluno com dor no peito, falta de ar ou tontura durante o treino: <strong>encerra o treino na hora</strong>. Não é para “respirar fundo e continuar”.</div>
+  <h3>Asma</h3>
+  <p><strong>Reação brônquica exagerada:</strong> o brônquio contrai (broncoespasmo), incha e produz muco → a passagem de ar fica estreita.</p>
+  <p><strong>Sinais:</strong> falta de ar, chiado (sibilo), tosse, respiração pesada e <strong>dificuldade para expirar</strong> (o ar entra, mas custa a sair).</p>
+  <p><strong>Conduta:</strong> acalmar, sentar inclinado para a frente apoiado nos braços, ajudar a usar a <strong>bombinha da própria pessoa</strong>, afastar o gatilho. <strong>192</strong> se não melhora, não consegue falar frases, lábios roxos ou sonolência. Exercício pode desencadear crise.</p>
+</section>
+
+<!-- 11 -->
+<section id="s11">
+  <h2><span class="num">11</span>Intoxicação exógena</h2>
+  <p class="lead">Exposição aguda a um <strong>produto químico</strong>. Não é lesão mecânica e <strong>não é reação imunológica</strong>.</p>
+  <p><strong>Veneno:</strong> substância que, no organismo, altera a físico-química das células de forma transitória ou definitiva, sem agir mecanicamente. Ambientes: laboratorial, industrial, agrícola, residencial.</p>
+  <div class="box fonte"><b class="k">Atenção ao caderno</b>No caderno está “exógena = produto químico; interna = reação imunológica”. Na literatura: <strong>exógena</strong> vem de fora (produto químico); <strong>endógena</strong> vem de substâncias do próprio corpo (ex.: cetoacidose). Reação imunológica é <strong>alergia/anafilaxia</strong>, e o slide diz que ela <em>não</em> é intoxicação. Se o professor falou do jeito do caderno, siga ele na prova.</div>
+  <p><strong>Fatores que pesam:</strong> peso, idade, tolerância individual, tempo de exposição, quantidade e concentração.</p>
+
+  <h3>Sinais e sintomas</h3>
+  <div class="tw"><table>
+    <tr><th>Sistema</th><th>Achados</th></tr>
+    <tr><td>Neurológico <strong>excitatório</strong></td><td>Psicose, delírio, alucinação, agitação psicomotora</td></tr>
+    <tr><td>Neurológico <strong>inibitório</strong></td><td>Sonolência → letargia → <strong>torpor</strong> → coma; confusão, desequilíbrio</td></tr>
+    <tr><td>Cardiovascular</td><td>Taqui ou bradicardia, hiper ou hipotensão, fibrilação, distúrbio de coagulação</td></tr>
+    <tr><td>Pupilas</td><td><strong>Midríase</strong> (dilatação) ou <strong>miose</strong> (contração)</td></tr>
+    <tr><td>Temperatura</td><td>Hipertermia ou hipotermia</td></tr>
+  </table></div>
+  <p><strong>Torpor:</strong> rebaixamento forte, só responde a estímulo intenso.</p>
+  <div class="tw"><table>
+    <tr><th>Termo do slide</th><th>O que é</th></tr>
+    <tr><td>Sialorreia</td><td>Salivação excessiva</td></tr>
+    <tr><td>Epífora</td><td>Lacrimejamento</td></tr>
+    <tr><td>Trismo</td><td>Mandíbula travada</td></tr>
+    <tr><td>Opistótono</td><td>Corpo arqueado para trás</td></tr>
+    <tr><td>Mioclonias</td><td>Abalos musculares rápidos</td></tr>
+    <tr><td>Distonia orofacial</td><td>Contração involuntária de face e boca</td></tr>
+    <tr><td>Rubor · cianose</td><td>Pele vermelha · pele/lábios arroxeados</td></tr>
+  </table></div>
+
+  <h3>Vias de penetração e conduta</h3>
+  <div class="vias">
+    <div><b>Ingestão</b>Acidental, intencional ou iatrogênica (erro de medicação).<br><strong>Não provoque vômito</strong>, não dê leite nem “antídoto caseiro”. Guarde a embalagem, ligue para o CIATox ou 192. Inconsciente: lateral.</div>
+    <div><b>Inalação</b><strong>Cuidado ao se aproximar.</strong> Só com segurança: retire do ambiente contaminado, areje. Atenção à <strong>via aérea</strong>.</div>
+    <div><b>Absorção</b>(pele e olhos) <strong>Pó: retire a seco primeiro</strong>, depois lave. <strong>Líquido:</strong> água corrente abundante (chuveiro de emergência). Tire a roupa contaminada, com EPI.</div>
+    <div><b>Injeção</b>Picadas de animais peçonhentos, drogas e medicamentos injetáveis. Ver seção 12.</div>
+  </div>
+  <div class="box fonte"><b class="k">Slide × orientação atual</b>O slide lista quando <em>não</em> induzir vômito: <strong>gestante no 3º trimestre, criança &lt;2 anos, déficit neurológico</strong>. Decore isso para a prova. Hoje, porém, a orientação dos centros de toxicologia é <strong>não provocar vômito por conta própria</strong> em ninguém, sobretudo com cáusticos (soda) e derivados de petróleo, que queimam de novo na volta ou vão para o pulmão.</div>
+  <div class="box pega"><b class="k">Pegadinha · pó na pele</b>Jogar água direto em pó químico pode ativar a reação. <strong>Primeiro escove, depois lave.</strong></div>
+  <h3>Símbolos de risco e produto desconhecido</h3>
+  <p>9 classes: infectante, radioativo, nocivo, perigoso para o meio ambiente, tóxico, inflamável, comburente, explosivo, corrosivo.</p>
+  <p><strong>Acidente com produto desconhecido</strong> (ex.: caminhão tombado): não se aproxime, fique longe <strong>com o vento pelas costas</strong>, leia o rótulo/placa de longe e acione os <strong>Bombeiros 193</strong>.</p>
+</section>
+
+<!-- 12 -->
+<section id="s12">
+  <h2><span class="num">12</span>Animais com veneno</h2>
+  <div class="dd">
+    <div class="do2"><b>Venenosos</b>Fazem mal se você <strong>ingerir ou tocar</strong>. Sem aparelho inoculador. Ex.: sapo, lagarta (taturana), água-viva*.</div>
+    <div class="do3"><b>Peçonhentos</b>Têm um <strong>“objeto” que injeta</strong> o veneno (presa, ferrão, quelícera). Ex.: cobras, escorpião, aranha, abelha.</div>
+  </div>
+  <p class="small">*Na aula, água-viva entra no grupo dos venenosos.</p>
+
+  <h3>Regras gerais (valem para todos)</h3>
+  <div class="dd">
+    <div class="do"><b>Faça</b>Afaste do animal · lave com <strong>água e sabão</strong> · repouso · leve ao serviço de saúde (soro só no hospital)</div>
+    <div class="dont"><b>Não faça</b><strong>Torniquete</strong> · cortar, furar, chupar · “receitas milagrosas” (borra de café, fumo, álcool no local) · bebida alcoólica</div>
+  </div>
+
+  <h3>Cobras</h3>
+  <div class="tw"><table>
+    <tr><th>Serpente</th><th>Como reconhecer</th><th>Veneno</th></tr>
+    <tr><td><strong>Jararaca</strong> (Bothrops)</td><td>Cabeça triangular, desenhos em “V”. <strong>A que mais causa acidentes</strong></td><td>Proteolítico, coagulante, hemorrágico</td></tr>
+    <tr><td><strong>Cascavel</strong> (Crotalus)</td><td><strong>Chocalho</strong> na cauda</td><td>Neurotóxico, miotóxico, coagulante</td></tr>
+    <tr><td><strong>Surucucu</strong> (Lachesis)</td><td>Grande (até 3 m), cauda “pico-de-jaca” sem chocalho</td><td>Proteolítico, coagulante, hemorrágico, neurotóxico</td></tr>
+    <tr><td><strong>Coral verdadeira</strong> (Micrurus)</td><td>Anéis vermelho, preto e branco; sem fosseta loreal</td><td>Neurotóxico</td></tr>
+  </table></div>
+  <p><strong>Conduta:</strong> não provocar lesões adicionais, <strong>não fazer torniquete</strong> (concentra o veneno e necrosa o membro), não usar receitas, sem álcool → lavar com água e sabão, vítima deitada e quieta, <strong>membro elevado</strong>, água se consciente, hospital.</p>
+  <div class="box fonte"><b class="k">Slide × Ministério da Saúde</b>O slide traz “compressas geladas” na picada de cobra. O Ministério da Saúde/Fiocruz orienta <strong>não colocar gelo</strong> no membro picado. Se cair, responda pelo slide, sabendo dessa divergência.</div>
+
+  <h3>Escorpião</h3>
+  <p>Veneno <strong>estimula terminações nervosas</strong>: dor forte imediata, suor e, nos graves, <strong>disfunção e lesão cardíaca</strong>. Crianças &lt;10 anos têm mais risco.</p>
+  <div class="dd">
+    <div class="do"><b>Faça</b>Lavar com água e sabão · <strong>compressa morna</strong> (alivia a dor) · serviço de saúde</div>
+    <div class="dont"><b>Não faça</b>Torniquete · <strong>compressa gelada</strong> · lesões adicionais</div>
+  </div>
+  <div class="box fonte"><b class="k">Atenção ao caderno</b>No caderno: “mais letal: o preto”. No Brasil todo, o de <strong>maior risco é o escorpião-amarelo</strong> (<em>Tityus serrulatus</em>). O <strong>escorpião-preto-da-amazônia</strong> é o principal na região Norte. Se o professor citou o preto, responda assim na prova.</div>
+  <div class="box macete"><b class="k">Macete · gelo ou morna?</b><strong>Escorpião = morna.</strong> Calor alivia a dor neurotóxica. Gelo nunca em escorpião.</div>
+
+  <h3>Aranhas</h3>
+  <p>Não provocar lesões adicionais, lavar, compressa morna para a dor (armadeira), serviço de saúde. A <strong>aranha-marrom</strong> quase não dói na hora e a lesão (necrose) aparece depois.</p>
+
+  <h3>Abelha e vespa</h3>
+  <p><strong>Sinais:</strong> dor, inchaço local, ardência, vermelhidão, urticária, coceira e <strong>dificuldade de respirar</strong> (alerta de anafilaxia).</p>
+  <p><strong>Conduta:</strong> lavar o local e <strong>remover o ferrão raspando</strong> com cartão ou unha. Não pince, porque espreme o saco de veneno. Falta de ar, inchaço no rosto ou muitas picadas → <strong>192</strong>.</p>
+
+  <h3>Água-viva</h3>
+  <div class="dd">
+    <div class="do"><b>Faça</b>Tire a pessoa da água · lave com <strong>vinagre</strong> (ou água do mar) · remova os tentáculos com pinça ou luva</div>
+    <div class="dont"><b>Não faça</b><strong>Esfregar</strong> a pele · lavar com <strong>água doce</strong> · álcool ou urina (disparam mais veneno)</div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section id="s13">
+  <h2><span class="num">13</span>Parto de emergência</h2>
+  <p class="lead">Parto em qualquer lugar, com material improvisado. É um <strong>fenômeno fisiológico</strong>: o socorrista só <strong>auxilia</strong>.</p>
+
+  <h3>Posição do feto</h3>
+  <div class="pos">
+    <div class="ok"><b>Cefálica</b>Cabeça primeiro. <strong>Mais comum.</strong> Única em que se faz o parto de emergência.</div>
+    <div class="warn"><b>Pélvica</b>Nádegas/pés primeiro. <strong>Evitar</strong> o parto → transporte rápido.</div>
+    <div class="no"><b>Córmica / transversal</b>Feto atravessado. <strong>Não realizar</strong> o parto.</div>
+  </div>
+  <div class="box pega"><b class="k">Pegadinha</b>Saiu um braço ou uma perna primeiro? <strong>Nunca puxe</strong>: pode fraturar, luxar ou lesar o plexo nervoso. Só o obstetra faz.</div>
+
+  <h3>Cuidados com a mãe</h3>
+  <ul>
+    <li><strong>Identifique-se</strong> e peça permissão; passe tranquilidade.</li>
+    <li>Pergunte: nome e idade · <strong>primeiro filho?</strong> (primigesta = trabalho de parto mais longo) · fez pré-natal? há complicação? · hora do início das contrações · <strong>intervalo</strong> e duração · <strong>rompeu a bolsa?</strong> · cor do líquido · sente vontade de evacuar ou o bebê saindo?</li>
+    <li>Posição: <strong>decúbito dorsal, posição ginecológica</strong> (pernas afastadas, joelhos dobrados). Cubra para não expor.</li>
+    <li>Na contração, ela faz <strong>força como se fosse evacuar</strong>.</li>
+    <li>Ligue <strong>192</strong> e leve mãe, bebê <strong>e placenta</strong> ao hospital.</li>
+  </ul>
+  <div class="box prova"><b class="k">Cai na prova · parto iminente</b><strong>Vontade forte de evacuar</strong>, sensação do bebê saindo e <strong>coroamento</strong> (a cabeça aparece e não volta) = não dá tempo de transportar. Prepare o parto.</div>
+  <p class="small"><strong>Termos:</strong> nulípara (nunca pariu) · primípara/primigesta (1 filho) · secundípara · multípara (vários).</p>
+
+  <h3>Materiais</h3>
+  <div class="chips"><span>Panos/toalhas limpos</span><span>Luvas ou sacos plásticos</span><span>Barbante, cordão ou fio dental</span><span>Tesoura, faca ou canivete limpos</span><span>Cobertor</span><span>Saco para a placenta</span></div>
+
+  <h3>As 3 fases</h3>
+  <div class="fases">
+    <div><span>1</span><b>Dilatação</b>Começa nas contrações e termina quando o feto entra no canal de parto. <strong>2 a 3 contrações em 10 min.</strong></div>
+    <div><span>2</span><b>Expulsão</b>Do feto no canal até o nascimento. <strong>Até 5 contrações em 10 min</strong>, mais fortes. Aqui acontece o <strong>coroamento</strong>.</div>
+    <div><span>3</span><b>Dequitação (secundamento)</b>Do nascimento até a saída da <strong>placenta</strong>, normalmente em até <strong>30 min</strong>. O parto só termina aqui.</div>
+  </div>
+  <h3>Na expulsão</h3>
+  <ul>
+    <li>Apoie a cabeça com a mão, <strong>sem puxar e sem empurrar de volta</strong>. Cuidado com a <strong>fontanela</strong> (moleira).</li>
+    <li>Cordão enrolado no pescoço e frouxo? Passe por cima da cabeça.</li>
+    <li>Os ombros saem um de cada vez; segure firme, o bebê é escorregadio.</li>
+  </ul>
+  <h3>Sangramento depois do parto · massagem uterina</h3>
+  <ol>
+    <li>Mão na parte de baixo do abdome, <strong>acima do púbis</strong>.</li>
+    <li>Com a palma e os dedos estendidos, massageie em <strong>círculos até sentir o útero firme</strong> (contraído).</li>
+    <li>Continua sangrando? Corrija a técnica e continue.</li>
+  </ol>
+  <p class="small">Colocar o bebê para mamar também ajuda o útero a contrair. Nunca puxe o cordão para tirar a placenta.</p>
+
+  <h3>Cuidados com o recém-nascido</h3>
+  <ol>
+    <li><strong>Secar</strong> e enrolar em cobertor aquecido.</li>
+    <li>Deixar em decúbito dorsal, <strong>no mesmo nível do corpo da mãe</strong>, até cortar o cordão.</li>
+    <li>Depois, colocar <strong>sobre o abdome da mãe</strong> para manter aquecido.</li>
+  </ol>
+  <figure class="fig">
+  <svg viewBox="0 0 420 175" role="img" aria-label="Clampeamento do cordão: primeira amarra a 10 a 15 centímetros do bebê, segunda amarra 3 a 4 centímetros adiante, corte entre as duas.">
+    <g font-family="Atkinson Hyperlegible,sans-serif" fill="currentColor">
+      <circle cx="40" cy="70" r="26" fill="#f6c9a8" stroke="#c78d68"/><text x="40" y="75" font-size="16" text-anchor="middle" fill="#5a3218" font-weight="700">RN</text>
+      <path d="M66 70 C120 52,170 88,230 70 S330 56,370 70" stroke="#d98aa8" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <rect x="374" y="50" width="38" height="40" rx="10" fill="#b44" opacity=".85"/><text x="393" y="74" font-size="11" text-anchor="middle" fill="#fff">mãe</text>
+      <rect x="196" y="56" width="8" height="28" rx="2" fill="#1f4f8f"/>
+      <rect x="262" y="56" width="8" height="28" rx="2" fill="#1f4f8f"/>
+      <text x="233" y="47" font-size="20" text-anchor="middle">✂</text>
+      <line x1="233" y1="56" x2="233" y2="88" stroke="#c8102e" stroke-width="2" stroke-dasharray="4 3"/>
+      <path d="M66 112 H200" stroke="currentColor" stroke-width="1.5"/><path d="M66 106 v12 M200 106 v12" stroke="currentColor"/>
+      <text x="133" y="136" font-size="18" text-anchor="middle" font-weight="700">10–15 cm</text>
+      <text x="133" y="156" font-size="15" text-anchor="middle">1ª amarra</text>
+      <path d="M200 112 H266" stroke="currentColor" stroke-width="1.5"/><path d="M266 106 v12" stroke="currentColor"/>
+      <text x="233" y="136" font-size="18" text-anchor="middle" font-weight="700">+3–4 cm</text>
+      <text x="233" y="156" font-size="15" text-anchor="middle">2ª amarra</text>
+      <text x="330" y="136" font-size="16" text-anchor="middle" fill="#c8102e" font-weight="700">corta entre</text>
+      <text x="330" y="156" font-size="16" text-anchor="middle" fill="#c8102e" font-weight="700">as duas</text>
+    </g>
+  </svg>
+  <figcaption>Clampeamento: espere <strong>1 a 3 minutos</strong> antes de amarrar.</figcaption></figure>
+  <div class="box pega"><b class="k">Pegadinha · clampeamento imediato</b>Bebê que nasce <strong>sem respirar, sem chorar ou sem se mexer</strong>: não espera 1–3 min. Clampeia logo para poder reanimar.</div>
+  <p class="small">No APH e no hospital usa-se <strong>clamp umbilical</strong> ou pinça hemostática; no parto de emergência, barbante ou fio dental.</p>
+</section>
+
+<!-- 14 -->
+<section id="s14">
+  <h2><span class="num">14</span>Pegadinhas finais</h2>
+  <div class="tw"><table>
+    <tr><th>Parece certo</th><th>O correto</th></tr>
+    <tr><td>Colocar algo na boca de quem convulsiona</td><td>Nada na boca. Proteja a cabeça e cronometre.</td></tr>
+    <tr><td>Saco de papel na hiperventilação</td><td>Acalmar e respirar junto, devagar.</td></tr>
+    <tr><td>Água para quem tem sinais de AVC</td><td>Nada pela boca. 192 e anotar a hora.</td></tr>
+    <tr><td>Gasping é respiração</td><td>Não é. Comece a RCP.</td></tr>
+    <tr><td>Bebê: compressão com dois dedos</td><td>Dois polegares ou base de uma mão (2025).</td></tr>
+    <tr><td>Varredura com o dedo na boca</td><td>Só retire objeto visível.</td></tr>
+    <tr><td>Torniquete na picada de cobra</td><td>Nunca. Lavar, repouso, membro elevado.</td></tr>
+    <tr><td>Gelo na picada de escorpião</td><td>Compressa <strong>morna</strong>.</td></tr>
+    <tr><td>Água doce na água-viva</td><td>Vinagre. Não esfregar.</td></tr>
+    <tr><td>Arrancar o ferrão com pinça</td><td>Raspar com cartão ou unha.</td></tr>
+    <tr><td>Molhar pó químico na pele</td><td>Escovar o pó primeiro.</td></tr>
+    <tr><td>Dar leite na intoxicação</td><td>Nada pela boca sem orientação do CIATox.</td></tr>
+    <tr><td>Puxar o braço do bebê que saiu primeiro</td><td>Nunca. Transporte.</td></tr>
+    <tr><td>Puxar o cordão para sair a placenta</td><td>Espera sair sozinha (até ~30 min).</td></tr>
+    <tr><td>O parto termina no nascimento</td><td>Termina na saída da placenta.</td></tr>
+    <tr><td>Gelo na queimadura</td><td>Água corrente fria.</td></tr>
+    <tr><td>3º grau é o que mais dói</td><td>2º grau. O 3º não dói.</td></tr>
+    <tr><td>Todo choque tem pulso rápido</td><td>Neurogênico: pulso lento, pele quente.</td></tr>
+    <tr><td>Elevar as pernas na vítima de TRM</td><td>Não elevar. (Na síncope sem trauma, sim.)</td></tr>
+    <tr><td>Glasgow mínimo é 0</td><td>É 3.</td></tr>
+  </table></div>
+</section>
+
+
+<section id="s15">
+  <h2><span class="num">15</span>Flashcards</h2>
+  <p class="lead">Responda de cabeça e toque na pergunta para conferir.</p>
+  <div class="cards">
+<details class="card"><summary><small>1 de 66</small><span class="q">Ordem de prioridade do socorrista</span></summary><div class="a">1º eu, 2º equipe, 3º vítima.</div></details>
+<details class="card"><summary><small>2 de 66</small><span class="q">Pena da omissão de socorro (Art. 135)</span></summary><div class="a">1 a 6 meses ou multa; +½ se lesão grave; triplica se morte.</div></details>
+<details class="card"><summary><small>3 de 66</small><span class="q">Sinalização em via de 60 km/h à noite</span></summary><div class="a">120 passos longos (velocidade × 2).</div></details>
+<details class="card"><summary><small>4 de 66</small><span class="q">Sinais de pneumotórax hipertensivo</span></summary><div class="a">Estase de jugulares e desvio de traqueia.</div></details>
+<details class="card"><summary><small>5 de 66</small><span class="q">Pulso a checar no bebê</span></summary><div class="a">Braquial (ou femoral).</div></details>
+<details class="card"><summary><small>6 de 66</small><span class="q">Entorse × luxação</span></summary><div class="a">Entorse: saiu e voltou. Luxação: saiu e ficou fora, com deformidade.</div></details>
+<details class="card"><summary><small>7 de 66</small><span class="q">Hemorragia em jatos, vermelho vivo</span></summary><div class="a">Arterial.</div></details>
+<details class="card"><summary><small>8 de 66</small><span class="q">Choque com pulso lento e pele quente</span></summary><div class="a">Neurogênico (lesão medular).</div></details>
+<details class="card"><summary><small>9 de 66</small><span class="q">Queimadura que mais dói</span></summary><div class="a">2º grau (bolhas). O 3º não dói.</div></details>
+<details class="card"><summary><small>10 de 66</small><span class="q">Regra dos nove: cada membro inferior</span></summary><div class="a">18%.</div></details>
+<details class="card"><summary><small>11 de 66</small><span class="q">Lavagem mínima na queimadura química</span></summary><div class="a">20 minutos em água corrente.</div></details>
+<details class="card"><summary><small>12 de 66</small><span class="q">Sinal do guaxinim e de Battle</span></summary><div class="a">Fratura de base de crânio.</div></details>
+<details class="card"><summary><small>13 de 66</small><span class="q">Glasgow: máximos e TCE grave</span></summary><div class="a">Ocular 4, verbal 5, motor 6. Grave ≤ 8. Mínimo 3.</div></details>
+<details class="card"><summary><small>14 de 66</small><span class="q">START: FR &gt; 30, enchimento &gt; 2 s ou não obedece</span></summary><div class="a">Vermelha.</div></details>
+<details class="card"><summary><small>15 de 66</small><span class="q">Sequência na vítima clínica que não respira</span></summary><div class="a">C-A-B: 1º comprime, 2º ventila.</div></details>
+<details class="card"><summary><small>16 de 66</small><span class="q">Relação compressão:ventilação</span></summary><div class="a">30:2.</div></details>
+<details class="card"><summary><small>17 de 66</small><span class="q">Frequência e profundidade da RCP no adulto</span></summary><div class="a">100–120/min, 5–6 cm.</div></details>
+<details class="card"><summary><small>18 de 66</small><span class="q">Gasping (suspiro agônico) conta como respiração?</span></summary><div class="a">Não. Inicie a RCP.</div></details>
+<details class="card"><summary><small>19 de 66</small><span class="q">Técnica de compressão no bebê (AHA 2025)</span></summary><div class="a">Dois polegares abraçando o tórax ou base de uma mão. Dois dedos saiu.</div></details>
+<details class="card"><summary><small>20 de 66</small><span class="q">Engasgo no adulto consciente que não tosse</span></summary><div class="a">5 tapas nas costas + 5 compressões abdominais, alternando.</div></details>
+<details class="card"><summary><small>21 de 66</small><span class="q">Engasgo no bebê</span></summary><div class="a">5 tapas nas costas + 5 compressões no tórax. Nada de compressão abdominal.</div></details>
+<details class="card"><summary><small>22 de 66</small><span class="q">Objeto na boca da vítima inconsciente</span></summary><div class="a">Retire só se estiver visível. Sem varredura às cegas.</div></details>
+<details class="card"><summary><small>23 de 66</small><span class="q">Por que o cérebro desliga rápido</span></summary><div class="a">Não tem reserva energética: depende de sangue, O₂ e glicose contínuos.</div></details>
+<details class="card"><summary><small>24 de 66</small><span class="q">Valor de hipoglicemia</span></summary><div class="a">Abaixo de 70 mg/dL.</div></details>
+<details class="card"><summary><small>25 de 66</small><span class="q">Hipoglicemia em vítima consciente que engole</span></summary><div class="a">Dar açúcar (suco, refrigerante comum, água com açúcar).</div></details>
+<details class="card"><summary><small>26 de 66</small><span class="q">Síncope × lipotímia</span></summary><div class="a">Síncope: apaga e volta sozinha. Lipotímia: quase desmaio, sem apagar.</div></details>
+<details class="card"><summary><small>27 de 66</small><span class="q">Causa mais comum de síncope</span></summary><div class="a">Vasovagal (queda da PA por calor, dor, emoção, ficar muito em pé).</div></details>
+<details class="card"><summary><small>28 de 66</small><span class="q">Conduta na síncope sem trauma</span></summary><div class="a">Deitar, elevar as pernas, afrouxar roupas, arejar.</div></details>
+<details class="card"><summary><small>29 de 66</small><span class="q">Convulsão × epilepsia</span></summary><div class="a">Convulsão: descarga elétrica desordenada. Epilepsia: a doença das crises repetidas.</div></details>
+<details class="card"><summary><small>30 de 66</small><span class="q">O que anotar na crise convulsiva</span></summary><div class="a">A duração. Mais de 5 min: 192.</div></details>
+<details class="card"><summary><small>31 de 66</small><span class="q">Formigamento em mãos e boca após respirar rápido por ansiedade</span></summary><div class="a">Hiperventilação (queda de CO₂).</div></details>
+<details class="card"><summary><small>32 de 66</small><span class="q">AVC isquêmico × hemorrágico</span></summary><div class="a">Isquêmico: entupimento (~85%). Hemorrágico: rompimento (“derrame”).</div></details>
+<details class="card"><summary><small>33 de 66</small><span class="q">Macete SAMU do AVC</span></summary><div class="a">Sorria, Abrace, Música, Urgente (192 e anotar a hora).</div></details>
+<details class="card"><summary><small>34 de 66</small><span class="q">Dor no peito que piora com esforço e melhora em repouso</span></summary><div class="a">Sugere origem cardíaca.</div></details>
+<details class="card"><summary><small>35 de 66</small><span class="q">Fase da respiração mais difícil na asma</span></summary><div class="a">A expiração.</div></details>
+<details class="card"><summary><small>36 de 66</small><span class="q">Posição na crise de asma</span></summary><div class="a">Sentado, inclinado para a frente, apoiado nos braços.</div></details>
+<details class="card"><summary><small>37 de 66</small><span class="q">Intoxicação exógena é reação imunológica?</span></summary><div class="a">Não. É exposição a produto químico. Reação imunológica é alergia.</div></details>
+<details class="card"><summary><small>38 de 66</small><span class="q">6 fatores que influenciam a intoxicação</span></summary><div class="a">Peso, idade, tolerância, tempo de exposição, quantidade, concentração.</div></details>
+<details class="card"><summary><small>39 de 66</small><span class="q">4 vias de penetração</span></summary><div class="a">Ingestão, inalação, absorção, injeção.</div></details>
+<details class="card"><summary><small>40 de 66</small><span class="q">Miose e midríase</span></summary><div class="a">Miose: pupila contraída. Midríase: pupila dilatada.</div></details>
+<details class="card"><summary><small>41 de 66</small><span class="q">Sialorreia, epífora, trismo</span></summary><div class="a">Salivação excessiva; lacrimejamento; mandíbula travada.</div></details>
+<details class="card"><summary><small>42 de 66</small><span class="q">Torpor</span></summary><div class="a">Rebaixamento forte: só responde a estímulo intenso.</div></details>
+<details class="card"><summary><small>43 de 66</small><span class="q">Quando o slide diz para não induzir vômito</span></summary><div class="a">Gestante no 3º trimestre, criança &lt; 2 anos, déficit neurológico.</div></details>
+<details class="card"><summary><small>44 de 66</small><span class="q">Produto químico em pó na pele</span></summary><div class="a">Retirar o pó a seco primeiro, depois lavar.</div></details>
+<details class="card"><summary><small>45 de 66</small><span class="q">Primeiro cuidado na intoxicação por inalação</span></summary><div class="a">Segurança do socorrista: cuidado ao se aproximar.</div></details>
+<details class="card"><summary><small>46 de 66</small><span class="q">Produto desconhecido em acidente</span></summary><div class="a">Ficar longe, com o vento pelas costas, e chamar os Bombeiros 193.</div></details>
+<details class="card"><summary><small>47 de 66</small><span class="q">Venenoso × peçonhento</span></summary><div class="a">Venenoso: faz mal ao ingerir/tocar. Peçonhento: tem aparelho que injeta o veneno.</div></details>
+<details class="card"><summary><small>48 de 66</small><span class="q">Cobra que mais causa acidentes no Brasil</span></summary><div class="a">Jararaca (Bothrops).</div></details>
+<details class="card"><summary><small>49 de 66</small><span class="q">Cobra com chocalho</span></summary><div class="a">Cascavel (Crotalus): veneno neurotóxico e miotóxico.</div></details>
+<details class="card"><summary><small>50 de 66</small><span class="q">Por que não fazer torniquete na picada</span></summary><div class="a">Concentra o veneno no membro e piora a necrose.</div></details>
+<details class="card"><summary><small>51 de 66</small><span class="q">Compressa no escorpião</span></summary><div class="a">Morna. Gelo, nunca.</div></details>
+<details class="card"><summary><small>52 de 66</small><span class="q">Escorpião de maior risco no Brasil</span></summary><div class="a">Escorpião-amarelo (Tityus serrulatus).</div></details>
+<details class="card"><summary><small>53 de 66</small><span class="q">Como tirar o ferrão da abelha</span></summary><div class="a">Raspando com cartão ou unha, sem pinçar.</div></details>
+<details class="card"><summary><small>54 de 66</small><span class="q">Água-viva: lavar com o quê</span></summary><div class="a">Vinagre. Nunca água doce, nunca esfregar.</div></details>
+<details class="card"><summary><small>55 de 66</small><span class="q">Única posição fetal para fazer o parto de emergência</span></summary><div class="a">Cefálica.</div></details>
+<details class="card"><summary><small>56 de 66</small><span class="q">Feto em posição pélvica</span></summary><div class="a">Evitar o parto: transporte rápido.</div></details>
+<details class="card"><summary><small>57 de 66</small><span class="q">Feto em posição transversal (córmica)</span></summary><div class="a">Não realizar o parto.</div></details>
+<details class="card"><summary><small>58 de 66</small><span class="q">Posição da mãe</span></summary><div class="a">Decúbito dorsal, posição ginecológica.</div></details>
+<details class="card"><summary><small>59 de 66</small><span class="q">3 fases do parto</span></summary><div class="a">Dilatação, expulsão, dequitação (secundamento).</div></details>
+<details class="card"><summary><small>60 de 66</small><span class="q">Contrações na dilatação e na expulsão</span></summary><div class="a">Dilatação: 2–3 em 10 min. Expulsão: até 5 em 10 min.</div></details>
+<details class="card"><summary><small>61 de 66</small><span class="q">Coroamento</span></summary><div class="a">A cabeça aparece e não volta: parto iminente.</div></details>
+<details class="card"><summary><small>62 de 66</small><span class="q">Quando o parto termina</span></summary><div class="a">Na saída da placenta (normalmente até 30 min).</div></details>
+<details class="card"><summary><small>63 de 66</small><span class="q">Sangramento excessivo após o parto</span></summary><div class="a">Massagem circular acima do púbis até o útero ficar firme.</div></details>
+<details class="card"><summary><small>64 de 66</small><span class="q">Medidas do clampeamento</span></summary><div class="a">1ª amarra a 10–15 cm do RN; 2ª 3–4 cm adiante; cortar entre elas. Esperar 1–3 min.</div></details>
+<details class="card"><summary><small>65 de 66</small><span class="q">Quando clampear imediatamente</span></summary><div class="a">RN sem respirar, sem chorar ou sem se mexer.</div></details>
+<details class="card"><summary><small>66 de 66</small><span class="q">Onde fica o RN antes do corte do cordão</span></summary><div class="a">Mesmo nível do corpo da mãe. Depois, sobre o abdome dela.</div></details>
+  </div>
+</section>
+
+<section id="s16">
+  <h2><span class="num">16</span>Simulado</h2>
+  <p class="lead">Escolha a resposta mentalmente e toque em “Ver resposta”.</p>
+<div class="qz"><p>1. Na cena de um acidente, qual a ordem de prioridade de segurança?</p><ol class="ops"><li><b>A)</b> Vítima, equipe, eu</li><li><b>B)</b> Eu, equipe, vítima</li><li><b>C)</b> Equipe, vítima, eu</li><li><b>D)</b> Vítima, eu, equipe</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Eu, equipe, vítima</strong><br>Socorrista ferido vira mais uma vítima.</div></details></div>
+<div class="qz"><p>2. Vítima de trauma com pulso lento, pele quente e seca e perda de sensibilidade abaixo do tórax. Tipo de choque mais provável:</p><ol class="ops"><li><b>A)</b> Hipovolêmico</li><li><b>B)</b> Cardiogênico</li><li><b>C)</b> Neurogênico</li><li><b>D)</b> Séptico</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) Neurogênico</strong><br>Pulso lento + pele quente é a assinatura do neurogênico (lesão medular).</div></details></div>
+<div class="qz"><p>3. Glasgow de vítima que abre os olhos à pressão (2), emite sons incompreensíveis (2) e localiza a dor (5):</p><ol class="ops"><li><b>A)</b> 7, TCE grave</li><li><b>B)</b> 9, TCE moderado</li><li><b>C)</b> 8, TCE grave</li><li><b>D)</b> 10, TCE moderado</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) 9, TCE moderado</strong><br>2 + 2 + 5 = 9. De 9 a 12 é moderado; grave é ≤ 8.</div></details></div>
+<div class="qz"><p>4. START: vítima não anda, respira com FR de 24 ipm, enchimento capilar de 3 s. Cor:</p><ol class="ops"><li><b>A)</b> Verde</li><li><b>B)</b> Amarela</li><li><b>C)</b> Vermelha</li><li><b>D)</b> Preta</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) Vermelha</strong><br>Enchimento capilar acima de 2 s = vermelha.</div></details></div>
+<div class="qz"><p>5. Você encontra um homem caído, não responde e faz suspiros esporádicos (gasping). Conduta:</p><ol class="ops"><li><b>A)</b> Posição lateral e aguardar</li><li><b>B)</b> Chamar 192, pedir DEA e iniciar compressões</li><li><b>C)</b> Fazer 2 ventilações e reavaliar em 2 min</li><li><b>D)</b> Checar glicemia antes de tudo</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Chamar 192, pedir DEA e iniciar compressões</strong><br>Gasping não é respiração normal: é parada. Ajuda + DEA + RCP.</div></details></div>
+<div class="qz"><p>6. Sobre a RCP no adulto, está correto:</p><ol class="ops"><li><b>A)</b> 60–80 compressões/min, 3–4 cm</li><li><b>B)</b> 100–120/min, 5–6 cm, retorno total do tórax</li><li><b>C)</b> Ventilar antes de comprimir</li><li><b>D)</b> Parar a cada 10 compressões para checar pulso</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) 100–120/min, 5–6 cm, retorno total do tórax</strong><br>Na vítima clínica: 1º comprime, 2º ventila, 30:2, 100–120/min, 5–6 cm.</div></details></div>
+<div class="qz"><p>7. Pela atualização da AHA de 2025, a compressão torácica no bebê deve ser feita com:</p><ol class="ops"><li><b>A)</b> Dois dedos</li><li><b>B)</b> Dois polegares envolvendo o tórax ou base de uma mão</li><li><b>C)</b> Duas mãos entrelaçadas</li><li><b>D)</b> Punho fechado</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Dois polegares envolvendo o tórax ou base de uma mão</strong><br>A técnica de dois dedos foi retirada por não atingir a profundidade necessária.</div></details></div>
+<div class="qz"><p>8. Adulto engasgado, consciente, não consegue tossir nem falar. Conduta atual:</p><ol class="ops"><li><b>A)</b> Varredura com o dedo</li><li><b>B)</b> Água para empurrar</li><li><b>C)</b> 5 tapas nas costas alternados com 5 compressões abdominais</li><li><b>D)</b> Esperar ficar inconsciente</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) 5 tapas nas costas alternados com 5 compressões abdominais</strong><br>AHA 2025: ciclos de 5 tapas nas costas + 5 compressões abdominais.</div></details></div>
+<div class="qz"><p>9. Diabético consciente, sudorese fria, tremor e confusão, consegue engolir. O socorrista deve:</p><ol class="ops"><li><b>A)</b> Oferecer açúcar por via oral</li><li><b>B)</b> Não dar nada e deitar</li><li><b>C)</b> Aplicar a insulina dele</li><li><b>D)</b> Provocar vômito</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>A) Oferecer açúcar por via oral</strong><br>Quadro de hipoglicemia: açúcar se consciente e engolindo. Inconsciente: nada pela boca.</div></details></div>
+<div class="qz"><p>10. Moça fica tonta e com visão escurecida numa fila ao sol, mas não perde a consciência. Isso é:</p><ol class="ops"><li><b>A)</b> Síncope</li><li><b>B)</b> Lipotímia</li><li><b>C)</b> Convulsão focal</li><li><b>D)</b> AVC</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Lipotímia</strong><br>Lipotímia = quase desmaio, sem perda total da consciência.</div></details></div>
+<div class="qz"><p>11. Na síncope sem suspeita de trauma, o correto é:</p><ol class="ops"><li><b>A)</b> Sentar a vítima e dar água</li><li><b>B)</b> Deitar e elevar as pernas</li><li><b>C)</b> Colocar a cabeça para trás e chacoalhar</li><li><b>D)</b> Dar café</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Deitar e elevar as pernas</strong><br>Elevar as pernas ajuda o sangue a voltar ao cérebro.</div></details></div>
+<div class="qz"><p>12. Durante uma crise convulsiva, é INCORRETO:</p><ol class="ops"><li><b>A)</b> Afastar objetos cortantes</li><li><b>B)</b> Proteger a cabeça</li><li><b>C)</b> Colocar um objeto entre os dentes</li><li><b>D)</b> Anotar a duração</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) Colocar um objeto entre os dentes</strong><br>Nada na boca: risco de quebrar dentes, ferir o socorrista e obstruir a via aérea.</div></details></div>
+<div class="qz"><p>13. Em qual situação a convulsão exige ligar para o 192?</p><ol class="ops"><li><b>A)</b> Crise de 1 minuto em epiléptico conhecido que já acordou</li><li><b>B)</b> Crise com mais de 5 minutos</li><li><b>C)</b> Sonolência depois da crise</li><li><b>D)</b> Salivação durante a crise</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Crise com mais de 5 minutos</strong><br>Mais de 5 min, crises seguidas, primeira crise, gestante, trauma ou água = 192.</div></details></div>
+<div class="qz"><p>14. Senhor com boca torta e braço direito fraco há 20 minutos pede água. Você:</p><ol class="ops"><li><b>A)</b> Dá água devagar</li><li><b>B)</b> Dá AAS</li><li><b>C)</b> Não oferece nada pela boca, liga 192 e anota a hora do início</li><li><b>D)</b> Leva para casa descansar</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) Não oferece nada pela boca, liga 192 e anota a hora do início</strong><br>Suspeita de AVC: nada pela boca e o tempo é decisivo.</div></details></div>
+<div class="qz"><p>15. AVC causado por entupimento de um vaso cerebral é o:</p><ol class="ops"><li><b>A)</b> Hemorrágico</li><li><b>B)</b> Isquêmico</li><li><b>C)</b> Focal</li><li><b>D)</b> Vasovagal</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Isquêmico</strong><br>Isquêmico = entupimento (~85%). Hemorrágico = rompimento.</div></details></div>
+<div class="qz"><p>16. Qual dor torácica tem maior chance de ser cardíaca?</p><ol class="ops"><li><b>A)</b> Pontada que piora ao apertar o local</li><li><b>B)</b> Aperto que piora no esforço, com suor e náusea</li><li><b>C)</b> Dor que piora ao virar o tronco</li><li><b>D)</b> Dor que some ao andar</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Aperto que piora no esforço, com suor e náusea</strong><br>Dor cardíaca piora com atividade, melhora no repouso e vem com náusea, sudorese, falta de ar.</div></details></div>
+<div class="qz"><p>17. Na crise de asma, a principal dificuldade é:</p><ol class="ops"><li><b>A)</b> Inspirar</li><li><b>B)</b> Expirar</li><li><b>C)</b> Engolir</li><li><b>D)</b> Falar só</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Expirar</strong><br>Brônquio contraído: o ar entra mas custa a sair.</div></details></div>
+<div class="qz"><p>18. Segundo o slide, a intoxicação exógena:</p><ol class="ops"><li><b>A)</b> É uma reação imunológica</li><li><b>B)</b> É uma lesão mecânica</li><li><b>C)</b> É exposição a produto químico</li><li><b>D)</b> Só ocorre por ingestão</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) É exposição a produto químico</strong><br>Não é lesão mecânica nem reação imunológica.</div></details></div>
+<div class="qz"><p>19. Pupila contraída recebe o nome de:</p><ol class="ops"><li><b>A)</b> Midríase</li><li><b>B)</b> Miose</li><li><b>C)</b> Anisocoria</li><li><b>D)</b> Epífora</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Miose</strong><br>Miose = contração; midríase = dilatação.</div></details></div>
+<div class="qz"><p>20. Trabalhador com pó químico na pele. Primeiro passo após o EPI:</p><ol class="ops"><li><b>A)</b> Jogar água imediatamente</li><li><b>B)</b> Retirar o pó a seco</li><li><b>C)</b> Passar óleo</li><li><b>D)</b> Cobrir com pano úmido</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Retirar o pó a seco</strong><br>Água direto no pó pode ativar a reação. Escova, depois lava.</div></details></div>
+<div class="qz"><p>21. Segundo o slide, NÃO se induz vômito em:</p><ol class="ops"><li><b>A)</b> Adultos jovens</li><li><b>B)</b> Gestante no 3º trimestre, criança &lt; 2 anos e déficit neurológico</li><li><b>C)</b> Quem ingeriu medicamento</li><li><b>D)</b> Idosos lúcidos</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Gestante no 3º trimestre, criança &lt; 2 anos e déficit neurológico</strong><br>Lista do slide. Hoje a orientação geral é não provocar vômito sem o CIATox.</div></details></div>
+<div class="qz"><p>22. Caminhão com produto desconhecido tombado. Conduta do socorrista:</p><ol class="ops"><li><b>A)</b> Aproximar e retirar o motorista</li><li><b>B)</b> Ficar longe, com o vento pelas costas, e acionar 193</li><li><b>C)</b> Lavar a pista</li><li><b>D)</b> Cheirar para identificar</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Ficar longe, com o vento pelas costas, e acionar 193</strong><br>A segurança do socorrista vem primeiro.</div></details></div>
+<div class="qz"><p>23. Escorpião é um animal:</p><ol class="ops"><li><b>A)</b> Venenoso, pois faz mal ao ser ingerido</li><li><b>B)</b> Peçonhento, pois injeta veneno por ferrão</li><li><b>C)</b> Venenoso, pois tem veneno na pele</li><li><b>D)</b> Nem venenoso nem peçonhento</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Peçonhento, pois injeta veneno por ferrão</strong><br>Peçonhento tem um aparelho que injeta o veneno.</div></details></div>
+<div class="qz"><p>24. Picada de cobra no pé. Conduta correta:</p><ol class="ops"><li><b>A)</b> Torniquete acima da picada</li><li><b>B)</b> Cortar e sugar o local</li><li><b>C)</b> Lavar com água e sabão, repouso, membro elevado e hospital</li><li><b>D)</b> Dar cachaça para a dor</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) Lavar com água e sabão, repouso, membro elevado e hospital</strong><br>Torniquete, cortar, sugar, álcool e receitas caseiras estão proibidos.</div></details></div>
+<div class="qz"><p>25. Cobra com chocalho na cauda e veneno neurotóxico e miotóxico:</p><ol class="ops"><li><b>A)</b> Jararaca</li><li><b>B)</b> Cascavel</li><li><b>C)</b> Surucucu</li><li><b>D)</b> Coral</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Cascavel</strong><br>Cascavel (Crotalus).</div></details></div>
+<div class="qz"><p>26. Na picada de escorpião, deve-se aplicar:</p><ol class="ops"><li><b>A)</b> Gelo</li><li><b>B)</b> Compressa morna</li><li><b>C)</b> Torniquete</li><li><b>D)</b> Álcool</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Compressa morna</strong><br>Morna alivia a dor. Gelo e torniquete estão contraindicados.</div></details></div>
+<div class="qz"><p>27. Queimadura por água-viva. Conduta:</p><ol class="ops"><li><b>A)</b> Lavar com água doce e esfregar</li><li><b>B)</b> Lavar com vinagre e remover tentáculos com pinça</li><li><b>C)</b> Passar areia</li><li><b>D)</b> Urinar no local</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Lavar com vinagre e remover tentáculos com pinça</strong><br>Água doce e esfregar disparam mais veneno.</div></details></div>
+<div class="qz"><p>28. O parto de emergência só deve ser realizado com o feto em apresentação:</p><ol class="ops"><li><b>A)</b> Pélvica</li><li><b>B)</b> Córmica</li><li><b>C)</b> Cefálica</li><li><b>D)</b> Transversal</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) Cefálica</strong><br>Pélvica: transporte rápido. Transversal/córmica: não realizar.</div></details></div>
+<div class="qz"><p>29. Qual sinal indica que o parto é iminente?</p><ol class="ops"><li><b>A)</b> Contrações a cada 30 min</li><li><b>B)</b> Coroamento e vontade forte de evacuar</li><li><b>C)</b> Início das contrações</li><li><b>D)</b> Dor nas costas</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Coroamento e vontade forte de evacuar</strong><br>Coroamento: a cabeça aparece e não volta. Não dá tempo de transportar.</div></details></div>
+<div class="qz"><p>30. A fase que vai do nascimento até a saída da placenta é a:</p><ol class="ops"><li><b>A)</b> Dilatação</li><li><b>B)</b> Expulsão</li><li><b>C)</b> Dequitação</li><li><b>D)</b> Coroamento</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) Dequitação</strong><br>Dequitação ou secundamento, normalmente em até 30 min.</div></details></div>
+<div class="qz"><p>31. Na fase de expulsão, a frequência das contrações pode chegar a:</p><ol class="ops"><li><b>A)</b> 1 em 10 min</li><li><b>B)</b> 2 a 3 em 10 min</li><li><b>C)</b> 5 em 10 min</li><li><b>D)</b> 10 em 10 min</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>C) 5 em 10 min</strong><br>Dilatação: 2–3 em 10 min. Expulsão: até 5 em 10 min.</div></details></div>
+<div class="qz"><p>32. Clampeamento do cordão no parto de emergência:</p><ol class="ops"><li><b>A)</b> Imediato em todos os bebês, a 2 cm do umbigo</li><li><b>B)</b> Esperar 1–3 min; 1ª amarra a 10–15 cm do RN, 2ª a +3–4 cm, cortar entre elas</li><li><b>C)</b> Cortar sem amarrar</li><li><b>D)</b> Puxar o cordão para soltar a placenta</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Esperar 1–3 min; 1ª amarra a 10–15 cm do RN, 2ª a +3–4 cm, cortar entre elas</strong><br>Imediato só se o RN nascer sem respirar, chorar ou se mexer.</div></details></div>
+<div class="qz"><p>33. Sangramento intenso após a saída da placenta. O socorrista deve:</p><ol class="ops"><li><b>A)</b> Colocar gelo na vagina</li><li><b>B)</b> Massagear o útero em círculos acima do púbis até ficar firme</li><li><b>C)</b> Elevar a cabeça da mãe</li><li><b>D)</b> Puxar o restante do cordão</li></ol><details><summary>Ver resposta</summary><div class="ex"><strong>B) Massagear o útero em círculos acima do púbis até ficar firme</strong><br>Útero firme = contraído = sangra menos.</div></details></div>
+</section>
+
+<p style="text-align:center"><a class="btn" href="#indice">Voltar ao índice</a></p>
+</main>
+
+<footer>
+  Base: aulas da unidade Primeiros Socorros NUC002 (prova anterior + Parto de emergência, Intoxicação exógena e animais com veneno), anotações do caderno, diretrizes da AHA 2025 e orientações do Ministério da Saúde/Instituto Butantan. Material de revisão: em caso de divergência, vale o que o professor enfatizou em sala.
+</footer>
+</body>
+</html>
