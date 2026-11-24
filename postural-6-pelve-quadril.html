@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -51,6 +86,7 @@
     <a href="#artrose">Artrose do quadril</a>
     <a href="#programa">No programa</a>
     <a href="#fecho">Fechando a série</a>
+    <a href="#pratique">Pratique</a>
     <a href="#glossario">Glossário</a>
     <a href="#confirmar">A confirmar</a>
     <a href="#referencias">Referências</a>
@@ -62,7 +98,7 @@
 <div class="hero">
   <div class="eyebrow">Avaliação Postural &middot; CBMF &middot; Parte 6 de 7</div>
   <h1>Pelve e <span class="em">quadril</span></h1>
-  <p class="lede">A pelve é um <b>bloco rígido</b>: quando uma ponta gira, a outra obrigatoriamente vai para o lado oposto. Desse fato saem todas as alterações desta parte. Aqui estão as cadeias ascendente e descendente, o conceito de <b>nova causa</b>, o modelo da gangorra, e as seis alterações pélvicas — mais o fecho da série inteira.</p>
+  <p class="lede">A pelve é um <b>bloco rígido</b>: quando uma ponta gira, a outra obrigatoriamente vai para o lado oposto. Desse fato saem todas as alterações desta parte. Aqui estão as cadeias ascendente e descendente, o conceito de <b>nova causa</b>, o modelo da gangorra, e as seis alterações pélvicas — mais o fecho da série inteira. Agora com <b>simulador da gangorra pélvica</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -633,6 +669,20 @@
   </div>
 </section>
 
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>A gangorra da pelve</h2>
+  <p class="sec-sub">Gire a pelve e veja o que acontece com a lombar e os músculos.</p>
+  <div class="sim" id="gp">
+    <div class="sim-head"><b>Vista lateral</b><span class="muted"></span></div>
+    <svg viewBox="0 0 560 290" class="sim-svg" role="img" aria-label="Vista lateral"><g id="gpScene"></g></svg>
+    <div class="ctl"><label>Pelve <output id="oGp">neutra</output><input type="range" id="rGp" min="-15" max="25" value="0"></label></div>
+    <p class="lev-txt" id="gpTxt"></p>
+  </div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
+</section>
+
 <section id="glossario">
   <span class="sec-num">14 &mdash; GLOSSÁRIO</span>
   <h2>Os termos <span class="accent">da parte 6</span></h2>
@@ -717,5 +767,39 @@
   <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado em anotações do módulo de Avaliação Postural (CBMF), organizado de forma didática e complementado com leitura crítica da literatura e conduta prática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "Na anteversão pélvica, a EIAS:", "a": ["Sobe", "Desce e vai para frente", "Não se move", "Vai para trás"], "c": 1, "e": "E o ísquio sobe e vai para trás."},{"q": "Quais músculos produzem retroversão?", "a": ["Flexores do quadril e eretores", "Extensores do quadril e abdominais", "Só o quadríceps", "Só a panturrilha"], "c": 1, "e": "Puxam o ísquio para baixo e a crista para cima."},{"q": "A pelve é chamada de peça central porque:", "a": ["É o maior osso", "Liga as cadeias ascendente (pés) e descendente (cabeça) e altera as duas", "Não se move", "Só sustenta órgãos"], "c": 1, "e": "Qualquer mudança nela reverbera acima e abaixo."},{"q": "No teste de Trendelenburg positivo, suspeita-se de fraqueza do:", "a": ["Glúteo médio do lado de apoio", "Bíceps femoral", "Adutor longo", "Tibial anterior"], "c": 0, "e": "A pelve cai do lado oposto."},{"q": "Isquiotibiais encurtados tendem a puxar a pelve para:", "a": ["Anteversão", "Retroversão", "Rotação lateral", "Nada"], "c": 1, "e": "Inserem no ísquio e o puxam para baixo."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+(function(){var sc=document.getElementById('gpScene');if(!sc)return;var r=document.getElementById('rGp'),tx=document.getElementById('gpTxt'),R=Math.PI/180;
+ function draw(){var a=+r.value;document.getElementById('oGp').textContent=a>3?'anteversão '+a+'°':a<-3?'retroversão '+(-a)+'°':'neutra';clear(sc);var C={x:250,y:170};
+  var g=el('g',{transform:'rotate('+(-a)+' '+C.x+' '+C.y+')'},sc);el('path',{d:'M180 120 Q190 90 230 95 L310 120 Q320 150 300 190 L260 220 Q220 215 205 190 Z',fill:'rgba(127,127,127,.18)',stroke:INK,'stroke-width':3},g);
+  el('circle',{cx:300,cy:125,r:7,fill:OR},g);txt(sc,0,0,'','sm');var E={x:C.x+(300-C.x)*Math.cos(-a*R)-(125-C.y)*Math.sin(-a*R),y:C.y+(300-C.x)*Math.sin(-a*R)+(125-C.y)*Math.cos(-a*R)};
+  el('circle',{cx:215,cy:205,r:7,fill:BL},g);var I={x:C.x+(215-C.x)*Math.cos(-a*R)-(205-C.y)*Math.sin(-a*R),y:C.y+(215-C.x)*Math.sin(-a*R)+(205-C.y)*Math.cos(-a*R)};
+  txt(sc,E.x+10,E.y-6,'EIAS','sm','start').setAttribute('fill',OR);txt(sc,I.x-10,I.y+18,'ísquio','sm','end').setAttribute('fill',BL);
+  el('circle',{cx:C.x,cy:C.y,r:8,fill:'#fff',stroke:INK,'stroke-width':2},sc);
+  var L=-a*1.6;el('path',{d:'M'+(205)+' 100 Q'+(190+L)+' 60 205 10',fill:'none',stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.5},sc);txt(sc,170,30,'lombar','sm','end');
+  el('line',{x1:C.x,y1:C.y,x2:C.x+10,y2:C.y+110,stroke:INK,'stroke-width':14,'stroke-linecap':'round',opacity:.4},sc);
+  var sh=a>3?['flexores do quadril','eretores lombares']:a<-3?['isquiotibiais','abdominais (reto)']:[],lo=a>3?['abdominais','glúteos e isquiotibiais']:a<-3?['flexores do quadril','eretores lombares']:[];
+  var y=40;if(sh.length){txt(sc,340,y,'tensos:','sm','start').setAttribute('font-weight','700');sh.forEach(function(s){y+=20;txt(sc,340,y,'• '+s,'sm','start').setAttribute('fill',RD)});y+=30;txt(sc,340,y,'alongados ou fracos:','sm','start').setAttribute('font-weight','700');lo.forEach(function(s){y+=20;txt(sc,340,y,'• '+s,'sm','start').setAttribute('fill',BL)})}
+  tx.innerHTML=a>3?'<b>Anteversão</b>: a EIAS desce e o ísquio sobe e vai para trás; a lombar acompanha e a lordose aumenta.':a<-3?'<b>Retroversão</b>: os extensores do quadril puxam o ísquio para baixo e os abdominais puxam a crista para cima; a lombar retifica.':'<b>Neutra</b>: EIAS e púbis aproximadamente no mesmo plano vertical. Gangorra em equilíbrio.'}
+ r.addEventListener('input',draw);draw()})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

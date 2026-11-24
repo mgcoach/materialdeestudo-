@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -51,6 +86,7 @@
     <a href="#dedos">Martelo e garra</a>
     <a href="#cadeia-ascendente">Cadeia ascendente</a>
     <a href="#programa">Programa de pé</a>
+    <a href="#pratique">Pratique</a>
     <a href="#glossario">Glossário</a>
     <a href="#confirmar">A confirmar</a>
     <a href="#referencias">Referências</a>
@@ -62,7 +98,7 @@
 <div class="hero">
   <div class="eyebrow">Avaliação Postural &middot; CBMF &middot; Parte 2 de 7</div>
   <h1>Pés e <span class="em">tornozelo</span></h1>
-  <p class="lede">O pé é a <b>base do eixo postural</b> e a única interface do corpo com o solo — um desvio de poucos graus aqui vira centímetros lá em cima. Esta parte cobre o padrão normal (tripé, arcos, eixo do calcâneo), as sete alterações do pé com o <b>mapa muscular completo</b> de cada uma, e como o desvio sobe pela cadeia até a coluna.</p>
+  <p class="lede">O pé é a <b>base do eixo postural</b> e a única interface do corpo com o solo — um desvio de poucos graus aqui vira centímetros lá em cima. Esta parte cobre o padrão normal (tripé, arcos, eixo do calcâneo), as sete alterações do pé com o <b>mapa muscular completo</b> de cada uma, e como o desvio sobe pela cadeia até a coluna. Agora com <b>simulador da pegada do pé</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -643,6 +679,20 @@
   </div>
 </section>
 
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>A pegada do pé</h2>
+  <p class="sec-sub">Mexa na altura do arco e veja a marca no chão.</p>
+  <div class="sim" id="ft">
+    <div class="sim-head"><b>Arco longitudinal medial</b><span class="muted"></span></div>
+    <svg viewBox="0 0 560 250" class="sim-svg" role="img" aria-label="Arco longitudinal medial"><g id="ftScene"></g></svg>
+    <div class="ctl"><label>Altura do arco <output id="oFt">normal</output><input type="range" id="rFt" min="0" max="100" value="50"></label></div>
+    <p class="lev-txt" id="ftTxt"></p>
+  </div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
+</section>
+
 <section id="glossario">
   <span class="sec-num">14 &mdash; GLOSSÁRIO</span>
   <h2>Os termos <span class="accent">da parte 2</span></h2>
@@ -727,5 +777,35 @@
   <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado em anotações do módulo de Avaliação Postural (CBMF), organizado de forma didática e complementado com leitura crítica da literatura e conduta prática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "O principal achado na vista posterior do pé é:", "a": ["A cor da pele", "O eixo do calcâneo", "O tamanho do dedão", "A unha"], "c": 1, "e": "Compare os dois lados."},{"q": "O teste de elevação do arco serve para:", "a": ["Medir o tamanho do pé", "Distinguir arco que cede por fraqueza de arco ausente estruturalmente", "Testar o joelho", "Avaliar a panturrilha"], "c": 1, "e": "Testa a camada ativa."},{"q": "Pronação excessiva do pé tende a levar a tíbia e o fêmur a:", "a": ["Rodar externamente", "Rodar internamente, favorecendo valgo", "Não mudar", "Estender"], "c": 1, "e": "Cadeia ascendente."},{"q": "Hálux valgo é o nome técnico de:", "a": ["Dedo em garra", "Joanete", "Pé cavo", "Calcanhar varo"], "c": 1, "e": "Desvio do dedão para fora."},{"q": "Um bom programa para o pé inclui:", "a": ["Só alongamento", "Fortalecimento dos músculos intrínsecos, panturrilha e controle do arco", "Só palmilha", "Nada"], "c": 1, "e": "A camada ativa sustenta o arco."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+(function(){var sc=document.getElementById('ftScene');if(!sc)return;var r=document.getElementById('rFt'),tx=document.getElementById('ftTxt');
+ function draw(){var a=+r.value/100;var lab=a<0.3?'pé plano':a>0.75?'pé cavo':'normal';document.getElementById('oFt').textContent=lab;clear(sc);
+  var cx=140;el('ellipse',{cx:cx,cy:60,rx:52,ry:40,fill:'rgba(127,127,127,.35)'},sc);el('ellipse',{cx:cx+6,cy:205,rx:34,ry:32,fill:'rgba(127,127,127,.35)'},sc);
+  var w=Math.max(8,58-60*a);var mid=a>0.85?0:1;if(mid)el('path',{d:'M'+(cx+52)+' 70 Q'+(cx+48)+' 140 '+(cx+38)+' 200 L'+(cx+38-w)+' 200 Q'+(cx+48-w*1.1)+' 140 '+(cx+52-w)+' 70Z',fill:'rgba(127,127,127,.35)'},sc);
+  [0,1,2,3,4].forEach(function(i){el('circle',{cx:cx-40+i*20,cy:12-(i===0?4:0),r:i===0?11:8,fill:'rgba(127,127,127,.35)'},sc)});
+  txt(sc,cx,244,'marca no chão (pé direito)','sm');
+  var bx=300,by=180;el('line',{x1:bx,y1:by,x2:bx+230,y2:by,stroke:MUT,'stroke-width':3},sc);var h=10+70*a;el('path',{d:'M'+bx+' '+by+' Q'+(bx+50)+' '+(by-30)+' '+(bx+90)+' '+(by-h)+' Q'+(bx+160)+' '+(by-h+10)+' '+(bx+225)+' '+(by-8),fill:'none',stroke:INK,'stroke-width':6,'stroke-linecap':'round'},sc);txt(sc,bx+110,by+24,'vista medial','sm');
+  tx.innerHTML=a<0.3?'<b>Pé plano</b>: o arco desaba e quase toda a lateral e o meio do pé marcam o chão. Teste se a pessoa consegue elevar o arco ativamente: se consegue, a falta é de força, não de estrutura.':a>0.75?'<b>Pé cavo</b>: arco alto, a faixa lateral fica fina ou some. Menos absorção de impacto e mais carga no calcanhar e na cabeça dos metatarsos.':'<b>Arco normal</b>: faixa lateral com largura intermediária. O pé alterna entre absorver (pronação) e virar alavanca rígida (supinação) na propulsão.'}
+ r.addEventListener('input',draw);draw()})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

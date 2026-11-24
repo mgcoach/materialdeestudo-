@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -57,6 +92,7 @@
     <a href="#fascia">Fáscia e tensegridade</a>
     <a href="#padroes-alterados">Padrões alterados</a>
     <a href="#objetivos">Os 5 objetivos</a>
+    <a href="#pratique">Pratique</a>
     <a href="#glossario">Glossário</a>
     <a href="#confirmar">A confirmar</a>
     <a href="#referencias">Referências</a>
@@ -68,7 +104,7 @@
 <div class="hero">
   <div class="eyebrow">Avaliação Postural &middot; CBMF &middot; Parte 1 de 7</div>
   <h1>Fundamentos e <span class="em">método</span></h1>
-  <p class="lede">Antes de olhar para qualquer desvio, é preciso entender <b>por que o corpo se desalinha</b> e <b>como se observa</b>. Esta parte cobre o comportamento dos músculos tônicos e fásicos, a inibição recíproca, o protocolo completo de avaliação estática e dinâmica, e as cadeias musculares que conectam tudo. É a base sobre a qual as outras cinco partes se apoiam.</p>
+  <p class="lede">Antes de olhar para qualquer desvio, é preciso entender <b>por que o corpo se desalinha</b> e <b>como se observa</b>. Esta parte cobre o comportamento dos músculos tônicos e fásicos, a inibição recíproca, o protocolo completo de avaliação estática e dinâmica, e as cadeias musculares que conectam tudo. É a base sobre a qual as outras cinco partes se apoiam. Agora com <b>leitor da linha de prumo</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -954,6 +990,20 @@
   </div>
 </section>
 
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>Leia a linha de prumo</h2>
+  <p class="sec-sub">Escolha um padrão e compare os pontos com a linha.</p>
+  <div class="sim" id="lp">
+    <div class="sim-head"><b>Vista lateral</b><span class="muted">linha de prumo em azul</span></div>
+    <div class="seg" role="group" aria-label="Padrão"><button type="button" class="on" data-k="ok">Alinhado</button><button type="button" data-k="cl">Cifose-lordose</button><button type="button" data-k="sw">Sway back</button><button type="button" data-k="fb">Retificado (flat back)</button><button type="button" data-k="ca">Cabeça anteriorizada</button></div>
+    <svg viewBox="0 0 560 340" class="sim-svg" role="img" aria-label="Vista lateral"><g id="lpScene"></g></svg>
+    <p class="lev-txt" id="lpTxt"></p>
+  </div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
+</section>
+
 <section id="glossario">
   <span class="sec-num">20 &mdash; GLOSSÁRIO</span>
   <h2>Os termos <span class="accent">da parte 1</span></h2>
@@ -1056,5 +1106,45 @@
   <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado em anotações do módulo de Avaliação Postural (CBMF), organizado de forma didática e complementado com leitura crítica da literatura e conduta prática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "Na vista lateral, a linha de prumo deve passar:", "a": ["Atrás da orelha e do joelho", "Pela orelha, cabeça do úmero e trocânter, um pouco à frente do joelho e do maléolo", "Pelo meio do pé e do umbigo", "Pela patela"], "c": 1, "e": "São os centros dos grandes segmentos."},{"q": "Músculos tônicos, diante do desuso, tendem a:", "a": ["Enfraquecer e alongar", "Encurtar e ficar hiperativos", "Desaparecer", "Não mudar"], "c": 1, "e": "Os fásicos tendem a enfraquecer."},{"q": "Inibição recíproca significa que:", "a": ["Agonista e antagonista contraem juntos sempre", "Quando um músculo contrai, o antagonista é inibido", "Os dois lados do corpo se inibem", "A dor inibe o treino"], "c": 1, "e": "Base de muitos desequilíbrios."},{"q": "Por que a postura alinhada é econômica?", "a": ["Usa mais músculo", "O peso cai perto dos eixos articulares e o torque muscular é mínimo", "Porque estica os ligamentos", "Não é"], "c": 1, "e": "Braço de momento pequeno."},{"q": "O objetivo da avaliação postural para o profissional de Educação Física é:", "a": ["Diagnosticar doenças", "Orientar a escolha de exercícios e saber quando encaminhar", "Prescrever remédio", "Tratar escoliose"], "c": 1, "e": "Diagnóstico é ato médico."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+(function(){var root=document.getElementById('lp');if(!root)return;var sc=document.getElementById('lpScene'),tx=document.getElementById('lpTxt');
+ var B={o:[0,0],h:[0,0],u:[0,0],tr:[0,0],k:[0,0]};
+ var M={ok:{d:{},t:'<b>Alinhado</b>: a linha passa pela orelha, cabeça do úmero, trocânter maior (cabeça do fêmur), um pouco à frente do joelho e à frente do maléolo lateral. O peso cai perto dos eixos e os músculos trabalham pouco.'},
+  cl:{d:{o:22,u:14,tr:-4,k:2,lord:1,cif:1,pelv:1},t:'<b>Cifose-lordose</b>: cabeça e ombros à frente, mais cifose torácica, mais lordose e pelve em anteversão. Comum com flexores de quadril e eretores lombares encurtados e abdominais e glúteos fracos.'},
+  sw:{d:{o:16,u:-10,tr:18,k:-6,cif:1,flat:1},t:'<b>Sway back</b>: a pelve vai à frente da linha, o tronco inclina para trás, cifose longa e joelhos em hiperextensão. O corpo “pendura” nos ligamentos.'},
+  fb:{d:{o:10,u:2,tr:-2,k:4,flat:1,retro:1},t:'<b>Retificado (flat back)</b>: curvas lombar e torácica reduzidas, pelve em retroversão, geralmente com isquiotibiais encurtados.'},
+  ca:{d:{o:32,u:6},t:'<b>Cabeça anteriorizada</b>: a orelha fica bem à frente da linha. Cada centímetro aumenta o torque que os extensores do pescoço precisam fazer para segurar a cabeça.'}};
+ function draw(k){var m=M[k],d=m.d,X=250;clear(sc);el('line',{x1:X,y1:10,x2:X,y2:330,stroke:BL,'stroke-width':2.5,'stroke-dasharray':'6 5'},sc);el('line',{x1:150,y1:326,x2:380,y2:326,stroke:MUT,'stroke-width':4},sc);
+  var P={o:{x:X+(d.o||0),y:40},u:{x:X+(d.u||0),y:100},tr:{x:X+(d.tr||0),y:190},k:{x:X+10+(d.k||0),y:255},m:{x:X+14,y:318}};
+  var sp='M'+(P.u.x-20)+' '+(P.u.y-30)+' Q'+(P.u.x-28-(d.cif?18:0)+(d.flat?8:0))+' '+(P.u.y+20)+' '+(P.u.x-22)+' '+(P.u.y+55)+' Q'+(P.tr.x-34+(d.lord?16:0)-(d.flat?4:0))+' '+(P.tr.y-40)+' '+(P.tr.x-26)+' '+(P.tr.y-14);
+  el('path',{d:sp,fill:'none',stroke:OR,'stroke-width':5,'stroke-linecap':'round',opacity:.8},sc);
+  el('line',{x1:P.o.x,y1:P.o.y,x2:P.u.x,y2:P.u.y,stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.6},sc);
+  el('line',{x1:P.u.x,y1:P.u.y,x2:P.tr.x,y2:P.tr.y,stroke:INK,'stroke-width':22,'stroke-linecap':'round',opacity:.35},sc);
+  el('circle',{cx:P.o.x+2,cy:P.o.y-12,r:22,fill:'none',stroke:INK,'stroke-width':3},sc);
+  el('line',{x1:P.tr.x,y1:P.tr.y,x2:P.k.x,y2:P.k.y,stroke:INK,'stroke-width':12,'stroke-linecap':'round',opacity:.7},sc);el('line',{x1:P.k.x,y1:P.k.y,x2:P.m.x,y2:P.m.y,stroke:INK,'stroke-width':10,'stroke-linecap':'round',opacity:.7},sc);el('line',{x1:P.m.x-20,y1:P.m.y+6,x2:P.m.x+40,y2:P.m.y+6,stroke:INK,'stroke-width':8,'stroke-linecap':'round',opacity:.7},sc);
+  var pa=d.pelv?-20:d.retro?14:0;el('ellipse',{cx:P.tr.x-6,cy:P.tr.y-10,rx:30,ry:18,fill:'rgba(127,127,127,.15)',stroke:INK,'stroke-width':2,transform:'rotate('+pa+' '+(P.tr.x-6)+' '+(P.tr.y-10)+')'},sc);
+  [['o','orelha'],['u','ombro'],['tr','trocânter'],['k','joelho'],['m','maléolo']].forEach(function(a){var p=P[a[0]],off=Math.abs(p.x-X-(a[0]==='k'?10:a[0]==='m'?14:0));el('circle',{cx:p.x,cy:p.y,r:7,fill:off>6?RD:GR,stroke:'#fff','stroke-width':2},sc);txt(sc,400,p.y+4,a[1]+(off>6?' fora':' ok'),'sm','start').setAttribute('fill',off>6?RD:GR)});
+  tx.innerHTML=m.t}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});draw(b.dataset.k)})});draw('ok')})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
