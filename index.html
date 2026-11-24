@@ -54,7 +54,7 @@ button{font:inherit;cursor:pointer}
 .node.center{background:var(--or);color:#0a0a0a;border:0;padding:18px 26px;box-shadow:0 0 0 12px rgba(255,107,26,.16),0 0 60px rgba(255,107,26,.45)}
 .node.center small{color:#3b1d0a}
 .map .leg{position:absolute;left:20px;bottom:16px;font-size:12px;color:#71717a}
-@media (max-width:760px){.map{height:auto;padding:18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.map svg.lines,.map .leg{display:none}.node,.node.center{position:static;transform:none;white-space:normal}.node.center{grid-column:1/-1;justify-content:center}.node:hover,.node.on{transform:none}}
+@media (max-width:760px){.map{height:auto;padding:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.map svg.lines,.map .leg{display:none}.node,.node.center{position:static;transform:none;white-space:normal;padding:12px;gap:8px;align-items:flex-start}.node i{margin-top:6px;width:8px;height:8px}.node b{font-size:14px;line-height:1.2;overflow-wrap:anywhere;hyphens:auto}.node small{display:block;font-size:11.5px;line-height:1.35;margin-top:3px}.node.center{grid-column:1/-1;justify-content:center;align-items:center;padding:14px}.node.center b{font-size:17px}.node:hover,.node.on{transform:none}}
 /* blocos */
 section.blk{padding-top:34px}
 .blk h2{margin:0 0 14px;font-size:24px;letter-spacing:-.01em}
@@ -257,7 +257,7 @@ fetch('estudos.json?v='+Date.now()).then(r=>r.json()).then(D=>{
  let svg='<svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">';
  LINKS.forEach(([p,q])=>{const A=AREAS.find(a=>a.id===p),B=AREAS.find(a=>a.id===q);svg+=`<line x1="${A.x}" y1="${A.y}" x2="${B.x}" y2="${B.y}" stroke="#2e2e33" stroke-width=".35" vector-effect="non-scaling-stroke" style="stroke-width:2px"/>`});
  svg+='</svg>';
- map.innerHTML=svg+AREAS.map(a=>{const ns=new Set(byA[a.id].map(m=>m.serie).filter(Boolean)).size;return `<a class="node${a.center?' center':''}" href="#area-${a.id}" style="left:${a.x}%;top:${a.y}%;--c:${a.c}" data-area="${a.id}"><i></i><span><b>${esc(a.name)}</b><small>${byA[a.id].length} materiais${ns?' · '+ns+' séries':''}</small></span></a>`}).join('')+'<div class="leg">Toque numa área para ver as séries dela · linhas = assuntos que se apoiam</div>';
+ map.innerHTML=svg+AREAS.map(a=>{const ns=new Set(byA[a.id].map(m=>m.serie).filter(Boolean)).size;return `<a class="node${a.center?' center':''}" href="#area-${a.id}" style="left:${a.x}%;top:${a.y}%;--c:${a.c}" data-area="${a.id}"><i></i><span><b>${esc(a.name)}</b><small>${byA[a.id].length} ${byA[a.id].length===1?'material':'materiais'}${ns?' · '+ns+(ns===1?' série':' séries'):''}</small></span></a>`}).join('')+'<div class="leg">Toque numa área para ver as séries dela · linhas = assuntos que se apoiam</div>';
  // estatísticas
  const opened=Object.entries(LS.open).sort((a,b)=>b[1]-a[1]);
  let streak=0;{let d=new Date();for(;;){const k=d.toISOString().slice(0,10);if(LS.days.includes(k)){streak++;d.setDate(d.getDate()-1)}else break}}
@@ -279,7 +279,7 @@ fetch('estudos.json?v='+Date.now()).then(r=>r.json()).then(D=>{
    const ss=Object.keys(series).filter(s=>series[s][0]._a===a.id);
    const av=byA[a.id].filter(m=>!m.serie);
    const posters=ss.map(s=>{const info=SERIE_INFO[s]||[a.id,a.cover];return `<a class="poster" href="#" data-serie="${esc(s)}" style="background-image:url('${cov(info[1])}')"><span class="n">${series[s].length} partes</span>${NEWS.has(s)?'<span class="new">NOVO</span>':''}<b>${esc(s.replace(/ \((CBMF|Livro|Graduação)\)/,''))}</b></a>`});
-   if(av.length)posters.push(`<a class="poster" href="#" data-avulsos="${a.id}" style="background-image:url('${cov(av[0]._c)}')"><span class="n">${av.length} materiais</span><b>${esc(a.name)}: avulsos</b></a>`);
+   if(av.length)posters.push(`<a class="poster" href="#" data-avulsos="${a.id}" style="background-image:url('${cov(av[0]._c)}')"><span class="n">${av.length} ${av.length===1?'material':'materiais'}</span><b>${esc(a.name)}: avulsos</b></a>`);
    if(!posters.length)return '';
    return `<div class="area-row" id="area-${a.id}" style="--c:${a.c}"><h3><i></i>${esc(a.name)}</h3><div class="shelf">${posters.join('')}</div></div>`}).join('');
  // recentes
