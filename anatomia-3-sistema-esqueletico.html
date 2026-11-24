@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -43,6 +78,7 @@
     <a href="#classificacao">Classificação</a>
     <a href="#ossificacao">Ossificação</a>
     <a href="#programa">No programa</a>
+    <a href="#pratique">Pratique</a>
     <a href="#glossario">Glossário</a>
     <a href="#referencias">Fonte</a>
   </nav>
@@ -53,7 +89,7 @@
 <div class="hero">
   <div class="eyebrow">Anatomia &middot; CBMF &middot; Parte 3 de 8</div>
   <h1>Sistema <span class="em">esquelético</span></h1>
-  <p class="lede">O osso é <b>tecido vivo em remodelação permanente</b> — e responde a carga como o músculo. Funções que vão além da sustentação, o trio de células ósseas, os cinco formatos com a função de cada um, e as duas rotas de ossificação, incluindo a placa de crescimento e o que ela significa para o treino de adolescentes.</p>
+  <p class="lede">O osso é <b>tecido vivo em remodelação permanente</b> — e responde a carga como o músculo. Funções que vão além da sustentação, o trio de células ósseas, os cinco formatos com a função de cada um, e as duas rotas de ossificação, incluindo a placa de crescimento e o que ela significa para o treino de adolescentes. Agora com <b>jogo dos tipos de osso</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -312,6 +348,15 @@
   </div>
 </section>
 
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>Classifique o osso</h2>
+  <p class="sec-sub">Longo, curto, plano, pneumático ou sesamoide?</p>
+  <div id="cls"></div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
+</section>
+
 <section id="glossario">
   <span class="sec-num">06 &mdash; GLOSSÁRIO</span>
   <h2>Os termos <span class="accent">da parte 3</span></h2>
@@ -378,5 +423,28 @@
   <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material de estudo baseado no módulo de Anatomia do CBMF, organizado de forma didática e complementado com mecanismo e conduta prática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "Qual célula forma osso novo?", "a": ["Osteoclasto", "Osteoblasto", "Condrócito", "Fibroblasto"], "c": 1, "e": "O osteoclasto reabsorve."},{"q": "A patela aumenta a eficiência do quadríceps porque:", "a": ["É leve", "Afasta a linha do tendão do eixo do joelho, aumentando o braço de momento", "Produz sangue", "Lubrifica o joelho"], "c": 1, "e": "É a função dos sesamoides."},{"q": "Onde fica a medula óssea vermelha que produz sangue no adulto?", "a": ["Só nos dentes", "Principalmente nos ossos planos e nas epífises (osso esponjoso)", "Na diáfise compacta", "Nos tendões"], "c": 1, "e": "Na infância também nas diáfises."},{"q": "Ossos do carpo e do tarso são:", "a": ["Longos", "Curtos", "Planos", "Pneumáticos"], "c": 1, "e": "Formato cúbico, absorvem impacto."},{"q": "A carga mecânica no osso:", "a": ["Enfraquece sempre", "Estimula a formação óssea (Lei de Wolff)", "Não tem efeito", "Só afeta crianças"], "c": 1, "e": "Por isso o treino de força protege o osso."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+function classify(boxId,items){var box=document.getElementById(boxId);if(!box)return;items.forEach(function(x){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+x[0]+'</p><div class="seg">'+x[1].map(function(o,i){return '<button type="button" data-i="'+i+'">'+o+'</button>'}).join('')+'</div><p class="ex"></p>';box.appendChild(d);
+ d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');d.querySelector('[data-i="'+x[2]+'"]').classList.add('on');var ok=+b.dataset.i===x[2];if(!ok)b.style.outline='2px solid #e11d48';d.querySelector('.ex').innerHTML=(ok?'✔ ':'✘ '+x[1][x[2]]+'. ')+x[3]})})})}
+var T=['Longo','Curto','Plano','Pneumático','Sesamoide'];classify('cls',[['Fêmur',T,0,'Diáfise e duas epífises.'],['Escápula',T,2,'Lâmina larga para fixação muscular.'],['Patela',T,4,'Formada dentro do tendão do quadríceps.'],['Escafoide (carpo)',T,1,'Ossos do carpo e do tarso são curtos.'],['Maxilar',T,3,'Tem seio cheio de ar.'],['Costela',T,2,'Protege órgãos do tórax.'],['Falange',T,0,'Pequena, mas com corpo e extremidades: é longa.'],['Calcâneo',T,1,'Osso do tarso.']]);/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

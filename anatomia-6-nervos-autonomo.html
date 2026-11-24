@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -43,6 +78,7 @@
     <a href="#plexos">Plexos</a>
     <a href="#sna-divisoes">Sistema autônomo</a>
     <a href="#vias">Vias e neurotransmissores</a>
+    <a href="#pratique">Pratique</a>
     <a href="#glossario">Glossário</a>
     <a href="#referencias">Fonte</a>
   </nav>
@@ -53,7 +89,7 @@
 <div class="hero">
   <div class="eyebrow">Anatomia &middot; CBMF &middot; Parte 6 de 8</div>
   <h1>Nervos e <span class="em">sistema autônomo</span></h1>
-  <p class="lede">Os doze pares cranianos, os nervos espinais com a regra <b>anterior = motor, posterior = sensitivo</b>, os plexos e por que eles existem, e o sistema autônomo — com a síntese que mais importa: <b>o estímulo é simpático, mas a adaptação é parassimpática</b>.</p>
+  <p class="lede">Os doze pares cranianos, os nervos espinais com a regra <b>anterior = motor, posterior = sensitivo</b>, os plexos e por que eles existem, e o sistema autônomo — com a síntese que mais importa: <b>o estímulo é simpático, mas a adaptação é parassimpática</b>. Agora com <b>simulador do sistema autônomo</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -257,6 +293,18 @@
   </div>
 </section>
 
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>Simpático × parassimpático</h2>
+  <p class="sec-sub">Toque numa situação e veja o que muda em cada órgão.</p>
+  <div class="sim" id="simSna">
+    <div class="seg" role="group" aria-label="Situação"><button type="button" class="on" data-k="s">Treino pesado (simpático)</button><button type="button" data-k="p">Depois de comer, descansando (parassimpático)</button></div>
+    <svg viewBox="0 0 560 300" class="sim-svg" role="img" aria-label="Efeitos do sistema autônomo nos órgãos"><g id="snaScene"></g></svg>
+  </div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
+</section>
+
 <section id="glossario">
   <span class="sec-num">06 &mdash; GLOSSÁRIO</span>
   <h2>Os termos <span class="accent">da parte 6</span></h2>
@@ -326,5 +374,31 @@
   <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material de estudo baseado no módulo de Anatomia do CBMF, organizado de forma didática e complementado com mecanismo e conduta prática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "O nervo vago é o par craniano:", "a": ["III", "VII", "X", "XII"], "c": 2, "e": "Principal nervo parassimpático."},{"q": "O simpático sai da medula na região:", "a": ["Craniossacral", "Toracolombar (T1–L2)", "Só cervical", "Só sacral"], "c": 1, "e": "O parassimpático é craniossacral."},{"q": "Durante um treino pesado predomina o:", "a": ["Parassimpático", "Simpático", "Nenhum", "Somático apenas"], "c": 1, "e": "Adrenalina, ↑ FC, broncodilatação, glicose."},{"q": "O plexo braquial dá origem a nervos para:", "a": ["Membros inferiores", "Membros superiores", "Coração", "Diafragma apenas"], "c": 1, "e": "Raízes C5 a T1."},{"q": "O principal neurotransmissor pós-ganglionar do parassimpático é:", "a": ["Noradrenalina", "Acetilcolina", "Dopamina", "Serotonina"], "c": 1, "e": "No simpático, geralmente noradrenalina."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+(function(){var root=document.getElementById('simSna');if(!root)return;var sc=document.getElementById('snaScene'),K='s';
+ var O=[['Pupila','dilata','contrai'],['Coração','↑ frequência e força','↓ frequência'],['Brônquios','dilatam','contraem'],['Fígado','libera glicose','guarda glicogênio'],['Estômago e intestino','digestão freada','↑ secreções e peristaltismo'],['Bexiga','retém urina','contrai (micção)'],['Glândulas sudoríparas','↑ suor','—'],['Vasos dos músculos','dilatam','—']];
+ function draw(){clear(sc);var col=K==='s'?OR:BL;var t=txt(sc,280,22,K==='s'?'Simpático: luta ou fuga (T1–L2)':'Parassimpático: repouso e digestão (NC III, VII, IX, X e S2–S4)','sm');t.setAttribute('font-weight','700');t.setAttribute('fill',col);
+  O.forEach(function(o,i){var y=50+i*31,v=K==='s'?o[1]:o[2];el('rect',{x:20,y:y,width:520,height:26,rx:8,fill:v==='—'?'rgba(127,127,127,.05)':(K==='s'?'rgba(255,107,26,.12)':'rgba(37,99,235,.10)')},sc);txt(sc,34,y+18,o[0],'sm','start').setAttribute('font-weight','700');var a=txt(sc,526,y+18,v,'sm','end');a.setAttribute('fill',v==='—'?MUT:col)})}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});K=b.dataset.k;draw()})});draw()})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -43,6 +78,7 @@
     <a href="#respiratorio">Sistema respiratório</a>
     <a href="#vias-inferiores">Vias aéreas inferiores</a>
     <a href="#programa">No programa</a>
+    <a href="#pratique">Pratique</a>
     <a href="#glossario">Glossário</a>
     <a href="#referencias">Fonte</a>
   </nav>
@@ -53,7 +89,7 @@
 <div class="hero">
   <div class="eyebrow">Anatomia &middot; CBMF &middot; Parte 7 de 8</div>
   <h1>Cardiovascular <span class="em">e respiratório</span></h1>
-  <p class="lede">Coração, vasos e sangue, seguidos das vias aéreas superiores e inferiores. Inclui a regra correta de artéria e veia — <b>por direção, não por oxigenação</b> —, a bomba muscular no retorno venoso, a ventilação como reguladora de pH e a mecânica da respiração pelo acoplamento pleural.</p>
+  <p class="lede">Coração, vasos e sangue, seguidos das vias aéreas superiores e inferiores. Inclui a regra correta de artéria e veia — <b>por direção, não por oxigenação</b> —, a bomba muscular no retorno venoso, a ventilação como reguladora de pH e a mecânica da respiração pelo acoplamento pleural. Agora com <b>circulação passo a passo</b>, calculadora de débito e teste rápido.</p>
 </div>
 
 <main>
@@ -286,6 +322,28 @@
   </div>
 </section>
 
+<section id="pratique">
+  <span class="sec-num">PRATIQUE</span>
+  <h2>O caminho do sangue</h2>
+  <p class="sec-sub">Siga uma hemácia pelo coração.</p>
+  <div class="sim" id="simHt">
+    <div class="sim-head"><b>Circulação passo a passo</b><span class="muted" id="htN">1 / 8</span></div>
+    <svg viewBox="0 0 560 300" class="sim-svg" role="img" aria-label="Coração com quatro câmaras"><g id="htScene"></g></svg>
+    <p class="lev-txt" id="htTxt"></p>
+    <div class="sim-foot"><button type="button" class="play" id="htPrev">◀</button><button type="button" class="play" id="htNext">Próximo ▶</button></div>
+  </div>
+  <div class="sim" id="simDc">
+    <div class="sim-head"><b>Débito cardíaco</b><span class="muted">DC = FC × volume sistólico</span></div>
+    <div class="ctl">
+      <label>Frequência cardíaca <output id="oDf">70 bpm</output><input type="range" id="rDf" min="40" max="200" value="70"></label>
+      <label>Volume sistólico <output id="oDv">70 mL</output><input type="range" id="rDv" min="40" max="180" value="70"></label>
+    </div>
+    <div class="readout"><div><span>Débito cardíaco</span><b id="dcO">–</b></div><div><span>Situação típica</span><b id="dcS">–</b></div></div>
+  </div>
+  <h3>Teste rápido</h3>
+  <div id="qz"></div>
+</section>
+
 <section id="glossario">
   <span class="sec-num">06 &mdash; GLOSSÁRIO</span>
   <h2>Os termos <span class="accent">da parte 7</span></h2>
@@ -356,5 +414,46 @@
   <p style="margin-top:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6">Material de estudo baseado no módulo de Anatomia do CBMF, organizado de forma didática e complementado com mecanismo e conduta prática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "Qual câmara tem a parede mais espessa?", "a": ["Átrio direito", "Ventrículo direito", "Ventrículo esquerdo", "Átrio esquerdo"], "c": 2, "e": "Bombeia para o corpo inteiro, com alta pressão."},{"q": "A artéria pulmonar leva sangue:", "a": ["Rico em O₂", "Pobre em O₂, do coração aos pulmões", "Do pulmão ao coração", "Do corpo ao coração"], "c": 1, "e": "Artéria = sai do coração, independente do O₂."},{"q": "A valva entre átrio e ventrículo esquerdos é a:", "a": ["Tricúspide", "Mitral (bicúspide)", "Aórtica", "Pulmonar"], "c": 1, "e": "A tricúspide fica do lado direito."},{"q": "Débito cardíaco de quem tem FC 150 e volume sistólico 120 mL:", "a": ["1,8 L/min", "18 L/min", "180 L/min", "12 L/min"], "c": 1, "e": "150 × 0,12 = 18 L/min."},{"q": "Onde acontece a troca gasosa?", "a": ["Traqueia", "Brônquios", "Alvéolos", "Laringe"], "c": 2, "e": "Paredes finas, cercadas de capilares."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+(function(){var sc=document.getElementById('htScene');if(!sc)return;var tx=document.getElementById('htTxt'),n=document.getElementById('htN'),i=0;
+ var C={AD:[150,110],VD:[170,210],AE:[400,110],VE:[380,210]};
+ var S=[['Veias cavas → átrio direito','O sangue venoso (pobre em O₂) do corpo chega ao <b>átrio direito</b> pelas veias cavas superior e inferior.','AD',BL],
+  ['Valva tricúspide → ventrículo direito','O átrio contrai e o sangue passa pela <b>valva tricúspide</b> para o ventrículo direito.','VD',BL],
+  ['Valva pulmonar → artéria pulmonar','O ventrículo direito bombeia pela <b>valva pulmonar</b> para o tronco pulmonar. É a única artéria que leva sangue pobre em O₂.','P',BL],
+  ['Pulmões: troca gasosa','Nos alvéolos o sangue solta CO₂ e capta O₂.','L',GR],
+  ['Veias pulmonares → átrio esquerdo','Sangue arterial (rico em O₂) volta pelas <b>veias pulmonares</b> ao átrio esquerdo.','AE',RD],
+  ['Valva mitral → ventrículo esquerdo','Passa pela <b>valva mitral (bicúspide)</b> para o ventrículo esquerdo.','VE',RD],
+  ['Valva aórtica → aorta','O ventrículo esquerdo, de parede mais espessa, bombeia com alta pressão pela <b>valva aórtica</b> para a aorta.','A',RD],
+  ['Corpo','O sangue leva O₂ aos tecidos e volta pelas veias, fechando o circuito sistêmico.','B',OR]];
+ function draw(){clear(sc);var s=S[i];
+  el('path',{d:'M110 70 Q90 220 160 270 Q280 300 400 270 Q470 220 450 70 Q280 30 110 70Z',fill:'rgba(225,29,72,.05)',stroke:MUT,'stroke-width':2},sc);el('line',{x1:280,y1:60,x2:280,y2:280,stroke:MUT,'stroke-width':4},sc);
+  Object.keys(C).forEach(function(k){var c=C[k],on=s[2]===k;el('ellipse',{cx:c[0],cy:c[1],rx:k[0]==='A'?70:85,ry:k[0]==='A'?40:55,fill:on?s[3]:'rgba(127,127,127,.08)',opacity:on?.35:1,stroke:k[1]==='D'?BL:RD,'stroke-width':on?4:2},sc);txt(sc,c[0],c[1]+5,{AD:'Átrio D',VD:'Ventrículo D',AE:'Átrio E',VE:'Ventrículo E'}[k],'sm')});
+  el('rect',{x:240,y:4,width:80,height:24,rx:8,fill:s[2]==='L'?GR:'rgba(22,163,74,.15)'},sc);txt(sc,280,21,'pulmões','sm');
+  el('path',{d:'M330 60 Q360 20 420 30',fill:'none',stroke:s[2]==='A'?RD:MUT,'stroke-width':s[2]==='A'?6:3},sc);txt(sc,430,34,'aorta','sm','start');
+  el('path',{d:'M230 60 Q200 20 150 30',fill:'none',stroke:s[2]==='P'?BL:MUT,'stroke-width':s[2]==='P'?6:3},sc);txt(sc,140,34,'a. pulmonar','sm','end');
+  if(s[2]==='B'){var t=txt(sc,280,295,'→ tecidos do corpo →','sm');t.setAttribute('fill',OR);t.setAttribute('font-weight','700')}
+  n.textContent=(i+1)+' / 8';tx.innerHTML='<b>'+s[0]+'</b>: '+s[1];document.getElementById('htNext').textContent=i===7?'Recomeçar ↺':'Próximo ▶'}
+ document.getElementById('htNext').addEventListener('click',function(){i=i===7?0:i+1;draw()});document.getElementById('htPrev').addEventListener('click',function(){i=Math.max(0,i-1);draw()});draw()})();
+(function(){var rf=document.getElementById('rDf');if(!rf)return;var rv=document.getElementById('rDv');function d(){var f=+rf.value,v=+rv.value,dc=f*v/1000;document.getElementById('oDf').textContent=f+' bpm';document.getElementById('oDv').textContent=v+' mL';document.getElementById('dcO').textContent=fmt(dc,1)+' L/min';document.getElementById('dcS').textContent=dc<7?'repouso':dc<20?'exercício moderado':dc<30?'exercício intenso':'atleta de elite no máximo'}[rf,rv].forEach(function(x){x.addEventListener('input',d)});d()})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
