@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Fisiologia Endócrina 4: Regulação e Metabolismo | MG COACH">
-    <meta property="og:description" content="Parte 4 (final) da série de Fisiologia Endócrina (CBMF): os feedbacks positivo e negativo, o sistema renina-angiotensina-aldosterona, o impacto metabólico de cada hormônio (testosterona, cortisol, GH, IGF-1, insulina, tireoidianos) e a integração neuroendócrina.">
+    <meta property="og:description" content="Feedback hormonal com simulador do eixo HHT, sistema renina-angiotensina-aldosterona com simulador de sódio, hormônios anabólicos e catabólicos, integração neuroendócrina e nutrientes.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/fisiologia-4-regulacao-metabolismo.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -40,11 +75,12 @@
   <nav class="toc" id="tocNav">
     <a href="#feedback">Feedback hormonal</a>
     <a href="#exogeno">Hormônios exógenos</a>
-    <a href="#sraa">Sistema RAA</a>
+    <a href="#sraa">Sistema renina-angiotensina</a>
     <a href="#anabolicos">Hormônios anabólicos</a>
     <a href="#catabolicos">Catabólicos e metabólicos</a>
     <a href="#neuroendocrino">Integração neuroendócrina</a>
     <a href="#nutrientes">Nutrientes e hormônios</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -58,7 +94,7 @@
     <span class="atual">4 &middot; Regulação e Metabolismo</span>
   </div>
   <h1>Regulação e impacto <span class="em">metabólico</span></h1>
-  <p class="lede">Como o corpo controla seus próprios hormônios: os <b>feedbacks</b> positivo e negativo, o sistema <b>renina-angiotensina-aldosterona</b>, o que cada hormônio faz no metabolismo (testosterona, cortisol, GH, IGF-1, insulina, tireoidianos) e a integração <b>neuroendócrina</b> que fecha a série.</p>
+  <p class="lede">Como o corpo controla seus próprios hormônios: os <b>feedbacks</b> positivo e negativo, o sistema <b>renina-angiotensina-aldosterona</b>, o que cada hormônio faz no metabolismo (testosterona, cortisol, GH, IGF-1, insulina, tireoidianos) e a integração <b>neuroendócrina</b> que fecha a série. Agora com <b>simuladores de feedback e do SRAA</b>.</p>
 </div>
 
 <main>
@@ -96,7 +132,14 @@
 
   <div class="callout warn">
     <span class="tag">Resultado fisiológico</span>
-    <p>A supressão do eixo leva à redução da produção endógena e possível <strong>atrofia testicular</strong>. Como princípio geral da fisiologia: <strong>hormônios exógenos sempre suprimem o eixo</strong>, e manipulações hormonais (e dietéticas) geram respostas compensatórias. Esta é uma descrição do mecanismo de feedback — não um guia de uso.</p>
+    <p>A supressão do eixo leva à redução da produção endógena e possível <strong>atrofia testicular</strong>. Como princípio geral da fisiologia: <strong>hormônios exógenos tendem a suprimir o próprio eixo</strong> (quanto maior a quantidade e o tempo, maior a supressão), e manipulações hormonais (e dietéticas) geram respostas compensatórias. Esta é uma descrição do mecanismo de feedback — não um guia de uso.</p>
+  </div>
+
+  <div class="sim" id="simFb">
+    <div class="sim-head"><b>Simulador · feedback negativo no eixo HHT</b></div>
+    <svg viewBox="0 0 560 250" class="sim-svg" role="img" aria-label="Eixo hipotálamo-hipófise-testículo com hormônio externo"><g id="fbScene"></g></svg>
+    <div class="ctl"><label>Testosterona vinda de fora <output id="oFb">0</output><input type="range" id="rFb" min="0" max="100" value="0"></label></div>
+    <p class="lev-txt" id="fbTxt"></p>
   </div>
 </section>
 
@@ -111,13 +154,20 @@
   <div class="stepwrap">
     <div class="step"><h4>Renina</h4><p>Os rins liberam renina, que converte angiotensinogênio em <strong>Angiotensina I</strong>.</p></div>
     <div class="step"><h4>ECA</h4><p>A enzima conversora (ECA) converte Angiotensina I em <strong>Angiotensina II</strong>.</p></div>
-    <div class="step"><h4>Angiotensina II</h4><p>Causa vasoconstrição, estimula a hipófise posterior (↑ ADH) e o córtex adrenal (↑ aldosterona), aumentando a reabsorção de sódio e água → ↑ pressão.</p></div>
+    <div class="step"><h4>Angiotensina II</h4><p>Causa vasoconstrição, estimula a sede e a liberação de ADH e o córtex adrenal (↑ aldosterona), aumentando a reabsorção de sódio e água → ↑ pressão.</p></div>
     <div class="step"><h4>Aldosterona</h4><p>Nos rins: ↑ reabsorção de sódio e água, ↑ excreção de potássio → ↑ volume plasmático e pressão.</p></div>
   </div>
 
   <div class="callout">
     <span class="tag">Aplicação prática (fisiculturismo)</span>
-    <p>A aldosterona é sensível à <strong>queda de sódio</strong>. Cortar sódio de forma agressiva ativa o SRAA (↑ renina → ↑ angiotensina II → ↑ aldosterona), gerando um resultado <strong>paradoxal</strong>: mais retenção de sódio e de líquido. Por isso, em preparação estética, não é fisiologicamente ideal cortar sódio de forma abrupta.</p>
+    <p>A aldosterona responde à <strong>queda de sódio</strong>. Cortar sódio de forma brusca ativa o SRAA (↑ renina → ↑ angiotensina II → ↑ aldosterona) e o corpo passa a <b>segurar ao máximo</b> o pouco sódio que entra. Se depois o sódio volta de uma vez (ou a ingestão oscila muito), a aldosterona ainda alta favorece um <b>rebote</b> de retenção. Por isso cortes bruscos de sódio na reta final costumam dar resultado imprevisível; manter a ingestão estável é mais previsível.</p>
+  </div>
+
+  <div class="sim" id="simSr">
+    <div class="sim-head"><b>Simulador · sódio e SRAA</b></div>
+    <svg viewBox="0 0 560 230" class="sim-svg" role="img" aria-label="Renina e aldosterona conforme o sódio"><g id="srScene"></g></svg>
+    <div class="ctl"><label>Sódio na dieta <output id="oSr">normal</output><input type="range" id="rSr" min="0" max="100" value="50"></label></div>
+    <p class="lev-txt" id="srTxt"></p>
   </div>
 </section>
 
@@ -161,7 +211,7 @@
   <h3>Estradiol e progesterona (metabolismo)</h3>
   <ul class="clean">
     <li><b>Estradiol:</b> modula a distribuição de gordura (menos visceral, mais subcutânea), favorece o fenótipo de adipócito marrom/bege (↑ termogênese), ↑ sensibilidade à insulina, melhora a função mitocondrial e protege contra estresse oxidativo; ↑ saciedade e tem efeito neuroprotetor.</li>
-    <li><b>Progesterona:</b> equilíbrio hormonal feminino; pode contribuir para ganhos de força em mulheres por efeitos indiretos no SNC.</li>
+    <li><b>Progesterona:</b> prepara o endométrio, sobe a temperatura basal (↑ gasto energético na fase lútea) e compete com a aldosterona no rim, com leve efeito diurético.</li>
     <li><b>Aldosterona:</b> equilíbrio de sódio/potássio/água; quando elevada, aspecto mais "inchado" e ↑ pressão.</li>
   </ul>
 </section>
@@ -205,17 +255,24 @@
 </section>
 
 <!-- resumo -->
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O fechamento da série de Fisiologia Endócrina.</p>
 
   <ol class="key">
     <li><b>Feedback negativo</b> é o principal controle (mantém homeostase); o <b>positivo</b> é raro (ex.: pico de LH).</li>
     <li><b>Anticoncepcionais:</b> simulam feedback negativo contínuo e impedem a ovulação.</li>
-    <li><b>Hormônios exógenos sempre suprimem o eixo</b> (ex.: testosterona exógena → atrofia testicular).</li>
+    <li><b>Hormônios exógenos tendem a suprimir o eixo</b> (ex.: testosterona exógena → ↓ LH/FSH → ↓ produção própria e atrofia testicular).</li>
     <li><b>SRAA:</b> renina → angiotensina I → (ECA) → angiotensina II → aldosterona; controla pressão e sódio.</li>
-    <li><b>Cortar sódio agressivamente</b> ativa o SRAA e causa mais retenção (paradoxo na preparação).</li>
+    <li><b>Cortar sódio bruscamente</b> ativa o SRAA; oscilações de sódio favorecem retenção de rebote.</li>
     <li><b>Insulina</b> é o hormônio mais anabólico no contexto metabólico (forte efeito anticatabólico).</li>
     <li><b>GH atua via IGF-1</b>; testosterona age direto e via IGF-1/SNC.</li>
     <li><b>Cortisol crônico</b> é catabólico; <b>tireoidianos</b> elevam TMB e termogênese.</li>
@@ -238,5 +295,59 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Fisiologia Endócrina), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'O principal mecanismo de controle hormonal é:',a:['Feedback positivo','Feedback negativo','Controle voluntário','A alimentação'],c:1,e:'O hormônio final freia a própria produção; o positivo é raro.'},
+{q:'Por que o anticoncepcional impede a ovulação?',a:['Destrói os folículos','Mantém feedback negativo contínuo e impede o pico de LH','Aumenta o FSH','Bloqueia a progesterona'],c:1,e:'Sem pico de LH, não há ovulação.'},
+{q:'Com testosterona vinda de fora, o LH:',a:['Sobe','Cai','Não muda','Vira FSH'],c:1,e:'O hipotálamo interpreta excesso e freia GnRH e LH.'},
+{q:'Qual a sequência correta do SRAA?',a:['Aldosterona → renina → angiotensina','Renina → angiotensina I → (ECA) → angiotensina II → aldosterona','ECA → renina → aldosterona','ADH → renina → cortisol'],c:1,e:'A ECA fica principalmente no pulmão.'},
+{q:'A aldosterona faz o rim:',a:['Eliminar sódio e reter potássio','Reter sódio e água e eliminar potássio','Eliminar água','Produzir renina'],c:1,e:'Aumenta volume e pressão.'},
+{q:'O efeito mais importante da insulina no músculo é:',a:['Aumentar muito a síntese proteica sozinha','Reduzir a degradação proteica (anticatabólico)','Aumentar o cortisol','Quebrar glicogênio'],c:1,e:'Com aminoácidos disponíveis, ela atua mais freando a quebra.'},
+{q:'Qual destes é catabólico quando cronicamente elevado?',a:['IGF-1','Insulina','Cortisol','Testosterona'],c:2,e:'Degrada proteína (via ubiquitina-proteassoma) e causa resistência à insulina.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+function bar(sc,x,y,w,lab,v,col){txt(sc,x,y-6,lab,'sm','start');el('rect',{x:x,y:y,width:w,height:16,rx:8,fill:'rgba(127,127,127,.15)'},sc);el('rect',{x:x,y:y,width:Math.max(4,w*Math.min(1,v)),height:16,rx:8,fill:col},sc)}
+/* ---------- feedback HHT ---------- */
+(function(){
+ var sc=document.getElementById('fbScene');if(!sc)return;var r=document.getElementById('rFb'),tx=document.getElementById('fbTxt');
+ function draw(){var x=+r.value/100,sup=1/(1+Math.pow(x/0.18,1.6)),endo=sup,tot=endo*0.5+x*1.5;document.getElementById('oFb').textContent=x===0?'nenhuma':x<0.34?'pouca':x<0.67?'moderada':'muita';clear(sc);
+  [['Hipotálamo · GnRH',20,OR],['Hipófise · LH e FSH',90,BL],['Testículos · produção própria',160,GR]].forEach(function(b,i){el('rect',{x:20,y:b[1],width:230,height:46,rx:12,fill:'rgba(127,127,127,.06)',stroke:b[2],'stroke-width':2,opacity:i===0?1:0.4+0.6*sup},sc);var t=txt(sc,135,b[1]+28,b[0],'sm');t.setAttribute('fill',b[2]);t.setAttribute('font-weight','700')});
+  arrow(sc,135,68,135,88,INK,3);arrow(sc,135,138,135,158,INK,3);
+  el('path',{d:'M250 183 C320 183 320 43 252 43',fill:'none',stroke:RD,'stroke-width':2+4*Math.min(1,tot/1.2),'stroke-dasharray':'6 5'},sc);txt(sc,326,116,'−','').setAttribute('fill',RD);
+  if(x>0){el('rect',{x:420,y:150,width:120,height:40,rx:10,fill:'rgba(225,29,72,.12)',stroke:RD,'stroke-width':2},sc);txt(sc,480,175,'de fora','sm').setAttribute('fill',RD);el('path',{d:'M420 170 C380 170 360 120 330 120',fill:'none',stroke:RD,'stroke-width':2},sc)}
+  bar(sc,360,30,180,'LH (sinal para o testículo)',sup,BL);bar(sc,360,80,180,'produção própria',endo,GR);bar(sc,360,130,180,'',0,MUT);
+  sc.lastChild.previousSibling.remove();sc.lastChild.remove();sc.lastChild.remove();
+  el('circle',{cx:135,cy:228,r:6+10*sup,fill:GR,opacity:.5},sc);txt(sc,160,232,sup<0.4?'testículo diminui (menos estímulo)':'volume testicular normal','sm','start');
+  tx.innerHTML=x===0?'Sem hormônio externo, o eixo se autorregula: a testosterona própria freia o GnRH e o LH na medida certa.':'O hipotálamo “lê” o total de testosterona circulante. Com hormônio vindo de fora, ele interpreta excesso e <b>freia GnRH e LH</b>: a produção própria cai'+(sup<0.4?' muito, e sem LH os testículos diminuem de volume.':'.')+' <span class="muted">Descrição do mecanismo de feedback, não um guia de uso.</span>'}
+ r.addEventListener('input',draw);draw();
+})();
+/* ---------- SRAA ---------- */
+(function(){
+ var sc=document.getElementById('srScene');if(!sc)return;var r=document.getElementById('rSr'),tx=document.getElementById('srTxt');
+ function draw(){var s=+r.value/100,ren=Math.max(0.05,Math.min(1,0.4+(0.5-s)*1.2)),ald=Math.max(0.05,Math.min(1,0.4+(0.5-s)*1.25));document.getElementById('oSr').textContent=s<0.25?'muito baixo':s<0.45?'baixo':s<0.6?'normal':s<0.8?'alto':'muito alto';clear(sc);
+  var steps=['Renina','Angio I','ECA','Angio II','Aldosterona'];steps.forEach(function(t,i){var x=20+i*108,act=0.3+0.7*ren;el('rect',{x:x,y:20,width:96,height:40,rx:10,fill:'rgba(255,107,26,'+(0.08+0.3*ren)+')',stroke:OR,'stroke-width':1.5,opacity:act},sc);txt(sc,x+48,45,t,'sm');if(i<4)arrow(sc,x+96,40,x+106,40,INK,2)});
+  bar(sc,20,100,240,'Renina',ren,OR);bar(sc,20,150,240,'Aldosterona',ald,RD);
+  ['↑ reabsorção de sódio e água','↑ excreção de potássio','↑ volume e pressão'].forEach(function(t,i){var a=txt(sc,300,110+i*24,t,'sm','start');a.setAttribute('opacity',0.3+0.7*ald)});
+  tx.innerHTML=s<0.45?'Pouco sódio: o rim libera mais <b>renina</b>, a cascata acelera e a <b>aldosterona sobe</b> para segurar o sódio que entra. Se o sódio volta de repente, ela ainda está alta e favorece retenção.':s>0.6?'Muito sódio: renina e aldosterona caem e o rim elimina o excesso. O volume pode subir um pouco por um tempo.':'Sódio estável: o sistema fica em nível basal, sem grandes oscilações de água.'}
+ r.addEventListener('input',draw);draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

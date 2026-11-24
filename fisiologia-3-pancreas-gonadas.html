@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Fisiologia Endócrina 3: Pâncreas, Gônadas e Testosterona | MG COACH">
-    <meta property="og:description" content="Parte 3 da série de Fisiologia Endócrina (CBMF): o pâncreas endócrino (glucagon e somatostatina), os eixos hipotálamo-hipófise-gônadas, os efeitos de estrogênios e progesterona, e a fisiologia detalhada da testosterona (receptor androgênico, SHBG, células satélites, IGF-1).">
+    <meta property="og:description" content="Pâncreas com simulador de glicemia, eixos HHO e HHT, mecanismo da testosterona, calculadora das frações com SHBG (Vermeulen), células satélites, IGF-1 e composição corporal.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/fisiologia-3-pancreas-gonadas.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -45,6 +80,7 @@
     <a href="#shbg">SHBG e frações</a>
     <a href="#satelites">Células satélites e IGF-1</a>
     <a href="#testo-corpo">Composição corporal</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -58,7 +94,7 @@
     <a href="fisiologia-4-regulacao-metabolismo.html">4 &middot; Regulação e Metabolismo</a>
   </div>
   <h1>Pâncreas, gônadas e <span class="em">testosterona</span></h1>
-  <p class="lede">O <b>pâncreas endócrino</b> (glucagon e somatostatina), os eixos <b>hipotálamo-hipófise-gônadas</b>, os efeitos dos hormônios sexuais, e a fisiologia detalhada da <b>testosterona</b>: receptor androgênico, SHBG, células satélites e IGF-1 — o hormônio-chave da hipertrofia.</p>
+  <p class="lede">O <b>pâncreas endócrino</b> (glucagon e somatostatina), os eixos <b>hipotálamo-hipófise-gônadas</b>, os efeitos dos hormônios sexuais, e a fisiologia detalhada da <b>testosterona</b>: receptor androgênico, SHBG, células satélites e IGF-1 — o hormônio-chave da hipertrofia. Agora com <b>simulador de glicemia</b> e <b>calculadora de SHBG</b>.</p>
 </div>
 
 <main>
@@ -88,6 +124,14 @@
   <div class="callout">
     <span class="tag">Somatostatina</span>
     <p>Hormônio inibitório: reduz a liberação de insulina e glucagon, atuando como um <strong>regulador fino</strong> que evita oscilações bruscas da glicemia.</p>
+  </div>
+
+  <div class="sim" id="simGl">
+    <div class="sim-head"><b>Simulador · glicemia</b><span class="muted">jejum normal ≈ 70–99 mg/dL</span></div>
+    <div class="seg" role="group" aria-label="Situação"><button type="button" data-g="60">Jejum longo</button><button type="button" class="on" data-g="88">Repouso</button><button type="button" data-g="150">Depois de comer</button><button type="button" data-g="70" data-ex="1">Exercício longo</button></div>
+    <svg viewBox="0 0 560 260" class="sim-svg" role="img" aria-label="Insulina, glucagon e ações no fígado e músculo"><g id="glScene"></g></svg>
+    <div class="ctl"><label>Glicemia <output id="oGl">88 mg/dL</output><input type="range" id="rGl" min="50" max="200" value="88"></label></div>
+    <p class="lev-txt" id="glTxt"></p>
   </div>
 </section>
 
@@ -120,8 +164,8 @@
   <p>O eixo <strong>Hipotálamo–Hipófise–Testículos (HHT)</strong>: GnRH → LH e FSH. O <strong>LH</strong> estimula as células de Leydig a produzir testosterona; o <strong>FSH</strong> atua nas células de Sertoli, estimulando a espermatogênese e a produção de ABP (proteína ligante de andrógenos).</p>
 
   <div class="callout">
-    <span class="tag">Conversões dentro do testículo</span>
-    <p>Testosterona → <strong>DHT</strong> (via 5α-redutase) e Testosterona → <strong>Estradiol</strong> (via aromatase). O estradiol participa da regulação da síntese proteica e do feedback hormonal — mesmo no homem ele tem papel fisiológico relevante.</p>
+    <span class="tag">Conversões nos tecidos</span>
+    <p>Testosterona → <strong>DHT</strong> (via 5α-redutase, principalmente em próstata, pele e couro cabeludo) e Testosterona → <strong>Estradiol</strong> (via aromatase, sobretudo no tecido adiposo, mas também no próprio testículo e no cérebro). O estradiol participa da regulação da síntese proteica e do feedback hormonal — mesmo no homem ele tem papel fisiológico relevante.</p>
   </div>
 
   <p>Efeitos da testosterona: no osso (↑ crescimento e tecido conectivo), no músculo (↑ síntese proteica, hipertrofia, força), nos órgãos reprodutores e características sexuais secundárias (pelos, voz grave, espermatogênese). Os efeitos androgênicos incluem força, libido, agressividade e distribuição de pelos.</p>
@@ -151,9 +195,9 @@
     <table>
       <thead><tr><th>Fração</th><th>Proporção</th><th>Atividade</th></tr></thead>
       <tbody>
-        <tr><td>Ligada ao SHBG</td><td>≈ 60–65%</td><td><span class="pill d">Inativa</span></td></tr>
-        <tr><td>Ligada à albumina</td><td>≈ 30–35%</td><td><span class="pill c">Biodisponível (fraca)</span></td></tr>
-        <tr><td>Livre</td><td>≈ 1–3%</td><td><span class="pill b">Ativa</span></td></tr>
+        <tr><td>Ligada ao SHBG</td><td>≈ 45–65%</td><td><span class="pill d">Inativa</span></td></tr>
+        <tr><td>Ligada à albumina</td><td>≈ 30–50%</td><td><span class="pill c">Biodisponível (fraca)</span></td></tr>
+        <tr><td>Livre</td><td>≈ 1–4%</td><td><span class="pill b">Ativa</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -163,6 +207,17 @@
   <div class="callout">
     <span class="tag">Ajuste técnico</span>
     <p>O SHBG não "vira" testosterona livre — ele apenas <strong>libera</strong> testosterona conforme o equilíbrio e a necessidade fisiológica. Por isso, na prática, a <strong>testosterona biodisponível</strong> (livre + albumina) importa mais que o valor total do exame.</p>
+  </div>
+
+  <div class="sim" id="simSh">
+    <div class="sim-head"><b>Calculadora · frações da testosterona</b><span class="muted">equação de Vermeulen, albumina 4,3 g/dL</span></div>
+    <svg viewBox="0 0 560 170" class="sim-svg" role="img" aria-label="Frações da testosterona"><g id="shScene"></g></svg>
+    <div class="ctl">
+      <label>Testosterona total <output id="oTT">600 ng/dL</output><input type="range" id="rTT" min="100" max="1200" step="10" value="600"></label>
+      <label>SHBG <output id="oSH">40 nmol/L</output><input type="range" id="rSH" min="10" max="120" value="40"></label>
+    </div>
+    <div class="readout"><div><span>Livre</span><b id="shF">–</b></div><div><span>Biodisponível</span><b id="shB">–</b></div><div><span>Ligada ao SHBG</span><b id="shS">–</b></div></div>
+    <p class="lev-txt muted">Ferramenta de estudo: mostra a lógica do equilíbrio. Exame e interpretação clínica são com o médico.</p>
   </div>
 </section>
 
@@ -178,7 +233,7 @@
 
   <div class="callout ok">
     <span class="tag">A soma dos mecanismos</span>
-    <p>Altas taxas de testosterona promovem: ↑ síntese proteica, ↑ retenção nitrogenada, ↑ células satélites, ↑ IGF-1, ↓ degradação proteica e ↓ gordura corporal. Ela atua tanto <strong>diretamente</strong> no músculo quanto <strong>indiretamente</strong> via IGF-1 e sistema nervoso (↑ ativação neural, ↑ fibras tipo II → mais força e potência).</p>
+    <p>Altas taxas de testosterona promovem: ↑ síntese proteica, ↑ retenção nitrogenada, ↑ células satélites, ↑ IGF-1, ↓ degradação proteica e ↓ gordura corporal. Ela atua tanto <strong>diretamente</strong> no músculo quanto <strong>indiretamente</strong> via IGF-1 e sistema nervoso (↑ ativação neural → mais força e potência).</p>
   </div>
 </section>
 
@@ -189,7 +244,7 @@
   <p class="sec-sub">Efeitos além do músculo — e por que importa nas mulheres também.</p>
 
   <ul class="clean">
-    <li><b>Retenção hídrica:</b> taxas elevadas aumentam a retenção de sódio e o volume intracelular — e volume celular elevado é um <b>sinal anabólico</b> para a fibra.</li>
+    <li><b>Retenção hídrica:</b> taxas elevadas aumentam a retenção de sódio e água. Há a hipótese de que o maior volume celular funcione como um sinal anabólico, mas isso ainda é pouco comprovado em humanos.</li>
     <li><b>Massa gorda:</b> a testosterona inibe a lipoproteína lipase (LPL) no tecido adiposo, aumenta a lipólise e o gasto energético → altas taxas favorecem menos gordura; baixas, mais acúmulo.</li>
   </ul>
 
@@ -205,8 +260,15 @@
 </section>
 
 <!-- resumo -->
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O essencial da Parte 3.</p>
 
@@ -219,7 +281,7 @@
     <li><b>Frações:</b> SHBG (~60%, inativa), albumina (~35%, biodisponível), livre (~2%, ativa).</li>
     <li><b>O que importa é a testosterona biodisponível</b>, não o valor total do exame.</li>
     <li><b>Mecanismos anabólicos:</b> ↑ células satélites e mionúcleos, ↑ IGF-1 (PI3K-AKT-mTOR), ↓ degradação.</li>
-    <li><b>Composição corporal:</b> ↑ retenção (sinal anabólico), inibe LPL e ↑ lipólise (menos gordura).</li>
+    <li><b>Composição corporal:</b> ↑ retenção de sódio e água, inibe LPL e ↑ lipólise (menos gordura).</li>
     <li><b>Em mulheres:</b> níveis menores, mas a fração biodisponível se associa à hipertrofia.</li>
   </ol>
 
@@ -238,5 +300,58 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Fisiologia Endócrina), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'O glucagon age no fígado por meio de:',a:['Receptor nuclear','Proteína G → AMPc → PKA','Entrada direta no núcleo','GLUT4'],c:1,e:'Exemplo clássico de receptor de membrana com segundo mensageiro.'},
+{q:'Durante um exercício longo, por que o músculo ainda capta glicose com a insulina baixa?',a:['Porque o glucagon leva glicose ao músculo','Porque a contração leva o GLUT4 à membrana','Porque o cortisol abre canais','Não capta'],c:1,e:'A contração é um estímulo independente de insulina.'},
+{q:'O feedback positivo no ciclo feminino acontece quando:',a:['A progesterona sobe','O estradiol fica alto no meio do ciclo e provoca o pico de LH','O FSH cai','Na menstruação'],c:1,e:'O pico de LH desencadeia a ovulação.'},
+{q:'No testículo, o LH age nas células de:',a:['Sertoli','Leydig','Granulosa','Teca'],c:1,e:'Leydig produz testosterona; o FSH age nas de Sertoli.'},
+{q:'Se o SHBG sobe e a testosterona total fica igual, a testosterona livre:',a:['Sobe','Cai','Não muda','Vira estradiol'],c:1,e:'Mais SHBG prende mais hormônio. Teste na calculadora.'},
+{q:'A testosterona biodisponível é:',a:['Só a ligada ao SHBG','Livre + ligada à albumina','Só a total','Só a DHT'],c:1,e:'A ligação com a albumina é fraca e se desfaz nos capilares.'},
+{q:'Onde acontece a maior parte da aromatização de testosterona em estradiol?',a:['Na hipófise','No tecido adiposo','No fígado apenas','Nos rins'],c:1,e:'Também acontece no testículo e no cérebro.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- glicemia ---------- */
+(function(){
+ var root=document.getElementById('simGl');if(!root)return;var sc=document.getElementById('glScene'),r=document.getElementById('rGl'),tx=document.getElementById('glTxt'),EX=false;
+ function draw(){var g=+r.value;document.getElementById('oGl').textContent=g+' mg/dL';var ins=Math.max(0.04,Math.min(1,(g-70)/90))*(EX?0.4:1),glu=Math.max(0.05,Math.min(1,(110-g)/50+(EX?0.35:0)));clear(sc);
+  function bar(y,lab,v,col){txt(sc,30,y-6,lab,'sm','start');el('rect',{x:30,y:y,width:200,height:18,rx:9,fill:'rgba(127,127,127,.15)'},sc);el('rect',{x:30,y:y,width:200*v,height:18,rx:9,fill:col},sc)}
+  bar(40,'Insulina (células β)',ins,BL);bar(96,'Glucagon (células α)',glu,OR);
+  var up=ins>glu;el('rect',{x:262,y:20,width:282,height:100,rx:14,fill:'rgba(127,127,127,.06)',stroke:MUT,'stroke-width':1.5},sc);var h=txt(sc,276,42,'Fígado','sm','start');h.setAttribute('font-weight','700');
+  (up?['↑ glicogênese (guarda glicose)','↑ glicólise, ↑ lipogênese','↓ gliconeogênese']:['↑ glicogenólise (solta glicose)','↑ gliconeogênese','↑ cetogênese no jejum longo']).forEach(function(t,i){txt(sc,276,66+i*20,t,'sm','start').setAttribute('fill',up?BL:OR)});
+  el('rect',{x:262,y:134,width:282,height:100,rx:14,fill:'rgba(127,127,127,.06)',stroke:MUT,'stroke-width':1.5},sc);var m=txt(sc,276,156,'Músculo e gordura','sm','start');m.setAttribute('font-weight','700');
+  (up?['GLUT4 na membrana: capta glicose','↑ glicogênio e proteína','↓ lipólise']:EX?['contração põe GLUT4 na membrana','sem precisar de insulina','↑ lipólise (adrenalina)']:['pouca captação de glicose','↑ lipólise: gordura vira energia','proteína poupada, se possível']).forEach(function(t,i){txt(sc,276,180+i*20,t,'sm','start')});
+  tx.innerHTML=EX?'<b>Exercício longo</b>: a insulina cai e o glucagon sobe para manter a glicemia, mas o músculo continua captando glicose porque a <b>contração</b> leva o GLUT4 à membrana sozinha.':g>=120?'<b>Depois de comer</b>: glicose alta estimula as células β. A insulina guarda energia e freia a quebra de gordura e proteína.':g<=70?'<b>Glicemia baixa</b>: as células α liberam glucagon (proteína G → AMPc → PKA no fígado) para soltar glicose e fabricar mais.':'<b>Equilíbrio</b>: insulina e glucagon em níveis basais, ajustando a glicemia minuto a minuto.'}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});r.value=b.dataset.g;EX=!!b.dataset.ex;draw()})});
+ r.addEventListener('input',function(){EX=false;root.querySelectorAll('.seg button').forEach(function(x){x.classList.remove('on')});draw()});draw();
+})();
+/* ---------- SHBG / Vermeulen ---------- */
+(function(){
+ var sc=document.getElementById('shScene');if(!sc)return;var rt=document.getElementById('rTT'),rs=document.getElementById('rSH');
+ function calc(TTng,SH){var TT=TTng*10e-9/288.4,S=SH*1e-9,N=1+3.6e4*(43/69000),Kt=1e9,a=N*Kt,b=N+Kt*(S-TT),c=-TT,FT=(-b+Math.sqrt(b*b-4*a*c))/(2*a);var alb=(N-1)*FT,sh=TT-FT-alb;return {f:FT/TT,a:alb/TT,s:sh/TT,ftpg:FT*288.4e12/1e3*1,bio:(FT+alb)/TT*TTng}}
+ function draw(){var TT=+rt.value,SH=+rs.value,c=calc(TT,SH);document.getElementById('oTT').textContent=TT+' ng/dL';document.getElementById('oSH').textContent=SH+' nmol/L';
+  var ftpg=c.f*TT*10;document.getElementById('shF').textContent=fmt(ftpg,0)+' pg/mL ('+fmt(c.f*100,1)+'%)';document.getElementById('shB').textContent=Math.round(c.bio)+' ng/dL';document.getElementById('shS').textContent=Math.round(c.s*100)+'%';
+  clear(sc);var X0=30,W=500,y=50,x=X0;[[c.s,MUT,'SHBG'],[c.a,BL,'albumina'],[c.f,OR,'livre']].forEach(function(p){var w=Math.max(p[2]==='livre'?4:0,W*p[0]);el('rect',{x:x,y:y,width:w,height:44,fill:p[1],opacity:p[2]==='SHBG'?.55:.9},sc);if(w>60){var t=txt(sc,x+w/2,y+27,p[2]+' '+Math.round(p[0]*100)+'%','sm');t.setAttribute('fill','#fff');t.setAttribute('font-weight','700')}x+=w});
+  txt(sc,X0+W,y+70,'livre '+fmt(c.f*100,1)+'% ↑','sm','end').setAttribute('fill',OR);el('rect',{x:X0+W*c.s,y:y-14,width:W*(c.a+c.f),height:6,rx:3,fill:GR},sc);txt(sc,X0+W*c.s,y-20,'biodisponível','sm','start').setAttribute('fill',GR)}
+ [rt,rs].forEach(function(x){x.addEventListener('input',draw)});draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

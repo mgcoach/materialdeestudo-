@@ -659,32 +659,32 @@
   {
     "titulo": "Fisiologia Endócrina 1: Fundamentos",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 1: o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e receptores, e a síntese dos hormônios peptídicos e esteroides.",
+    "data": "2026-11-24",
+    "resumo": "Sistema endócrino, receptores corrigidos, animação peptídico × esteroide, síntese a partir do colesterol e jogo das três famílias de hormônios.",
     "arquivo": "fisiologia-1-fundamentos.html",
     "serie": "Fisiologia Endócrina (CBMF)"
   },
   {
     "titulo": "Fisiologia Endócrina 2: Hipófise e Glândulas Periféricas",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 2: o hipotálamo como centro de comando, a adeno e a neuro-hipófise e seus hormônios (GH, prolactina, ACTH, TSH, gonadotrofinas, ADH, ocitocina), a tireoide e as glândulas suprarrenais.",
+    "data": "2026-11-24",
+    "resumo": "Explorador interativo dos eixos hipotálamo-hipófise, prolactina, GH, tireoide, zonas da adrenal e simulador do cálcio (PTH e calcitonina).",
     "arquivo": "fisiologia-2-hipofise-glandulas.html",
     "serie": "Fisiologia Endócrina (CBMF)"
   },
   {
     "titulo": "Fisiologia Endócrina 3: Pâncreas, Gônadas e Testosterona",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 3: o pâncreas endócrino (glucagon, somatostatina), os eixos hipotálamo-hipófise-gônadas, os hormônios sexuais, e a fisiologia detalhada da testosterona (receptor androgênico, SHBG, células satélites, IGF-1).",
+    "data": "2026-11-24",
+    "resumo": "Simulador de glicemia (insulina × glucagon), eixos HHO e HHT, testosterona e calculadora das frações com SHBG.",
     "arquivo": "fisiologia-3-pancreas-gonadas.html",
     "serie": "Fisiologia Endócrina (CBMF)"
   },
   {
     "titulo": "Fisiologia Endócrina 4: Regulação e Metabolismo",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 4 (final): feedbacks positivo e negativo, sistema renina-angiotensina-aldosterona, o impacto metabólico de cada hormônio (testosterona, cortisol, GH, IGF-1, insulina, tireoidianos) e a integração neuroendócrina.",
+    "data": "2026-11-24",
+    "resumo": "Simulador de feedback no eixo HHT, SRAA com sódio interativo, hormônios anabólicos e catabólicos e integração neuroendócrina.",
     "arquivo": "fisiologia-4-regulacao-metabolismo.html",
     "serie": "Fisiologia Endócrina (CBMF)"
   },
