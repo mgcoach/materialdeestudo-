@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -832,7 +832,7 @@ footer .star{font-size:15px}
 
   var saved = null;
   try { saved = localStorage.getItem(KEY); } catch(e){}
-  apply(saved === "light" ? "light" : "dark");
+  apply(saved === "dark" ? "dark" : "light");
 
   btn.addEventListener("click", function(e){
     e.preventDefault();
