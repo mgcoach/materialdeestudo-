@@ -619,40 +619,40 @@
   {
     "titulo": "Biomecânica 2: Mecânica Aplicada",
     "categoria": "biomecanica",
-    "data": "Jun · 2026",
-    "resumo": "Parte 1: força resultante, torque e braço de momento, as curvas de resistência (ascendente, descendente, U invertido), o diagrama de corpo livre, a vantagem mecânica e o sistema de polias.",
+    "data": "2026-11-24",
+    "resumo": "Força resultante com simulador de aceleração, rosca no cabo com 4 posições de polia, diagrama de corpo livre passo a passo, vantagem mecânica e polias animadas.",
     "arquivo": "biomecanica2-1-mecanica-aplicada.html",
     "serie": "Biomecânica 2 (CBMF)"
   },
   {
     "titulo": "Biomecânica 2: Força-Comprimento e Arquitetura",
     "categoria": "biomecanica",
-    "data": "Jun · 2026",
-    "resumo": "A curva força-comprimento, PCSA, arquitetura (fusiforme vs peniforme) e excursão funcional. Com o aprofundamento biarticular completo: o que 'encurtamento' realmente significa (ação vs estado — desfazendo o mito do 'músculo encurtado', que costuma ser rigidez e tolerância), a regra de ouro (mesma ação encurta, ação oposta alonga), a diferença entre articulação que MOVE e articulação FIXA com 4 exemplos (reto femoral no agachamento vs cadeira extensora, mesa flexora sentada vs deitada, panturrilha em pé vs sentado, tríceps e a posição do ombro), ponto fixo vs ponto móvel e cadeia aberta vs fechada governando as insuficiências (ativa, passiva e cancelamento), e o empate biarticular nos levantamentos terra — por que o posterior é muito recrutado no terra mas cresce mesmo é no stiff/RDL.",
+    "data": "2026-11-24",
+    "resumo": "Sarcômero e curva força-comprimento interativos, penação, laboratório dos biarticulares com insuficiências, articulação fixa × móvel e o empate nos terras.",
     "arquivo": "biomecanica2-2-forca-comprimento.html",
     "serie": "Biomecânica 2 (CBMF)"
   },
   {
     "titulo": "Biomecânica 2: Membros Superiores",
     "categoria": "biomecanica",
-    "data": "Jun · 2026",
-    "resumo": "Parte 3: as porções do peitoral (supino barra vs halter), os 7 feixes do deltoide e o efeito da pegada, e a biomecânica do braço (bíceps, tríceps, braquial, overhead).",
+    "data": "2026-11-24",
+    "resumo": "Peitoral com simulador da direção das fibras, barra × halter, deltoides, pegada e rotação, laboratório do tríceps e a cabeça longa.",
     "arquivo": "biomecanica2-3-membros-superiores.html",
     "serie": "Biomecânica 2 (CBMF)"
   },
   {
     "titulo": "Biomecânica 2: Membros Inferiores",
     "categoria": "biomecanica",
-    "data": "Jun · 2026",
-    "resumo": "Parte 4: glúteo máximo e o paradoxo da ativação no agachamento (insuficiência ativa dos isquiotibiais), glúteo médio, adutor magno, posteriores de coxa, quadríceps e panturrilhas.",
+    "data": "2026-11-24",
+    "resumo": "Glúteo e simulador de agachamento com braços de momento e comprimentos, adutor magno, posteriores, quadríceps e panturrilhas.",
     "arquivo": "biomecanica2-4-membros-inferiores.html",
     "serie": "Biomecânica 2 (CBMF)"
   },
   {
     "titulo": "Biomecânica 2: Dorsais",
     "categoria": "biomecanica",
-    "data": "Jun · 2026",
-    "resumo": "Parte 5 (final): a cadeia posterior do tronco — o trapézio (três partes) e o grande dorsal, com os exercícios que recrutam cada região das costas.",
+    "data": "2026-11-24",
+    "resumo": "Trapézio com escápula animada, grande dorsal, redondo maior, romboides e mapa interativo das costas por exercício.",
     "arquivo": "biomecanica2-5-dorsais.html",
     "serie": "Biomecânica 2 (CBMF)"
   },
