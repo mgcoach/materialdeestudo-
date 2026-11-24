@@ -723,40 +723,40 @@
   {
     "titulo": "Bioquímica do Exercício 1: Fundamentos",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 1: o treino como estressor, as 5 adaptações, a estrutura do músculo, a mecânica da contração, os tipos de fibra, o recrutamento de unidades motoras (Henneman) e o papel real do dano muscular.",
+    "data": "2026-11-24",
+    "resumo": "O treino como estressor, as 5 adaptações, músculo e contração, tipos de fibra, simulador do princípio do tamanho (Henneman) e dano muscular.",
     "arquivo": "bioquimica-1-fundamentos.html",
     "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 2: Mecanismos da Hipertrofia",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 2: os três mecanismos da hipertrofia (tensão mecânica, estresse metabólico, dano), pump e BFR, mecanotransdução e a via mTOR, síntese proteica, biogênese ribossomal e turnover proteico.",
+    "data": "2026-11-24",
+    "resumo": "Tensão mecânica, estresse metabólico, pump e BFR, mecanotransdução, mTOR, ribossomos e simulador do balanço proteico em 24 h.",
     "arquivo": "bioquimica-2-hipertrofia.html",
     "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 3: Bioenergética e Vias",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 3: o ATP como moeda energética, a gordura como substrato, a via glicolítica anaeróbia, o metabolismo oxidativo, a via fosfagênica (fosfocreatina e creatina) e a integração de todas as vias no treino.",
+    "data": "2026-11-24",
+    "resumo": "ATP, gordura, glicólise, oxidativo, fosfocreatina, creatina, integração das vias e simulador da recuperação da PCr no descanso.",
     "arquivo": "bioquimica-3-bioenergetica.html",
     "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 4: Fadiga",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 4: fadiga de curto prazo (fosfato inorgânico, H+, cálcio), periférica vs central, fadiga de médio prazo (glicogênio) e de longo prazo (SNC e dano). Por que o lactato não é o vilão.",
+    "data": "2026-11-24",
+    "resumo": "Fadiga de curto, médio e longo prazo, H⁺, lactato, fosfato e cálcio, fadiga central e simulador repetição a repetição até a falha.",
     "arquivo": "bioquimica-4-fadiga.html",
     "serie": "Bioquímica do Exercício (CBMF)"
   },
   {
     "titulo": "Bioquímica do Exercício 5: Adaptações Moleculares",
     "categoria": "fisiologia",
-    "data": "Jun · 2026",
-    "resumo": "Parte 5 (final): adaptações agudas energéticas e hemodinâmicas, AMPK e GLUT-4, captação de glicose sem insulina, duplo pico de glicogênio, vasodilatação por óxido nítrico e por que o exercício isolado emagrece pouco.",
+    "data": "2026-11-24",
+    "resumo": "AMPK e GLUT-4, fases da ressíntese de glicogênio com simulador, emagrecimento, coração e vasodilatação.",
     "arquivo": "bioquimica-5-adaptacoes.html",
     "serie": "Bioquímica do Exercício (CBMF)"
   },

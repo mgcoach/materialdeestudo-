@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Bioquímica do Exercício 4: Fadiga | MG COACH">
-    <meta property="og:description" content="Parte 4 da série: a fadiga de curto prazo (fosfato inorgânico, H+, cálcio), a fadiga periférica vs central, a fadiga de médio prazo (glicogênio) e a de longo prazo (SNC e dano). Por que o lactato não é o vilão.">
+    <meta property="og:description" content="Fadiga de curto, médio e longo prazo, H⁺ e tamponamento, o mito do lactato, fosfato inorgânico e cálcio, fadiga central e simulador repetição a repetição até a falha.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-4-fadiga.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -39,12 +74,13 @@
   </div>
   <nav class="toc" id="tocNav">
     <a href="#oque">O que é fadiga</a>
-    <a href="#curto">Curto prazo</a>
-    <a href="#tampon">Tamponamento</a>
-    <a href="#pi">Fosfato e cálcio</a>
+    <a href="#curto">Fadiga de curto prazo</a>
+    <a href="#tampon">Tamponamento e lactato</a>
+    <a href="#pi">Fosfato inorgânico e cálcio</a>
     <a href="#central">Periférica vs central</a>
     <a href="#medio">Médio prazo</a>
     <a href="#longo">Longo prazo</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -59,7 +95,7 @@
     <a href="bioquimica-5-adaptacoes.html">5 &middot; Adaptações</a>
   </div>
   <h1>Por que você <span class="em">falha</span></h1>
-  <p class="lede">A fadiga em três escalas de tempo: <b>curto prazo</b> (fosfato inorgânico, H⁺, cálcio), <b>médio prazo</b> (glicogênio) e <b>longo prazo</b> (SNC e dano). Por que o lactato não é o vilão, e por que a segunda série parece mais pesada mesmo com o estímulo neural intacto.</p>
+  <p class="lede">A fadiga em três escalas de tempo: <b>curto prazo</b> (fosfato inorgânico, H⁺, cálcio), <b>médio prazo</b> (glicogênio) e <b>longo prazo</b> (SNC e dano). Por que o lactato não é o vilão, e por que a segunda série parece mais pesada mesmo com o estímulo neural intacto. Agora com <b>simulador da fadiga na série</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -167,6 +203,13 @@
     <span class="tag">Fechando o circuito Pi &rarr; Ca²⁺ &rarr; ATP</span>
     <p>Repare como tudo se amarra: o <b>Pi</b> atrapalha a ponte cruzada <b>e</b> sequestra o cálcio no RS; a <b>queda de ATP</b> derruba a <b>SERCA</b>, que deixa o cálcio se acumular no citosol; e o cálcio mal manejado piora a força, atrasa o relaxamento e ainda dispara sinalização de dano. Não é um vilão único &mdash; é uma <b>cascata acoplada</b>.</p>
   </div>
+
+  <div class="sim" id="simFa">
+    <div class="sim-head"><b>Simulador · fadiga dentro da série</b><span class="muted">10 RM</span></div>
+    <svg viewBox="0 0 560 250" class="sim-svg" role="img" aria-label="Metabólitos e força ao longo das repetições"><g id="faScene"></g></svg>
+    <div class="ctl"><label>Repetição <output id="oFa">1</output><input type="range" id="rFa" min="1" max="10" value="1"></label></div>
+    <p class="lev-txt" id="faTxt"></p>
+  </div>
 </section>
 
 <!-- 5 -->
@@ -227,7 +270,7 @@
 
   <div class="callout warn">
     <span class="tag">Senso crítico</span>
-    <p>Se a fadiga do SNC limitasse muito a hipertrofia, volumes baixos seriam <strong>sempre</strong> superiores — o que não se confirma. Há estudos com <strong>+50 séries semanais</strong> mostrando mais hipertrofia (com mais fadiga, mas sem limitar o ganho). E o dano muscular é <strong>transitório e adaptável</strong>: com o tempo, gera-se menos dano e a síntese proteica se direciona mais à hipertrofia do que ao reparo.</p>
+    <p>Se a fadiga do SNC limitasse muito a hipertrofia, volumes baixos seriam <strong>sempre</strong> superiores — o que não se confirma. Há estudos com <strong>volumes muito altos (30 a 50 séries semanais)</strong> mostrando mais hipertrofia (com mais fadiga, mas sem limitar o ganho). E o dano muscular é <strong>transitório e adaptável</strong>: com o tempo, gera-se menos dano e a síntese proteica se direciona mais à hipertrofia do que ao reparo.</p>
   </div>
 
   <div class="callout ok">
@@ -242,8 +285,15 @@
 </section>
 
 <!-- resumo -->
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O essencial da Parte 4.</p>
 
@@ -275,5 +325,46 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Fadiga é:',a:['Incapacidade total de contrair','Queda progressiva da capacidade de produzir força','Falta total de ATP','Acúmulo de ácido lático'],c:1,e:'Na falha ainda há ATP; a força possível caiu até a carga.'},
+{q:'Hoje, o principal responsável pela fadiga periférica de curto prazo é apontado como:',a:['Lactato','Fosfato inorgânico (Pi)','Glicogênio','Cortisol'],c:1,e:'O H⁺ também participa, mais na percepção e no comando neural.'},
+{q:'O lactato:',a:['Causa a acidose','Ajuda a remover H⁺ e é combustível','É o mesmo que ácido lático no músculo','Causa dor tardia'],c:1,e:'Quem acidifica é o H⁺.'},
+{q:'A beta-alanina aumenta qual tampão intracelular?',a:['Bicarbonato','Carnosina','Fosfato','Hemoglobina'],c:1,e:'O grupo imidazol da carnosina capta H⁺.'},
+{q:'Os aferentes III e IV:',a:['Levam o comando do cérebro ao músculo','Informam o cérebro sobre metabólitos e reduzem o comando motor','Liberam cálcio','Produzem lactato'],c:1,e:'Base da fadiga central.'},
+{q:'Uma sessão de musculação típica reduz o glicogênio do músculo treinado em cerca de:',a:['100%','24–40%','5%','70–90%'],c:1,e:'Não zera; a performance só cai muito com estoques bem baixos.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- fadiga na série ---------- */
+(function(){
+ var sc=document.getElementById('faScene');if(!sc)return;var r=document.getElementById('rFa'),tx=document.getElementById('faTxt');
+ function draw(){var n=+r.value,u=(n-1)/9;document.getElementById('oFa').textContent=n+(n===10?' (falha)':'');var pi=0.15+0.8*u,h=0.1+0.7*Math.pow(u,1.3),pcr=1-0.75*Math.pow(u,0.7),cap=1-0.29*Math.pow(u,1.2);clear(sc);
+  function bar(y,lab,v,col){txt(sc,30,y-6,lab,'sm','start');el('rect',{x:30,y:y,width:250,height:18,rx:9,fill:'rgba(127,127,127,.15)'},sc);el('rect',{x:30,y:y,width:250*v,height:18,rx:9,fill:col},sc)}
+  bar(36,'Fosfato inorgânico (Pi)',pi,'#7c3aed');bar(86,'H⁺ (acidez)',h,RD);bar(136,'Fosfocreatina',pcr,OR);
+  var X0=330,X1=540,Y0=200,H=170;el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);txt(sc,X0,24,'força máxima possível','sm','start');
+  el('line',{x1:X0,y1:Y0-H*0.71,x2:X1,y2:Y0-H*0.71,stroke:INK,'stroke-width':2,'stroke-dasharray':'5 5'},sc);txt(sc,X1,Y0-H*0.71-6,'carga','sm','end');
+  var d='';for(var k=1;k<=10;k++){var uu=(k-1)/9;d+=(k>1?'L':'M')+(X0+(X1-X0)*uu)+' '+(Y0-H*(1-0.29*Math.pow(uu,1.2)))}el('path',{d:d,fill:'none',stroke:GR,'stroke-width':4},sc);
+  el('circle',{cx:X0+(X1-X0)*u,cy:Y0-H*cap,r:8,fill:GR,stroke:'#fff','stroke-width':2},sc);
+  tx.innerHTML=n<4?'Começo da série: a fosfocreatina ainda sustenta boa parte do ATP e a força máxima está bem acima da carga.':n<10?'O <b>Pi</b> se acumula (quebra de ATP e de PCr), atrapalhando a ponte cruzada e a liberação de cálcio; o <b>H⁺</b> sobe com a glicólise. A força máxima possível vai caindo.':'<b>Falha</b>: a força máxima possível encostou na carga. Não acabou a energia: o músculo e o sistema nervoso (aferentes III e IV) reduziram a força que dá para produzir.'}
+ r.addEventListener('input',draw);draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

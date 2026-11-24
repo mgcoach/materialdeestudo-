@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Bioquímica do Exercício 5: Adaptações Moleculares | MG COACH">
-    <meta property="og:description" content="Parte 5 (final) da série: as adaptações agudas energéticas e hemodinâmicas, a AMPK e o GLUT-4, a captação de glicose independente de insulina, o duplo pico de síntese de glicogênio, a vasodilatação e por que o exercício isolado emagrece pouco.">
+    <meta property="og:description" content="Adaptações agudas, AMPK e GLUT-4, fases da ressíntese de glicogênio com simulador, oxidação e emagrecimento, adaptações cardíacas e vasodilatação.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-5-adaptacoes.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -41,10 +76,11 @@
     <a href="#conceito">O que é adaptação</a>
     <a href="#agudas">Adaptações agudas</a>
     <a href="#glut4">AMPK e GLUT-4</a>
-    <a href="#glicogenio">Duplo pico</a>
+    <a href="#glicogenio">Ressíntese de glicogênio</a>
     <a href="#gordura">Oxidação e emagrecimento</a>
     <a href="#cardio">Adaptações cardíacas</a>
     <a href="#vaso">Vasodilatação</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -59,7 +95,7 @@
     <span class="atual">5 &middot; Adaptações</span>
   </div>
   <h1>As adaptações <span class="em">moleculares</span></h1>
-  <p class="lede">O que o exercício muda no corpo a nível molecular: a <b>AMPK</b> e o <b>GLUT-4</b> captando glicose sem insulina, o duplo pico de síntese de glicogênio, a vasodilatação via óxido nítrico, e por que o exercício é "catabólico no agudo, anabólico na adaptação". O fechamento da série.</p>
+  <p class="lede">O que o exercício muda no corpo a nível molecular: a <b>AMPK</b> e o <b>GLUT-4</b> captando glicose sem insulina, o duplo pico de síntese de glicogênio, a vasodilatação via óxido nítrico, e por que o exercício é "catabólico no agudo, anabólico na adaptação". O fechamento da série. Agora com <b>simulador da reposição de glicogênio</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -108,7 +144,7 @@
 
   <div class="stepwrap">
     <div class="step"><h4>Via da AMPK</h4><p>Ativada pelo aumento de AMP (queda do ATP). Sinaliza que a célula está gastando muita energia.</p></div>
-    <div class="step"><h4>Via da CaMKK</h4><p>Ativada pelo aumento de cálcio intracelular liberado na contração muscular.</p></div>
+    <div class="step"><h4>Via do cálcio e da contração</h4><p>Ativada pelo cálcio liberado na contração (CaMK) e por sinais mecânicos da própria contração. É a via mais importante durante o exercício; funciona mesmo sem AMPK.</p></div>
     <div class="step"><h4>Translocação do GLUT-4</h4><p>Ambas levam o GLUT-4 para a membrana. Resultado: o músculo capta glicose <strong>independentemente da insulina</strong>.</p></div>
   </div>
 
@@ -124,7 +160,13 @@
   <h2>A janela de <span class="accent">reposição</span></h2>
   <p class="sec-sub">Dois momentos de captação aumentada após o treino.</p>
 
-  <p>Após o exercício há <strong>dois picos</strong> de captação e síntese de glicogênio: por volta de <strong>30–45 minutos</strong> e cerca de <strong>2 horas</strong> após o treino. Nesses momentos há ↑ sensibilidade à insulina, ↑ síntese de glicogênio e ↑ captação de carboidrato.</p>
+  <p>A ressíntese de glicogênio depois do treino tem <strong>duas fases</strong>: uma <strong>fase rápida</strong> nos primeiros 30–60 minutos, que não depende de insulina (o GLUT-4 ainda está na membrana por causa da contração), e uma <strong>fase lenta</strong>, que dura horas (até ~48 h), em que o músculo fica mais <strong>sensível à insulina</strong>. Comer carboidrato cedo aproveita a fase rápida.</p>
+  <div class="sim" id="simGy">
+    <div class="sim-head"><b>Simulador · reposição do glicogênio</b><span class="muted">depois de um treino longo</span></div>
+    <div class="seg" role="group" aria-label="Quando comer"><button type="button" class="on" data-k="0">Carboidrato logo após</button><button type="button" data-k="2">Carboidrato 2 h depois</button><button type="button" data-k="9">Pouco carboidrato</button></div>
+    <svg viewBox="0 0 560 220" class="sim-svg" role="img" aria-label="Glicogênio ao longo de 24 horas"><g id="gyScene"></g></svg>
+    <p class="lev-txt" id="gyTxt"></p>
+  </div>
 
   <div class="callout">
     <span class="tag">Para quem isso importa</span>
@@ -152,7 +194,7 @@
   <h2>Um coração mais <span class="accent">eficiente</span></h2>
   <p class="sec-sub">O que o estímulo hemodinâmico repetido constrói.</p>
 
-  <p>Durante o exercício: ↑ frequência cardíaca, ↑ pressão sistólica e diastólica, ↑ débito cardíaco. Repetido ao longo do tempo, isso leva à <strong>hipertrofia cardíaca fisiológica</strong> (benéfica): o coração fica mais eficiente, com <strong>menor frequência cardíaca de repouso</strong> e <strong>maior volume sistólico</strong> (bombeia mais sangue por batimento).</p>
+  <p>Durante o exercício: ↑ frequência cardíaca, ↑ pressão sistólica (a diastólica sobe na musculação, mas se mantém ou cai no aeróbio), ↑ débito cardíaco. Repetido ao longo do tempo, isso leva à <strong>hipertrofia cardíaca fisiológica</strong> (benéfica): o coração fica mais eficiente, com <strong>menor frequência cardíaca de repouso</strong> e <strong>maior volume sistólico</strong> (bombeia mais sangue por batimento).</p>
 </section>
 
 <!-- 7 -->
@@ -165,7 +207,7 @@
 
   <ul class="clean">
     <li><b>Resultado do NO:</b> ↑ diâmetro do vaso, ↑ perfusão muscular, ↑ entrega de O₂, glicose e ácidos graxos.</li>
-    <li><b>Endotelina-1:</b> a força do fluxo também a estimula; ela modula o tônus vascular e <b>aumenta o contato endotélio-músculo</b>, melhorando a permeabilidade e a troca entre sangue e músculo.</li>
+    <li><b>Endotelina-1:</b> é vasoconstritora. No exercício, o efeito dela fica menor nos músculos ativos e maior em áreas inativas, o que ajuda a <b>desviar o sangue</b> para onde ele é necessário.</li>
   </ul>
 
   <div class="callout ok">
@@ -175,8 +217,15 @@
 </section>
 
 <!-- resumo -->
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O fechamento da série de Bioquímica do Exercício.</p>
 
@@ -185,7 +234,7 @@
     <li><b>Adaptações agudas:</b> energéticas (↑ glicólise, lipólise, ATP-CP) e hemodinâmicas (↑ FC, débito, fluxo).</li>
     <li><b>AMPK e CaMKK</b> translocam o GLUT-4 → captação de glicose <b>independente de insulina</b>.</li>
     <li><b>Por isso o exercício é fundamental no diabetes</b> tipo 1 e 2 e na resistência à insulina.</li>
-    <li><b>Duplo pico</b> de síntese de glicogênio: ~30–45 min e ~2 h pós-treino.</li>
+    <li><b>Duas fases</b> de ressíntese de glicogênio: rápida (30–60 min, sem insulina) e lenta (horas, com mais sensibilidade à insulina).</li>
     <li><b>Oxidação de gordura</b> aumenta, mas emagrecer depende do <b>déficit calórico</b>, não do treino isolado.</li>
     <li><b>Exercício isolado emagrece pouco:</b> compensação alimentar + adaptação metabólica.</li>
     <li><b>Coração:</b> hipertrofia fisiológica → menor FC de repouso, maior volume sistólico.</li>
@@ -208,5 +257,45 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'O exercício capta glicose mesmo sem insulina porque:',a:['O glucagon leva glicose','A contração e a AMPK levam o GLUT-4 para a membrana','O cortisol abre canais','A insulina sobe muito'],c:1,e:'Por isso o exercício é tão útil no diabetes.'},
+{q:'A fase rápida de ressíntese de glicogênio:',a:['Acontece 24 h depois','Ocorre nos primeiros 30–60 min e não depende de insulina','Só existe em diabéticos','Não existe'],c:1,e:'Depois vem a fase lenta, com mais sensibilidade à insulina.'},
+{q:'Por que o exercício sozinho emagrece pouco?',a:['Porque não gasta energia','Compensação alimentar e adaptação metabólica','Porque só queima carboidrato','Porque aumenta o cortisol'],c:1,e:'O déficit calórico é o determinante.'},
+{q:'O óxido nítrico no exercício:',a:['Contrai os vasos','Dilata os vasos e aumenta a perfusão muscular','Para o coração','Aumenta a glicemia'],c:1,e:'O glicocálice detecta o fluxo e libera NO.'},
+{q:'Durante o exercício aeróbio, a pressão diastólica:',a:['Sobe muito','Se mantém ou cai um pouco','Zera','Sobe mais que a sistólica'],c:1,e:'A vasodilatação nos músculos reduz a resistência periférica.'},
+{q:'O exercício agudo é:',a:['Anabólico no momento','Catabólico no momento e anabólico na adaptação','Sempre catabólico','Neutro'],c:1,e:'Estresse controlado gera adaptação.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- glicogênio ---------- */
+(function(){
+ var root=document.getElementById('simGy');if(!root)return;var sc=document.getElementById('gyScene'),tx=document.getElementById('gyTxt'),K=0;
+ function g(t,k){var low=k===9,start=0.3,target=low?0.55:1.0,del=low?0:k;if(t<del)return start+0.02*t;var tt=t-del,fast=(k===0?0.18:0.1)*(1-Math.exp(-tt/1)),slow=(target-start-(k===0?0.18:0.1))*(1-Math.exp(-tt/(low?10:7)));return start+0.02*del+fast+slow}
+ function draw(){clear(sc);var X0=50,X1=520,Y0=180,H=150,sx=function(t){return X0+(X1-X0)*t/24},sy=function(v){return Y0-H*v};
+  el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);[0,4,8,12,16,20,24].forEach(function(h){txt(sc,sx(h),Y0+18,h+'h','sm')});txt(sc,X0+6,24,'glicogênio muscular','sm','start');
+  el('line',{x1:X0,y1:sy(1),x2:X1,y2:sy(1),stroke:GR,'stroke-width':1.5,'stroke-dasharray':'4 4'},sc);
+  [0,2,9].forEach(function(k){var d='';for(var t=0;t<=24;t+=0.25)d+=(t?'L':'M')+sx(t)+' '+sy(g(t,k));el('path',{d:d,fill:'none',stroke:k===K?OR:MUT,'stroke-width':k===K?4:2,opacity:k===K?1:.35},sc)});
+  el('rect',{x:sx(0),y:Y0-H-6,width:sx(1)-sx(0),height:H+6,fill:'rgba(37,99,235,.08)'},sc);txt(sc,sx(1)+6,Y0-16,'← fase rápida','sm','start').setAttribute('fill',BL);
+  var v4=g(4,K);tx.innerHTML='Em 4 h: <b>'+Math.round(v4*100)+'%</b>; em 24 h: <b>'+Math.round(g(24,K)*100)+'%</b>. '+(K===0?'Comer cedo aproveita a fase rápida, útil para quem treina de novo no mesmo dia.':K===2?'Esperar 2 h perde parte da fase rápida, mas em 24 h a diferença quase some se o total de carboidrato for adequado.':'Com pouco carboidrato no dia, a reposição fica incompleta e a próxima sessão pode render menos.')}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});K=+b.dataset.k;draw()})});draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

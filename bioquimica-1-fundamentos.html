@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Bioquímica do Exercício 1: Fundamentos | MG COACH">
-    <meta property="og:description" content="Parte 1 da série de Bioquímica do Exercício (CBMF): o treino como estressor, as 5 adaptações, a estrutura do músculo, a mecânica da contração, os tipos de fibra, o recrutamento de unidades motoras (Henneman) e o papel real do dano muscular.">
+    <meta property="og:description" content="O treino como estressor, as 5 adaptações, estrutura do músculo, contração, tipos de fibra, simulador do princípio do tamanho (Henneman) e o papel real do dano muscular.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-1-fundamentos.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -43,8 +78,9 @@
     <a href="#estrutura">Estrutura do músculo</a>
     <a href="#contracao">A contração</a>
     <a href="#fibras">Tipos de fibra</a>
-    <a href="#recrutamento">Recrutamento</a>
+    <a href="#recrutamento">Recrutamento (Henneman)</a>
     <a href="#dano">Dano muscular</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -59,7 +95,7 @@
     <a href="bioquimica-5-adaptacoes.html">5 · Adaptações</a>
   </div>
   <h1>Fundamentos: do estímulo à <span class="em">fibra</span></h1>
-  <p class="lede">A base de toda a bioquímica do treino: por que o treino é um <b>estressor</b>, quais adaptações ele gera, como o músculo é montado por dentro, como ele se contrai, os tipos de fibra e por que <b>aproximar-se da falha</b> recruta tudo. Conteúdo do curso CBMF, organizado e didático.</p>
+  <p class="lede">A base de toda a bioquímica do treino: por que o treino é um <b>estressor</b>, quais adaptações ele gera, como o músculo é montado por dentro, como ele se contrai, os tipos de fibra e por que <b>aproximar-se da falha</b> recruta tudo. Conteúdo do curso CBMF, organizado e didático. Agora com <b>simulador de recrutamento</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -209,9 +245,9 @@
   <p>Pelo <em class="term">Princípio do Tamanho de Henneman</em>, o corpo recruta as fibras em ordem crescente de força, economizando energia:</p>
 
   <ul class="clean">
-    <li><b>Movimentos leves</b> → só Tipo I (baixo limiar, ~12–20 RM).</li>
-    <li><b>Movimentos moderados</b> → Tipo I + Tipo IIa (alto limiar, ~6–10 RM).</li>
-    <li><b>Movimentos muito intensos</b> → todas, incluindo Tipo IIx (altíssimo limiar, ~1–5 RM).</li>
+    <li><b>Pouca força</b> → unidades pequenas, de baixo limiar (fibras Tipo I).</li>
+    <li><b>Força moderada</b> → somam-se unidades maiores (Tipo IIa).</li>
+    <li><b>Força muito alta</b> → entram as maiores (Tipo IIx). Nos músculos grandes, quase todas as unidades já estão ativas por volta de 80–90% da força máxima; acima disso a força cresce aumentando a frequência de disparo.</li>
   </ul>
 
   <p>As Tipo IIx são como um <strong>"turbo"</strong>: só entram quando as outras já não dão conta da demanda. O corpo só as recruta se a tarefa exigir muito esforço.</p>
@@ -224,6 +260,14 @@
       <li><b>Carga leve até perto da falha:</b> conforme a fadiga aumenta, o corpo "chama reforços" — Tipo I → IIa → IIx se acumulam. Por isso cargas leves <b>também</b> hipertrofiam, SE houver esforço suficiente.</li>
     </ul>
     <p style="margin-top:10px">Conclusão da aula: <strong>a falha não é imprescindível, mas a aproximação da falha é</strong> — especialmente com cargas leves. Com 1 a 4 repetições de reserva já se obtém hipertrofia completa. (Isso fundamenta o material <em>Volume de Treino</em>.)</p>
+  </div>
+
+  <div class="sim" id="simHn">
+    <div class="sim-head"><b>Simulador · princípio do tamanho</b><span class="muted">cada círculo é uma unidade motora</span></div>
+    <div class="seg" role="group" aria-label="Carga"><button type="button" class="on" data-k="80">Carga pesada (80% 1RM)</button><button type="button" data-k="30">Carga leve (30% 1RM)</button></div>
+    <svg viewBox="0 0 560 230" class="sim-svg" role="img" aria-label="Unidades motoras recrutadas"><g id="hnScene"></g></svg>
+    <div class="ctl"><label>Repetição da série <output id="oHn">1</output><input type="range" id="rHn" min="1" max="30" value="1"></label></div>
+    <p class="lev-txt" id="hnTxt"></p>
   </div>
 </section>
 
@@ -255,6 +299,13 @@
 </section>
 
 <!-- resumo -->
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
   <span class="sec-num">08 — PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
@@ -288,5 +339,48 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Nas primeiras semanas de treino, o ganho de força vem principalmente de:',a:['Hipertrofia','Adaptações neurais','Mais mitocôndrias','Mais tendão'],c:1,e:'O sistema nervoso aprende a recrutar e coordenar melhor.'},
+{q:'Onde fica armazenado o cálcio usado na contração?',a:['Mitocôndria','Retículo sarcoplasmático','Núcleo','Sarcolema'],c:1,e:'Sem a liberação de Ca²⁺ não há contração.'},
+{q:'O princípio do tamanho de Henneman diz que:',a:['As fibras grandes são recrutadas primeiro','As unidades motoras são recrutadas das menores para as maiores, conforme a força exigida','Todas as fibras trabalham sempre','Só carga pesada recruta fibras II'],c:1,e:'Economia de energia: só chama as grandes quando precisa.'},
+{q:'Com carga leve, como as fibras de alto limiar são recrutadas?',a:['Não são','Conforme a série se aproxima da falha e as pequenas cansam','Só na primeira repetição','Só com BFR'],c:1,e:'Por isso cargas leves também hipertrofiam se houver esforço.'},
+{q:'Com o treino, as fibras tipo IIx tendem a:',a:['Virar tipo I','Assumir características de IIa','Desaparecer','Virar IIb'],c:1,e:'IIb só existe em roedores.'},
+{q:'Mais dor muscular tardia significa:',a:['Mais hipertrofia','Não necessariamente mais hipertrofia','Treino perfeito','Lesão grave sempre'],c:1,e:'O motor da hipertrofia é a tensão mecânica com progressão.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- Henneman ---------- */
+(function(){
+ var root=document.getElementById('simHn');if(!root)return;var sc=document.getElementById('hnScene'),r=document.getElementById('rHn'),tx=document.getElementById('hnTxt'),L=80;
+ var U=[];for(var i=0;i<40;i++){var t=Math.pow(i/39,1.6)*88,ty=t<25?'I':t<60?'IIa':'IIx';U.push({t:t,ty:ty,r:6+i*0.33})}
+ function maxRep(l){return l>=80?8:l>=60?15:l>=30?30:40}
+ function draw(){var n=+r.value,mr=maxRep(L);if(n>mr){n=mr;r.value=mr}var fat=(n-1)/(mr-1||1),need=Math.min(100,L+(100-L)*Math.pow(fat,1.3)*0.95+(L>=80?5:0));
+  document.getElementById('oHn').textContent=n+(n===mr?' (falha)':'');clear(sc);
+  var on=0;U.forEach(function(u,i){var x=30+(i%10)*52,y=40+Math.floor(i/10)*46,act=u.t<=need;if(act)on++;var col=u.ty==='I'?'#dc2626':u.ty==='IIa'?OR:'#2563eb';
+   el('circle',{cx:x,cy:y,r:u.r,fill:act?col:'none',stroke:col,'stroke-width':2,opacity:act?.9:.35},sc)});
+  txt(sc,30,224,'● Tipo I','sm','start').setAttribute('fill','#dc2626');txt(sc,120,224,'● Tipo IIa','sm','start').setAttribute('fill',OR);txt(sc,220,224,'● Tipo IIx','sm','start').setAttribute('fill','#2563eb');
+  txt(sc,540,224,on+' de 40 ativas','sm','end').setAttribute('font-weight','700');
+  tx.innerHTML=L>=80?(n===1?'Com <b>carga pesada</b>, a força exigida já é alta na 1ª repetição: quase todas as unidades entram de cara.':'As repetições seguintes mantêm o recrutamento alto; a fadiga aparece cedo.'):(n<mr*0.4?'Com <b>carga leve</b>, no começo só as unidades pequenas (Tipo I) dão conta.':n<mr?'Conforme elas cansam, o sistema nervoso <b>chama reforços</b>: entram as IIa e depois as IIx.':'Perto da falha, praticamente todas as unidades estão ativas, como na carga pesada.')}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});L=+b.dataset.k;r.max=maxRep(L);r.value=1;draw()})});
+ r.max=maxRep(L);r.addEventListener('input',draw);draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

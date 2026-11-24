@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Bioquímica do Exercício 2: Mecanismos da Hipertrofia | MG COACH">
-    <meta property="og:description" content="Parte 2 da série: os três mecanismos da hipertrofia (tensão mecânica, estresse metabólico, dano), o pump e o BFR, a mecanotransdução e a via mTOR, a síntese proteica, a biogênese ribossomal e o turnover proteico.">
+    <meta property="og:description" content="Os três mecanismos da hipertrofia, estresse metabólico, pump e BFR, mecanotransdução, mTOR, síntese proteica, ribossomos e simulador do balanço proteico em 24 h.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/bioquimica-2-hipertrofia.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -38,14 +73,15 @@
     </button>
   </div>
   <nav class="toc" id="tocNav">
-    <a href="#tres">Os 3 mecanismos</a>
+    <a href="#tres">Os três mecanismos</a>
     <a href="#metabolico">Estresse metabólico</a>
     <a href="#pump">Pump e BFR</a>
     <a href="#mecano">Mecanotransdução</a>
     <a href="#mtor">A via mTOR</a>
     <a href="#sintese">Síntese proteica</a>
-    <a href="#ribossomos">Ribossomos</a>
+    <a href="#ribossomos">Biogênese ribossomal</a>
     <a href="#turnover">Turnover proteico</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -60,7 +96,7 @@
     <a href="bioquimica-5-adaptacoes.html">5 &middot; Adaptações</a>
   </div>
   <h1>Como o músculo <span class="em">cresce</span> de verdade</h1>
-  <p class="lede">Os três mecanismos da hipertrofia e por que a <b>tensão mecânica</b> é o motor. Como o estímulo mecânico vira sinal químico (mecanotransdução), o papel central da <b>mTOR</b>, e como a síntese proteica e os ribossomos constroem o músculo. Por que pump não é crescimento garantido.</p>
+  <p class="lede">Os três mecanismos da hipertrofia e por que a <b>tensão mecânica</b> é o motor. Como o estímulo mecânico vira sinal químico (mecanotransdução), o papel central da <b>mTOR</b>, e como a síntese proteica e os ribossomos constroem o músculo. Por que pump não é crescimento garantido. Agora com <b>simulador do balanço proteico</b> e teste rápido.</p>
 </div>
 
 <main>
@@ -231,11 +267,25 @@
     <li><b>Miofibrilar vs. sarcoplasmática:</b> a hipertrofia miofibrilar (actina/miosina → força) e a sarcoplasmática (água, glicogênio, enzimas → volume) existem, mas <b>não são separáveis na prática</b>: todo treino é simultaneamente tensional e metabólico.</li>
     <li><b>Atrofia é difícil</b> em quem treina e come bem — ela exige desuso prolongado, déficit severo e crônico, ou doença. Manter massa exige menos estímulo do que se imagina.</li>
   </ul>
+
+  <div class="sim" id="simTo">
+    <div class="sim-head"><b>Simulador · balanço proteico em 24 h</b></div>
+    <div class="seg" role="group" aria-label="Cenário"><button type="button" class="on" data-k="tr">Treino + refeições</button><button type="button" data-k="re">Só refeições</button><button type="button" data-k="je">Treino em jejum longo</button></div>
+    <svg viewBox="0 0 560 250" class="sim-svg" role="img" aria-label="Síntese e degradação ao longo do dia"><g id="toScene"></g></svg>
+    <p class="lev-txt" id="toTxt"></p>
+  </div>
 </section>
 
 <!-- resumo -->
+<section id="quiz">
+  <span class="sec-num">09 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">09 &mdash; PARA FIXAR</span>
+  <span class="sec-num">10 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O essencial da Parte 2.</p>
 
@@ -267,5 +317,49 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Bioquímica do Exercício), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Qual é o mecanismo principal da hipertrofia?',a:['Dano muscular','Estresse metabólico','Tensão mecânica','Pump'],c:2,e:'Os outros dois modulam; não substituem a tensão.'},
+{q:'O pump indica que:',a:['O músculo certamente cresceu','Houve estresse metabólico e fluxo sanguíneo, não necessariamente estímulo hipertrófico','A carga foi máxima','Houve dano'],c:1,e:'Sentir não é crescer.'},
+{q:'Mecanotransdução é:',a:['A conversão de tensão mecânica em sinais químicos','A digestão de proteína','A liberação de testosterona','A contração do coração'],c:0,e:'O estímulo inicial é mecânico; hormônios modulam.'},
+{q:'A mTOR é ativada principalmente por:',a:['Cortisol e jejum','Tensão mecânica, leucina, energia adequada e insulina','AMPK alta','Ácido lático'],c:1,e:'Ela regula a tradução proteica.'},
+{q:'Ter mais ribossomos significa:',a:['Mais velocidade de contração','Mais capacidade de síntese proteica','Mais gordura','Mais dano'],c:1,e:'É construir a máquina, não só ligá-la.'},
+{q:'Hipertrofia acontece quando, ao longo do tempo:',a:['Síntese = degradação','Síntese > degradação','Degradação > síntese','A degradação para'],c:1,e:'Teste no simulador de balanço proteico.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- turnover ---------- */
+(function(){
+ var root=document.getElementById('simTo');if(!root)return;var sc=document.getElementById('toScene'),tx=document.getElementById('toTxt'),K='tr';
+ var MEALS=[8,13,20],TR=17;
+ function mps(t,k){var v=1;(k==='je'?[]:MEALS).forEach(function(m){var d=t-m;if(d>0)v+=0.9*(d/1.5)*Math.exp(1-d/1.5)*(k==='tr'&&m>=TR?1.6:1)});if(k!=='re'){var d=t-TR;if(d>0)v+=0.5*Math.exp(-d/18)*(k==='tr'?1:0.6)}return v}
+ function mpb(t,k){var v=1.15;(k==='je'?[]:MEALS).forEach(function(m){var d=t-m;if(d>0&&d<4)v-=0.25*Math.sin(Math.PI*d/4)});if(k!=='re'){var d=t-TR;if(d>0&&d<6)v+=0.35*Math.sin(Math.PI*d/6)}return v}
+ function draw(){clear(sc);var X0=40,X1=530,Y0=200,H=70,sx=function(t){return X0+(X1-X0)*t/24},sy=function(v){return Y0-H*(v-0.4)};
+  el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);[0,6,12,18,24].forEach(function(h){txt(sc,sx(h),Y0+18,h+'h','sm')});
+  var ds='',db='',net=0;for(var t=0;t<=24;t+=0.25){ds+=(t?'L':'M')+sx(t)+' '+sy(mps(t,K));db+=(t?'L':'M')+sx(t)+' '+sy(mpb(t,K));net+=(mps(t,K)-mpb(t,K))*0.25}
+  el('path',{d:ds,fill:'none',stroke:GR,'stroke-width':4},sc);el('path',{d:db,fill:'none',stroke:RD,'stroke-width':4,'stroke-dasharray':'7 5'},sc);
+  (K==='je'?[]:MEALS).forEach(function(m){el('circle',{cx:sx(m),cy:28,r:6,fill:GR},sc)});if(K!=='re'){el('rect',{x:sx(TR)-4,y:20,width:8,height:16,rx:3,fill:OR},sc);txt(sc,sx(TR)-8,32,'treino','sm','end').setAttribute('fill',OR)}
+  txt(sc,X0+4,52,'— síntese  ● refeição','sm','start').setAttribute('fill',GR);txt(sc,X0+90,52,'- - degradação','sm','start').setAttribute('fill',RD);
+  var t=txt(sc,X1,74,'saldo do dia: '+(net>0?'+':'')+fmt(net,1),'sm','end');t.setAttribute('font-weight','700');t.setAttribute('fill',net>0?GR:RD);
+  tx.innerHTML=K==='tr'?'Treino + refeições: o treino deixa o músculo mais sensível aos aminoácidos por <b>24 h ou mais</b>, e cada refeição com proteína empurra a síntese acima da degradação. Saldo positivo = hipertrofia.':K==='re'?'Só refeições: a síntese sobe a cada refeição, mas sem o estímulo do treino o saldo fica perto de zero (manutenção).':'Treino sem comer: o treino estimula, mas sem aminoácidos a degradação continua alta e o saldo fica negativo até a próxima refeição.'}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});K=b.dataset.k;draw()})});draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
