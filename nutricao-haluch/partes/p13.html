@@ -172,6 +172,17 @@
   <div class="note lit"><span class="tag">Literatura · PubMed · o limiar de leucina</span>Segundo revisão recuperada no PubMed (Layman, 2024): a descoberta do papel da leucina como sinal metabólico para iniciar o período anabólico após a refeição levou ao conceito de distribuição proteica. Estudos clínicos demonstraram que adultos acima de 60 anos precisam de refeições com pelo menos <b>2,8 g de leucina</b>, o equivalente a cerca de <b>30 g de proteína</b>, para estimular a síntese proteica muscular. Esse requisito de limiar <b>não</b> se observa em adultos abaixo de 30 anos, que apresentam resposta praticamente <b>linear</b> da síntese proteica em proporção à quantidade de proteína da refeição. O autor acrescenta que a eficiência da proteína da dieta em estimular a síntese cai com o envelhecimento, mas a capacidade de resposta se mantém quando a refeição fornece proteína adequada; e que o impacto da distribuição sobre a massa muscular e a composição corporal a longo prazo permanece menos claro. <a href="https://doi.org/10.3389/fnut.2024.1388986">doi.org/10.3389/fnut.2024.1388986</a></div>
   <div class="note why"><span class="tag">O que esse limiar significa na prática, e o que não significa</span>Ele é a base fisiológica de duas coisas que as Partes 3 e 11 já recomendaram por outros caminhos: distribuir a proteína em três a quatro refeições em vez de concentrá-la, e aumentar a dose por refeição com a idade. O que ele <b>não</b> significa é que se deva suplementar leucina isolada para atingir o número: a leucina abre a porta, mas a construção precisa de todos os outros essenciais, como as próximas duas seções mostram. Trinta gramas de uma proteína completa entregam as duas coisas.</div>
   <div class="note prat"><span class="tag">Quanta leucina tem o que você já come</span>O livro dá a referência do whey: cerca de <b>2,5 a 3,0 g de leucina</b> e 5 a 6 g de BCAA por dose de aproximadamente 30 g de pó. Uma porção equivalente de carne, frango, ovos ou leite fica na mesma faixa. Ou seja: o limiar de leucina é alcançado por qualquer refeição com proteína adequada, sem suplemento nenhum.</div>
+  <div class="calc" data-w="leu" style="box-shadow:5px 5px 0 var(--pro)">
+    <h4>Quanta leucina tem a sua refeição?</h4>
+    <p>Teor médio de leucina por fonte (porcentagem da proteína). O limiar de ~2,8 g é a referência para adultos acima de 60 anos; em jovens a resposta cresce de forma quase linear com a proteína da refeição.</p>
+    <div class="fgrid">
+      <label class="fld" for="leS">Fonte principal<select id="leS">
+        <option value="10.8">Whey protein</option><option value="9.8">Leite e derivados</option><option value="8.5" selected>Carne, frango, peixe</option><option value="8.6">Ovos</option><option value="8.1">Soja</option><option value="8.4">Proteína de ervilha</option><option value="7.8">Arroz com feijão</option><option value="6.8">Trigo / pão</option>
+      </select></label>
+      <label class="fld" for="leP">Proteína na refeição (g)<input id="leP" type="number" inputmode="decimal" value="30" min="5" max="120"></label>
+    </div>
+    <div class="res"></div>
+  </div>
   <div class="recall"><h4>Teste-se</h4><p>Responda de cabeça antes de abrir.</p>
     <details><summary>Qual proteína é o sensor de leucina?</summary><p>A sestrina 2.</p></details>
     <details><summary>Explique a desinibição em sequência.</summary><p>A leucina solta o GATOR2, que inibe o GATOR1, que por sua vez deixava as Rag inativas. Com as Rag ativas, a mTORC1 é levada ao lisossomo.</p></details>

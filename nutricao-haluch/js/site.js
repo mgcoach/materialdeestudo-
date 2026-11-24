@@ -92,6 +92,17 @@ function widgets(){
       var v=ps.value.split(","),lo=+v[0],hi=+v[1];
       po.innerHTML='<span style="display:grid;gap:6px;width:100%">'+[["Total por dia",r5p(lo*k)+" a "+r5p(hi*k)+" g"],["Por refeição (0,25 a 0,50 g/kg)",Math.round(.25*k)+" a "+Math.round(.5*k)+" g"],["Antes de dormir (~0,5 g/kg)","~"+Math.round(.5*k)+" g"]].map(function(x){return '<span style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:5px"><span>'+x[0]+'</span><b style="font-family:var(--serif);font-weight:400;font-size:22px;color:var(--pro);white-space:nowrap">'+x[1]+"</b></span>"}).join("")+"</span>"};
     pw.oninput=pf;ps.onchange=pf;pf();}
+  var lu=reader.querySelector('[data-w="leu"]');
+  if(lu){var ls=lu.querySelector("select"),lp=lu.querySelector("input"),lo=lu.querySelector(".res");
+    var lf=function(){var p=parseFloat(lp.value),pc=+ls.value;if(!(p>=5&&p<=120)){lo.innerHTML="<span>Informe entre 5 e 120 g de proteína.</span>";return}
+      var g=p*pc/100,need=2.8/(pc/100);
+      lo.innerHTML="<b>"+g.toFixed(1).replace(".",",")+"</b><span>gramas de leucina. "+(g>=2.8?"Passa do limiar de ~2,8 g.":"Abaixo do limiar de ~2,8 g.")+" Para chegar a 2,8 g com essa fonte: cerca de <b style=\"font:inherit;font-weight:700;color:#fff\">"+Math.round(need)+" g de proteína</b>.</span>"};
+    ls.onchange=lf;lp.oninput=lf;lf();}
+  var pc=reader.querySelector('[data-w="pcr"]');
+  if(pc){var pci=pc.querySelector("input"),pco=pc.querySelector(".res");
+    var pcf=function(){var t=parseFloat(pci.value);if(!(t>=0&&t<=600)){pco.innerHTML="<span>Informe entre 0 e 600 segundos.</span>";return}
+      var v=30+70*(1-Math.exp(-t/55));pco.innerHTML="<b>"+Math.round(v)+"%</b><span>da fosfocreatina de repouso recuperada após "+t+" s, partindo de ~30% no fim de uma série intensa. "+(v<75?"Descanso curto: a próxima série depende mais da glicólise.":v<93?"Boa parte já voltou.":"Praticamente recuperada.")+"</span>"};
+    pci.oninput=pcf;pcf();}
   var gerAll=function(sx,I,P,A,bf){var m=sx==="m",o={};
     o.hb=m?66+13.8*P+5*A-6.8*I:655+9.6*P+1.9*A-4.7*I;
     var f=I<18?(m?[17.686,658.2]:[13.384,692.6]):I<30?(m?[15.057,692.2]:[14.818,486.6]):I<=60?(m?[11.472,873.1]:[8.126,845.6]):(m?[11.711,587.7]:[9.082,658.5]);
