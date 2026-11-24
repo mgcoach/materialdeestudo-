@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Endurance 4: Corrida e Nutrição | MG COACH">
-    <meta property="og:description" content="Parte 4 (final) da série de Endurance (CBMF): a biomecânica e as fases da corrida, o teste de Cooper/TAF, as estratégias nutricionais (train low/high, carb-loading), as doses de carboidrato e o train the gut para evitar problemas gastrointestinais na prova.">
+    <meta property="og:description" content="Biomecânica e fases da corrida, pisada e lesões, Cooper no TAF, train low × train high, calculadora de carboidrato e simulador de absorção intestinal (SGLT1 e GLUT5).">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/endurance-4-corrida-nutricao.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -38,13 +73,14 @@
     </button>
   </div>
   <nav class="toc" id="tocNav">
-    <a href="#biomecanica">Biomecânica</a>
+    <a href="#biomecanica">Biomecânica da corrida</a>
     <a href="#fases">Fases da corrida</a>
     <a href="#lesoes">Pisada e lesões</a>
     <a href="#cooper">Cooper / TAF</a>
-    <a href="#trainlow">Train low vs high</a>
+    <a href="#trainlow">Train low vs train high</a>
     <a href="#doses">Doses de carboidrato</a>
     <a href="#gut">Train the gut</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -58,7 +94,7 @@
     <span class="atual">4 &middot; Corrida e Nutrição</span>
   </div>
   <h1>Corrida e <span class="em">nutrição</span> no endurance</h1>
-  <p class="lede">A biomecânica e as fases da corrida, por que <b>não existe pisada "certa"</b>, o teste de Cooper aplicado ao TAF, e as estratégias nutricionais que definem o teto de rendimento: <b>train low vs high</b>, carb-loading, as doses de carboidrato por hora e o <b>train the gut</b>.</p>
+  <p class="lede">A biomecânica e as fases da corrida, por que <b>não existe pisada "certa"</b>, o teste de Cooper aplicado ao TAF, e as estratégias nutricionais que definem o teto de rendimento: <b>train low vs high</b>, carb-loading, as doses de carboidrato por hora e o <b>train the gut</b>. Agora com <b>calculadora de carboidrato</b> e simulador da absorção no intestino.</p>
 </div>
 
 <main>
@@ -80,7 +116,7 @@
 
   <div class="callout">
     <span class="tag">Importante</span>
-    <p>Não existe um padrão único ideal de corrida. Variações individuais são normais e esperadas — algo que muda completamente a forma como um personal deve abordar a técnica do aluno.</p>
+    <p>Não existe um padrão único ideal de corrida. Variações individuais são normais e esperadas — algo que muda completamente a forma de abordar a técnica do aluno.</p>
   </div>
 </section>
 
@@ -116,7 +152,7 @@
   </div>
 
   <div class="callout ok">
-    <span class="tag">Conclusões para o personal trainer</span>
+    <span class="tag">Conclusões para quem prescreve</span>
     <ul class="clean" style="margin-top:10px">
       <li>Não tente padronizar a corrida de todos os alunos.</li>
       <li>Foque mais em <b>progressão de carga</b> do que em "corrigir" pisada.</li>
@@ -159,7 +195,7 @@
     <p>Visão crítica necessária: a <strong>baixa de glicogênio pode prejudicar a performance</strong>. Em vários estudos, atletas que ingeriram carboidrato demoraram <strong>mais</strong> para entrar em exaustão. A vantagem do train low/jejum é pequena e nem todos respondem igual. <strong>Adaptação ≠ performance imediata.</strong> O train low é útil em <strong>blocos específicos</strong>, não cronicamente — e iniciantes se beneficiam menos que avançados.</p>
   </div>
 
-  <p>O <strong>treino em jejum</strong> é uma forma de train low, mas diferente: o glicogênio muscular pode estar alto e o hepático baixo. O mecanismo parece envolver o eEF2 (e não necessariamente a AMPK), com maior dependência de ácidos graxos. A ressíntese de glicogênio depois é maior (a glicogênio-fosforilase fica mais sensível) — mas isso não significa automaticamente melhor performance.</p>
+  <p>O <strong>treino em jejum</strong> é uma forma de train low, mas diferente: o glicogênio muscular pode estar alto e o hepático baixo. Com o fígado mais vazio e a insulina baixa, o corpo depende mais de ácidos graxos durante a sessão. Isso aumenta alguns sinais de adaptação oxidativa, mas não significa automaticamente melhor performance.</p>
 
   <div class="def">
     <div class="word">Train high (alta disponibilidade)</div>
@@ -187,9 +223,18 @@
 
   <ul class="clean">
     <li><b>Duas sessões no mesmo dia (&lt; 8 h entre elas):</b> consumir 1–1,2 g/kg por hora nas 4 h seguintes ao treino, aproveitando os picos de síntese de glicogênio (~45 min–1 h e ~2 h pós-treino), depois voltar à dieta normal.</li>
-    <li><b>Supercompensação de glicogênio (carb-loading):</b> esvaziar os estoques previamente e depois ingerir muito carboidrato → a glicogênio sintase fica mais ativa e o músculo armazena <b>mais</b> glicogênio que o normal. Usado antes de provas importantes para atrasar a fadiga.</li>
+    <li><b>Supercompensação de glicogênio (carb-loading):</b> no protocolo clássico os estoques eram esvaziados antes; hoje se sabe que basta reduzir o treino e comer <b>10–12 g/kg/dia nas 36–48 h</b> antes da prova para o músculo guardar mais glicogênio que o normal. Faz sentido para provas acima de ~90 min.</li>
     <li><b>Pós-treino:</b> ↑ GLUT-4, ↑ sensibilidade à insulina, ↑ síntese de glicogênio — o músculo fica "aberto" para receber carboidrato.</li>
   </ul>
+
+  <div class="sim" id="simCb">
+    <div class="sim-head"><b>Calculadora de carboidrato</b><span class="muted">diretrizes para atletas</span></div>
+    <div class="ctl">
+      <label>Peso <output id="oCw">70 kg</output><input type="range" id="rCw" min="40" max="120" value="70"></label>
+      <label>Volume de treino <output id="oCv">moderado</output><input type="range" id="rCv" min="0" max="3" value="1"></label>
+    </div>
+    <div class="readout"><div><span>Por dia</span><b id="cbD">–</b></div><div><span>Em gramas por kg</span><b id="cbK">–</b></div><div><span>Carb-loading (36–48 h)</span><b id="cbL">–</b></div></div>
+  </div>
 </section>
 
 <!-- 7 -->
@@ -222,11 +267,26 @@
     <span class="tag">O erro clássico</span>
     <p>Treinar com baixa ingestão e querer usar 90 g/h direto na prova — isso quase sempre dá problema gastrointestinal. <strong>A estratégia nutricional nunca deve ser testada apenas no dia da prova.</strong> O intestino, como tudo no endurance, precisa ser preparado progressivamente.</p>
   </div>
+
+  <div class="sim" id="simGt">
+    <div class="sim-head"><b>Simulador · absorção no intestino</b></div>
+    <div class="seg" role="group" aria-label="Tipo de carboidrato"><button type="button" class="on" data-k="g">Só glicose</button><button type="button" data-k="gf">Glicose + frutose (2:1)</button></div>
+    <svg viewBox="0 0 560 200" class="sim-svg" role="img" aria-label="Transportadores intestinais e carboidrato absorvido"><g id="gtScene"></g></svg>
+    <div class="ctl"><label>Carboidrato ingerido <output id="oGt">60 g/h</output><input type="range" id="rGt" min="0" max="120" step="5" value="60"></label></div>
+    <p class="lev-txt" id="gtTxt"></p>
+  </div>
 </section>
 
 <!-- resumo -->
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O fechamento da série de Endurance.</p>
 
@@ -258,5 +318,52 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Endurance), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Sobre a pisada e as lesões na corrida:',a:['Existe uma pisada certa que evita lesões','Lesões são multifatoriais; volume e progressão pesam mais que o tipo de pisada','Só calcanhar lesiona','A pisada é tudo'],c:1,e:'Foque em progressão de carga e força.'},
+{q:'O ciclo alongamento-encurtamento na corrida:',a:['Desperdiça energia','Armazena energia elástica na frenagem e devolve no impulso','Só acontece no voo','Não existe na corrida'],c:1,e:'Por isso a força excêntrica é importante.'},
+{q:'No Cooper do TAF, o erro mais comum é:',a:['Sair forte demais e quebrar no meio','Terminar forte','Usar pace constante','Aquecer antes'],c:0,e:'Saída rápida → acidose precoce → queda entre os minutos 6 e 8.'},
+{q:'Um atleta de 70 kg treinando 2 h por dia precisa de cerca de:',a:['100–200 g/dia de carboidrato','420–700 g/dia','1.000 g/dia','Nenhum'],c:1,e:'Volume alto: 6–10 g/kg.'},
+{q:'Por que misturar glicose e frutose em provas longas?',a:['Frutose é mais doce','Usam transportadores diferentes e a absorção total chega a ~90 g/h','Frutose não é absorvida','Para reduzir calorias'],c:1,e:'SGLT1 satura em ~60 g/h; GLUT5 soma cerca de 30.'},
+{q:'O “train low” é melhor usado:',a:['Em todos os treinos, sempre','Em blocos específicos, com competição de estoques cheios','Só no dia da prova','Nunca'],c:1,e:'Adaptação não é igual a performance imediata.'},
+{q:'O carb-loading moderno pede:',a:['Esvaziar o glicogênio com exercício exaustivo antes','Reduzir o treino e comer 10–12 g/kg/dia nas 36–48 h antes','Jejum na véspera','Só proteína'],c:1,e:'A fase de depleção não é necessária.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- calculadora de carboidrato ---------- */
+(function(){
+ var rw=document.getElementById('rCw');if(!rw)return;var rv=document.getElementById('rCv');var V=[['leve',3,5],['moderado (~1 h/dia)',5,7],['alto (1–3 h/dia)',6,10],['muito alto (4–5 h/dia)',8,12]];
+ function draw(){var w=+rw.value,v=V[+rv.value];document.getElementById('oCw').textContent=w+' kg';document.getElementById('oCv').textContent=v[0];
+  document.getElementById('cbD').textContent=Math.round(w*v[1])+'–'+Math.round(w*v[2])+' g';document.getElementById('cbK').textContent=v[1]+'–'+v[2]+' g/kg';document.getElementById('cbL').textContent=Math.round(w*10)+'–'+Math.round(w*12)+' g/dia'}
+ [rw,rv].forEach(function(x){x.addEventListener('input',draw)});draw();
+})();
+/* ---------- absorção intestinal ---------- */
+(function(){
+ var root=document.getElementById('simGt');if(!root)return;var sc=document.getElementById('gtScene'),r=document.getElementById('rGt'),tx=document.getElementById('gtTxt'),M='g';
+ function draw(){var x=+r.value,glu=M==='g'?x:x*2/3,fru=M==='g'?0:x/3,aG=Math.min(60,glu),aF=Math.min(30,fru),abs=aG+aF,left=x-abs;document.getElementById('oGt').textContent=x+' g/h';clear(sc);
+  function cap(y,lab,v,max,col){txt(sc,30,y-8,lab,'sm','start');el('rect',{x:30,y:y,width:300,height:22,rx:11,fill:'rgba(127,127,127,.15)'},sc);el('rect',{x:30,y:y,width:300*Math.min(1,v/max),height:22,rx:11,fill:col},sc);txt(sc,340,y+16,Math.round(v)+' / '+max+' g/h','sm','start')}
+  cap(40,'SGLT1 (glicose)',aG,60,BL);cap(100,'GLUT5 (frutose)',aF,30,'#ca8a04');
+  var t=txt(sc,30,160,'Absorvido: '+Math.round(abs)+' g/h','sm','start');t.setAttribute('font-weight','700');t.setAttribute('fill',GR);
+  var t2=txt(sc,30,185,'Fica no intestino: '+Math.round(left)+' g/h','sm','start');t2.setAttribute('font-weight','700');t2.setAttribute('fill',left>5?RD:MUT);
+  tx.innerHTML=left>5?'Acima da capacidade dos transportadores: o que sobra puxa água e fermenta, causando <b>desconforto e diarreia</b>.'+(M==='g'?' Somar frutose abre a segunda via (GLUT5).':''):'Tudo o que entra está sendo absorvido. '+(M==='gf'&&x>=80?'Com as duas vias é possível chegar perto de <b>90 g/h</b>.':'')}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});M=b.dataset.k;draw()})});r.addEventListener('input',draw);draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>

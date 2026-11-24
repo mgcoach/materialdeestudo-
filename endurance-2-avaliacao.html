@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Endurance 2: Avaliação, Métodos e Periodização | MG COACH">
-    <meta property="og:description" content="Parte 2 da série de Endurance (CBMF): avaliação do VO2máx (Astrand, Cooper, teste de 3 km), as zonas de treino Z1–Z5, os métodos (HIIT, SIT, RST, Fartlek, contínuos), carga e densidade, e a periodização passo a passo até a prova.">
+    <meta property="og:description" content="VO₂máx e testes, calculadora de zonas Z1–Z5 a partir do Cooper ou dos 3 km, métodos intervalados e contínuos, simulador dos sistemas energéticos e periodização.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/endurance-2-avaliacao.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -39,12 +74,13 @@
   </div>
   <nav class="toc" id="tocNav">
     <a href="#vo2">VO₂máx e testes</a>
-    <a href="#fc">Por que não usar FC</a>
+    <a href="#fc">Por que não só a FC</a>
     <a href="#zonas">As zonas Z1–Z5</a>
     <a href="#metodos">Métodos intervalados</a>
     <a href="#continuos">Métodos contínuos</a>
     <a href="#carga">Carga e densidade</a>
     <a href="#periodizacao">Periodização</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -58,7 +94,7 @@
     <a href="endurance-4-corrida-nutricao.html">4 &middot; Corrida e Nutrição</a>
   </div>
   <h1>Avaliar, prescrever e <span class="em">periodizar</span></h1>
-  <p class="lede">Como medir o <b>VO₂máx</b> (Astrand, Cooper, teste de 3 km), definir as <b>zonas de treino</b> pela velocidade da prova, escolher entre <b>HIIT, SIT, RST, Fartlek e contínuos</b>, e montar uma <b>periodização</b> completa — do diagnóstico ao polimento pré-prova.</p>
+  <p class="lede">Como medir o <b>VO₂máx</b> (Astrand, Cooper, teste de 3 km), definir as <b>zonas de treino</b> pela velocidade da prova, escolher entre <b>HIIT, SIT, RST, Fartlek e contínuos</b>, e montar uma <b>periodização</b> completa — do diagnóstico ao polimento pré-prova. Agora com <b>calculadora de zonas</b> e simulador dos sistemas energéticos.</p>
 </div>
 
 <main>
@@ -129,6 +165,15 @@
     <span class="tag">Exemplo prático (prova = 10 km/h)</span>
     <p>Z1 = 8 km/h &middot; Z2 = 9 km/h &middot; Z3 = 10 km/h &middot; Z4 = 11–11,5 km/h &middot; Z5 = 12–12,5 km/h. Depois de medir a velocidade no teste, é só aplicar os ajustes percentuais para montar todas as zonas.</p>
   </div>
+
+  <div class="sim" id="simZc">
+    <div class="sim-head"><b>Calculadora de zonas</b><span class="muted">a partir do teste</span></div>
+    <div class="seg" role="group" aria-label="Teste"><button type="button" class="on" data-k="c">Cooper (12 min)</button><button type="button" data-k="t">Teste de 3 km</button></div>
+    <div class="ctl" id="zcC"><label>Distância em 12 min <output id="oZc">2400 m</output><input type="range" id="rZc" min="1000" max="3800" step="50" value="2400"></label></div>
+    <div class="ctl" id="zcT"><label>Tempo nos 3 km <output id="oZt">18:00</output><input type="range" id="rZt" min="540" max="1800" step="10" value="1080"></label></div>
+    <div class="readout"><div><span>Velocidade da prova (Z3)</span><b id="zcV">–</b></div><div><span>VO₂máx estimado</span><b id="zcO">–</b></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Zona</th><th>Velocidade e pace</th></tr></thead><tbody id="zcBody"></tbody></table></div>
+  </div>
 </section>
 
 <!-- 4 -->
@@ -180,20 +225,29 @@
 
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Duração do esforço</th><th>Sistema</th><th>% anaeróbio / aeróbio</th></tr></thead>
+      <thead><tr><th>Esforço máximo de</th><th>Sistema que predomina</th><th>% anaeróbio / aeróbio</th></tr></thead>
       <tbody>
-        <tr><td>Até 15 s</td><td>ATP-CP (fosfagênio)</td><td>95% / 5%</td></tr>
-        <tr><td>15–60 s</td><td>ATP-CP + glicólise</td><td>80–90% / 10–20%</td></tr>
-        <tr><td>1–6 min</td><td>Glicolítico + aeróbio</td><td>70% / 30%</td></tr>
-        <tr><td>6–30 min</td><td>Aeróbio</td><td>10% / 90%</td></tr>
-        <tr><td>+30 min</td><td>Aeróbio</td><td>~5% / ~95%</td></tr>
+        <tr><td>10 s</td><td>ATP-CP</td><td>~94% / 6%</td></tr>
+        <tr><td>30 s</td><td>ATP-CP + glicólise</td><td>~73% / 27%</td></tr>
+        <tr><td>60 s</td><td>Glicólise + aeróbio</td><td>~55% / 45%</td></tr>
+        <tr><td>~75 s</td><td>Ponto de equilíbrio</td><td>~50% / 50%</td></tr>
+        <tr><td>2 min</td><td>Aeróbio já predomina</td><td>~37% / 63%</td></tr>
+        <tr><td>4 min</td><td>Aeróbio</td><td>~21% / 79%</td></tr>
+        <tr><td>10 min ou mais</td><td>Aeróbio</td><td>≤ 10% / ≥ 90%</td></tr>
+        <tr><td>30 min ou mais</td><td>Aeróbio</td><td>~2–5% / ~95–98%</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="callout warn">
+  
+  <div class="sim" id="simEn">
+    <div class="sim-head"><b>Simulador · sistemas energéticos</b><span class="muted">esforço máximo</span></div>
+    <svg viewBox="0 0 560 150" class="sim-svg" role="img" aria-label="Contribuição anaeróbia e aeróbia por duração"><g id="enScene"></g></svg>
+    <div class="ctl"><label>Duração do esforço <output id="oEn">30 s</output><input type="range" id="rEn" min="0" max="100" value="30"></label></div>
+  </div>
+<div class="callout warn">
     <span class="tag">Correção das anotações</span>
-    <p>Acima de 30 min, o correto é <strong>~95% aeróbio e ~5% anaeróbio</strong> (e não "5% e 5%", como tinha sido anotado). Faz sentido: quanto mais longo o esforço, mais ele depende do sistema oxidativo.</p>
+    <p>Acima de 30 min, o correto é <strong>~95% aeróbio e ~5% anaeróbio</strong> (e não "5% e 5%", como tinha sido anotado). Os valores da tabela vêm de uma revisão clássica (Gastin, 2001) sobre esforços máximos. Repare que o aeróbio passa a predominar muito antes do que se costuma ensinar: por volta de 1 minuto e pouco.</p>
   </div>
 
   <div class="def">
@@ -247,8 +301,15 @@
 </section>
 
 <!-- resumo -->
+<section id="quiz">
+  <span class="sec-num">08 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <span class="sec-num">09 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O essencial da Parte 2.</p>
 
@@ -260,7 +321,7 @@
     <li><b>Intervalados:</b> HIIT curto (VO₂), HIIT longo (resistência), SIT (potência), RST (sprints), Fartlek (sem pausa).</li>
     <li><b>Contínuos:</b> extensivo (base), intensivo (limiar), crescente; AEJ tem mesma perda de gordura que alimentado.</li>
     <li><b>Carga</b> = volume × intensidade; <b>densidade</b> = organização da sessão.</li>
-    <li><b>Correção:</b> acima de 30 min é ~95% aeróbio / ~5% anaeróbio.</li>
+    <li><b>Sistemas:</b> o aeróbio já predomina a partir de ~75 s de esforço máximo; acima de 30 min é ~95% aeróbio.</li>
     <li><b>Recuperação:</b> ATP-CP em minutos, glicogênio muscular em 12–48 h.</li>
     <li><b>Periodização</b> (supercompensação): base → específico → taper; polarizada (70–80% em Z2); flexível e ajustável.</li>
   </ol>
@@ -280,5 +341,57 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Endurance), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Pela fórmula do Cooper, quem corre 2.400 m em 12 min tem VO₂máx de cerca de:',a:['32 ml/kg/min','53 ml/kg/min','64 ml/kg/min','24 ml/kg/min'],c:1,e:'(0,0268 × 2400) − 11,3 ≈ 53.'},
+{q:'Por que prescrever pela velocidade ou pace em vez de só pela FC?',a:['A FC é sempre errada','A FC varia com sono, estresse, cafeína, calor e hidratação','A velocidade não muda nunca','A FC não existe no treino'],c:1,e:'A FC é útil como complemento.'},
+{q:'Se a velocidade da prova é 12 km/h, a Z2 fica em cerca de:',a:['9,6 km/h','10,8 km/h','12 km/h','13,2 km/h'],c:1,e:'Z2 = −10%: 12 × 0,9 = 10,8 km/h.'},
+{q:'A diferença entre HIIT e Fartlek é que no Fartlek:',a:['Não há variação de ritmo','Não há pausa total nem caminhada','A intensidade é sempre máxima','Só se usa bicicleta'],c:1,e:'O ritmo oscila, mas o movimento não para.'},
+{q:'Num esforço máximo de 2 minutos, qual sistema predomina?',a:['ATP-CP','Glicólise anaeróbia','Aeróbio','Nenhum'],c:2,e:'O aeróbio passa a predominar por volta de 75 s.'},
+{q:'Treinar aeróbio em jejum, com o mesmo gasto calórico total, gera:',a:['Muito mais perda de gordura','Perda de gordura parecida com treinar alimentado','Ganho de gordura','Perda de massa garantida'],c:1,e:'A diferença é conforto e preferência.'},
+{q:'Na fase de polimento (taper) antes da prova:',a:['Aumenta-se o volume','Reduz-se o volume e mantém-se a intensidade','Para-se de treinar','Só se faz Z5'],c:1,e:'Reduz a fadiga acumulada sem perder as adaptações.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- sistemas energéticos ---------- */
+(function(){
+ var sc=document.getElementById('enScene');if(!sc)return;var r=document.getElementById('rEn');
+ var G=[[5,0.97],[10,0.94],[30,0.73],[60,0.55],[75,0.5],[120,0.37],[240,0.21],[600,0.1],[1800,0.04],[3600,0.02]];
+ function an(t){if(t<=G[0][0])return G[0][1];for(var k=1;k<G.length;k++){if(t<=G[k][0]){var a=G[k-1],b=G[k],u=(Math.log(t)-Math.log(a[0]))/(Math.log(b[0])-Math.log(a[0]));return a[1]+(b[1]-a[1])*u}}return 0.02}
+ function draw(){var v=+r.value/100,t=Math.exp(Math.log(5)+v*(Math.log(3600)-Math.log(5))),a=an(t);document.getElementById('oEn').textContent=t<60?Math.round(t)+' s':t<3600?Math.round(t/60)+' min':'60 min';clear(sc);
+  var X0=30,W=500;el('rect',{x:X0,y:40,width:W*a,height:46,fill:OR},sc);el('rect',{x:X0+W*a,y:40,width:W*(1-a),height:46,fill:BL},sc);
+  if(a>0.12){var t1=txt(sc,X0+W*a/2,68,'anaeróbio '+Math.round(a*100)+'%','sm');t1.setAttribute('fill','#fff');t1.setAttribute('font-weight','700')}
+  if(a<0.88){var t2=txt(sc,X0+W*a+W*(1-a)/2,68,'aeróbio '+Math.round((1-a)*100)+'%','sm');t2.setAttribute('fill','#fff');t2.setAttribute('font-weight','700')}
+  txt(sc,280,118,t<15?'ATP-CP domina':t<60?'ATP-CP + glicólise':t<90?'perto do ponto de equilíbrio':t<600?'o aeróbio já predomina':'quase tudo aeróbio','sm')}
+ r.addEventListener('input',draw);draw();
+})();
+/* ---------- calculadora de zonas ---------- */
+(function(){
+ var root=document.getElementById('simZc');if(!root)return;var rc=document.getElementById('rZc'),rt=document.getElementById('rZt'),M='c';
+ function pace(kmh){var s=3600/kmh,m=Math.floor(s/60),ss=Math.round(s-m*60);if(ss===60){m++;ss=0}return m+':'+(ss<10?'0':'')+ss+' /km'}
+ var Z=[['Z1 · regenerativa',0.8,0.8],['Z2 · base aeróbia',0.9,0.9],['Z3 · prova / limiar',1,1],['Z4 · VO₂máx',1.1,1.15],['Z5 · máxima',1.2,1.25]];
+ function draw(){var v,vo='–';if(M==='c'){var d=+rc.value;document.getElementById('oZc').textContent=d+' m';v=d/1000/0.2;vo=fmt(0.0268*d-11.3,1)+' ml/kg/min'}else{var s=+rt.value,m=Math.floor(s/60);document.getElementById('oZt').textContent=m+':'+((s%60)<10?'0':'')+(s%60);v=3/(s/3600)}
+  document.getElementById('zcV').textContent=fmt(v,1)+' km/h';document.getElementById('zcO').textContent=vo;
+  document.getElementById('zcBody').innerHTML=Z.map(function(z){var a=v*z[1],b=v*z[2];return '<tr><td><b>'+z[0]+'</b></td><td>'+fmt(a,1)+(b!==a?'–'+fmt(b,1):'')+' km/h<br><span class="muted">'+(b!==a?pace(b)+' a '+pace(a):pace(a))+'</span></td></tr>'}).join('')}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});M=b.dataset.k;document.getElementById('zcC').style.display=M==='c'?'':'none';document.getElementById('zcT').style.display=M==='t'?'':'none';draw()})});
+ [rc,rt].forEach(function(x){x.addEventListener('input',draw)});document.getElementById('zcT').style.display='none';draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
