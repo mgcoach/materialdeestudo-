@@ -109,18 +109,34 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 .callout{border-radius:12px;padding:.7rem .9rem;background:var(--orbg);margin:.8rem 0;font-size:.95rem}
 .true-list{columns:2;column-gap:1.5rem;font-size:.93rem}@media(max-width:560px){.true-list{columns:1}}
 .foot{margin-top:3rem;color:var(--mut);font-size:.85rem;border-top:1px solid var(--line);padding-top:1rem}
+.teo{margin:1rem 0 .4rem;border-radius:14px;padding:.8rem .95rem;background:#f5f3ff;border:1px solid #e4defc}
+.teo-h,.prat-h,.res-h{font:700 1rem Poppins,sans-serif;margin-bottom:.35rem}
+.teo-h{color:#5b21b6}.teo ul{margin:0;padding-left:1.1rem}.teo li{margin:.35rem 0;font-size:.95rem}.teo b{color:#4c1d95}
+.prat-h{margin:1.1rem 0 .1rem;color:var(--or2)}
+.res{display:none;margin-top:.8rem;border-radius:14px;padding:.75rem .9rem;background:var(--orbg)}
+.res-h{color:var(--or2)}.res ul{margin:.3rem 0 0;padding-left:1.1rem}.res li{margin:.25rem 0}.res-c{margin:.2rem 0;font-size:.95rem}
+body.mode-res .full{display:none}body.mode-res .res{display:block}body.mode-res .st{padding:1rem;margin:1rem 0}
+.mode{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.mode button{border:0;background:#fff;padding:.35rem .7rem;font-size:.82rem;cursor:pointer}
+.mode button.on{background:var(--ink);color:#fff}
+.modebig{margin:1rem 0 0;display:flex;gap:.5rem;flex-wrap:wrap}
+.modebig button{flex:1;min-width:140px;text-align:left;border:2px solid var(--line);background:#fff;border-radius:14px;padding:.7rem .9rem;cursor:pointer}
+.modebig button b{display:block;font:700 1rem Poppins,sans-serif}.modebig button span{font-size:.85rem;color:var(--mut)}
+.modebig button.on{border-color:var(--or);background:var(--orbg)}
 @media print{.bar,.wbox,.vids,.tools{display:none}.st{break-inside:avoid;box-shadow:none}}
 </style>
 </head>
 <body>
-<div class="bar"><div class="bar-in"><a class="mgb" href="index.html" aria-label="Voltar à biblioteca"><svg viewBox="0 0 24 24"><path fill="#ff6b1a" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg></a><span class="t">Primeiros Socorros · Prova prática</span><a class="btn" href="#simulado">Simulado</a></div></div>
+<div class="bar"><div class="bar-in"><a class="mgb" href="index.html" aria-label="Voltar à biblioteca"><svg viewBox="0 0 24 24"><path fill="#ff6b1a" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg></a><span class="t">Primeiros Socorros · Prova prática</span><div class="mode" role="group" aria-label="Versão"><button type="button" data-m="full">Completo</button><button type="button" data-m="res">Resumo</button></div></div></div>
 <main>
 <header class="hero">
 <div class="kicker">Revisão para a prova prática · NUC002</div>
 <h1>Primeiros Socorros <span>na prática</span></h1>
-<p class="lede">Cada estação traz a ordem do atendimento, o que <b>falar em voz alta</b> na encenação, o que <b>não fazer</b> e o que o avaliador confere. A teoria completa está na <a href="primeiros-socorros-revisao.html">Revisão completa</a>.</p>
+<p class="lede">Cada estação junta <b>a teoria</b> (o porquê de cada conduta) e <b>a prática</b>: a ordem do atendimento, o que <b>falar em voz alta</b> na encenação, o que <b>não fazer</b> e o que o avaliador confere.</p>
+<div class="modebig" role="group" aria-label="Versão"><button type="button" data-m="full"><b>📘 Completo</b><span>Teoria + prática, animações e vídeos</span></button><button type="button" data-m="res"><b>⚡ Resumo</b><span>Só o essencial de cada assunto, para revisar rápido</span></button></div>
 <div class="plan"><h3>Plano para hoje à noite</h3><ol>
-<li>Decore a <a href="#abertura">abertura de toda cena</a>: fale em voz alta 3 vezes, de pé, como se estivesse na prova.</li>
+<li>Primeiro, passe tudo no <b>⚡ Resumo</b> (uns 15 min) para ter o mapa da prova.</li>
+<li>Depois, no <b>📘 Completo</b>, leia o "Entenda" e o passo a passo de cada estação. Decore a <a href="#abertura">abertura de toda cena</a>: fale em voz alta 3 vezes, de pé, como se estivesse na prova.</li>
 <li>Faça 2 minutos de RCP numa almofada com o <a href="#rcp">metrônomo</a> e teste seu ritmo no botão.</li>
 <li>Em cada estação, use <b>🧠 Treinar de cabeça</b>: os passos ficam borrados e você diz o próximo antes de tocar.</li>
 <li>Feche com o <a href="#simulado">simulado de cenas</a> e o <a href="#fluxo">fluxograma</a>.</li>
@@ -136,7 +152,11 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 
 <section class="st" id="abertura">
 <div class="st-top"><div class="st-num">1</div><div><span class="tag">Base</span><h2>Abertura de toda cena</h2><p class="sub">Os primeiros 60 segundos valem ponto em qualquer estação.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Primeiros socorros = atendimento temporário e imediato para manter a vítima viva até chegar o atendimento especializado. Não substitui a equipe de saúde.</p><ul><li>Ordem: <b>cena segura → EPI → apresentar-se → responsividade → ajuda direcionada (192 + DEA)</b>.</li><li>Prioridade: eu, equipe, vítima.</li><li>Omissão de socorro é crime; ligar para o 192/193 já cumpre a lei.</li><li>Ligação: quem fala, onde, o que houve, quantas vítimas, riscos, como estão.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> O avaliador descreve a cena ou um colega já está caído. Antes de tocar em qualquer pessoa, você faz SEMPRE esta abertura.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Primeiros socorros</b> = atendimento temporário e imediato para manter a vítima viva até chegar o atendimento especializado. Não substitui a equipe de saúde.</li><li><b>Prioridade do socorrista:</b> 1º eu, 2º equipe, 3º vítima. Socorrista ferido vira mais uma vítima.</li><li><b>Omissão de socorro (Art. 135 do Código Penal):</b> é crime deixar de ajudar quando é possível sem risco pessoal, ou não pedir socorro à autoridade pública. Pena de 1 a 6 meses ou multa; aumenta pela metade se houver lesão grave e triplica se houver morte. <b>Quem não pode ajudar cumpre a lei ligando para o 192/193.</b></li><li><b>Telefones:</b> SAMU 192 · Bombeiros 193 · Polícia Militar 190 · Disque-Intoxicação 0800 722 6001.</li><li><b>Sinalização da via:</b> número de passos longos = velocidade da via. Chuva ou noite: dobra (60 km/h à noite = 120 passos).</li><li><b>Consentimento:</b> consciente → peça; inconsciente → implícito; criança → responsável, se presente.</li><li><b>Biossegurança:</b> todo fluido corporal é potencialmente infeccioso (sangue, vômito, saliva, líquido amniótico).</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Pare e avalie a cena de longe.</span><span class="say">"Cena segura!" (ou: "Cena insegura, não vou entrar, acionando o 193.")</span><span class="det">Procure trânsito, fogo, fio elétrico, gás, água, agressor, vidro. Socorrista ferido vira mais uma vítima (1º eu, 2º equipe, 3º vítima).</span></li>
@@ -152,10 +172,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Correr direto para a vítima sem olhar a cena</li><li>Esquecer as luvas (é ponto que o avaliador anota)</li><li>Mexer o pescoço de quem caiu</li><li>Dizer "alguém chama a ambulância" sem apontar para ninguém</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="abertura-0"><span>Falou "cena segura" e EPI</span></label><label><input type="checkbox" data-k="abertura-1"><span>Se apresentou e pediu consentimento</span></label><label><input type="checkbox" data-k="abertura-2"><span>Checou responsividade</span></label><label><input type="checkbox" data-k="abertura-3"><span>Acionou 192/193 de forma direcionada</span></label><label><input type="checkbox" data-k="abertura-4"><span>Pediu o DEA quando a vítima não respondeu</span></label></div>
 </div>
-</section>
+</div></section>
 <section class="st" id="vitais">
 <div class="st-top"><div class="st-num">2</div><div><span class="tag">Base</span><h2>Sinais vitais na mão</h2><p class="sub">Pulso, respiração, pressão, enchimento capilar e pupilas: como medir na prática.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Sinais vitais mostram como estão as funções que mantêm a vida: pulso/FC, frequência respiratória, pressão arterial e temperatura (dor, glicemia e saturação ajudam).</p><ul><li>Pulso com 2 dedos (nunca o polegar); FR sem a vítima perceber.</li><li>Valores da aula: FC 60–80 · FR 12–22 · PA &lt; 130/85 · enchimento &lt; 2 s.</li><li>PA: 1º som = sistólica, sumiu = diastólica.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Avalie os sinais vitais desta vítima consciente." Pode cair junto com pressão alta, desmaio ou hipoglicemia.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Sinais vitais</b> mostram como estão as funções que mantêm a vida: pulso/FC, frequência respiratória, pressão arterial e temperatura (dor, glicemia e saturação ajudam).</li><li><b>Valores da aula:</b> FC adulto 60–80 bpm (livros 60–100); acima de 100 = taquicardia, abaixo de 60 = bradicardia. FR adulto 12–22 ipm, criança 20–25, recém-nascido 30–60. PA normal &lt; 130/85, hipertensão a partir de 140/90. Febre ≥ 37,5 °C, hipotermia &lt; 35 °C. Glicemia de jejum 70–99; hipoglicemia &lt; 70 mg/dL. Dor (EVA): leve 0–2, moderada 3–7, intensa 8–10.</li><li><b>Sufixos:</b> -sfigmia = pulso; -cardia = coração; -pneia = respiração (taquipneia, bradipneia, apneia, dispneia).</li><li><b>Pulso</b> é a onda de pressão que o ventrículo esquerdo gera a cada batida, sentida onde a artéria passa sobre um osso (radial, carotídeo, braquial, femoral).</li><li><b>Pressão arterial</b> = força do sangue contra a parede das artérias. Sistólica: durante a contração do coração (1º som de Korotkoff). Diastólica: no relaxamento (quando o som some).</li><li><b>Enchimento capilar e pele</b> mostram a perfusão da periferia: pele pálida, fria e úmida com enchimento &gt; 2 s sugere choque.</li><li><b>Pupilas:</b> miose (contraída), midríase (dilatada), anisocoria (diferentes) → lesão cerebral grave.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Pulso radial: 2 dedos (indicador + médio) no punho, do lado do polegar.</span><span class="say">"Pulso radial presente, cheio e regular, 76 por minuto."</span><span class="det">Nunca use o polegar (ele tem pulso próprio). Conte 30 s × 2 (ou 60 s se irregular). Sem pulso radial na vítima grave → carotídeo (lateral da traqueia). Bebê → braquial (face interna do braço).</span></li>
@@ -170,10 +194,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="vitais-0"><span>Técnica de pulso correta (local e dedos)</span></label><label><input type="checkbox" data-k="vitais-1"><span>FR contada sem a vítima perceber</span></label><label><input type="checkbox" data-k="vitais-2"><span>Falou os valores e a interpretação</span></label><label><input type="checkbox" data-k="vitais-3"><span>PA: palpou antes, inflou 20–30 acima, desinflou devagar</span></label></div>
 </div>
 <div class="wbox"><div class="wt">Simulador de pressão arterial</div><div data-w="pa"></div></div>
-</section>
+</div></section>
 <section class="st" id="xabcde">
 <div class="st-top"><div class="st-num">3</div><div><span class="tag">Trauma</span><h2>Avaliação primária XABCDE</h2><p class="sub">A espinha de toda estação de trauma. Fale cada letra em voz alta.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Exame primário: achar e tratar primeiro o que mata mais rápido, em segundos. Só depois vem o exame secundário (da cabeça aos pés).</p><ul><li>XABCDE é do trauma: X sangramento, A via aérea + cervical, B respiração, C circulação, D neuro, E exposição.</li><li>No trauma: anteriorização da mandíbula, nunca estender o pescoço.</li><li>Clínico que não respira: C-A-B.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> Atropelamento, queda, briga, acidente de moto. O avaliador quer ver você procurar o que mata primeiro, na ordem.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Exame primário:</b> achar e tratar primeiro o que mata mais rápido, em segundos. Só depois vem o exame secundário (da cabeça aos pés).</li><li><b>X</b> hemorragia exsanguinante · <b>A</b> via aérea + coluna cervical · <b>B</b> respiração (ver, ouvir, sentir) · <b>C</b> circulação e choque · <b>D</b> neurológico (AVDI, Glasgow, pupilas) · <b>E</b> exposição e prevenção de hipotermia.</li><li><b>3 picos de morte no trauma:</b> imediata (50%, só a prevenção evita), precoce (30%, é onde o socorrista faz diferença) e tardia (20%).</li><li><b>3 colisões:</b> carro × objeto → corpo × carro → órgãos × corpo (lesão interna mesmo sem ferida por fora).</li><li><b>B:</b> estase de jugular + desvio de traqueia = pneumotórax hipertensivo. Ferida aberta no tórax: curativo de 3 pontas.</li><li><b>Vítima clínica</b> (sem trauma) inconsciente e sem respirar não segue XABCDE: é <b>C-A-B</b> (comprime antes de ventilar).</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">X · Exsanguinação: procure sangramento grande e jorrando.</span><span class="say">"X: sem hemorragia exsanguinante." (ou: "Hemorragia grave na coxa, compressão direta!")</span><span class="det">Corra os olhos e as mãos pelo corpo. Sangramento grave se resolve ANTES de qualquer coisa.</span></li>
@@ -189,10 +217,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="xabcde-0"><span>Ordem X-A-B-C-D-E falada</span></label><label><input type="checkbox" data-k="xabcde-1"><span>Coluna cervical protegida o tempo todo</span></label><label><input type="checkbox" data-k="xabcde-2"><span>Interpretou o que achou (ex.: "sinais de choque")</span></label><label><input type="checkbox" data-k="xabcde-3"><span>Preveniu hipotermia</span></label></div>
 </div>
 <div class="wbox"><div class="wt">Escala de Coma de Glasgow</div><div data-w="glasgow"></div></div>
-</section>
+</div></section>
 <section class="st" id="rcp">
 <div class="st-top"><div class="st-num">4</div><div><span class="tag">Parada</span><h2>Parada cardíaca no adulto: RCP + DEA</h2><p class="sub">Não responde e não respira normalmente: comprima já.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Parada cardiorrespiratória (PCR): o coração para de bombear sangue de forma eficaz. Ritmos: fibrilação ventricular e taquicardia ventricular sem pulso (chocáveis), assistolia e atividade elétrica sem pulso (não chocáveis).</p><ul><li>Não responde + não respira (ou gasping) = RCP.</li><li><b>100–120/min, 5–6 cm, 30:2</b>, retorno total, pausas &lt; 10 s, troca a cada 2 min.</li><li>DEA assim que chegar: "afastem-se" na análise e no choque, depois volta direto às compressões.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> Manequim no chão. "Este homem caiu na academia." É a estação mais cobrada: ritmo, profundidade, mãos, contagem e DEA.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Parada cardiorrespiratória (PCR):</b> o coração para de bombear sangue de forma eficaz. Ritmos: fibrilação ventricular e taquicardia ventricular sem pulso (chocáveis), assistolia e atividade elétrica sem pulso (não chocáveis).</li><li>Sem fluxo, o cérebro começa a sofrer lesão em poucos minutos. <b>Cada minuto sem RCP e sem choque reduz muito a chance de sobreviver.</b></li><li><b>Corrente de sobrevivência:</b> reconhecer e acionar → RCP precoce → desfibrilação rápida → suporte avançado → cuidados pós-PCR → recuperação.</li><li><b>Por que a técnica importa:</b> a compressão espreme o coração entre o esterno e a coluna e gera fluxo. O retorno total do tórax deixa o coração encher de novo. Cada pausa derruba a pressão, que demora para subir de novo.</li><li><b>DEA:</b> analisa o ritmo sozinho e só indica choque nos ritmos chocáveis. O choque "reinicia" a atividade elétrica desorganizada.</li><li><b>Gasping</b> (respiração agônica) é um reflexo do tronco cerebral na parada: não é respiração.</li><li><b>Ventilação:</b> 1 s cada, só o suficiente para o peito subir. Ar demais vai para o estômago e provoca vômito.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Abertura: cena segura, EPI, toque nos ombros e chame alto.</span><span class="say">"Senhor, está me ouvindo?"</span></li>
@@ -213,10 +245,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 </div>
 <div class="wbox"><div class="wt">Metrônomo da RCP: comprima junto</div><div data-w="rcp"></div></div>
 <div class="vids"><div><div class="yt" data-id="jtEDnhcR23w" role="button" aria-label="Assistir: RCP de alta qualidade no adulto (aula prática)"><img loading="lazy" src="https://i.ytimg.com/vi/jtEDnhcR23w/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">RCP de alta qualidade no adulto (aula prática) · <a href="https://www.youtube.com/watch?v=jtEDnhcR23w" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="gGE18Z2IaBk" role="button" aria-label="Assistir: RCP em adultos: o que fazer"><img loading="lazy" src="https://i.ytimg.com/vi/gGE18Z2IaBk/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">RCP em adultos: o que fazer · <a href="https://www.youtube.com/watch?v=gGE18Z2IaBk" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="oElJmrUlEB8" role="button" aria-label="Assistir: SAMU 192: como usar o desfibrilador (DEA)"><img loading="lazy" src="https://i.ytimg.com/vi/oElJmrUlEB8/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">SAMU 192: como usar o desfibrilador (DEA) · <a href="https://www.youtube.com/watch?v=oElJmrUlEB8" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="rcpkid">
 <div class="st-top"><div class="st-num">5</div><div><span class="tag">Parada</span><h2>RCP em criança e bebê</h2><p class="sub">Mesma lógica, mão e profundidade diferentes. Em criança, a parada quase sempre começa pela respiração.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> No adulto a parada costuma ser cardíaca (arritmia). Na criança e no bebê, quase sempre começa pela respiração (afogamento, engasgo, asma, infecção): falta oxigênio e o coração para depois. Por isso a ventilação pesa mais.</p><ul><li>Bebê: 2 polegares, ~4 cm, pulso braquial. Criança: 1–2 mãos, ~5 cm.</li><li>30:2 (15:2 com 2 profissionais). Sozinho e sem celular: 2 min de RCP antes de ligar.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> Manequim pequeno. "Criança de 4 anos tirada da piscina" ou "bebê de 6 meses que não reage".</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li>No adulto a parada costuma ser cardíaca (arritmia). <b>Na criança e no bebê, quase sempre começa pela respiração</b> (afogamento, engasgo, asma, infecção): falta oxigênio e o coração para depois. Por isso a ventilação pesa mais.</li><li><b>Faixas:</b> bebê = menos de 1 ano; criança = 1 ano até a puberdade.</li><li><b>Profundidade</b> = cerca de 1/3 do diâmetro do tórax (bebê ~4 cm, criança ~5 cm).</li><li><b>Bebê:</b> a cabeça (occipital) é grande e flexiona o pescoço. Um coxim sob os ombros deixa a via aérea em posição neutra. Pulso braquial.</li><li><b>AHA 2025:</b> a técnica de dois dedos no bebê saiu porque não gera profundidade suficiente. Use dois polegares ou a base de uma mão.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Faixas: bebê = menos de 1 ano · criança = 1 ano até a puberdade.</span><span class="det">Depois da puberdade (seios, pelos axilares) = protocolo do adulto.</span></li>
@@ -232,10 +268,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="rcpkid-0"><span>Identificou a faixa etária</span></label><label><input type="checkbox" data-k="rcpkid-1"><span>Mão/dedos e profundidade adequados</span></label><label><input type="checkbox" data-k="rcpkid-2"><span>Relação e ritmo</span></label><label><input type="checkbox" data-k="rcpkid-3"><span>Ventilação boca-boca-nariz no bebê</span></label></div>
 </div>
 <div class="vids"><div><div class="yt" data-id="_lvi5LO7vrg" role="button" aria-label="Assistir: Parada cardíaca em adulto, criança e lactente (aulão prático)"><img loading="lazy" src="https://i.ytimg.com/vi/_lvi5LO7vrg/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Parada cardíaca em adulto, criança e lactente (aulão prático) · <a href="https://www.youtube.com/watch?v=_lvi5LO7vrg" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="zSncdp4fhKg" role="button" aria-label="Assistir: RCP em bebês (Hospital Moinhos de Vento)"><img loading="lazy" src="https://i.ytimg.com/vi/zSncdp4fhKg/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">RCP em bebês (Hospital Moinhos de Vento) · <a href="https://www.youtube.com/watch?v=zSncdp4fhKg" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="engasgo">
 <div class="st-top"><div class="st-num">6</div><div><span class="tag">Parada</span><h2>Engasgo (OVACE)</h2><p class="sub">Pergunte "você está engasgado?". Se não tosse nem fala: 5 tapas + 5 compressões, alternando.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> OVACE = obstrução das vias aéreas por corpo estranho.</p><ul><li>Tosse forte = deixa tossir. Não fala/não tosse = <b>5 costas + 5 abdominais</b>, alternando.</li><li>Gestante/obeso: compressões no peito. Bebê: 5 costas + 5 peito.</li><li>Desmaiou: chão, 192, RCP. Nunca varredura às cegas.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> Um colega encena com as mãos no pescoço. Pode evoluir para inconsciência no meio da estação.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>OVACE</b> = obstrução das vias aéreas por corpo estranho.</li><li><b>Leve:</b> tosse forte, fala, respira → só incentivar a tossir. <b>Grave:</b> não fala, não tosse, fica roxo, leva a mão ao pescoço (sinal universal).</li><li><b>Como funciona:</b> golpes e compressões aumentam de repente a pressão dentro do tórax e empurram o ar para fora, como uma "tosse artificial" que expulsa o objeto.</li><li><b>AHA 2025:</b> para adulto e criança acima de 1 ano, alterne 5 golpes nas costas + 5 compressões abdominais. No bebê, 5 golpes + 5 compressões no peito (o fígado e o baço do bebê são frágeis).</li><li><b>Ficou inconsciente:</b> RCP. As compressões também ajudam a deslocar o objeto. Olhe a boca antes de ventilar e retire só o que estiver visível.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Pergunte e observe.</span><span class="say">"Você está engasgado? Consegue falar?"</span><span class="det">Tosse forte e fala = obstrução leve: incentive a tossir e fique junto. NÃO bata nas costas.</span></li>
@@ -255,10 +295,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 </div>
 <div class="wbox"><div class="wt">Animação: sequência do desengasgo</div><div data-w="engasgo"></div></div>
 <div class="vids"><div><div class="yt" data-id="vO6-yGuYVcM" role="button" aria-label="Assistir: Novo protocolo de desengasgo: adultos e crianças (AHA 2025)"><img loading="lazy" src="https://i.ytimg.com/vi/vO6-yGuYVcM/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Novo protocolo de desengasgo: adultos e crianças (AHA 2025) · <a href="https://www.youtube.com/watch?v=vO6-yGuYVcM" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="hKnnSF-_cos" role="button" aria-label="Assistir: Desengasgo em bebês: técnica atualizada"><img loading="lazy" src="https://i.ytimg.com/vi/hKnnSF-_cos/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Desengasgo em bebês: técnica atualizada · <a href="https://www.youtube.com/watch?v=hKnnSF-_cos" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="desmaio">
 <div class="st-top"><div class="st-num">7</div><div><span class="tag">Clínico</span><h2>Desmaio e posição lateral de segurança</h2><p class="sub">Síncope (apagou) × lipotímia (quase apagou). Respira e não acorda = posição lateral.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Perda ou rebaixamento de consciência acontece com tudo que reduz sangue, oxigênio ou glicose no cérebro. O cérebro não tem reserva de energia, por isso para rápido.</p><ul><li>Respira e sem trauma: deitar e elevar as pernas, afrouxar roupas, arejar.</li><li>Não acorda em ~1 min: 192 + posição lateral de segurança.</li><li>Nada de água no rosto, álcool para cheirar ou bebida.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> Aluno pálido diz que vai desmaiar, ou já está caído. Muitas vezes a estação termina pedindo a PLS.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Perda ou rebaixamento de consciência</b> acontece com tudo que reduz sangue, oxigênio ou glicose no cérebro. O cérebro não tem reserva de energia, por isso para rápido.</li><li><b>Síncope</b> (desmaio): perda da consciência por pouco tempo, com volta espontânea. <b>Lipotímia</b> (quase desmaio): tontura, visão escura, fraqueza, sem apagar de vez.</li><li>A causa mais comum é a <b>vasovagal</b>: calor, muito tempo em pé, dor, emoção ou ver sangue disparam um reflexo que baixa a FC e a PA.</li><li><b>Elevar as pernas</b> aumenta o retorno venoso e leva sangue de volta ao cérebro.</li><li><b>Posição lateral de segurança</b> é para quem está inconsciente e respira: a língua relaxada não cai sobre a via aérea e saliva/vômito escorrem para fora. Não se usa no trauma.</li><li><b>Sinal de alarme:</b> desmaio durante o esforço, com dor no peito ou palpitação pode ser cardíaco → 192.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Lipotímia (tontura, visão escura, suor frio): deite a pessoa antes que caia.</span><span class="say">"Deita aqui comigo, devagar."</span><span class="det">Se não der para deitar, sente com a cabeça baixa entre os joelhos.</span></li>
@@ -274,10 +318,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 </div>
 <div class="wbox"><div class="wt">Passo a passo animado da posição lateral</div><div data-w="pls"></div></div>
 <div class="vids"><div><div class="yt" data-id="hdSdW4ICXiI" role="button" aria-label="Assistir: Desmaio: posição lateral de segurança"><img loading="lazy" src="https://i.ytimg.com/vi/hdSdW4ICXiI/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Desmaio: posição lateral de segurança · <a href="https://www.youtube.com/watch?v=hdSdW4ICXiI" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="convulsao">
 <div class="st-top"><div class="st-num">8</div><div><span class="tag">Clínico</span><h2>Convulsão</h2><p class="sub">Proteja, cronometre, não segure e não coloque nada na boca.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Convulsão = descarga elétrica excessiva e desordenada no cérebro. Pode ser generalizada (tônico-clônica: rigidez e depois abalos) ou focal (só uma região). Epilepsia é a doença que causa crises repetidas.</p><ul><li>Marque o tempo, proteja a cabeça, afaste objetos.</li><li>Não segure, não ponha nada na boca.</li><li>Lateralize; 192 se &gt; 5 min ou em casos especiais. Pós-crise: posição lateral e observação.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> Colega se debatendo no chão perto de cadeiras. O avaliador observa o que você NÃO faz.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Convulsão</b> = descarga elétrica excessiva e desordenada no cérebro. Pode ser generalizada (tônico-clônica: rigidez e depois abalos) ou focal (só uma região). <b>Epilepsia</b> é a doença que causa crises repetidas.</li><li><b>Causas:</b> epilepsia, febre alta na criança, hipoglicemia, TCE, AVC, intoxicação, abstinência de álcool.</li><li><b>Pós-ictal:</b> depois da crise é normal ficar sonolento e confuso por alguns minutos.</li><li><b>Por que nada na boca:</b> a língua não "enrola" para trás. Objetos quebram dentes, ferem o socorrista e podem obstruir a via aérea.</li><li><b>Crise prolongada</b> (&gt; 5 min ou crises seguidas sem acordar) é emergência: risco de lesão cerebral.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Olhe o relógio e marque o início da crise.</span><span class="say">"Início da crise às 10h05."</span><span class="det">Mais de 5 min = emergência.</span></li>
@@ -293,10 +341,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="convulsao-0"><span>Marcou o tempo</span></label><label><input type="checkbox" data-k="convulsao-1"><span>Protegeu a cabeça e afastou objetos</span></label><label><input type="checkbox" data-k="convulsao-2"><span>Não segurou nem pôs nada na boca</span></label><label><input type="checkbox" data-k="convulsao-3"><span>Lateralizou e acionou 192 com o critério certo</span></label></div>
 </div>
 <div class="vids"><div><div class="yt" data-id="8fk2-liGO0A" role="button" aria-label="Assistir: Atendendo uma convulsão: o que fazer"><img loading="lazy" src="https://i.ytimg.com/vi/8fk2-liGO0A/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Atendendo uma convulsão: o que fazer · <a href="https://www.youtube.com/watch?v=8fk2-liGO0A" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="hipo">
 <div class="st-top"><div class="st-num">9</div><div><span class="tag">Clínico</span><h2>Hipoglicemia</h2><p class="sub">Diabético confuso, suado e tremendo: se engole, dê açúcar.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Glicose é o principal combustível do cérebro. Hipoglicemia = glicose &lt; 70 mg/dL.</p><ul><li>Consciente e engole: açúcar rápido e reavaliar em 15 min.</li><li>Inconsciente: nada pela boca, posição lateral, 192.</li><li>Na dúvida entre hipo e hiper: açúcar.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Aluno diabético treinando em jejum começa a suar frio e ficar confuso."</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Glicose</b> é o principal combustível do cérebro. <b>Hipoglicemia</b> = glicose &lt; 70 mg/dL.</li><li><b>Causas:</b> excesso de insulina ou de remédio, jejum, exercício intenso ou prolongado, álcool.</li><li><b>Sinais de alarme do corpo</b> (adrenalina): suor frio, tremor, palidez, fome, taquicardia. <b>Sinais do cérebro sem glicose:</b> confusão, irritabilidade, fala enrolada, convulsão, coma.</li><li><b>Hiperglicemia</b> se instala devagar (sede, urina muito, hálito de fruta) e é menos urgente nos primeiros socorros. Por isso, na dúvida, dê açúcar.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Pergunte (ou a quem estiver junto): é diabético? comeu? usou insulina?</span><span class="say">"Você é diabético? Comeu hoje?"</span><span class="det">Sinais: suor frio, tremor, palidez, fome, fraqueza, confusão, irritabilidade.</span></li>
@@ -309,10 +361,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Dar comida ou líquido a quem está inconsciente</li><li>Dar insulina</li><li>Deixar continuar treinando</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="hipo-0"><span>Investigou a história</span></label><label><input type="checkbox" data-k="hipo-1"><span>Checou se consegue engolir antes de dar açúcar</span></label><label><input type="checkbox" data-k="hipo-2"><span>Reavaliou em 15 min</span></label></div>
 </div>
-</section>
+</div></section>
 <section class="st" id="pressao">
 <div class="st-top"><div class="st-num">10</div><div><span class="tag">Clínico</span><h2>Pressão alta e pressão baixa</h2><p class="sub">Medir certo, acalmar, não dar remédio de ninguém e saber quando chamar o 192.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Pressão arterial = débito cardíaco × resistência dos vasos. Valores da aula: normal &lt; 130/85; hipertensão a partir de 140/90.</p><ul><li>Pare a atividade, sente e meça de novo após 3–5 min.</li><li>Sinais de alarme (dor no peito, fraqueza de um lado, visão turva) = 192.</li><li>Baixa: deitar e elevar as pernas. Nunca dar remédio de outra pessoa.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Aluno com dor de cabeça forte e a PA em 190/120" ou "aluna tonta, pálida, PA 80/50 após treino no calor".</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Pressão arterial</b> = débito cardíaco × resistência dos vasos. Valores da aula: normal &lt; 130/85; hipertensão a partir de 140/90.</li><li><b>Crise hipertensiva:</b> PA ≥ 180/120. Sem lesão de órgão = urgência (repouso e avaliação médica). Com sinais de lesão (dor no peito, falta de ar, sinais de AVC, visão turva, confusão) = emergência → 192.</li><li><b>Por que não dar remédio "embaixo da língua":</b> uma queda brusca da PA pode tirar sangue do cérebro e do coração e causar AVC ou infarto.</li><li><b>Pressão baixa:</b> calor, desidratação, levantar rápido (hipotensão postural), sangramento ou parar o exercício de repente (o sangue fica nas pernas dilatadas).</li><li>No exercício, a sistólica sobe normalmente. Por isso a medida que vale é a de repouso.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Pare a atividade, sente a pessoa com as costas apoiadas e confirme a PA após 3–5 min de repouso.</span><span class="say">"Vamos parar e medir de novo em repouso."</span><span class="det">Normal &lt; 130/85 (aula). Hipertensão ≥ 140/90. Crise hipertensiva: ≥ 180/120.</span></li>
@@ -325,10 +381,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Dar o remédio de outra pessoa ou "captopril embaixo da língua"</li><li>Mandar a pessoa voltar a treinar</li><li>Deixar sozinha</li><li>Medir logo depois do esforço e já concluir</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="pressao-0"><span>Mediu corretamente e repetiu em repouso</span></label><label><input type="checkbox" data-k="pressao-1"><span>Procurou sinais de alarme</span></label><label><input type="checkbox" data-k="pressao-2"><span>Conduta certa para alta e para baixa</span></label><label><input type="checkbox" data-k="pressao-3"><span>Acionou 192 quando indicado</span></label></div>
 </div>
-</section>
+</div></section>
 <section class="st" id="clinicas">
 <div class="st-top"><div class="st-num">11</div><div><span class="tag">Clínico</span><h2>Infarto, AVC, asma, alergia grave e hiperventilação</h2><p class="sub">Reconhecer rápido e acionar. Quase tudo é: repouso, posição certa, 192 e observar.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Infarto: uma coronária entope, falta oxigênio e parte do músculo do coração morre. A dor piora com o esforço e melhora com o repouso; pode irradiar para braço esquerdo, mandíbula ou costas. Em mulheres, idosos e diabéticos pode ser atípica (só cansaço ou enjoo).</p><ul><li>Dor no peito: repouso semissentado, 192.</li><li>AVC: teste <b>SAMU</b> (Sorria, Abrace, Música, Urgente), hora do início, nada pela boca.</li><li>Asma: sentada inclinada, bombinha dela. Alergia grave: 192.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Aluno com aperto no peito", "senhora com a boca torta", "criança com chiado", "inchaço no rosto após picada".</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Infarto:</b> uma coronária entope, falta oxigênio e parte do músculo do coração morre. A dor piora com o esforço e melhora com o repouso; pode irradiar para braço esquerdo, mandíbula ou costas. Em mulheres, idosos e diabéticos pode ser atípica (só cansaço ou enjoo).</li><li><b>AVC:</b> isquêmico (~85%, vaso entupido por coágulo) ou hemorrágico (vaso rompido, o "derrame"). Causa déficit neurológico súbito, geralmente de um lado. O tratamento do isquêmico só funciona nas primeiras horas: anote a hora do início.</li><li><b>Asma:</b> o brônquio contrai (broncoespasmo), incha e produz muco. O ar entra, mas custa a sair (chiado na expiração).</li><li><b>Anafilaxia:</b> alergia grave no corpo todo, com vasodilatação (queda de PA) e broncoespasmo. O tratamento é adrenalina.</li><li><b>Hiperventilação:</b> respirar rápido demais elimina CO₂, o que causa formigamento, tontura e mãos "em garra".</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Dor no peito: pare tudo, posição semissentada, afrouxe roupas, 192.</span><span class="say">"Dor torácica em aperto irradiando para o braço: 192, repouso semissentado."</span><span class="det">Aperto/peso, irradia para braço esquerdo, mandíbula ou costas, com suor, náusea, falta de ar. Remédio só com orientação do SAMU (pode orientar AAS mastigado). Parou → RCP + DEA.</span></li>
@@ -341,10 +401,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Deixar o aluno com dor no peito continuar treinando</li><li>Água ou remédio para quem tem sinais de AVC</li><li>Saco de papel na hiperventilação</li><li>Usar a bombinha de outra pessoa</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="clinicas-0"><span>Reconheceu o quadro pelos sinais</span></label><label><input type="checkbox" data-k="clinicas-1"><span>Posicionou corretamente</span></label><label><input type="checkbox" data-k="clinicas-2"><span>Anotou a hora (AVC)</span></label><label><input type="checkbox" data-k="clinicas-3"><span>Acionou 192</span></label></div>
 </div>
-</section>
+</div></section>
 <section class="st" id="hemorragia">
 <div class="st-top"><div class="st-num">12</div><div><span class="tag">Trauma</span><h2>Hemorragias e choque</h2><p class="sub">Pressão direta forte e contínua. Torniquete se a do membro não parar.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Tipos: arterial (vermelho vivo, em jatos, a mais grave) · venosa (escura, contínua) · capilar (pontos, leve). Externa × interna.</p><ul><li>EPI → compressão direta firme → encharcou, põe outra por cima.</li><li>Membro que não para: torniquete 5–7 cm acima, anotar a hora.</li><li>Choque: deitar, aquecer, nada pela boca, 192. Nariz: cabeça para a frente.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Corte profundo no antebraço com vidro" (sangue em jato) ou "nariz sangrando após bolada".</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Tipos:</b> arterial (vermelho vivo, em jatos, a mais grave) · venosa (escura, contínua) · capilar (pontos, leve). Externa × interna.</li><li><b>Volume de sangue:</b> ~7% do peso no adulto (70 kg ≈ 5 L); criança 8–9%.</li><li><b>Por que a pressão funciona:</b> ela fecha o vaso e dá tempo para o coágulo se formar. Tirar a compressa arranca o coágulo.</li><li><b>Choque</b> = sangue e oxigênio insuficientes para os tecidos. Hipovolêmico (perda de volume), cardiogênico (coração), séptico (infecção), anafilático (alergia) e neurogênico (lesão medular: pulso lento e pele quente).</li><li><b>Sinais de choque hipovolêmico:</b> pulso rápido e fraco, pele pálida, fria e suada, sede, confusão, enchimento capilar lento.</li><li><b>Torniquete:</b> interrompe o fluxo arterial do membro. É seguro por horas, mas a hora é anotada para o hospital.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">EPI e exponha a ferida para ver de onde sai o sangue.</span><span class="say">"Hemorragia arterial no antebraço: vermelho vivo, em jato."</span><span class="det">Arterial: vermelho vivo, em jatos (a mais grave). Venosa: escuro, contínuo. Capilar: pontos, leve.</span></li>
@@ -362,10 +426,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 </div>
 <div class="wbox"><div class="wt">Torniquete: onde aplicar</div><div data-w="hemo"></div></div>
 <div class="vids"><div><div class="yt" data-id="gqgguKRpbQQ" role="button" aria-label="Assistir: Controle de hemorragias externas (aula prática)"><img loading="lazy" src="https://i.ytimg.com/vi/gqgguKRpbQQ/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Controle de hemorragias externas (aula prática) · <a href="https://www.youtube.com/watch?v=gqgguKRpbQQ" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="feridas">
 <div class="st-top"><div class="st-num">13</div><div><span class="tag">Trauma</span><h2>Ferimentos especiais</h2><p class="sub">Objeto encravado, evisceração, amputação, tórax aberto, olho e dente.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Ferimentos: escoriação (raspão), incisão (corte), laceração (bordas irregulares), perfuração, avulsão (pele arrancada) e amputação.</p><ul><li>Objeto encravado: estabilizar, nunca tirar.</li><li>Evisceração: cobrir com pano úmido. Amputação: parte em saco, saco no gelo com água.</li><li>Tórax aberto: curativo de 3 pontas. Olho: cobrir os dois.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> O avaliador mostra um "objeto" preso na perna ou uma "amputação de dedo" de mentira.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Ferimentos:</b> escoriação (raspão), incisão (corte), laceração (bordas irregulares), perfuração, avulsão (pele arrancada) e amputação.</li><li><b>Objeto encravado</b> funciona como tampão do vaso: tirar pode causar hemorragia grave.</li><li><b>Vísceras expostas</b> ressecam e contaminam; empurrar de volta leva sujeira para dentro do abdome.</li><li><b>Amputação:</b> o frio conserva a parte para um possível reimplante; o gelo direto congela e destrói o tecido.</li><li><b>Ferida aberta no tórax:</b> o ar entra pela ferida e colapsa o pulmão. O curativo de 3 pontas funciona como válvula: impede a entrada e deixa o ar sair.</li><li><b>Olho:</b> os dois olhos se movem juntos, por isso cobre os dois.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Objeto encravado: NÃO retire. Estabilize com rolos de pano dos dois lados e enfaixe por cima dos rolos.</span><span class="say">"Objeto encravado: estabilizando no lugar."</span><span class="det">Retirar pode causar hemorragia. Exceção: objeto na bochecha que obstrui a via aérea.</span></li>
@@ -379,10 +447,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Arrancar objeto encravado</li><li>Recolocar vísceras</li><li>Parte amputada direto no gelo</li><li>Esfregar o olho</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="feridas-0"><span>Estabilizou sem remover</span></label><label><input type="checkbox" data-k="feridas-1"><span>Protegeu órgão/parte com a técnica certa</span></label><label><input type="checkbox" data-k="feridas-2"><span>Acionou 192</span></label></div>
 </div>
-</section>
+</div></section>
 <section class="st" id="fratura">
 <div class="st-top"><div class="st-num">14</div><div><span class="tag">Trauma</span><h2>Fratura, luxação e entorse</h2><p class="sub">Imobilize como encontrou, pegando as articulações acima e abaixo. PMS antes e depois.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Entorse: a articulação saiu e voltou (ligamento estirado). Luxação: saiu e ficou fora (deformidade). Fratura: quebra do osso; fechada ou exposta (ferida até o osso). Contusão: trauma superficial com hematoma. Distensão: ruptura de fibras musculares.</p><ul><li>PMS (pulso, motricidade, sensibilidade) antes e depois.</li><li>Imobilize como encontrou, pegando a articulação acima e a abaixo.</li><li>Exposta: cobrir, nunca empurrar o osso.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Queda de bicicleta com deformidade no antebraço." Você recebe talas (papelão, revista, madeira) e ataduras.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Entorse:</b> a articulação saiu e voltou (ligamento estirado). <b>Luxação:</b> saiu e ficou fora (deformidade). <b>Fratura:</b> quebra do osso; fechada ou exposta (ferida até o osso). <b>Contusão:</b> trauma superficial com hematoma. <b>Distensão:</b> ruptura de fibras musculares.</li><li><b>Sinais de fratura:</b> dor forte, deformidade, inchaço, hematoma, crepitação e perda da função.</li><li><b>Por que imobilizar:</b> diminui a dor, o sangramento e o risco de as pontas do osso lesarem vasos e nervos.</li><li><b>Fratura de fêmur</b> pode sangrar mais de 1 litro por dentro: atenção ao choque.</li><li><b>Gelo</b> contrai os vasos (vasoconstrição) e reduz inchaço e dor. Só na lesão fechada e sempre envolto em pano.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Abertura + XABCDE. Fratura de membro raramente mata: não pule o A, B e C por causa dela.</span></li>
@@ -401,10 +473,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 </div>
 <div class="wbox"><div class="wt">Onde vai a tala</div><div data-w="tala"></div></div>
 <div class="vids"><div><div class="yt" data-id="kagsXHq-7mY" role="button" aria-label="Assistir: Imobilização de membros: fratura, entorse ou luxação"><img loading="lazy" src="https://i.ytimg.com/vi/kagsXHq-7mY/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Imobilização de membros: fratura, entorse ou luxação · <a href="https://www.youtube.com/watch?v=kagsXHq-7mY" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="AgXeR6uJmMU" role="button" aria-label="Assistir: Imobilizar fratura de antebraço (com material improvisado)"><img loading="lazy" src="https://i.ytimg.com/vi/AgXeR6uJmMU/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Imobilizar fratura de antebraço (com material improvisado) · <a href="https://www.youtube.com/watch?v=AgXeR6uJmMU" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="tce">
 <div class="st-top"><div class="st-num">15</div><div><span class="tag">Trauma</span><h2>Trauma de crânio (TCE)</h2><p class="sub">Todo TCE é também suspeita de lesão de coluna. Monitore a consciência.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> TCE = lesão do crânio e/ou do encéfalo por trauma. Lesão primária: a do impacto. Secundária: edema, falta de oxigênio, PA baixa e sangramento que pioram o cérebro depois. É a secundária que o socorrista ajuda a evitar.</p><ul><li>Estabilize a cervical; XABCDE.</li><li>Reavalie consciência (Glasgow) e pupilas várias vezes.</li><li>Não tampe ouvido que sangra; nada pela boca; 192.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Ciclista bateu a cabeça, está confuso e com sangue saindo do ouvido."</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>TCE</b> = lesão do crânio e/ou do encéfalo por trauma. <b>Lesão primária:</b> a do impacto. <b>Secundária:</b> edema, falta de oxigênio, PA baixa e sangramento que pioram o cérebro depois. É a secundária que o socorrista ajuda a evitar.</li><li><b>Sinais:</b> alteração da consciência, esquecimento do ocorrido, vômito, convulsão, anisocoria, sangue ou líquido claro saindo do ouvido/nariz.</li><li><b>Fratura de base de crânio:</b> sinal do guaxinim (roxo ao redor dos olhos) e sinal de Battle (roxo atrás da orelha).</li><li><b>Glasgow:</b> ocular (máx. 4) + verbal (máx. 5) + motora (máx. 6) = 3 a 15. Grave ≤ 8 · moderado 9–12 · leve 13–15.</li><li>Todo TCE é tratado também como <b>suspeita de lesão cervical</b>.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Abertura e estabilização manual da cabeça desde o início.</span><span class="say">"TCE: tratando também como trauma de coluna."</span></li>
@@ -421,10 +497,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="tce-0"><span>Estabilizou a cervical</span></label><label><input type="checkbox" data-k="tce-1"><span>Avaliou e REAVALIOU consciência e pupilas</span></label><label><input type="checkbox" data-k="tce-2"><span>Não tamponou otorragia</span></label><label><input type="checkbox" data-k="tce-3"><span>Acionou 192</span></label></div>
 </div>
 <div class="wbox"><div class="wt">Pupilas e Glasgow</div><div data-w="glasgow2"></div></div>
-</section>
+</div></section>
 <section class="st" id="trm">
 <div class="st-top"><div class="st-num">16</div><div><span class="tag">Trauma</span><h2>Trauma de coluna (TRM): estabilização, colar e rolamento</h2><p class="sub">Não mexer é a regra. Se precisar mexer, mexe em bloco.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> TRM = lesão da medula espinhal por trauma. A lesão primária acontece no impacto. A secundária (movimento, edema, sangramento) é a que a imobilização evita.</p><ul><li>Fale pela frente; estabilização manual da cabeça até a prancha.</li><li>Colar medido; rolamento em bloco no comando do líder da cabeça.</li><li>Capacete só sai com 2 socorristas e se precisar.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Mergulhou em água rasa", "caiu do telhado", "motociclista no chão com capacete". Estação com 2 a 4 socorristas.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>TRM</b> = lesão da medula espinhal por trauma. A <b>lesão primária</b> acontece no impacto. A <b>secundária</b> (movimento, edema, sangramento) é a que a imobilização evita.</li><li><b>Nível da lesão:</b> cervical → tetraplegia (e, se for alta, compromete a respiração); torácica ou lombar → paraplegia.</li><li><b>Sinais:</b> dor na nuca ou nas costas, formigamento, fraqueza ou paralisia, priapismo, retenção urinária, respiração só com o abdome. Choque neurogênico: pulso lento com pele quente.</li><li><b>Mecanismos suspeitos:</b> queda de altura, colisão, capotamento, mergulho em água rasa, ejeção do veículo, trauma de cabeça.</li><li><b>Posição:</b> decúbito dorsal, aquecida, <b>sem elevar as pernas</b> e sem posição lateral de segurança.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Fale com a vítima antes de tocar: pela frente, para ela não virar a cabeça.</span><span class="say">"Não mexa a cabeça. Vou segurar para você."</span></li>
@@ -441,10 +521,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 </div>
 <div class="wbox"><div class="wt">Rolamento em bloco (vista de cima)</div><div data-w="rolamento"></div></div>
 <div class="vids"><div><div class="yt" data-id="jvUysMg_-PE" role="button" aria-label="Assistir: Estabilização manual da cervical"><img loading="lazy" src="https://i.ytimg.com/vi/jvUysMg_-PE/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Estabilização manual da cervical · <a href="https://www.youtube.com/watch?v=jvUysMg_-PE" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="u01Nlr4ZtP8" role="button" aria-label="Assistir: Como colocar o colar cervical"><img loading="lazy" src="https://i.ytimg.com/vi/u01Nlr4ZtP8/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Como colocar o colar cervical · <a href="https://www.youtube.com/watch?v=u01Nlr4ZtP8" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="WCPslIguCk8" role="button" aria-label="Assistir: Rolamento 90° com 2 a 4 socorristas"><img loading="lazy" src="https://i.ytimg.com/vi/WCPslIguCk8/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Rolamento 90° com 2 a 4 socorristas · <a href="https://www.youtube.com/watch?v=WCPslIguCk8" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="6yzjqA1Moxo" role="button" aria-label="Assistir: Retirada de capacete com a vítima deitada"><img loading="lazy" src="https://i.ytimg.com/vi/6yzjqA1Moxo/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Retirada de capacete com a vítima deitada · <a href="https://www.youtube.com/watch?v=6yzjqA1Moxo" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="queimadura">
 <div class="st-top"><div class="st-num">17</div><div><span class="tag">Trauma</span><h2>Queimadura e choque elétrico</h2><p class="sub">Água corrente fria por 10–20 min. No elétrico, desligue antes de tocar.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Graus: 1º vermelhidão sem bolha · 2º bolhas (o que mais dói) · 3º branca ou escura, não dói (destrói os nervos) · 4º carbonização.</p><ul><li>Água corrente fria 10–20 min; tirar adornos; não estourar bolhas.</li><li>Nada de gelo, pasta de dente ou manteiga.</li><li>Choque elétrico: desligar a energia antes de tocar.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Derramou água fervente no braço" ou "levou choque mexendo na tomada e está caído".</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Graus:</b> 1º vermelhidão sem bolha · 2º bolhas (o que mais dói) · 3º branca ou escura, não dói (destrói os nervos) · 4º carbonização.</li><li><b>Regra dos nove:</b> cabeça 9% · cada braço 9% · tronco frente 18% · costas 18% · cada perna 18% · genitais 1%. A palma da vítima ≈ 1%. Pequeno &lt; 10% · médio 10–20% · grande &gt; 20%.</li><li><b>Graves em qualquer tamanho:</b> face, mãos, pés, genitais, períneo e grandes articulações.</li><li><b>Por que água e não gelo:</b> a água corrente tira o calor que continua queimando os tecidos; o gelo contrai os vasos e aprofunda a lesão.</li><li><b>Elétrica:</b> a corrente atravessa o corpo. A marca por fora é pequena, mas a lesão interna pode ser grande, com risco de fibrilação ventricular. Observar 24 h.</li><li><b>Química:</b> continua queimando enquanto o produto está na pele, por isso lava-se por ≥ 20 min.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Interrompa a queimadura: afaste da fonte. Roupa em chamas: PARE, DEITE e ROLE (ou abafe com cobertor).</span><span class="say">"Pare, deite e role!"</span></li>
@@ -460,10 +544,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Gelo</li><li>Estourar bolhas</li><li>Pasta de dente, manteiga, borra de café</li><li>Arrancar roupa grudada</li><li>Tocar na vítima ainda em contato com a energia</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="queimadura-0"><span>Interrompeu o processo</span></label><label><input type="checkbox" data-k="queimadura-1"><span>Resfriou com água pelo tempo certo</span></label><label><input type="checkbox" data-k="queimadura-2"><span>Retirou adornos</span></label><label><input type="checkbox" data-k="queimadura-3"><span>Garantiu a segurança no elétrico</span></label></div>
 </div>
-</section>
+</div></section>
 <section class="st" id="afogamento">
 <div class="st-top"><div class="st-num">18</div><div><span class="tag">Trauma</span><h2>Afogamento</h2><p class="sub">Não vire a segunda vítima. Fora da água, a falta de oxigênio é o problema: ventile.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Afogamento = aspirar líquido e ter dificuldade para respirar. O problema central é a falta de oxigênio (hipóxia), que leva à parada.</p><ul><li>Não entre sem treino: jogue algo que flutue.</li><li>Não respira: 5 ventilações + RCP 30:2.</li><li>Respira: posição lateral, aquecer, hospital.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Banhista puxado da piscina, não respira."</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Afogamento</b> = aspirar líquido e ter dificuldade para respirar. O problema central é a falta de oxigênio (hipóxia), que leva à parada.</li><li>Por isso a RCP do afogado começa com <b>ventilações</b>: é preciso levar oxigênio.</li><li>Tentar "tirar a água" não funciona e provoca vômito com aspiração.</li><li>Mergulho em água rasa = suspeita de lesão cervical. Hipotermia é comum.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Na água: jogue algo que flutue ou estenda algo (vara, toalha). Não entre se não for treinado.</span><span class="say">"Pega a boia!"</span><span class="det">"Jogue, não vá."</span></li>
@@ -477,10 +565,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Entrar na água sem treino</li><li>Heimlich para "tirar a água"</li><li>Só compressões sem ventilar</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="afogamento-0"><span>Segurança do socorrista</span></label><label><input type="checkbox" data-k="afogamento-1"><span>5 ventilações iniciais</span></label><label><input type="checkbox" data-k="afogamento-2"><span>RCP correta</span></label><label><input type="checkbox" data-k="afogamento-3"><span>Aquecimento e 192</span></label></div>
 </div>
-</section>
+</div></section>
 <section class="st" id="intox">
 <div class="st-top"><div class="st-num">19</div><div><span class="tag">Clínico</span><h2>Intoxicação e animais peçonhentos</h2><p class="sub">Afaste da fonte, nada de receita caseira e ligue para o CIATox ou 192.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Intoxicação exógena = exposição aguda a um produto químico. Não é lesão mecânica nem reação imunológica (essa é alergia).</p><ul><li>Ingestão: não provocar vômito, guardar a embalagem, CIATox/192.</li><li>Cobra: lavar, repouso, sem torniquete/corte/sucção.</li><li>Escorpião: compressa morna. Abelha: raspar o ferrão.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Criança bebeu produto de limpeza" ou "picada de cobra no pé durante a trilha".</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Intoxicação exógena</b> = exposição aguda a um produto químico. Não é lesão mecânica nem reação imunológica (essa é alergia).</li><li><b>Vias:</b> ingestão, inalação, absorção pela pele/olhos e injeção (inclui animais peçonhentos).</li><li><b>Sinais:</b> agitação ou sonolência até coma, alterações de FC e PA, miose ou midríase, salivação excessiva (sialorreia), lacrimejamento (epífora).</li><li><b>Por que não provocar vômito:</b> cáusticos queimam de novo na volta e derivados de petróleo vão para o pulmão. O slide cita não induzir em gestante no 3º trimestre, criança &lt; 2 anos e déficit neurológico.</li><li><b>Venenosos</b> (fazem mal se ingeridos ou tocados: sapo, taturana) × <b>peçonhentos</b> (têm aparelho que injeta o veneno: cobra, escorpião, aranha, abelha).</li><li><b>Cobras:</b> jararaca (a que mais causa acidentes), cascavel (chocalho, neurotóxico), surucucu e coral (neurotóxico). Torniquete concentra o veneno e necrosa o membro.</li><li><b>Escorpião:</b> veneno neurotóxico (dor forte); o amarelo é o de maior risco no Brasil; crianças &lt; 10 anos correm mais risco.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Segurança primeiro: gás, fumaça, produto químico ou animal ainda por perto.</span><span class="say">"Afastando a vítima do ambiente contaminado."</span><span class="det">Produto desconhecido / caminhão tombado: fique longe, com o vento nas costas, 193.</span></li>
@@ -495,10 +587,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Provocar vômito ou dar leite</li><li>Torniquete, corte ou sucção na picada</li><li>Gelo no escorpião</li><li>Pinçar o ferrão da abelha</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="intox-0"><span>Segurança da cena</span></label><label><input type="checkbox" data-k="intox-1"><span>Guardou a embalagem / identificou o animal</span></label><label><input type="checkbox" data-k="intox-2"><span>Evitou as condutas proibidas</span></label><label><input type="checkbox" data-k="intox-3"><span>Acionou CIATox/192</span></label></div>
 </div>
-</section>
+</div></section>
 <section class="st" id="parto">
 <div class="st-top"><div class="st-num">20</div><div><span class="tag">Parto</span><h2>Parto de emergência</h2><p class="sub">O socorrista auxilia; quem faz o parto é a mãe. Calma, higiene e aquecimento.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> O parto é um fenômeno fisiológico: quem faz é a mãe; o socorrista só auxilia.</p><ul><li>Parto iminente = vontade de evacuar + coroamento.</li><li>Apoiar a cabeça, não puxar; cordão no pescoço: passar por cima.</li><li>Secar e aquecer o RN; cordão após 1–3 min (10–15 cm + 3–4 cm); não puxar a placenta.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> Manequim de parto ou colega encenando. "Gestante com contrações fortes diz que o bebê está saindo."</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li>O parto é um <b>fenômeno fisiológico</b>: quem faz é a mãe; o socorrista só auxilia.</li><li><b>Posições do feto:</b> cefálica (cabeça primeiro, a mais comum e a única em que se faz parto de emergência) · pélvica (nádegas/pés: transporte) · córmica/transversal (atravessado: não fazer).</li><li><b>Fases:</b> 1) dilatação (2–3 contrações em 10 min); 2) expulsão (até 5 contrações em 10 min, coroamento); 3) dequitação (saída da placenta, até ~30 min). O parto só termina na placenta.</li><li><b>Termos:</b> nulípara (nunca pariu), primípara/primigesta (1º filho: trabalho de parto mais longo), multípara (vários).</li><li><b>Por que esperar 1–3 min para amarrar o cordão:</b> o bebê recebe mais sangue da placenta (reserva de ferro). Se não respira, clampeia logo para reanimar.</li><li><b>Massagem uterina:</b> o útero contraído aperta os vasos e reduz o sangramento depois do parto. Amamentar libera ocitocina, que ajuda a contrair.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Abertura: cena, EPI (luvas e, se tiver, avental e óculos), identifique-se e peça permissão.</span><span class="say">"Sou socorrista, posso ajudar? Vou acionar o 192."</span><span class="det">Líquido amniótico também é fluido infeccioso.</span></li>
@@ -520,10 +616,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 </div>
 <div class="wbox"><div class="wt">Fases do parto e cordão</div><div data-w="parto"></div></div>
 <div class="vids"><div><div class="yt" data-id="b1KlVpdZMJs" role="button" aria-label="Assistir: O que fazer se o bebê nascer em casa"><img loading="lazy" src="https://i.ytimg.com/vi/b1KlVpdZMJs/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">O que fazer se o bebê nascer em casa · <a href="https://www.youtube.com/watch?v=b1KlVpdZMJs" target="_blank" rel="noopener">abrir no YouTube</a></p></div><div><div class="yt" data-id="ULe80He2JVM" role="button" aria-label="Assistir: Bombeiros demonstram parto de emergência"><img loading="lazy" src="https://i.ytimg.com/vi/ULe80He2JVM/hqdefault.jpg" alt=""><div class="pl"><span>▶</span></div></div><p class="vcap">Bombeiros demonstram parto de emergência · <a href="https://www.youtube.com/watch?v=ULe80He2JVM" target="_blank" rel="noopener">abrir no YouTube</a></p></div></div>
-</section>
+</div></section>
 <section class="st" id="start">
 <div class="st-top"><div class="st-num">21</div><div><span class="tag">Trauma</span><h2>Múltiplas vítimas: START</h2><p class="sub">Triagem em menos de 60 s por vítima. Anda? Respira? Perfunde? Obedece?</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Múltiplas vítimas: o número de vítimas não excede a capacidade de atendimento. Vítimas em massa: excede.</p><ul><li>Anda = verde. Não respira após abrir via aérea = preta.</li><li>FR &gt; 30, enchimento &gt; 2 s ou não obedece = vermelha. Resto = amarela.</li><li>Macete: "30 · 2 · pode fazer".</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> Várias vítimas com cartões. O avaliador pede a cor de cada uma.</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Múltiplas vítimas:</b> o número de vítimas não excede a capacidade de atendimento. <b>Vítimas em massa:</b> excede.</li><li><b>Triagem</b> = fazer o maior bem ao maior número de pessoas, separando quem precisa de atendimento imediato.</li><li><b>START</b> avalia 4 coisas: marcha, respiração, perfusão e nível de consciência.</li><li><b>Cores:</b> vermelho = imediato · amarelo = urgente, pode esperar um pouco · verde = leve · preto = óbito/sem chance.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Quem consegue andar, sai andando para um ponto.</span><span class="say">"Quem conseguir andar, vá até a árvore!"</span><span class="det">Todas as que andam = VERDE.</span></li>
@@ -537,10 +637,14 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="start-0"><span>Sequência certa</span></label><label><input type="checkbox" data-k="start-1"><span>Cores corretas</span></label><label><input type="checkbox" data-k="start-2"><span>Rapidez</span></label></div>
 </div>
 <div class="wbox"><div class="wt">Treino de START: qual a cor?</div><div data-w="start"></div></div>
-</section>
+</div></section>
 <section class="st" id="transporte">
 <div class="st-top"><div class="st-num">22</div><div><span class="tag">Trauma</span><h2>Remoção e transporte improvisado</h2><p class="sub">Só remova se houver perigo. Se remover, proteja a cabeça.</p></div></div>
+<div class="res"><div class="res-h">⚡ O essencial</div><p class="res-c"><b>Conceito:</b> Regra: a vítima é movida o mínimo possível. Remoção de emergência só com risco imediato (fogo, explosão, desabamento, trânsito) ou para fazer RCP.</p><ul><li>Só remover com perigo imediato.</li><li>Arrasto pelo eixo do corpo, protegendo a cabeça.</li><li>Consciente que anda: apoio lateral. Suspeita de coluna sem perigo: não mover.</li></ul></div>
+<div class="full">
 <div class="cena"><b>Na prova:</b> "Fogo se aproximando: retire a vítima daqui" ou "ajude o colega torcido a chegar ao carro".</div>
+<div class="teo"><div class="teo-h">📘 Entenda: a teoria por trás</div><ul><li><b>Regra:</b> a vítima é movida o mínimo possível. Remoção de emergência só com risco imediato (fogo, explosão, desabamento, trânsito) ou para fazer RCP.</li><li><b>Ergonomia do socorrista:</b> costas retas, força das pernas, carga perto do corpo.</li><li><b>Tipos:</b> arrasto, apoio lateral, cadeirinha de 2 socorristas, transporte em cadeira, maca e prancha.</li></ul></div>
+<div class="prat-h">🩺 Na prática: passo a passo</div>
 <div class="tools"><button type="button" class="btn qz">🧠 Treinar de cabeça</button><button type="button" class="btn sp">🔊 Ouvir as falas</button></div>
 <ol class="steps">
 <li><span class="act">Só mova a vítima se houver perigo imediato (fogo, desabamento, trânsito) ou para fazer RCP.</span><span class="say">"Risco de incêndio: remoção de emergência."</span></li>
@@ -553,7 +657,7 @@ ol.steps>li::before{content:counter(s);position:absolute;left:0;top:.6rem;width:
 <div class="box no"><h4>✕ Não faça (tira ponto)</h4><ul><li>Remover sem necessidade</li><li>Dobrar ou torcer o tronco da vítima</li><li>Levantar peso com as costas</li></ul></div>
 <div class="box ev"><h4>✓ O avaliador confere</h4><label><input type="checkbox" data-k="transporte-0"><span>Justificou a remoção</span></label><label><input type="checkbox" data-k="transporte-1"><span>Técnica adequada ao caso</span></label><label><input type="checkbox" data-k="transporte-2"><span>Protegeu cabeça e coluna</span></label></div>
 </div>
-</section>
+</div></section>
 
 <div class="sec-h" id="simulado"><h2>Simulado de cenas</h2><p>Escolha uma cena e decida o próximo passo. Cada escolha vem comentada.</p></div>
 <div data-w="casos"></div>
@@ -1033,6 +1137,13 @@ document.querySelectorAll('[data-w]').forEach(function(b){var f=W[b.getAttribute
 </script>
 <script>
 (function(){
+ // modo completo/resumo
+ var MK='ps-pratica-modo';function setM(m){document.body.classList.toggle('mode-res',m==='res');document.querySelectorAll('[data-m]').forEach(function(b){b.classList.toggle('on',b.dataset.m===m)});try{localStorage.setItem(MK,m)}catch(e){}}
+ var m0='full';try{m0=localStorage.getItem(MK)||'full'}catch(e){}setM(m0);
+ document.querySelectorAll('[data-m]').forEach(function(b){b.onclick=function(){var y=window.scrollY,a=null;
+   // mantém a estação visível ao trocar
+   var sts=[].slice.call(document.querySelectorAll('.st'));for(var i=0;i<sts.length;i++){if(sts[i].getBoundingClientRect().bottom>80){a=sts[i];break}}
+   setM(b.dataset.m);if(a&&y>300)a.scrollIntoView();}});
  // vídeos leves
  document.querySelectorAll('.yt').forEach(function(y){y.addEventListener('click',function(){if(y.querySelector('iframe'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+y.dataset.id+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;y.appendChild(f)})});
  // checklists persistentes
