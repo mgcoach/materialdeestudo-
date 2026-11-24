@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Fisiologia Endócrina 1: Fundamentos | MG COACH">
-    <meta property="og:description" content="Parte 1 da série de Fisiologia Endócrina (CBMF): o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e tipos de receptor, e a síntese dos hormônios peptídicos e esteroides.">
+    <meta property="og:description" content="Sistema endócrino, tipos de ação, receptores, animação peptídico × esteroide, síntese a partir do colesterol, as três famílias de hormônios e jogo de classificação.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/fisiologia-1-fundamentos.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -41,10 +76,12 @@
     <a href="#intro">O sistema endócrino</a>
     <a href="#hormonio">O que é um hormônio</a>
     <a href="#acao">Tipos de ação</a>
-    <a href="#funcoes">Funções</a>
+    <a href="#funcoes">Funções do sistema</a>
     <a href="#receptores">Mecanismos e receptores</a>
     <a href="#peptidicos">Hormônios peptídicos</a>
     <a href="#esteroides">Hormônios esteroides</a>
+    <a href="#familias">As três famílias</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -58,7 +95,7 @@
     <a href="fisiologia-4-regulacao-metabolismo.html">4 &middot; Regulação e Metabolismo</a>
   </div>
   <h1>Fundamentos do sistema <span class="em">endócrino</span></h1>
-  <p class="lede">A base de toda a fisiologia hormonal: o que é o <b>sistema endócrino</b>, os tipos de ação (endócrina, parácrina, autócrina), como os hormônios agem por meio de <b>receptores</b> e segundos mensageiros, e como os hormônios <b>peptídicos</b> e <b>esteroides</b> são fabricados.</p>
+  <p class="lede">A base de toda a fisiologia hormonal: o que é o <b>sistema endócrino</b>, os tipos de ação (endócrina, parácrina, autócrina), como os hormônios agem por meio de <b>receptores</b> e segundos mensageiros, e como os hormônios <b>peptídicos</b> e <b>esteroides</b> são fabricados. Agora com <b>animação do sinal entrando na célula</b>, jogo das famílias e teste rápido.</p>
 </div>
 
 <main>
@@ -149,15 +186,15 @@
   <h2>Como o sinal <span class="accent">chega</span> à célula</h2>
   <p class="sec-sub">Onde fica o receptor depende de o hormônio ser hidro ou lipossolúvel.</p>
 
-  <p>Todo hormônio age ligando-se a um receptor específico. A ligação hormônio–receptor dispara uma cascata de sinalização → efeito celular → alteração da função gênica ou metabólica. Há três tipos principais de receptor:</p>
+  <p>Todo hormônio age ligando-se a um receptor específico. A ligação hormônio–receptor dispara uma cascata de sinalização → efeito celular → alteração da função gênica ou metabólica. Há três localizações principais de receptor:</p>
 
   <div class="table-wrap">
     <table>
       <thead><tr><th>Receptor</th><th>Localização</th><th>Para quais hormônios</th></tr></thead>
       <tbody>
         <tr><td>De membrana</td><td>Na membrana plasmática</td><td>Hidrossolúveis (peptídicos) — ativam proteínas G e segundos mensageiros (AMPc, IP3, DAG)</td></tr>
-        <tr><td>Citoplasmáticos</td><td>No citoplasma, ligados ao núcleo</td><td>Em repouso suprimem a resposta; ao ligar, ativam a transcrição gênica</td></tr>
-        <tr><td>Intracelulares (nucleares)</td><td>Diretamente no núcleo</td><td>Lipossolúveis — o complexo hormônio-receptor regula a expressão gênica</td></tr>
+        <tr><td>Citoplasmáticos</td><td>No citoplasma, presos a proteínas de choque térmico (HSP) enquanto inativos</td><td>Cortisol, aldosterona, andrógenos: ao ligar o hormônio, o receptor solta as HSP, entra no núcleo e regula genes</td></tr>
+        <tr><td>Nucleares</td><td>Já dentro do núcleo, ligados ao DNA</td><td>Hormônios tireoidianos, estrogênio, vitamina D: ao ligar, ativam ou reprimem a transcrição</td></tr>
       </tbody>
     </table>
   </div>
@@ -165,6 +202,14 @@
   <div class="callout">
     <span class="tag">Segundos mensageiros</span>
     <p>Hormônios peptídicos (hidrossolúveis) não entram na célula: ligam-se ao receptor de membrana, que ativa a <strong>proteína G</strong> e recruta segundos mensageiros (AMPc, IP3, DAG, Ca²⁺). Isso <strong>amplifica</strong> o sinal — um único hormônio gera uma grande resposta intracelular. Relevante para GH, ACTH, TSH, glucagon e catecolaminas. (É o mesmo mecanismo de proteína G visto no glucagon, na Parte 3.)</p>
+  </div>
+
+  <div class="sim" id="simSig">
+    <div class="sim-head"><b>Animação · como o sinal entra</b><span class="muted" id="sigN">1 / 4</span></div>
+    <div class="seg" role="group" aria-label="Tipo de hormônio"><button type="button" class="on" data-k="pep">Peptídico (glucagon)</button><button type="button" data-k="est">Esteroide (cortisol)</button></div>
+    <svg viewBox="0 0 560 300" class="sim-svg" role="img" aria-label="Célula recebendo um hormônio"><g id="sigScene"></g></svg>
+    <p class="lev-txt" id="sigTxt"></p>
+    <div class="sim-foot"><button type="button" class="play" id="sigPrev">◀</button><button type="button" class="play" id="sigNext">Próximo ▶</button></div>
   </div>
 </section>
 
@@ -194,9 +239,9 @@
   <p>Exemplos: <strong>testosterona, estradiol, progesterona, cortisol, aldosterona</strong> e a vitamina D e seus metabólitos. A síntese parte sempre do <strong>colesterol</strong>:</p>
 
   <ul class="clean">
-    <li>O colesterol entra na mitocôndria.</li>
-    <li>A enzima <b>P450 (CYP11A1)</b> o converte em <b>pregnenolona</b>.</li>
-    <li>A pregnenolona pode virar progesterona, androstenediona ou testosterona.</li>
+    <li>A proteína <b>StAR</b> leva o colesterol para dentro da mitocôndria (é a etapa que limita a velocidade).</li>
+    <li>A enzima <b>P450scc (CYP11A1)</b> corta a cadeia lateral e forma a <b>pregnenolona</b>.</li>
+    <li>Da pregnenolona saem as linhas para progesterona, cortisol, aldosterona e andrógenos (DHEA, androstenediona, testosterona). Cada glândula tem enzimas diferentes, por isso produz hormônios diferentes.</li>
   </ul>
 
   <div class="callout">
@@ -208,11 +253,40 @@
     <span class="tag">Diferença prática crucial</span>
     <p>Os hormônios esteroides <strong>não são armazenados</strong> — são sintetizados e liberados <strong>sob demanda</strong>, e atuam principalmente via receptores intracelulares (alterando a transcrição gênica). Os peptídicos, ao contrário, ficam estocados em vesículas prontos para liberação rápida.</p>
   </div>
+  <p>O caminho completo, enzima por enzima, está no material <a href="colesterol-da-digestao-aos-hormonios.html">Colesterol: da digestão aos hormônios</a>.</p>
+</section>
+
+<section id="familias">
+  <span class="sec-num">08 &mdash; AS TRÊS FAMÍLIAS</span>
+  <h2>Peptídicos, esteroides e <span class="accent">aminas</span></h2>
+  <p class="sec-sub">A família diz onde fica o receptor, se o hormônio é estocado e como viaja no sangue.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th></th><th>Peptídicos</th><th>Esteroides</th><th>Aminas</th></tr></thead>
+    <tbody>
+    <tr><td><b>Feitos de</b></td><td>Aminoácidos em cadeia</td><td>Colesterol</td><td>Um aminoácido (tirosina ou triptofano)</td></tr>
+    <tr><td><b>Exemplos</b></td><td>Insulina, glucagon, GH, ACTH, LH, FSH</td><td>Cortisol, aldosterona, testosterona, estradiol</td><td>Adrenalina, noradrenalina, dopamina, T3/T4, melatonina</td></tr>
+    <tr><td><b>No sangue</b></td><td>Livres (hidrossolúveis)</td><td>Ligados a proteínas transportadoras</td><td>Catecolaminas livres; T3/T4 ligados a proteínas</td></tr>
+    <tr><td><b>Receptor</b></td><td>Membrana</td><td>Dentro da célula</td><td>Catecolaminas na membrana; T3/T4 no núcleo</td></tr>
+    <tr><td><b>Estoque</b></td><td>Vesículas</td><td>Não estocados</td><td>Catecolaminas em vesículas; T3/T4 na tireoglobulina</td></tr>
+    </tbody></table></div>
+  <div class="callout warn">
+    <span class="tag">A pegadinha das aminas</span>
+    <p>As catecolaminas se comportam como peptídicos (hidrossolúveis, receptor de membrana). Os hormônios tireoidianos, apesar de serem aminas, se comportam como esteroides (lipossolúveis, receptor nuclear).</p>
+  </div>
+  <p><b>Classifique:</b> toque na família de cada hormônio.</p>
+  <div id="famQuiz"></div>
+</section>
+
+<section id="quiz">
+  <span class="sec-num">09 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
 </section>
 
 <!-- resumo -->
 <section id="resumo">
-  <span class="sec-num">08 &mdash; PARA FIXAR</span>
+  <span class="sec-num">10 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O essencial da Parte 1.</p>
 
@@ -244,5 +318,72 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF (Fisiologia Endócrina), organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Um hormônio sem receptor na célula:',a:['Age mais forte','Não tem efeito nela','Vira outro hormônio','Entra no núcleo'],c:1,e:'O receptor específico é obrigatório para haver efeito.'},
+{q:'Uma substância que age na própria célula que a secretou tem ação:',a:['Endócrina','Parácrina','Autócrina','Neural'],c:2,e:'Autócrina = na própria célula; parácrina = vizinhas; endócrina = longe, pelo sangue.'},
+{q:'Por que o glucagon precisa de segundo mensageiro?',a:['Porque é lipossolúvel','Porque é hidrossolúvel e não atravessa a membrana','Porque age no núcleo','Porque é estocado no fígado'],c:1,e:'Liga-se ao receptor de membrana, que via proteína G gera AMPc dentro da célula.'},
+{q:'A etapa que limita a velocidade da síntese de esteroides é:',a:['A aromatase','O transporte de colesterol para dentro da mitocôndria pela StAR','A 5-alfa-redutase','A liberação por exocitose'],c:1,e:'Depois vem a P450scc, que forma a pregnenolona.'},
+{q:'Os hormônios tireoidianos são aminas, mas se comportam como:',a:['Peptídicos','Esteroides (lipossolúveis, receptor nuclear)','Neurotransmissores','Enzimas'],c:1,e:'Por isso viajam ligados a proteínas e agem regulando genes.'},
+{q:'Qual hormônio é estocado em vesículas e liberado rapidamente?',a:['Cortisol','Testosterona','Insulina','Estradiol'],c:2,e:'Peptídicos são estocados; esteroides são feitos sob demanda.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* ---------- sinalização ---------- */
+(function(){
+ var root=document.getElementById('simSig');if(!root)return;var sc=document.getElementById('sigScene'),tx=document.getElementById('sigTxt'),n=document.getElementById('sigN'),K='pep',i=0,t0=performance.now();
+ var S={pep:['<b>1 · O hormônio chega</b>: o glucagon é hidrossolúvel e não atravessa a membrana. Ele se liga ao receptor <b>na superfície</b> da célula do fígado.',
+  '<b>2 · Proteína G</b>: o receptor ativado liga a proteína G (troca GDP por GTP), que vai até a enzima <b>adenilato ciclase</b>.',
+  '<b>3 · Segundo mensageiro</b>: a adenilato ciclase transforma ATP em <b>AMPc</b>, muitas moléculas para cada hormônio. É a <b>amplificação</b>.',
+  '<b>4 · Efeito rápido</b>: o AMPc ativa a <b>PKA</b>, que liga e desliga enzimas que já existem (ex.: quebra de glicogênio). Resposta em segundos a minutos.'],
+ est:['<b>1 · O hormônio chega</b>: o cortisol viaja preso a proteínas no sangue. Solto, por ser lipossolúvel, <b>atravessa a membrana</b> sozinho.',
+  '<b>2 · Receptor no citoplasma</b>: ele se liga ao receptor de glicocorticoide, que solta as proteínas de choque térmico (HSP) que o mantinham inativo.',
+  '<b>3 · Para o núcleo</b>: o complexo hormônio-receptor entra no núcleo e se liga a trechos específicos do <b>DNA</b>.',
+  '<b>4 · Efeito lento e duradouro</b>: genes são ligados ou desligados, a célula produz RNA mensageiro e <b>proteínas novas</b>. Resposta em horas, que dura mais.']};
+ function frame(now){var t=RM?1:Math.min(1,((now-t0)/1400)%1.6);clear(sc);
+  el('rect',{x:40,y:80,width:490,height:210,rx:40,fill:'rgba(127,127,127,.06)',stroke:MUT,'stroke-width':6},sc);txt(sc,60,72,'membrana','sm','start');
+  el('circle',{cx:420,cy:200,r:62,fill:'rgba(37,99,235,.06)',stroke:BL,'stroke-width':3,'stroke-dasharray':'6 4'},sc);txt(sc,420,128,'núcleo','sm');
+  el('path',{d:'M380 210 q10 -14 20 0 t20 0 t20 0 t20 0',fill:'none',stroke:BL,'stroke-width':3},sc);txt(sc,420,238,'DNA','sm');
+  if(K==='pep'){var R={x:170,y:80};el('rect',{x:R.x-14,y:R.y-26,width:28,height:52,rx:8,fill:GR,opacity:.8},sc);txt(sc,R.x-22,R.y+4,'receptor','sm','end');
+   var hy=i===0?20+52*t:R.y-36;el('circle',{cx:R.x,cy:hy,r:13,fill:OR},sc);txt(sc,R.x+20,Math.min(hy,40)+4,'glucagon','sm','start').setAttribute('fill',OR);
+   if(i>=1){var gx=i===1?R.x+20+60*t:R.x+80;el('ellipse',{cx:gx,cy:104,rx:16,ry:10,fill:'#ca8a04'},sc);txt(sc,gx,126,'proteína G','sm');el('rect',{x:270,y:86,width:34,height:30,rx:6,fill:'rgba(127,127,127,.5)'},sc);txt(sc,312,106,'adenilato ciclase','sm','start')}
+   if(i>=2){var m=i===2?Math.floor(2+18*t):20;for(var q=0;q<m;q++){var a=q*2.4,rr=18+q*3.2;el('circle',{cx:250+rr*Math.cos(a)*1.1,cy:175+rr*Math.sin(a)*0.55,r:4.5,fill:RD},sc)}txt(sc,250,262,'AMPc','sm').setAttribute('fill',RD)}
+   if(i>=3){for(var e=0;e<4;e++){var ex=120+e*40,ey=230;el('rect',{x:ex-12,y:ey-10,width:24,height:20,rx:5,fill:GR,opacity:.4+0.6*t},sc)}txt(sc,160,270,'enzimas ativadas','sm')}}
+  else{var hx=i===0?100+70*t:170,hy=i===0?30+90*t:150;
+   if(i<=1){if(i===0||t<1)el('path',{d:'M'+(hx-11)+' '+hy+' l5.5 -9.5 h11 l5.5 9.5 l-5.5 9.5 h-11z',fill:'#ca8a04'},sc)}
+   if(i>=1){var cx=i===1?230:i===2?230+150*t:380,cy=i===1?170:i===2?170+30*t:200;
+    el('rect',{x:cx-16,y:cy-12,width:32,height:24,rx:8,fill:GR,opacity:.85},sc);el('path',{d:'M'+(cx-11)+' '+(cy-20)+' l5.5 -9.5 h11 l5.5 9.5 l-5.5 9.5 h-11z',fill:'#ca8a04'},sc);
+    if(i===1){[0,1].forEach(function(z){el('circle',{cx:cx+30+40*t+z*16,cy:cy+20+z*10,r:8,fill:MUT,opacity:1-t},sc)});txt(sc,cx+60,cy+52,'HSP saindo','sm')}}
+   if(i>=3){for(var w=0;w<3;w++){el('path',{d:'M'+(330-w*60*t)+' '+(255+w*8)+' q8 -6 16 0 t16 0',fill:'none',stroke:RD,'stroke-width':3},sc)}txt(sc,70,276,'RNAm → proteínas novas','sm','start').setAttribute('fill',RD)}}
+  if(!RM)requestAnimationFrame(frame)}
+ function go(k){i=Math.max(0,Math.min(3,k));n.textContent=(i+1)+' / 4';tx.innerHTML=S[K][i];t0=performance.now();document.getElementById('sigNext').textContent=i===3?'Recomeçar ↺':'Próximo ▶';if(RM)frame(0)}
+ root.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});K=b.dataset.k;go(0)})});
+ document.getElementById('sigNext').addEventListener('click',function(){go(i===3?0:i+1)});document.getElementById('sigPrev').addEventListener('click',function(){go(i-1)});go(0);if(!RM)requestAnimationFrame(frame);
+})();
+/* ---------- classificador ---------- */
+(function(){
+ var box=document.getElementById('famQuiz');if(!box)return;var N={p:'Peptídico',e:'Esteroide',a:'Amina'};
+ var L=[['Insulina','p','Cadeia de aminoácidos, receptor de membrana.'],['Cortisol','e','Derivado do colesterol, receptor citoplasmático.'],['Adrenalina','a','Vem da tirosina; age como hidrossolúvel.'],['GH','p','Proteína da adeno-hipófise.'],['T3','a','Amina da tirosina, mas lipossolúvel e de receptor nuclear.'],['Testosterona','e','Derivada do colesterol.'],['Glucagon','p','Peptídeo do pâncreas, via AMPc.'],['Aldosterona','e','Esteroide do córtex adrenal.'],['Melatonina','a','Vem do triptofano.']];
+ L.forEach(function(x){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+x[0]+'</p><div class="seg">'+['p','e','a'].map(function(k){return '<button type="button" data-k="'+k+'">'+N[k]+'</button>'}).join('')+'</div><p class="ex"></p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');d.querySelector('[data-k="'+x[1]+'"]').classList.add('on');if(b.dataset.k!==x[1])b.style.outline='2px solid #e11d48';d.querySelector('.ex').innerHTML=(b.dataset.k===x[1]?'✔ ':'✘ '+N[x[1]]+'. ')+x[2]})})});
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
