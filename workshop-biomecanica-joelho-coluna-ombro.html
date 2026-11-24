@@ -19,6 +19,41 @@
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
 <style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
+<style>
 /* figuras esquem&aacute;ticas &mdash; fundo fixo escuro em ambos os temas */
 .fig{margin:22px 0;background:#0e0d0c;border:1px solid #241f1b;border-radius:12px;padding:14px}
 .fig svg{width:100%;height:auto;display:block}
@@ -82,6 +117,7 @@
     <a href="#testes-ombro">Teste da parede e Jobe</a>
     <a href="#elevacao-lateral">Elevação lateral</a>
     <a href="#manguito-funcional">Manguito funcional</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#sintese">Síntese</a>
   </nav>
 </header>
@@ -1034,6 +1070,13 @@
 </div>
 <p>Vale fechar com a mesma ideia que abriu o material: o tecido n&atilde;o adoece pela carga, adoece pela desproporc&atilde;o entre carga e capacidade. Vale para a cartilagem da patela, para o disco lombar e para o tend&atilde;o do supraespinal. E, nos tr&ecirc;s casos, o caminho tamb&eacute;m foi o mesmo: <strong>ajustar temporariamente a demanda enquanto se constr&oacute;i a capacidade &mdash; e depois devolver a demanda</strong>. A &uacute;ltima parte &eacute; a que a maioria dos programas esquece, e &eacute; a que define se o aluno vai voltar a treinar sem restri&ccedil;&atilde;o ou vai passar a vida evitando.</p></section>
 
+<section id="quiz">
+  <span class="sec-num">TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="sintese">
   <span class="sec-num">37 &mdash; S&Iacute;NTESE</span>
   <h2>Quatro temas, <span class="accent">tr&ecirc;s princ&iacute;pios</span></h2>
@@ -1058,5 +1101,25 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material produzido a partir de anota&ccedil;&otilde;es pr&oacute;prias do evento. Diagramas originais e esquem&aacute;ticos &mdash; n&atilde;o substituem o atlas. Uso educacional; n&atilde;o substitui avalia&ccedil;&atilde;o individualizada nem conduta m&eacute;dica.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[{"q": "Achado de imagem (ex.: protrusão discal) em quem não tem dor:", "a": ["Sempre exige parar de treinar", "É comum e se correlaciona fracamente com sintoma", "É diagnóstico certo de lesão", "Não existe"], "c": 1, "e": "O que orienta é o comportamento da dor ao longo do tempo."},{"q": "Mudar a posição do pé no leg press ou usar calço no agachamento:", "a": ["Elimina o trabalho", "Muda qual articulação recebe mais torque", "Não muda nada", "Só muda a estética"], "c": 1, "e": "Torque não desaparece, muda de endereço."},{"q": "Reduzir a demanda (amplitude parcial, terra no bloco) é:", "a": ["O destino final", "Uma porta de entrada; o objetivo é aumentar a capacidade", "Proibido", "Inútil"], "c": 1, "e": "Reduzir compra tempo; aumentar capacidade resolve."},{"q": "Testes ortopédicos isolados:", "a": ["Dão laudo definitivo", "Têm especificidade limitada e não substituem avaliação clínica", "São sempre positivos", "Dispensam o médico"], "c": 1, "e": "Teste não é laudo."},{"q": "Elevação lateral no plano escapular serve para:", "a": ["Aumentar o impacto no ombro", "Reduzir a demanda no ombro sensível como porta de entrada", "Treinar bíceps", "Nada"], "c": 1, "e": "Depois, progrida para recuperar capacidade."}];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
