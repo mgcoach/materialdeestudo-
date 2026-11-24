@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Biomecânica 2: Membros Inferiores | MG COACH">
-    <meta property="og:description" content="Parte 1 da série de Fisiologia Endócrina (CBMF): o que é o sistema endócrino, os tipos de ação hormonal (endócrina, parácrina, autócrina), os mecanismos de ação e tipos de receptor, e a síntese dos hormônios peptídicos e esteroides.">
+    <meta property="og:description" content="Glúteo máximo e o simulador de agachamento com braços de momento e comprimento dos músculos, glúteo médio, adutor magno, posteriores, quadríceps e panturrilhas.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/biomecanica2-4-membros-inferiores.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -38,12 +73,13 @@
     </button>
   </div>
   <nav class="toc" id="tocNav">
-    <a href="#gluteomax">Glúteo máximo</a>
+    <a href="#gluteo">Glúteo máximo</a>
     <a href="#agachamento">O glúteo no agachamento</a>
-    <a href="#gluteomedio">Glúteo médio e adutor magno</a>
+    <a href="#medio-adutor">Glúteo médio e adutor magno</a>
     <a href="#posteriores">Posteriores de coxa</a>
     <a href="#quadriceps">Quadríceps</a>
     <a href="#panturrilha">Panturrilhas</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -58,77 +94,92 @@
     <a href="biomecanica2-5-dorsais.html">5 &middot; Dorsais</a>
   </div>
   <h1>Membros <span class="em">inferiores</span></h1>
-  <p class="lede">Anatomia aplicada do trem inferior: o <b>glúteo máximo</b> e o paradoxo da sua ativação no agachamento (a insuficiência ativa dos isquiotibiais), o <b>glúteo médio</b> e o adutor magno, os <b>posteriores de coxa</b>, o <b>quadríceps</b> (e por que o reto femoral não cresce no agachamento) e as <b>panturrilhas</b>.</p>
+  <p class="lede">Anatomia aplicada do trem inferior: o <b>glúteo máximo</b> e o paradoxo da sua ativação no agachamento (a insuficiência ativa dos isquiotibiais), o <b>glúteo médio</b> e o adutor magno, os <b>posteriores de coxa</b>, o <b>quadríceps</b> (e por que o reto femoral não cresce no agachamento) e as <b>panturrilhas</b>. Agora com <b>simulador do agachamento</b> e correções de anatomia.</p>
 </div>
 
 <main>
 
-<section id="gluteomax">
+<section id="gluteo">
   <span class="sec-num">01 &mdash; GLÚTEO MÁXIMO</span>
-  <h2>O motor da <span class="accent">extensão do quadril</span></h2>
-  <p class="sec-sub">Estrutura, funções e dupla inervação.</p>
-  <p><strong>Origem:</strong> quarto posterior da crista ilíaca, face posterior do sacro e cóccix, fáscia toracolombar. <strong>Inserção:</strong> tuberosidade glútea do fêmur e trato iliotibial (fáscia lata). <strong>Funções:</strong> extensão do quadril (principal), rotação lateral, abdução (fibras superiores) e adução (fibras inferiores). Tem <strong>dupla inervação</strong> (nervos glúteo superior e inferior), o que explica sua atuação em múltiplos planos.</p>
+  <h2>O motor da extensão do <span class="accent">quadril</span></h2>
+  <p class="sec-sub">Estrutura, funções e inervação.</p>
+  <div class="def">
+    <div class="word">Glúteo máximo</div>
+    <p><b>Origem:</b> parte posterior da crista ilíaca, face posterior do sacro e do cóccix, fáscia toracolombar e ligamento sacrotuberal. <b>Inserção:</b> tuberosidade glútea do fêmur e trato iliotibial. <b>Funções:</b> extensão do quadril (principal), rotação lateral, abdução (fibras de cima) e adução (fibras de baixo). <b>Inervação:</b> nervo glúteo inferior.</p>
+  </div>
+  <div class="callout">
+    <span class="tag">Por que trabalha em vários planos</span>
+    <p>As fibras de cima passam acima do centro do quadril e abduzem; as de baixo passam abaixo e aduzem. É a mesma lógica do peitoral: a direção das fibras decide a função. (O glúteo médio e o mínimo é que recebem o nervo glúteo superior.)</p>
+  </div>
 </section>
 
 <section id="agachamento">
   <span class="sec-num">02 &mdash; O GLÚTEO NO AGACHAMENTO</span>
-  <h2>O paradoxo da <span class="accent">desvantagem mecânica</span></h2>
-  <p class="sec-sub">Por que o glúteo é tão exigido mesmo em desvantagem.</p>
-  <p>Quando o quadril está muito flexionado (fundo do agachamento), o braço de alavanca do glúteo diminui — em teoria, ele deveria trabalhar <strong>menos</strong>. Na prática, acontece o contrário. O motivo está nos isquiotibiais.</p>
-  <div class="callout">
-    <span class="tag">A insuficiência ativa dos isquiotibiais</span>
-    <p>Os posteriores são biarticulares. No agachamento, na descida: flexão de quadril <strong>alonga</strong> o posterior, flexão de joelho <strong>encurta</strong> → o comprimento praticamente não muda ("empate mecânico"). O mesmo na subida. Como o posterior não muda de comprimento, ele não gera excitação suficiente para um estímulo eficiente — fica em <strong>insuficiência ativa</strong>.</p>
+  <h2>Quem segura o <span class="accent">quadril</span> na descida</h2>
+  <p class="sec-sub">Mexa na profundidade e veja braços de momento e comprimentos.</p>
+  <div class="sim" id="simSq">
+    <div class="sim-head"><b>Simulador · agachamento livre</b><span class="muted">barra sobre o meio do pé</span></div>
+    <svg viewBox="0 0 560 330" class="sim-svg" role="img" aria-label="Agachamento com braços de momento e comprimento dos músculos"><g id="sqScene"></g></svg>
+    <div class="ctl"><label>Profundidade <output id="oSq">0%</output><input type="range" id="rSq" min="0" max="100" value="60"></label></div>
+    <div class="sim-foot"><button type="button" class="play" id="pSq">▶ Animar o movimento</button></div>
+    <div class="readout"><div><span>Braço de momento no quadril</span><b id="sqH">–</b></div><div><span>Braço de momento no joelho</span><b id="sqK">–</b></div></div>
   </div>
+  <ul class="clean">
+    <li>Quanto mais fundo, mais o quadril se afasta da linha da barra: o <b>torque externo no quadril aumenta</b> e os extensores precisam responder.</li>
+    <li><b>Glúteo máximo</b> e <b>adutor magno</b> cruzam só o quadril (para a extensão): <b>alongam muito</b> na descida e trabalham em comprimento longo.</li>
+    <li><b>Isquiotibiais</b> alongam no quadril e encurtam no joelho ao mesmo tempo: o comprimento <b>quase não muda</b>. Eles ajudam, mas em regime quase isométrico, e como também flexionam o joelho, não podem puxar com tudo sem atrapalhar a subida.</li>
+  </ul>
   <div class="callout ok">
-    <span class="tag">A consequência</span>
-    <p>Se os posteriores não ajudam a estender o quadril e o corpo precisa subir, alguém tem que gerar o torque: o <strong>glúteo máximo</strong>. Mesmo em desvantagem mecânica, ele precisa produzir mais força — alta ativação. E quanto mais profundo o agachamento, maior o braço de momento do quadril → maior a exigência do glúteo. Por isso o agachamento profundo é excelente para glúteos. (Conecta com os estudos <em>Agachamento e Glúteo</em> e <em>Hipertrofia Regional do Glúteo</em>.)</p>
+    <span class="tag">O que os estudos mostram</span>
+    <p>Em treinos de agachamento por semanas, o volume de <b>glúteo máximo, adutores e vastos</b> aumenta, e o de <b>isquiotibiais e reto femoral</b> praticamente não muda. Agachar mais fundo aumentou mais o glúteo e os adutores do que o agachamento parcial. Veja também <a href="agachamento-gluteo-livre-vs-smith.html">Agachamento e Glúteo</a> e <a href="hipertrofia-regional-gluteo.html">Hipertrofia Regional do Glúteo</a>.</p>
+  </div>
+  <div class="callout warn">
+    <span class="tag">Cuidado com o termo</span>
+    <p>Isso <b>não</b> é insuficiência ativa dos isquiotibiais. Insuficiência ativa é com as duas pontas encurtadas (quadril estendido e joelho flexionado). No agachamento as pontas se compensam: é <b>cancelamento</b>, como visto na <a href="biomecanica2-2-forca-comprimento.html#empate-terras">Parte 2</a>.</p>
   </div>
 </section>
 
-<section id="gluteomedio">
+<section id="medio-adutor">
   <span class="sec-num">03 &mdash; GLÚTEO MÉDIO E ADUTOR MAGNO</span>
-  <h2>Estabilidade e um <span class="accent">coadjuvante forte</span></h2>
+  <h2>Estabilidade e um extensor <span class="accent">escondido</span></h2>
   <p class="sec-sub">Dois músculos subestimados.</p>
   <div class="grid2">
-    <div class="mini"><h4>Glúteo médio</h4><p>Origem na face lateral do ílio, inserção no trocânter maior. Função principal prática: <b>estabilização da pelve</b> — essencial em caminhada, corrida e exercícios unilaterais. Também faz abdução e rotações.</p></div>
-    <div class="mini"><h4>Adutor magno</h4><p>Atua como <b>extensor do quadril</b> — "quase um posterior de coxa" em exercícios pesados. Mais recrutado em agachamento profundo e posições de grande flexão de quadril.</p></div>
+    <div class="mini"><h4>Glúteo médio</h4><p>Origem na face lateral do ílio, inserção no trocânter maior, nervo glúteo superior. Abduz e roda o quadril, mas o papel mais importante é <b>segurar a pelve nivelada</b> no apoio unipodal: caminhada, corrida, afundo, búlgaro.</p></div>
+    <div class="mini"><h4>Adutor magno</h4><p>A parte posterior (isquiática) se origina no túber isquiático como os isquiotibiais e é um <b>extensor potente do quadril</b>, ainda mais com o quadril flexionado. Muito exigido no agachamento profundo e no terra sumô.</p></div>
   </div>
   <div class="callout">
-    <span class="tag">Exercícios para glúteo (e o que muda)</span>
-    <p>Agachamento profundo (quanto mais fundo, melhor), búlgaro (grande alongamento), elevação pélvica/hip thrust (pico de contração no encurtamento), coice na polia, step-up. No <strong>afundo/apoio</strong>: resistência no joelho pega mais o glúteo; resistência no pé solicita mais o posterior (muda o braço de momento). Para maximizar glúteo: combine exercícios em alongamento (agachamento, búlgaro) + encurtamento (hip thrust) + unilaterais (estabilidade do médio).</p>
+    <span class="tag">Exercícios para glúteo</span>
+    <p>Agachamento profundo e búlgaro (glúteo alongado), elevação pélvica (pico de torque com o quadril estendido), coice na polia, step-up. No afundo e no búlgaro, <b>inclinar o tronco à frente</b> aumenta a demanda no quadril; tronco ereto e joelho mais à frente aumentam no joelho. Combine exercícios com o glúteo alongado e encurtado, mais unilaterais para o médio.</p>
   </div>
 </section>
 
 <section id="posteriores">
   <span class="sec-num">04 &mdash; POSTERIORES DE COXA</span>
-  <h2>Quatro músculos, dois <span class="accent">padrões</span></h2>
-  <p class="sec-sub">Bíceps femoral, semitendinoso e semimembranoso.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Músculo</th><th>Característica</th><th>Aplicação</th></tr></thead>
-      <tbody>
-        <tr><td>Semimembranoso</td><td>Mais massa e força, menor amplitude</td><td>Movimentos pesados</td></tr>
-        <tr><td>Semitendinoso</td><td>Fibras longas (maior penação)</td><td>Grande amplitude</td></tr>
-        <tr><td>Bíceps femoral (cabeça longa)</td><td>Menor penação, equilíbrio força/velocidade</td><td>Função mista</td></tr>
-        <tr><td>Bíceps femoral (cabeça curta)</td><td>Uniarticular (só joelho)</td><td>Isolamento — não é "isquiotibial" verdadeiro</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>Todos são inervados pelo ciático: o nervo <strong>tibial</strong> inerva semimembranoso, semitendinoso e cabeça longa do bíceps; o <strong>fibular</strong> inerva a cabeça curta. Trabalham em dois padrões: <strong>flexão de joelho</strong> (mesa/cadeira flexora — maior isolamento) e <strong>extensão de quadril</strong> (stiff, terra, banco romano — maior alongamento).</p>
+  <h2>Quatro cabeças, dois <span class="accent">padrões</span></h2>
+  <p class="sec-sub">Semimembranoso, semitendinoso e as duas cabeças do bíceps femoral.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Músculo</th><th>Arquitetura</th><th>Aplicação</th></tr></thead>
+    <tbody>
+    <tr><td><b>Semimembranoso</b></td><td>Peniforme, fibras curtas, maior área fisiológica: o mais forte</td><td>Produz muita força</td></tr>
+    <tr><td><b>Semitendinoso</b></td><td>Fibras longas e pouco inclinadas</td><td>Grande excursão e velocidade</td></tr>
+    <tr><td><b>Bíceps femoral (cabeça longa)</b></td><td>Peniforme, fibras de comprimento intermediário</td><td>Equilíbrio força e excursão; a mais lesionada em sprints</td></tr>
+    <tr><td><b>Bíceps femoral (cabeça curta)</b></td><td>Monoarticular (só joelho)</td><td>Só treinada pela flexão de joelho</td></tr>
+    </tbody></table></div>
+  <p><b>Inervação:</b> nervo isquiático. A parte tibial inerva semimembranoso, semitendinoso e cabeça longa do bíceps; a parte fibular comum inerva a cabeça curta. Os três primeiros são os isquiotibiais “verdadeiros”: biarticulares, estendem o quadril e flexionam o joelho.</p>
   <div class="callout ok">
     <span class="tag">Para hipertrofia completa</span>
-    <p>Você precisa combinar <strong>flexão de joelho</strong> (a flexora é um dos melhores exercícios — pico de contração e alta ativação) com <strong>extensão de quadril</strong> (o stiff dá o máximo alongamento e tensão mecânica). Só stiff não basta; só flexora também não. Estratégia: flexora para pré-ativação → stiff/terra para carga e alongamento → isolamento no fim.</p>
+    <p>Combine <b>flexão de joelho</b> (mesa flexora, de preferência sentada, que mantém o músculo mais alongado) com <b>extensão de quadril</b> (stiff, RDL, good morning). Cada padrão cresce regiões e cabeças diferentes, e só a flexão de joelho pega a cabeça curta.</p>
   </div>
 </section>
 
 <section id="quadriceps">
   <span class="sec-num">05 &mdash; QUADRÍCEPS</span>
-  <h2>Três vastos e o <span class="accent">reto femoral</span></h2>
+  <h2>Três vastos e o reto <span class="accent">femoral</span></h2>
   <p class="sec-sub">A diferença biarticular que muda tudo.</p>
-  <p>O quadríceps tem quatro cabeças: <strong>vasto lateral, vasto medial, vasto intermédio</strong> (os três <strong>uniarticulares</strong>, só fazem extensão de joelho) e o <strong>reto femoral</strong> (<strong>biarticular</strong>: flexão de quadril + extensão de joelho + rotação anterior da pelve). Tem grande ângulo de penação e, por ser volumoso, gera muita força.</p>
+  <p>Vasto lateral, vasto medial e vasto intermédio são <b>monoarticulares</b>: só estendem o joelho. O <b>reto femoral</b> é biarticular: flexiona o quadril e estende o joelho. Todos são inervados pelo nervo femoral e são peniformes, com muita área fisiológica.</p>
   <div class="callout warn">
-    <span class="tag">Por que o reto femoral não cresce muito no agachamento</span>
-    <p>O reto femoral <strong>não tem hipertrofia significativa no agachamento</strong> porque praticamente não muda de comprimento durante a execução: ele estende de um lado (joelho) e flexiona do outro (quadril) ao mesmo tempo. Para enfatizá-lo, é preciso flexão de quadril (ex.: sissy squat, flexões de quadril); para os vastos, padrões de agachamento e cadeira extensora.</p>
+    <span class="tag">Por que o reto femoral cresce pouco no agachamento</span>
+    <p>Quadril e joelho flexionam juntos: uma ponta encurta, a outra alonga, e o comprimento quase não muda. Para enfatizá-lo, use exercícios com o <b>quadril fixo em extensão</b>, como cadeira extensora com encosto reclinado e sissy squat, ou exercícios de flexão de quadril. Para os vastos, agachamentos, leg press e extensora funcionam bem.</p>
   </div>
 </section>
 
@@ -137,33 +188,39 @@
   <h2>Gastrocnêmio e <span class="accent">sóleo</span></h2>
   <p class="sec-sub">O tríceps sural e a diferença biarticular.</p>
   <div class="grid2">
-    <div class="mini"><h4>Gastrocnêmio (biarticular)</h4><p>Origem nos côndilos do fêmur, inserção no calcâneo. Faz flexão plantar do tornozelo <b>e</b> flexão do joelho. Por cruzar o joelho, trabalha melhor com a perna estendida.</p></div>
-    <div class="mini"><h4>Sóleo (uniarticular)</h4><p>Origem na tíbia/fíbula, inserção no calcâneo. Só faz flexão plantar do tornozelo — por isso é mais recrutado com o joelho flexionado (panturrilha sentado).</p></div>
+    <div class="mini"><h4>Gastrocnêmio (biarticular)</h4><p>Origem nos côndilos do fêmur, inserção no calcâneo pelo tendão calcâneo. Flexão plantar e flexão do joelho. Com o joelho estendido fica alongado e produz mais força.</p></div>
+    <div class="mini"><h4>Sóleo (monoarticular)</h4><p>Origem na tíbia e na fíbula, mesma inserção. Só faz flexão plantar e não depende do joelho. Com o joelho flexionado ele assume a maior parte do trabalho.</p></div>
   </div>
-  <p>Juntos formam o tríceps sural. A diferença biarticular/uniarticular explica por que panturrilha em pé (joelho estendido) enfatiza o gastrocnêmio e sentado (joelho flexionado) enfatiza o sóleo.</p>
+  <p>Panturrilha em pé (joelho estendido) enfatiza o gastrocnêmio; sentado (joelho flexionado) enfatiza o sóleo. Teste no <a href="biomecanica2-2-forca-comprimento.html#insuficiencia">laboratório dos biarticulares</a> da Parte 2.</p>
+</section>
+
+<section id="quiz">
+  <span class="sec-num">07 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
 </section>
 
 <section id="resumo">
-  <span class="sec-num">07 &mdash; PARA FIXAR</span>
+  <span class="sec-num">08 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
-  <p class="sec-sub">O essencial da Parte 4.</p>
-  <ol class="key">
-    <li><b>Glúteo máximo:</b> principal extensor do quadril; dupla inervação.</li>
-    <li><b>No agachamento</b>, os isquiotibiais entram em insuficiência ativa → o glúteo compensa (alta ativação).</li>
-    <li><b>Quanto mais profundo</b>, maior o braço de momento do quadril → mais glúteo.</li>
-    <li><b>Glúteo médio</b> = estabilidade pélvica; <b>adutor magno</b> = extensor "quase posterior".</li>
-    <li><b>Posteriores:</b> combinar flexão de joelho (flexora) + extensão de quadril (stiff).</li>
-    <li><b>Cabeça curta do bíceps femoral</b> é uniarticular — não é isquiotibial verdadeiro.</li>
-    <li><b>Reto femoral</b> (biarticular) não cresce muito no agachamento por não mudar de comprimento.</li>
-    <li><b>Gastrocnêmio</b> (biarticular, joelho estendido) vs <b>sóleo</b> (uniarticular, joelho flexionado).</li>
-  </ol>
+  <ul class="clean">
+    <li>Glúteo máximo: principal extensor do quadril, nervo glúteo inferior.</li>
+    <li>Agachamento mais fundo = mais torque no quadril; glúteo e adutor magno alongam e crescem.</li>
+    <li>Isquiotibiais no agachamento: cancelamento (comprimento quase constante), não insuficiência ativa.</li>
+    <li>Glúteo médio estabiliza a pelve; adutor magno posterior é um extensor potente.</li>
+    <li>Posteriores: flexão de joelho + extensão de quadril; cabeça curta só pela flexão de joelho.</li>
+    <li>Reto femoral cresce pouco no agachamento; use quadril estendido e fixo.</li>
+    <li>Joelho estendido = gastrocnêmio; joelho flexionado = sóleo.</li>
+  </ul>
   <div class="nav-next">
-    <a href="biomecanica2-3-membros-superiores.html"><span class="lbl">Anterior</span><span class="ttl">&larr; 3 &middot; Membros Superiores</span></a>
-    <a href="biomecanica2-5-dorsais.html"><span class="lbl">Próximo da série</span><span class="ttl">5 &middot; Dorsais &rarr;</span></a>
+    <a href="biomecanica2-3-membros-superiores.html"><span class="lbl">Anterior</span><span class="ttl">&#8592; 3 · Membros Superiores</span></a>
+    <a href="biomecanica2-5-dorsais.html"><span class="lbl">Próximo da série</span><span class="ttl">5 · Dorsais &#8594;</span></a>
   </div>
 </section>
 
 </main>
+
 
 <footer>
   <svg class="star" viewBox="0 0 24 24"><path d="M12 1.5l2.95 6.55 7.05.62-5.3 4.73 1.6 6.9L12 16.9 5.7 20.8l1.6-6.9L2 9.17l7.05-.62L12 1.5z" fill="#ff6b1a"/></svg>
@@ -172,5 +229,60 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF, organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Qual nervo inerva o glúteo máximo?',a:['Glúteo superior','Glúteo inferior','Femoral','Obturatório'],c:1,e:'Glúteo inferior. O superior inerva glúteo médio, mínimo e tensor da fáscia lata.'},
+{q:'Por que o agachamento profundo exige tanto do glúteo?',a:['Porque o quadril se afasta da linha da barra e o torque no quadril cresce','Porque os isquiotibiais desligam','Porque o joelho trava','Porque a barra pesa mais embaixo'],c:0,e:'Mais braço de momento externo no quadril = mais torque extensor necessário.'},
+{q:'O que acontece com os isquiotibiais no agachamento?',a:['Insuficiência ativa','Alongam muito','Mudam pouco de comprimento (cancelamento)','Não são ativados'],c:2,e:'Alongam no quadril e encurtam no joelho ao mesmo tempo.'},
+{q:'Qual parte do adutor magno funciona como extensora do quadril?',a:['Anterior','Posterior (isquiática)','Nenhuma','Só a que cruza o joelho'],c:1,e:'A porção que sai do túber isquiático age como extensora, sobretudo com o quadril flexionado.'},
+{q:'Qual cabeça dos posteriores é monoarticular?',a:['Semitendinoso','Semimembranoso','Cabeça longa do bíceps femoral','Cabeça curta do bíceps femoral'],c:3,e:'Só cruza o joelho, então só a flexão de joelho a treina.'},
+{q:'Para enfatizar o reto femoral, o melhor é:',a:['Agachamento','Cadeira extensora com encosto reclinado','Leg press','Afundo curto'],c:1,e:'Quadril fixo em extensão deixa o reto femoral alongado e o joelho faz a excursão.'},
+{q:'Panturrilha sentado enfatiza o:',a:['Gastrocnêmio','Sóleo','Tibial anterior','Poplíteo'],c:1,e:'Com o joelho flexionado o gastrocnêmio fica curto; o sóleo não depende do joelho.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+/* ---------- agachamento ---------- */
+(function(){
+ var sc=document.getElementById('sqScene');if(!sc)return;var r=document.getElementById('rSq'),R=Math.PI/180,P=190;
+ var MU=[['Glúteo máximo',5,0,OR],['Adutor magno',4,0,'#ca8a04'],['Vastos',0,4.5,BL],['Isquiotibiais',5,-4,GR],['Reto femoral',-3.5,4.5,'#7c3aed']];
+ function pose(d){var b=(5+33*d),k=(5+125*d),g=k-b,A={x:150,y:314},Ls=0.43*P,Lt=0.43*P,Lb=0.52*P,mid=A.x+12;var K={x:A.x+Ls*Math.sin(b*R),y:A.y-Ls*Math.cos(b*R)},H={x:K.x-Lt*Math.sin(g*R),y:K.y-Lt*Math.cos(g*R)},st=Math.max(-1,Math.min(1,(mid-H.x)/Lb)),th=Math.asin(st);return {hip:g+th/R,k:k}}
+ var P0=pose(0);
+ function draw(){var d=+r.value/100;document.getElementById('oSq').textContent=Math.round(d*100)+'%';
+  var b=(5+33*d),k=(5+125*d),g=k-b,A={x:150,y:314},Ls=0.43*P,Lt=0.43*P,Lb=0.52*P,mid=A.x+12;
+  var K={x:A.x+Ls*Math.sin(b*R),y:A.y-Ls*Math.cos(b*R)},H={x:K.x-Lt*Math.sin(g*R),y:K.y-Lt*Math.cos(g*R)},st=Math.max(-1,Math.min(1,(mid-H.x)/Lb)),th=Math.asin(st),S={x:H.x+Lb*Math.sin(th),y:H.y-Lb*Math.cos(th)},hip=g+th/R;
+  clear(sc);el('line',{x1:20,y1:A.y+6,x2:330,y2:A.y+6,stroke:MUT,'stroke-width':4},sc);
+  el('line',{x1:mid,y1:S.y-30,x2:mid,y2:A.y+6,stroke:BL,'stroke-width':2,'stroke-dasharray':'5 5'},sc);
+  var hm=Math.abs(H.x-mid),km=Math.abs(K.x-mid);
+  if(hm>10){el('line',{x1:H.x,y1:H.y,x2:mid,y2:H.y,stroke:OR,'stroke-width':4},sc);txt(sc,(H.x+mid)/2,H.y-8,'quadril','sm').setAttribute('fill',OR)}
+  if(km>10){el('line',{x1:K.x,y1:K.y,x2:mid,y2:K.y,stroke:GR,'stroke-width':4},sc);txt(sc,(K.x+mid)/2,K.y+20,'joelho','sm').setAttribute('fill',GR)}
+  el('line',{x1:A.x-25,y1:A.y,x2:A.x+45,y2:A.y,stroke:INK,'stroke-width':9,'stroke-linecap':'round'},sc);
+  [[A,K,12],[K,H,15],[H,S,18]].forEach(function(s){el('line',{x1:s[0].x,y1:s[0].y,x2:s[1].x,y2:s[1].y,stroke:INK,'stroke-width':s[2],'stroke-linecap':'round',opacity:.85},sc)});
+  var hd={x:S.x+18*Math.sin(th)+6,y:S.y-26*Math.cos(th)};el('circle',{cx:hd.x,cy:hd.y,r:17,fill:'none',stroke:INK,'stroke-width':3},sc);
+  el('circle',{cx:S.x-4,cy:S.y+4,r:22,fill:'rgba(127,127,127,.25)',stroke:INK,'stroke-width':3},sc);
+  [A,K,H].forEach(function(q){el('circle',{cx:q.x,cy:q.y,r:7,fill:'#fff',stroke:INK,'stroke-width':2},sc)});
+  document.getElementById('sqH').textContent=fmt(hm/P*100,0)+' cm';document.getElementById('sqK').textContent=fmt(km/P*100,0)+' cm';
+  var bx=372,sw=140/14;txt(sc,bx,26,'mudança de comprimento','sm','start');el('line',{x1:bx,y1:36,x2:bx,y2:36+MU.length*52,stroke:MUT,'stroke-width':2},sc);
+  MU.forEach(function(m,i){var dl=m[1]*(hip-P0.hip)*R+m[2]*(k-P0.k)*R,y=56+i*52,w=dl*sw;txt(sc,bx+6,y,m[0],'sm','start');
+   el('rect',{x:w>=0?bx:bx+w,y:y+6,width:Math.max(3,Math.abs(w)),height:14,rx:7,fill:m[3],opacity:.85},sc);txt(sc,bx+Math.max(0,w)+8,y+18,(dl>=0?'+':'')+fmt(dl,1)+' cm','sm','start')});
+ }
+ r.addEventListener('input',draw);anim(document.getElementById('pSq'),r,0,100,draw);draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
