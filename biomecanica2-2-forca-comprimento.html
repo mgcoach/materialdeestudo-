@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="MG COACH">
     <meta property="og:title" content="Biomecânica 2: Força-Comprimento e Arquitetura | MG COACH">
-    <meta property="og:description" content="Parte 2 da série de Biomecânica 2 (CBMF): organização muscular, curva força-comprimento, PCSA, arquitetura fusiforme vs peniforme, excursão funcional e insuficiência muscular. Com o aprofundamento biarticular completo: os dois sentidos de &quot;encurtamento&quot; (ação vs estado), a regra de ouro (mesma ação encurta, ação oposta alonga), articulação que MOVE vs FIXA com 4 exemplos (reto femoral no agachamento vs cadeira extensora, mesa flexora sentada vs deitada, panturrilha em pé vs sentado, tríceps e a posição do ombro), ponto fixo vs ponto móvel e cadeia aberta vs fechada governando as insuficiências, e o empate biarticular nos levantamentos terra.">
+    <meta property="og:description" content="Sarcômero e curva força-comprimento interativos, penação, PCSA, excursão, laboratório dos biarticulares com insuficiência ativa e passiva, articulação fixa × móvel e o empate nos terras.">
     <meta property="og:url" content="https://mgcoach.github.io/materialdeestudo-/biomecanica2-2-forca-comprimento.html">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
@@ -18,6 +18,41 @@
     <meta name="theme-color" content="#ff6b1a">
     <!-- OG END -->
 <link rel="stylesheet" href="mgcoach.css">
+<style>
+.sim{border:1px solid var(--line);border-radius:18px;background:var(--bg-card);padding:14px 14px 12px;margin:22px 0}
+.sim-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.sim-head b{font-family:Poppins,Inter,sans-serif;font-size:15px}
+.sim .muted{font-size:12px;color:var(--text-faint)}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{font:600 13px Inter,sans-serif;border:1px solid var(--line);background:var(--bg-card-2);color:var(--text-dim);border-radius:999px;padding:8px 12px;min-height:36px;cursor:pointer}
+.seg button.on{background:var(--orange);border-color:var(--orange);color:#0a0a0a}
+.sim-svg{width:100%;height:auto;display:block;overflow:hidden}
+.sim-svg text{font-family:Inter,sans-serif;font-size:17px;font-weight:600;fill:var(--text)}
+.sim-svg .sm{font-size:15px;font-weight:500;fill:var(--text-dim)}
+.ctl{display:grid;gap:10px 16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.ctl label{font-size:13px;font-weight:600;display:flex;flex-direction:column;gap:2px;color:var(--text-dim)}
+.ctl output{color:var(--orange-soft);font-weight:800;font-size:14px}
+.ctl input[type=range]{accent-color:#ff6b1a;width:100%;height:30px;margin:0}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.readout div{background:var(--bg-card-2);border-radius:12px;padding:8px 10px;min-width:0}
+.readout span{display:block;font-size:11.5px;color:var(--text-faint);line-height:1.3}
+.readout b{font:700 17px Poppins,Inter,sans-serif;color:var(--text)}
+.sim-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--text-faint)}
+.play{background:#ff6b1a;color:#0a0a0a;border:0;border-radius:12px;padding:10px 14px;min-height:42px;font:700 14px Inter,sans-serif;cursor:pointer}
+.lev-txt{margin:8px 2px 0;font-size:15px}
+.qz{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;background:var(--bg-card)}
+.qz p.q{font-weight:700;margin:0 0 10px}
+.qz button{display:block;width:100%;text-align:left;font:15px Inter,sans-serif;color:var(--text);background:var(--bg-card-2);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0;min-height:44px;cursor:pointer}
+.qz button.ok{border:2px solid #16a34a;background:#f0fdf4;color:#111}
+.qz button.no{border:2px solid #e11d48;background:#fff1f2;color:#111}
+.qz .ex{display:none;font-size:14px;margin-top:8px;color:var(--text-dim)}
+.qz.done .ex{display:block}
+.qscore{font:700 15px Poppins,Inter,sans-serif;margin-top:6px}
+@media (max-width:520px){.readout b{font-size:15px}.sim{padding:12px 10px}}
+@media (prefers-reduced-motion:reduce){.play{display:none}}
+
+.qz .seg button{display:inline-flex;width:auto;margin:0;min-height:40px}
+</style>
 </head>
 <body>
 
@@ -44,11 +79,12 @@
     <a href="#arquitetura">Fusiforme vs peniforme</a>
     <a href="#excursao">Excursão funcional</a>
     <a href="#insuficiencia">Insuficiência muscular</a>
-    <a href="#dois-sentidos">Os dois sentidos de "encurtamento"</a>
+    <a href="#dois-sentidos">Os dois sentidos de “encurtamento”</a>
     <a href="#regra-ouro">A regra de ouro</a>
     <a href="#move-vs-fixa">Articulação que move vs fixa</a>
     <a href="#ponto-fixo-movel">Ponto fixo e ponto móvel</a>
     <a href="#empate-terras">O empate nos terras</a>
+    <a href="#quiz">Teste rápido</a>
     <a href="#resumo">Resumo</a>
   </nav>
 </header>
@@ -63,7 +99,7 @@
     <a href="biomecanica2-5-dorsais.html">5 &middot; Dorsais</a>
   </div>
   <h1>Força-comprimento e <span class="em">arquitetura</span></h1>
-  <p class="lede">Como o músculo gera força: a <b>curva força-comprimento</b> e o comprimento ótimo, a <b>PCSA</b> como indicador real de força, a arquitetura <b>fusiforme vs peniforme</b>, a <b>excursão funcional</b> e a <b>insuficiência ativa e passiva</b> dos músculos biarticulares.</p>
+  <p class="lede">Como o músculo gera força: a <b>curva força-comprimento</b> e o comprimento ótimo, a <b>PCSA</b> como indicador real de força, a arquitetura <b>fusiforme vs peniforme</b>, a <b>excursão funcional</b> e a <b>insuficiência ativa e passiva</b> dos músculos biarticulares. Agora com <b>simuladores</b> do sarcômero, da penação e um laboratório dos biarticulares.</p>
 </div>
 
 <main>
@@ -87,6 +123,13 @@
     <div class="step"><h4>Comprimento ideal (pico)</h4><p>Sobreposição ideal entre actina e miosina → máximo de pontes cruzadas → maior força ativa.</p></div>
     <div class="step"><h4>Músculo encurtado</h4><p>Filamentos sobrepostos demais; as cabeças de miosina não trabalham direito → força cai.</p></div>
     <div class="step"><h4>Músculo alongado</h4><p>Pouca sobreposição → poucas pontes cruzadas → força ativa cai. Mas surge a tensão passiva (elementos elásticos: titina e tecido conjuntivo).</p></div>
+  </div>
+  <div class="sim" id="simFL">
+    <div class="sim-head"><b>Simulador · sarcômero e curva força-comprimento</b></div>
+    <svg viewBox="0 0 560 330" class="sim-svg" role="img" aria-label="Sarcômero e curva força-comprimento"><g id="flScene"></g></svg>
+    <div class="ctl"><label>Comprimento do sarcômero <output id="oFl">100%</output><input type="range" id="rFl" min="55" max="175" value="110"></label></div>
+    <div class="readout"><div><span>Força ativa</span><b id="flA">–</b></div><div><span>Força passiva</span><b id="flP">–</b></div><div><span>Total</span><b id="flT">–</b></div></div>
+    <p class="lev-txt" id="flTxt"></p>
   </div>
   <div class="callout warn">
     <span class="tag">Correção conceitual importante</span>
@@ -123,6 +166,12 @@
     </table>
   </div>
   <p>Nos peniformes, parte da força é "perdida" pela inclinação das fibras, mas o grande número de fibras compensa — resultando em mais força total. Quando o músculo se alonga, o ângulo de penação diminui; quando encurta, aumenta.</p>
+  <div class="sim" id="simPn">
+    <div class="sim-head"><b>Simulador · ângulo de penação</b><span class="muted">mesmo volume de músculo</span></div>
+    <svg viewBox="0 0 560 220" class="sim-svg" role="img" aria-label="Músculo com fibras em ângulo"><g id="pnScene"></g></svg>
+    <div class="ctl"><label>Ângulo de penação <output id="oPn">0°</output><input type="range" id="rPn" min="0" max="30" value="0"></label></div>
+    <div class="readout"><div><span>Fibras</span><b id="pnN">–</b></div><div><span>Força no tendão</span><b id="pnF">–</b></div><div><span>Excursão e velocidade</span><b id="pnV">–</b></div></div>
+  </div>
 </section>
 
 <section id="excursao">
@@ -134,8 +183,8 @@
     <p>A capacidade do músculo de sair do alongamento máximo até o encurtamento máximo. Depende do comprimento do fascículo (longos = mais velocidade e excursão; curtos = mais força) e do número de articulações que cruza.</p>
   </div>
   <div class="grid2">
-    <div class="mini"><h4>Monoarticulares</h4><p>Cruzam 1 articulação. Maior excursão, mais controle.</p></div>
-    <div class="mini"><h4>Biarticulares</h4><p>Cruzam 2 articulações. Menor excursão, limitados mecanicamente.</p></div>
+    <div class="mini"><h4>Monoarticulares</h4><p>Cruzam 1 articulação. O comprimento depende só dela, então é fácil prever onde ele está alongado ou encurtado.</p></div>
+    <div class="mini"><h4>Biarticulares</h4><p>Cruzam 2 articulações. O comprimento depende das duas ao mesmo tempo, e as duas juntas podem levá-lo além da faixa útil (as insuficiências).</p></div>
   </div>
   <p>Cada exercício enfatiza uma faixa da curva força-comprimento: alongado (stiff), médio (agachamento), encurtado (cadeira flexora).</p>
 </section>
@@ -149,8 +198,20 @@
     <div class="mini"><h4>Insuficiência passiva</h4><p>Músculo biarticular <b>alongado demais</b> nas duas articulações — limita mecanicamente o movimento. Ex.: no stiff, o posterior alonga no quadril com joelho estendido até o limite; a compensação é flexão da coluna (perda de eficiência e risco).</p></div>
   </div>
   <div class="callout ok">
-    <span class="tag">Conclusão (visão de personal)</span>
+    <span class="tag">Conclusão prática</span>
     <p>A força não é igual em toda a amplitude — existe ponto forte e ponto fraco. Treinar só no encurtado é erro clássico (limita hipertrofia); o alongamento gera alto estímulo mecânico. Biarticulares precisam de estratégia para evitar insuficiência. Biomecânica define o resultado: não é só carga, é alavanca. (A insuficiência ativa dos isquiotibiais reaparece na Parte 4, no agachamento.)</p>
+  </div>
+  <div class="sim" id="simBi">
+    <div class="sim-head"><b>Laboratório dos biarticulares</b><span class="muted">mexa nas articulações</span></div>
+    <div class="seg" role="group" aria-label="Músculo"><button type="button" class="on" data-k="rf">Reto femoral</button><button type="button" data-k="is">Isquiotibiais</button><button type="button" data-k="ga">Gastrocnêmio</button></div>
+    <svg viewBox="0 0 560 340" class="sim-svg" role="img" aria-label="Perna com músculo biarticular"><g id="biScene"></g></svg>
+    <div class="ctl">
+      <label>Quadril <output id="oBh">0°</output><input type="range" id="rBh" min="-20" max="120" value="0"></label>
+      <label>Joelho (flexão) <output id="oBk">0°</output><input type="range" id="rBk" min="0" max="140" value="0"></label>
+      <label>Tornozelo <output id="oBa">0°</output><input type="range" id="rBa" min="-30" max="25" value="0"></label>
+    </div>
+    <div class="seg pre" role="group" aria-label="Posições prontas"><button type="button" data-p="0,0,0">Em pé</button><button type="button" data-p="110,125,15">Fundo do agachamento</button><button type="button" data-p="90,15,0">Fundo do stiff</button><button type="button" data-p="0,120,0">Flexora deitada (topo)</button><button type="button" data-p="90,120,0">Flexora sentada (topo)</button><button type="button" data-p="100,0,0">Extensora reta (topo)</button><button type="button" data-p="-15,120,0">Alongando o quadríceps</button><button type="button" data-p="90,90,-25">Panturrilha sentado</button></div>
+    <p class="lev-txt" id="biTxt"></p>
   </div>
 </section>
 
@@ -178,7 +239,7 @@
 
   <div class="callout">
     <span class="tag">Por que isso importa na prescrição</span>
-    <p>Se o problema fosse falta de tecido, a solução seria "esticar até crescer". Como o problema costuma ser <b>rigidez e tolerância</b>, a solução mais eficiente é <b>treinar força em amplitude completa</b>, especialmente na porção alongada. Ganho de amplitude no começo é largamente <b>neural</b> (o corpo aceita ir mais longe), e o treino em amplitude longa é o que de fato induz adaptação estrutural &mdash; o músculo se adapta ao comprimento em que é exigido, adicionando <b>sarcômeros em série</b>.</p>
+    <p>Se o problema fosse falta de tecido, a solução seria "esticar até crescer". Como o problema costuma ser <b>rigidez e tolerância</b>, a solução mais eficiente é <b>treinar força em amplitude completa</b>, especialmente na porção alongada. Ganho de amplitude no começo é largamente <b>neural</b> (o corpo aceita ir mais longe), e o treino em amplitude longa é o que de fato induz adaptação estrutural &mdash; o músculo se adapta ao comprimento em que é exigido, e os fascículos ficam mais longos (provavelmente com <b>sarcômeros novos em série</b>).</p>
   </div>
 
   <div class="callout ok">
@@ -588,8 +649,15 @@
   </div>
 </section>
 
+<section id="quiz">
+  <span class="sec-num">12 &mdash; TESTE RÁPIDO</span>
+  <h2>Confira se <span class="accent">fixou</span></h2>
+  <p class="sec-sub">Toque na alternativa. A resposta aparece na hora.</p>
+  <div id="qz"></div>
+</section>
+
 <section id="resumo">
-  <span class="sec-num">12 &mdash; PARA FIXAR</span>
+  <span class="sec-num">13 &mdash; PARA FIXAR</span>
   <h2>Os <span class="accent">pontos-chave</span></h2>
   <p class="sec-sub">O essencial da Parte 2.</p>
   <ol class="key">
@@ -617,5 +685,103 @@
   <p style="margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6">Material baseado nas anotações do curso CBMF, organizado de forma didática. Conteúdo de estudo MG COACH.</p>
 </footer>
 <script src="mgcoach.js"></script>
+<script>window.QZ=[
+{q:'Por que a força ativa cai quando o músculo está muito alongado?',a:['Falta cálcio','Poucas cabeças de miosina alcançam a actina','O tendão afrouxa','A titina desliga'],c:1,e:'Menos sobreposição entre actina e miosina = menos pontes cruzadas.'},
+{q:'No fundo de uma excêntrica, com o músculo bem alongado, o que ajuda a segurar a carga?',a:['A força passiva da titina e do tecido conjuntivo','Mais pontes cruzadas que no meio','A acetilcolina','Nada'],c:0,e:'A força ativa cai, mas a passiva sobe e soma.'},
+{q:'Num músculo peniforme, comparado a um fusiforme de mesmo volume:',a:['Menos fibras e mais velocidade','Mais fibras, mais força, menos excursão','Mesma força e mais velocidade','Nenhuma diferença'],c:1,e:'Fibras curtas e inclinadas: cabem mais, a força total sobe, mesmo perdendo um pouco pelo cosseno do ângulo.'},
+{q:'Insuficiência ativa dos isquiotibiais acontece com:',a:['Quadril flexionado e joelho estendido','Quadril estendido e joelho flexionado','Quadril e joelho estendidos','Só no stiff'],c:1,e:'As duas pontas encurtadas: estender o quadril e flexionar o joelho ao mesmo tempo.'},
+{q:'Por que a mesa flexora sentada costuma render mais para o posterior que a deitada?',a:['Usa mais carga','Com o quadril flexionado fixo, o músculo trabalha mais alongado','Recruta mais panturrilha','Não há diferença'],c:1,e:'A articulação fixa escolhe o comprimento de base; sentado, a ponta de cima fica alongada.'},
+{q:'No agachamento, o reto femoral:',a:['Alonga muito','Encurta muito','Muda pouco de comprimento (uma ponta encurta, a outra alonga)','Não trabalha'],c:2,e:'Quadril e joelho flexionam juntos: cancelamento, regime quase isométrico.'},
+{q:'Na panturrilha sentado, quem assume a maior parte do trabalho?',a:['Gastrocnêmio','Sóleo','Tibial anterior','Isquiotibiais'],c:1,e:'Com o joelho flexionado o gastrocnêmio fica curto; o sóleo, monoarticular, não depende do joelho.'}
+];</script>
+<script>(function(){
+var NS='http://www.w3.org/2000/svg',G=9.81;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,cls,anchor){var t=el('text',{x:x,y:y,'text-anchor':anchor||'middle'},p);if(cls)t.setAttribute('class',cls);t.textContent=s;return t}
+function clear(g){while(g.firstChild)g.removeChild(g.firstChild)}
+function arrow(p,x1,y1,x2,y2,col,w,dash){var l=el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':w||3,'stroke-linecap':'round'},p);if(dash)l.setAttribute('stroke-dasharray',dash);var a=Math.atan2(y2-y1,x2-x1),h=10;el('path',{d:'M'+x2+' '+y2+' L'+(x2-h*Math.cos(a-0.45))+' '+(y2-h*Math.sin(a-0.45))+' L'+(x2-h*Math.cos(a+0.45))+' '+(y2-h*Math.sin(a+0.45))+'Z',fill:col},p)}
+var OR='#ff6b1a',BL='#2563eb',INK='currentColor',MUT='#9ca3af',GR='#16a34a',RD='#e11d48';
+function fmt(n,d){return n.toFixed(d==null?1:d).replace('.',',')}
+function anim(btn,input,min,max,cb){var on=false,t0,raf;btn.addEventListener('click',function(){on=!on;btn.textContent=on?'❚❚ Pausar':'▶ Animar o movimento';if(on){t0=performance.now();var step=function(t){if(!on)return;var ph=((t-t0)/4000)%2,v=ph<1?ph:2-ph;input.value=Math.round(min+(max-min)*v);cb();raf=requestAnimationFrame(step)};raf=requestAnimationFrame(step)}else cancelAnimationFrame(raf)})}
+
+
+function segs(root,cb,sel){root.querySelectorAll(sel||'.seg button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll(sel||'.seg button').forEach(function(x){x.classList.toggle('on',x===b)});cb(b.dataset.k)})})}
+/* ---------- força-comprimento ---------- */
+(function(){
+ var sc=document.getElementById('flScene');if(!sc)return;var r=document.getElementById('rFl'),tx=document.getElementById('flTxt');
+ function act(s){var ov=Math.max(0,Math.min(60,s)-Math.max(10,s-100))/50;ov=Math.min(1,ov);if(s<100)ov*=Math.max(0,1-(100-s)/80);if(s<60)ov*=Math.max(0,1-(60-s)/15);return ov}
+ function pas(s){return s<=115?0:1.0*(Math.exp((s-115)/25)-1)/(Math.exp(60/25)-1)}
+ function draw(){var s=+r.value,A=act(s),P=pas(s);document.getElementById('oFl').textContent=Math.round(s/110*100)+'%';
+  document.getElementById('flA').textContent=Math.round(A*100)+'%';document.getElementById('flP').textContent=Math.round(P*100)+'%';document.getElementById('flT').textContent=Math.round((A+P)*100)+'%';
+  clear(sc);var cx=280,cy=70;
+  [-1,1].forEach(function(k){var z=cx+k*s;el('line',{x1:z,y1:cy-44,x2:z,y2:cy+44,stroke:INK,'stroke-width':4},sc);
+   [-30,0,30].forEach(function(dy){el('line',{x1:z,y1:cy+dy,x2:z-k*100,y2:cy+dy,stroke:RD,'stroke-width':4,'stroke-linecap':'round'},sc)});
+   if(s>115){el('path',{d:'M'+z+' '+(cy-15)+' q'+(-k*(s-60)/4)+' -8 '+(-k*(s-60)/2)+' 0 t'+(-k*(s-60)/2)+' 0',fill:'none',stroke:'#ca8a04','stroke-width':2},sc)}});
+  [-15,15].forEach(function(dy){el('line',{x1:cx-60,y1:cy+dy,x2:cx+60,y2:cy+dy,stroke:INK,'stroke-width':8,'stroke-linecap':'round'},sc);
+   for(var h=-55;h<=55;h+=9){if(Math.abs(h)<10)continue;var on=(Math.abs(h)>=Math.max(10,s-100)&&Math.abs(h)<=Math.min(60,s));el('line',{x1:cx+h,y1:cy+dy,x2:cx+h+(h>0?4:-4),y2:cy+dy+(dy<0?-9:9),stroke:on?GR:MUT,'stroke-width':2.5},sc)}});
+  txt(sc,cx-s,cy+62,'Z','sm');txt(sc,cx+s,cy+62,'Z','sm');txt(sc,cx,cy+4,'','sm');
+  var X0=60,X1=520,Y0=310,H=150,sx=function(v){return X0+(v-55)/120*(X1-X0)},sy=function(f){return Y0-f*H};
+  el('line',{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:MUT,'stroke-width':2},sc);el('line',{x1:X0,y1:Y0,x2:X0,y2:Y0-H-20,stroke:MUT,'stroke-width':2},sc);
+  var da='',dp='',dt='';for(var v=55;v<=175;v+=2){da+=(v===55?'M':'L')+sx(v)+' '+sy(act(v));dp+=(v===55?'M':'L')+sx(v)+' '+sy(pas(v));dt+=(v===55?'M':'L')+sx(v)+' '+sy(Math.min(1.25,act(v)+pas(v)))}
+  el('path',{d:dt,fill:'none',stroke:INK,'stroke-width':2,'stroke-dasharray':'5 5',opacity:.6},sc);el('path',{d:dp,fill:'none',stroke:'#ca8a04','stroke-width':3},sc);el('path',{d:da,fill:'none',stroke:GR,'stroke-width':4},sc);
+  txt(sc,sx(110),sy(1)-10,'ativa','sm').setAttribute('fill',GR);txt(sc,sx(170),sy(pas(170))+18,'passiva','sm','end').setAttribute('fill','#ca8a04');txt(sc,X0+4,Y0-H-6,'força','sm','start');txt(sc,X1,Y0-6,'mais alongado →','sm','end');
+  el('circle',{cx:sx(s),cy:sy(A),r:8,fill:GR,stroke:'#fff','stroke-width':2},sc);
+  tx.innerHTML=s<75?'<b>Muito encurtado</b>: os filamentos de actina se cruzam e a miosina encosta nas linhas Z. Poucas pontes funcionam e a força despenca.':s<100?'<b>Encurtado</b>: a actina já passou do meio e atrapalha a do outro lado. A força cai.':s<=118?'<b>Comprimento ótimo</b>: todas as cabeças de miosina (verdes) alcançam a actina. Máximo de pontes cruzadas.':s<160?'<b>Alongado</b>: menos cabeças de miosina alcançam a actina, a força ativa cai. Os elementos elásticos (titina e tecido conjuntivo) começam a somar força passiva.':'<b>Muito alongado</b>: quase nenhuma ponte cruzada, mas a força passiva é alta. É ela que segura a carga no fundo da excêntrica.'}
+ r.addEventListener('input',draw);draw();
+})();
+/* ---------- penação ---------- */
+(function(){
+ var sc=document.getElementById('pnScene');if(!sc)return;var r=document.getElementById('rPn');
+ function draw(){var a=+r.value,ra=a*Math.PI/180,Lm=300,hw=60,lf=a<1?Lm:Math.min(Lm,hw/Math.sin(ra)),n=Math.round(12*Lm/lf),F=n*Math.cos(ra)/12,V=lf/Lm;
+  document.getElementById('oPn').textContent=a+'°';document.getElementById('pnN').textContent=n+(n===12?'':' ('+(n>12?'+':'')+Math.round((n/12-1)*100)+'%)');document.getElementById('pnF').textContent=Math.round(F*100)+'%';document.getElementById('pnV').textContent=Math.round(V*100)+'%';
+  clear(sc);var x0=130,cy=110;el('rect',{x:x0-60,y:cy-5,width:60,height:10,rx:4,fill:MUT},sc);el('rect',{x:x0+Lm,y:cy-5,width:60,height:10,rx:4,fill:MUT},sc);
+  el('ellipse',{cx:x0+Lm/2,cy:cy,rx:Lm/2+6,ry:hw+8,fill:'rgba(225,29,72,.06)',stroke:'rgba(225,29,72,.35)','stroke-width':2},sc);
+  if(a<1){for(var i=0;i<12;i++){var y=cy-hw+5+i*(2*hw-10)/11;el('line',{x1:x0,y1:y,x2:x0+Lm,y2:y,stroke:RD,'stroke-width':3,'stroke-linecap':'round',opacity:.75},sc)}}
+  else{el('line',{x1:x0,y1:cy,x2:x0+Lm,y2:cy,stroke:MUT,'stroke-width':6},sc);var dx=lf*Math.cos(ra),step=(Lm-dx)/Math.max(1,n/2-1);
+   for(var k=0;k<n/2;k++){var bx=x0+k*step;[-1,1].forEach(function(sg){el('line',{x1:bx,y1:cy,x2:bx+dx,y2:cy+sg*hw,stroke:RD,'stroke-width':3,'stroke-linecap':'round',opacity:.75},sc)})}}
+  txt(sc,x0+Lm/2,cy+hw+34,a<1?'fusiforme: fibras longas e paralelas':'peniforme: fibras curtas e inclinadas','sm');txt(sc,x0-30,cy-16,'tendão','sm')}
+ r.addEventListener('input',draw);draw();
+})();
+/* ---------- laboratório dos biarticulares ---------- */
+(function(){
+ var root=document.getElementById('simBi');if(!root)return;var sc=document.getElementById('biScene'),tx=document.getElementById('biTxt'),rh=document.getElementById('rBh'),rk=document.getElementById('rBk'),rA=document.getElementById('rBa'),M='rf';
+ var NM={rf:'Reto femoral',is:'Isquiotibiais',ga:'Gastrocnêmio'};
+ function rot(v,a){return {x:v.x*Math.cos(a)-v.y*Math.sin(a),y:v.x*Math.sin(a)+v.y*Math.cos(a)}}
+ function add(p,v,k){return {x:p.x+v.x*k,y:p.y+v.y*k}}
+ function geo(h,k,an){var H={x:190,y:110},R=Math.PI/180,t={x:Math.sin(h*R),y:Math.cos(h*R)},tf={x:t.y,y:-t.x},K=add(H,t,110),d=rot(t,k*R),df={x:d.y,y:-d.x},A=add(K,d,105),fd=rot(df,-an*R);
+  return {H:H,K:K,A:A,t:t,tf:tf,d:d,df:df,fd:fd,toe:add(A,fd,48),heel:add(A,fd,-16)}}
+ function path(m,g){var p;if(m==='rf')p=[{x:g.H.x+20,y:g.H.y-26},add(g.K,g.tf,15),add(add(g.K,g.d,24),g.df,9)];
+  if(m==='is'){p=[{x:g.H.x-16,y:g.H.y+12}];var b=add(g.K,g.tf,-13);p.push(b);p.push(add(add(g.K,g.d,22),g.df,-9))}
+  if(m==='ga')p=[add(add(g.K,g.t,-14),g.tf,-9),add(add(g.K,g.d,30),g.df,-14),g.heel];return p}
+ function len(p){var s=0;for(var i=1;i<p.length;i++)s+=Math.hypot(p[i].x-p[i-1].x,p[i].y-p[i-1].y);return s}
+ var MA={rf:[-4,4.5,0],is:[6.5,-3,0],ga:[0,-2,5]},RG=[[-20,120],[0,140],[-30,25]],LIM={};
+ function dl(m,h,k,a){var R=Math.PI/180,c=MA[m];return c[0]*h*R+c[1]*k*R+c[2]*a*R}
+ ['rf','is','ga'].forEach(function(m){var lo=1e9,hi=-1e9;RG[0].forEach(function(h){RG[1].forEach(function(k){RG[2].forEach(function(a){var v=dl(m,h,k,a);lo=Math.min(lo,v);hi=Math.max(hi,v)})})});LIM[m]=[lo,hi]});
+ var JT={rf:'flexiona o quadril e estende o joelho',is:'estendem o quadril e flexionam o joelho',ga:'flexiona o joelho e faz flexão plantar'};
+ function draw(){var h=+rh.value,k=+rk.value,a=+rA.value;document.getElementById('oBh').textContent=(h<0?'extensão ':'flexão ')+Math.abs(h)+'°';document.getElementById('oBk').textContent=k+'°';document.getElementById('oBa').textContent=(a<0?'plantar ':a>0?'dorsi ':'')+Math.abs(a)+'°';
+  var g=geo(h,k,a),p=path(M,g),u=(dl(M,h,k,a)-LIM[M][0])/(LIM[M][1]-LIM[M][0]);clear(sc);
+  el('path',{d:'M'+(g.H.x-34)+' '+(g.H.y-70)+' L'+(g.H.x+30)+' '+(g.H.y-70)+' L'+(g.H.x+34)+' '+(g.H.y-10)+' Q'+g.H.x+' '+(g.H.y+26)+' '+(g.H.x-30)+' '+(g.H.y-4)+'Z',fill:'rgba(127,127,127,.15)',stroke:INK,'stroke-width':2},sc);
+  el('line',{x1:g.H.x,y1:g.H.y-70,x2:g.H.x-6,y2:10,stroke:INK,'stroke-width':18,'stroke-linecap':'round',opacity:.35},sc);
+  [[g.H,g.K,15],[g.K,g.A,12],[g.heel,g.toe,9]].forEach(function(s){el('line',{x1:s[0].x,y1:s[0].y,x2:s[1].x,y2:s[1].y,stroke:INK,'stroke-width':s[2],'stroke-linecap':'round',opacity:.85},sc)});
+  var col=u<0.15?RD:u>0.85?'#ca8a04':GR;el('polyline',{points:p.map(function(q){return q.x+','+q.y}).join(' '),fill:'none',stroke:col,'stroke-width':7,'stroke-linecap':'round','stroke-linejoin':'round',opacity:.9},sc);
+  [g.H,g.K,g.A].forEach(function(q){el('circle',{cx:q.x,cy:q.y,r:7,fill:'#fff',stroke:INK,'stroke-width':2},sc)});
+  var bx=380,bw=160,by=40;txt(sc,bx,by-12,'comprimento do '+NM[M].toLowerCase(),'sm','start');el('rect',{x:bx,y:by,width:bw,height:18,rx:9,fill:'rgba(127,127,127,.15)'},sc);
+  el('rect',{x:bx,y:by,width:bw*0.15,height:18,rx:9,fill:'rgba(225,29,72,.25)'},sc);el('rect',{x:bx+bw*0.85,y:by,width:bw*0.15,height:18,rx:9,fill:'rgba(202,138,4,.3)'},sc);
+  el('circle',{cx:bx+bw*u,cy:by+9,r:11,fill:col,stroke:'#fff','stroke-width':2},sc);txt(sc,bx,by+38,'curto','sm','start');txt(sc,bx+bw,by+38,'longo','sm','end');
+  var st=u<0.15?'Insuficiência ativa':u>0.85?'Insuficiência passiva':u<0.38?'Encurtado':u>0.62?'Alongado':'Comprimento médio';var tt=txt(sc,bx+bw/2,by+72,st,'');tt.setAttribute('fill',col);tt.setAttribute('font-weight','700');
+  tx.innerHTML='<b>'+NM[M]+'</b> '+JT[M]+'. '+(u<0.15?'As duas pontas estão encurtadas: ele está curto demais para gerar boa força.':u>0.85?'As duas pontas estão alongadas: ele chega ao limite e trava a amplitude.':u<0.38?'Está do lado curto da curva força-comprimento.':u>0.62?'Está do lado longo: boa posição para estímulo em comprimento longo.':'Está numa faixa intermediária.')}
+ segs(root,function(k){M=k;draw()},'.seg:not(.pre) button');
+ root.querySelectorAll('.pre button').forEach(function(b){b.addEventListener('click',function(){var v=b.dataset.p.split(',');rh.value=v[0];rk.value=v[1];rA.value=v[2];root.querySelectorAll('.pre button').forEach(function(x){x.classList.toggle('on',x===b)});draw()})});
+ [rh,rk,rA].forEach(function(x){x.addEventListener('input',function(){root.querySelectorAll('.pre button').forEach(function(y){y.classList.remove('on')});draw()})});draw();
+})();
+/* ---------- quiz ---------- */
+(function(){
+ var box=document.getElementById('qz');if(!box||!window.QZ)return;var ok=0,n=0;
+ window.QZ.forEach(function(q,i){var d=document.createElement('div');d.className='qz';d.innerHTML='<p class="q">'+(i+1)+'. '+q.q+'</p>'+q.a.map(function(a,j){return '<button type="button" data-j="'+j+'">'+a+'</button>'}).join('')+'<p class="ex">'+q.e+'</p>';box.appendChild(d);
+  d.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){if(d.classList.contains('done'))return;d.classList.add('done');n++;var j=+b.dataset.j;if(j===q.c)ok++;d.querySelectorAll('button')[q.c].classList.add('ok');if(j!==q.c)b.classList.add('no');sc.textContent=ok+' de '+n+' certas'+(n===window.QZ.length?(ok===n?' · perfeito!':''):'')})})});
+ var sc=document.createElement('p');sc.className='qscore';box.appendChild(sc);
+})();
+})();
+</script>
 </body>
 </html>
