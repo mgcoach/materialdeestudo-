@@ -1,5 +1,12 @@
 [
   {
+    "titulo": "Leitura de Exames do Atleta",
+    "categoria": "fisiologia",
+    "data": "Nov · 2026",
+    "resumo": "Como ler e interpretar exames de atletas de forma macro: o que cada marcador mede, por que sobe ou desce, o que o treino muda e quando encaminhar. Hemograma e ferro, glicose e HOMA-IR, lipídios (SBC 2025), rim (creatinina × cistatina C), fígado e músculo (TGO/TGP × GGT × CK), eletrólitos, vitaminas, hormônios (testosterona, SHBG, LH/FSH, estradiol, DHT, prolactina, cortisol, tireoide, IGF-1), PCR e lactato. Com eixo hormonal interativo, padrões cruzados, colaterais do uso de hormônios, calculadoras, curva de lactato, casos comentados e 33 referências.",
+    "arquivo": "leitura-de-exames.html"
+  },
+  {
     "titulo": "Colesterol: da Digestão aos Hormônios Esteroides",
     "categoria": "fisiologia",
     "data": "Nov · 2026",
